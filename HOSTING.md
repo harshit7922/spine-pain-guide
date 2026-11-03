@@ -11,6 +11,18 @@ The site is live on GitHub Pages: **https://harshit7922.github.io/spine-pain-gui
 - To serve from `main` instead: repository **Settings → Pages → Source: Deploy from a branch → main / (root) → Save**; then only `main` needs pushing.
 - A custom domain can be added later in **Settings → Pages → Custom domain** (plus a `CNAME` file and DNS records at the registrar).
 
+## Second free host with a short address
+
+The repository is ready for these with **no build step** (`vercel.json`, `netlify.toml` and `_headers` are included). Each one deploys again automatically on every push to `main`. Suggested project name: **reedhguide** (रीढ़ = spine); if it is taken, try `reedh-guide` or `spineguide-india`.
+
+| Host | Address you get | Steps (about 2 minutes, log in with GitHub) |
+| --- | --- | --- |
+| Vercel | `reedhguide.vercel.app` | vercel.com → **Add New → Project** → import `harshit7922/spine-pain-guide` → Project Name `reedhguide`, Framework **Other**, leave build settings empty → **Deploy** |
+| Cloudflare Pages | `reedhguide.pages.dev` | dash.cloudflare.com → **Workers & Pages → Create → Pages → Connect to Git** → pick the repo → project name `reedhguide`, build command empty, output directory `/` → **Save and Deploy** |
+| Netlify | `reedhguide.netlify.app` | app.netlify.com → **Add new site → Import an existing project → GitHub** → pick the repo → publish directory `.` → **Deploy**; then **Site configuration → Change site name** to `reedhguide` |
+
+A custom domain (for example a `.in` you buy later) can be attached to any of them for free in the host's **Domains** settings.
+
 ## Other free options
 
 Do this only after a doctor has reviewed the rules (see the review pack). The site is fully static: it collects no data, needs no server, and works offline once loaded.

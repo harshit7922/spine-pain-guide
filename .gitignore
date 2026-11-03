@@ -1,5 +1,5 @@
 # build output (make it with: python3 tools/bundle.py)
-dist/
+# dist/ is kept in the repository so the single-file version can be downloaded directly
 __pycache__/
 *.pyc
 # personal medical files never go into the repository

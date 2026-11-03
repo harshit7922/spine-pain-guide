@@ -1,0 +1,19 @@
+{
+  "name": "Spine Pain Guide – रीढ़ दर्द गाइड",
+  "short_name": "Spine Guide",
+  "description": "Spine pain self-assessment in English and Hindi with realistic 3D anatomy. Decision support, not a diagnosis: always see a doctor.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F3F5F7",
+  "theme_color": "#0E6A64",
+  "lang": "en",
+  "categories": ["health", "medical"],
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

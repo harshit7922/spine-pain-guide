@@ -17,6 +17,36 @@ With internet the page uses IBM Plex / Source Serif fonts; offline it falls back
 
 On first open it asks for the language (English / हिंदी). The choice is remembered and can be switched at any time from the top bar.
 
+## Screenshots
+
+| Start (desktop) | Result (phone) | Spine view, zoomed (phone) |
+| --- | --- | --- |
+| <img src="docs/screenshots/desktop-start.png" width="360"> | <img src="docs/screenshots/phone-result.png" width="200"> | <img src="docs/screenshots/phone-spine-zoom.png" width="220"> |
+
+**Body-area questions with reference pictures** (Hindi, phone) and the **"when did it start" timeline**:
+
+<img src="docs/images/question-pictures.png" width="760">
+
+<img src="docs/images/timeline-question.png" width="300">
+
+**Bedside self-tests**, each shown on a posed 3D body (red = where pain is felt if positive, green = muscles tested, arrows = movement). Women see a female body:
+
+<img src="docs/images/test-pictures-male.png" width="760">
+
+<img src="docs/images/test-pictures-female.png" width="760">
+
+**Result pictures** for each spine region (numbered vertebrae, discs, nerves):
+
+| Lower back | Neck and arm |
+| --- | --- |
+| <img src="docs/screenshots/gallery-lower-back.png" width="380"> | <img src="docs/screenshots/gallery-neck-arm.png" width="380"> |
+| **Upper and mid back** | **Whole spine** |
+| <img src="docs/screenshots/gallery-upper-back.png" width="380"> | <img src="docs/screenshots/gallery-whole-spine.png" width="380"> |
+
+More: [language choice](docs/screenshots/desktop-language-choice.png), [desktop result](docs/screenshots/desktop-result.png), [SLR test in Hindi](docs/screenshots/phone-test-slr-hindi.png), [Spurling test in Hindi](docs/screenshots/phone-test-spurling-hindi.png), [install on iPhone](docs/screenshots/phone-install-iphone.png).
+
+Sample PDF reports (made from test answers, not real patients): [lower back](docs/sample-reports/report-lower-back.pdf) · [neck and arm](docs/sample-reports/report-neck-arm.pdf) · [upper back](docs/sample-reports/report-upper-back.pdf) · [whole spine](docs/sample-reports/report-whole-spine.pdf). Doctor review pack: [docs/clinical-review-pack.md](docs/clinical-review-pack.md).
+
 ## The four parts of the spine it covers
 
 | Choice on the start page | Data file | Conditions | Emergencies checked |
@@ -51,6 +81,8 @@ How a result is calculated:
 Copy one module file, give it a new `id` and `order`, add it to `index.html` after the other data files, and add test cases in `tests/cases/`. It then appears in the start-page dropdown automatically.
 
 ## Folder map
+
+`docs/` holds the screenshots, 3D test pictures, sample PDF reports and the doctor review pack. `netlify.toml`, `vercel.json` and `_headers` let the same repository be hosted on Netlify, Vercel or Cloudflare Pages with no build step (see HOSTING.md).
 
 ```
 index.html            open this
