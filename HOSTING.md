@@ -1,10 +1,23 @@
 # Putting the site online for free
 
+## Current setup (live)
+
+The site is live on GitHub Pages: **https://harshit7922.github.io/spine-pain-guide/**
+
+- Pages serves the **`gh-pages`** branch (root folder). `main` holds the same code.
+- To publish a change: commit on `main`, then run `python3 tools/bundle.py` (refreshes the offline file list in `sw.js`), commit that too, and push both branches:
+  `git push origin main && git push origin main:gh-pages`
+- Installed apps pick up the new version the next time they open online (the offline cache name changes with every build).
+- To serve from `main` instead: repository **Settings → Pages → Source: Deploy from a branch → main / (root) → Save**; then only `main` needs pushing.
+- A custom domain can be added later in **Settings → Pages → Custom domain** (plus a `CNAME` file and DNS records at the registrar).
+
+## Other free options
+
 Do this only after a doctor has reviewed the rules (see the review pack). The site is fully static: it collects no data, needs no server, and works offline once loaded.
 
 The ready-to-host copy is `dist/web/index.html` (the whole site in one file). Rebuild it any time with `python3 tools/bundle.py`.
 
-## Option 1 – Netlify Drop (fastest, about 2 minutes)
+### Option 1 – Netlify Drop (fastest, about 2 minutes)
 
 1. Open https://app.netlify.com/drop in Chrome or Edge.
 2. Drag the `dist/web` folder onto the page (a zip of it also works).
@@ -13,7 +26,7 @@ The ready-to-host copy is `dist/web/index.html` (the whole site in one file). Re
 
 Netlify notes deploys under 50 MB work best and single files over 10 MB may stall; this site is about 3 MB.
 
-## Option 2 – GitHub Pages (free, with version history)
+### Option 2 – GitHub Pages (manual) (free, with version history)
 
 1. Create a new **public** repository on GitHub (free accounts need a public repository for Pages).
 2. Upload `dist/web/index.html` to the repository root and commit it to the `main` branch.
