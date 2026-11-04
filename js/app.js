@@ -996,12 +996,15 @@ const TPOSE = {
   ksquat: () => ({pose:{uarm_l:[-48, 0, 0], uarm_r:[-48, 0, 0], thigh_l:[-62, 0, -6], thigh_r:[-62, 0, 6], shin_l:[58, 0, 0], shin_r:[58, 0, 0], foot_l:[0, 0, 0], lspine:[18, 0, 0], tspine:[10, 0, 0]}, ground:'feet', pain:['knee_front_l', 'knee_front_r'], cam:{az:62, el:8, fit:1.05}, arc:{bone:'hips', off:[0, 0, -0.1], rel:'foot_l', from:{uarm_l:[-48, 0, 0], uarm_r:[-48, 0, 0], thigh_l:[0, 0, -6], thigh_r:[0, 0, 6], shin_l:[0, 0, 0], shin_r:[0, 0, 0], lspine:[0, 0, 0], tspine:[0, 0, 0]}}, props:[]}),
   kjlt: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS), ground:'seat', pain:['knee_in_' + s, 'knee_out_' + s], cam:{az:s === 'l' ? 28 : -28, el:22, focusBone:'shin_' + s, d:0.95, dy:-0.02}, rings:[{bone:'shin_' + s, off:[0.05, 0, 0.012]}, {bone:'shin_' + s, off:[-0.05, 0, 0.012]}], props:['chair']}),
   kext: s => ({pose:{$rot:[-90, 0, 0], uarm_l:[0, 0, -8], uarm_r:[0, 0, 8], farm_l:[20, 0, 0], farm_r:[20, 0, 0]}, ground:'bed', cam:{az:s === 'l' ? 70 : -70, el:24, focusBone:'shin_' + s, d:1.25, dy:0.02}, arrows:[{bone:'shin_' + s, from:[0, 0, 0.22], to:[0, 0, 0.07]}], props:['bed']}),
+  windlass: s => ({pose:mirror({toes_l:[-55, 0, 0], uarm_l:[-10, 0, 6], uarm_r:[-10, 0, -6]}, s), ground:'feet', pain:['heel_' + s, 'arch_' + s], cam:{az:s === 'l' ? -75 : 75, el:12, focusBone:'foot_' + s, focusOff:[0, -0.02, 0.06], d:0.62, dy:0}, arc:{bone:'toes_' + s, off:[0, 0, 0.04], from:{['toes_' + s]:[0, 0, 0]}}, props:[]}),
+  fheel: s => Object.assign(TPOSE.toe(s), {work:null, pain:['achilles_' + s, 'calf_' + s]}),
+  fsq: s => ({pose:{uarm_l:[-10, 0, 6], uarm_r:[-10, 0, -6]}, ground:'feet', pain:['ball_' + s], cam:{az:s === 'l' ? 25 : -25, el:42, focusBone:'toes_' + s, d:0.55, dy:0}, rings:[{bone:'toes_' + s, off:[s === 'l' ? 0.024 : -0.024, 0.012, 0.0]}], props:[]}),
   squat: () => ({pose:Object.assign({}, ARMS_CROSS, {thigh_l:[-62, 0, -6], thigh_r:[-62, 0, 6], shin_l:[58, 0, 0], shin_r:[58, 0, 0], foot_l:[0, 0, 0], lspine:[18, 0, 0], tspine:[10, 0, 0]}), ground:'feet', work:['thigh_front_l', 'thigh_front_r'], cam:{az:62, el:8, fit:1.05}, arc:{bone:'hips', off:[0, 0, -0.1], rel:'foot_l', from:Object.assign({}, SEAT)}, props:['chairBehind']})
 };
 const TPIC = {};
 function testSide(){
   const pick = ids => { for (const k of ids) { const v = A.areas[k]; if (v === 'l' || v === 'r') return v; } return null; };
-  return pick(['s1','l5','l4','thigh_back','buttock','thigh_front','c8','c7','c6','c5','t1','scap','trap','lowback_side','sh_side','sh_front','sh_top','sh_back','forearm','knee_front','knee_in','knee_out','knee_back','tibial_tub','calf','hipthigh']) || 'l';
+  return pick(['s1','l5','l4','thigh_back','buttock','thigh_front','c8','c7','c6','c5','t1','scap','trap','lowback_side','sh_side','sh_front','sh_top','sh_back','forearm','knee_front','knee_in','knee_out','knee_back','tibial_tub','calf','hipthigh','heel','achilles','ankle_out','ankle_in','arch','ball','bigtoe','shin_in']) || 'l';
 }
 function testPic(id, w, h){
   const mk = TPOSE[id]; if (!mk || !rigReady()) return null;

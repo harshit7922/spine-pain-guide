@@ -1,0 +1,21 @@
+// Leg, ankle and foot scenarios: [name, module, answers, expected-result check]
+const base = {pain:5, fwalk:'fwalk_diff', stand:'stand_diff', rf:{rf_fracture:'no', rf_ischaemia:'no', rf_ulcer_fever:'no', rf_dvt:'no', rf_hot:'no', rf_ulcer:'no', rf_night:'no'}};
+const F = (o, rf) => Object.assign({}, base, o, {rf:Object.assign({}, base.rf, rf || {})});
+module.exports = [
+ ['Plantar fasciitis (teacher, 45)','foot',F({age:'a_40_49',sex:'sex_f',areas:{heel:'l',arch:'l'},onset:'on_more_walk',since:'d_6_12',hx:'h_first',pat:['ch_first_step','w_walk_long','o_overweight'],windlass:'windlass_pos',fheel:'hr_ok',fsq:'squeeze_neg'}), "r=>r.top[0].startsWith('pfasc:strong')&&r.level==='yellow'"],
+ ['Achilles tendinopathy (runner)','foot',F({age:'a_30_39',sex:'sex_m',areas:{achilles:'r'},onset:'on_more_walk',since:'d_weeks',hx:'h_first',pat:['w_run'],windlass:'windlass_neg',fheel:'hr_pain'}), "r=>r.top[0].startsWith('achten')"],
+ ['Achilles rupture is urgent','foot',F({age:'a_40_49',sex:'sex_m',areas:{achilles:'l',calf:'l'},onset:'on_more_walk',since:'d_days',hx:'h_first',pat:['ch_snap'],fheel:'hr_cannot'}), "r=>r.level==='red'&&r.emerg.includes('rupture')&&r.top[0].startsWith('achrupt')"],
+ ['Ankle sprain','foot',F({age:'a_18_29',sex:'sex_f',areas:{ankle_out:'r'},onset:'on_roll',since:'d_days',hx:'h_first',pat:['ch_swell'],fheel:'hr_skip',windlass:'windlass_skip',fsq:'squeeze_skip'}), "r=>r.top[0].startsWith('sprain')&&r.level==='yellow'"],
+ ['Ottawa rule positive after a roll','foot',F({age:'a_50_59',areas:{ankle_out:'l'},onset:'on_roll',since:'d_days',hx:'h_first',pat:['ch_swell'],fwalk:'fwalk_no'},{rf_fracture:'yes'}), "r=>r.level==='red'&&r.emerg.includes('fracture')"],
+ ['Shin splints (recruit)','foot',F({age:'a_18_29',sex:'sex_m',areas:{shin_in:'both'},onset:'on_more_walk',since:'d_weeks',hx:'h_first',pat:['w_run']}), "r=>r.top[0].startsWith('mtss')"],
+ ['Stress fracture (pinpoint pain)','foot',F({age:'a_18_29',sex:'sex_f',areas:{ball:'l'},onset:'on_more_walk',since:'d_weeks',hx:'h_first',pat:['ch_focal_bone','w_run'],fsq:'squeeze_neg'}), "r=>r.top[0].startsWith('stressfx')&&r.level==='orange'"],
+ ['Morton’s neuroma','foot',F({age:'a_50_59',sex:'sex_f',areas:{ball:'r'},onset:'on_new_shoes',since:'d_6_12',hx:'h_first',pat:['ch_stone','w_tight_shoes','b_shoes_off'],fsq:'squeeze_pos',windlass:'windlass_neg'}), "r=>r.top[0].startsWith('morton')"],
+ ['Gout attack (big toe)','foot',F({age:'a_50_59',sex:'sex_m',areas:{bigtoe:'r'},onset:'on_woke',since:'d_days',hx:'h_1_5y',btw:'btw_free',pat:['ch_hot_toe','o_gout'],pain:9}), "r=>r.top[0].startsWith('gout')&&r.level==='orange'&&r.depts[0]==='medicine'"],
+ ['Bunion','foot',F({age:'a_50_59',sex:'sex_f',areas:{bigtoe:'l'},onset:'on_gradual',since:'d_3m',hx:'h_5y',pat:['ch_bunion','w_tight_shoes']}), "r=>r.top[0].startsWith('bunion')"],
+ ['Diabetic neuropathy','foot',F({age:'a_60p',sex:'sex_m',risks:['r_immune'],areas:{ball:'both',heel:'both'},onset:'on_gradual',since:'d_3m',hx:'h_1_5y',pat:['ch_numb_both','w_night'],sleep:'sleep_bad'}), "r=>r.top[0].startsWith('neuro')&&r.level==='yellow'"],
+ ['Leg artery disease (claudication)','foot',F({age:'a_60p',sex:'sex_m',risks:['r_vasc'],areas:{calf:'both'},onset:'on_gradual',since:'d_3m',hx:'h_first',pat:['w_walk_calf','o_cold_foot']}), "r=>r.top[0].startsWith('pad')&&r.depts[0]==='vascular'"],
+ ['Cold pale foot is an emergency','foot',F({age:'a_60p',areas:{calf:'l'},onset:'on_woke',since:'d_days',hx:'h_first'},{rf_ischaemia:'yes'}), "r=>r.level==='red'&&r.emerg.includes('ischaemia')"],
+ ['Infected diabetic foot wound is an emergency','foot',F({age:'a_60p',risks:['r_immune'],areas:{ball:'l'},onset:'on_gradual',since:'d_days',hx:'h_first',pat:['ch_numb_both']},{rf_ulcer_fever:'yes'}), "r=>r.level==='red'&&r.emerg.includes('footinf')"],
+ ['Child heel pain (Sever)','foot',F({age:'a_u18',sex:'sex_m',areas:{heel:'both'},onset:'on_more_walk',since:'d_weeks',hx:'h_first',pat:['w_run']}), "r=>r.top[0].startsWith('sever')&&r.depts[0]==='paeds'"],
+ ['Sciatica felt in the foot','foot',F({age:'a_30_39',areas:{lowback:'yes',calf:'l'},onset:'on_gradual',since:'d_weeks',hx:'h_first',pat:['ch_shoot_leg']}), "r=>r.top[0].startsWith('backref')&&r.depts[0]==='ortho_spine'"]
+];

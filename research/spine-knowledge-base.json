@@ -24,6 +24,7 @@
       "data/whole.js",
       "data/shoulder.js",
       "data/knee.js",
+      "data/foot.js",
       "data/glossary.js",
       "data/rig3d.js"
     ]
@@ -369,6 +370,46 @@
         "key": "nicedvt",
         "title": "NICE QS201 / NG158 – suspected deep vein thrombosis: leg vein ultrasound within 4 hours",
         "url": "https://www.nice.org.uk/guidance/qs201/chapter/quality-statement-3-proximal-leg-vein-ultrasound-scan-for-a-likely-deep-vein-thrombosis-wells"
+      },
+      {
+        "key": "aafppf",
+        "title": "Trojian T, Tucker AK. Plantar fasciitis. Am Fam Physician 2019;99:744–50 (10% lifetime; about 80% improve within 12 months; windlass test specificity 100%, sensitivity 32%)",
+        "url": "https://www.aafp.org/pubs/afp/issues/2019/0615/p744.html"
+      },
+      {
+        "key": "ottankle",
+        "title": "Bachmann LM et al. Accuracy of Ottawa ankle rules to exclude fractures of the ankle and mid-foot: systematic review. BMJ 2003;326:417–9 (pooled sensitivity 97.6%)",
+        "url": "https://www.aafp.org/pubs/afp/issues/2003/0815/p745a.html"
+      },
+      {
+        "key": "achrup",
+        "title": "GPnotebook – Complete rupture of the Achilles tendon: calf squeeze sensitivity 0.96; up to 20–25% missed at first visit; same-day orthopaedic referral",
+        "url": "https://gpnotebook.com/pages/musculoskeletal-medicine/complete-rupture-of-the-achilles-tendon/diagnostic-process"
+      },
+      {
+        "key": "morton",
+        "title": "Sports Injury Bulletin – Morton’s neuroma, citing Mahadevan 2015 (J Foot Ankle Surg): thumb-index finger squeeze sensitivity 96%; 3rd–4th web space in 80–85%",
+        "url": "https://www.sportsinjurybulletin.com/mortons-neuroma-clinical-assessment-and-management/"
+      },
+      {
+        "key": "mtss",
+        "title": "StatPearls – Medial tibial stress syndrome (13.6–20% of runners; tenderness over more than 5 cm, a stress fracture is pinpoint under 5 cm)",
+        "url": "https://statpearls.com/point-of-care/42693"
+      },
+      {
+        "key": "hvalgus",
+        "title": "Nix S et al. Prevalence of hallux valgus: systematic review and meta-analysis. J Foot Ankle Res 2010;3:21 (23% of adults, 35.7% over 65; women 30%, men 13%)",
+        "url": "https://scalda.mijn.bsl.nl/prevalence-of-hallux-valgus-in-the-general-population-a-systemat/7109980"
+      },
+      {
+        "key": "indiab",
+        "title": "ICMR-INDIAB study, Lancet Diabetes Endocrinol 2023: diabetes in 11.4% of Indians, prediabetes 15.3%",
+        "url": "https://www.thequint.com/fit/diabetes-obesity-study-results-india-icmr"
+      },
+      {
+        "key": "diabfoot",
+        "title": "NHS Borders / Scottish Diabetes Foot Action Group – management of the diabetic foot: ulcer with fever, sepsis, ischaemia or gangrene needs immediate referral; other active foot problems within 1 working day",
+        "url": "https://www.rightdecisions.scot.nhs.uk/borders-ref-help-toolkit/podiatry/management-of-the-diabetic-foot"
       },
       {
         "key": "statdh",
@@ -1146,6 +1187,131 @@
         "picture": "skin"
       },
       {
+        "id": "plantar",
+        "terms": {
+          "en": [
+            "plantar fasciitis",
+            "plantar fascia",
+            "plantar"
+          ],
+          "hi": [
+            "प्लांटर फ़ेशियाइटिस",
+            "प्लांटर फ़ेशिया",
+            "प्लांटर"
+          ]
+        },
+        "title": {
+          "en": "Plantar fascia",
+          "hi": "प्लांटर फ़ेशिया"
+        },
+        "plain": {
+          "en": "A thick, strong band under the sole running from the heel bone to the toes, holding up the arch like a bowstring. Overload where it joins the heel (highlighted) causes plantar fasciitis: sharp heel pain with the first steps.",
+          "hi": "तलवे के नीचे एड़ी की हड्डी से उंगलियों तक जाती मोटी, मज़बूत पट्टी, जो धनुष की डोरी की तरह आर्च को थामे रखती है। एड़ी से जुड़ने की जगह (रंगीन) पर ज़्यादा भार से प्लांटर फ़ेशियाइटिस होता है: पहले कदमों पर एड़ी में तेज़ दर्द।"
+        },
+        "sources": [
+          "aafppf"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "achillesw",
+        "terms": {
+          "en": [
+            "Achilles"
+          ],
+          "hi": [
+            "एकिलीज़"
+          ]
+        },
+        "title": {
+          "en": "Achilles tendon",
+          "hi": "एकिलीज़ टेंडन"
+        },
+        "plain": {
+          "en": "The thickest tendon in the body (highlighted), joining the calf muscles to the back of the heel bone. It lets you push off when walking, running and rising on the toes.",
+          "hi": "शरीर का सबसे मोटा टेंडन (रंगीन), जो पिंडली की मांसपेशियों को एड़ी की हड्डी के पीछे से जोड़ता है। चलने, दौड़ने और पंजों पर उठने में धक्का देने का काम करता है।"
+        },
+        "sources": [
+          "achrup"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "mortonw",
+        "terms": {
+          "en": [
+            "Morton’s neuroma",
+            "Morton's neuroma",
+            "neuroma"
+          ],
+          "hi": [
+            "मॉर्टन न्यूरोमा",
+            "न्यूरोमा"
+          ]
+        },
+        "title": {
+          "en": "Morton’s neuroma",
+          "hi": "मॉर्टन न्यूरोमा"
+        },
+        "plain": {
+          "en": "A thickened, pinched nerve between two long foot bones, most often between the 3rd and 4th toes (marked). It feels like a pebble under the ball of the foot, with burning into the toes.",
+          "hi": "पैर की दो लंबी हड्डियों के बीच मोटी, दबी नस, ज़्यादातर तीसरी और चौथी उंगली के बीच (निशान)। पंजे के नीचे कंकड़ जैसा लगता है, उंगलियों तक जलन के साथ।"
+        },
+        "sources": [
+          "morton"
+        ],
+        "picture": "pose"
+      },
+      {
+        "id": "neuropathy",
+        "terms": {
+          "en": [
+            "peripheral neuropathy",
+            "neuropathy"
+          ],
+          "hi": [
+            "न्यूरोपैथी"
+          ]
+        },
+        "title": {
+          "en": "Peripheral neuropathy",
+          "hi": "पेरिफ़ेरल न्यूरोपैथी"
+        },
+        "plain": {
+          "en": "Damage to the long nerves that reach the feet. It starts in the toes of both feet (highlighted) as numbness, tingling or burning and slowly climbs up, like a sock. Diabetes is the commonest cause.",
+          "hi": "पैरों तक पहुंचने वाली लंबी नसों का नुकसान। यह दोनों पैरों की उंगलियों (रंगीन) से सुन्नपन, झुनझुनी या जलन के रूप में शुरू होकर मोज़े की तरह धीरे-धीरे ऊपर चढ़ता है। डायबिटीज़ सबसे आम कारण है।"
+        },
+        "sources": [
+          "indiab"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "goutw",
+        "terms": {
+          "en": [
+            "gout",
+            "pseudogout"
+          ],
+          "hi": [
+            "गाउट",
+            "स्यूडोगाउट"
+          ]
+        },
+        "title": {
+          "en": "Gout",
+          "hi": "गाउट"
+        },
+        "plain": {
+          "en": "Uric acid crystals settle in a joint and cause sudden, very painful redness, heat and swelling, most typically at the base of the big toe (highlighted).",
+          "hi": "यूरिक एसिड के क्रिस्टल जोड़ में जमकर अचानक बहुत दर्दनाक लाली, गर्मी और सूजन लाते हैं, सबसे ज़्यादा अंगूठे की जड़ (रंगीन) पर।"
+        },
+        "sources": [
+          "hotjoint"
+        ],
+        "picture": "skin"
+      },
+      {
         "id": "cervical",
         "terms": {
           "en": [
@@ -1615,6 +1781,17 @@
           "hi": "बच्चों और किशोरों में हड्डी और जोड़ों की समस्याएं।"
         },
         "q": "pediatric orthopedic"
+      },
+      "podiatry": {
+        "n": {
+          "en": "Diabetic foot clinic / Podiatry",
+          "hi": "डायबिटिक फ़ुट क्लिनिक / पोडियाट्री"
+        },
+        "s": {
+          "en": "Foot checks, wounds, shoes and insoles, especially with diabetes.",
+          "hi": "पैरों की जांच, घाव, जूते और इनसोल, खासकर डायबिटीज़ में।"
+        },
+        "q": "diabetic foot clinic podiatrist"
       }
     },
     "statistics": [
@@ -22891,6 +23068,3039 @@
         "walk_hard": {
           "en": "Difficulty walking",
           "hi": "चलने में दिक्कत"
+        }
+      }
+    },
+    {
+      "id": "foot",
+      "order": 7,
+      "title": {
+        "en": "Leg, ankle and foot pain assessment",
+        "hi": "पिंडली, टखने और पैर के दर्द की जांच रिपोर्ट"
+      },
+      "tag": null,
+      "sourcesAddedByModule": [
+        "aafppf",
+        "ottankle",
+        "achrup",
+        "morton",
+        "mtss",
+        "hvalgus",
+        "indiab",
+        "diabfoot"
+      ],
+      "conditions": [
+        {
+          "id": "pfasc",
+          "name": {
+            "en": "Plantar heel pain (plantar fasciitis)",
+            "hi": "एड़ी के नीचे दर्द (प्लांटर फ़ेशियाइटिस)"
+          },
+          "scientific": "Plantar fasciitis (plantar fasciopathy)",
+          "what": {
+            "en": "The thick band under the sole (plantar fascia) is overloaded where it attaches to the heel bone. The pain is sharp with the first steps in the morning or after sitting, eases after a few minutes of walking, then returns at the end of the day.",
+            "hi": "तलवे के नीचे की मोटी पट्टी (प्लांटर फ़ेशिया) पर एड़ी की हड्डी से जुड़ने की जगह पर ज़्यादा भार पड़ता है। सुबह या बैठने के बाद पहले कदमों पर तेज़ दर्द, कुछ मिनट चलने पर कम, फिर दिन के अंत में लौट आता है।"
+          },
+          "causes": {
+            "en": "Long standing or walking on hard floors, a rise in walking or running, extra body weight and tight calves. About 10% of people get it in their lifetime; it is most common in women aged 40–60. Heel spurs on X-ray are common in people without pain and are not the cause.",
+            "hi": "सख्त फ़र्श पर देर तक खड़े रहना या चलना, ज़्यादा चलना या दौड़ना, ज़्यादा वज़न और कसी पिंडलियाँ। लगभग 10% लोगों को जीवन में कभी होता है; 40–60 उम्र की महिलाओं में सबसे आम। एक्स-रे में एड़ी का स्पर बिना दर्द वालों में भी आम है और यह कारण नहीं है।"
+          },
+          "confirm": {
+            "en": "Examination is usually enough; ultrasound if it lasts more than 3 months despite treatment.",
+            "hi": "आमतौर पर जांच काफ़ी है; इलाज के बावजूद 3 महीने से ज़्यादा रहे तो अल्ट्रासाउंड।"
+          },
+          "treat": {
+            "en": "Plantar fascia and calf stretching, cushioned footwear or off-the-shelf insoles, ice massage, reducing standing; injections or shock-wave therapy only if it persists.",
+            "hi": "प्लांटर फ़ेशिया और पिंडली की स्ट्रेचिंग, गद्देदार जूते या बाज़ार में मिलने वाले इनसोल, बर्फ़ से मालिश, खड़े रहना कम करना; बना रहे तभी इंजेक्शन या शॉक-वेव थेरेपी।"
+          },
+          "outlook": {
+            "en": "About 80% improve within 12 months without an operation.",
+            "hi": "लगभग 80% लोग बिना ऑपरेशन 12 महीने में सुधर जाते हैं।"
+          },
+          "thresholds": [
+            10,
+            7,
+            4
+          ],
+          "anchors": [
+            "heel",
+            "ch_first_step",
+            "windlass_pos"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "physio",
+            "ortho"
+          ],
+          "outlookSource": [
+            "aafppf"
+          ],
+          "weights": [
+            {
+              "feature": "heel",
+              "label": {
+                "en": "Under or behind the heel",
+                "hi": "एड़ी के नीचे या पीछे"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "arch",
+              "label": {
+                "en": "Arch of the foot",
+                "hi": "पैर का आर्च (तलवे का बीच)"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_first_step",
+              "label": {
+                "en": "Sharp heel pain with the first steps in the morning or after sitting, easing after a few minutes",
+                "hi": "सुबह या बैठने के बाद पहले कदमों पर एड़ी में तेज़ दर्द, जो कुछ मिनट में कम हो जाए"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "windlass_pos",
+              "label": {
+                "en": "Big toe lift (windlass test): positive",
+                "hi": "अंगूठा ऊपर उठाना (विंडलास टेस्ट): पॉज़िटिव"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_walk_long",
+              "label": {
+                "en": "Walking or standing for long",
+                "hi": "देर तक चलना या खड़े रहना"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_more_walk",
+              "label": {
+                "en": "More walking, running, standing or sport than usual",
+                "hi": "सामान्य से ज़्यादा चलना, दौड़ना, खड़े रहना या खेल"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "o_overweight",
+              "label": {
+                "en": "Overweight, or gained weight recently",
+                "hi": "ज़्यादा वज़न, या हाल में वज़न बढ़ा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "b_shoes_off",
+              "label": {
+                "en": "Taking the shoes off and rubbing the foot",
+                "hi": "जूते उतारकर पैर मलना"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_numb_both",
+              "label": {
+                "en": "Numbness, tingling or burning in both feet, starting in the toes",
+                "hi": "दोनों पैरों में सुन्नपन, झुनझुनी या जलन, उंगलियों से शुरू"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "w_night",
+              "label": {
+                "en": "Burning or pain in the feet at night in bed",
+                "hi": "रात को बिस्तर पर पैरों में जलन या दर्द"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "achilles",
+              "label": {
+                "en": "Achilles tendon (cord above the back of the heel)",
+                "hi": "एकिलीज़ टेंडन (एड़ी के पीछे ऊपर की ओर जाती डोरी)"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_snap",
+              "label": {
+                "en": "A sudden feeling of being kicked or hit at the back of the heel, sometimes with a snap",
+                "hi": "एड़ी के पीछे अचानक किसी के लात मारने या चोट लगने जैसा एहसास, कभी-कभी चटकने की आवाज़ के साथ"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_hot_toe",
+              "label": {
+                "en": "A sudden, very painful, red, hot and swollen big toe or foot joint, often overnight",
+                "hi": "अचानक बहुत दर्द वाला, लाल, गर्म और सूजा अंगूठा या पैर का जोड़, अक्सर रात भर में"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "sever",
+          "name": {
+            "en": "Sever’s disease (heel pain in growing children)",
+            "hi": "सीवर रोग (बढ़ते बच्चों में एड़ी का दर्द)"
+          },
+          "scientific": "Calcaneal apophysitis",
+          "what": {
+            "en": "In active children the Achilles tendon pulls on the growth area at the back of the heel bone, causing heel pain with running and jumping.",
+            "hi": "सक्रिय बच्चों में एकिलीज़ टेंडन एड़ी की हड्डी के पिछले बढ़ने वाले हिस्से पर खिंचाव डालता है, जिससे दौड़ने और कूदने पर एड़ी में दर्द होता है।"
+          },
+          "causes": {
+            "en": "Sport during growth: girls about 8–13, boys about 10–15.",
+            "hi": "बढ़त के दौर में खेल: लड़कियाँ लगभग 8–13, लड़के लगभग 10–15।"
+          },
+          "confirm": {
+            "en": "Examination.",
+            "hi": "जांच।"
+          },
+          "treat": {
+            "en": "Adjusting sport to pain, heel cups, calf stretching.",
+            "hi": "दर्द के हिसाब से खेल कम-ज़्यादा करना, हील कप, पिंडली की स्ट्रेचिंग।"
+          },
+          "outlook": {
+            "en": "Settles when the growth plate closes.",
+            "hi": "ग्रोथ प्लेट बंद होने पर ठीक हो जाता है।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "heel"
+          ],
+          "rare": false,
+          "onlyIf": "a_u18",
+          "departments": [
+            "paeds",
+            "physio"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "heel",
+              "label": {
+                "en": "Under or behind the heel",
+                "hi": "एड़ी के नीचे या पीछे"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "achilles",
+              "label": {
+                "en": "Achilles tendon (cord above the back of the heel)",
+                "hi": "एकिलीज़ टेंडन (एड़ी के पीछे ऊपर की ओर जाती डोरी)"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "w_run",
+              "label": {
+                "en": "Running, jumping or sport",
+                "hi": "दौड़ना, कूदना या खेल"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_more_walk",
+              "label": {
+                "en": "More walking, running, standing or sport than usual",
+                "hi": "सामान्य से ज़्यादा चलना, दौड़ना, खड़े रहना या खेल"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "ch_first_step",
+              "label": {
+                "en": "Sharp heel pain with the first steps in the morning or after sitting, easing after a few minutes",
+                "hi": "सुबह या बैठने के बाद पहले कदमों पर एड़ी में तेज़ दर्द, जो कुछ मिनट में कम हो जाए"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "achten",
+          "name": {
+            "en": "Achilles tendinopathy",
+            "hi": "एकिलीज़ टेंडिनोपैथी"
+          },
+          "scientific": "Achilles tendinopathy (mid-portion or insertional)",
+          "what": {
+            "en": "The Achilles tendon becomes painful and thickened from overload, usually a few centimetres above the heel or where it joins the heel bone. It is stiff and sore first thing in the morning and at the start of exercise.",
+            "hi": "ज़्यादा भार से एकिलीज़ टेंडन दर्द वाला और मोटा हो जाता है, आमतौर पर एड़ी से कुछ सेंटीमीटर ऊपर या जहाँ वह एड़ी की हड्डी से जुड़ता है। सुबह और व्यायाम की शुरुआत में जकड़ा और दुखता है।"
+          },
+          "causes": {
+            "en": "A rise in running or walking, hill running, new flat shoes, and some medicines (steroids, certain antibiotics).",
+            "hi": "ज़्यादा दौड़ना या चलना, चढ़ाई पर दौड़ना, नए सपाट जूते, और कुछ दवाएं (स्टेरॉयड, कुछ एंटीबायोटिक)।"
+          },
+          "confirm": {
+            "en": "Examination; ultrasound if unclear.",
+            "hi": "जांच; साफ़ न हो तो अल्ट्रासाउंड।"
+          },
+          "treat": {
+            "en": "A graded calf and tendon-loading exercise programme with a physiotherapist; heel raises in shoes in the short term.",
+            "hi": "फिज़ियोथेरेपिस्ट के साथ धीरे-धीरे बढ़ता पिंडली और टेंडन-लोडिंग व्यायाम; थोड़े समय के लिए जूतों में हील रेज़।"
+          },
+          "outlook": {
+            "en": "Improves over months with loading exercise; rest alone rarely cures it.",
+            "hi": "लोडिंग व्यायाम से महीनों में सुधरता है; सिर्फ़ आराम से कम ही ठीक होता है।"
+          },
+          "thresholds": [
+            9,
+            6,
+            4
+          ],
+          "anchors": [
+            "achilles"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "physio",
+            "sports"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "achilles",
+              "label": {
+                "en": "Achilles tendon (cord above the back of the heel)",
+                "hi": "एकिलीज़ टेंडन (एड़ी के पीछे ऊपर की ओर जाती डोरी)"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "hr_pain",
+              "label": {
+                "en": "Single-leg heel raise: positive",
+                "hi": "एक पैर पर पंजों के बल उठना: पॉज़िटिव"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_run",
+              "label": {
+                "en": "Running, jumping or sport",
+                "hi": "दौड़ना, कूदना या खेल"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_more_walk",
+              "label": {
+                "en": "More walking, running, standing or sport than usual",
+                "hi": "सामान्य से ज़्यादा चलना, दौड़ना, खड़े रहना या खेल"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "r_bones",
+              "label": {
+                "en": "Osteoporosis, or steroid tablets for 3+ months",
+                "hi": "ऑस्टियोपोरोसिस, या 3+ महीने स्टेरॉयड की गोलियां"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_snap",
+              "label": {
+                "en": "A sudden feeling of being kicked or hit at the back of the heel, sometimes with a snap",
+                "hi": "एड़ी के पीछे अचानक किसी के लात मारने या चोट लगने जैसा एहसास, कभी-कभी चटकने की आवाज़ के साथ"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "hr_cannot",
+              "label": {
+                "en": "Single-leg heel raise: cannot rise",
+                "hi": "एक पैर पर पंजों के बल उठना: उठ नहीं पाते"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_first_step",
+              "label": {
+                "en": "Sharp heel pain with the first steps in the morning or after sitting, easing after a few minutes",
+                "hi": "सुबह या बैठने के बाद पहले कदमों पर एड़ी में तेज़ दर्द, जो कुछ मिनट में कम हो जाए"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "heel",
+              "label": {
+                "en": "Under or behind the heel",
+                "hi": "एड़ी के नीचे या पीछे"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "achrupt",
+          "name": {
+            "en": "Achilles tendon rupture",
+            "hi": "एकिलीज़ टेंडन फटना"
+          },
+          "scientific": "Acute Achilles tendon rupture",
+          "what": {
+            "en": "The tendon tears, usually during a push-off in sport. People feel as if they were kicked at the back of the heel; walking is possible but pushing off and rising on the toes are weak or impossible.",
+            "hi": "टेंडन फट जाता है, आमतौर पर खेल में पैर से धक्का देते समय। ऐसा लगता है जैसे एड़ी के पीछे किसी ने लात मारी; चलना संभव है पर धक्का देना और पंजों पर उठना कमज़ोर या असंभव होता है।"
+          },
+          "causes": {
+            "en": "Sudden effort in middle-aged weekend players (badminton, cricket, football), steroid injections or tablets, certain antibiotics.",
+            "hi": "अधेड़ उम्र के हफ़्ते के आखिर में खेलने वालों में अचानक ज़ोर (बैडमिंटन, क्रिकेट, फुटबॉल), स्टेरॉयड इंजेक्शन या गोलियाँ, कुछ एंटीबायोटिक।"
+          },
+          "confirm": {
+            "en": "A doctor squeezes the calf (the foot should move); this squeeze test picks up about 96% of ruptures. Up to 20–25% are missed at the first visit because walking is still possible.",
+            "hi": "डॉक्टर पिंडली दबाते हैं (पैर हिलना चाहिए); यह स्क्वीज़ टेस्ट लगभग 96% फटन पकड़ता है। 20–25% तक पहली जांच में छूट जाते हैं क्योंकि चलना फिर भी संभव होता है।"
+          },
+          "treat": {
+            "en": "Same-day orthopaedic assessment; treatment is a boot with the foot pointed down, or surgery, followed by rehabilitation.",
+            "hi": "उसी दिन ऑर्थोपेडिक जांच; इलाज में पैर नीचे की ओर रखते हुए बूट, या सर्जरी, फिर पुनर्वास।"
+          },
+          "outlook": {
+            "en": "Good results when treated early; delay makes recovery harder.",
+            "hi": "जल्दी इलाज से अच्छे नतीजे; देरी से ठीक होना मुश्किल।"
+          },
+          "thresholds": [
+            9,
+            6,
+            5
+          ],
+          "anchors": [
+            "ch_snap",
+            "hr_cannot"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "sports"
+          ],
+          "outlookSource": [
+            "achrup"
+          ],
+          "weights": [
+            {
+              "feature": "ch_snap",
+              "label": {
+                "en": "A sudden feeling of being kicked or hit at the back of the heel, sometimes with a snap",
+                "hi": "एड़ी के पीछे अचानक किसी के लात मारने या चोट लगने जैसा एहसास, कभी-कभी चटकने की आवाज़ के साथ"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "hr_cannot",
+              "label": {
+                "en": "Single-leg heel raise: cannot rise",
+                "hi": "एक पैर पर पंजों के बल उठना: उठ नहीं पाते"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "achilles",
+              "label": {
+                "en": "Achilles tendon (cord above the back of the heel)",
+                "hi": "एकिलीज़ टेंडन (एड़ी के पीछे ऊपर की ओर जाती डोरी)"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "calf",
+              "label": {
+                "en": "Calf (back of the lower leg)",
+                "hi": "पिंडली (निचले पैर का पिछला हिस्सा)"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_more_walk",
+              "label": {
+                "en": "More walking, running, standing or sport than usual",
+                "hi": "सामान्य से ज़्यादा चलना, दौड़ना, खड़े रहना या खेल"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "r_bones",
+              "label": {
+                "en": "Osteoporosis, or steroid tablets for 3+ months",
+                "hi": "ऑस्टियोपोरोसिस, या 3+ महीने स्टेरॉयड की गोलियां"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "ch_first_step",
+              "label": {
+                "en": "Sharp heel pain with the first steps in the morning or after sitting, easing after a few minutes",
+                "hi": "सुबह या बैठने के बाद पहले कदमों पर एड़ी में तेज़ दर्द, जो कुछ मिनट में कम हो जाए"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "sprain",
+          "name": {
+            "en": "Ankle sprain (ligament injury)",
+            "hi": "टखने की मोच (लिगामेंट की चोट)"
+          },
+          "scientific": "Lateral ankle sprain",
+          "what": {
+            "en": "Rolling the foot inwards stretches or tears the ligaments on the outer ankle, causing pain, swelling and bruising. Repeated sprains can leave the ankle unstable.",
+            "hi": "पैर अंदर की ओर मुड़ने से टखने के बाहरी लिगामेंट खिंचते या फटते हैं, जिससे दर्द, सूजन और नील पड़ता है। बार-बार मोच से टखना अस्थिर रह सकता है।"
+          },
+          "causes": {
+            "en": "Uneven roads and stairs, sport, high heels and previous sprains.",
+            "hi": "ऊबड़-खाबड़ सड़कें और सीढ़ियाँ, खेल, ऊंची एड़ी और पहले की मोच।"
+          },
+          "confirm": {
+            "en": "Examination; an X-ray only if the Ottawa ankle rules say so (they miss very few fractures, pooled sensitivity 97.6%).",
+            "hi": "जांच; एक्स-रे तभी जब ओटावा एंकल नियम कहें (ये बहुत कम फ्रैक्चर छोड़ते हैं, संयुक्त संवेदनशीलता 97.6%)।"
+          },
+          "treat": {
+            "en": "Early protected walking, ice and elevation for the first days, then balance and strengthening exercises; a brace for return to sport.",
+            "hi": "शुरू में सहारे के साथ चलना, पहले कुछ दिन बर्फ़ और पैर ऊंचा रखना, फिर संतुलन और मज़बूती के व्यायाम; खेल में लौटने के लिए ब्रेस।"
+          },
+          "outlook": {
+            "en": "Most recover over weeks; balance exercises lower the chance of another sprain.",
+            "hi": "ज़्यादातर कुछ हफ्तों में ठीक होते हैं; संतुलन के व्यायाम दोबारा मोच की संभावना कम करते हैं।"
+          },
+          "thresholds": [
+            9,
+            6,
+            4
+          ],
+          "anchors": [
+            "on_roll",
+            "ankle_out"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "physio",
+            "ortho"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "on_roll",
+              "label": {
+                "en": "Rolled or twisted the ankle (missed a step, uneven road, sport)",
+                "hi": "टखना मुड़ गया (सीढ़ी चूकी, ऊबड़-खाबड़ रास्ता, खेल)"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "ankle_out",
+              "label": {
+                "en": "Outer side of the ankle",
+                "hi": "टखने का बाहरी हिस्सा"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "ch_swell",
+              "label": {
+                "en": "Swelling and bruising around the ankle",
+                "hi": "टखने के आसपास सूजन और नील"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "ch_unstable",
+              "label": {
+                "en": "The ankle keeps rolling over or feels weak on uneven ground",
+                "hi": "टखना बार-बार मुड़ता है या ऊबड़-खाबड़ ज़मीन पर कमज़ोर लगता है"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ankle_in",
+              "label": {
+                "en": "Inner side of the ankle",
+                "hi": "टखने का अंदरूनी हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "ch_first_step",
+              "label": {
+                "en": "Sharp heel pain with the first steps in the morning or after sitting, easing after a few minutes",
+                "hi": "सुबह या बैठने के बाद पहले कदमों पर एड़ी में तेज़ दर्द, जो कुछ मिनट में कम हो जाए"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_numb_both",
+              "label": {
+                "en": "Numbness, tingling or burning in both feet, starting in the toes",
+                "hi": "दोनों पैरों में सुन्नपन, झुनझुनी या जलन, उंगलियों से शुरू"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "mtss",
+          "name": {
+            "en": "Shin splints (medial tibial stress syndrome)",
+            "hi": "शिन स्प्लिंट्स (मीडियल टिबियल स्ट्रेस सिंड्रोम)"
+          },
+          "scientific": "Medial tibial stress syndrome",
+          "what": {
+            "en": "Overload of the bone and its lining along the inner edge of the shin causes a diffuse ache over more than 5 cm during and after running.",
+            "hi": "पिंडली की हड्डी के अंदरूनी किनारे और उसकी परत पर ज़्यादा भार से दौड़ते समय और बाद में 5 सेमी से ज़्यादा में फैला दर्द होता है।"
+          },
+          "causes": {
+            "en": "A sudden rise in running or marching, hard surfaces, flat feet, extra weight and low vitamin D. It affects 13.6–20% of runners and up to 35% of military recruits.",
+            "hi": "अचानक ज़्यादा दौड़ना या मार्च, सख्त सतह, सपाट पैर, ज़्यादा वज़न और कम विटामिन D। 13.6–20% धावकों और 35% तक सैन्य रंगरूटों में होता है।"
+          },
+          "confirm": {
+            "en": "Examination; MRI if a stress fracture is suspected.",
+            "hi": "जांच; स्ट्रेस फ्रैक्चर का शक हो तो MRI।"
+          },
+          "treat": {
+            "en": "Reducing running load and gradually rebuilding it, shock-absorbing insoles, checking vitamin D and calcium.",
+            "hi": "दौड़ने का भार कम करके धीरे-धीरे बढ़ाना, झटका सोखने वाले इनसोल, विटामिन D और कैल्शियम की जांच।"
+          },
+          "outlook": {
+            "en": "Full recovery is expected with adequate rest and activity changes.",
+            "hi": "पर्याप्त आराम और गतिविधि में बदलाव से पूरी तरह ठीक होने की उम्मीद।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "shin_in"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "physio",
+            "sports"
+          ],
+          "outlookSource": [
+            "mtss"
+          ],
+          "weights": [
+            {
+              "feature": "shin_in",
+              "label": {
+                "en": "Inner edge of the shin",
+                "hi": "पिंडली की हड्डी का अंदरूनी किनारा"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "w_run",
+              "label": {
+                "en": "Running, jumping or sport",
+                "hi": "दौड़ना, कूदना या खेल"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "on_more_walk",
+              "label": {
+                "en": "More walking, running, standing or sport than usual",
+                "hi": "सामान्य से ज़्यादा चलना, दौड़ना, खड़े रहना या खेल"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "o_overweight",
+              "label": {
+                "en": "Overweight, or gained weight recently",
+                "hi": "ज़्यादा वज़न, या हाल में वज़न बढ़ा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_focal_bone",
+              "label": {
+                "en": "Pain pinpointed on one spot of a bone, worse with every step or hop",
+                "hi": "हड्डी के एक ही बिंदु पर दर्द, हर कदम या कूदने पर बढ़ता"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "stressfx",
+          "name": {
+            "en": "Stress fracture",
+            "hi": "स्ट्रेस फ्रैक्चर"
+          },
+          "scientific": "Bone stress injury (tibia, metatarsal, navicular)",
+          "what": {
+            "en": "A tiny crack in a bone from repeated loading, felt as pain pinpointed on one spot (under 5 cm) that worsens with each step and may ache at night.",
+            "hi": "बार-बार भार से हड्डी में बहुत छोटी दरार, जो एक ही बिंदु (5 सेमी से कम) पर दर्द के रूप में महसूस होती है, हर कदम पर बढ़ती है और रात को दुख सकती है।"
+          },
+          "causes": {
+            "en": "A sudden rise in walking, running or marching, low vitamin D or calcium, thin bones, low body weight or irregular periods in women athletes.",
+            "hi": "अचानक ज़्यादा चलना, दौड़ना या मार्च, कम विटामिन D या कैल्शियम, कमज़ोर हड्डियाँ, कम वज़न या महिला खिलाड़ियों में अनियमित माहवारी।"
+          },
+          "confirm": {
+            "en": "X-rays are often normal early; MRI confirms it.",
+            "hi": "शुरू में एक्स-रे अक्सर सामान्य; MRI से पुष्टि।"
+          },
+          "treat": {
+            "en": "Offloading (sometimes a boot), then a gradual return; some fractures (front of the shin, navicular) need specialist care.",
+            "hi": "भार हटाना (कभी-कभी बूट), फिर धीरे-धीरे वापसी; कुछ फ्रैक्चर (पिंडली का आगे का हिस्सा, नेवीकुलर) में विशेषज्ञ इलाज ज़रूरी।"
+          },
+          "outlook": {
+            "en": "Most heal in weeks to a few months with offloading.",
+            "hi": "भार हटाने से ज़्यादातर कुछ हफ्तों से कुछ महीनों में भर जाते हैं।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_focal_bone"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "sports"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ch_focal_bone",
+              "label": {
+                "en": "Pain pinpointed on one spot of a bone, worse with every step or hop",
+                "hi": "हड्डी के एक ही बिंदु पर दर्द, हर कदम या कूदने पर बढ़ता"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "w_run",
+              "label": {
+                "en": "Running, jumping or sport",
+                "hi": "दौड़ना, कूदना या खेल"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_more_walk",
+              "label": {
+                "en": "More walking, running, standing or sport than usual",
+                "hi": "सामान्य से ज़्यादा चलना, दौड़ना, खड़े रहना या खेल"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "r_bones",
+              "label": {
+                "en": "Osteoporosis, or steroid tablets for 3+ months",
+                "hi": "ऑस्टियोपोरोसिस, या 3+ महीने स्टेरॉयड की गोलियां"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "shin_in",
+              "label": {
+                "en": "Inner edge of the shin",
+                "hi": "पिंडली की हड्डी का अंदरूनी किनारा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "arch",
+              "label": {
+                "en": "Arch of the foot",
+                "hi": "पैर का आर्च (तलवे का बीच)"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ball",
+              "label": {
+                "en": "Ball of the foot or between the toes",
+                "hi": "पंजे का गद्देदार हिस्सा या उंगलियों के बीच"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "rf_night",
+              "label": {
+                "en": "Constant pain at night that no position eases, or fever and weight loss",
+                "hi": "रात को लगातार दर्द जो किसी भी पोज़िशन में कम न हो, या बुखार और वज़न घटना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "morton",
+          "name": {
+            "en": "Morton’s neuroma (pinched nerve between the toes)",
+            "hi": "मॉर्टन न्यूरोमा (उंगलियों के बीच दबी नस)"
+          },
+          "scientific": "Interdigital (Morton’s) neuroma",
+          "what": {
+            "en": "A nerve between two long foot bones thickens and is pinched, most often between the 3rd and 4th toes. It feels like a pebble in the shoe, with burning or numbness into those toes.",
+            "hi": "पैर की दो लंबी हड्डियों के बीच की नस मोटी होकर दब जाती है, ज़्यादातर तीसरी और चौथी उंगली के बीच। जूते में कंकड़ जैसा लगता है, उन उंगलियों तक जलन या सुन्नपन के साथ।"
+          },
+          "causes": {
+            "en": "Tight, narrow shoes and high heels; more common in women and in middle age. The 3rd–4th toe space is affected in 80–85%.",
+            "hi": "तंग, पतले जूते और ऊंची एड़ी; महिलाओं और अधेड़ उम्र में ज़्यादा। 80–85% में तीसरी-चौथी उंगली के बीच की जगह।"
+          },
+          "confirm": {
+            "en": "Examination; ultrasound if needed.",
+            "hi": "जांच; ज़रूरत हो तो अल्ट्रासाउंड।"
+          },
+          "treat": {
+            "en": "Wider, low-heeled shoes and a metatarsal pad; injection or surgery if it persists.",
+            "hi": "चौड़े, कम एड़ी वाले जूते और मेटाटार्सल पैड; बना रहे तो इंजेक्शन या सर्जरी।"
+          },
+          "outlook": {
+            "en": "Many improve with footwear changes.",
+            "hi": "कई लोग जूते बदलने से सुधरते हैं।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ball",
+            "squeeze_pos",
+            "ch_stone"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "podiatry"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ball",
+              "label": {
+                "en": "Ball of the foot or between the toes",
+                "hi": "पंजे का गद्देदार हिस्सा या उंगलियों के बीच"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "ch_stone",
+              "label": {
+                "en": "Feels like walking on a pebble; burning, sharp pain or numbness into two toes",
+                "hi": "जैसे कंकड़ पर चल रहे हों; दो उंगलियों तक जलन, तेज़ दर्द या सुन्नपन"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "squeeze_pos",
+              "label": {
+                "en": "Squeeze between the toes: positive",
+                "hi": "उंगलियों के बीच दबाना: पॉज़िटिव"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "squeeze_neg",
+              "label": {
+                "en": "Squeeze between the toes: negative",
+                "hi": "उंगलियों के बीच दबाना: नेगेटिव"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "w_tight_shoes",
+              "label": {
+                "en": "Tight or narrow shoes, high heels",
+                "hi": "तंग या पतले जूते, ऊंची एड़ी"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "b_shoes_off",
+              "label": {
+                "en": "Taking the shoes off and rubbing the foot",
+                "hi": "जूते उतारकर पैर मलना"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_numb_both",
+              "label": {
+                "en": "Numbness, tingling or burning in both feet, starting in the toes",
+                "hi": "दोनों पैरों में सुन्नपन, झुनझुनी या जलन, उंगलियों से शुरू"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_hot_toe",
+              "label": {
+                "en": "A sudden, very painful, red, hot and swollen big toe or foot joint, often overnight",
+                "hi": "अचानक बहुत दर्द वाला, लाल, गर्म और सूजा अंगूठा या पैर का जोड़, अक्सर रात भर में"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "bunion",
+          "name": {
+            "en": "Bunion or big toe arthritis",
+            "hi": "बनियन या अंगूठे की गठिया"
+          },
+          "scientific": "Hallux valgus · hallux rigidus",
+          "what": {
+            "en": "The big toe drifts towards the other toes and a bony bump forms at its base (bunion), or the big toe joint wears and stiffens (hallux rigidus). Shoes press on the bump and walking hurts.",
+            "hi": "अंगूठा दूसरी उंगलियों की ओर खिसकता है और उसकी जड़ में हड्डी का उभार (बनियन) बनता है, या अंगूठे का जोड़ घिसकर जकड़ जाता है (हैलक्स रिजिडस)। जूते उभार पर दबते हैं और चलने में दर्द होता है।"
+          },
+          "causes": {
+            "en": "Family tendency, narrow or high-heeled shoes, flat feet. Bunions affect 23% of adults and 35.7% of people over 65, and women (30%) more than men (13%).",
+            "hi": "पारिवारिक प्रवृत्ति, पतले या ऊंची एड़ी के जूते, सपाट पैर। बनियन 23% वयस्कों और 65 से ऊपर के 35.7% लोगों में, और पुरुषों (13%) से ज़्यादा महिलाओं (30%) में होता है।"
+          },
+          "confirm": {
+            "en": "Examination and a standing X-ray if surgery is considered.",
+            "hi": "जांच, और सर्जरी पर विचार हो तो खड़े होकर एक्स-रे।"
+          },
+          "treat": {
+            "en": "Wide, soft shoes, toe spacers and padding; surgery if pain persists.",
+            "hi": "चौड़े, नरम जूते, टो स्पेसर और पैडिंग; दर्द बना रहे तो सर्जरी।"
+          },
+          "outlook": {
+            "en": "Shoes and padding help most; surgery corrects the shape.",
+            "hi": "जूते और पैडिंग सबसे ज़्यादा मदद करते हैं; सर्जरी से आकार ठीक होता है।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "bigtoe",
+            "ch_bunion"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "podiatry"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "bigtoe",
+              "label": {
+                "en": "Big toe joint",
+                "hi": "अंगूठे का जोड़"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "ch_bunion",
+              "label": {
+                "en": "A bony bump on the side of the big toe, with the toe angled inwards",
+                "hi": "अंगूठे की साइड में हड्डी का उभार, अंगूठा अंदर की ओर मुड़ा"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "w_tight_shoes",
+              "label": {
+                "en": "Tight or narrow shoes, high heels",
+                "hi": "तंग या पतले जूते, ऊंची एड़ी"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_hot_toe",
+              "label": {
+                "en": "A sudden, very painful, red, hot and swollen big toe or foot joint, often overnight",
+                "hi": "अचानक बहुत दर्द वाला, लाल, गर्म और सूजा अंगूठा या पैर का जोड़, अक्सर रात भर में"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "o_gout",
+              "label": {
+                "en": "Past attacks of gout",
+                "hi": "पहले गाउट के दौरे"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "gout",
+          "name": {
+            "en": "Gout attack",
+            "hi": "गाउट का दौरा"
+          },
+          "scientific": "Acute gouty arthritis",
+          "what": {
+            "en": "Uric acid crystals in a joint, classically the big toe, trigger sudden, very painful redness, heat and swelling, often overnight; even a bedsheet touching it hurts.",
+            "hi": "जोड़ में, खासकर अंगूठे में, यूरिक एसिड के क्रिस्टल अचानक बहुत दर्दनाक लाली, गर्मी और सूजन लाते हैं, अक्सर रात भर में; चादर का छूना भी दुखता है।"
+          },
+          "causes": {
+            "en": "High uric acid, alcohol, red meat and seafood, sweet drinks, some water tablets, kidney disease, dehydration.",
+            "hi": "ज़्यादा यूरिक एसिड, शराब, लाल मांस और सी-फ़ूड, मीठे पेय, कुछ पेशाब की गोलियाँ, गुर्दे की बीमारी, पानी की कमी।"
+          },
+          "confirm": {
+            "en": "Examination and blood uric acid (which can be normal during an attack); joint fluid shows crystals. If there is fever, infection must be ruled out the same day.",
+            "hi": "जांच और खून का यूरिक एसिड (जो दौरे में सामान्य भी हो सकता है); जोड़ के तरल में क्रिस्टल दिखते हैं। बुखार हो तो उसी दिन इन्फेक्शन खारिज करना ज़रूरी।"
+          },
+          "treat": {
+            "en": "Anti-inflammatory medicines, colchicine or steroids for the attack; long-term uric acid lowering if attacks repeat.",
+            "hi": "दौरे में सूजन-रोधी दवाएं, कोल्चिसिन या स्टेरॉयड; दौरे बार-बार हों तो लंबे समय तक यूरिक एसिड घटाने की दवा।"
+          },
+          "outlook": {
+            "en": "Attacks settle in days; lowering uric acid prevents joint damage.",
+            "hi": "दौरे कुछ दिनों में ठीक; यूरिक एसिड घटाने से जोड़ खराब होने से बचते हैं।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_hot_toe",
+            "o_gout"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "medicine",
+            "rheum"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ch_hot_toe",
+              "label": {
+                "en": "A sudden, very painful, red, hot and swollen big toe or foot joint, often overnight",
+                "hi": "अचानक बहुत दर्द वाला, लाल, गर्म और सूजा अंगूठा या पैर का जोड़, अक्सर रात भर में"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "o_gout",
+              "label": {
+                "en": "Past attacks of gout",
+                "hi": "पहले गाउट के दौरे"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "bigtoe",
+              "label": {
+                "en": "Big toe joint",
+                "hi": "अंगूठे का जोड़"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sex_m",
+              "label": {
+                "en": "Male",
+                "hi": "पुरुष"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_woke",
+              "label": {
+                "en": "Woke up with it",
+                "hi": "सुबह उठे तो दर्द था"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_bunion",
+              "label": {
+                "en": "A bony bump on the side of the big toe, with the toe angled inwards",
+                "hi": "अंगूठे की साइड में हड्डी का उभार, अंगूठा अंदर की ओर मुड़ा"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "on_roll",
+              "label": {
+                "en": "Rolled or twisted the ankle (missed a step, uneven road, sport)",
+                "hi": "टखना मुड़ गया (सीढ़ी चूकी, ऊबड़-खाबड़ रास्ता, खेल)"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "neuro",
+          "name": {
+            "en": "Nerve damage in the feet (peripheral neuropathy)",
+            "hi": "पैरों की नसों को नुकसान (पेरिफ़ेरल न्यूरोपैथी)"
+          },
+          "scientific": "Length-dependent peripheral neuropathy (often diabetic)",
+          "what": {
+            "en": "Long nerves to the feet are damaged, causing numbness, tingling or burning in both feet that starts in the toes and is often worse at night. Numb feet do not feel injuries, so wounds can go unnoticed.",
+            "hi": "पैरों तक जाने वाली लंबी नसें खराब हो जाती हैं, जिससे दोनों पैरों में सुन्नपन, झुनझुनी या जलन होती है जो उंगलियों से शुरू होती है और अक्सर रात में बढ़ती है। सुन्न पैर चोट महसूस नहीं करते, इसलिए घाव पर ध्यान नहीं जाता।"
+          },
+          "causes": {
+            "en": "Diabetes is the most common cause (11.4% of Indians have diabetes); also vitamin B12 deficiency, alcohol, thyroid disease and some medicines.",
+            "hi": "डायबिटीज़ सबसे आम कारण है (11.4% भारतीयों को डायबिटीज़ है); विटामिन B12 की कमी, शराब, थायरॉइड और कुछ दवाएं भी।"
+          },
+          "confirm": {
+            "en": "Foot sensation tests (monofilament), blood sugar, HbA1c, vitamin B12 and thyroid tests.",
+            "hi": "पैर की संवेदना की जांच (मोनोफ़िलामेंट), ब्लड शुगर, HbA1c, विटामिन B12 और थायरॉइड टेस्ट।"
+          },
+          "treat": {
+            "en": "Good sugar control, treating the cause, nerve-pain medicines if needed, and daily foot checks with proper footwear.",
+            "hi": "शुगर का अच्छा नियंत्रण, कारण का इलाज, ज़रूरत हो तो नस दर्द की दवाएं, और सही जूतों के साथ रोज़ पैरों की जांच।"
+          },
+          "outlook": {
+            "en": "Damage can be slowed; a non-healing foot wound needs review within one working day, and one with fever or spreading redness immediately.",
+            "hi": "नुकसान धीमा किया जा सकता है; न भरने वाले पैर के घाव को एक कामकाजी दिन में, और बुखार या फैलती लाली वाले को तुरंत दिखाएं।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_numb_both"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "medicine",
+            "neuro",
+            "podiatry"
+          ],
+          "outlookSource": [
+            "diabfoot"
+          ],
+          "weights": [
+            {
+              "feature": "ch_numb_both",
+              "label": {
+                "en": "Numbness, tingling or burning in both feet, starting in the toes",
+                "hi": "दोनों पैरों में सुन्नपन, झुनझुनी या जलन, उंगलियों से शुरू"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "w_night",
+              "label": {
+                "en": "Burning or pain in the feet at night in bed",
+                "hi": "रात को बिस्तर पर पैरों में जलन या दर्द"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "r_immune",
+              "label": {
+                "en": "Diabetes, HIV or low immunity",
+                "hi": "डायबिटीज़, HIV या कम इम्युनिटी"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "rf_ulcer",
+              "label": {
+                "en": "A wound, blister or sore on the foot that is not healing (especially with diabetes)",
+                "hi": "पैर पर घाव, छाला या ज़ख्म जो भर नहीं रहा (खासकर डायबिटीज़ में)"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "o_cold_foot",
+              "label": {
+                "en": "The foot is often cold or pale, or cuts on it heal slowly",
+                "hi": "पैर अक्सर ठंडा या पीला रहता है, या उस पर कट धीरे भरते हैं"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_roll",
+              "label": {
+                "en": "Rolled or twisted the ankle (missed a step, uneven road, sport)",
+                "hi": "टखना मुड़ गया (सीढ़ी चूकी, ऊबड़-खाबड़ रास्ता, खेल)"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_first_step",
+              "label": {
+                "en": "Sharp heel pain with the first steps in the morning or after sitting, easing after a few minutes",
+                "hi": "सुबह या बैठने के बाद पहले कदमों पर एड़ी में तेज़ दर्द, जो कुछ मिनट में कम हो जाए"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "pad",
+          "name": {
+            "en": "Narrowed leg arteries (peripheral artery disease)",
+            "hi": "पैर की धमनियाँ संकरी होना (पेरिफ़ेरल आर्टरी डिज़ीज़)"
+          },
+          "scientific": "Peripheral artery disease with intermittent claudication",
+          "what": {
+            "en": "Narrowed arteries cannot bring enough blood to the calf muscles during walking, so the calf cramps after a set distance and eases within minutes of standing still.",
+            "hi": "संकरी धमनियाँ चलते समय पिंडली की मांसपेशियों तक पर्याप्त खून नहीं पहुंचा पातीं, इसलिए एक तय दूरी के बाद पिंडली में ऐंठन होती है जो खड़े होकर रुकने पर कुछ मिनट में ठीक हो जाती है।"
+          },
+          "causes": {
+            "en": "Smoking or tobacco, diabetes, high blood pressure and cholesterol, age over 50.",
+            "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई ब्लड प्रेशर और कोलेस्ट्रॉल, 50 से ज़्यादा उम्र।"
+          },
+          "confirm": {
+            "en": "Ankle-brachial pressure index and a Doppler ultrasound. Calf pain that eases by standing still makes artery disease about 7.8 times more likely than a back cause.",
+            "hi": "एंकल-ब्रेकियल प्रेशर इंडेक्स और डॉप्लर अल्ट्रासाउंड। खड़े होकर रुकने से कम होने वाला पिंडली का दर्द कमर वाले कारण की तुलना में धमनी रोग की संभावना लगभग 7.8 गुना करता है।"
+          },
+          "treat": {
+            "en": "Stopping tobacco, supervised walking exercise, blood pressure, sugar and cholesterol control, medicines to prevent clots; procedures for severe cases.",
+            "hi": "तंबाकू छोड़ना, निगरानी में चलने का व्यायाम, ब्लड प्रेशर, शुगर और कोलेस्ट्रॉल नियंत्रण, थक्का रोकने की दवाएं; गंभीर मामलों में प्रक्रियाएं।"
+          },
+          "outlook": {
+            "en": "Walking distance improves with exercise; it is also a warning sign for heart attack and stroke risk.",
+            "hi": "व्यायाम से चलने की दूरी बढ़ती है; यह दिल के दौरे और स्ट्रोक के खतरे का भी चेतावनी संकेत है।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "w_walk_calf"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "vascular",
+            "medicine"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "w_walk_calf",
+              "label": {
+                "en": "Calf pain on walking a set distance that eases within minutes of standing still",
+                "hi": "एक तय दूरी चलने पर पिंडली में दर्द जो खड़े होकर रुकने पर कुछ मिनट में ठीक हो जाए"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "calf",
+              "label": {
+                "en": "Calf (back of the lower leg)",
+                "hi": "पिंडली (निचले पैर का पिछला हिस्सा)"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "r_vasc",
+              "label": {
+                "en": "Smoking or tobacco, diabetes, high blood pressure or high cholesterol",
+                "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "o_cold_foot",
+              "label": {
+                "en": "The foot is often cold or pale, or cuts on it heal slowly",
+                "hi": "पैर अक्सर ठंडा या पीला रहता है, या उस पर कट धीरे भरते हैं"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sex_m",
+              "label": {
+                "en": "Male",
+                "hi": "पुरुष"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_shoot_leg",
+              "label": {
+                "en": "Shooting pain from the back or buttock down the leg into the foot",
+                "hi": "कमर या नितंब से पैर में नीचे तक करंट जैसा दर्द"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "lowback",
+              "label": {
+                "en": "Lower back",
+                "hi": "कमर"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": -3
+            }
+          ]
+        },
+        {
+          "id": "calfstrain",
+          "name": {
+            "en": "Calf muscle tear (“tennis leg”)",
+            "hi": "पिंडली की मांसपेशी फटना (“टेनिस लेग”)"
+          },
+          "scientific": "Medial gastrocnemius strain",
+          "what": {
+            "en": "A sudden push-off tears fibres of the inner calf muscle, causing sharp pain like being hit in the calf, then bruising and swelling.",
+            "hi": "अचानक पैर से धक्का देने पर पिंडली की अंदरूनी मांसपेशी के रेशे फट जाते हैं, जिससे पिंडली में चोट लगने जैसा तेज़ दर्द, फिर नील और सूजन होती है।"
+          },
+          "causes": {
+            "en": "Racquet sports, sprinting and jumping, often in middle age.",
+            "hi": "रैकेट वाले खेल, तेज़ दौड़ और कूदना, अक्सर अधेड़ उम्र में।"
+          },
+          "confirm": {
+            "en": "Examination; ultrasound if it is unclear or to rule out a blood clot when the calf is swollen.",
+            "hi": "जांच; साफ़ न हो या पिंडली सूजी हो तो खून का थक्का खारिज करने के लिए अल्ट्रासाउंड।"
+          },
+          "treat": {
+            "en": "Protected walking, then progressive calf stretching and strengthening.",
+            "hi": "सहारे से चलना, फिर धीरे-धीरे पिंडली की स्ट्रेचिंग और मज़बूती।"
+          },
+          "outlook": {
+            "en": "Usually recovers in a few weeks.",
+            "hi": "आमतौर पर कुछ हफ्तों में ठीक।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_calf_sudden"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "physio",
+            "sports"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ch_calf_sudden",
+              "label": {
+                "en": "Sudden sharp pain in the calf muscle during sport or a push-off",
+                "hi": "खेल या पैर से धक्का देते समय पिंडली की मांसपेशी में अचानक तेज़ दर्द"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "calf",
+              "label": {
+                "en": "Calf (back of the lower leg)",
+                "hi": "पिंडली (निचले पैर का पिछला हिस्सा)"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_snap",
+              "label": {
+                "en": "A sudden feeling of being kicked or hit at the back of the heel, sometimes with a snap",
+                "hi": "एड़ी के पीछे अचानक किसी के लात मारने या चोट लगने जैसा एहसास, कभी-कभी चटकने की आवाज़ के साथ"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "achilles",
+              "label": {
+                "en": "Achilles tendon (cord above the back of the heel)",
+                "hi": "एकिलीज़ टेंडन (एड़ी के पीछे ऊपर की ओर जाती डोरी)"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "backref",
+          "name": {
+            "en": "Pain coming from the lower back (sciatica)",
+            "hi": "कमर से आने वाला दर्द (साइटिका)"
+          },
+          "scientific": "Lumbosacral radiculopathy (L5 or S1)",
+          "what": {
+            "en": "A pinched L5 or S1 nerve root in the lower back can cause pain, tingling or weakness in the foot, often with back or buttock pain.",
+            "hi": "कमर में दबी L5 या S1 नस की जड़ पैर में दर्द, झुनझुनी या कमज़ोरी दे सकती है, अक्सर कमर या नितंब के दर्द के साथ।"
+          },
+          "causes": {
+            "en": "A disc bulge or narrowing of the nerve canal in the lower back.",
+            "hi": "कमर में डिस्क का उभार या नस की नली का संकरा होना।"
+          },
+          "confirm": {
+            "en": "Back and nerve examination; use the lower back section of this guide for a detailed check.",
+            "hi": "कमर और नसों की जांच; विस्तार से जांचने के लिए इस गाइड का कमर वाला हिस्सा इस्तेमाल करें।"
+          },
+          "treat": {
+            "en": "Treatment of the back problem (see the lower back section).",
+            "hi": "कमर की समस्या का इलाज (कमर वाला हिस्सा देखें)।"
+          },
+          "outlook": {
+            "en": "Most sciatica improves within weeks to months.",
+            "hi": "ज़्यादातर साइटिका कुछ हफ्तों से महीनों में सुधरता है।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "lowback",
+            "ch_shoot_leg"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho_spine",
+            "physio"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "lowback",
+              "label": {
+                "en": "Lower back",
+                "hi": "कमर"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "ch_shoot_leg",
+              "label": {
+                "en": "Shooting pain from the back or buttock down the leg into the foot",
+                "hi": "कमर या नितंब से पैर में नीचे तक करंट जैसा दर्द"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "calf",
+              "label": {
+                "en": "Calf (back of the lower leg)",
+                "hi": "पिंडली (निचले पैर का पिछला हिस्सा)"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_numb_both",
+              "label": {
+                "en": "Numbness, tingling or burning in both feet, starting in the toes",
+                "hi": "दोनों पैरों में सुन्नपन, झुनझुनी या जलन, उंगलियों से शुरू"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "w_walk_calf",
+              "label": {
+                "en": "Calf pain on walking a set distance that eases within minutes of standing still",
+                "hi": "एक तय दूरी चलने पर पिंडली में दर्द जो खड़े होकर रुकने पर कुछ मिनट में ठीक हो जाए"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "heel",
+              "label": {
+                "en": "Under or behind the heel",
+                "hi": "एड़ी के नीचे या पीछे"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "bigtoe",
+              "label": {
+                "en": "Big toe joint",
+                "hi": "अंगूठे का जोड़"
+              },
+              "weight": -1
+            }
+          ]
+        }
+      ],
+      "emergencies": [
+        {
+          "id": "fracture",
+          "name": {
+            "en": "Possible fracture",
+            "hi": "फ्रैक्चर की आशंका"
+          },
+          "scientific": "Ankle or midfoot fracture (Ottawa ankle rules positive)",
+          "what": {
+            "en": "After an injury, being unable to take 4 steps, or bone tenderness at the back or tip of either ankle bone, the outer edge of the foot or the inner midfoot, means an X-ray is needed. These rules miss very few fractures. Go to the emergency department.",
+            "hi": "चोट के बाद 4 कदम न चल पाना, या किसी भी टखने की हड्डी के पीछे या सिरे पर, पैर के बाहरी किनारे पर या अंदरूनी बीच के पैर पर हड्डी में दर्द का मतलब है कि एक्स-रे ज़रूरी है। ये नियम बहुत कम फ्रैक्चर छोड़ते हैं। इमरजेंसी जाएं।"
+          },
+          "when": "rf_fracture"
+        },
+        {
+          "id": "ischaemia",
+          "name": {
+            "en": "Possible blocked artery in the leg",
+            "hi": "पैर की धमनी बंद होने की आशंका"
+          },
+          "scientific": "Acute or critical limb ischaemia",
+          "what": {
+            "en": "A foot or leg that suddenly turns cold, pale, numb or very painful, or skin turning black, can mean the blood supply is blocked. Call 108 now; every hour matters.",
+            "hi": "पैर का अचानक ठंडा, पीला, सुन्न या बहुत दर्द वाला होना, या त्वचा का काला पड़ना, खून की सप्लाई बंद होने का संकेत हो सकता है। अभी 108 बुलाएं; हर घंटा मायने रखता है।"
+          },
+          "when": "rf_ischaemia"
+        },
+        {
+          "id": "footinf",
+          "name": {
+            "en": "Possible serious foot infection",
+            "hi": "पैर में गंभीर इन्फेक्शन की आशंका"
+          },
+          "scientific": "Infected foot ulcer · sepsis",
+          "what": {
+            "en": "A foot wound with fever, spreading redness or a bad smell, especially with diabetes, needs immediate hospital care.",
+            "hi": "बुखार, फैलती लाली या बदबू वाला पैर का घाव, खासकर डायबिटीज़ में, तुरंत अस्पताल में इलाज मांगता है।"
+          },
+          "when": "rf_ulcer_fever"
+        },
+        {
+          "id": "dvt",
+          "name": {
+            "en": "Possible blood clot in the leg (DVT)",
+            "hi": "पैर में खून का थक्का (DVT) की आशंका"
+          },
+          "scientific": "Deep vein thrombosis",
+          "what": {
+            "en": "A swollen, warm, tender calf, especially after travel, surgery, a plaster or bed rest, can be a clot in a deep vein. It needs an ultrasound scan within hours. If you are breathless or have chest pain, call 108 now.",
+            "hi": "सूजी, गर्म, दर्द वाली पिंडली, खासकर यात्रा, सर्जरी, प्लास्टर या बिस्तर पर आराम के बाद, गहरी नस में थक्का हो सकती है। कुछ घंटों में अल्ट्रासाउंड स्कैन ज़रूरी। सांस फूले या सीने में दर्द हो तो अभी 108 बुलाएं।"
+          },
+          "when": "rf_dvt"
+        },
+        {
+          "id": "septic",
+          "name": {
+            "en": "Possible infected joint",
+            "hi": "जोड़ में इन्फेक्शन की आशंका"
+          },
+          "scientific": "Septic arthritis",
+          "what": {
+            "en": "A hot, red, swollen joint with fever must be treated as infected until proven otherwise. Go to the emergency department today.",
+            "hi": "बुखार के साथ गर्म, लाल, सूजा जोड़ इन्फेक्शन मानकर ही देखा जाना चाहिए जब तक साबित न हो। आज ही इमरजेंसी जाएं।"
+          },
+          "when": "rf_hot"
+        },
+        {
+          "id": "rupture",
+          "name": {
+            "en": "Possible Achilles tendon rupture",
+            "hi": "एकिलीज़ टेंडन फटने की आशंका"
+          },
+          "scientific": "Acute Achilles tendon rupture",
+          "what": {
+            "en": "A sudden kick-like pain at the back of the heel with weak push-off or an inability to rise on the toes needs same-day orthopaedic assessment; up to a quarter are missed at first.",
+            "hi": "एड़ी के पीछे अचानक लात जैसा दर्द, कमज़ोर धक्का या पंजों पर न उठ पाना हो तो उसी दिन ऑर्थोपेडिक जांच ज़रूरी; एक-चौथाई तक पहली बार में छूट जाते हैं।"
+          },
+          "when": {
+            "all": [
+              "ch_snap",
+              {
+                "any": [
+                  "hr_cannot",
+                  "achilles"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "urgency": {
+        "orange": [
+          {
+            "reason": "o_ulcer",
+            "text": {
+              "en": "A foot wound that is not healing (needs a foot clinic within one working day)",
+              "hi": "पैर का घाव जो भर नहीं रहा (एक कामकाजी दिन में फ़ुट क्लिनिक ज़रूरी)"
+            },
+            "when": "rf_ulcer"
+          },
+          {
+            "reason": "o_night",
+            "text": {
+              "en": "Constant night pain, fever or weight loss",
+              "hi": "रात का लगातार दर्द, बुखार या वज़न घटना"
+            },
+            "when": "rf_night"
+          },
+          {
+            "reason": "o_pain",
+            "text": {
+              "en": "Very severe pain (9–10 out of 10)",
+              "hi": "बहुत तेज़ दर्द (10 में 9–10)"
+            },
+            "when": {
+              "painGte": 9
+            }
+          },
+          {
+            "reason": "o_gout",
+            "text": {
+              "en": "A hot, swollen toe or foot joint (gout or infection)",
+              "hi": "गर्म, सूजा अंगूठा या पैर का जोड़ (गाउट या इन्फेक्शन)"
+            },
+            "when": "ch_hot_toe"
+          },
+          {
+            "reason": "o_stress",
+            "text": {
+              "en": "Pinpoint bone pain with every step (possible stress fracture)",
+              "hi": "हर कदम पर हड्डी के एक बिंदु पर दर्द (स्ट्रेस फ्रैक्चर की आशंका)"
+            },
+            "when": "ch_focal_bone"
+          }
+        ],
+        "yellow": [
+          {
+            "reason": "y_injury",
+            "text": {
+              "en": "Started with a twist, fall or accident",
+              "hi": "मुड़ने, गिरने या दुर्घटना से शुरू"
+            },
+            "when": {
+              "any": [
+                "on_roll",
+                "on_fall",
+                "on_accident"
+              ]
+            }
+          },
+          {
+            "reason": "y_swell",
+            "text": {
+              "en": "Swelling or bruising",
+              "hi": "सूजन या नील"
+            },
+            "when": "ch_swell"
+          },
+          {
+            "reason": "y_numb",
+            "text": {
+              "en": "Numbness or burning in both feet",
+              "hi": "दोनों पैरों में सुन्नपन या जलन"
+            },
+            "when": "ch_numb_both"
+          },
+          {
+            "reason": "y_vasc",
+            "text": {
+              "en": "Calf pain on walking that eases with standing (check the arteries)",
+              "hi": "चलने पर पिंडली दर्द जो खड़े होने पर कम हो (धमनियों की जांच)"
+            },
+            "when": "w_walk_calf"
+          },
+          {
+            "reason": "y_often",
+            "text": {
+              "en": "Bouts are coming more often or getting worse",
+              "hi": "दौरे जल्दी-जल्दी आ रहे हैं या बढ़ रहे हैं"
+            },
+            "when": "btw_often"
+          },
+          {
+            "reason": "y_long",
+            "text": {
+              "en": "This bout has lasted more than 6 weeks",
+              "hi": "इस बार का दर्द 6 हफ्ते से ज़्यादा से है"
+            },
+            "when": {
+              "any": [
+                "d_6_12",
+                "d_3m"
+              ]
+            }
+          },
+          {
+            "reason": "y_pain",
+            "text": {
+              "en": "Strong pain (7–8 out of 10)",
+              "hi": "तेज़ दर्द (10 में 7–8)"
+            },
+            "when": {
+              "all": [
+                {
+                  "painGte": 7
+                },
+                {
+                  "not": {
+                    "painGte": 9
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "reason": "y_sleep",
+            "text": {
+              "en": "Pain disturbing sleep",
+              "hi": "दर्द से नींद खराब"
+            },
+            "when": "sleep_bad"
+          },
+          {
+            "reason": "y_walk",
+            "text": {
+              "en": "Difficulty walking",
+              "hi": "चलने में दिक्कत"
+            },
+            "when": "fwalk_no"
+          },
+          {
+            "reason": "y_unstable",
+            "text": {
+              "en": "The ankle keeps giving way",
+              "hi": "टखना बार-बार मुड़ता है"
+            },
+            "when": "ch_unstable"
+          },
+          {
+            "reason": "y_back",
+            "text": {
+              "en": "Shooting pain from the back down the leg (see the lower back section)",
+              "hi": "कमर से पैर तक करंट जैसा दर्द (कमर वाला हिस्सा देखें)"
+            },
+            "when": "ch_shoot_leg"
+          },
+          {
+            "reason": "y_diab",
+            "text": {
+              "en": "Diabetes with foot symptoms: the feet need a proper check",
+              "hi": "पैर के लक्षणों के साथ डायबिटीज़: पैरों की ठीक से जांच ज़रूरी"
+            },
+            "when": {
+              "all": [
+                "r_immune",
+                {
+                  "any": [
+                    "ch_numb_both",
+                    "rf_ulcer",
+                    "o_cold_foot"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "redFlags": [
+        {
+          "id": "rf_fracture",
+          "label": {
+            "en": "After an injury: could not take 4 steps, or the back or tip of either ankle bone, the outer edge of the foot or the top of the inner midfoot hurts to touch",
+            "hi": "चोट के बाद: 4 कदम नहीं चल पाए, या किसी भी टखने की हड्डी का पिछला हिस्सा या सिरा, पैर का बाहरी किनारा या अंदरूनी बीच के पैर का ऊपरी हिस्सा छूने पर दुखता है"
+          }
+        },
+        {
+          "id": "rf_ischaemia",
+          "label": {
+            "en": "The foot or leg suddenly became cold, pale, numb or very painful, or there is black skin",
+            "hi": "पैर अचानक ठंडा, पीला, सुन्न या बहुत दर्द वाला हो गया, या त्वचा काली पड़ गई"
+          }
+        },
+        {
+          "id": "rf_ulcer_fever",
+          "label": {
+            "en": "A foot wound or ulcer with fever, spreading redness or a bad smell",
+            "hi": "पैर के घाव या अल्सर के साथ बुखार, फैलती लाली या बदबू"
+          }
+        },
+        {
+          "id": "rf_dvt",
+          "label": {
+            "en": "The calf is swollen, warm and tender, especially after long travel, an operation, a plaster cast or bed rest",
+            "hi": "पिंडली सूजी, गर्म और दबाने पर दर्द वाली है, खासकर लंबी यात्रा, ऑपरेशन, प्लास्टर या बिस्तर पर आराम के बाद"
+          }
+        },
+        {
+          "id": "rf_hot",
+          "label": {
+            "en": "A foot or ankle joint is hot, red and swollen and you have a fever",
+            "hi": "पैर या टखने का जोड़ गर्म, लाल और सूजा है और बुखार है"
+          }
+        },
+        {
+          "id": "rf_ulcer",
+          "label": {
+            "en": "A wound, blister or sore on the foot that is not healing (especially with diabetes)",
+            "hi": "पैर पर घाव, छाला या ज़ख्म जो भर नहीं रहा (खासकर डायबिटीज़ में)"
+          }
+        },
+        {
+          "id": "rf_night",
+          "label": {
+            "en": "Constant pain at night that no position eases, or fever and weight loss",
+            "hi": "रात को लगातार दर्द जो किसी भी पोज़िशन में कम न हो, या बुखार और वज़न घटना"
+          }
+        }
+      ],
+      "areas": [
+        {
+          "id": "heel",
+          "name": {
+            "en": "Under or behind the heel",
+            "hi": "एड़ी के नीचे या पीछे"
+          },
+          "paired": true,
+          "code": null,
+          "view": "heel"
+        },
+        {
+          "id": "achilles",
+          "name": {
+            "en": "Achilles tendon (cord above the back of the heel)",
+            "hi": "एकिलीज़ टेंडन (एड़ी के पीछे ऊपर की ओर जाती डोरी)"
+          },
+          "paired": true,
+          "code": null,
+          "view": "achilles"
+        },
+        {
+          "id": "ankle_out",
+          "name": {
+            "en": "Outer side of the ankle",
+            "hi": "टखने का बाहरी हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "ankle_out"
+        },
+        {
+          "id": "ankle_in",
+          "name": {
+            "en": "Inner side of the ankle",
+            "hi": "टखने का अंदरूनी हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "ankle_in"
+        },
+        {
+          "id": "arch",
+          "name": {
+            "en": "Arch of the foot",
+            "hi": "पैर का आर्च (तलवे का बीच)"
+          },
+          "paired": true,
+          "code": null,
+          "view": "arch"
+        },
+        {
+          "id": "ball",
+          "name": {
+            "en": "Ball of the foot or between the toes",
+            "hi": "पंजे का गद्देदार हिस्सा या उंगलियों के बीच"
+          },
+          "paired": true,
+          "code": null,
+          "view": "ball"
+        },
+        {
+          "id": "bigtoe",
+          "name": {
+            "en": "Big toe joint",
+            "hi": "अंगूठे का जोड़"
+          },
+          "paired": true,
+          "code": null,
+          "view": "bigtoe"
+        },
+        {
+          "id": "shin_in",
+          "name": {
+            "en": "Inner edge of the shin",
+            "hi": "पिंडली की हड्डी का अंदरूनी किनारा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "shin_in"
+        },
+        {
+          "id": "calf",
+          "name": {
+            "en": "Calf (back of the lower leg)",
+            "hi": "पिंडली (निचले पैर का पिछला हिस्सा)"
+          },
+          "paired": true,
+          "code": null,
+          "view": "calf"
+        },
+        {
+          "id": "lowback",
+          "name": {
+            "en": "Lower back",
+            "hi": "कमर"
+          },
+          "paired": false,
+          "code": null,
+          "view": "lowback"
+        }
+      ],
+      "derived": [
+        {
+          "id": "foot_any",
+          "when": {
+            "any": [
+              "heel",
+              "achilles",
+              "ankle_out",
+              "ankle_in",
+              "arch",
+              "ball",
+              "bigtoe",
+              "shin_in",
+              "calf"
+            ]
+          }
+        }
+      ],
+      "patterns": {
+        "character": [
+          {
+            "id": "ch_first_step",
+            "label": {
+              "en": "Sharp heel pain with the first steps in the morning or after sitting, easing after a few minutes",
+              "hi": "सुबह या बैठने के बाद पहले कदमों पर एड़ी में तेज़ दर्द, जो कुछ मिनट में कम हो जाए"
+            }
+          },
+          {
+            "id": "ch_snap",
+            "label": {
+              "en": "A sudden feeling of being kicked or hit at the back of the heel, sometimes with a snap",
+              "hi": "एड़ी के पीछे अचानक किसी के लात मारने या चोट लगने जैसा एहसास, कभी-कभी चटकने की आवाज़ के साथ"
+            }
+          },
+          {
+            "id": "ch_calf_sudden",
+            "label": {
+              "en": "Sudden sharp pain in the calf muscle during sport or a push-off",
+              "hi": "खेल या पैर से धक्का देते समय पिंडली की मांसपेशी में अचानक तेज़ दर्द"
+            }
+          },
+          {
+            "id": "ch_focal_bone",
+            "label": {
+              "en": "Pain pinpointed on one spot of a bone, worse with every step or hop",
+              "hi": "हड्डी के एक ही बिंदु पर दर्द, हर कदम या कूदने पर बढ़ता"
+            }
+          },
+          {
+            "id": "ch_stone",
+            "label": {
+              "en": "Feels like walking on a pebble; burning, sharp pain or numbness into two toes",
+              "hi": "जैसे कंकड़ पर चल रहे हों; दो उंगलियों तक जलन, तेज़ दर्द या सुन्नपन"
+            }
+          },
+          {
+            "id": "ch_numb_both",
+            "label": {
+              "en": "Numbness, tingling or burning in both feet, starting in the toes",
+              "hi": "दोनों पैरों में सुन्नपन, झुनझुनी या जलन, उंगलियों से शुरू"
+            }
+          },
+          {
+            "id": "ch_hot_toe",
+            "label": {
+              "en": "A sudden, very painful, red, hot and swollen big toe or foot joint, often overnight",
+              "hi": "अचानक बहुत दर्द वाला, लाल, गर्म और सूजा अंगूठा या पैर का जोड़, अक्सर रात भर में"
+            }
+          },
+          {
+            "id": "ch_bunion",
+            "label": {
+              "en": "A bony bump on the side of the big toe, with the toe angled inwards",
+              "hi": "अंगूठे की साइड में हड्डी का उभार, अंगूठा अंदर की ओर मुड़ा"
+            }
+          },
+          {
+            "id": "ch_swell",
+            "label": {
+              "en": "Swelling and bruising around the ankle",
+              "hi": "टखने के आसपास सूजन और नील"
+            }
+          },
+          {
+            "id": "ch_unstable",
+            "label": {
+              "en": "The ankle keeps rolling over or feels weak on uneven ground",
+              "hi": "टखना बार-बार मुड़ता है या ऊबड़-खाबड़ ज़मीन पर कमज़ोर लगता है"
+            }
+          },
+          {
+            "id": "ch_shoot_leg",
+            "label": {
+              "en": "Shooting pain from the back or buttock down the leg into the foot",
+              "hi": "कमर या नितंब से पैर में नीचे तक करंट जैसा दर्द"
+            }
+          }
+        ],
+        "worse": [
+          {
+            "id": "w_run",
+            "label": {
+              "en": "Running, jumping or sport",
+              "hi": "दौड़ना, कूदना या खेल"
+            }
+          },
+          {
+            "id": "w_walk_long",
+            "label": {
+              "en": "Walking or standing for long",
+              "hi": "देर तक चलना या खड़े रहना"
+            }
+          },
+          {
+            "id": "w_walk_calf",
+            "label": {
+              "en": "Calf pain on walking a set distance that eases within minutes of standing still",
+              "hi": "एक तय दूरी चलने पर पिंडली में दर्द जो खड़े होकर रुकने पर कुछ मिनट में ठीक हो जाए"
+            }
+          },
+          {
+            "id": "w_tight_shoes",
+            "label": {
+              "en": "Tight or narrow shoes, high heels",
+              "hi": "तंग या पतले जूते, ऊंची एड़ी"
+            }
+          },
+          {
+            "id": "w_night",
+            "label": {
+              "en": "Burning or pain in the feet at night in bed",
+              "hi": "रात को बिस्तर पर पैरों में जलन या दर्द"
+            }
+          }
+        ],
+        "better": [
+          {
+            "id": "b_rest",
+            "label": {
+              "en": "Rest",
+              "hi": "आराम"
+            }
+          },
+          {
+            "id": "b_shoes_off",
+            "label": {
+              "en": "Taking the shoes off and rubbing the foot",
+              "hi": "जूते उतारकर पैर मलना"
+            }
+          }
+        ],
+        "other": [
+          {
+            "id": "o_overweight",
+            "label": {
+              "en": "Overweight, or gained weight recently",
+              "hi": "ज़्यादा वज़न, या हाल में वज़न बढ़ा"
+            }
+          },
+          {
+            "id": "o_gout",
+            "label": {
+              "en": "Past attacks of gout",
+              "hi": "पहले गाउट के दौरे"
+            }
+          },
+          {
+            "id": "o_cold_foot",
+            "label": {
+              "en": "The foot is often cold or pale, or cuts on it heal slowly",
+              "hi": "पैर अक्सर ठंडा या पीला रहता है, या उस पर कट धीरे भरते हैं"
+            }
+          }
+        ]
+      },
+      "mainComplaint": [],
+      "functionQuestions": [
+        {
+          "id": "fwalk",
+          "options": [
+            {
+              "id": "fwalk_ok",
+              "label": {
+                "en": "Normally",
+                "hi": "सामान्य"
+              }
+            },
+            {
+              "id": "fwalk_diff",
+              "label": {
+                "en": "With pain or a limp",
+                "hi": "दर्द या लंगड़ाहट के साथ"
+              }
+            },
+            {
+              "id": "fwalk_no",
+              "label": {
+                "en": "Can hardly walk",
+                "hi": "मुश्किल से चल पाते हैं"
+              }
+            }
+          ]
+        },
+        {
+          "id": "stand",
+          "options": [
+            {
+              "id": "stand_ok",
+              "label": {
+                "en": "Normally",
+                "hi": "सामान्य"
+              }
+            },
+            {
+              "id": "stand_diff",
+              "label": {
+                "en": "Painful after a while",
+                "hi": "थोड़ी देर बाद दर्द"
+              }
+            },
+            {
+              "id": "stand_no",
+              "label": {
+                "en": "Cannot stand for long or wear shoes",
+                "hi": "देर तक खड़े नहीं रह पाते या जूते नहीं पहन पाते"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sleep",
+          "options": [
+            {
+              "id": "sleep_ok",
+              "label": {
+                "en": "Normal",
+                "hi": "सामान्य"
+              }
+            },
+            {
+              "id": "sleep_bad",
+              "label": {
+                "en": "Pain wakes me up",
+                "hi": "दर्द से नींद खुलती है"
+              }
+            }
+          ]
+        }
+      ],
+      "bedsideTests": [
+        {
+          "id": "windlass",
+          "name": {
+            "en": "Big toe lift (windlass test)",
+            "hi": "अंगूठा ऊपर उठाना (विंडलास टेस्ट)"
+          },
+          "steps": [
+            {
+              "en": "Stand with your weight on both feet, holding something for balance.",
+              "hi": "दोनों पैरों पर वज़न रखकर खड़े हों, संतुलन के लिए कुछ पकड़ लें।"
+            },
+            {
+              "en": "Lift the big toe of the painful foot up as far as it will go (or ask someone to bend it up) and hold for 30 seconds.",
+              "hi": "दर्द वाले पैर का अंगूठा जितना हो सके ऊपर उठाएं (या किसी से ऊपर मुड़वाएं) और 30 सेकंड रोकें।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "It brings on your pain under the heel or along the arch.",
+            "hi": "एड़ी के नीचे या आर्च में आपका दर्द आ जाए।"
+          },
+          "accuracy": {
+            "en": "Very specific but insensitive: when positive it points strongly to plantar fasciitis, but it is negative in about two-thirds of people who have it.",
+            "hi": "बहुत विशिष्ट पर कम संवेदनशील: पॉज़िटिव हो तो प्लांटर फ़ेशियाइटिस की ओर मज़बूत इशारा, पर यह बीमारी वाले लगभग दो-तिहाई लोगों में नेगेटिव आता है।"
+          },
+          "source": "aafppf",
+          "answers": [
+            "windlass_pos",
+            "windlass_neg",
+            "windlass_skip"
+          ]
+        },
+        {
+          "id": "fheel",
+          "name": {
+            "en": "Single-leg heel raise",
+            "hi": "एक पैर पर पंजों के बल उठना"
+          },
+          "steps": [
+            {
+              "en": "Stand on the painful leg only, lightly holding a wall.",
+              "hi": "सिर्फ़ दर्द वाले पैर पर खड़े हों, हल्का सा दीवार पकड़ें।"
+            },
+            {
+              "en": "Rise up onto the toes as high as you can, 10 times, and compare with the other side.",
+              "hi": "पंजों के बल जितना ऊंचा हो सके 10 बार उठें, और दूसरी तरफ़ से तुलना करें।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "Pain at the back of the heel or in the Achilles tendon, or you cannot rise at all on that side.",
+            "hi": "एड़ी के पीछे या एकिलीज़ टेंडन में दर्द, या उस तरफ़ बिल्कुल नहीं उठ पाते।"
+          },
+          "accuracy": {
+            "en": "Pain points to the Achilles tendon. Being unable to rise at all after a sudden injury suggests a rupture, which up to 20–25% of the time is missed at the first visit.",
+            "hi": "दर्द एकिलीज़ टेंडन की ओर इशारा करता है। अचानक चोट के बाद बिल्कुल न उठ पाना फटने का संकेत है, जो 20–25% तक बार पहली जांच में छूट जाता है।"
+          },
+          "source": "achrup",
+          "answers": [
+            "hr_pain",
+            "hr_cannot",
+            "hr_ok",
+            "hr_skip"
+          ]
+        },
+        {
+          "id": "fsq",
+          "name": {
+            "en": "Squeeze between the toes",
+            "hi": "उंगलियों के बीच दबाना"
+          },
+          "steps": [
+            {
+              "en": "Sit and take the foot in your hand. Place your thumb on the sole and your index finger on top, in the space between the 3rd and 4th toes, just behind the toes.",
+              "hi": "बैठें और पैर हाथ में लें। अंगूठा तलवे पर और तर्जनी ऊपर रखें, तीसरी और चौथी उंगली के बीच की जगह में, उंगलियों के ठीक पीछे।"
+            },
+            {
+              "en": "Squeeze firmly for a few seconds. Repeat between the 2nd and 3rd toes.",
+              "hi": "कुछ सेकंड ज़ोर से दबाएं। दूसरी और तीसरी उंगली के बीच दोहराएं।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "It brings on your sharp or burning pain, or numbness running into the toes.",
+            "hi": "आपका तेज़ या जलन वाला दर्द, या उंगलियों तक जाता सुन्नपन आ जाए।"
+          },
+          "accuracy": {
+            "en": "This thumb-and-finger squeeze picked up 96% of Morton’s neuromas in one study.",
+            "hi": "एक अध्ययन में इस अंगूठे-उंगली वाले दबाव से 96% मॉर्टन न्यूरोमा पकड़े गए।"
+          },
+          "source": "morton",
+          "answers": [
+            "squeeze_pos",
+            "squeeze_neg",
+            "squeeze_skip"
+          ]
+        }
+      ],
+      "nerveRoots": {},
+      "rootRules": [],
+      "discOfRoot": {},
+      "departmentRules": [],
+      "extraDepartments": null,
+      "featureLabels": {
+        "a_u18": {
+          "en": "Under 18",
+          "hi": "18 से कम"
+        },
+        "a_18_29": {
+          "en": "18–29",
+          "hi": "18–29"
+        },
+        "a_30_39": {
+          "en": "30–39",
+          "hi": "30–39"
+        },
+        "a_40_49": {
+          "en": "40–49",
+          "hi": "40–49"
+        },
+        "a_50_59": {
+          "en": "50–59",
+          "hi": "50–59"
+        },
+        "a_60p": {
+          "en": "60 or over",
+          "hi": "60 या ज़्यादा"
+        },
+        "sex_m": {
+          "en": "Male",
+          "hi": "पुरुष"
+        },
+        "sex_f": {
+          "en": "Female",
+          "hi": "महिला"
+        },
+        "sex_x": {
+          "en": "Prefer not to say",
+          "hi": "नहीं बताना"
+        },
+        "ep_first": {
+          "en": "First episode",
+          "hi": "पहली बार"
+        },
+        "ep_recur": {
+          "en": "Has happened before",
+          "hi": "पहले भी हुआ है"
+        },
+        "r_cancer": {
+          "en": "Cancer, now or in the past",
+          "hi": "कैंसर, अभी या पहले"
+        },
+        "r_bones": {
+          "en": "Osteoporosis, or steroid tablets for 3+ months",
+          "hi": "ऑस्टियोपोरोसिस, या 3+ महीने स्टेरॉयड की गोलियां"
+        },
+        "r_immune": {
+          "en": "Diabetes, HIV or low immunity",
+          "hi": "डायबिटीज़, HIV या कम इम्युनिटी"
+        },
+        "r_tb": {
+          "en": "TB now or before, or a TB patient at home",
+          "hi": "अभी या पहले टीबी, या घर में टीबी मरीज़"
+        },
+        "r_spa": {
+          "en": "Psoriasis, inflammatory bowel disease or recurring red, painful eye",
+          "hi": "सोरायसिस, आंतों की सूजन (IBD) या बार-बार लाल, दर्द भरी आंख"
+        },
+        "r_desk": {
+          "en": "Desk job or long hours of sitting",
+          "hi": "डेस्क जॉब या लंबे समय बैठना"
+        },
+        "r_heavy": {
+          "en": "Heavy physical work",
+          "hi": "भारी शारीरिक काम"
+        },
+        "r_vasc": {
+          "en": "Smoking or tobacco, diabetes, high blood pressure or high cholesterol",
+          "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल"
+        },
+        "r_famspa": {
+          "en": "Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease",
+          "hi": "माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)"
+        },
+        "on_gradual": {
+          "en": "Slowly, with no clear reason",
+          "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+        },
+        "on_roll": {
+          "en": "Rolled or twisted the ankle (missed a step, uneven road, sport)",
+          "hi": "टखना मुड़ गया (सीढ़ी चूकी, ऊबड़-खाबड़ रास्ता, खेल)"
+        },
+        "on_more_walk": {
+          "en": "More walking, running, standing or sport than usual",
+          "hi": "सामान्य से ज़्यादा चलना, दौड़ना, खड़े रहना या खेल"
+        },
+        "on_new_shoes": {
+          "en": "New or tight shoes, or walking barefoot more",
+          "hi": "नए या तंग जूते, या ज़्यादा नंगे पैर चलना"
+        },
+        "on_fall": {
+          "en": "A fall, a jump from a height or something dropped on the foot",
+          "hi": "गिरना, ऊंचाई से कूदना या पैर पर कुछ गिरना"
+        },
+        "on_woke": {
+          "en": "Woke up with it",
+          "hi": "सुबह उठे तो दर्द था"
+        },
+        "on_accident": {
+          "en": "Road accident",
+          "hi": "सड़क दुर्घटना"
+        },
+        "d_days": {
+          "en": "This bout started within the last week",
+          "hi": "इस बार का दर्द पिछले 1 हफ्ते के अंदर शुरू हुआ"
+        },
+        "d_weeks": {
+          "en": "This bout started 1 to 6 weeks ago",
+          "hi": "इस बार का दर्द 1 से 6 हफ्ते पहले शुरू हुआ"
+        },
+        "d_6_12": {
+          "en": "This bout started 6 weeks to 3 months ago",
+          "hi": "इस बार का दर्द 6 हफ्ते से 3 महीने पहले शुरू हुआ"
+        },
+        "d_3m": {
+          "en": "This bout has lasted more than 3 months without going away",
+          "hi": "इस बार का दर्द 3 महीने से ज़्यादा से है, गया नहीं"
+        },
+        "h_first": {
+          "en": "First time ever with this pain",
+          "hi": "ऐसा दर्द पहली बार हुआ है"
+        },
+        "h_lt1y": {
+          "en": "First had this pain within the last year",
+          "hi": "पहली बार यह दर्द पिछले 1 साल में हुआ"
+        },
+        "h_1_5y": {
+          "en": "First had this pain 1 to 5 years ago",
+          "hi": "पहली बार यह दर्द 1 से 5 साल पहले हुआ"
+        },
+        "h_5y": {
+          "en": "First had this pain more than 5 years ago",
+          "hi": "पहली बार यह दर्द 5 साल से भी पहले हुआ"
+        },
+        "btw_free": {
+          "en": "Completely fine between bouts",
+          "hi": "दौरों के बीच पूरी तरह ठीक"
+        },
+        "btw_some": {
+          "en": "Some pain always stays between bouts",
+          "hi": "दौरों के बीच भी थोड़ा दर्द रहता है"
+        },
+        "btw_often": {
+          "en": "Bouts coming more often or getting worse",
+          "hi": "दौरे जल्दी-जल्दी या ज़्यादा तेज़"
+        },
+        "t_better": {
+          "en": "Getting better",
+          "hi": "ठीक हो रहा है"
+        },
+        "t_same": {
+          "en": "About the same",
+          "hi": "लगभग वैसा ही"
+        },
+        "t_worse": {
+          "en": "Getting worse",
+          "hi": "बढ़ रहा है"
+        },
+        "ch_first_step": {
+          "en": "Sharp heel pain with the first steps in the morning or after sitting, easing after a few minutes",
+          "hi": "सुबह या बैठने के बाद पहले कदमों पर एड़ी में तेज़ दर्द, जो कुछ मिनट में कम हो जाए"
+        },
+        "ch_snap": {
+          "en": "A sudden feeling of being kicked or hit at the back of the heel, sometimes with a snap",
+          "hi": "एड़ी के पीछे अचानक किसी के लात मारने या चोट लगने जैसा एहसास, कभी-कभी चटकने की आवाज़ के साथ"
+        },
+        "ch_calf_sudden": {
+          "en": "Sudden sharp pain in the calf muscle during sport or a push-off",
+          "hi": "खेल या पैर से धक्का देते समय पिंडली की मांसपेशी में अचानक तेज़ दर्द"
+        },
+        "ch_focal_bone": {
+          "en": "Pain pinpointed on one spot of a bone, worse with every step or hop",
+          "hi": "हड्डी के एक ही बिंदु पर दर्द, हर कदम या कूदने पर बढ़ता"
+        },
+        "ch_stone": {
+          "en": "Feels like walking on a pebble; burning, sharp pain or numbness into two toes",
+          "hi": "जैसे कंकड़ पर चल रहे हों; दो उंगलियों तक जलन, तेज़ दर्द या सुन्नपन"
+        },
+        "ch_numb_both": {
+          "en": "Numbness, tingling or burning in both feet, starting in the toes",
+          "hi": "दोनों पैरों में सुन्नपन, झुनझुनी या जलन, उंगलियों से शुरू"
+        },
+        "ch_hot_toe": {
+          "en": "A sudden, very painful, red, hot and swollen big toe or foot joint, often overnight",
+          "hi": "अचानक बहुत दर्द वाला, लाल, गर्म और सूजा अंगूठा या पैर का जोड़, अक्सर रात भर में"
+        },
+        "ch_bunion": {
+          "en": "A bony bump on the side of the big toe, with the toe angled inwards",
+          "hi": "अंगूठे की साइड में हड्डी का उभार, अंगूठा अंदर की ओर मुड़ा"
+        },
+        "ch_swell": {
+          "en": "Swelling and bruising around the ankle",
+          "hi": "टखने के आसपास सूजन और नील"
+        },
+        "ch_unstable": {
+          "en": "The ankle keeps rolling over or feels weak on uneven ground",
+          "hi": "टखना बार-बार मुड़ता है या ऊबड़-खाबड़ ज़मीन पर कमज़ोर लगता है"
+        },
+        "ch_shoot_leg": {
+          "en": "Shooting pain from the back or buttock down the leg into the foot",
+          "hi": "कमर या नितंब से पैर में नीचे तक करंट जैसा दर्द"
+        },
+        "w_run": {
+          "en": "Running, jumping or sport",
+          "hi": "दौड़ना, कूदना या खेल"
+        },
+        "w_walk_long": {
+          "en": "Walking or standing for long",
+          "hi": "देर तक चलना या खड़े रहना"
+        },
+        "w_walk_calf": {
+          "en": "Calf pain on walking a set distance that eases within minutes of standing still",
+          "hi": "एक तय दूरी चलने पर पिंडली में दर्द जो खड़े होकर रुकने पर कुछ मिनट में ठीक हो जाए"
+        },
+        "w_tight_shoes": {
+          "en": "Tight or narrow shoes, high heels",
+          "hi": "तंग या पतले जूते, ऊंची एड़ी"
+        },
+        "w_night": {
+          "en": "Burning or pain in the feet at night in bed",
+          "hi": "रात को बिस्तर पर पैरों में जलन या दर्द"
+        },
+        "b_rest": {
+          "en": "Rest",
+          "hi": "आराम"
+        },
+        "b_shoes_off": {
+          "en": "Taking the shoes off and rubbing the foot",
+          "hi": "जूते उतारकर पैर मलना"
+        },
+        "o_overweight": {
+          "en": "Overweight, or gained weight recently",
+          "hi": "ज़्यादा वज़न, या हाल में वज़न बढ़ा"
+        },
+        "o_gout": {
+          "en": "Past attacks of gout",
+          "hi": "पहले गाउट के दौरे"
+        },
+        "o_cold_foot": {
+          "en": "The foot is often cold or pale, or cuts on it heal slowly",
+          "hi": "पैर अक्सर ठंडा या पीला रहता है, या उस पर कट धीरे भरते हैं"
+        },
+        "rf_fracture": {
+          "en": "After an injury: could not take 4 steps, or the back or tip of either ankle bone, the outer edge of the foot or the top of the inner midfoot hurts to touch",
+          "hi": "चोट के बाद: 4 कदम नहीं चल पाए, या किसी भी टखने की हड्डी का पिछला हिस्सा या सिरा, पैर का बाहरी किनारा या अंदरूनी बीच के पैर का ऊपरी हिस्सा छूने पर दुखता है"
+        },
+        "rf_ischaemia": {
+          "en": "The foot or leg suddenly became cold, pale, numb or very painful, or there is black skin",
+          "hi": "पैर अचानक ठंडा, पीला, सुन्न या बहुत दर्द वाला हो गया, या त्वचा काली पड़ गई"
+        },
+        "rf_ulcer_fever": {
+          "en": "A foot wound or ulcer with fever, spreading redness or a bad smell",
+          "hi": "पैर के घाव या अल्सर के साथ बुखार, फैलती लाली या बदबू"
+        },
+        "rf_dvt": {
+          "en": "The calf is swollen, warm and tender, especially after long travel, an operation, a plaster cast or bed rest",
+          "hi": "पिंडली सूजी, गर्म और दबाने पर दर्द वाली है, खासकर लंबी यात्रा, ऑपरेशन, प्लास्टर या बिस्तर पर आराम के बाद"
+        },
+        "rf_hot": {
+          "en": "A foot or ankle joint is hot, red and swollen and you have a fever",
+          "hi": "पैर या टखने का जोड़ गर्म, लाल और सूजा है और बुखार है"
+        },
+        "rf_ulcer": {
+          "en": "A wound, blister or sore on the foot that is not healing (especially with diabetes)",
+          "hi": "पैर पर घाव, छाला या ज़ख्म जो भर नहीं रहा (खासकर डायबिटीज़ में)"
+        },
+        "rf_night": {
+          "en": "Constant pain at night that no position eases, or fever and weight loss",
+          "hi": "रात को लगातार दर्द जो किसी भी पोज़िशन में कम न हो, या बुखार और वज़न घटना"
+        },
+        "fwalk_ok": {
+          "en": "Normally",
+          "hi": "सामान्य"
+        },
+        "fwalk_diff": {
+          "en": "With pain or a limp",
+          "hi": "दर्द या लंगड़ाहट के साथ"
+        },
+        "fwalk_no": {
+          "en": "Can hardly walk",
+          "hi": "मुश्किल से चल पाते हैं"
+        },
+        "stand_ok": {
+          "en": "Normally",
+          "hi": "सामान्य"
+        },
+        "stand_diff": {
+          "en": "Painful after a while",
+          "hi": "थोड़ी देर बाद दर्द"
+        },
+        "stand_no": {
+          "en": "Cannot stand for long or wear shoes",
+          "hi": "देर तक खड़े नहीं रह पाते या जूते नहीं पहन पाते"
+        },
+        "sleep_ok": {
+          "en": "Normal",
+          "hi": "सामान्य"
+        },
+        "sleep_bad": {
+          "en": "Pain wakes me up",
+          "hi": "दर्द से नींद खुलती है"
+        },
+        "heel": {
+          "en": "Under or behind the heel",
+          "hi": "एड़ी के नीचे या पीछे"
+        },
+        "heel_l": {
+          "en": "Under or behind the heel (left)",
+          "hi": "एड़ी के नीचे या पीछे (बायां)"
+        },
+        "heel_r": {
+          "en": "Under or behind the heel (right)",
+          "hi": "एड़ी के नीचे या पीछे (दायां)"
+        },
+        "achilles": {
+          "en": "Achilles tendon (cord above the back of the heel)",
+          "hi": "एकिलीज़ टेंडन (एड़ी के पीछे ऊपर की ओर जाती डोरी)"
+        },
+        "achilles_l": {
+          "en": "Achilles tendon (cord above the back of the heel) (left)",
+          "hi": "एकिलीज़ टेंडन (एड़ी के पीछे ऊपर की ओर जाती डोरी) (बायां)"
+        },
+        "achilles_r": {
+          "en": "Achilles tendon (cord above the back of the heel) (right)",
+          "hi": "एकिलीज़ टेंडन (एड़ी के पीछे ऊपर की ओर जाती डोरी) (दायां)"
+        },
+        "ankle_out": {
+          "en": "Outer side of the ankle",
+          "hi": "टखने का बाहरी हिस्सा"
+        },
+        "ankle_out_l": {
+          "en": "Outer side of the ankle (left)",
+          "hi": "टखने का बाहरी हिस्सा (बायां)"
+        },
+        "ankle_out_r": {
+          "en": "Outer side of the ankle (right)",
+          "hi": "टखने का बाहरी हिस्सा (दायां)"
+        },
+        "ankle_in": {
+          "en": "Inner side of the ankle",
+          "hi": "टखने का अंदरूनी हिस्सा"
+        },
+        "ankle_in_l": {
+          "en": "Inner side of the ankle (left)",
+          "hi": "टखने का अंदरूनी हिस्सा (बायां)"
+        },
+        "ankle_in_r": {
+          "en": "Inner side of the ankle (right)",
+          "hi": "टखने का अंदरूनी हिस्सा (दायां)"
+        },
+        "arch": {
+          "en": "Arch of the foot",
+          "hi": "पैर का आर्च (तलवे का बीच)"
+        },
+        "arch_l": {
+          "en": "Arch of the foot (left)",
+          "hi": "पैर का आर्च (तलवे का बीच) (बायां)"
+        },
+        "arch_r": {
+          "en": "Arch of the foot (right)",
+          "hi": "पैर का आर्च (तलवे का बीच) (दायां)"
+        },
+        "ball": {
+          "en": "Ball of the foot or between the toes",
+          "hi": "पंजे का गद्देदार हिस्सा या उंगलियों के बीच"
+        },
+        "ball_l": {
+          "en": "Ball of the foot or between the toes (left)",
+          "hi": "पंजे का गद्देदार हिस्सा या उंगलियों के बीच (बायां)"
+        },
+        "ball_r": {
+          "en": "Ball of the foot or between the toes (right)",
+          "hi": "पंजे का गद्देदार हिस्सा या उंगलियों के बीच (दायां)"
+        },
+        "bigtoe": {
+          "en": "Big toe joint",
+          "hi": "अंगूठे का जोड़"
+        },
+        "bigtoe_l": {
+          "en": "Big toe joint (left)",
+          "hi": "अंगूठे का जोड़ (बायां)"
+        },
+        "bigtoe_r": {
+          "en": "Big toe joint (right)",
+          "hi": "अंगूठे का जोड़ (दायां)"
+        },
+        "shin_in": {
+          "en": "Inner edge of the shin",
+          "hi": "पिंडली की हड्डी का अंदरूनी किनारा"
+        },
+        "shin_in_l": {
+          "en": "Inner edge of the shin (left)",
+          "hi": "पिंडली की हड्डी का अंदरूनी किनारा (बायां)"
+        },
+        "shin_in_r": {
+          "en": "Inner edge of the shin (right)",
+          "hi": "पिंडली की हड्डी का अंदरूनी किनारा (दायां)"
+        },
+        "calf": {
+          "en": "Calf (back of the lower leg)",
+          "hi": "पिंडली (निचले पैर का पिछला हिस्सा)"
+        },
+        "calf_l": {
+          "en": "Calf (back of the lower leg) (left)",
+          "hi": "पिंडली (निचले पैर का पिछला हिस्सा) (बायां)"
+        },
+        "calf_r": {
+          "en": "Calf (back of the lower leg) (right)",
+          "hi": "पिंडली (निचले पैर का पिछला हिस्सा) (दायां)"
+        },
+        "lowback": {
+          "en": "Lower back",
+          "hi": "कमर"
+        },
+        "windlass_pos": {
+          "en": "Big toe lift (windlass test): positive",
+          "hi": "अंगूठा ऊपर उठाना (विंडलास टेस्ट): पॉज़िटिव"
+        },
+        "windlass_neg": {
+          "en": "Big toe lift (windlass test): negative",
+          "hi": "अंगूठा ऊपर उठाना (विंडलास टेस्ट): नेगेटिव"
+        },
+        "windlass_skip": {
+          "en": "Big toe lift (windlass test): could not do / skip",
+          "hi": "अंगूठा ऊपर उठाना (विंडलास टेस्ट): नहीं कर पाए / छोड़ें"
+        },
+        "hr_pain": {
+          "en": "Single-leg heel raise: positive",
+          "hi": "एक पैर पर पंजों के बल उठना: पॉज़िटिव"
+        },
+        "hr_cannot": {
+          "en": "Single-leg heel raise: cannot rise",
+          "hi": "एक पैर पर पंजों के बल उठना: उठ नहीं पाते"
+        },
+        "hr_ok": {
+          "en": "Single-leg heel raise: negative",
+          "hi": "एक पैर पर पंजों के बल उठना: नेगेटिव"
+        },
+        "hr_skip": {
+          "en": "Single-leg heel raise: could not do / skip",
+          "hi": "एक पैर पर पंजों के बल उठना: नहीं कर पाए / छोड़ें"
+        },
+        "squeeze_pos": {
+          "en": "Squeeze between the toes: positive",
+          "hi": "उंगलियों के बीच दबाना: पॉज़िटिव"
+        },
+        "squeeze_neg": {
+          "en": "Squeeze between the toes: negative",
+          "hi": "उंगलियों के बीच दबाना: नेगेटिव"
+        },
+        "squeeze_skip": {
+          "en": "Squeeze between the toes: could not do / skip",
+          "hi": "उंगलियों के बीच दबाना: नहीं कर पाए / छोड़ें"
+        },
+        "age_lt40": {
+          "en": "Age under 40",
+          "hi": "40 से कम उम्र"
+        },
+        "age_ge50": {
+          "en": "Age 50 or over",
+          "hi": "50 या ज़्यादा उम्र"
+        },
+        "foot_one": {
+          "en": "One leg or foot",
+          "hi": "एक पैर"
+        },
+        "foot_both": {
+          "en": "Both legs or feet",
+          "hi": "दोनों पैर"
+        },
+        "foot_any": {
+          "en": "Leg, ankle or foot pain",
+          "hi": "पिंडली, टखने या पैर में दर्द"
         }
       }
     }
