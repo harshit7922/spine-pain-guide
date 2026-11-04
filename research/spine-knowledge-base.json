@@ -22,6 +22,7 @@
       "data/cervical.js",
       "data/thoracic.js",
       "data/whole.js",
+      "data/shoulder.js",
       "data/glossary.js",
       "data/rig3d.js"
     ]
@@ -267,6 +268,41 @@
         "key": "fm2016",
         "title": "Wolfe F et al. 2016 revisions to the fibromyalgia diagnostic criteria (criteria form)",
         "url": "https://lin-web.clarkson.edu/~lrussek/2016FMS.pdf"
+      },
+      {
+        "key": "besssap",
+        "title": "BESS / BOA / Royal College of Surgeons. Commissioning guide: subacromial shoulder pain (2014): rotator cuff causes up to 70% of new shoulder pain; red flags; 6 weeks of physiotherapy first",
+        "url": "https://boa.ac.uk/asset/CAD0336B-9051-48A7-9E4DF7072C5C7E47"
+      },
+      {
+        "key": "bessfs",
+        "title": "Rangan A et al. BESS/BOA patient care pathways: frozen shoulder. Shoulder Elbow 2015;7:299–307 (2.4 per 1,000 a year; 10–36% with diabetes; 59% full recovery at 4.4 years)",
+        "url": "https://boa.ac.uk/asset/221D74D9-2DB0-40C6-AE113E5B1BEF68E5"
+      },
+      {
+        "key": "hermans",
+        "title": "Hermans J et al. Does this patient with shoulder pain have rotator cuff disease? JAMA Rational Clinical Examination 2013;310:837–47 (painful arc LR+ 3.7, LR− 0.36; drop arm LR+ 3.3)",
+        "url": "https://repub.eur.nl/pub/41413"
+      },
+      {
+        "key": "chrono",
+        "title": "Chronopoulos E et al. Diagnostic value of physical tests for isolated chronic acromioclavicular lesions. Am J Sports Med 2004;32:655–61 (cross-body adduction sensitivity 77%)",
+        "url": "https://read.qxmd.com/read/15090381/diagnostic-value-of-physical-tests-for-isolated-chronic-acromioclavicular-lesions"
+      },
+      {
+        "key": "kimcalc",
+        "title": "Kim MS et al. Diagnosis and treatment of calcific tendinitis of the shoulder. Clin Shoulder Elb 2020;23:210–6",
+        "url": "https://www.cisejournal.org/journal/view.php?number=782"
+      },
+      {
+        "key": "robinson",
+        "title": "Robinson CM et al. Functional outcome and risk of recurrent instability after primary traumatic anterior shoulder dislocation in young patients. J Bone Joint Surg Am 2006;88:2326–36 (55.7% unstable within 2 years)",
+        "url": "https://www.orthobullets.com/evidence/17079387"
+      },
+      {
+        "key": "pmr2012",
+        "title": "Dasgupta B et al. 2012 provisional classification criteria for polymyalgia rheumatica (EULAR/ACR): age 50+, both shoulders, raised CRP/ESR; score 4+ sensitivity 68%, specificity 78%",
+        "url": "https://scholars.aku.edu/en/publications/2012-provisional-classification-criteria-for-polymyalgia-rheumati-2/"
       },
       {
         "key": "statdh",
@@ -838,6 +874,84 @@
         "picture": "bone"
       },
       {
+        "id": "rotator",
+        "terms": {
+          "en": [
+            "rotator cuff",
+            "subacromial",
+            "impingement"
+          ],
+          "hi": [
+            "रोटेटर कफ",
+            "सबएक्रोमियल",
+            "इम्पिंजमेंट"
+          ]
+        },
+        "title": {
+          "en": "Rotator cuff",
+          "hi": "रोटेटर कफ"
+        },
+        "plain": {
+          "en": "Four short muscles from the shoulder blade whose tendons wrap around the ball of the upper-arm bone and hold it in the socket while the arm moves. Their pain is felt on the outer side of the shoulder and upper arm (highlighted), not where the tendons are.",
+          "hi": "कंधे की हड्डी से निकलने वाली चार छोटी मांसपेशियाँ, जिनके टेंडन ऊपरी बांह की हड्डी की गेंद को लपेटकर बांह हिलते समय उसे सॉकेट में थामे रखते हैं। इनका दर्द कंधे और ऊपरी बांह के बाहरी हिस्से (रंगीन) में महसूस होता है, टेंडन की जगह पर नहीं।"
+        },
+        "sources": [
+          "besssap",
+          "hermans"
+        ],
+        "picture": "bone"
+      },
+      {
+        "id": "acjoint",
+        "terms": {
+          "en": [
+            "AC joint",
+            "acromioclavicular"
+          ],
+          "hi": [
+            "AC जोड़",
+            "एक्रोमियोक्लेविकुलर"
+          ]
+        },
+        "title": {
+          "en": "AC joint (acromioclavicular joint)",
+          "hi": "AC जोड़ (एक्रोमियोक्लेविकुलर जोड़)"
+        },
+        "plain": {
+          "en": "The small joint on top of the shoulder where the collarbone (highlighted) meets the bony tip of the shoulder blade. It hurts when reaching across the body or pressing heavy weights.",
+          "hi": "कंधे के ऊपर का छोटा जोड़ जहाँ कॉलरबोन (चमकती) कंधे की हड्डी के नुकीले सिरे से मिलती है। शरीर के आर-पार हाथ ले जाने या भारी वज़न धकेलने पर दुखता है।"
+        },
+        "sources": [
+          "chrono"
+        ],
+        "picture": "bone"
+      },
+      {
+        "id": "frozen",
+        "terms": {
+          "en": [
+            "frozen shoulder",
+            "adhesive capsulitis"
+          ],
+          "hi": [
+            "फ्रोज़न शोल्डर",
+            "एडहेसिव कैप्सुलाइटिस"
+          ]
+        },
+        "title": {
+          "en": "Frozen shoulder",
+          "hi": "फ्रोज़न शोल्डर"
+        },
+        "plain": {
+          "en": "The capsule of the shoulder joint becomes inflamed and tight, so the arm can no longer turn outward or reach behind the back. The picture shows the check: with elbows at the sides, a frozen shoulder turns out much less than the other side.",
+          "hi": "कंधे के जोड़ का कैप्सूल सूजकर कस जाता है, जिससे बांह बाहर नहीं घूमती और पीठ के पीछे नहीं जाती। तस्वीर में जांच दिखी है: कोहनियाँ शरीर से सटाकर, फ्रोज़न कंधा दूसरी तरफ़ से बहुत कम बाहर घूमता है।"
+        },
+        "sources": [
+          "bessfs"
+        ],
+        "picture": "pose"
+      },
+      {
         "id": "cervical",
         "terms": {
           "en": [
@@ -1025,8 +1139,8 @@
           "hi": "1 हफ्ते के अंदर विशेषज्ञ डॉक्टर को दिखाएं"
         },
         "act": {
-          "en": "Not an emergency, but your symptoms need a proper examination. Go sooner if the pain worsens, numbness spreads or a leg feels weak.",
-          "hi": "इमरजेंसी नहीं, पर आपके लक्षणों की ठीक से जांच ज़रूरी है। दर्द बढ़े, सुन्नपन फैले या पैर कमज़ोर लगे तो पहले जाएं।"
+          "en": "Not an emergency, but your symptoms need a proper examination. Go sooner if the pain worsens, numbness spreads or an arm or leg feels weak.",
+          "hi": "इमरजेंसी नहीं, पर आपके लक्षणों की ठीक से जांच ज़रूरी है। दर्द बढ़े, सुन्नपन फैले या हाथ या पैर कमज़ोर लगे तो पहले जाएं।"
         }
       },
       "green": {
@@ -1138,8 +1252,8 @@
           "hi": "ऑर्थोपेडिक्स"
         },
         "s": {
-          "en": "Hip, pelvis and tailbone problems.",
-          "hi": "कूल्हे, पेल्विस और टेलबोन की समस्याएं।"
+          "en": "Bone and joint problems: shoulder, hip, knee, hand, foot, pelvis and tailbone.",
+          "hi": "हड्डी और जोड़ों की समस्याएं: कंधा, कूल्हा, घुटना, हाथ, पैर, पेल्विस और टेलबोन।"
         },
         "q": "orthopedic doctor"
       },
@@ -16618,6 +16732,2764 @@
         "wp_axial": {
           "en": "Spine or chest pain",
           "hi": "रीढ़ या छाती दर्द"
+        }
+      }
+    },
+    {
+      "id": "shoulder",
+      "order": 5,
+      "title": {
+        "en": "Shoulder pain assessment",
+        "hi": "कंधे के दर्द की जांच रिपोर्ट"
+      },
+      "tag": null,
+      "sourcesAddedByModule": [
+        "besssap",
+        "bessfs",
+        "hermans",
+        "chrono",
+        "kimcalc",
+        "robinson",
+        "pmr2012"
+      ],
+      "conditions": [
+        {
+          "id": "rcrsp",
+          "name": {
+            "en": "Rotator cuff pain (subacromial pain, “impingement”)",
+            "hi": "रोटेटर कफ का दर्द (सबएक्रोमियल दर्द, “इम्पिंजमेंट”)"
+          },
+          "scientific": "Rotator cuff related shoulder pain · subacromial pain syndrome",
+          "what": {
+            "en": "The rotator cuff is a group of four tendons that hold the ball of the shoulder in its socket. When they are overloaded or worn they become painful, felt on the top and outer side of the shoulder and upper arm, especially when lifting the arm and at night. The shoulder usually still moves fully if someone else moves it.",
+            "hi": "रोटेटर कफ चार टेंडन का समूह है जो कंधे की गेंद को उसके सॉकेट में थामे रखता है। ज़्यादा भार या घिसावट से ये दर्द करने लगते हैं, जो कंधे के ऊपर और बाहर तथा ऊपरी बांह में महसूस होता है, खासकर बांह उठाते समय और रात में। कोई और कंधा हिलाए तो आमतौर पर पूरा हिलता है।"
+          },
+          "causes": {
+            "en": "Overhead work or sport, a sudden rise in activity, age-related tendon wear and poor shoulder-blade control. It is the cause of up to 70% of new shoulder pain and is most common between 35 and 75.",
+            "hi": "सिर के ऊपर हाथ करके काम या खेल, अचानक बढ़ी गतिविधि, उम्र से टेंडन की घिसावट और कंधे की हड्डी पर कमज़ोर नियंत्रण। नए कंधे दर्द के 70% तक मामलों का कारण यही है और यह 35 से 75 की उम्र में सबसे आम है।"
+          },
+          "confirm": {
+            "en": "Shoulder examination; ultrasound or MRI only if a tear is suspected or the pain does not settle. Many people without pain also have tendon changes on scans.",
+            "hi": "कंधे की जांच; फटन का शक हो या दर्द न सुधरे तभी अल्ट्रासाउंड या MRI। बिना दर्द वाले कई लोगों के स्कैन में भी टेंडन में बदलाव दिखते हैं।"
+          },
+          "treat": {
+            "en": "Advice, pain relief and a structured exercise programme with a physiotherapist for at least 6 weeks; one steroid injection can help you exercise. Surgery only if pain and loss of function persist after proper non-surgical treatment.",
+            "hi": "सलाह, दर्द की दवा और फिज़ियोथेरेपिस्ट के साथ कम से कम 6 हफ्ते का व्यवस्थित व्यायाम; एक स्टेरॉयड इंजेक्शन व्यायाम में मदद कर सकता है। सही गैर-सर्जिकल इलाज के बाद भी दर्द और काम में दिक्कत रहे तभी सर्जरी।"
+          },
+          "outlook": {
+            "en": "Most people improve with exercise over weeks to months; guidelines advise at least 6 weeks of physiotherapy before considering referral to a surgeon.",
+            "hi": "ज़्यादातर लोग व्यायाम से कुछ हफ्तों से महीनों में सुधरते हैं; दिशानिर्देश सर्जन के पास भेजने से पहले कम से कम 6 हफ्ते फिज़ियोथेरेपी की सलाह देते हैं।"
+          },
+          "thresholds": [
+            10,
+            7,
+            4
+          ],
+          "anchors": [
+            "arc_pos",
+            "w_overhead",
+            "sh_side"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "physio"
+          ],
+          "outlookSource": [
+            "besssap"
+          ],
+          "weights": [
+            {
+              "feature": "sh_side",
+              "label": {
+                "en": "Outer side of the shoulder and upper arm",
+                "hi": "कंधे और ऊपरी बांह का बाहरी हिस्सा"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "sh_front",
+              "label": {
+                "en": "Front of the shoulder",
+                "hi": "कंधे का अगला हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sh_top",
+              "label": {
+                "en": "Top of the shoulder",
+                "hi": "कंधे का ऊपरी हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "w_overhead",
+              "label": {
+                "en": "Lifting the arm up or reaching to a high shelf",
+                "hi": "बांह ऊपर उठाना या ऊंची शेल्फ़ तक पहुंचना"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "ch_night_lie",
+              "label": {
+                "en": "Pain at night, worse lying on that shoulder",
+                "hi": "रात में दर्द, उस कंधे पर लेटने से ज़्यादा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "arc_pos",
+              "label": {
+                "en": "Painful arc (lift the arm sideways): positive",
+                "hi": "दर्द वाला चाप (बांह साइड से उठाना): पॉज़िटिव"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "arc_neg",
+              "label": {
+                "en": "Painful arc (lift the arm sideways): negative",
+                "hi": "दर्द वाला चाप (बांह साइड से उठाना): नेगेटिव"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "drop_pos",
+              "label": {
+                "en": "Slow lowering (drop arm) test: positive",
+                "hi": "धीरे से नीचे लाने का (ड्रॉप आर्म) टेस्ट: पॉज़िटिव"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_overhead",
+              "label": {
+                "en": "Overhead work, painting, throwing, swimming or gym",
+                "hi": "सिर के ऊपर हाथ करके काम, पेंटिंग, फेंकना, तैरना या जिम"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "r_heavy",
+              "label": {
+                "en": "Heavy physical work",
+                "hi": "भारी शारीरिक काम"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "erom_lim",
+              "label": {
+                "en": "Turning out both forearms (stiffness check): positive",
+                "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): पॉज़िटिव"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "ch_stiff_all",
+              "label": {
+                "en": "The shoulder has become stiff: hard to comb hair, put on a shirt or reach the back pocket",
+                "hi": "कंधा जकड़ गया है: बाल बनाना, कमीज़ पहनना या पीछे की जेब तक हाथ ले जाना मुश्किल"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_unstable",
+              "label": {
+                "en": "The shoulder feels loose, slips, or has come out of place before",
+                "hi": "कंधा ढीला लगता है, खिसकता है, या पहले उतर चुका है"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_tingle",
+              "label": {
+                "en": "Tingling or numbness running down the arm into the fingers",
+                "hi": "बांह से उंगलियों तक झुनझुनी या सुन्नपन"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "forearm",
+              "label": {
+                "en": "Forearm, hand or fingers",
+                "hi": "अग्रबाहु, हाथ या उंगलियाँ"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "o_shoulder_ok",
+              "label": {
+                "en": "Moving the shoulder itself does not change the pain",
+                "hi": "कंधा हिलाने से दर्द पर कोई असर नहीं पड़ता"
+              },
+              "weight": -4
+            },
+            {
+              "feature": "ch_girdle",
+              "label": {
+                "en": "Both shoulders (and often hips) stiff and aching for more than 45 minutes every morning",
+                "hi": "दोनों कंधे (और अक्सर कूल्हे) हर सुबह 45 मिनट से ज़्यादा जकड़े और दुखते हैं"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "rctear",
+          "name": {
+            "en": "Rotator cuff tear",
+            "hi": "रोटेटर कफ का फटना"
+          },
+          "scientific": "Full-thickness or partial rotator cuff tear",
+          "what": {
+            "en": "One or more cuff tendons tear away from the bone, either suddenly after a fall or jerk, or slowly from wear after 50. The arm feels weak and may drop when lowered, with pain at night.",
+            "hi": "एक या ज़्यादा कफ टेंडन हड्डी से फट जाते हैं, या तो गिरने या झटके के बाद अचानक, या 50 के बाद घिसावट से धीरे-धीरे। बांह कमज़ोर लगती है, नीचे लाते समय गिर सकती है, और रात में दर्द होता है।"
+          },
+          "causes": {
+            "en": "Age-related tendon wear (common after 60), a fall on the outstretched arm, a sudden heavy pull, or a dislocation in someone over 40.",
+            "hi": "उम्र से टेंडन की घिसावट (60 के बाद आम), फैले हाथ पर गिरना, अचानक भारी खिंचाव, या 40 से ज़्यादा उम्र में कंधा उतरना।"
+          },
+          "confirm": {
+            "en": "Examination of strength (lag signs are the most accurate bedside tests for a full tear) and an ultrasound or MRI scan.",
+            "hi": "ताकत की जांच (पूरी फटन के लिए लैग साइन सबसे सटीक बेडसाइड टेस्ट हैं) और अल्ट्रासाउंड या MRI स्कैन।"
+          },
+          "treat": {
+            "en": "Exercise therapy for many wear-related tears; repair surgery is considered for a sudden (traumatic) tear in an active person, ideally within weeks.",
+            "hi": "घिसावट वाली कई फटन में व्यायाम थेरेपी; सक्रिय व्यक्ति में अचानक (चोट वाली) फटन की मरम्मत सर्जरी पर विचार होता है, बेहतर हो कि कुछ हफ्तों में।"
+          },
+          "outlook": {
+            "en": "A sudden loss of lifting after an injury should be seen urgently, because early repair gives the best results.",
+            "hi": "चोट के बाद अचानक बांह उठाने की ताकत जाना हो तो जल्दी दिखाएं, क्योंकि जल्दी मरम्मत के सबसे अच्छे नतीजे होते हैं।"
+          },
+          "thresholds": [
+            11,
+            8,
+            5
+          ],
+          "anchors": [
+            "ch_weak_lift",
+            "drop_pos",
+            "rf_sudden_weak"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "physio"
+          ],
+          "outlookSource": [
+            "besssap"
+          ],
+          "weights": [
+            {
+              "feature": "ch_weak_lift",
+              "label": {
+                "en": "The arm feels weak or heavy when lifting it; it gives way",
+                "hi": "बांह उठाते समय कमज़ोर या भारी लगती है; बीच में गिर जाती है"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "drop_pos",
+              "label": {
+                "en": "Slow lowering (drop arm) test: positive",
+                "hi": "धीरे से नीचे लाने का (ड्रॉप आर्म) टेस्ट: पॉज़िटिव"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "arc_pos",
+              "label": {
+                "en": "Painful arc (lift the arm sideways): positive",
+                "hi": "दर्द वाला चाप (बांह साइड से उठाना): पॉज़िटिव"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "rf_sudden_weak",
+              "label": {
+                "en": "Sudden loss of the ability to lift the arm after an injury or a jerk",
+                "hi": "चोट या झटके के बाद अचानक बांह उठाने की ताकत चली जाना"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "sh_side",
+              "label": {
+                "en": "Outer side of the shoulder and upper arm",
+                "hi": "कंधे और ऊपरी बांह का बाहरी हिस्सा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "ch_night_lie",
+              "label": {
+                "en": "Pain at night, worse lying on that shoulder",
+                "hi": "रात में दर्द, उस कंधे पर लेटने से ज़्यादा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall onto the shoulder or an outstretched hand",
+                "hi": "कंधे पर या फैले हाथ पर गिरना"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_jerk",
+              "label": {
+                "en": "A sudden jerk of the arm (bus handle, dog lead, catching something)",
+                "hi": "बांह को अचानक झटका (बस का हैंडल, कुत्ते का पट्टा, कुछ पकड़ना)"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_lift",
+              "label": {
+                "en": "Lifting or pulling something heavy",
+                "hi": "कुछ भारी उठाना या खींचना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "erom_lim",
+              "label": {
+                "en": "Turning out both forearms (stiffness check): positive",
+                "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): पॉज़िटिव"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_tingle",
+              "label": {
+                "en": "Tingling or numbness running down the arm into the fingers",
+                "hi": "बांह से उंगलियों तक झुनझुनी या सुन्नपन"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "o_shoulder_ok",
+              "label": {
+                "en": "Moving the shoulder itself does not change the pain",
+                "hi": "कंधा हिलाने से दर्द पर कोई असर नहीं पड़ता"
+              },
+              "weight": -3
+            }
+          ]
+        },
+        {
+          "id": "frozen",
+          "name": {
+            "en": "Frozen shoulder (adhesive capsulitis)",
+            "hi": "फ्रोज़न शोल्डर (एडहेसिव कैप्सुलाइटिस)"
+          },
+          "scientific": "Adhesive capsulitis of the shoulder",
+          "what": {
+            "en": "The lining (capsule) of the shoulder joint becomes inflamed, thickened and tight. It starts with pain, often at night, then the shoulder stiffens so that turning the arm outward and reaching behind the back become very limited, and finally it slowly loosens.",
+            "hi": "कंधे के जोड़ की झिल्ली (कैप्सूल) में सूजन आती है, वह मोटी और कसी हो जाती है। शुरू में दर्द, अक्सर रात में, फिर कंधा जकड़ जाता है जिससे बांह बाहर घुमाना और पीठ के पीछे हाथ ले जाना बहुत सीमित हो जाता है, और आखिर में धीरे-धीरे खुलता है।"
+          },
+          "causes": {
+            "en": "Often no clear cause. It is linked with diabetes (10–36% of people with diabetes), thyroid disease, and a period of not moving the arm after an injury or operation. Most common between 40 and 60, more in women.",
+            "hi": "अक्सर कोई साफ़ कारण नहीं। यह डायबिटीज़ (डायबिटीज़ वाले 10–36% लोगों में), थायरॉइड और चोट या ऑपरेशन के बाद बांह न हिलाने से जुड़ा है। 40 से 60 की उम्र में सबसे आम, महिलाओं में ज़्यादा।"
+          },
+          "confirm": {
+            "en": "Examination showing that outward turning is lost more than other movements, with a normal X-ray (to rule out arthritis or an old dislocation).",
+            "hi": "जांच जिसमें दूसरी हरकतों से ज़्यादा बाहर घुमाना कम हो, और सामान्य एक्स-रे (गठिया या पुराना उतरा कंधा खारिज करने के लिए)।"
+          },
+          "treat": {
+            "en": "Pain relief, a steroid injection into the joint, and home exercises with physiotherapy; if severe symptoms persist after about 3 months, hydrodilatation, manipulation under anaesthesia or keyhole release. Good diabetes control matters.",
+            "hi": "दर्द की दवा, जोड़ में स्टेरॉयड इंजेक्शन, और फिज़ियोथेरेपी के साथ घर पर व्यायाम; लगभग 3 महीने बाद भी तेज़ लक्षण रहें तो हाइड्रोडाइलेटेशन, बेहोशी में मैनिपुलेशन या की-होल रिलीज़। डायबिटीज़ का अच्छा नियंत्रण ज़रूरी।"
+          },
+          "outlook": {
+            "en": "It passes through a painful phase (2–9 months), a stiff phase (4–12 months) and a thawing phase (12–42 months). At about 4 years, 59% have fully recovered, 35% have mild to moderate symptoms and 6% severe ones; people with diabetes respond less well.",
+            "hi": "यह दर्द वाले चरण (2–9 महीने), जकड़न वाले चरण (4–12 महीने) और खुलने वाले चरण (12–42 महीने) से गुज़रता है। लगभग 4 साल बाद 59% पूरी तरह ठीक, 35% में हल्के से मध्यम और 6% में तेज़ लक्षण रहते हैं; डायबिटीज़ वालों में सुधार कम होता है।"
+          },
+          "thresholds": [
+            10,
+            7,
+            4
+          ],
+          "anchors": [
+            "erom_lim",
+            "ch_stiff_all"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "physio",
+            {
+              "id": "medicine",
+              "when": "r_immune"
+            }
+          ],
+          "outlookSource": [
+            "bessfs"
+          ],
+          "weights": [
+            {
+              "feature": "erom_lim",
+              "label": {
+                "en": "Turning out both forearms (stiffness check): positive",
+                "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): पॉज़िटिव"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "ch_stiff_all",
+              "label": {
+                "en": "The shoulder has become stiff: hard to comb hair, put on a shirt or reach the back pocket",
+                "hi": "कंधा जकड़ गया है: बाल बनाना, कमीज़ पहनना या पीछे की जेब तक हाथ ले जाना मुश्किल"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "w_behind",
+              "label": {
+                "en": "Reaching behind the back (tucking in a shirt, fastening a bra)",
+                "hi": "पीठ के पीछे हाथ ले जाना (कमीज़ अंदर करना, ब्रा का हुक लगाना)"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "ch_night_lie",
+              "label": {
+                "en": "Pain at night, worse lying on that shoulder",
+                "hi": "रात में दर्द, उस कंधे पर लेटने से ज़्यादा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "r_immune",
+              "label": {
+                "en": "Diabetes, HIV or low immunity",
+                "hi": "डायबिटीज़, HIV या कम इम्युनिटी"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "d_6_12",
+              "label": {
+                "en": "This bout started 6 weeks to 3 months ago",
+                "hi": "इस बार का दर्द 6 हफ्ते से 3 महीने पहले शुरू हुआ"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "d_3m",
+              "label": {
+                "en": "This bout has lasted more than 3 months without going away",
+                "hi": "इस बार का दर्द 3 महीने से ज़्यादा से है, गया नहीं"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sh_front",
+              "label": {
+                "en": "Front of the shoulder",
+                "hi": "कंधे का अगला हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sh_side",
+              "label": {
+                "en": "Outer side of the shoulder and upper arm",
+                "hi": "कंधे और ऊपरी बांह का बाहरी हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "erom_ok",
+              "label": {
+                "en": "Turning out both forearms (stiffness check): negative",
+                "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): नेगेटिव"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "ch_unstable",
+              "label": {
+                "en": "The shoulder feels loose, slips, or has come out of place before",
+                "hi": "कंधा ढीला लगता है, खिसकता है, या पहले उतर चुका है"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_tingle",
+              "label": {
+                "en": "Tingling or numbness running down the arm into the fingers",
+                "hi": "बांह से उंगलियों तक झुनझुनी या सुन्नपन"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "o_shoulder_ok",
+              "label": {
+                "en": "Moving the shoulder itself does not change the pain",
+                "hi": "कंधा हिलाने से दर्द पर कोई असर नहीं पड़ता"
+              },
+              "weight": -4
+            }
+          ]
+        },
+        {
+          "id": "calcific",
+          "name": {
+            "en": "Calcific tendinitis (calcium in a cuff tendon)",
+            "hi": "कैल्सिफ़िक टेंडिनाइटिस (कफ टेंडन में कैल्शियम)"
+          },
+          "scientific": "Calcific tendinopathy of the rotator cuff",
+          "what": {
+            "en": "A chalky calcium deposit forms inside a cuff tendon, most often the supraspinatus. When the body starts to clear it, it can cause sudden, very severe pain, worse at night, so that the arm can hardly be moved.",
+            "hi": "कफ टेंडन के अंदर, ज़्यादातर सुप्रास्पाइनेटस में, चॉक जैसा कैल्शियम जमा हो जाता है। जब शरीर इसे साफ़ करना शुरू करता है तो अचानक बहुत तेज़ दर्द हो सकता है, रात में ज़्यादा, और बांह मुश्किल से हिलती है।"
+          },
+          "causes": {
+            "en": "Not fully understood. Most common between 30 and 50 and about twice as common in women.",
+            "hi": "पूरी तरह समझा नहीं गया। 30 से 50 की उम्र में सबसे आम और महिलाओं में लगभग दोगुना।"
+          },
+          "confirm": {
+            "en": "An X-ray or ultrasound shows the deposit.",
+            "hi": "एक्स-रे या अल्ट्रासाउंड में जमाव दिखता है।"
+          },
+          "treat": {
+            "en": "Pain relief, ice, a steroid injection; ultrasound-guided needling (barbotage) or shock-wave therapy if it persists; surgery is rarely needed.",
+            "hi": "दर्द की दवा, बर्फ़, स्टेरॉयड इंजेक्शन; बना रहे तो अल्ट्रासाउंड से सुई द्वारा निकालना (बारबोटाज) या शॉक-वेव थेरेपी; सर्जरी कम ही चाहिए।"
+          },
+          "outlook": {
+            "en": "The condition usually settles on its own; non-surgical treatment succeeds in 30–80% and about 70% are satisfied after needling.",
+            "hi": "आमतौर पर अपने आप ठीक हो जाता है; गैर-सर्जिकल इलाज 30–80% में सफल और सुई से निकालने के बाद लगभग 70% संतुष्ट।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_sudden_severe"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "physio"
+          ],
+          "outlookSource": [
+            "kimcalc"
+          ],
+          "weights": [
+            {
+              "feature": "ch_sudden_severe",
+              "label": {
+                "en": "Sudden, very severe pain that came on in hours, without an injury",
+                "hi": "अचानक कुछ घंटों में शुरू हुआ बहुत तेज़ दर्द, बिना चोट के"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "pain_high",
+              "label": {
+                "en": "Severe pain (8 or more out of 10)",
+                "hi": "तेज़ दर्द (10 में 8 या ज़्यादा)"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_night_lie",
+              "label": {
+                "en": "Pain at night, worse lying on that shoulder",
+                "hi": "रात में दर्द, उस कंधे पर लेटने से ज़्यादा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sh_side",
+              "label": {
+                "en": "Outer side of the shoulder and upper arm",
+                "hi": "कंधे और ऊपरी बांह का बाहरी हिस्सा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sh_front",
+              "label": {
+                "en": "Front of the shoulder",
+                "hi": "कंधे का अगला हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "d_days",
+              "label": {
+                "en": "This bout started within the last week",
+                "hi": "इस बार का दर्द पिछले 1 हफ्ते के अंदर शुरू हुआ"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_woke",
+              "label": {
+                "en": "Woke up with it",
+                "hi": "सुबह उठे तो दर्द था"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall onto the shoulder or an outstretched hand",
+                "hi": "कंधे पर या फैले हाथ पर गिरना"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "erom_lim",
+              "label": {
+                "en": "Turning out both forearms (stiffness check): positive",
+                "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): पॉज़िटिव"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "acj",
+          "name": {
+            "en": "AC joint pain (top of the shoulder)",
+            "hi": "AC जोड़ का दर्द (कंधे का ऊपरी हिस्सा)"
+          },
+          "scientific": "Acromioclavicular joint arthritis or sprain",
+          "what": {
+            "en": "The small joint where the collarbone meets the tip of the shoulder blade becomes worn or sprained. Pain is pinpointed on top of the shoulder and is worse reaching across the body or lying on that side.",
+            "hi": "वह छोटा जोड़ जहाँ कॉलरबोन कंधे की हड्डी के सिरे से मिलती है, घिस जाता है या उसमें मोच आती है। दर्द कंधे के ठीक ऊपर होता है और शरीर के आर-पार हाथ ले जाने या उस तरफ़ लेटने पर बढ़ता है।"
+          },
+          "causes": {
+            "en": "A fall on the point of the shoulder, heavy weight training (bench press, push-ups), manual work and age-related wear.",
+            "hi": "कंधे के सिरे पर गिरना, भारी वज़न की ट्रेनिंग (बेंच प्रेस, पुश-अप), मेहनत वाला काम और उम्र से घिसावट।"
+          },
+          "confirm": {
+            "en": "Tenderness over the joint, the cross-body test, an X-ray; a local anaesthetic injection into the joint can confirm it.",
+            "hi": "जोड़ पर दबाने से दर्द, क्रॉस-बॉडी टेस्ट, एक्स-रे; जोड़ में सुन्न करने वाला इंजेक्शन पुष्टि कर सकता है।"
+          },
+          "treat": {
+            "en": "Activity changes (avoid heavy pressing), pain relief, physiotherapy, an injection; rarely, surgery to remove the end of the collarbone.",
+            "hi": "गतिविधि में बदलाव (भारी पुशिंग से बचें), दर्द की दवा, फिज़ियोथेरेपी, इंजेक्शन; कभी-कभी कॉलरबोन का सिरा निकालने की सर्जरी।"
+          },
+          "outlook": {
+            "en": "Usually settles with these measures.",
+            "hi": "आमतौर पर इन उपायों से ठीक हो जाता है।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "sh_top",
+            "xbody_pos"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "physio"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "sh_top",
+              "label": {
+                "en": "Top of the shoulder",
+                "hi": "कंधे का ऊपरी हिस्सा"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "xbody_pos",
+              "label": {
+                "en": "Reach across the chest: positive",
+                "hi": "छाती के आर-पार हाथ ले जाना: पॉज़िटिव"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "xbody_neg",
+              "label": {
+                "en": "Reach across the chest: negative",
+                "hi": "छाती के आर-पार हाथ ले जाना: नेगेटिव"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "w_across",
+              "label": {
+                "en": "Reaching across the body (seat belt, washing the other armpit)",
+                "hi": "शरीर के आर-पार हाथ ले जाना (सीट बेल्ट, दूसरी बगल धोना)"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "r_heavy",
+              "label": {
+                "en": "Heavy physical work",
+                "hi": "भारी शारीरिक काम"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall onto the shoulder or an outstretched hand",
+                "hi": "कंधे पर या फैले हाथ पर गिरना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_lift",
+              "label": {
+                "en": "Lifting or pulling something heavy",
+                "hi": "कुछ भारी उठाना या खींचना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sh_side",
+              "label": {
+                "en": "Outer side of the shoulder and upper arm",
+                "hi": "कंधे और ऊपरी बांह का बाहरी हिस्सा"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "erom_lim",
+              "label": {
+                "en": "Turning out both forearms (stiffness check): positive",
+                "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): पॉज़िटिव"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_tingle",
+              "label": {
+                "en": "Tingling or numbness running down the arm into the fingers",
+                "hi": "बांह से उंगलियों तक झुनझुनी या सुन्नपन"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "instab",
+          "name": {
+            "en": "Shoulder instability (dislocating or loose shoulder)",
+            "hi": "कंधे की अस्थिरता (उतरने वाला या ढीला कंधा)"
+          },
+          "scientific": "Glenohumeral instability",
+          "what": {
+            "en": "After a dislocation, or because the joint is naturally loose, the ball of the shoulder slips partly or fully out of the socket, often with the arm up and turned out (throwing position).",
+            "hi": "कंधा उतरने के बाद, या जोड़ के स्वाभाविक ढीलेपन से, कंधे की गेंद सॉकेट से आंशिक या पूरी खिसक जाती है, अक्सर बांह ऊपर और बाहर मुड़ी होने पर (फेंकने की स्थिति)।"
+          },
+          "causes": {
+            "en": "A first dislocation from a fall or sport, especially in young men; loose joints (hypermobility).",
+            "hi": "गिरने या खेल से पहली बार कंधा उतरना, खासकर युवा पुरुषों में; ढीले जोड़ (हाइपरमोबिलिटी)।"
+          },
+          "confirm": {
+            "en": "Examination by a doctor (apprehension tests should only be done by them), X-rays and an MRI scan.",
+            "hi": "डॉक्टर द्वारा जांच (एप्रिहेंशन टेस्ट सिर्फ़ डॉक्टर करें), एक्स-रे और MRI स्कैन।"
+          },
+          "treat": {
+            "en": "Physiotherapy to strengthen the muscles around the joint; stabilising surgery for repeated dislocations, especially in young athletes.",
+            "hi": "जोड़ के आसपास की मांसपेशियाँ मज़बूत करने के लिए फिज़ियोथेरेपी; बार-बार उतरने पर, खासकर युवा खिलाड़ियों में, स्थिर करने की सर्जरी।"
+          },
+          "outlook": {
+            "en": "In people aged 15–35 after a first dislocation, 55.7% become unstable again within 2 years, young men most often.",
+            "hi": "15–35 उम्र में पहली बार कंधा उतरने के बाद 55.7% का कंधा 2 साल के अंदर फिर अस्थिर होता है, सबसे ज़्यादा युवा पुरुषों में।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_unstable"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "physio"
+          ],
+          "outlookSource": [
+            "robinson"
+          ],
+          "weights": [
+            {
+              "feature": "ch_unstable",
+              "label": {
+                "en": "The shoulder feels loose, slips, or has come out of place before",
+                "hi": "कंधा ढीला लगता है, खिसकता है, या पहले उतर चुका है"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "ch_click",
+              "label": {
+                "en": "Grinding, clicking or catching inside the shoulder",
+                "hi": "कंधे के अंदर किरकिराहट, क्लिक या अटकना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sex_m",
+              "label": {
+                "en": "Male",
+                "hi": "पुरुष"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall onto the shoulder or an outstretched hand",
+                "hi": "कंधे पर या फैले हाथ पर गिरना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_twist",
+              "label": {
+                "en": "Sport: cricket, badminton, volleyball, wrestling",
+                "hi": "खेल: क्रिकेट, बैडमिंटन, वॉलीबॉल, कुश्ती"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "erom_lim",
+              "label": {
+                "en": "Turning out both forearms (stiffness check): positive",
+                "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): पॉज़िटिव"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_stiff_all",
+              "label": {
+                "en": "The shoulder has become stiff: hard to comb hair, put on a shirt or reach the back pocket",
+                "hi": "कंधा जकड़ गया है: बाल बनाना, कमीज़ पहनना या पीछे की जेब तक हाथ ले जाना मुश्किल"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "shoa",
+          "name": {
+            "en": "Shoulder arthritis (glenohumeral osteoarthritis)",
+            "hi": "कंधे की गठिया (ग्लेनोह्यूमरल ऑस्टियोआर्थराइटिस)"
+          },
+          "scientific": "Glenohumeral osteoarthritis",
+          "what": {
+            "en": "The cartilage of the ball-and-socket joint wears away, causing deep aching, grinding and gradual stiffness in all directions.",
+            "hi": "गेंद-सॉकेट जोड़ की कार्टिलेज घिस जाती है, जिससे गहरा दर्द, किरकिराहट और हर दिशा में धीरे-धीरे जकड़न होती है।"
+          },
+          "causes": {
+            "en": "Age (mostly over 60), old injuries or dislocations, long-standing cuff tears and inflammatory arthritis.",
+            "hi": "उम्र (ज़्यादातर 60 से ऊपर), पुरानी चोट या उतरा कंधा, लंबे समय की कफ फटन और सूजन वाली गठिया।"
+          },
+          "confirm": {
+            "en": "Examination and an X-ray showing joint-space narrowing.",
+            "hi": "जांच और एक्स-रे जिसमें जोड़ की जगह कम दिखे।"
+          },
+          "treat": {
+            "en": "Exercise, pain relief, injections; shoulder replacement when pain and stiffness limit daily life.",
+            "hi": "व्यायाम, दर्द की दवा, इंजेक्शन; दर्द और जकड़न रोज़मर्रा का काम रोकें तो कंधा बदलवाना (रिप्लेसमेंट)।"
+          },
+          "outlook": {
+            "en": "Slowly progressive; replacement gives good pain relief when needed.",
+            "hi": "धीरे-धीरे बढ़ता है; ज़रूरत हो तो रिप्लेसमेंट से अच्छा आराम मिलता है।"
+          },
+          "thresholds": [
+            9,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_click",
+            "ch_stiff_all"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "physio"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_click",
+              "label": {
+                "en": "Grinding, clicking or catching inside the shoulder",
+                "hi": "कंधे के अंदर किरकिराहट, क्लिक या अटकना"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "ch_stiff_all",
+              "label": {
+                "en": "The shoulder has become stiff: hard to comb hair, put on a shirt or reach the back pocket",
+                "hi": "कंधा जकड़ गया है: बाल बनाना, कमीज़ पहनना या पीछे की जेब तक हाथ ले जाना मुश्किल"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "erom_lim",
+              "label": {
+                "en": "Turning out both forearms (stiffness check): positive",
+                "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): पॉज़िटिव"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "d_3m",
+              "label": {
+                "en": "This bout has lasted more than 3 months without going away",
+                "hi": "इस बार का दर्द 3 महीने से ज़्यादा से है, गया नहीं"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "h_5y",
+              "label": {
+                "en": "First had this pain more than 5 years ago",
+                "hi": "पहली बार यह दर्द 5 साल से भी पहले हुआ"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "h_1_5y",
+              "label": {
+                "en": "First had this pain 1 to 5 years ago",
+                "hi": "पहली बार यह दर्द 1 से 5 साल पहले हुआ"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_unstable",
+              "label": {
+                "en": "The shoulder feels loose, slips, or has come out of place before",
+                "hi": "कंधा ढीला लगता है, खिसकता है, या पहले उतर चुका है"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_sudden_severe",
+              "label": {
+                "en": "Sudden, very severe pain that came on in hours, without an injury",
+                "hi": "अचानक कुछ घंटों में शुरू हुआ बहुत तेज़ दर्द, बिना चोट के"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "neckref",
+          "name": {
+            "en": "Pain coming from the neck",
+            "hi": "गर्दन से आने वाला दर्द"
+          },
+          "scientific": "Referred or radicular pain from the cervical spine",
+          "what": {
+            "en": "A pinched nerve root or worn joints in the neck can cause pain over the shoulder blade, the top and outer side of the shoulder and down the arm, while the shoulder joint itself is healthy.",
+            "hi": "गर्दन में दबी नस की जड़ या घिसे जोड़ कंधे की हड्डी, कंधे के ऊपर और बाहर तथा बांह में नीचे तक दर्द दे सकते हैं, जबकि कंधे का जोड़ खुद ठीक होता है।"
+          },
+          "causes": {
+            "en": "Cervical spondylosis or a neck disc pressing the C5 or C6 nerve root.",
+            "hi": "सर्वाइकल स्पॉन्डिलोसिस या गर्दन की डिस्क का C5 या C6 नस की जड़ पर दबाव।"
+          },
+          "confirm": {
+            "en": "Neck and nerve examination; use the neck section of this guide for a detailed check.",
+            "hi": "गर्दन और नसों की जांच; विस्तार से जांचने के लिए इस गाइड का गर्दन वाला हिस्सा इस्तेमाल करें।"
+          },
+          "treat": {
+            "en": "Treatment of the neck problem (see the neck section).",
+            "hi": "गर्दन की समस्या का इलाज (गर्दन वाला हिस्सा देखें)।"
+          },
+          "outlook": {
+            "en": "Most neck nerve pain improves within weeks to months.",
+            "hi": "गर्दन की नस का ज़्यादातर दर्द कुछ हफ्तों से महीनों में सुधरता है।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "o_neck_pain",
+            "w_neck",
+            "ch_tingle",
+            "forearm"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho_spine",
+            "physio"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "o_neck_pain",
+              "label": {
+                "en": "Neck pain as well",
+                "hi": "साथ में गर्दन दर्द भी"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "neck",
+              "label": {
+                "en": "Neck",
+                "hi": "गर्दन"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_neck",
+              "label": {
+                "en": "Moving or bending the neck",
+                "hi": "गर्दन हिलाना या झुकाना"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "ch_tingle",
+              "label": {
+                "en": "Tingling or numbness running down the arm into the fingers",
+                "hi": "बांह से उंगलियों तक झुनझुनी या सुन्नपन"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "forearm",
+              "label": {
+                "en": "Forearm, hand or fingers",
+                "hi": "अग्रबाहु, हाथ या उंगलियाँ"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "o_shoulder_ok",
+              "label": {
+                "en": "Moving the shoulder itself does not change the pain",
+                "hi": "कंधा हिलाने से दर्द पर कोई असर नहीं पड़ता"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "arc_neg",
+              "label": {
+                "en": "Painful arc (lift the arm sideways): negative",
+                "hi": "दर्द वाला चाप (बांह साइड से उठाना): नेगेटिव"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "erom_ok",
+              "label": {
+                "en": "Turning out both forearms (stiffness check): negative",
+                "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): नेगेटिव"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "w_overhead",
+              "label": {
+                "en": "Lifting the arm up or reaching to a high shelf",
+                "hi": "बांह ऊपर उठाना या ऊंची शेल्फ़ तक पहुंचना"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "arc_pos",
+              "label": {
+                "en": "Painful arc (lift the arm sideways): positive",
+                "hi": "दर्द वाला चाप (बांह साइड से उठाना): पॉज़िटिव"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "erom_lim",
+              "label": {
+                "en": "Turning out both forearms (stiffness check): positive",
+                "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): पॉज़िटिव"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "sh_top",
+              "label": {
+                "en": "Top of the shoulder",
+                "hi": "कंधे का ऊपरी हिस्सा"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "pmr",
+          "name": {
+            "en": "Polymyalgia rheumatica",
+            "hi": "पॉलीमायल्जिया रूमैटिका"
+          },
+          "scientific": "Polymyalgia rheumatica",
+          "what": {
+            "en": "An inflammatory condition after 50 that causes aching and long morning stiffness in both shoulders, often the hips and neck too, with tiredness.",
+            "hi": "50 के बाद की सूजन वाली बीमारी, जिसमें दोनों कंधों में और अक्सर कूल्हों और गर्दन में भी दर्द और सुबह की लंबी अकड़न होती है, साथ में थकान।"
+          },
+          "causes": {
+            "en": "Unknown immune trigger. It is linked with giant cell arteritis: a new headache, scalp tenderness, jaw pain on chewing or any change in vision needs same-day care.",
+            "hi": "अज्ञात इम्यून कारण। यह जायंट सेल आर्टराइटिस से जुड़ा है: नया सिरदर्द, सिर की त्वचा दुखना, चबाने पर जबड़े में दर्द या नज़र में कोई बदलाव हो तो उसी दिन दिखाएं।"
+          },
+          "confirm": {
+            "en": "Blood tests (ESR, CRP) and examination. Classification needs age 50 or over, pain in both shoulders and raised inflammation markers; with morning stiffness over 45 minutes and hip pain the score reaches the threshold (sensitivity 68%, specificity 78%).",
+            "hi": "ब्लड टेस्ट (ESR, CRP) और जांच। वर्गीकरण के लिए 50 या ज़्यादा उम्र, दोनों कंधों में दर्द और बढ़े सूजन के मार्कर ज़रूरी; 45 मिनट से ज़्यादा सुबह की अकड़न और कूल्हे के दर्द से स्कोर सीमा तक पहुंचता है (संवेदनशीलता 68%, विशिष्टता 78%)।"
+          },
+          "treat": {
+            "en": "Steroid tablets under close medical supervision, usually with a dramatic improvement within days.",
+            "hi": "करीबी डॉक्टरी निगरानी में स्टेरॉयड की गोलियाँ, आमतौर पर कुछ दिनों में बहुत अच्छा सुधार।"
+          },
+          "outlook": {
+            "en": "Responds quickly to treatment, which often continues for 1–2 years.",
+            "hi": "इलाज से जल्दी सुधार, जो अक्सर 1–2 साल चलता है।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_girdle"
+          ],
+          "rare": false,
+          "onlyIf": {
+            "any": [
+              "a_50_59",
+              "a_60p"
+            ]
+          },
+          "departments": [
+            "rheum",
+            "medicine"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ch_girdle",
+              "label": {
+                "en": "Both shoulders (and often hips) stiff and aching for more than 45 minutes every morning",
+                "hi": "दोनों कंधे (और अक्सर कूल्हे) हर सुबह 45 मिनट से ज़्यादा जकड़े और दुखते हैं"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "sh_both",
+              "label": {
+                "en": "Both shoulders",
+                "hi": "दोनों कंधे"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "neck",
+              "label": {
+                "en": "Neck",
+                "hi": "गर्दन"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "rf_fever",
+              "label": {
+                "en": "Fever, night sweats or weight loss without trying",
+                "hi": "बुखार, रात को पसीना या बिना कोशिश वज़न घटना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_unstable",
+              "label": {
+                "en": "The shoulder feels loose, slips, or has come out of place before",
+                "hi": "कंधा ढीला लगता है, खिसकता है, या पहले उतर चुका है"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall onto the shoulder or an outstretched hand",
+                "hi": "कंधे पर या फैले हाथ पर गिरना"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "visceral",
+          "name": {
+            "en": "Pain referred from the gallbladder, liver or diaphragm",
+            "hi": "पित्ताशय, लिवर या डायाफ्राम से आने वाला दर्द"
+          },
+          "scientific": "Referred visceral pain (right shoulder tip)",
+          "what": {
+            "en": "Organs under the right ribs share nerves with the shoulder tip, so gallbladder or liver problems can be felt there, usually with upper-belly pain.",
+            "hi": "दाईं पसलियों के नीचे के अंग कंधे के सिरे से नसें साझा करते हैं, इसलिए पित्ताशय या लिवर की समस्या वहाँ महसूस हो सकती है, आमतौर पर पेट के ऊपरी दर्द के साथ।"
+          },
+          "causes": {
+            "en": "Gallstones, gallbladder inflammation, liver or diaphragm irritation.",
+            "hi": "पित्ते की पथरी, पित्ताशय की सूजन, लिवर या डायाफ्राम की जलन।"
+          },
+          "confirm": {
+            "en": "Examination of the abdomen, blood tests and an abdominal ultrasound.",
+            "hi": "पेट की जांच, ब्लड टेस्ट और पेट का अल्ट्रासाउंड।"
+          },
+          "treat": {
+            "en": "Treatment of the cause by a physician or surgeon.",
+            "hi": "फिज़िशियन या सर्जन द्वारा कारण का इलाज।"
+          },
+          "outlook": {
+            "en": "Fever, yellow eyes or severe belly pain need same-day care.",
+            "hi": "बुखार, आंखें पीली होना या पेट में तेज़ दर्द हो तो उसी दिन दिखाएं।"
+          },
+          "thresholds": [
+            7,
+            5,
+            4
+          ],
+          "anchors": [
+            "o_meal"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "medicine",
+            "gp"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "o_meal",
+              "label": {
+                "en": "Right shoulder-tip pain with upper-belly pain, often after fatty meals",
+                "hi": "दाएं कंधे के सिरे पर दर्द के साथ पेट के ऊपरी हिस्से में दर्द, अक्सर तला-भुना खाने के बाद"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "o_shoulder_ok",
+              "label": {
+                "en": "Moving the shoulder itself does not change the pain",
+                "hi": "कंधा हिलाने से दर्द पर कोई असर नहीं पड़ता"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sh_top",
+              "label": {
+                "en": "Top of the shoulder",
+                "hi": "कंधे का ऊपरी हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "rf_fever",
+              "label": {
+                "en": "Fever, night sweats or weight loss without trying",
+                "hi": "बुखार, रात को पसीना या बिना कोशिश वज़न घटना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "arc_pos",
+              "label": {
+                "en": "Painful arc (lift the arm sideways): positive",
+                "hi": "दर्द वाला चाप (बांह साइड से उठाना): पॉज़िटिव"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "erom_lim",
+              "label": {
+                "en": "Turning out both forearms (stiffness check): positive",
+                "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): पॉज़िटिव"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "w_overhead",
+              "label": {
+                "en": "Lifting the arm up or reaching to a high shelf",
+                "hi": "बांह ऊपर उठाना या ऊंची शेल्फ़ तक पहुंचना"
+              },
+              "weight": -1
+            }
+          ]
+        }
+      ],
+      "emergencies": [
+        {
+          "id": "septic",
+          "name": {
+            "en": "Possible infected joint",
+            "hi": "जोड़ में इन्फेक्शन की आशंका"
+          },
+          "scientific": "Septic arthritis of the shoulder",
+          "what": {
+            "en": "A hot, red, swollen joint or pain with fever can be an infection inside the joint, which can destroy it within days. It needs same-day emergency assessment.",
+            "hi": "गर्म, लाल, सूजा जोड़ या बुखार के साथ दर्द जोड़ के अंदर इन्फेक्शन हो सकता है, जो कुछ दिनों में जोड़ खराब कर सकता है। उसी दिन इमरजेंसी जांच ज़रूरी।"
+          },
+          "when": "rf_hot"
+        },
+        {
+          "id": "disloc",
+          "name": {
+            "en": "Possible dislocation or fracture",
+            "hi": "कंधा उतरने या फ्रैक्चर की आशंका"
+          },
+          "scientific": "Unreduced dislocation · proximal humerus fracture",
+          "what": {
+            "en": "A shoulder that looks out of shape or cannot be moved after an injury may be dislocated or broken. Support the arm in a sling or against the body and go to the emergency department; do not let anyone pull on it.",
+            "hi": "चोट के बाद कंधे का आकार बदला दिखे या हिल न सके तो वह उतरा या टूटा हो सकता है। बांह को स्लिंग या शरीर से सटाकर सहारा दें और इमरजेंसी जाएं; किसी को खींचने न दें।"
+          },
+          "when": "rf_deform"
+        },
+        {
+          "id": "cardiac",
+          "name": {
+            "en": "Possible heart attack",
+            "hi": "दिल के दौरे की आशंका"
+          },
+          "scientific": "Acute coronary syndrome",
+          "what": {
+            "en": "Heart pain can be felt in the shoulder, arm or jaw, with chest pressure, sweating or breathlessness. Call an ambulance; do not wait.",
+            "hi": "दिल का दर्द कंधे, बांह या जबड़े में भी महसूस हो सकता है, साथ में सीने में दबाव, पसीना या सांस फूलना। एम्बुलेंस बुलाएं; इंतज़ार न करें।"
+          },
+          "when": "rf_cardiac"
+        }
+      ],
+      "urgency": {
+        "orange": [
+          {
+            "reason": "o_sudden_weak",
+            "text": {
+              "en": "Sudden loss of lifting strength after an injury (possible acute cuff tear)",
+              "hi": "चोट के बाद अचानक बांह उठाने की ताकत जाना (अचानक कफ फटन की आशंका)"
+            },
+            "when": "rf_sudden_weak"
+          },
+          {
+            "reason": "o_mass",
+            "text": {
+              "en": "A new lump or swelling in the shoulder or armpit",
+              "hi": "कंधे या बगल में नई गांठ या सूजन"
+            },
+            "when": "rf_mass"
+          },
+          {
+            "reason": "o_fever",
+            "text": {
+              "en": "Fever, night sweats or weight loss with shoulder pain",
+              "hi": "कंधे के दर्द के साथ बुखार, रात को पसीना या वज़न घटना"
+            },
+            "when": "rf_fever"
+          },
+          {
+            "reason": "o_night",
+            "text": {
+              "en": "Constant night pain at age 50 or over",
+              "hi": "50 या ज़्यादा उम्र में रात का लगातार दर्द"
+            },
+            "when": {
+              "all": [
+                "rf_night",
+                {
+                  "any": [
+                    "age_ge50",
+                    "r_cancer"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "reason": "o_pain",
+            "text": {
+              "en": "Very severe pain (9–10 out of 10)",
+              "hi": "बहुत तेज़ दर्द (10 में 9–10)"
+            },
+            "when": {
+              "painGte": 9
+            }
+          },
+          {
+            "reason": "o_pmr",
+            "text": {
+              "en": "Both shoulders stiff every morning after age 50 (needs blood tests soon)",
+              "hi": "50 के बाद हर सुबह दोनों कंधों में जकड़न (जल्दी ब्लड टेस्ट ज़रूरी)"
+            },
+            "when": {
+              "all": [
+                "ch_girdle",
+                {
+                  "any": [
+                    "a_50_59",
+                    "a_60p"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "yellow": [
+          {
+            "reason": "y_weak",
+            "text": {
+              "en": "Weakness lifting the arm",
+              "hi": "बांह उठाने में कमज़ोरी"
+            },
+            "when": {
+              "any": [
+                "ch_weak_lift",
+                "drop_pos"
+              ]
+            }
+          },
+          {
+            "reason": "y_stiff",
+            "text": {
+              "en": "Stiff shoulder: early treatment helps",
+              "hi": "जकड़ा कंधा: जल्दी इलाज से फ़ायदा"
+            },
+            "when": {
+              "any": [
+                "erom_lim",
+                "ch_stiff_all"
+              ]
+            }
+          },
+          {
+            "reason": "y_unstable",
+            "text": {
+              "en": "The shoulder slips or has come out of place",
+              "hi": "कंधा खिसकता है या उतर चुका है"
+            },
+            "when": "ch_unstable"
+          },
+          {
+            "reason": "y_often",
+            "text": {
+              "en": "Bouts are coming more often or getting worse",
+              "hi": "दौरे जल्दी-जल्दी आ रहे हैं या बढ़ रहे हैं"
+            },
+            "when": "btw_often"
+          },
+          {
+            "reason": "y_long",
+            "text": {
+              "en": "This bout has lasted more than 6 weeks",
+              "hi": "इस बार का दर्द 6 हफ्ते से ज़्यादा से है"
+            },
+            "when": {
+              "any": [
+                "d_6_12",
+                "d_3m"
+              ]
+            }
+          },
+          {
+            "reason": "y_pain",
+            "text": {
+              "en": "Strong pain (7–8 out of 10)",
+              "hi": "तेज़ दर्द (10 में 7–8)"
+            },
+            "when": {
+              "all": [
+                {
+                  "painGte": 7
+                },
+                {
+                  "not": {
+                    "painGte": 9
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "reason": "y_sleep",
+            "text": {
+              "en": "Pain disturbing sleep",
+              "hi": "दर्द से नींद खराब"
+            },
+            "when": "sleep_bad"
+          },
+          {
+            "reason": "y_injury",
+            "text": {
+              "en": "Started after a fall, jerk or accident",
+              "hi": "गिरने, झटके या दुर्घटना के बाद शुरू"
+            },
+            "when": {
+              "any": [
+                "on_fall",
+                "on_jerk",
+                "on_accident"
+              ]
+            }
+          },
+          {
+            "reason": "y_sudden",
+            "text": {
+              "en": "Sudden severe pain without injury",
+              "hi": "बिना चोट के अचानक तेज़ दर्द"
+            },
+            "when": "ch_sudden_severe"
+          },
+          {
+            "reason": "y_neck",
+            "text": {
+              "en": "Tingling down the arm: the neck may be involved",
+              "hi": "बांह में नीचे तक झुनझुनी: गर्दन शामिल हो सकती है"
+            },
+            "when": {
+              "any": [
+                "ch_tingle",
+                "forearm"
+              ]
+            }
+          },
+          {
+            "reason": "y_meal",
+            "text": {
+              "en": "Right shoulder-tip pain with belly pain",
+              "hi": "पेट दर्द के साथ दाएं कंधे के सिरे पर दर्द"
+            },
+            "when": "o_meal"
+          },
+          {
+            "reason": "y_diab",
+            "text": {
+              "en": "Diabetes with a stiff shoulder",
+              "hi": "जकड़े कंधे के साथ डायबिटीज़"
+            },
+            "when": {
+              "all": [
+                "r_immune",
+                {
+                  "any": [
+                    "erom_lim",
+                    "ch_stiff_all"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "redFlags": [
+        {
+          "id": "rf_hot",
+          "label": {
+            "en": "The shoulder is hot, red and swollen, or you have a fever with the pain",
+            "hi": "कंधा गर्म, लाल और सूजा है, या दर्द के साथ बुखार है"
+          }
+        },
+        {
+          "id": "rf_deform",
+          "label": {
+            "en": "After a fall or injury the shoulder looks out of shape, or you cannot move the arm at all",
+            "hi": "गिरने या चोट के बाद कंधे का आकार बदला दिखता है, या बांह बिल्कुल नहीं हिला पाते"
+          }
+        },
+        {
+          "id": "rf_cardiac",
+          "label": {
+            "en": "Shoulder, arm or jaw pain with chest pressure, sweating or breathlessness",
+            "hi": "कंधे, बांह या जबड़े में दर्द के साथ सीने में दबाव, पसीना या सांस फूलना"
+          }
+        },
+        {
+          "id": "rf_sudden_weak",
+          "label": {
+            "en": "Sudden loss of the ability to lift the arm after an injury or a jerk",
+            "hi": "चोट या झटके के बाद अचानक बांह उठाने की ताकत चली जाना"
+          }
+        },
+        {
+          "id": "rf_mass",
+          "label": {
+            "en": "A new lump or swelling in the shoulder or armpit",
+            "hi": "कंधे या बगल में नई गांठ या सूजन"
+          }
+        },
+        {
+          "id": "rf_fever",
+          "label": {
+            "en": "Fever, night sweats or weight loss without trying",
+            "hi": "बुखार, रात को पसीना या बिना कोशिश वज़न घटना"
+          }
+        },
+        {
+          "id": "rf_night",
+          "label": {
+            "en": "Constant pain at night that no position eases",
+            "hi": "रात को लगातार दर्द जो किसी भी पोज़िशन में कम न हो"
+          }
+        }
+      ],
+      "areas": [
+        {
+          "id": "sh_top",
+          "name": {
+            "en": "Top of the shoulder",
+            "hi": "कंधे का ऊपरी हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "sh_top"
+        },
+        {
+          "id": "sh_front",
+          "name": {
+            "en": "Front of the shoulder",
+            "hi": "कंधे का अगला हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "sh_front"
+        },
+        {
+          "id": "sh_side",
+          "name": {
+            "en": "Outer side of the shoulder and upper arm",
+            "hi": "कंधे और ऊपरी बांह का बाहरी हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "sh_side"
+        },
+        {
+          "id": "sh_back",
+          "name": {
+            "en": "Back of the shoulder",
+            "hi": "कंधे का पिछला हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "sh_back"
+        },
+        {
+          "id": "neck",
+          "name": {
+            "en": "Neck",
+            "hi": "गर्दन"
+          },
+          "paired": false,
+          "code": null,
+          "view": "neck"
+        },
+        {
+          "id": "forearm",
+          "name": {
+            "en": "Forearm, hand or fingers",
+            "hi": "अग्रबाहु, हाथ या उंगलियाँ"
+          },
+          "paired": true,
+          "code": null,
+          "view": "forearm"
+        }
+      ],
+      "derived": [
+        {
+          "id": "pain_high",
+          "when": {
+            "painGte": 8
+          }
+        },
+        {
+          "id": "arm_weak",
+          "when": {
+            "any": [
+              "reach_no",
+              "dress_no"
+            ]
+          }
+        }
+      ],
+      "patterns": {
+        "character": [
+          {
+            "id": "ch_night_lie",
+            "label": {
+              "en": "Pain at night, worse lying on that shoulder",
+              "hi": "रात में दर्द, उस कंधे पर लेटने से ज़्यादा"
+            }
+          },
+          {
+            "id": "ch_stiff_all",
+            "label": {
+              "en": "The shoulder has become stiff: hard to comb hair, put on a shirt or reach the back pocket",
+              "hi": "कंधा जकड़ गया है: बाल बनाना, कमीज़ पहनना या पीछे की जेब तक हाथ ले जाना मुश्किल"
+            }
+          },
+          {
+            "id": "ch_weak_lift",
+            "label": {
+              "en": "The arm feels weak or heavy when lifting it; it gives way",
+              "hi": "बांह उठाते समय कमज़ोर या भारी लगती है; बीच में गिर जाती है"
+            }
+          },
+          {
+            "id": "ch_sudden_severe",
+            "label": {
+              "en": "Sudden, very severe pain that came on in hours, without an injury",
+              "hi": "अचानक कुछ घंटों में शुरू हुआ बहुत तेज़ दर्द, बिना चोट के"
+            }
+          },
+          {
+            "id": "ch_click",
+            "label": {
+              "en": "Grinding, clicking or catching inside the shoulder",
+              "hi": "कंधे के अंदर किरकिराहट, क्लिक या अटकना"
+            }
+          },
+          {
+            "id": "ch_unstable",
+            "label": {
+              "en": "The shoulder feels loose, slips, or has come out of place before",
+              "hi": "कंधा ढीला लगता है, खिसकता है, या पहले उतर चुका है"
+            }
+          },
+          {
+            "id": "ch_tingle",
+            "label": {
+              "en": "Tingling or numbness running down the arm into the fingers",
+              "hi": "बांह से उंगलियों तक झुनझुनी या सुन्नपन"
+            }
+          },
+          {
+            "id": "ch_girdle",
+            "label": {
+              "en": "Both shoulders (and often hips) stiff and aching for more than 45 minutes every morning",
+              "hi": "दोनों कंधे (और अक्सर कूल्हे) हर सुबह 45 मिनट से ज़्यादा जकड़े और दुखते हैं"
+            }
+          }
+        ],
+        "worse": [
+          {
+            "id": "w_overhead",
+            "label": {
+              "en": "Lifting the arm up or reaching to a high shelf",
+              "hi": "बांह ऊपर उठाना या ऊंची शेल्फ़ तक पहुंचना"
+            }
+          },
+          {
+            "id": "w_behind",
+            "label": {
+              "en": "Reaching behind the back (tucking in a shirt, fastening a bra)",
+              "hi": "पीठ के पीछे हाथ ले जाना (कमीज़ अंदर करना, ब्रा का हुक लगाना)"
+            }
+          },
+          {
+            "id": "w_across",
+            "label": {
+              "en": "Reaching across the body (seat belt, washing the other armpit)",
+              "hi": "शरीर के आर-पार हाथ ले जाना (सीट बेल्ट, दूसरी बगल धोना)"
+            }
+          },
+          {
+            "id": "w_neck",
+            "label": {
+              "en": "Moving or bending the neck",
+              "hi": "गर्दन हिलाना या झुकाना"
+            }
+          }
+        ],
+        "better": [
+          {
+            "id": "b_rest",
+            "label": {
+              "en": "Rest, keeping the arm still",
+              "hi": "आराम, बांह को स्थिर रखना"
+            }
+          }
+        ],
+        "other": [
+          {
+            "id": "o_neck_pain",
+            "label": {
+              "en": "Neck pain as well",
+              "hi": "साथ में गर्दन दर्द भी"
+            }
+          },
+          {
+            "id": "o_shoulder_ok",
+            "label": {
+              "en": "Moving the shoulder itself does not change the pain",
+              "hi": "कंधा हिलाने से दर्द पर कोई असर नहीं पड़ता"
+            }
+          },
+          {
+            "id": "o_meal",
+            "label": {
+              "en": "Right shoulder-tip pain with upper-belly pain, often after fatty meals",
+              "hi": "दाएं कंधे के सिरे पर दर्द के साथ पेट के ऊपरी हिस्से में दर्द, अक्सर तला-भुना खाने के बाद"
+            }
+          }
+        ]
+      },
+      "mainComplaint": [],
+      "functionQuestions": [
+        {
+          "id": "reach",
+          "options": [
+            {
+              "id": "reach_ok",
+              "label": {
+                "en": "Normally",
+                "hi": "सामान्य"
+              }
+            },
+            {
+              "id": "reach_diff",
+              "label": {
+                "en": "With pain or only partly",
+                "hi": "दर्द के साथ या थोड़ा ही"
+              }
+            },
+            {
+              "id": "reach_no",
+              "label": {
+                "en": "Cannot lift the arm up",
+                "hi": "बांह ऊपर नहीं उठती"
+              }
+            }
+          ]
+        },
+        {
+          "id": "dress",
+          "options": [
+            {
+              "id": "dress_ok",
+              "label": {
+                "en": "Normally",
+                "hi": "सामान्य"
+              }
+            },
+            {
+              "id": "dress_diff",
+              "label": {
+                "en": "With difficulty",
+                "hi": "मुश्किल से"
+              }
+            },
+            {
+              "id": "dress_no",
+              "label": {
+                "en": "Need help",
+                "hi": "मदद चाहिए"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sleep",
+          "options": [
+            {
+              "id": "sleep_ok",
+              "label": {
+                "en": "Normal",
+                "hi": "सामान्य"
+              }
+            },
+            {
+              "id": "sleep_bad",
+              "label": {
+                "en": "Pain wakes me up",
+                "hi": "दर्द से नींद खुलती है"
+              }
+            }
+          ]
+        }
+      ],
+      "bedsideTests": [
+        {
+          "id": "arc",
+          "name": {
+            "en": "Painful arc (lift the arm sideways)",
+            "hi": "दर्द वाला चाप (बांह साइड से उठाना)"
+          },
+          "steps": [
+            {
+              "en": "Stand up straight. With the thumb pointing up, slowly lift the painful arm out to the side as high as it will go.",
+              "hi": "सीधे खड़े हों। अंगूठा ऊपर रखते हुए दर्द वाली बांह को साइड से धीरे-धीरे जितना हो सके ऊपर उठाएं।"
+            },
+            {
+              "en": "Lower it slowly. Notice where in the movement it hurts.",
+              "hi": "धीरे-धीरे नीचे लाएं। ध्यान दें कि हरकत में कहाँ दर्द होता है।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "Pain mainly in the middle of the movement (roughly between shoulder height and two-thirds of the way up), easing as the arm goes higher or lower.",
+            "hi": "दर्द मुख्य रूप से हरकत के बीच में (लगभग कंधे की ऊंचाई से दो-तिहाई ऊपर तक), और बांह ज़्यादा ऊपर या नीचे जाने पर कम।"
+          },
+          "accuracy": {
+            "en": "A painful arc makes rotator cuff disease about 3.7 times more likely; no painful arc lowers the chance (likelihood ratio 0.36).",
+            "hi": "दर्द वाला चाप रोटेटर कफ की समस्या की संभावना लगभग 3.7 गुना करता है; चाप में दर्द न हो तो संभावना घटती है (लाइकलीहुड रेशियो 0.36)।"
+          },
+          "source": "hermans",
+          "answers": [
+            "arc_pos",
+            "arc_neg",
+            "arc_skip"
+          ]
+        },
+        {
+          "id": "drop",
+          "name": {
+            "en": "Slow lowering (drop arm) test",
+            "hi": "धीरे से नीचे लाने का (ड्रॉप आर्म) टेस्ट"
+          },
+          "steps": [
+            {
+              "en": "Lift the painful arm out to the side to shoulder height (use the other hand to help if needed).",
+              "hi": "दर्द वाली बांह को साइड से कंधे की ऊंचाई तक उठाएं (ज़रूरत हो तो दूसरे हाथ की मदद लें)।"
+            },
+            {
+              "en": "Let go and lower it as slowly and smoothly as you can.",
+              "hi": "छोड़ दें और जितना हो सके धीरे और आराम से नीचे लाएं।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "The arm suddenly drops, or you cannot lower it smoothly.",
+            "hi": "बांह अचानक गिर जाए, या आप उसे आराम से नीचे न ला सकें।"
+          },
+          "accuracy": {
+            "en": "A positive drop arm test makes a rotator cuff problem about 3.3 times more likely (wide uncertainty), often a tear.",
+            "hi": "पॉज़िटिव ड्रॉप आर्म टेस्ट रोटेटर कफ की समस्या, अक्सर फटन, की संभावना लगभग 3.3 गुना करता है (अनिश्चितता ज़्यादा)।"
+          },
+          "source": "hermans",
+          "answers": [
+            "drop_pos",
+            "drop_neg",
+            "drop_skip"
+          ]
+        },
+        {
+          "id": "erom",
+          "name": {
+            "en": "Turning out both forearms (stiffness check)",
+            "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच)"
+          },
+          "steps": [
+            {
+              "en": "Stand with both elbows tucked into your sides and bent at a right angle, palms facing each other.",
+              "hi": "दोनों कोहनियाँ शरीर से सटाकर समकोण पर मोड़ें, हथेलियाँ आमने-सामने।"
+            },
+            {
+              "en": "Keeping the elbows at your sides, turn both forearms outward like opening a book. Compare the two sides.",
+              "hi": "कोहनियाँ शरीर से सटी रखते हुए दोनों अग्रबाहु किताब खोलने की तरह बाहर घुमाएं। दोनों तरफ़ की तुलना करें।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "The painful side turns out much less, about half or less of the other side, even when you help it with the other hand.",
+            "hi": "दर्द वाली तरफ़ बहुत कम बाहर घूमे, दूसरी तरफ़ का लगभग आधा या उससे कम, दूसरे हाथ से मदद करने पर भी।"
+          },
+          "accuracy": {
+            "en": "Losing outward turning more than other movements, with a normal X-ray, is the hallmark of frozen shoulder.",
+            "hi": "दूसरी हरकतों से ज़्यादा बाहर घुमाने की क्षमता खोना, सामान्य एक्स-रे के साथ, फ्रोज़न शोल्डर की पहचान है।"
+          },
+          "source": "bessfs",
+          "answers": [
+            "erom_lim",
+            "erom_ok",
+            "erom_skip"
+          ]
+        },
+        {
+          "id": "xbody",
+          "name": {
+            "en": "Reach across the chest",
+            "hi": "छाती के आर-पार हाथ ले जाना"
+          },
+          "steps": [
+            {
+              "en": "Lift the painful arm to the front at shoulder height.",
+              "hi": "दर्द वाली बांह को आगे कंधे की ऊंचाई तक उठाएं।"
+            },
+            {
+              "en": "Move it across your chest towards the other shoulder, and gently press the elbow further with the other hand.",
+              "hi": "उसे छाती के आर-पार दूसरे कंधे की ओर ले जाएं, और दूसरे हाथ से कोहनी को हल्का और दबाएं।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "Sharp pain on the very top of the shoulder.",
+            "hi": "कंधे के बिल्कुल ऊपर तेज़ दर्द।"
+          },
+          "accuracy": {
+            "en": "Picks up about 77% of AC joint problems, but many positives come from other causes, so it is read with where the pain is.",
+            "hi": "लगभग 77% AC जोड़ की समस्याएं पकड़ता है, पर कई पॉज़िटिव दूसरे कारणों से भी आते हैं, इसलिए दर्द की जगह के साथ देखा जाता है।"
+          },
+          "source": "chrono",
+          "answers": [
+            "xbody_pos",
+            "xbody_neg",
+            "xbody_skip"
+          ]
+        }
+      ],
+      "nerveRoots": {},
+      "rootRules": [],
+      "discOfRoot": {},
+      "departmentRules": [],
+      "extraDepartments": null,
+      "featureLabels": {
+        "a_u18": {
+          "en": "Under 18",
+          "hi": "18 से कम"
+        },
+        "a_18_29": {
+          "en": "18–29",
+          "hi": "18–29"
+        },
+        "a_30_39": {
+          "en": "30–39",
+          "hi": "30–39"
+        },
+        "a_40_49": {
+          "en": "40–49",
+          "hi": "40–49"
+        },
+        "a_50_59": {
+          "en": "50–59",
+          "hi": "50–59"
+        },
+        "a_60p": {
+          "en": "60 or over",
+          "hi": "60 या ज़्यादा"
+        },
+        "sex_m": {
+          "en": "Male",
+          "hi": "पुरुष"
+        },
+        "sex_f": {
+          "en": "Female",
+          "hi": "महिला"
+        },
+        "sex_x": {
+          "en": "Prefer not to say",
+          "hi": "नहीं बताना"
+        },
+        "ep_first": {
+          "en": "First episode",
+          "hi": "पहली बार"
+        },
+        "ep_recur": {
+          "en": "Has happened before",
+          "hi": "पहले भी हुआ है"
+        },
+        "r_cancer": {
+          "en": "Cancer, now or in the past",
+          "hi": "कैंसर, अभी या पहले"
+        },
+        "r_bones": {
+          "en": "Osteoporosis, or steroid tablets for 3+ months",
+          "hi": "ऑस्टियोपोरोसिस, या 3+ महीने स्टेरॉयड की गोलियां"
+        },
+        "r_immune": {
+          "en": "Diabetes, HIV or low immunity",
+          "hi": "डायबिटीज़, HIV या कम इम्युनिटी"
+        },
+        "r_tb": {
+          "en": "TB now or before, or a TB patient at home",
+          "hi": "अभी या पहले टीबी, या घर में टीबी मरीज़"
+        },
+        "r_spa": {
+          "en": "Psoriasis, inflammatory bowel disease or recurring red, painful eye",
+          "hi": "सोरायसिस, आंतों की सूजन (IBD) या बार-बार लाल, दर्द भरी आंख"
+        },
+        "r_desk": {
+          "en": "Desk job or long hours of sitting",
+          "hi": "डेस्क जॉब या लंबे समय बैठना"
+        },
+        "r_heavy": {
+          "en": "Heavy physical work",
+          "hi": "भारी शारीरिक काम"
+        },
+        "r_vasc": {
+          "en": "Smoking or tobacco, diabetes, high blood pressure or high cholesterol",
+          "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल"
+        },
+        "r_famspa": {
+          "en": "Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease",
+          "hi": "माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)"
+        },
+        "on_gradual": {
+          "en": "Slowly, with no clear reason",
+          "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+        },
+        "on_overhead": {
+          "en": "Overhead work, painting, throwing, swimming or gym",
+          "hi": "सिर के ऊपर हाथ करके काम, पेंटिंग, फेंकना, तैरना या जिम"
+        },
+        "on_lift": {
+          "en": "Lifting or pulling something heavy",
+          "hi": "कुछ भारी उठाना या खींचना"
+        },
+        "on_fall": {
+          "en": "A fall onto the shoulder or an outstretched hand",
+          "hi": "कंधे पर या फैले हाथ पर गिरना"
+        },
+        "on_jerk": {
+          "en": "A sudden jerk of the arm (bus handle, dog lead, catching something)",
+          "hi": "बांह को अचानक झटका (बस का हैंडल, कुत्ते का पट्टा, कुछ पकड़ना)"
+        },
+        "on_twist": {
+          "en": "Sport: cricket, badminton, volleyball, wrestling",
+          "hi": "खेल: क्रिकेट, बैडमिंटन, वॉलीबॉल, कुश्ती"
+        },
+        "on_woke": {
+          "en": "Woke up with it",
+          "hi": "सुबह उठे तो दर्द था"
+        },
+        "on_accident": {
+          "en": "Road accident",
+          "hi": "सड़क दुर्घटना"
+        },
+        "d_days": {
+          "en": "This bout started within the last week",
+          "hi": "इस बार का दर्द पिछले 1 हफ्ते के अंदर शुरू हुआ"
+        },
+        "d_weeks": {
+          "en": "This bout started 1 to 6 weeks ago",
+          "hi": "इस बार का दर्द 1 से 6 हफ्ते पहले शुरू हुआ"
+        },
+        "d_6_12": {
+          "en": "This bout started 6 weeks to 3 months ago",
+          "hi": "इस बार का दर्द 6 हफ्ते से 3 महीने पहले शुरू हुआ"
+        },
+        "d_3m": {
+          "en": "This bout has lasted more than 3 months without going away",
+          "hi": "इस बार का दर्द 3 महीने से ज़्यादा से है, गया नहीं"
+        },
+        "h_first": {
+          "en": "First time ever with this pain",
+          "hi": "ऐसा दर्द पहली बार हुआ है"
+        },
+        "h_lt1y": {
+          "en": "First had this pain within the last year",
+          "hi": "पहली बार यह दर्द पिछले 1 साल में हुआ"
+        },
+        "h_1_5y": {
+          "en": "First had this pain 1 to 5 years ago",
+          "hi": "पहली बार यह दर्द 1 से 5 साल पहले हुआ"
+        },
+        "h_5y": {
+          "en": "First had this pain more than 5 years ago",
+          "hi": "पहली बार यह दर्द 5 साल से भी पहले हुआ"
+        },
+        "btw_free": {
+          "en": "Completely fine between bouts",
+          "hi": "दौरों के बीच पूरी तरह ठीक"
+        },
+        "btw_some": {
+          "en": "Some pain always stays between bouts",
+          "hi": "दौरों के बीच भी थोड़ा दर्द रहता है"
+        },
+        "btw_often": {
+          "en": "Bouts coming more often or getting worse",
+          "hi": "दौरे जल्दी-जल्दी या ज़्यादा तेज़"
+        },
+        "t_better": {
+          "en": "Getting better",
+          "hi": "ठीक हो रहा है"
+        },
+        "t_same": {
+          "en": "About the same",
+          "hi": "लगभग वैसा ही"
+        },
+        "t_worse": {
+          "en": "Getting worse",
+          "hi": "बढ़ रहा है"
+        },
+        "ch_night_lie": {
+          "en": "Pain at night, worse lying on that shoulder",
+          "hi": "रात में दर्द, उस कंधे पर लेटने से ज़्यादा"
+        },
+        "ch_stiff_all": {
+          "en": "The shoulder has become stiff: hard to comb hair, put on a shirt or reach the back pocket",
+          "hi": "कंधा जकड़ गया है: बाल बनाना, कमीज़ पहनना या पीछे की जेब तक हाथ ले जाना मुश्किल"
+        },
+        "ch_weak_lift": {
+          "en": "The arm feels weak or heavy when lifting it; it gives way",
+          "hi": "बांह उठाते समय कमज़ोर या भारी लगती है; बीच में गिर जाती है"
+        },
+        "ch_sudden_severe": {
+          "en": "Sudden, very severe pain that came on in hours, without an injury",
+          "hi": "अचानक कुछ घंटों में शुरू हुआ बहुत तेज़ दर्द, बिना चोट के"
+        },
+        "ch_click": {
+          "en": "Grinding, clicking or catching inside the shoulder",
+          "hi": "कंधे के अंदर किरकिराहट, क्लिक या अटकना"
+        },
+        "ch_unstable": {
+          "en": "The shoulder feels loose, slips, or has come out of place before",
+          "hi": "कंधा ढीला लगता है, खिसकता है, या पहले उतर चुका है"
+        },
+        "ch_tingle": {
+          "en": "Tingling or numbness running down the arm into the fingers",
+          "hi": "बांह से उंगलियों तक झुनझुनी या सुन्नपन"
+        },
+        "ch_girdle": {
+          "en": "Both shoulders (and often hips) stiff and aching for more than 45 minutes every morning",
+          "hi": "दोनों कंधे (और अक्सर कूल्हे) हर सुबह 45 मिनट से ज़्यादा जकड़े और दुखते हैं"
+        },
+        "w_overhead": {
+          "en": "Lifting the arm up or reaching to a high shelf",
+          "hi": "बांह ऊपर उठाना या ऊंची शेल्फ़ तक पहुंचना"
+        },
+        "w_behind": {
+          "en": "Reaching behind the back (tucking in a shirt, fastening a bra)",
+          "hi": "पीठ के पीछे हाथ ले जाना (कमीज़ अंदर करना, ब्रा का हुक लगाना)"
+        },
+        "w_across": {
+          "en": "Reaching across the body (seat belt, washing the other armpit)",
+          "hi": "शरीर के आर-पार हाथ ले जाना (सीट बेल्ट, दूसरी बगल धोना)"
+        },
+        "w_neck": {
+          "en": "Moving or bending the neck",
+          "hi": "गर्दन हिलाना या झुकाना"
+        },
+        "b_rest": {
+          "en": "Rest, keeping the arm still",
+          "hi": "आराम, बांह को स्थिर रखना"
+        },
+        "o_neck_pain": {
+          "en": "Neck pain as well",
+          "hi": "साथ में गर्दन दर्द भी"
+        },
+        "o_shoulder_ok": {
+          "en": "Moving the shoulder itself does not change the pain",
+          "hi": "कंधा हिलाने से दर्द पर कोई असर नहीं पड़ता"
+        },
+        "o_meal": {
+          "en": "Right shoulder-tip pain with upper-belly pain, often after fatty meals",
+          "hi": "दाएं कंधे के सिरे पर दर्द के साथ पेट के ऊपरी हिस्से में दर्द, अक्सर तला-भुना खाने के बाद"
+        },
+        "rf_hot": {
+          "en": "The shoulder is hot, red and swollen, or you have a fever with the pain",
+          "hi": "कंधा गर्म, लाल और सूजा है, या दर्द के साथ बुखार है"
+        },
+        "rf_deform": {
+          "en": "After a fall or injury the shoulder looks out of shape, or you cannot move the arm at all",
+          "hi": "गिरने या चोट के बाद कंधे का आकार बदला दिखता है, या बांह बिल्कुल नहीं हिला पाते"
+        },
+        "rf_cardiac": {
+          "en": "Shoulder, arm or jaw pain with chest pressure, sweating or breathlessness",
+          "hi": "कंधे, बांह या जबड़े में दर्द के साथ सीने में दबाव, पसीना या सांस फूलना"
+        },
+        "rf_sudden_weak": {
+          "en": "Sudden loss of the ability to lift the arm after an injury or a jerk",
+          "hi": "चोट या झटके के बाद अचानक बांह उठाने की ताकत चली जाना"
+        },
+        "rf_mass": {
+          "en": "A new lump or swelling in the shoulder or armpit",
+          "hi": "कंधे या बगल में नई गांठ या सूजन"
+        },
+        "rf_fever": {
+          "en": "Fever, night sweats or weight loss without trying",
+          "hi": "बुखार, रात को पसीना या बिना कोशिश वज़न घटना"
+        },
+        "rf_night": {
+          "en": "Constant pain at night that no position eases",
+          "hi": "रात को लगातार दर्द जो किसी भी पोज़िशन में कम न हो"
+        },
+        "reach_ok": {
+          "en": "Normally",
+          "hi": "सामान्य"
+        },
+        "reach_diff": {
+          "en": "With pain or only partly",
+          "hi": "दर्द के साथ या थोड़ा ही"
+        },
+        "reach_no": {
+          "en": "Cannot lift the arm up",
+          "hi": "बांह ऊपर नहीं उठती"
+        },
+        "dress_ok": {
+          "en": "Normally",
+          "hi": "सामान्य"
+        },
+        "dress_diff": {
+          "en": "With difficulty",
+          "hi": "मुश्किल से"
+        },
+        "dress_no": {
+          "en": "Need help",
+          "hi": "मदद चाहिए"
+        },
+        "sleep_ok": {
+          "en": "Normal",
+          "hi": "सामान्य"
+        },
+        "sleep_bad": {
+          "en": "Pain wakes me up",
+          "hi": "दर्द से नींद खुलती है"
+        },
+        "sh_top": {
+          "en": "Top of the shoulder",
+          "hi": "कंधे का ऊपरी हिस्सा"
+        },
+        "sh_top_l": {
+          "en": "Top of the shoulder (left)",
+          "hi": "कंधे का ऊपरी हिस्सा (बायां)"
+        },
+        "sh_top_r": {
+          "en": "Top of the shoulder (right)",
+          "hi": "कंधे का ऊपरी हिस्सा (दायां)"
+        },
+        "sh_front": {
+          "en": "Front of the shoulder",
+          "hi": "कंधे का अगला हिस्सा"
+        },
+        "sh_front_l": {
+          "en": "Front of the shoulder (left)",
+          "hi": "कंधे का अगला हिस्सा (बायां)"
+        },
+        "sh_front_r": {
+          "en": "Front of the shoulder (right)",
+          "hi": "कंधे का अगला हिस्सा (दायां)"
+        },
+        "sh_side": {
+          "en": "Outer side of the shoulder and upper arm",
+          "hi": "कंधे और ऊपरी बांह का बाहरी हिस्सा"
+        },
+        "sh_side_l": {
+          "en": "Outer side of the shoulder and upper arm (left)",
+          "hi": "कंधे और ऊपरी बांह का बाहरी हिस्सा (बायां)"
+        },
+        "sh_side_r": {
+          "en": "Outer side of the shoulder and upper arm (right)",
+          "hi": "कंधे और ऊपरी बांह का बाहरी हिस्सा (दायां)"
+        },
+        "sh_back": {
+          "en": "Back of the shoulder",
+          "hi": "कंधे का पिछला हिस्सा"
+        },
+        "sh_back_l": {
+          "en": "Back of the shoulder (left)",
+          "hi": "कंधे का पिछला हिस्सा (बायां)"
+        },
+        "sh_back_r": {
+          "en": "Back of the shoulder (right)",
+          "hi": "कंधे का पिछला हिस्सा (दायां)"
+        },
+        "neck": {
+          "en": "Neck",
+          "hi": "गर्दन"
+        },
+        "forearm": {
+          "en": "Forearm, hand or fingers",
+          "hi": "अग्रबाहु, हाथ या उंगलियाँ"
+        },
+        "forearm_l": {
+          "en": "Forearm, hand or fingers (left)",
+          "hi": "अग्रबाहु, हाथ या उंगलियाँ (बायां)"
+        },
+        "forearm_r": {
+          "en": "Forearm, hand or fingers (right)",
+          "hi": "अग्रबाहु, हाथ या उंगलियाँ (दायां)"
+        },
+        "arc_pos": {
+          "en": "Painful arc (lift the arm sideways): positive",
+          "hi": "दर्द वाला चाप (बांह साइड से उठाना): पॉज़िटिव"
+        },
+        "arc_neg": {
+          "en": "Painful arc (lift the arm sideways): negative",
+          "hi": "दर्द वाला चाप (बांह साइड से उठाना): नेगेटिव"
+        },
+        "arc_skip": {
+          "en": "Painful arc (lift the arm sideways): could not do / skip",
+          "hi": "दर्द वाला चाप (बांह साइड से उठाना): नहीं कर पाए / छोड़ें"
+        },
+        "drop_pos": {
+          "en": "Slow lowering (drop arm) test: positive",
+          "hi": "धीरे से नीचे लाने का (ड्रॉप आर्म) टेस्ट: पॉज़िटिव"
+        },
+        "drop_neg": {
+          "en": "Slow lowering (drop arm) test: negative",
+          "hi": "धीरे से नीचे लाने का (ड्रॉप आर्म) टेस्ट: नेगेटिव"
+        },
+        "drop_skip": {
+          "en": "Slow lowering (drop arm) test: could not do / skip",
+          "hi": "धीरे से नीचे लाने का (ड्रॉप आर्म) टेस्ट: नहीं कर पाए / छोड़ें"
+        },
+        "erom_lim": {
+          "en": "Turning out both forearms (stiffness check): positive",
+          "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): पॉज़िटिव"
+        },
+        "erom_ok": {
+          "en": "Turning out both forearms (stiffness check): negative",
+          "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): नेगेटिव"
+        },
+        "erom_skip": {
+          "en": "Turning out both forearms (stiffness check): could not do / skip",
+          "hi": "दोनों अग्रबाहु बाहर घुमाना (जकड़न की जांच): नहीं कर पाए / छोड़ें"
+        },
+        "xbody_pos": {
+          "en": "Reach across the chest: positive",
+          "hi": "छाती के आर-पार हाथ ले जाना: पॉज़िटिव"
+        },
+        "xbody_neg": {
+          "en": "Reach across the chest: negative",
+          "hi": "छाती के आर-पार हाथ ले जाना: नेगेटिव"
+        },
+        "xbody_skip": {
+          "en": "Reach across the chest: could not do / skip",
+          "hi": "छाती के आर-पार हाथ ले जाना: नहीं कर पाए / छोड़ें"
+        },
+        "age_lt40": {
+          "en": "Age under 40",
+          "hi": "40 से कम उम्र"
+        },
+        "age_ge50": {
+          "en": "Age 50 or over",
+          "hi": "50 या ज़्यादा उम्र"
+        },
+        "sh_one": {
+          "en": "One shoulder",
+          "hi": "एक कंधा"
+        },
+        "sh_both": {
+          "en": "Both shoulders",
+          "hi": "दोनों कंधे"
+        },
+        "pain_high": {
+          "en": "Severe pain (8 or more out of 10)",
+          "hi": "तेज़ दर्द (10 में 8 या ज़्यादा)"
+        },
+        "arm_weak": {
+          "en": "Cannot reach up or dress",
+          "hi": "ऊपर हाथ नहीं जाता या कपड़े नहीं पहन पाते"
         }
       }
     }

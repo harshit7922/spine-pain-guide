@@ -49,8 +49,9 @@ function buildSteps(){
   STEPS.push({sec:6,k:'safety'});
 }
 const valid = i => !STEPS[i].when || STEPS[i].when();
-const regionsOf = (a, v) => !a.pair ? (v === 'yes' ? [a.id] : []) : v === 'both' ? [a.id+'_l', a.id+'_r'] : v === 'l' ? [a.id+'_l'] : v === 'r' ? [a.id+'_r'] : [];
-const allRegions = a => a.pair ? [a.id+'_l', a.id+'_r'] : [a.id];
+const rb = a => a.regs || [a.id];
+const regionsOf = (a, v) => !a.pair ? (v === 'yes' ? rb(a) : []) : v === 'both' ? rb(a).flatMap(r => [r + '_l', r + '_r']) : v === 'l' ? rb(a).map(r => r + '_l') : v === 'r' ? rb(a).map(r => r + '_r') : [];
+const allRegions = a => a.pair ? rb(a).flatMap(r => [r + '_l', r + '_r']) : rb(a);
 function yesRegions(){ const o = []; AREAS.forEach(a => { const v = A.areas[a.id]; if (v) o.push(...regionsOf(a, v)); }); return o; }
 function curRegions(){
   if (S.view === 'start' || S.view === 'lang') return M.startRegions || [AREAS[0].id];
@@ -522,20 +523,21 @@ function snapshot(v, w, h, o){
   const an = G.anatomy, b = G.body, was = G.anat;
   if (!!o.anat !== was) { b.setXray(!!o.anat); an.group.visible = !!o.anat; }
   const keep = {body:b.group.visible, labels:an.labels.visible, floor:G.floor.visible};
-  b.group.visible = !o.noBody; an.labels.visible = !!o.labels; G.floor.visible = !o.noBody;
+  b.group.visible = !o.noBody; an.labels.visible = !!o.labels; G.floor.visible = !o.noBody && !o.noFloor;
   const pel = an.bones.pelvis.map(m => m.visible); an.bones.pelvis.forEach(m => m.visible = !o.noPelvis);
   const legs = an.bones.leg.map(m => m.visible); an.bones.leg.forEach(m => m.visible = !o.noLegs);
   const sac = an.bones.sacrum[0].visible; an.bones.sacrum[0].visible = !o.noSacrum;
   const upper = (o.keepRibs ? ['scap','clav','arm','hand'] : ['ribs','sternum','scap','clav','arm','hand']).flatMap(k => an.bones[k]); const upv = upper.map(m => m.visible); if (o.noUpper) upper.forEach(m => m.visible = false);
   const nk = Object.keys(an.nerves), nv = nk.map(k => an.nerves[k]); const nvv = nv.map(m => m.visible); if (o.nerveKeep) nv.forEach((m, i) => { m.visible = o.nerveKeep.some(p => nk[i].startsWith(p)); });
   const sacV = an.sac ? an.sac.visible : true; if (an.sac && o.noSac) an.sac.visible = false;
+  const hb = (o.hideBones || []).flatMap(k => an.bones[k] || []), hbv = hb.map(m => m.visible); hb.forEach(m => m.visible = false);
   const hid = []; (o.hide || []).forEach(n => { const m = an.vert[n] || an.discs[n]; if (m && m.visible) { m.visible = false; hid.push(m); } });
   if (o.only) { G.hlKey = ''; b.setHL(o.only, []); } else if (o.cur) { G.hlKey = ''; b.setHL([], o.cur); } else if (o.noHL) { G.hlKey = ''; b.setHL([], []); }
   const hlA = b.U.uHlA.value; if (o.hlA) b.U.uHlA.value = o.hlA;
   snapR.setSize(w, h, false); snapR.setClearColor(o.bg || 0xeef2f5, 1);
   const cam = new T.PerspectiveCamera(o.fov || 28, w / h, 0.01, 50); place(cam, resolveView(v)); b.U.uPulse.value = 0.6;
   snapR.render(G.scene, cam); G.scene.environment = envMain; b.U.uHlA.value = hlA;
-  hid.forEach(m => m.visible = true); an.bones.sacrum[0].visible = sac; upper.forEach((m, i) => m.visible = upv[i]); nv.forEach((m, i) => m.visible = nvv[i]); if (an.sac) an.sac.visible = sacV; an.bones.pelvis.forEach((m, i) => m.visible = pel[i]); an.bones.leg.forEach((m, i) => m.visible = legs[i]);
+  hid.forEach(m => m.visible = true); hb.forEach((m, i) => m.visible = hbv[i]); an.bones.sacrum[0].visible = sac; upper.forEach((m, i) => m.visible = upv[i]); nv.forEach((m, i) => m.visible = nvv[i]); if (an.sac) an.sac.visible = sacV; an.bones.pelvis.forEach((m, i) => m.visible = pel[i]); an.bones.leg.forEach((m, i) => m.visible = legs[i]);
   b.group.visible = keep.body; an.labels.visible = keep.labels; G.floor.visible = keep.floor;
   if (!!o.anat !== was) { b.setXray(was); an.group.visible = was; }
   G.hlKey = '';
@@ -935,7 +937,7 @@ function prev(){ for (let i = S.idx - 1; i >= 0; i--) if (valid(i)) return goto(
 function showResult(){
   S.view = 'result'; const R = analyze(A); useSex(sexCode());
   const f = focusFor(R); G.rca = Object.keys(f).length ? f : null; applyRCA(); G.imgs = null;
-  if (G.ok) { setAnat(!!G.rca); G.spin = false; aim(Object.assign({}, V.full, {az: f.side === 'r' ? PI + 0.35 : PI - 0.35})); }
+  if (G.ok) { setAnat(!!G.rca); G.spin = false; if (M.resultView) { const s0 = sidesOf(A, M.SIDES.areas); aim(sideView(M.resultView, s0.size === 1 ? [...s0][0] : 'l')); } else aim(Object.assign({}, V.full, {az: f.side === 'r' ? PI + 0.35 : PI - 0.35})); }
   render(true); window.scrollTo(0, 0);
   setTimeout(renderGallery, 60);
 }
@@ -982,6 +984,10 @@ const TPOSE = {
   spur: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS, mirror({neck:[-10, 0, -14], head:[-10, 0, -16]}, s)), ground:'seat', pain:['neck', 'c6_' + s, 'c7_' + s, 'scap_' + s], cam:{az:s === 'l' ? 28 : -28, el:6, fit:1.0, dy:0.12, zoom:1.15}, arc:{bone:'head', off:[0, 0.2, 0.0], from:{neck:[0, 0, 0], head:[0, 0, 0]}}, props:['chair']}),
   sabd: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS, mirror({clav_l:[0, 0, 12], uarm_l:[-8, 0, 100], farm_l:[18, 0, 138], hand_l:[0, 0, 30]}, s)), ground:'seat', work:['c5_' + s, 'c6_' + s, 't1_' + s], relief:true, cam:{az:s === 'l' ? 22 : -22, el:6, fit:1.0, dy:0.12, zoom:1.15}, arc:{bone:'hand_' + s, off:[0, 0, 0]}, props:['chair']}),
   dist: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS), ground:'seat', work:['neck', 'c6_' + s, 'c7_' + s], relief:true, cam:{az:s === 'l' ? 40 : -40, el:8, fit:1.0, dy:0.1, zoom:1.02}, lift:true, props:['chair']}),
+  arc: s => ({pose:mirror({uarm_l:[0, 0, 108], farm_l:[0, 0, 4]}, s), ground:'feet', pain:['sh_side_' + s, 'sh_top_' + s], cam:{az:s === 'l' ? 12 : -12, el:6, fit:1.0}, arc:{bone:'hand_' + s, off:[0, 0, 0], from:mirror({uarm_l:[0, 0, 12], farm_l:[0, 0, 0]}, s)}, props:[]}),
+  drop: s => ({pose:mirror({uarm_l:[0, 0, 78], farm_l:[0, 0, 2]}, s), ground:'feet', pain:['sh_side_' + s], cam:{az:s === 'l' ? 12 : -12, el:6, fit:1.0}, arc:{bone:'hand_' + s, off:[0, 0, 0], from:mirror({uarm_l:[0, 0, 10], farm_l:[0, 0, 0]}, s), rev:true}, props:[]}),
+  erom: () => ({pose:{uarm_l:[0, 50, -6, 'YXZ'], uarm_r:[0, -50, 6, 'YXZ'], farm_l:[-88, 0, 0], farm_r:[-88, 0, 0]}, ground:'feet', cam:{az:0, el:55, fit:0.75, dy:0.15}, arcs:[{bone:'hand_l', off:[0, 0, 0], from:{uarm_l:[0, 0, -6, 'YXZ'], uarm_r:[0, -50, 6, 'YXZ']}}, {bone:'hand_r', off:[0, 0, 0], from:{uarm_l:[0, 50, -6, 'YXZ'], uarm_r:[0, 0, 6, 'YXZ']}}], props:[]}),
+  xbody: s => ({pose:mirror({uarm_l:[-48, -62, 0, 'YXZ'], farm_l:[-28, 0, 0]}, s), ground:'feet', pain:['sh_top_' + s], cam:{az:s === 'l' ? 35 : -35, el:16, fit:0.72, dy:0.22}, arc:{bone:'hand_' + s, off:[0, 0, 0], from:mirror({uarm_l:[-48, 0, 0, 'YXZ'], farm_l:[-28, 0, 0]}, s)}, props:[]}),
   grip: () => ({pose:Object.assign({uarm_l:[-55, 0, -17], uarm_r:[-55, 0, 17], farm_l:[-12, 0, 0], farm_r:[-12, 0, 0]}, FIST('r')), ground:'feet', work:['c7_l', 'c7_r', 'c8_l', 'c8_r'], cam:{az:40, el:12, focus:'hands', d:1.35, dy:0.12}, props:[]}),
   tandem: () => ({pose:{thigh_l:[-13, 0, -7], shin_l:[6, 0, 0], thigh_r:[8, 0, 7], shin_r:[10, 0, 0], foot_r:[8, 0, 0], uarm_l:[0, 0, 34], uarm_r:[0, 0, -34]}, ground:'feet', cam:{az:38, el:16, fit:1.05}, props:['line']}),
   press: () => ({pose:{}, ground:'feet', pain:['interscap', 'midback'], cam:{az:180, el:6, fit:0.62, dy:0.2}, marks:true, props:[]}),
@@ -992,7 +998,7 @@ const TPOSE = {
 const TPIC = {};
 function testSide(){
   const pick = ids => { for (const k of ids) { const v = A.areas[k]; if (v === 'l' || v === 'r') return v; } return null; };
-  return pick(['s1','l5','l4','thigh_back','buttock','thigh_front','c8','c7','c6','c5','t1','scap','trap','lowback_side']) || 'l';
+  return pick(['s1','l5','l4','thigh_back','buttock','thigh_front','c8','c7','c6','c5','t1','scap','trap','lowback_side','sh_side','sh_front','sh_top','sh_back','forearm']) || 'l';
 }
 function testPic(id, w, h){
   const mk = TPOSE[id]; if (!mk || !rigReady()) return null;
@@ -1043,13 +1049,13 @@ function testPic(id, w, h){
   const pr2 = v => { const q = v.clone(); q.y += 0; q.project(cam); return [(q.x + 1) / 2 * w, (1 - q.y) / 2 * h]; };
   const arrow = (pts, col) => { if (pts.length < 2) return; g.save(); g.strokeStyle = col; g.fillStyle = col; g.lineWidth = Math.max(3, w / 140); g.lineCap = 'round'; g.lineJoin = 'round'; g.setLineDash([]); g.beginPath(); pts.forEach((p, i) => i ? g.lineTo(p[0], p[1]) : g.moveTo(p[0], p[1])); g.stroke();
     const [a, b] = [pts[pts.length - 2], pts[pts.length - 1]], ang = Math.atan2(b[1] - a[1], b[0] - a[0]), L = Math.max(12, w / 28); g.beginPath(); g.moveTo(b[0] + Math.cos(ang) * L * 0.35, b[1] + Math.sin(ang) * L * 0.35); g.lineTo(b[0] - Math.cos(ang - 0.5) * L, b[1] - Math.sin(ang - 0.5) * L); g.lineTo(b[0] - Math.cos(ang + 0.5) * L, b[1] - Math.sin(ang + 0.5) * L); g.closePath(); g.fill(); g.restore(); };
-  if (sp.arc) {
-    const fromPose = Object.assign({}, sp.pose); Object.keys(sp.arc.from || sp.from || {}).forEach(k => fromPose[k] = (sp.arc.from || sp.from)[k]);
-    if (!sp.arc.from && !sp.from) { const b = sp.arc.bone; Object.keys(sp.pose).forEach(k => { if (k[0] !== '$' && (k.endsWith(b.slice(-2)) || k === b)) fromPose[k] = [0, 0, 0]; }); }
+  (sp.arcs || (sp.arc ? [sp.arc] : [])).forEach(ac => {
+    const fromPose = Object.assign({}, sp.pose); Object.keys(ac.from || sp.from || {}).forEach(k => fromPose[k] = (ac.from || sp.from)[k]);
+    if (!ac.from && !sp.from) { const b = ac.bone; Object.keys(sp.pose).forEach(k => { if (k[0] !== '$' && (k.endsWith(b.slice(-2)) || k === b)) fromPose[k] = [0, 0, 0]; }); }
     const pts = []; for (let i = 0; i <= 16; i++) { const t = 0.12 + 0.82 * i / 16, pz = {}; Object.keys(sp.pose).forEach(k => { const a = sp.pose[k], f0 = fromPose[k] || a; pz[k] = k[0] === '$' ? a : [f0[0] + (a[0] - f0[0]) * t, f0[1] + (a[1] - f0[1]) * t, f0[2] + (a[2] - f0[2]) * t, a[3]]; }); Object.keys(fromPose).forEach(k => { if (!(k in pz)) pz[k] = fromPose[k].map((x, j) => j < 3 ? x * (1 - t) : x); });
-      const m2 = boneMats(T, sex, pz), q = bonePt(T, sex, m2, sp.arc.bone, sp.arc.off); if (sp.arc.rel) q.sub(bonePt(T, sex, m2, sp.arc.rel)).add(bonePt(T, sex, mats, sp.arc.rel)); q.y += dy; pts.push(pr2(q)); }
-    arrow(pts, '#0E6A64');
-  }
+      const m2 = boneMats(T, sex, pz), q = bonePt(T, sex, m2, ac.bone, ac.off); if (ac.rel) q.sub(bonePt(T, sex, m2, ac.rel)).add(bonePt(T, sex, mats, ac.rel)); q.y += dy; pts.push(pr2(q)); }
+    if (ac.rev) pts.reverse(); arrow(pts, '#0E6A64');
+  });
   if (sp.marks) { [0.32, 0.45, 0.58].forEach((f, i) => { const q = bonePt(T, sex, mats, i ? 'tspine' : 'chest'); q.y = bb.min.y + (bb.max.y - bb.min.y) * (0.5 + f * 0.36); q.z = bb.min.z - 0.01; const [x, y] = pr2(q); g.strokeStyle = '#0E6A64'; g.lineWidth = Math.max(3, w / 150); g.beginPath(); g.arc(x, y, w / 30, 0, 2 * PI); g.stroke(); g.beginPath(); g.arc(x, y, w / 90, 0, 2 * PI); g.fillStyle = '#0E6A64'; g.fill(); }); }
   if (sp.lift) {
     const hd = bonePt(T, sex, mats, 'head', [0, 0.145, 0]); hd.y += dy; const up = hd.clone(); up.y += 0.1; arrow([pr2(hd), pr2(up)], '#0E6A64');
@@ -1095,6 +1101,7 @@ function fillRefPics(){
     }), 40 + i * 60);
   });
 }
+const sideView = (v, sd) => sd === 'r' ? Object.assign({}, v, {az:-v.az, tx:-(v.tx || 0)}) : Object.assign({}, v);
 function renderGallery(){
   const el = $('#gal'); if (!el) return;
   if (!G.ok) { el.closest('section').hidden = true; return; }
@@ -1103,6 +1110,17 @@ function renderGallery(){
   const shot = (key, v, w, h, o, cap, wide) => { const c = snapshot(v, w, h, o); if (c) imgs.push({key, url:c.toDataURL('image/jpeg', 0.9), w, h, cap, wide}); };
   const S3 = G.anatomy.S, vo = S3.order, dl = S3.discOrder, GP = Object.assign({d:0.66, ld:0.62, td:0.27, ref:'L3', refDy:-0.02}, M.GAL || {}), set = M.labelSet;
   try {
+    if (GP.joint) {
+      const js = R0 => { const s0 = sidesOf(A, M.SIDES.areas); return s0.size === 1 ? [...s0][0] : 'l'; };
+      const jsd = js(); an.makeLabels('l', [], word, null, []);
+      shot('post', sideView(GP.joint.view, jsd), 1000, 760, Object.assign({anat:true, labels:false, fov:30, cur:yesRegions(), hlA:0.3}, GP.joint.opts || {}), U.gPost, true);
+      shot('xray', Object.assign({}, V.front, {az: jsd === 'r' ? -0.35 : 0.35}), 520, 1000, {anat:true, labels:false, only:yesRegions()}, U.gX || U.gRef);
+      shot('back', V.back, 520, 1000, {only:yesRegions()}, U.gBack);
+      shot('front', V.front, 520, 1000, {only:yesRegions()}, U.gFront);
+      applyRCA(); G.imgs = imgs;
+      el.innerHTML = imgs.map(i => `<figure class="fig g-${i.key}${i.wide ? ' wide' : ''}"><img src="${i.url}" alt="${esc(tx(i.cap))}" width="${i.w}" height="${i.h}" loading="lazy"><figcaption>${esc(tx(i.cap))}</figcaption></figure>`).join('');
+      return;
+    }
     an.makeLabels(sd, f.label || [], word, null, set, GP.lscale);
     shot('post', {az: sd === 'r' ? PI + 0.55 : PI - 0.55, el:0.16, d:GP.d, yk: les ? 'disc' : GP.ref, disc:les, dy: les ? 0.03 * GP.d / 0.66 : GP.refDy}, 1000, 760, {anat:true, noBody:true, noPelvis:!GP.pelvis, noLegs:true, noUpper:true, labels:true, fov:30, nerveKeep:GP.nerves, keepRibs:GP.ribs}, les ? U.gPost : U.gRef, true);
     an.makeLabels(sd, f.label || [], word, 'lat', set, GP.lscale);
@@ -1277,7 +1295,7 @@ document.addEventListener('click', e => {
 document.addEventListener('change', e => { if (e.target.id === 'problem') { useModule(e.target.value); A = fresh(); G.rca = null; if (G.ok) { applyRCA(); G.hlKey = ''; } render(false); } });
 document.addEventListener('input', e => { if (e.target.id === 'pain') { A.pain = +e.target.value; const o = $('#painOut'); if (o) o.textContent = A.pain; } });
 
-window.SPG_TEST = {term: id => openTerm(id), glIds: () => GL.map(g => g.id), glPic: id => { Object.keys(GLPIC).forEach(k => delete GLPIC[k]); return glPic(GLI[id]); }, summary: () => shareText(), tpic: (id, w, h) => { const k = Object.keys(TPIC); k.forEach(x => delete TPIC[x]); return testPic(id, w || 480, h || 560); }, tposes: () => Object.keys(TPOSE), cam: () => Object.assign({}, G.tgt), steps: () => STEPS.map(x => x.k + (x.a ? ':' + x.a.id : '')), set: o => { Object.assign(A, o); render(false); }, mod: id => useModule(id), step: (i, mod, sex) => { if (mod) useModule(mod); if (sex) { A.sex = sex; useSex(sexCode()); } goto(i); }, kb: () => JSON.parse(JSON.stringify({sources:SRC, areas:AREAS.map(a => ({id:a.id, paired:a.pair, dermatome:a.code || null, name:a.name, description:a.desc, relevance:a.rel})), ages:AGES, sexes:SEXES, episodes:EPIS, history:RISKS, onsets:ONSETS, duration:SINCE, trend:TRENDS, dominance:DOMS, pattern:PAT, walking:WALKS, sitting:SITS, sleep:SLEEPS, redFlags:RFS, bedsideTests:TESTS, conditions:CONDS, emergencies:EMERG, departments:DEPTS, nerveRoots:ROOTS, stats:STATS, urgencyLevels:LEVELS, urgencyReasons:RS, featureExplanations:FX, featureLabels:LBL})), load: (a, lg, mod) => { if (lg) lang = lg; if (mod) useModule(mod); A = Object.assign(fresh(), a); useSex(sexCode()); showResult(); }, gal: () => (G.imgs || []).length, analyze: (a, mod) => { if (mod && (!M || M.id !== mod)) useModule(mod); const r = analyze(Object.assign(fresh(), a)); return {level:r.level, top:r.ranked.slice(0, 3).map(x => x.c.id + ':' + x.strength + ':' + x.s), roots:r.roots, sides:[...r.sides], depts:r.depts.map(d => d.id), emerg:r.emerg}; }};
+window.SPG_TEST = {tposeSet: (id, sp) => { TPOSE[id] = () => JSON.parse(JSON.stringify(sp)); }, snap: (v, regs, o) => { const c = snapshot(v, (o && o.w) || 360, (o && o.h) || 420, Object.assign({cur:regs, hlA:0.55}, o || {})); return c ? c.toDataURL('image/jpeg', 0.85) : null; }, term: id => openTerm(id), glIds: () => GL.map(g => g.id), glPic: id => { Object.keys(GLPIC).forEach(k => delete GLPIC[k]); return glPic(GLI[id]); }, summary: () => shareText(), tpic: (id, w, h) => { const k = Object.keys(TPIC); k.forEach(x => delete TPIC[x]); return testPic(id, w || 480, h || 560); }, tposes: () => Object.keys(TPOSE), cam: () => Object.assign({}, G.tgt), steps: () => STEPS.map(x => x.k + (x.a ? ':' + x.a.id : '')), set: o => { Object.assign(A, o); render(false); }, mod: id => useModule(id), step: (i, mod, sex) => { if (mod) useModule(mod); if (sex) { A.sex = sex; useSex(sexCode()); } goto(i); }, kb: () => JSON.parse(JSON.stringify({sources:SRC, areas:AREAS.map(a => ({id:a.id, paired:a.pair, dermatome:a.code || null, name:a.name, description:a.desc, relevance:a.rel})), ages:AGES, sexes:SEXES, episodes:EPIS, history:RISKS, onsets:ONSETS, duration:SINCE, trend:TRENDS, dominance:DOMS, pattern:PAT, walking:WALKS, sitting:SITS, sleep:SLEEPS, redFlags:RFS, bedsideTests:TESTS, conditions:CONDS, emergencies:EMERG, departments:DEPTS, nerveRoots:ROOTS, stats:STATS, urgencyLevels:LEVELS, urgencyReasons:RS, featureExplanations:FX, featureLabels:LBL})), load: (a, lg, mod) => { if (lg) lang = lg; if (mod) useModule(mod); A = Object.assign(fresh(), a); useSex(sexCode()); showResult(); }, gal: () => (G.imgs || []).length, analyze: (a, mod) => { if (mod && (!M || M.id !== mod)) useModule(mod); const r = analyze(Object.assign(fresh(), a)); return {level:r.level, top:r.ranked.slice(0, 3).map(x => x.c.id + ':' + x.strength + ':' + x.s), roots:r.roots, sides:[...r.sides], depts:r.depts.map(d => d.id), emerg:r.emerg}; }};
 useModule(MODS[0].id);
 if (!langChosen) S.view = 'lang';
 /* ================= install as an app (web app manifest + offline worker) ================= */

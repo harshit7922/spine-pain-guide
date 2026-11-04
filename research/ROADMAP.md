@@ -16,8 +16,8 @@ Goal set by the owner: deep, authentic, proven research for every option; refere
 | 1 | Lower back: evidence table (prevalence, LRs, red flags, India data), refined weights, missing conditions, sharper questions | done 4 Nov (research/lumbar-evidence.md) |
 | 2 | User-friendly pack: tap-a-term glossary with pictures, read aloud (Hindi/English), larger text, plain 3-line summary, save and resume, share report, body-part cards on the start page | done 4 Nov (data/glossary.js, 27 words) |
 | 3 | Neck and arm deep research (cervical radiculopathy, myelopathy, carpal and cubital tunnel) | done 4 Nov (research/cervical-evidence.md); thoracic outlet syndrome moved to the shoulder phase |
-| 4 | New: Shoulder (frozen shoulder, rotator cuff, impingement, calcific tendinitis, AC joint, instability, thoracic outlet, referred pain) | in progress |
-| 5 | New: Knee (osteoarthritis, patellofemoral pain, meniscus, ligament injury, IT band, bursitis, Baker's cyst, gout, Osgood-Schlatter) | pending |
+| 4 | New: Shoulder (frozen shoulder, rotator cuff, impingement, calcific tendinitis, AC joint, instability, referred pain) | done 4 Nov (data/shoulder.js, research/shoulder-evidence.md); thoracic outlet left out (rare, poor bedside tests) |
+| 5 | New: Knee (osteoarthritis, patellofemoral pain, meniscus, ligament injury, IT band, bursitis, Baker's cyst, gout, Osgood-Schlatter) | in progress (body areas ready) |
 | 6 | New: Leg, ankle and foot (plantar fasciitis, Achilles, ankle sprain, shin splints, calf strain, DVT and artery red flags, neuropathy, Morton's neuroma) | pending |
 | 7 | New: Hip (hip OA, greater trochanteric pain, FAI/labral tear, avascular necrosis, stress fracture) | pending |
 | 8 | New: Elbow, wrist and hand (tennis/golfer's elbow, de Quervain, carpal tunnel, trigger finger, cubital tunnel, hand OA) | pending |

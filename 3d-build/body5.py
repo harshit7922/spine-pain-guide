@@ -139,19 +139,87 @@ for sd in 'lr':
     raw['c6_'+sd]=OR(AND(fa,(cth-c70)*0.04,sidec[sd]),AND(segc(gf('D1','D2')),sidec[sd]))
     raw['c8_'+sd]=OR(AND(fa,(c110-cth)*0.04,sidec[sd]),AND(segc(gf('D4','D5')),sidec[sd]))
     raw['c7_'+sd]=OR(AND(fa,(cth-c110)*0.04,(c70-cth)*0.04,sidec[sd]),AND(segc(gf('D3')),sidec[sd]))
+# ---------- joints of the limbs (v5.3): shoulder, elbow, wrist and hand, hip, knee, leg, ankle and foot ----------
+# Not exclusive with the spine regions above (they overlap, e.g. outer upper arm = c5 and side of the shoulder), exclusive among themselves.
+G3={'UA':G2['UA'],'FA':G2['FA'],'HAND':lambda b:b.startswith(('finger','metacarpal','wrist')),'T1':lambda b:b.startswith('toe1'),
+    'FT':lambda b:b.startswith(('foot','toe')),'D1':G2['D1'],'DF':lambda b:b.startswith(('finger2','finger3','finger4','finger5','metacarpal2','metacarpal3','metacarpal4'))}
+GF3=np.stack([grpw(f) for f in G3.values()],1)/tot[:,None]
+for _ in range(25):
+    acc=np.zeros_like(GF3); np.add.at(acc,ni,GF3[nj]); GF3=0.5*GF3+0.5*acc/deg_[:,None]
+g3={k:i for i,k in enumerate(G3)}
+gq=lambda *ks: sum(GF3[:,g3[k]] for k in ks)
+unit=lambda v: v/np.linalg.norm(v)
+perp=lambda v,a: unit(v-(v@a)*a)
+raw2={}
+for sd in 'lr':
+    sg=1 if sd=='l' else -1; sc=sidec[sd]
+    S_=jm(P0,sd+'-shoulder'); E_=jm(P0,sd+'-elbow'); Wr=jm(P0,sd+'-hand'); Kn=jm(P0,sd+'-knee'); An=jm(P0,sd+'-ankle'); Hp=jm(P0,sd+'-upper-leg')
+    u=unit(E_-S_); latA=perp(np.array([sg,0,0.]),u); frA=perp(np.array([0,0,1.]),u); upA=np.cross(u,frA)*0+np.array([0,1.,0])
+    d=B-S_; t=d@u; armish=segc(TF+gq('UA'))
+    shz=AND(armish,0.115*s-np.linalg.norm(d,axis=1),t+0.02*s,sc)
+    raw2['sh_top_'+sd]=AND(shz,(n[:,1]-0.5)*K)
+    raw2['sh_front_'+sd]=AND(shz,(n@frA-0.35)*K,(0.6-n[:,1])*K)
+    raw2['sh_back_'+sd]=AND(shz,(-(n@frA)-0.35)*K,(0.6-n[:,1])*K)
+    delt=AND(segc(gq('UA')),t-0.02*s,0.15*s-t,sc)
+    raw2['sh_side_'+sd]=OR(AND(shz,(n@latA-0.3)*K,(0.6-n[:,1])*K),AND(delt,(n@latA-0.35)*K))
+    raw2['arm_front_'+sd]=AND(segc(gq('UA')),t-0.10*s,(np.linalg.norm(E_-S_)-0.04*s)-t,(n@frA-0.45)*K,sc)
+    # elbow
+    de=B-E_; elz=AND(segc(gq('UA','FA')),0.062*s-np.linalg.norm(de,axis=1),sc)
+    latE=perp(np.array([sg,0,0.]),u); bkE=perp(np.array([0,0,-1.]),u)
+    raw2['elb_out_'+sd]=AND(elz,(n@latE-0.4)*K)
+    raw2['elb_in_'+sd]=AND(elz,(-(n@latE)-0.4)*K)
+    raw2['elb_back_'+sd]=AND(elz,(n@bkE-0.5)*K)
+    # wrist and hand
+    u2=unit(Wr-E_); tb=B[(GF[:,gi['D1']]>0.5)&((B[:,0]>0) if sd=='l' else (B[:,0]<0))].mean(0)-Wr; rd=perp(tb,u2)
+    tip=B[(gq('DF')>0.5)&((B[:,0]>0) if sd=='l' else (B[:,0]<0))].mean(0)-Wr; pd=perp(tip-(tip@rd)*rd,u2)
+    dw=B-Wr; tw=dw@u2
+    hz=segc(gq('FA','HAND'))
+    raw2['wrist_thumb_'+sd]=AND(hz,tw+0.06*s,0.035*s-tw,(n@rd-0.45)*K,0.05*s-np.linalg.norm(dw-np.outer(tw,u2),axis=1),sc)
+    raw2['wrist_palm_'+sd]=AND(hz,tw+0.03*s,0.045*s-tw,(n@pd-0.4)*K,sc)
+    raw2['finger_base_'+sd]=AND(segc(gq('DF')),(n@pd-0.3)*K,tw-0.07*s,0.115*s-tw,sc)
+    raw2['thumb_base_'+sd]=AND(segc(gq('D1')),0.07*s-tw,sc)
+    # hip (outer side, over the greater trochanter)
+    raw2['hip_side_'+sd]=AND(segc(TF+THF),0.075*s-np.abs(y-(Hp[1]-0.03*s)),(n[:,0]*sg-0.5)*K,sc)
+    # knee
+    kz=AND(segc(legsF),0.06*s-np.abs(y-Kn[1]),sc)
+    raw2['knee_front_'+sd]=AND(kz,deg(40-np.abs(ph)))
+    raw2['knee_in_'+sd]=AND(kz,deg(-ph-35),deg(ph+135))
+    raw2['knee_out_'+sd]=AND(kz,deg(ph-35),deg(135-ph))
+    raw2['knee_back_'+sd]=AND(kz,deg(np.abs(ph)-135))
+    raw2['tibial_tub_'+sd]=AND(segc(SHF),(Kn[1]-0.055*s)-y,y-(Kn[1]-0.115*s),deg(35-np.abs(ph)),sc)
+    # lower leg
+    raw2['shin_in_'+sd]=AND(segc(SHF),y-(An[1]+0.06*s),(Kn[1]-0.13*s)-y,deg(-ph-10),deg(ph+80),sc)
+    raw2['calf_'+sd]=AND(segc(SHF),y-(An[1]+0.48*(Kn[1]-An[1])),(Kn[1]-0.07*s)-y,deg(np.abs(ph)-115),sc)
+    raw2['achilles_'+sd]=AND(segc(SHF+FOF),y-(An[1]+0.0*s),(An[1]+0.14*s)-y,deg(np.abs(ph)-140),sc)
+    # ankle and foot
+    da=B-An; lat=da[:,0]*sg
+    az=AND(segc(SHF+FOF),0.032*s-np.abs(da[:,1]),0.035*s-np.abs(da[:,2]+0.005*s),sc)
+    raw2['ankle_out_'+sd]=AND(az,lat-0.022*s)
+    raw2['ankle_in_'+sd]=AND(az,-lat-0.018*s)
+    ft=segc(gq('FT'))
+    raw2['heel_'+sd]=AND(ft,(An[2]-0.015*s)-z,(An[1]+0.01*s)-y,sc)
+    T1j=jm(P0,sd+'-toe-1-1'); T3j=jm(P0,sd+'-toe-3-1')
+    raw2['arch_'+sd]=AND(ft,(-n[:,1]-0.4)*K,z-(An[2]+0.0*s),(T3j[2]-0.035*s)-z,sc)
+    raw2['ball_'+sd]=AND(ft,(-n[:,1]-0.3)*K,0.028*s-np.abs(z-(T3j[2]-0.008*s)),sc)
+    raw2['bigtoe_'+sd]=AND(OR(segc(gq('T1')),AND(ft,0.022*s-np.linalg.norm(B-T1j,axis=1))),sc)
+REG2=[k+'_'+sd for k in ['sh_top','sh_front','sh_side','sh_back','arm_front','elb_out','elb_in','elb_back','wrist_thumb','wrist_palm','finger_base','thumb_base','hip_side','knee_front','knee_in','knee_out','knee_back','tibial_tub','shin_in','calf','achilles','ankle_out','ankle_in','heel','arch','ball','bigtoe'] for sd in 'lr']
 REG=['lowback','lowback_side_l','lowback_side_r','flank_l','flank_r','tailbone','buttock_l','buttock_r','groin_l','groin_r','saddle','thigh_front_l','thigh_front_r','thigh_back_l','thigh_back_r','l4_l','l4_r','l5_l','l5_r','s1_l','s1_r','neck','interscap','midback','chest','trap_l','trap_r','scap_l','scap_r','midback_side_l','midback_side_r','ribs_l','ribs_r','c5_l','c5_r','t1_l','t1_r','c6_l','c6_r','c7_l','c7_r','c8_l','c8_r']
 fin={}; taken=np.full(NB,-1.0)
 for r_ in REG:
     m=AND(raw[r_],-taken)
     fin[r_]=m; taken=np.maximum(taken,m)
+taken2=np.full(NB,-1.0)
+for r_ in REG2:
+    m=AND(raw2[r_],-taken2)
+    fin[r_]=m; taken2=np.maximum(taken2,m)
 LIM=0.015
 LIMS={}
 sparse={}
-for r_ in REG:
-    lim=0.012 if r_[:2] in ('c5','c6','c7','c8','t1') else 0.03
+for r_ in REG+REG2:
+    lim=0.012 if r_[:2] in ('c5','c6','c7','c8','t1') or r_.startswith(('wrist','finger','thumb','elb','ankle','bigtoe','ball','heel','arch','achilles','tibial')) else 0.03
     m=fin[r_]; vi=np.where(m>-lim)[0]
     sparse[r_]=(vi.astype(np.uint16),np.clip(np.round(m[vi]/lim*127),-127,127).astype(np.int8)); LIMS[r_]=lim
-print({r_:int((fin[r_]>0).sum()) for r_ in REG}, 'entries',sum(len(v[0]) for v in sparse.values()))
+print({r_:int((fin[r_]>0).sum()) for r_ in REG+REG2}, 'entries',sum(len(v[0]) for v in sparse.values()))
 key=np.array(['']*NB,dtype=object)
 for r_ in REG: key[fin[r_]>0]=r_
 # continuous fields (neutral space, meters)
@@ -201,7 +269,7 @@ def pose(V,deg=30):
 q16=lambda a,sc: np.clip(np.round(a*sc),-32767,32767).astype(np.int16)
 hairq=np.array(hairF,dtype=np.uint16)
 hairTris=np.concatenate([quads[hairq][:,[0,1,2]],quads[hairq][:,[0,2,3]]]).astype(np.uint16)
-data={'idx':b64(TRIS.astype(np.uint16).ravel()),'reg':REG,'mem':{r_:[b64(sparse[r_][0]),b64(sparse[r_][1]),LIMS[r_]] for r_ in REG},'shorts':b64(q16(shorts,10000)),'top':b64(q16(top,10000)),
+data={'idx':b64(TRIS.astype(np.uint16).ravel()),'reg':REG+REG2,'mem':{r_:[b64(sparse[r_][0]),b64(sparse[r_][1]),LIMS[r_]] for r_ in REG+REG2},'shorts':b64(q16(shorts,10000)),'top':b64(q16(top,10000)),
       'brow':b64(np.round(brow*255).astype(np.uint8)),'lip':b64(np.round(lip*255).astype(np.uint8)),'hair':b64(q16(hair,10000)),'hairIdx':b64(hairTris.ravel())}
 LM={}
 for sex,cd in [('male','m'),('female','f')]:

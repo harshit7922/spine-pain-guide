@@ -39,9 +39,9 @@ const SRC = [
 const U = {
   brand:L('Spine Pain Guide','रीढ़ दर्द गाइड'), tag:L('Spine assessment','रीढ़ दर्द जांच'), sos:L('Emergency','इमरजेंसी'),
   secs:[L('Profile','प्रोफ़ाइल'),L('Location','जगह'),L('Onset','शुरुआत'),L('Pattern','पैटर्न'),L('Function','असर'),L('Exam','टेस्ट'),L('Red flags','खतरे'),L('Result','नतीजा')],
-  kicker:L('Clinical self-assessment · Spine','क्लिनिकल सेल्फ-असेसमेंट · रीढ़'),
-  title:L('Find the likely cause of your spine pain and the right specialist','अपने रीढ़ के दर्द का संभावित कारण और सही विशेषज्ञ जानें'),
-  lede:L('A structured assessment built on clinical guidelines: where it hurts, how it started, how it behaves, simple bedside tests and a red-flag screen. You get a root-cause explanation with realistic 3D images of your spine, discs and nerves, and a PDF report to take to your doctor.','क्लिनिकल गाइडलाइंस पर बनी व्यवस्थित जांच: दर्द कहाँ है, कैसे शुरू हुआ, कैसा व्यवहार करता है, कुछ आसान टेस्ट और खतरे के लक्षणों की जांच। आपको अपनी रीढ़, डिस्क और नसों की असली जैसी 3D तस्वीरों के साथ मूल कारण की व्याख्या और डॉक्टर को दिखाने के लिए PDF रिपोर्ट मिलेगी।'),
+  kicker:L('Clinical self-assessment · Spine and joints','क्लिनिकल सेल्फ-असेसमेंट · रीढ़ और जोड़'),
+  title:L('Find the likely cause of your back, neck or joint pain and the right specialist','अपने कमर, गर्दन या जोड़ों के दर्द का संभावित कारण और सही विशेषज्ञ जानें'),
+  lede:L('A structured assessment built on clinical guidelines: where it hurts, how it started, how it behaves, simple bedside tests and a red-flag screen. You get a root-cause explanation with realistic 3D images of your spine, joints and nerves, and a PDF report to take to your doctor.','क्लिनिकल गाइडलाइंस पर बनी व्यवस्थित जांच: दर्द कहाँ है, कैसे शुरू हुआ, कैसा व्यवहार करता है, कुछ आसान टेस्ट और खतरे के लक्षणों की जांच। आपको अपनी रीढ़, जोड़ों और नसों की असली जैसी 3D तस्वीरों के साथ मूल कारण की व्याख्या और डॉक्टर को दिखाने के लिए PDF रिपोर्ट मिलेगी।'),
   problem:L('Where is the main problem?','मुख्य समस्या कहाँ है?'),
   pLow:L('Lower back pain, with or without leg pain','कमर दर्द, पैर के दर्द के साथ या बिना'),
   pNeck:L('Neck and arm pain (in development)','गर्दन और हाथ का दर्द (तैयार हो रहा है)'),
@@ -197,7 +197,7 @@ const DEPTS = {
   physio:{n:L('Physiotherapy / PM&R','फिज़ियोथेरेपी / PMR'),s:L('Structured exercise and rehabilitation; the core of treatment for most back pain.','व्यवस्थित व्यायाम और रिहैबिलिटेशन; ज़्यादातर कमर दर्द के इलाज का मुख्य हिस्सा।'),q:'physiotherapist'},
   pain:{n:L('Pain medicine','पेन मेडिसिन'),s:L('Image-guided injections and nerve blocks for pain that persists.','लंबे दर्द के लिए इमेज-गाइडेड इंजेक्शन और नर्व ब्लॉक।'),q:'pain management clinic'},
   rheum:{n:L('Rheumatology','रूमेटोलॉजी'),s:L('Inflammatory arthritis of the spine; blood tests and SI-joint MRI.','रीढ़ की सूजन वाली गठिया; ब्लड टेस्ट और SI जोड़ का MRI।'),q:'rheumatologist'},
-  ortho:{n:L('Orthopaedics','ऑर्थोपेडिक्स'),s:L('Hip, pelvis and tailbone problems.','कूल्हे, पेल्विस और टेलबोन की समस्याएं।'),q:'orthopedic doctor'},
+  ortho:{n:L('Orthopaedics','ऑर्थोपेडिक्स'),s:L('Bone and joint problems: shoulder, hip, knee, hand, foot, pelvis and tailbone.','हड्डी और जोड़ों की समस्याएं: कंधा, कूल्हा, घुटना, हाथ, पैर, पेल्विस और टेलबोन।'),q:'orthopedic doctor'},
   gp:{n:L('General physician','जनरल फिज़िशियन'),s:L('First assessment, blood and urine tests, and referral.','पहली जांच, ब्लड और यूरिन टेस्ट, और रेफरल।'),q:'general physician'},
   urology:{n:L('Urology','यूरोलॉजी'),s:L('Kidney stones and urinary tract problems.','गुर्दे की पथरी और मूत्र मार्ग की समस्याएं।'),q:'urologist'},
   id_tb:{n:L('Chest / TB specialist','चेस्ट / टीबी विशेषज्ञ'),s:L('Treats TB and other infections alongside the spine surgeon.','स्पाइन सर्जन के साथ टीबी और दूसरे इन्फेक्शन का इलाज।'),q:'TB chest specialist pulmonologist'},
@@ -285,7 +285,7 @@ const FX = {
 const LEVELS = {
   red:{short:L('Now','अभी'),title:L('Go to the emergency department now','अभी इमरजेंसी विभाग जाएं'),act:L('Call 108 for an ambulance or 112 for any emergency. Do not drive yourself.','एम्बुलेंस के लिए 108 या किसी भी इमरजेंसी के लिए 112 पर कॉल करें। खुद गाड़ी न चलाएं।')},
   orange:{short:L('24–48 h','24–48 घंटे'),title:L('See a doctor within 24–48 hours','24–48 घंटे में डॉक्टर को दिखाएं'),act:L('Do not wait for it to settle. Book the earliest appointment or attend a hospital OPD.','ठीक होने का इंतज़ार न करें। सबसे जल्दी अपॉइंटमेंट लें या अस्पताल की OPD जाएं।')},
-  yellow:{short:L('Within a week','1 हफ्ते में'),title:L('See a specialist doctor within a week','1 हफ्ते के अंदर विशेषज्ञ डॉक्टर को दिखाएं'),act:L('Not an emergency, but your symptoms need a proper examination. Go sooner if the pain worsens, numbness spreads or a leg feels weak.','इमरजेंसी नहीं, पर आपके लक्षणों की ठीक से जांच ज़रूरी है। दर्द बढ़े, सुन्नपन फैले या पैर कमज़ोर लगे तो पहले जाएं।')},
+  yellow:{short:L('Within a week','1 हफ्ते में'),title:L('See a specialist doctor within a week','1 हफ्ते के अंदर विशेषज्ञ डॉक्टर को दिखाएं'),act:L('Not an emergency, but your symptoms need a proper examination. Go sooner if the pain worsens, numbness spreads or an arm or leg feels weak.','इमरजेंसी नहीं, पर आपके लक्षणों की ठीक से जांच ज़रूरी है। दर्द बढ़े, सुन्नपन फैले या हाथ या पैर कमज़ोर लगे तो पहले जाएं।')},
   green:{short:L('Within 2 weeks','2 हफ्ते में'),title:L('Book a doctor visit within 2 weeks','2 हफ्ते के अंदर डॉक्टर को दिखाएं'),act:L('Your answers show no warning signs, but a doctor still needs to examine you to confirm the cause and rule out others. Until then, stay active and avoid heavy lifting.','आपके जवाबों में कोई खतरे का संकेत नहीं है, फिर भी कारण पक्का करने और दूसरे कारणों को खारिज करने के लिए डॉक्टर की जांच ज़रूरी है। तब तक सक्रिय रहें और भारी वज़न न उठाएं।')}
 };
 const RS = {
