@@ -993,12 +993,15 @@ const TPOSE = {
   press: () => ({pose:{}, ground:'feet', pain:['interscap', 'midback'], cam:{az:180, el:6, fit:0.62, dy:0.2}, marks:true, props:[]}),
   twist: () => ({pose:Object.assign({}, SEAT, ARMS_CROSS, {lspine:[0, 8, 0], tspine:[0, 14, 0], chest:[0, 12, 0], neck:[0, 6, 0]}), ground:'seat', pain:['midback', 'midback_side_l', 'midback_side_r', 'ribs_l', 'ribs_r'], cam:{az:150, el:14, fit:1.0, dy:0.1}, stool:true, arc:{bone:'uarm_r', off:[0, 0.05, 0], from:{lspine:[0, 0, 0], tspine:[0, 0, 0], chest:[0, 0, 0]}}, props:['chair']}),
   wall: () => ({pose:{tspine:[8, 0, 0], chest:[6, 0, 0], neck:[16, 0, 0], head:[-14, 0, 0]}, ground:'feet', cam:{az:66, el:4, fit:1.0}, gap:true, props:['wallBack']}),
+  ksquat: () => ({pose:{uarm_l:[-48, 0, 0], uarm_r:[-48, 0, 0], thigh_l:[-62, 0, -6], thigh_r:[-62, 0, 6], shin_l:[58, 0, 0], shin_r:[58, 0, 0], foot_l:[0, 0, 0], lspine:[18, 0, 0], tspine:[10, 0, 0]}, ground:'feet', pain:['knee_front_l', 'knee_front_r'], cam:{az:62, el:8, fit:1.05}, arc:{bone:'hips', off:[0, 0, -0.1], rel:'foot_l', from:{uarm_l:[-48, 0, 0], uarm_r:[-48, 0, 0], thigh_l:[0, 0, -6], thigh_r:[0, 0, 6], shin_l:[0, 0, 0], shin_r:[0, 0, 0], lspine:[0, 0, 0], tspine:[0, 0, 0]}}, props:[]}),
+  kjlt: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS), ground:'seat', pain:['knee_in_' + s, 'knee_out_' + s], cam:{az:s === 'l' ? 28 : -28, el:22, focusBone:'shin_' + s, d:0.95, dy:-0.02}, rings:[{bone:'shin_' + s, off:[0.05, 0, 0.012]}, {bone:'shin_' + s, off:[-0.05, 0, 0.012]}], props:['chair']}),
+  kext: s => ({pose:{$rot:[-90, 0, 0], uarm_l:[0, 0, -8], uarm_r:[0, 0, 8], farm_l:[20, 0, 0], farm_r:[20, 0, 0]}, ground:'bed', cam:{az:s === 'l' ? 70 : -70, el:24, focusBone:'shin_' + s, d:1.25, dy:0.02}, arrows:[{bone:'shin_' + s, from:[0, 0, 0.22], to:[0, 0, 0.07]}], props:['bed']}),
   squat: () => ({pose:Object.assign({}, ARMS_CROSS, {thigh_l:[-62, 0, -6], thigh_r:[-62, 0, 6], shin_l:[58, 0, 0], shin_r:[58, 0, 0], foot_l:[0, 0, 0], lspine:[18, 0, 0], tspine:[10, 0, 0]}), ground:'feet', work:['thigh_front_l', 'thigh_front_r'], cam:{az:62, el:8, fit:1.05}, arc:{bone:'hips', off:[0, 0, -0.1], rel:'foot_l', from:Object.assign({}, SEAT)}, props:['chairBehind']})
 };
 const TPIC = {};
 function testSide(){
   const pick = ids => { for (const k of ids) { const v = A.areas[k]; if (v === 'l' || v === 'r') return v; } return null; };
-  return pick(['s1','l5','l4','thigh_back','buttock','thigh_front','c8','c7','c6','c5','t1','scap','trap','lowback_side','sh_side','sh_front','sh_top','sh_back','forearm']) || 'l';
+  return pick(['s1','l5','l4','thigh_back','buttock','thigh_front','c8','c7','c6','c5','t1','scap','trap','lowback_side','sh_side','sh_front','sh_top','sh_back','forearm','knee_front','knee_in','knee_out','knee_back','tibial_tub','calf','hipthigh']) || 'l';
 }
 function testPic(id, w, h){
   const mk = TPOSE[id]; if (!mk || !rigReady()) return null;
@@ -1039,7 +1042,8 @@ function testPic(id, w, h){
   // camera
   const c = sp.cam, az = c.az * PI / 180, el = c.el * PI / 180, fov = 30;
   let tgt, d;
-  if (c.focus === 'hands') { tgt = bonePt(T, sex, mats, 'hand_l').add(bonePt(T, sex, mats, 'hand_r')).multiplyScalar(0.5); tgt.y += dy + (c.dy || 0); d = c.d; }
+  if (c.focusBone) { tgt = bonePt(T, sex, mats, c.focusBone, c.focusOff); tgt.y += dy + (c.dy || 0); d = c.d; }
+  else if (c.focus === 'hands') { tgt = bonePt(T, sex, mats, 'hand_l').add(bonePt(T, sex, mats, 'hand_r')).multiplyScalar(0.5); tgt.y += dy + (c.dy || 0); d = c.d; }
   else { tgt = bb.getCenter(new T.Vector3()); const sz = bb.getSize(new T.Vector3()); const r = Math.max(sz.y, Math.hypot(sz.x, sz.z) * 0.9) * 0.5 * (c.fit || 1); d = r / Math.tan(fov * PI / 360) * 1.08 / (c.zoom || 1); tgt.y += (c.dy || 0); }
   const cam = new T.PerspectiveCamera(fov, w / h, 0.02, 30); cam.position.set(tgt.x + d * Math.sin(az) * Math.cos(el), tgt.y + d * Math.sin(el), tgt.z + d * Math.cos(az) * Math.cos(el)); cam.lookAt(tgt);
   snapR.shadowMap.enabled = true; snapR.shadowMap.type = T.PCFSoftShadowMap;
@@ -1057,6 +1061,8 @@ function testPic(id, w, h){
     if (ac.rev) pts.reverse(); arrow(pts, '#0E6A64');
   });
   if (sp.marks) { [0.32, 0.45, 0.58].forEach((f, i) => { const q = bonePt(T, sex, mats, i ? 'tspine' : 'chest'); q.y = bb.min.y + (bb.max.y - bb.min.y) * (0.5 + f * 0.36); q.z = bb.min.z - 0.01; const [x, y] = pr2(q); g.strokeStyle = '#0E6A64'; g.lineWidth = Math.max(3, w / 150); g.beginPath(); g.arc(x, y, w / 30, 0, 2 * PI); g.stroke(); g.beginPath(); g.arc(x, y, w / 90, 0, 2 * PI); g.fillStyle = '#0E6A64'; g.fill(); }); }
+  (sp.arrows || []).forEach(a => { const p0 = bonePt(T, sex, mats, a.bone, a.from), p1 = bonePt(T, sex, mats, a.bone, a.to); p0.y += dy; p1.y += dy; arrow([pr2(p0), pr2(p1)], a.col || '#0E6A64'); });
+  (sp.rings || []).forEach(r => { const q = bonePt(T, sex, mats, r.bone, r.off); q.y += dy; const [x, y] = pr2(q); g.beginPath(); g.arc(x, y, w / 26, 0, 2 * PI); g.fillStyle = 'rgba(14,106,100,0.22)'; g.fill(); g.lineWidth = Math.max(3, w / 160); g.strokeStyle = '#0E6A64'; g.stroke(); g.beginPath(); g.arc(x, y, w / 90, 0, 2 * PI); g.fillStyle = '#0E6A64'; g.fill(); });
   if (sp.lift) {
     const hd = bonePt(T, sex, mats, 'head', [0, 0.145, 0]); hd.y += dy; const up = hd.clone(); up.y += 0.1; arrow([pr2(hd), pr2(up)], '#0E6A64');
     [[0, -0.07, 0.075], [0, 0.0, -0.1]].forEach(o => { const q = bonePt(T, sex, mats, 'head', o); q.y += dy; const [x, y] = pr2(q); g.beginPath(); g.arc(x, y, w / 34, 0, 2 * PI); g.fillStyle = 'rgba(14,106,100,0.28)'; g.fill(); g.lineWidth = Math.max(2, w / 200); g.strokeStyle = '#0E6A64'; g.stroke(); });

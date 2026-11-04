@@ -2,13 +2,13 @@
 
 **Live:** https://reedhguide.onrender.com (Render) · https://harshit7922.github.io/spine-pain-guide/ (GitHub Pages) — open it on a phone and tap **Install app** to add it to the home screen (works offline).
 
-A self-assessment tool for spine and joint pain (now including the shoulder) in English and Hindi. It asks where it hurts, how it started and how it behaves, runs a few safe bedside tests, checks warning signs, then shows the likely causes, how urgent it is, which specialist to see, realistic 3D pictures of the spine and nerves involved, and a PDF report for the doctor.
+A self-assessment tool for spine and joint pain (now including the shoulder and knee) in English and Hindi. It asks where it hurts, how it started and how it behaves, runs a few safe bedside tests, checks warning signs, then shows the likely causes, how urgent it is, which specialist to see, realistic 3D pictures of the spine and nerves involved, and a PDF report for the doctor.
 
 **It is decision support, not a diagnosis. Every result tells the person to see a doctor.**
 
 ### Made to be easy for everyone
 - **Pick by picture:** the start page shows one card per body part, each with a 3D body and the area coloured.
-- **Tap a word to understand it:** 31 medical words (disc, nerve root, sciatica, cauda equina, saddle area, facet joint, scapula, brachial plexus and more) have a dotted underline. Tapping one opens a realistic 3D picture and a plain meaning in English or Hindi, with its source. The words live in `data/glossary.js`.
+- **Tap a word to understand it:** 36 medical words (disc, nerve root, sciatica, cauda equina, saddle area, facet joint, scapula, brachial plexus and more) have a dotted underline. Tapping one opens a realistic 3D picture and a plain meaning in English or Hindi, with its source. The words live in `data/glossary.js`.
 - **Listen / सुनें:** reads the question, the answer choices or the result summary aloud using the phone's own voice (Hindi or English). Nothing is sent anywhere.
 - **A+ (larger text)** in the top bar, remembered on the device.
 - **"In short" box** at the top of every result: best match, how urgent, and which doctor to see first.
@@ -44,6 +44,10 @@ On first open it asks for the language (English / हिंदी). The choice i
 
 <img src="docs/images/shoulder-tests.png" width="760">
 
+**Knee self-tests** (squat, joint-line press, straightening the knee):
+
+<img src="docs/images/knee-tests.png" width="640">
+
 **Body-area questions with reference pictures** (Hindi, phone) and the **"when did it start" timeline**:
 
 <img src="docs/images/question-pictures.png" width="760">
@@ -77,10 +81,11 @@ Sample PDF reports (made from test answers, not real patients): [lower back](doc
 | Upper or mid back, ribs or chest wall | `data/thoracic.js` | 13 | heart attack, aortic dissection, lung clot, trauma, cord |
 | More than one part / whole spine | `data/whole.js` | 10 | cauda equina, cord, heart attack, trauma |
 | Shoulder | `data/shoulder.js` | 10 | infected joint, dislocation or fracture, heart attack |
+| Knee | `data/knee.js` | 12 | hot swollen joint, fracture (Ottawa rule), blood clot in the calf |
 
 ## Evidence tables
 
-Each region has a plain-language evidence table listing every number the app shows, the likelihood ratios behind the scoring points and the sources: [lower back](research/lumbar-evidence.md) · [neck and arm](research/cervical-evidence.md) · [shoulder](research/shoulder-evidence.md). The order of work is in [research/ROADMAP.md](research/ROADMAP.md).
+Each region has a plain-language evidence table listing every number the app shows, the likelihood ratios behind the scoring points and the sources: [lower back](research/lumbar-evidence.md) · [neck and arm](research/cervical-evidence.md) · [shoulder](research/shoulder-evidence.md) · [knee](research/knee-evidence.md). The order of work is in [research/ROADMAP.md](research/ROADMAP.md).
 
 ## Where the research lives (and how the calculation reads it)
 
@@ -99,7 +104,7 @@ How a result is calculated:
 ### To change or add research
 1. Edit the data file (for example change a weight in `data/cervical.js`). Keep English and Hindi together: `L('English', 'हिंदी')`.
 2. Reload `index.html` — the site uses the new numbers immediately.
-3. Run the checks: `node tests/run_scenarios.js` (69 clinical scenarios must still pass).
+3. Run the checks: `node tests/run_scenarios.js` (83 clinical scenarios must still pass).
 4. Refresh the readable copies: `node tools/export_kb.js` then `python3 tools/build_xlsx.py`.
 5. Rebuild the single-file version: `python3 tools/bundle.py` → `dist/spine-pain-guide.html`. This one file contains everything (use it for hosting or to send to someone); the hosted link is published from it.
 
@@ -121,7 +126,7 @@ js/app.js             engine, screens, 3D viewer, PDF report
 research/             spine-knowledge-base.json / .xlsx (all modules, EN + HI); personal case files stay out of git
 dist/                 spine-pain-guide.html — the whole site in one file; web/index.html — same file, ready to host (see HOSTING.md)
 tools/                export_kb.js, build_xlsx.py (rebuild the research copies), bundle.py (single-file version)
-tests/                run_scenarios.js + cases/ (69 scenarios: shoulder, lumbar, cervical, thoracic + whole, history, lumbar evidence)
+tests/                run_scenarios.js + cases/ (83 scenarios: knee, shoulder, lumbar, cervical, thoracic + whole, history, lumbar evidence)
 3d-build/             Python scripts that generate the 3D bodies, bones and nerves (build.sh)
 ```
 

@@ -23,6 +23,7 @@
       "data/thoracic.js",
       "data/whole.js",
       "data/shoulder.js",
+      "data/knee.js",
       "data/glossary.js",
       "data/rig3d.js"
     ]
@@ -303,6 +304,71 @@
         "key": "pmr2012",
         "title": "Dasgupta B et al. 2012 provisional classification criteria for polymyalgia rheumatica (EULAR/ACR): age 50+, both shoulders, raised CRP/ESR; score 4+ sensitivity 68%, specificity 78%",
         "url": "https://scholars.aku.edu/en/publications/2012-provisional-classification-criteria-for-polymyalgia-rheumati-2/"
+      },
+      {
+        "key": "altman86",
+        "title": "Altman R et al. Classification criteria for osteoarthritis of the knee (American College of Rheumatology). Arthritis Rheum 1986;29:1039–49: knee pain + 3 of 6 clinical items, sensitivity 95%, specificity 69%; 4 of 6: 84% / 89%",
+        "url": "https://physiotutors.com/?p=11991"
+      },
+      {
+        "key": "niceoa",
+        "title": "NICE NG226 (2022) Osteoarthritis in over 16s: diagnose clinically at 45+ with activity-related joint pain and no or under 30 minutes of morning stiffness; exercise and weight loss first",
+        "url": "https://bestpractice-bmj-com.bibliotheek.ehb.be/topics/en-gb/192/nice-summary"
+      },
+      {
+        "key": "indiaoa",
+        "title": "Ministry of Health and Family Welfare, India. Standard treatment guidelines: osteoarthritis knee (2017), citing Pal 2016: knee osteoarthritis in 28.7% of adults studied",
+        "url": "https://qps.nhsrcindia.org/sites/default/files/2021-05/Osteoarthritis%20Knee.pdf"
+      },
+      {
+        "key": "ottawa",
+        "title": "Ottawa knee rule; Bachmann LM et al. Ann Intern Med 2004;140:121–4 (sensitivity 98.5% for fracture)",
+        "url": "https://wikem.org/wiki/Ottawa_knee_rules"
+      },
+      {
+        "key": "wagacl",
+        "title": "Wagemakers HP et al. History taking and physical examination for ACL lesions in primary care. Arch Phys Med Rehabil 2010;91:1452–9 (popping LR+ 2.3; 2 of 3 of popping, swelling, giving way LR+ 2.5)",
+        "url": "https://repub.eur.nl/pub/20762"
+      },
+      {
+        "key": "wagmen",
+        "title": "Wagemakers HP et al. History taking and physical examination for meniscal tears in general practice. Clin J Sport Med 2008;18:24–30 (age over 40 LR+ up to 2.0)",
+        "url": "https://repub.eur.nl/pub/15186"
+      },
+      {
+        "key": "hegedus",
+        "title": "Hegedus EJ et al. Physical examination tests for a torn meniscus: systematic review and meta-analysis. JOSPT 2007;37:541–50 (joint line tenderness sensitivity 63%, specificity 77%)",
+        "url": "https://scholars.duke.edu/publication/743030"
+      },
+      {
+        "key": "smithpfp",
+        "title": "Smith BE et al. Incidence and prevalence of patellofemoral pain: systematic review and meta-analysis. PLoS One 2018 (annual prevalence 22.7%; adolescents 28.9%)",
+        "url": "https://ideas.repec.org/a/plo/pone00/0190892.html"
+      },
+      {
+        "key": "nunes",
+        "title": "Nunes GS et al. Clinical tests for patellofemoral pain: systematic review with meta-analysis. Phys Ther Sport 2013;14:54–9 (squatting among the more useful tests)",
+        "url": "https://myorthoevidence.com/AceReport/Report/5252"
+      },
+      {
+        "key": "osgood",
+        "title": "StatPearls – Osgood-Schlatter disease (prevalence 9.8% at age 12–15; both knees in 20–30%; settles within about 2 years)",
+        "url": "https://www.statpearls.com/point-of-care/26359"
+      },
+      {
+        "key": "scfe",
+        "title": "StatPearls – Slipped capital femoral epiphysis (knee pain is the presenting complaint in 26%)",
+        "url": "https://www.statpearls.com/point-of-care/29145"
+      },
+      {
+        "key": "hotjoint",
+        "title": "Weston V, Coakley G. Guideline for the management of the hot swollen joint in adults (BSR). J Antimicrob Chemother 2006;58:492–3 (treat as septic until proven otherwise; mortality up to 11%)",
+        "url": "https://academic.oup.com/jac/article/58/3/492/748748"
+      },
+      {
+        "key": "nicedvt",
+        "title": "NICE QS201 / NG158 – suspected deep vein thrombosis: leg vein ultrasound within 4 hours",
+        "url": "https://www.nice.org.uk/guidance/qs201/chapter/quality-statement-3-proximal-leg-vein-ultrasound-scan-for-a-likely-deep-vein-thrombosis-wells"
       },
       {
         "key": "statdh",
@@ -952,6 +1018,134 @@
         "picture": "pose"
       },
       {
+        "id": "meniscus",
+        "terms": {
+          "en": [
+            "meniscus",
+            "menisci"
+          ],
+          "hi": [
+            "मेनिस्कस"
+          ]
+        },
+        "title": {
+          "en": "Meniscus (knee cartilage cushion)",
+          "hi": "मेनिस्कस (घुटने की गद्दी)"
+        },
+        "plain": {
+          "en": "Two C-shaped rubbery cushions inside the knee, one on the inner side and one on the outer side, between the thigh bone and the shin bone. A torn meniscus hurts on the joint line (highlighted) and can make the knee catch or lock.",
+          "hi": "घुटने के अंदर दो C आकार की रबर जैसी गद्दियाँ, एक अंदर की तरफ़ और एक बाहर की तरफ़, जांघ और पिंडली की हड्डी के बीच। फटा मेनिस्कस जोड़ की लाइन (रंगीन) पर दुखता है और घुटने को अटका या फंसा सकता है।"
+        },
+        "sources": [
+          "hegedus",
+          "wagmen"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "acl",
+        "terms": {
+          "en": [
+            "anterior cruciate",
+            "cruciate",
+            "ACL"
+          ],
+          "hi": [
+            "क्रूसिएट",
+            "ACL"
+          ]
+        },
+        "title": {
+          "en": "ACL (anterior cruciate ligament)",
+          "hi": "ACL (एंटीरियर क्रूसिएट लिगामेंट)"
+        },
+        "plain": {
+          "en": "A strong band in the middle of the knee joint, joining the thigh bone (highlighted) to the shin bone, that stops the shin sliding forward and the knee twisting. It tears with sudden pivoting or landing.",
+          "hi": "घुटने के जोड़ के बीच में एक मज़बूत पट्टी, जो जांघ की हड्डी (चमकती) को पिंडली की हड्डी से जोड़ती है और पिंडली को आगे खिसकने और घुटने को मुड़ने से रोकती है। अचानक घूमने या उतरने पर फटती है।"
+        },
+        "sources": [
+          "wagacl"
+        ],
+        "picture": "bone"
+      },
+      {
+        "id": "pfpain",
+        "terms": {
+          "en": [
+            "patellofemoral",
+            "kneecap"
+          ],
+          "hi": [
+            "पटेलोफ़ेमोरल",
+            "कटोरी"
+          ]
+        },
+        "title": {
+          "en": "Kneecap (patellofemoral) joint",
+          "hi": "कटोरी (पटेलोफ़ेमोरल) जोड़"
+        },
+        "plain": {
+          "en": "The joint between the back of the kneecap and the groove in the thigh bone. It carries high loads on stairs, squatting and kneeling, so overload causes pain around or behind the kneecap (highlighted).",
+          "hi": "कटोरी के पिछले हिस्से और जांघ की हड्डी के खांचे के बीच का जोड़। सीढ़ी, उकड़ू बैठने और घुटनों के बल बैठने पर इस पर बहुत भार पड़ता है, इसलिए ज़्यादा भार से कटोरी के आसपास या पीछे (रंगीन) दर्द होता है।"
+        },
+        "sources": [
+          "smithpfp"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "bakercyst",
+        "terms": {
+          "en": [
+            "Baker’s cyst",
+            "Baker's cyst",
+            "popliteal"
+          ],
+          "hi": [
+            "बेकर सिस्ट"
+          ]
+        },
+        "title": {
+          "en": "Baker’s cyst",
+          "hi": "बेकर सिस्ट"
+        },
+        "plain": {
+          "en": "A fluid-filled swelling in the hollow behind the knee (highlighted), fed by extra joint fluid from arthritis or a meniscus tear. If it bursts, the calf swells and can look like a blood clot, so a swollen calf always needs a scan.",
+          "hi": "घुटने के पीछे के गड्ढे (रंगीन) में तरल से भरी सूजन, जो गठिया या मेनिस्कस फटन से बने ज़्यादा तरल से बनती है। फटने पर पिंडली सूज जाती है और खून के थक्के जैसी लग सकती है, इसलिए सूजी पिंडली का स्कैन हमेशा ज़रूरी।"
+        },
+        "sources": [
+          "nicedvt"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "dvt",
+        "terms": {
+          "en": [
+            "DVT",
+            "deep vein thrombosis",
+            "blood clot"
+          ],
+          "hi": [
+            "DVT",
+            "खून का थक्का",
+            "खून के थक्के"
+          ]
+        },
+        "title": {
+          "en": "DVT (blood clot in a deep leg vein)",
+          "hi": "DVT (पैर की गहरी नस में खून का थक्का)"
+        },
+        "plain": {
+          "en": "A clot in a deep vein, usually in the calf (highlighted), after long travel, surgery, a plaster or bed rest. The calf becomes swollen, warm and tender. It needs a scan within hours, because the clot can travel to the lungs.",
+          "hi": "गहरी नस में थक्का, आमतौर पर पिंडली (रंगीन) में, लंबी यात्रा, सर्जरी, प्लास्टर या बिस्तर पर आराम के बाद। पिंडली सूजी, गर्म और दर्द वाली हो जाती है। कुछ घंटों में स्कैन ज़रूरी, क्योंकि थक्का फेफड़ों तक जा सकता है।"
+        },
+        "sources": [
+          "nicedvt"
+        ],
+        "picture": "skin"
+      },
+      {
         "id": "cervical",
         "terms": {
           "en": [
@@ -1399,6 +1593,28 @@
           "hi": "पूरे शरीर के कारण: विटामिन D, थायरॉइड, इन्फेक्शन, ब्लड टेस्ट।"
         },
         "q": "internal medicine physician"
+      },
+      "sports": {
+        "n": {
+          "en": "Sports medicine / Arthroscopy (knee surgeon)",
+          "hi": "स्पोर्ट्स मेडिसिन / आर्थ्रोस्कोपी (घुटने के सर्जन)"
+        },
+        "s": {
+          "en": "Ligament and meniscus injuries, and sports-related joint problems.",
+          "hi": "लिगामेंट और मेनिस्कस की चोटें, और खेल से जुड़ी जोड़ों की समस्याएं।"
+        },
+        "q": "sports medicine knee arthroscopy surgeon"
+      },
+      "paeds": {
+        "n": {
+          "en": "Paediatric orthopaedics",
+          "hi": "बाल हड्डी रोग (पीडियाट्रिक ऑर्थोपेडिक्स)"
+        },
+        "s": {
+          "en": "Bone and joint problems in children and teenagers.",
+          "hi": "बच्चों और किशोरों में हड्डी और जोड़ों की समस्याएं।"
+        },
+        "q": "pediatric orthopedic"
       }
     },
     "statistics": [
@@ -19490,6 +19706,3191 @@
         "arm_weak": {
           "en": "Cannot reach up or dress",
           "hi": "ऊपर हाथ नहीं जाता या कपड़े नहीं पहन पाते"
+        }
+      }
+    },
+    {
+      "id": "knee",
+      "order": 6,
+      "title": {
+        "en": "Knee pain assessment",
+        "hi": "घुटने के दर्द की जांच रिपोर्ट"
+      },
+      "tag": null,
+      "sourcesAddedByModule": [
+        "altman86",
+        "niceoa",
+        "indiaoa",
+        "ottawa",
+        "wagacl",
+        "wagmen",
+        "hegedus",
+        "smithpfp",
+        "nunes",
+        "osgood",
+        "scfe",
+        "hotjoint",
+        "nicedvt"
+      ],
+      "conditions": [
+        {
+          "id": "koa",
+          "name": {
+            "en": "Knee osteoarthritis (wear of the knee joint)",
+            "hi": "घुटने का ऑस्टियोआर्थराइटिस (घुटने के जोड़ की घिसावट)"
+          },
+          "scientific": "Knee osteoarthritis",
+          "what": {
+            "en": "The cartilage that cushions the knee wears thin and the bone underneath reacts, forming small spurs. The knee aches with walking, stairs and squatting, stiffens briefly in the morning or after sitting, grinds and may look knobbly. The inner side is affected most often.",
+            "hi": "घुटने को गद्दी देने वाली कार्टिलेज पतली हो जाती है और नीचे की हड्डी प्रतिक्रिया में छोटे उभार बनाती है। चलने, सीढ़ी और उकड़ू बैठने पर दर्द होता है, सुबह या बैठने के बाद थोड़ी देर जकड़न रहती है, किरकिराहट होती है और घुटना गांठदार दिख सकता है। सबसे ज़्यादा अंदरूनी हिस्सा प्रभावित होता है।"
+          },
+          "causes": {
+            "en": "Age, extra body weight, previous knee injury or meniscus surgery, heavy kneeling and squatting work, and family history. In an Indian community study, 28.7% of adults studied had knee osteoarthritis.",
+            "hi": "उम्र, ज़्यादा वज़न, घुटने की पुरानी चोट या मेनिस्कस की सर्जरी, भारी घुटनों के बल और उकड़ू काम, और पारिवारिक इतिहास। एक भारतीय सामुदायिक अध्ययन में 28.7% वयस्कों को घुटने का ऑस्टियोआर्थराइटिस था।"
+          },
+          "confirm": {
+            "en": "Doctors can diagnose it from the history and examination without scans at age 45 or over with activity-related pain and morning stiffness under 30 minutes. Knee pain with 3 of 6 features (age over 50, short morning stiffness, grinding, bony tenderness, bony enlargement, no warmth) picks up 95% of cases. An X-ray is used if the picture is unusual.",
+            "hi": "45 या ज़्यादा उम्र में गतिविधि से होने वाले दर्द और 30 मिनट से कम सुबह की जकड़न में डॉक्टर बिना स्कैन के, सिर्फ़ इतिहास और जांच से पहचान सकते हैं। 6 में से 3 लक्षण (50 से ज़्यादा उम्र, सुबह थोड़ी जकड़न, किरकिराहट, हड्डी पर दबाने से दर्द, हड्डी का बढ़ना, गर्मी न होना) 95% मामले पकड़ते हैं। तस्वीर असामान्य हो तो एक्स-रे।"
+          },
+          "treat": {
+            "en": "Exercise tailored to you (thigh and hip strengthening) and, if overweight, weight loss — losing 10% of body weight is better than 5%. A topical anti-inflammatory gel is the first medicine. NICE does not recommend routine paracetamol, glucosamine, hyaluronic acid injections or arthroscopic washout. Joint replacement is considered when symptoms seriously affect life despite this.",
+            "hi": "आपके हिसाब से व्यायाम (जांघ और कूल्हे को मज़बूत करना) और ज़्यादा वज़न हो तो वज़न कम करना — शरीर का 10% वज़न घटाना 5% से बेहतर है। पहली दवा लगाने वाला सूजन-रोधी जेल। NICE नियमित पैरासिटामोल, ग्लूकोसामाइन, हयालूरोनिक एसिड इंजेक्शन या आर्थ्रोस्कोपिक धुलाई की सलाह नहीं देता। इन सबके बाद भी लक्षण जीवन पर बहुत असर डालें तो जोड़ बदलवाने पर विचार।"
+          },
+          "outlook": {
+            "en": "It usually changes slowly over years, with good and bad spells; exercise and weight loss reduce pain and improve function.",
+            "hi": "आमतौर पर सालों में धीरे-धीरे बदलता है, अच्छे और बुरे दौर के साथ; व्यायाम और वज़न घटाने से दर्द कम होता है और काम करने की क्षमता बढ़ती है।"
+          },
+          "thresholds": [
+            10,
+            7,
+            4
+          ],
+          "anchors": [
+            "acr3",
+            "nice_oa"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "physio"
+          ],
+          "outlookSource": [
+            "niceoa"
+          ],
+          "weights": [
+            {
+              "feature": "acr3",
+              "label": {
+                "en": "3 or more of the 6 osteoarthritis features",
+                "hi": "ऑस्टियोआर्थराइटिस के 6 में से 3 या ज़्यादा लक्षण"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "acr4",
+              "label": {
+                "en": "4 or more of the 6 osteoarthritis features",
+                "hi": "ऑस्टियोआर्थराइटिस के 6 में से 4 या ज़्यादा लक्षण"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "acr_lt3",
+              "label": {
+                "en": "Fewer than 3 of the 6 osteoarthritis features",
+                "hi": "ऑस्टियोआर्थराइटिस के 6 में से 3 से कम लक्षण"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "nice_oa",
+              "label": {
+                "en": "Age 40+, pain with activity, little morning stiffness",
+                "hi": "40+ उम्र, गतिविधि से दर्द, सुबह कम जकड़न"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "knee_in",
+              "label": {
+                "en": "Inner side of the knee",
+                "hi": "घुटने का अंदरूनी हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "knee_front",
+              "label": {
+                "en": "Front of the knee, around or behind the kneecap",
+                "hi": "घुटने का अगला हिस्सा, कटोरी के आसपास या पीछे"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_crepitus",
+              "label": {
+                "en": "Grinding or crackling when the knee bends",
+                "hi": "घुटना मोड़ने पर किरकिराहट या कड़कड़ाहट"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_bony",
+              "label": {
+                "en": "The knee looks knobbly or bigger than before (bony swelling)",
+                "hi": "घुटना पहले से गांठदार या बड़ा दिखता है (हड्डी की सूजन)"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_stairs",
+              "label": {
+                "en": "Stairs, especially coming down",
+                "hi": "सीढ़ियाँ, खासकर उतरते समय"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "w_squat",
+              "label": {
+                "en": "Squatting, kneeling or sitting cross-legged on the floor",
+                "hi": "उकड़ू बैठना, घुटनों के बल बैठना या ज़मीन पर पालथी मारकर बैठना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "w_walk_long",
+              "label": {
+                "en": "Walking or standing for long",
+                "hi": "देर तक चलना या खड़े रहना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "o_overweight",
+              "label": {
+                "en": "Overweight, or gained weight recently",
+                "hi": "ज़्यादा वज़न, या हाल में वज़न बढ़ा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "r_heavy",
+              "label": {
+                "en": "Heavy physical work",
+                "hi": "भारी शारीरिक काम"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_kneel",
+              "label": {
+                "en": "A lot of kneeling, squatting or floor work",
+                "hi": "बहुत ज़्यादा घुटनों के बल बैठना, उकड़ू बैठना या ज़मीन पर काम"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "h_1_5y",
+              "label": {
+                "en": "First had this pain 1 to 5 years ago",
+                "hi": "पहली बार यह दर्द 1 से 5 साल पहले हुआ"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "h_5y",
+              "label": {
+                "en": "First had this pain more than 5 years ago",
+                "hi": "पहली बार यह दर्द 5 साल से भी पहले हुआ"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ext_lim",
+              "label": {
+                "en": "Can the knee straighten fully?: positive",
+                "hi": "क्या घुटना पूरा सीधा होता है?: पॉज़िटिव"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "jlt_pos",
+              "label": {
+                "en": "Press along the joint line: positive",
+                "hi": "जोड़ की लाइन पर दबाना: पॉज़िटिव"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -4
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_stiff_long",
+              "label": {
+                "en": "Stiff in the morning for more than 30 minutes",
+                "hi": "सुबह 30 मिनट से ज़्यादा जकड़न"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_swell_fast",
+              "label": {
+                "en": "The knee swelled up quickly, within about 2 hours of an injury",
+                "hi": "चोट के लगभग 2 घंटे के अंदर घुटना तेज़ी से सूज गया"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_pop",
+              "label": {
+                "en": "Felt or heard a pop at the moment of injury",
+                "hi": "चोट के समय पॉप जैसी आवाज़ या एहसास"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "o_other_joints",
+              "label": {
+                "en": "Other joints also swollen or painful (hands, wrists, feet)",
+                "hi": "दूसरे जोड़ भी सूजे या दर्द वाले (हाथ, कलाई, पैर)"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "pfp",
+          "name": {
+            "en": "Kneecap pain (patellofemoral pain)",
+            "hi": "घुटने की कटोरी का दर्द (पटेलोफ़ेमोरल दर्द)"
+          },
+          "scientific": "Patellofemoral pain",
+          "what": {
+            "en": "Pain around or behind the kneecap from overload of the joint between the kneecap and the thigh bone. It is brought on by stairs, squatting, kneeling, running and sitting for long with the knees bent.",
+            "hi": "कटोरी और जांघ की हड्डी के बीच के जोड़ पर ज़्यादा भार से कटोरी के आसपास या पीछे दर्द। सीढ़ी, उकड़ू बैठना, घुटनों के बल बैठना, दौड़ना और घुटने मोड़कर देर तक बैठना इसे बढ़ाते हैं।"
+          },
+          "causes": {
+            "en": "A sudden increase in running, jumping or stairs, weak hip and thigh muscles, and growth spurts. It is very common: about 23% of people a year, and 29% of teenagers.",
+            "hi": "अचानक ज़्यादा दौड़ना, कूदना या सीढ़ियाँ, कूल्हे और जांघ की कमज़ोर मांसपेशियाँ, और तेज़ बढ़त का दौर। यह बहुत आम है: हर साल लगभग 23% लोगों में, और 29% किशोरों में।"
+          },
+          "confirm": {
+            "en": "Examination; scans are not needed in a typical case.",
+            "hi": "जांच; सामान्य मामले में स्कैन ज़रूरी नहीं।"
+          },
+          "treat": {
+            "en": "Hip and thigh strengthening exercises with a physiotherapist, adjusting running and stair loads; taping or foot orthoses can help in the short term.",
+            "hi": "फिज़ियोथेरेपिस्ट के साथ कूल्हे और जांघ को मज़बूत करने के व्यायाम, दौड़ने और सीढ़ियों का भार ठीक करना; थोड़े समय के लिए टेपिंग या जूते के इनसोल मदद कर सकते हैं।"
+          },
+          "outlook": {
+            "en": "Most improve with exercise, though it can come back with sudden increases in activity.",
+            "hi": "ज़्यादातर व्यायाम से सुधरते हैं, हालांकि गतिविधि अचानक बढ़ाने पर लौट सकता है।"
+          },
+          "thresholds": [
+            10,
+            7,
+            4
+          ],
+          "anchors": [
+            "knee_front",
+            "squat_pos"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "physio",
+            "ortho"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "knee_front",
+              "label": {
+                "en": "Front of the knee, around or behind the kneecap",
+                "hi": "घुटने का अगला हिस्सा, कटोरी के आसपास या पीछे"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "w_stairs",
+              "label": {
+                "en": "Stairs, especially coming down",
+                "hi": "सीढ़ियाँ, खासकर उतरते समय"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_squat",
+              "label": {
+                "en": "Squatting, kneeling or sitting cross-legged on the floor",
+                "hi": "उकड़ू बैठना, घुटनों के बल बैठना या ज़मीन पर पालथी मारकर बैठना"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_sit_long",
+              "label": {
+                "en": "Sitting for long with the knee bent (cinema, travel)",
+                "hi": "घुटना मोड़कर देर तक बैठना (सिनेमा, यात्रा)"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "squat_pos",
+              "label": {
+                "en": "Squat test (hold on to something): positive",
+                "hi": "उकड़ू बैठने का टेस्ट (कुछ पकड़कर): पॉज़िटिव"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "squat_neg",
+              "label": {
+                "en": "Squat test (hold on to something): negative",
+                "hi": "उकड़ू बैठने का टेस्ट (कुछ पकड़कर): नेगेटिव"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "w_run",
+              "label": {
+                "en": "Running or jumping",
+                "hi": "दौड़ना या कूदना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_jump",
+              "label": {
+                "en": "More running, jumping, stairs or sport than usual",
+                "hi": "सामान्य से ज़्यादा दौड़ना, कूदना, सीढ़ियाँ या खेल"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_bony",
+              "label": {
+                "en": "The knee looks knobbly or bigger than before (bony swelling)",
+                "hi": "घुटना पहले से गांठदार या बड़ा दिखता है (हड्डी की सूजन)"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_lock",
+              "label": {
+                "en": "The knee catches, clicks painfully or gets stuck",
+                "hi": "घुटना अटकता है, दर्द के साथ क्लिक करता है या फंस जाता है"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_swell_fast",
+              "label": {
+                "en": "The knee swelled up quickly, within about 2 hours of an injury",
+                "hi": "चोट के लगभग 2 घंटे के अंदर घुटना तेज़ी से सूज गया"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "knee_in",
+              "label": {
+                "en": "Inner side of the knee",
+                "hi": "घुटने का अंदरूनी हिस्सा"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "knee_back",
+              "label": {
+                "en": "Back of the knee",
+                "hi": "घुटने का पिछला हिस्सा"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "acr3",
+              "label": {
+                "en": "3 or more of the 6 osteoarthritis features",
+                "hi": "ऑस्टियोआर्थराइटिस के 6 में से 3 या ज़्यादा लक्षण"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "menisc",
+          "name": {
+            "en": "Meniscus tear (torn knee cartilage)",
+            "hi": "मेनिस्कस फटना (घुटने की गद्दी फटना)"
+          },
+          "scientific": "Meniscal tear",
+          "what": {
+            "en": "The menisci are two C-shaped rubbery cushions between the thigh bone and the shin bone. A tear causes pain on the inner or outer joint line, swelling that builds up over a day, and catching or locking. In older people, small tears are often part of wear and tear.",
+            "hi": "मेनिस्कस जांघ और पिंडली की हड्डी के बीच दो C आकार की रबर जैसी गद्दियाँ हैं। फटने पर जोड़ की अंदरूनी या बाहरी लाइन पर दर्द, एक दिन में धीरे-धीरे आने वाली सूजन, और अटकना या फंसना होता है। बड़ी उम्र में छोटी फटन अक्सर घिसावट का हिस्सा होती है।"
+          },
+          "causes": {
+            "en": "Twisting on a bent, weight-bearing knee (sport, slipping, getting up from squatting). Age over 40 and weight-bearing during the injury make a tear more likely.",
+            "hi": "मुड़े हुए, वज़न उठाते घुटने पर मुड़ना (खेल, फिसलना, उकड़ू बैठकर उठना)। 40 से ज़्यादा उम्र और चोट के समय पैर पर वज़न होना फटन की संभावना बढ़ाते हैं।"
+          },
+          "confirm": {
+            "en": "Examination and an MRI scan if it will change treatment. History is more useful than single bedside tests.",
+            "hi": "जांच, और अगर इलाज बदलेगा तो MRI स्कैन। अकेले बेडसाइड टेस्ट से ज़्यादा उपयोगी मरीज़ का इतिहास है।"
+          },
+          "treat": {
+            "en": "Exercise therapy first for most tears, especially wear-related ones; keyhole surgery for a locked knee or a large tear in a young person.",
+            "hi": "ज़्यादातर फटन में, खासकर घिसावट वाली में, पहले व्यायाम थेरेपी; फंसे घुटने या युवा व्यक्ति में बड़ी फटन में की-होल सर्जरी।"
+          },
+          "outlook": {
+            "en": "Many settle with exercise over a few months; a knee that keeps locking needs a surgeon’s opinion.",
+            "hi": "कई कुछ महीनों में व्यायाम से ठीक होते हैं; बार-बार फंसने वाले घुटने के लिए सर्जन की राय ज़रूरी।"
+          },
+          "thresholds": [
+            10,
+            7,
+            4
+          ],
+          "anchors": [
+            "ch_lock",
+            "jlt_pos",
+            "on_twist"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "sports",
+            "physio"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "on_twist",
+              "label": {
+                "en": "Twisting or turning on a planted foot (sport, slipping)",
+                "hi": "ज़मीन पर टिके पैर पर मुड़ना या घूमना (खेल, फिसलना)"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "ch_lock",
+              "label": {
+                "en": "The knee catches, clicks painfully or gets stuck",
+                "hi": "घुटना अटकता है, दर्द के साथ क्लिक करता है या फंस जाता है"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "jlt_pos",
+              "label": {
+                "en": "Press along the joint line: positive",
+                "hi": "जोड़ की लाइन पर दबाना: पॉज़िटिव"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "jlt_neg",
+              "label": {
+                "en": "Press along the joint line: negative",
+                "hi": "जोड़ की लाइन पर दबाना: नेगेटिव"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "knee_in",
+              "label": {
+                "en": "Inner side of the knee",
+                "hi": "घुटने का अंदरूनी हिस्सा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "knee_out",
+              "label": {
+                "en": "Outer side of the knee",
+                "hi": "घुटने का बाहरी हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_swell_slow",
+              "label": {
+                "en": "Swelling that came on slowly or the next day",
+                "hi": "धीरे-धीरे या अगले दिन आई सूजन"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_twist",
+              "label": {
+                "en": "Twisting or turning on the leg",
+                "hi": "पैर पर मुड़ना या घूमना"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_squat",
+              "label": {
+                "en": "Squatting, kneeling or sitting cross-legged on the floor",
+                "hi": "उकड़ू बैठना, घुटनों के बल बैठना या ज़मीन पर पालथी मारकर बैठना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ext_lim",
+              "label": {
+                "en": "Can the knee straighten fully?: positive",
+                "hi": "क्या घुटना पूरा सीधा होता है?: पॉज़िटिव"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "rf_locked",
+              "label": {
+                "en": "The knee is locked and will not straighten fully after an injury",
+                "hi": "चोट के बाद घुटना फंस गया है और पूरा सीधा नहीं होता"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_swell_fast",
+              "label": {
+                "en": "The knee swelled up quickly, within about 2 hours of an injury",
+                "hi": "चोट के लगभग 2 घंटे के अंदर घुटना तेज़ी से सूज गया"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "knee_front",
+              "label": {
+                "en": "Front of the knee, around or behind the kneecap",
+                "hi": "घुटने का अगला हिस्सा, कटोरी के आसपास या पीछे"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "w_sit_long",
+              "label": {
+                "en": "Sitting for long with the knee bent (cinema, travel)",
+                "hi": "घुटना मोड़कर देर तक बैठना (सिनेमा, यात्रा)"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "acl",
+          "name": {
+            "en": "Anterior cruciate ligament (ACL) injury",
+            "hi": "एंटीरियर क्रूसिएट लिगामेंट (ACL) की चोट"
+          },
+          "scientific": "Anterior cruciate ligament rupture",
+          "what": {
+            "en": "The ACL is a strong band in the centre of the knee that stops the shin bone sliding forward. It tears with a sudden twist or landing; people often feel a pop, the knee swells within hours and later feels unstable or gives way.",
+            "hi": "ACL घुटने के बीच में एक मज़बूत पट्टी है जो पिंडली की हड्डी को आगे खिसकने से रोकती है। अचानक मुड़ने या कूदकर उतरने से फटती है; अक्सर पॉप महसूस होता है, घुटना कुछ घंटों में सूज जाता है और बाद में अस्थिर लगता या जवाब दे देता है।"
+          },
+          "causes": {
+            "en": "Pivoting sports (football, kabaddi, basketball, badminton), awkward landings and road accidents.",
+            "hi": "मुड़ने वाले खेल (फुटबॉल, कबड्डी, बास्केटबॉल, बैडमिंटन), गलत तरह उतरना और सड़क दुर्घटनाएं।"
+          },
+          "confirm": {
+            "en": "Examination by a doctor (Lachman and drawer tests) and an MRI scan. In primary care, a pop alone makes an ACL tear about 2.3 times more likely, and two of pop, quick swelling and giving way about 2.5 times.",
+            "hi": "डॉक्टर द्वारा जांच (लैकमैन और ड्रॉअर टेस्ट) और MRI स्कैन। प्राथमिक जांच में अकेला पॉप ACL फटने की संभावना लगभग 2.3 गुना, और पॉप, तेज़ सूजन और जवाब देने में से दो मिलकर लगभग 2.5 गुना करते हैं।"
+          },
+          "treat": {
+            "en": "Physiotherapy rehabilitation for everyone; reconstruction surgery for people who want to return to pivoting sport or whose knee keeps giving way.",
+            "hi": "सभी के लिए फिज़ियोथेरेपी पुनर्वास; मुड़ने वाले खेल में लौटना चाहें या घुटना बार-बार जवाब दे तो रीकंस्ट्रक्शन सर्जरी।"
+          },
+          "outlook": {
+            "en": "Early assessment matters because repeated giving way damages the meniscus and cartilage.",
+            "hi": "जल्दी जांच ज़रूरी है क्योंकि बार-बार जवाब देने से मेनिस्कस और कार्टिलेज खराब होते हैं।"
+          },
+          "thresholds": [
+            10,
+            7,
+            4
+          ],
+          "anchors": [
+            "ch_pop",
+            "ch_swell_fast",
+            "ch_giveway"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "sports",
+            "ortho",
+            "physio"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ch_pop",
+              "label": {
+                "en": "Felt or heard a pop at the moment of injury",
+                "hi": "चोट के समय पॉप जैसी आवाज़ या एहसास"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_swell_fast",
+              "label": {
+                "en": "The knee swelled up quickly, within about 2 hours of an injury",
+                "hi": "चोट के लगभग 2 घंटे के अंदर घुटना तेज़ी से सूज गया"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "ch_giveway",
+              "label": {
+                "en": "The knee gives way or buckles",
+                "hi": "घुटना जवाब दे देता है या मुड़ जाता है"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "acl2",
+              "label": {
+                "en": "Two of: pop, quick swelling, giving way",
+                "hi": "इनमें से दो: पॉप, तेज़ सूजन, जवाब देना"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_twist",
+              "label": {
+                "en": "Twisting or turning on a planted foot (sport, slipping)",
+                "hi": "ज़मीन पर टिके पैर पर मुड़ना या घूमना (खेल, फिसलना)"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "on_accident",
+              "label": {
+                "en": "Road accident",
+                "hi": "सड़क दुर्घटना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "w_twist",
+              "label": {
+                "en": "Twisting or turning on the leg",
+                "hi": "पैर पर मुड़ना या घूमना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ext_lim",
+              "label": {
+                "en": "Can the knee straighten fully?: positive",
+                "hi": "क्या घुटना पूरा सीधा होता है?: पॉज़िटिव"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "knee_front",
+              "label": {
+                "en": "Front of the knee, around or behind the kneecap",
+                "hi": "घुटने का अगला हिस्सा, कटोरी के आसपास या पीछे"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "osgood",
+          "name": {
+            "en": "Osgood-Schlatter disease (growing knee pain)",
+            "hi": "ऑसगुड-श्लैटर रोग (बढ़ती उम्र का घुटने का दर्द)"
+          },
+          "scientific": "Tibial tubercle apophysitis",
+          "what": {
+            "en": "In active children, the strong kneecap tendon pulls on the growth area of the shin bone just below the knee, causing a painful bump that hurts with running, jumping, kneeling and squatting.",
+            "hi": "सक्रिय बच्चों में घुटने के ठीक नीचे पिंडली की हड्डी के बढ़ने वाले हिस्से पर कटोरी का मज़बूत टेंडन खिंचाव डालता है, जिससे दर्द वाला उभार बनता है जो दौड़ने, कूदने, घुटनों के बल बैठने और उकड़ू बैठने पर दुखता है।"
+          },
+          "causes": {
+            "en": "Sport during a growth spurt: boys about 10–15, girls about 8–13. It affects 9.8% of 12–15 year olds, and both knees in 20–30%.",
+            "hi": "बढ़त के दौर में खेल: लड़के लगभग 10–15, लड़कियाँ लगभग 8–13। 12–15 साल के 9.8% बच्चों में होता है, और 20–30% में दोनों घुटनों में।"
+          },
+          "confirm": {
+            "en": "Examination; an X-ray only if the picture is unusual or there was an injury.",
+            "hi": "जांच; तस्वीर असामान्य हो या चोट लगी हो तभी एक्स-रे।"
+          },
+          "treat": {
+            "en": "Adjusting sport to pain, ice, a pad over the bump for kneeling, and thigh and hamstring stretching and strengthening; injections and surgery are not recommended.",
+            "hi": "दर्द के हिसाब से खेल कम-ज़्यादा करना, बर्फ़, घुटनों के बल बैठने के लिए उभार पर पैड, और जांघ व हैमस्ट्रिंग की स्ट्रेचिंग और मज़बूती; इंजेक्शन और सर्जरी की सलाह नहीं।"
+          },
+          "outlook": {
+            "en": "It settles when growth finishes, usually within about 2 years; a small bump may remain.",
+            "hi": "बढ़त पूरी होने पर ठीक हो जाता है, आमतौर पर लगभग 2 साल में; छोटा उभार रह सकता है।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "tibial_tub",
+            "ch_bump_below"
+          ],
+          "rare": false,
+          "onlyIf": {
+            "any": [
+              "a_u18",
+              "a_18_29"
+            ]
+          },
+          "departments": [
+            "paeds",
+            "physio",
+            "ortho"
+          ],
+          "outlookSource": [
+            "osgood"
+          ],
+          "weights": [
+            {
+              "feature": "tibial_tub",
+              "label": {
+                "en": "Bony bump just below the kneecap",
+                "hi": "कटोरी के ठीक नीचे की हड्डी का उभार"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "ch_bump_below",
+              "label": {
+                "en": "A painful bump just below the kneecap",
+                "hi": "घुटने की कटोरी के ठीक नीचे दर्द वाला उभार"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "w_run",
+              "label": {
+                "en": "Running or jumping",
+                "hi": "दौड़ना या कूदना"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_squat",
+              "label": {
+                "en": "Squatting, kneeling or sitting cross-legged on the floor",
+                "hi": "उकड़ू बैठना, घुटनों के बल बैठना या ज़मीन पर पालथी मारकर बैठना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_jump",
+              "label": {
+                "en": "More running, jumping, stairs or sport than usual",
+                "hi": "सामान्य से ज़्यादा दौड़ना, कूदना, सीढ़ियाँ या खेल"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sex_m",
+              "label": {
+                "en": "Male",
+                "hi": "पुरुष"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_swell_fast",
+              "label": {
+                "en": "The knee swelled up quickly, within about 2 hours of an injury",
+                "hi": "चोट के लगभग 2 घंटे के अंदर घुटना तेज़ी से सूज गया"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_lock",
+              "label": {
+                "en": "The knee catches, clicks painfully or gets stuck",
+                "hi": "घुटना अटकता है, दर्द के साथ क्लिक करता है या फंस जाता है"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "ptend",
+          "name": {
+            "en": "Kneecap tendon pain (jumper’s knee)",
+            "hi": "कटोरी के टेंडन का दर्द (जम्पर्स नी)"
+          },
+          "scientific": "Patellar tendinopathy",
+          "what": {
+            "en": "The tendon between the lower edge of the kneecap and the shin bone becomes painful from repeated jumping and landing. Pain is pinpointed just below the kneecap and comes on with loading.",
+            "hi": "कटोरी के निचले किनारे और पिंडली की हड्डी के बीच का टेंडन बार-बार कूदने और उतरने से दर्द करने लगता है। दर्द कटोरी के ठीक नीचे एक जगह होता है और भार पड़ने पर आता है।"
+          },
+          "causes": {
+            "en": "Volleyball, basketball, athletics, kabaddi and sudden training increases.",
+            "hi": "वॉलीबॉल, बास्केटबॉल, एथलेटिक्स, कबड्डी और अचानक बढ़ी ट्रेनिंग।"
+          },
+          "confirm": {
+            "en": "Examination; ultrasound if unclear.",
+            "hi": "जांच; साफ़ न हो तो अल्ट्रासाउंड।"
+          },
+          "treat": {
+            "en": "A graded tendon-loading exercise programme with a physiotherapist and adjusting jumping load.",
+            "hi": "फिज़ियोथेरेपिस्ट के साथ धीरे-धीरे बढ़ता टेंडन-लोडिंग व्यायाम कार्यक्रम और कूदने का भार ठीक करना।"
+          },
+          "outlook": {
+            "en": "Improves over months with loading exercise; rest alone rarely cures it.",
+            "hi": "लोडिंग व्यायाम से महीनों में सुधरता है; सिर्फ़ आराम से कम ही ठीक होता है।"
+          },
+          "thresholds": [
+            9,
+            6,
+            4
+          ],
+          "anchors": [
+            "on_jump",
+            "w_run"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "physio",
+            "sports"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "on_jump",
+              "label": {
+                "en": "More running, jumping, stairs or sport than usual",
+                "hi": "सामान्य से ज़्यादा दौड़ना, कूदना, सीढ़ियाँ या खेल"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "w_run",
+              "label": {
+                "en": "Running or jumping",
+                "hi": "दौड़ना या कूदना"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "knee_front",
+              "label": {
+                "en": "Front of the knee, around or behind the kneecap",
+                "hi": "घुटने का अगला हिस्सा, कटोरी के आसपास या पीछे"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "tibial_tub",
+              "label": {
+                "en": "Bony bump just below the kneecap",
+                "hi": "कटोरी के ठीक नीचे की हड्डी का उभार"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sex_m",
+              "label": {
+                "en": "Male",
+                "hi": "पुरुष"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_swell_fast",
+              "label": {
+                "en": "The knee swelled up quickly, within about 2 hours of an injury",
+                "hi": "चोट के लगभग 2 घंटे के अंदर घुटना तेज़ी से सूज गया"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_lock",
+              "label": {
+                "en": "The knee catches, clicks painfully or gets stuck",
+                "hi": "घुटना अटकता है, दर्द के साथ क्लिक करता है या फंस जाता है"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "acr3",
+              "label": {
+                "en": "3 or more of the 6 osteoarthritis features",
+                "hi": "ऑस्टियोआर्थराइटिस के 6 में से 3 या ज़्यादा लक्षण"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "itb",
+          "name": {
+            "en": "Iliotibial band syndrome (outer knee pain in runners)",
+            "hi": "इलियोटिबियल बैंड सिंड्रोम (धावकों में बाहरी घुटने का दर्द)"
+          },
+          "scientific": "Iliotibial band syndrome",
+          "what": {
+            "en": "The thick band running down the outside of the thigh rubs and irritates the tissue over the outer knee, causing sharp outer knee pain that starts after a set distance of running or cycling.",
+            "hi": "जांघ के बाहर से नीचे जाने वाली मोटी पट्टी बाहरी घुटने के ऊपर के ऊतक को रगड़कर परेशान करती है, जिससे दौड़ने या साइकिल चलाने की एक तय दूरी के बाद बाहरी घुटने में तेज़ दर्द शुरू होता है।"
+          },
+          "causes": {
+            "en": "A sudden increase in running or cycling, downhill running and weak hip muscles.",
+            "hi": "अचानक ज़्यादा दौड़ना या साइकिल चलाना, ढलान पर दौड़ना और कूल्हे की कमज़ोर मांसपेशियाँ।"
+          },
+          "confirm": {
+            "en": "Examination.",
+            "hi": "जांच।"
+          },
+          "treat": {
+            "en": "Reducing and then gradually rebuilding running load, and hip strengthening with a physiotherapist.",
+            "hi": "दौड़ना कम करके फिर धीरे-धीरे बढ़ाना, और फिज़ियोथेरेपिस्ट के साथ कूल्हे को मज़बूत करना।"
+          },
+          "outlook": {
+            "en": "Usually settles within weeks to a few months.",
+            "hi": "आमतौर पर कुछ हफ्तों से कुछ महीनों में ठीक।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "knee_out"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "physio",
+            "sports"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "knee_out",
+              "label": {
+                "en": "Outer side of the knee",
+                "hi": "घुटने का बाहरी हिस्सा"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "w_run",
+              "label": {
+                "en": "Running or jumping",
+                "hi": "दौड़ना या कूदना"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_jump",
+              "label": {
+                "en": "More running, jumping, stairs or sport than usual",
+                "hi": "सामान्य से ज़्यादा दौड़ना, कूदना, सीढ़ियाँ या खेल"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "knee_in",
+              "label": {
+                "en": "Inner side of the knee",
+                "hi": "घुटने का अंदरूनी हिस्सा"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_swell_fast",
+              "label": {
+                "en": "The knee swelled up quickly, within about 2 hours of an injury",
+                "hi": "चोट के लगभग 2 घंटे के अंदर घुटना तेज़ी से सूज गया"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_lock",
+              "label": {
+                "en": "The knee catches, clicks painfully or gets stuck",
+                "hi": "घुटना अटकता है, दर्द के साथ क्लिक करता है या फंस जाता है"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "acr3",
+              "label": {
+                "en": "3 or more of the 6 osteoarthritis features",
+                "hi": "ऑस्टियोआर्थराइटिस के 6 में से 3 या ज़्यादा लक्षण"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "bursa",
+          "name": {
+            "en": "Kneecap bursitis (housemaid’s knee)",
+            "hi": "कटोरी की बर्साइटिस (हाउसमेड्स नी)"
+          },
+          "scientific": "Prepatellar bursitis",
+          "what": {
+            "en": "A small fluid sac in front of the kneecap becomes inflamed from repeated kneeling, making a soft, sometimes warm swelling on the kneecap.",
+            "hi": "बार-बार घुटनों के बल बैठने से कटोरी के आगे की छोटी तरल थैली में सूजन आ जाती है, जिससे कटोरी पर नरम, कभी-कभी गर्म सूजन होती है।"
+          },
+          "causes": {
+            "en": "Kneeling for floor cleaning, prayer, tiling or plumbing; a blow to the kneecap. If it becomes hot and red with fever, it may be infected.",
+            "hi": "फ़र्श साफ़ करने, प्रार्थना, टाइल या प्लंबिंग के लिए घुटनों के बल बैठना; कटोरी पर चोट। अगर गर्म और लाल हो और बुखार हो तो इन्फेक्शन हो सकता है।"
+          },
+          "confirm": {
+            "en": "Examination; fluid may be drawn off to check for infection.",
+            "hi": "जांच; इन्फेक्शन जांचने के लिए तरल निकाला जा सकता है।"
+          },
+          "treat": {
+            "en": "Avoiding kneeling, a kneeling pad, ice; antibiotics if infected.",
+            "hi": "घुटनों के बल बैठने से बचना, घुटने का पैड, बर्फ़; इन्फेक्शन हो तो एंटीबायोटिक।"
+          },
+          "outlook": {
+            "en": "Usually settles in weeks once kneeling is reduced.",
+            "hi": "घुटनों के बल बैठना कम करने पर आमतौर पर कुछ हफ्तों में ठीक।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_swell_front"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "gp"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ch_swell_front",
+              "label": {
+                "en": "A soft swelling on the front of the kneecap",
+                "hi": "घुटने की कटोरी के आगे नरम सूजन"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "on_kneel",
+              "label": {
+                "en": "A lot of kneeling, squatting or floor work",
+                "hi": "बहुत ज़्यादा घुटनों के बल बैठना, उकड़ू बैठना या ज़मीन पर काम"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "knee_front",
+              "label": {
+                "en": "Front of the knee, around or behind the kneecap",
+                "hi": "घुटने का अगला हिस्सा, कटोरी के आसपास या पीछे"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall or a direct blow to the knee",
+                "hi": "गिरना या घुटने पर सीधी चोट"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_lock",
+              "label": {
+                "en": "The knee catches, clicks painfully or gets stuck",
+                "hi": "घुटना अटकता है, दर्द के साथ क्लिक करता है या फंस जाता है"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_giveway",
+              "label": {
+                "en": "The knee gives way or buckles",
+                "hi": "घुटना जवाब दे देता है या मुड़ जाता है"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "baker",
+          "name": {
+            "en": "Baker’s cyst (swelling behind the knee)",
+            "hi": "बेकर सिस्ट (घुटने के पीछे सूजन)"
+          },
+          "scientific": "Popliteal cyst",
+          "what": {
+            "en": "Extra joint fluid, usually from arthritis or a meniscus tear, bulges into a sac behind the knee, causing tightness and a soft swelling. If it bursts, the calf can swell and look like a blood clot, so a calf swelling always needs checking.",
+            "hi": "जोड़ का ज़्यादा तरल, आमतौर पर गठिया या मेनिस्कस फटने से, घुटने के पीछे एक थैली में उभर आता है, जिससे खिंचाव और नरम सूजन होती है। फटने पर पिंडली सूज सकती है और खून के थक्के जैसी लगती है, इसलिए पिंडली की सूजन हमेशा जांचनी चाहिए।"
+          },
+          "causes": {
+            "en": "Knee osteoarthritis, a meniscus tear or inflammatory arthritis.",
+            "hi": "घुटने का ऑस्टियोआर्थराइटिस, मेनिस्कस फटना या सूजन वाली गठिया।"
+          },
+          "confirm": {
+            "en": "Examination and an ultrasound scan, which also rules out a blood clot.",
+            "hi": "जांच और अल्ट्रासाउंड स्कैन, जिससे खून का थक्का भी खारिज होता है।"
+          },
+          "treat": {
+            "en": "Treating the knee problem behind it; drainage or injection if troublesome.",
+            "hi": "पीछे की घुटने की समस्या का इलाज; तकलीफ़ हो तो तरल निकालना या इंजेक्शन।"
+          },
+          "outlook": {
+            "en": "Often shrinks when the underlying knee problem settles.",
+            "hi": "अक्सर घुटने की मूल समस्या ठीक होने पर छोटा हो जाता है।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_lump_back",
+            "knee_back"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "physio"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ch_lump_back",
+              "label": {
+                "en": "A soft swelling behind the knee",
+                "hi": "घुटने के पीछे नरम सूजन"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "knee_back",
+              "label": {
+                "en": "Back of the knee",
+                "hi": "घुटने का पिछला हिस्सा"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "ch_bony",
+              "label": {
+                "en": "The knee looks knobbly or bigger than before (bony swelling)",
+                "hi": "घुटना पहले से गांठदार या बड़ा दिखता है (हड्डी की सूजन)"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_crepitus",
+              "label": {
+                "en": "Grinding or crackling when the knee bends",
+                "hi": "घुटना मोड़ने पर किरकिराहट या कड़कड़ाहट"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "acr3",
+              "label": {
+                "en": "3 or more of the 6 osteoarthritis features",
+                "hi": "ऑस्टियोआर्थराइटिस के 6 में से 3 या ज़्यादा लक्षण"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "w_squat",
+              "label": {
+                "en": "Squatting, kneeling or sitting cross-legged on the floor",
+                "hi": "उकड़ू बैठना, घुटनों के बल बैठना या ज़मीन पर पालथी मारकर बैठना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "calf",
+              "label": {
+                "en": "Calf (back of the lower leg)",
+                "hi": "पिंडली (निचले पैर का पिछला हिस्सा)"
+              },
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "id": "crystal",
+          "name": {
+            "en": "Gout or pseudogout (crystal arthritis)",
+            "hi": "गाउट या स्यूडोगाउट (क्रिस्टल गठिया)"
+          },
+          "scientific": "Crystal arthritis (urate or calcium pyrophosphate)",
+          "what": {
+            "en": "Crystals in the joint fluid trigger a sudden, very painful, hot, red and swollen joint, often overnight. Because an infected joint looks the same, a hot swollen knee is treated as infection until proven otherwise.",
+            "hi": "जोड़ के तरल में क्रिस्टल अचानक बहुत दर्द वाला, गर्म, लाल और सूजा जोड़ बना देते हैं, अक्सर रात भर में। क्योंकि इन्फेक्शन वाला जोड़ भी ऐसा ही दिखता है, गर्म सूजे घुटने को इन्फेक्शन मानकर चला जाता है जब तक कि साबित न हो जाए कि वह नहीं है।"
+          },
+          "causes": {
+            "en": "Gout: high uric acid, alcohol, some water tablets, kidney disease. Pseudogout: older age.",
+            "hi": "गाउट: ज़्यादा यूरिक एसिड, शराब, कुछ पेशाब की गोलियाँ, गुर्दे की बीमारी। स्यूडोगाउट: बड़ी उम्र।"
+          },
+          "confirm": {
+            "en": "Drawing fluid from the joint to look for crystals and rule out infection.",
+            "hi": "क्रिस्टल देखने और इन्फेक्शन खारिज करने के लिए जोड़ से तरल निकालना।"
+          },
+          "treat": {
+            "en": "Anti-inflammatory medicines or steroids for the attack; long-term uric acid lowering for repeated gout.",
+            "hi": "दौरे में सूजन-रोधी दवाएं या स्टेरॉयड; बार-बार गाउट में लंबे समय तक यूरिक एसिड घटाने की दवा।"
+          },
+          "outlook": {
+            "en": "Attacks settle in days to weeks; lowering uric acid prevents further attacks.",
+            "hi": "दौरे कुछ दिनों से हफ्तों में ठीक होते हैं; यूरिक एसिड घटाने से आगे के दौरे रुकते हैं।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "o_gout",
+            "rf_hot"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "medicine",
+            "rheum"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "o_gout",
+              "label": {
+                "en": "Past attacks of gout, or a red, swollen big toe before",
+                "hi": "पहले गाउट के दौरे, या पहले पैर का अंगूठा लाल और सूजा था"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "rf_hot",
+              "label": {
+                "en": "The knee became hot, red and swollen over hours or days (with or without fever)",
+                "hi": "घुटना कुछ घंटों या दिनों में गर्म, लाल और सूजा हो गया (बुखार के साथ या बिना)"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sex_m",
+              "label": {
+                "en": "Male",
+                "hi": "पुरुष"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_woke",
+              "label": {
+                "en": "Woke up with it",
+                "hi": "सुबह उठे तो दर्द था"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "o_other_joints",
+              "label": {
+                "en": "Other joints also swollen or painful (hands, wrists, feet)",
+                "hi": "दूसरे जोड़ भी सूजे या दर्द वाले (हाथ, कलाई, पैर)"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_pop",
+              "label": {
+                "en": "Felt or heard a pop at the moment of injury",
+                "hi": "चोट के समय पॉप जैसी आवाज़ या एहसास"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "on_twist",
+              "label": {
+                "en": "Twisting or turning on a planted foot (sport, slipping)",
+                "hi": "ज़मीन पर टिके पैर पर मुड़ना या घूमना (खेल, फिसलना)"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "inflam",
+          "name": {
+            "en": "Inflammatory arthritis (for example rheumatoid arthritis)",
+            "hi": "सूजन वाली गठिया (जैसे रूमेटॉइड आर्थराइटिस)"
+          },
+          "scientific": "Inflammatory arthritis",
+          "what": {
+            "en": "The immune system inflames the joint lining, causing swelling, warmth and long morning stiffness, often in several joints at once.",
+            "hi": "इम्यून सिस्टम जोड़ की झिल्ली में सूजन लाता है, जिससे सूजन, गर्मी और सुबह की लंबी जकड़न होती है, अक्सर एक साथ कई जोड़ों में।"
+          },
+          "causes": {
+            "en": "Rheumatoid arthritis, psoriatic arthritis, spondyloarthritis and others.",
+            "hi": "रूमेटॉइड आर्थराइटिस, सोरियाटिक आर्थराइटिस, स्पॉन्डिलोआर्थराइटिस और अन्य।"
+          },
+          "confirm": {
+            "en": "Blood tests, examination of all joints and sometimes joint fluid tests, by a rheumatologist.",
+            "hi": "रूमेटोलॉजिस्ट द्वारा ब्लड टेस्ट, सभी जोड़ों की जांच और कभी-कभी जोड़ के तरल की जांच।"
+          },
+          "treat": {
+            "en": "Early disease-modifying medicines protect the joints.",
+            "hi": "जल्दी शुरू की गई बीमारी नियंत्रित करने वाली दवाएं जोड़ों को बचाती हैं।"
+          },
+          "outlook": {
+            "en": "Well controlled when treated early.",
+            "hi": "जल्दी इलाज से अच्छा नियंत्रण।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_stiff_long",
+            "o_other_joints"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "rheum",
+            "medicine"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ch_stiff_long",
+              "label": {
+                "en": "Stiff in the morning for more than 30 minutes",
+                "hi": "सुबह 30 मिनट से ज़्यादा जकड़न"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "o_other_joints",
+              "label": {
+                "en": "Other joints also swollen or painful (hands, wrists, feet)",
+                "hi": "दूसरे जोड़ भी सूजे या दर्द वाले (हाथ, कलाई, पैर)"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "knee_both",
+              "label": {
+                "en": "Both knees",
+                "hi": "दोनों घुटने"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_swell_slow",
+              "label": {
+                "en": "Swelling that came on slowly or the next day",
+                "hi": "धीरे-धीरे या अगले दिन आई सूजन"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "h_1_5y",
+              "label": {
+                "en": "First had this pain 1 to 5 years ago",
+                "hi": "पहली बार यह दर्द 1 से 5 साल पहले हुआ"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "r_spa",
+              "label": {
+                "en": "Psoriasis, inflammatory bowel disease or recurring red, painful eye",
+                "hi": "सोरायसिस, आंतों की सूजन (IBD) या बार-बार लाल, दर्द भरी आंख"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "ch_stiff_short",
+              "label": {
+                "en": "Stiff in the morning, easing within 30 minutes",
+                "hi": "सुबह जकड़न जो 30 मिनट के अंदर कम हो जाती है"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "on_twist",
+              "label": {
+                "en": "Twisting or turning on a planted foot (sport, slipping)",
+                "hi": "ज़मीन पर टिके पैर पर मुड़ना या घूमना (खेल, फिसलना)"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_pop",
+              "label": {
+                "en": "Felt or heard a pop at the moment of injury",
+                "hi": "चोट के समय पॉप जैसी आवाज़ या एहसास"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "hipref",
+          "name": {
+            "en": "Pain coming from the hip",
+            "hi": "कूल्हे से आने वाला दर्द"
+          },
+          "scientific": "Hip pathology referring to the knee (in children, slipped capital femoral epiphysis)",
+          "what": {
+            "en": "The hip and knee share nerves, so hip arthritis in adults, or a slipped hip growth plate in an overweight child or teenager, can be felt mainly in the knee or thigh.",
+            "hi": "कूल्हे और घुटने की नसें साझा होती हैं, इसलिए वयस्कों में कूल्हे की गठिया, या ज़्यादा वज़न वाले बच्चे या किशोर में कूल्हे की ग्रोथ प्लेट खिसकना, मुख्य रूप से घुटने या जांघ में महसूस हो सकता है।"
+          },
+          "causes": {
+            "en": "Hip osteoarthritis; in children, slipped capital femoral epiphysis (knee pain is the presenting complaint in 26%) or Perthes disease.",
+            "hi": "कूल्हे का ऑस्टियोआर्थराइटिस; बच्चों में स्लिप्ड कैपिटल फ़ेमोरल एपिफ़ाइसिस (26% में शुरुआती शिकायत घुटने का दर्द) या पर्थीस रोग।"
+          },
+          "confirm": {
+            "en": "Hip examination (especially turning the hip inwards) and a hip X-ray.",
+            "hi": "कूल्हे की जांच (खासकर कूल्हे को अंदर घुमाना) और कूल्हे का एक्स-रे।"
+          },
+          "treat": {
+            "en": "Depends on the cause; a slipped growth plate needs urgent surgery.",
+            "hi": "कारण पर निर्भर; खिसकी ग्रोथ प्लेट में जल्दी सर्जरी ज़रूरी।"
+          },
+          "outlook": {
+            "en": "A delay in finding a slipped hip in a child leads to more complications, so a limping child needs prompt review.",
+            "hi": "बच्चे में खिसका कूल्हा देर से पकड़ने पर जटिलताएं बढ़ती हैं, इसलिए लंगड़ाते बच्चे को जल्दी दिखाएं।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "hipthigh",
+            "o_hip_pain",
+            "rf_child_limp"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            {
+              "id": "paeds",
+              "when": "a_u18"
+            }
+          ],
+          "outlookSource": [
+            "scfe"
+          ],
+          "weights": [
+            {
+              "feature": "hipthigh",
+              "label": {
+                "en": "Groin or front of the thigh",
+                "hi": "जांघ का जोड़ या जांघ का अगला हिस्सा"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "o_hip_pain",
+              "label": {
+                "en": "Pain in the groin or hip as well",
+                "hi": "साथ में जांघ के जोड़ या कूल्हे में दर्द"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "rf_child_limp",
+              "label": {
+                "en": "A child or teenager is limping, with pain in the knee, thigh or hip",
+                "hi": "बच्चा या किशोर लंगड़ा रहा है, घुटने, जांघ या कूल्हे में दर्द के साथ"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "o_overweight",
+              "label": {
+                "en": "Overweight, or gained weight recently",
+                "hi": "ज़्यादा वज़न, या हाल में वज़न बढ़ा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "squat_neg",
+              "label": {
+                "en": "Squat test (hold on to something): negative",
+                "hi": "उकड़ू बैठने का टेस्ट (कुछ पकड़कर): नेगेटिव"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "jlt_neg",
+              "label": {
+                "en": "Press along the joint line: negative",
+                "hi": "जोड़ की लाइन पर दबाना: नेगेटिव"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "knee_front",
+              "label": {
+                "en": "Front of the knee, around or behind the kneecap",
+                "hi": "घुटने का अगला हिस्सा, कटोरी के आसपास या पीछे"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "knee_in",
+              "label": {
+                "en": "Inner side of the knee",
+                "hi": "घुटने का अंदरूनी हिस्सा"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_lock",
+              "label": {
+                "en": "The knee catches, clicks painfully or gets stuck",
+                "hi": "घुटना अटकता है, दर्द के साथ क्लिक करता है या फंस जाता है"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_swell_fast",
+              "label": {
+                "en": "The knee swelled up quickly, within about 2 hours of an injury",
+                "hi": "चोट के लगभग 2 घंटे के अंदर घुटना तेज़ी से सूज गया"
+              },
+              "weight": -2
+            }
+          ]
+        }
+      ],
+      "emergencies": [
+        {
+          "id": "septic",
+          "name": {
+            "en": "Possible infected joint or crystal attack",
+            "hi": "जोड़ में इन्फेक्शन या क्रिस्टल के दौरे की आशंका"
+          },
+          "scientific": "Acute hot swollen joint (septic arthritis until proven otherwise)",
+          "what": {
+            "en": "A knee that becomes hot, red and swollen over hours or days must be treated as infected until proven otherwise, even without fever: infection can destroy a joint, and has a mortality of up to 11%. Go to the emergency department today; fluid is drawn from the joint before antibiotics.",
+            "hi": "कुछ घंटों या दिनों में गर्म, लाल और सूजे घुटने को इन्फेक्शन मानकर ही चलना चाहिए जब तक साबित न हो, भले ही बुखार न हो: इन्फेक्शन जोड़ को खराब कर सकता है और इसमें मृत्यु दर 11% तक है। आज ही इमरजेंसी जाएं; एंटीबायोटिक से पहले जोड़ से तरल निकाला जाता है।"
+          },
+          "when": "rf_hot"
+        },
+        {
+          "id": "fracture",
+          "name": {
+            "en": "Possible fracture",
+            "hi": "फ्रैक्चर की आशंका"
+          },
+          "scientific": "Knee fracture (Ottawa knee rule positive)",
+          "what": {
+            "en": "After an injury, being unable to take 4 steps, to bend the knee to a right angle, or pain on touching the kneecap or the bony point below the outer knee means an X-ray is needed. This rule misses only about 1.5% of fractures. Go to the emergency department.",
+            "hi": "चोट के बाद 4 कदम न चल पाना, घुटना समकोण तक न मुड़ना, या कटोरी या बाहर नीचे की हड्डी छूने पर दर्द का मतलब है कि एक्स-रे ज़रूरी है। यह नियम सिर्फ़ लगभग 1.5% फ्रैक्चर छोड़ता है। इमरजेंसी जाएं।"
+          },
+          "when": "rf_fracture"
+        },
+        {
+          "id": "dvt",
+          "name": {
+            "en": "Possible blood clot in the leg (DVT)",
+            "hi": "पैर में खून का थक्का (DVT) की आशंका"
+          },
+          "scientific": "Deep vein thrombosis",
+          "what": {
+            "en": "A swollen, warm, tender calf, especially after travel, surgery, a plaster or bed rest, can be a clot in a deep vein. It needs an ultrasound scan within hours. If you are breathless or have chest pain, call 108 now: the clot may have moved to the lungs.",
+            "hi": "सूजी, गर्म, दर्द वाली पिंडली, खासकर यात्रा, सर्जरी, प्लास्टर या बिस्तर पर आराम के बाद, गहरी नस में थक्का हो सकती है। कुछ घंटों में अल्ट्रासाउंड स्कैन ज़रूरी। सांस फूले या सीने में दर्द हो तो अभी 108 बुलाएं: थक्का फेफड़ों तक जा सकता है।"
+          },
+          "when": "rf_dvt"
+        }
+      ],
+      "urgency": {
+        "orange": [
+          {
+            "reason": "o_locked",
+            "text": {
+              "en": "Knee locked after an injury: a torn meniscus may be caught in the joint",
+              "hi": "चोट के बाद घुटना फंसा: फटा मेनिस्कस जोड़ में फंसा हो सकता है"
+            },
+            "when": "rf_locked"
+          },
+          {
+            "reason": "o_child",
+            "text": {
+              "en": "A limping child or teenager with knee or thigh pain: the hip must be checked",
+              "hi": "घुटने या जांघ के दर्द के साथ लंगड़ाता बच्चा या किशोर: कूल्हा जांचना ज़रूरी"
+            },
+            "when": "rf_child_limp"
+          },
+          {
+            "reason": "o_fever",
+            "text": {
+              "en": "Fever, night sweats or weight loss with knee pain",
+              "hi": "घुटने के दर्द के साथ बुखार, रात को पसीना या वज़न घटना"
+            },
+            "when": "rf_fever"
+          },
+          {
+            "reason": "o_night",
+            "text": {
+              "en": "Constant night pain in a child, at age 50 or over, or with past cancer",
+              "hi": "बच्चे में, 50 या ज़्यादा उम्र में, या पहले कैंसर के साथ रात का लगातार दर्द"
+            },
+            "when": {
+              "all": [
+                "rf_night",
+                {
+                  "any": [
+                    "age_ge50",
+                    "r_cancer",
+                    "a_u18"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "reason": "o_pain",
+            "text": {
+              "en": "Very severe pain (9–10 out of 10)",
+              "hi": "बहुत तेज़ दर्द (10 में 9–10)"
+            },
+            "when": {
+              "painGte": 9
+            }
+          }
+        ],
+        "yellow": [
+          {
+            "reason": "y_injury",
+            "text": {
+              "en": "Started with a twist, fall or accident",
+              "hi": "मुड़ने, गिरने या दुर्घटना से शुरू"
+            },
+            "when": {
+              "any": [
+                "on_twist",
+                "on_fall",
+                "on_accident"
+              ]
+            }
+          },
+          {
+            "reason": "y_swell",
+            "text": {
+              "en": "The knee is swollen",
+              "hi": "घुटना सूजा है"
+            },
+            "when": {
+              "any": [
+                "ch_swell_fast",
+                "ch_swell_slow",
+                "ch_lump_back",
+                "ch_swell_front"
+              ]
+            }
+          },
+          {
+            "reason": "y_giveway",
+            "text": {
+              "en": "The knee gives way",
+              "hi": "घुटना जवाब देता है"
+            },
+            "when": "ch_giveway"
+          },
+          {
+            "reason": "y_lock",
+            "text": {
+              "en": "The knee catches or locks",
+              "hi": "घुटना अटकता या फंसता है"
+            },
+            "when": "ch_lock"
+          },
+          {
+            "reason": "y_often",
+            "text": {
+              "en": "Bouts are coming more often or getting worse",
+              "hi": "दौरे जल्दी-जल्दी आ रहे हैं या बढ़ रहे हैं"
+            },
+            "when": "btw_often"
+          },
+          {
+            "reason": "y_long",
+            "text": {
+              "en": "This bout has lasted more than 6 weeks",
+              "hi": "इस बार का दर्द 6 हफ्ते से ज़्यादा से है"
+            },
+            "when": {
+              "any": [
+                "d_6_12",
+                "d_3m"
+              ]
+            }
+          },
+          {
+            "reason": "y_pain",
+            "text": {
+              "en": "Strong pain (7–8 out of 10)",
+              "hi": "तेज़ दर्द (10 में 7–8)"
+            },
+            "when": {
+              "all": [
+                {
+                  "painGte": 7
+                },
+                {
+                  "not": {
+                    "painGte": 9
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "reason": "y_sleep",
+            "text": {
+              "en": "Pain disturbing sleep",
+              "hi": "दर्द से नींद खराब"
+            },
+            "when": "sleep_bad"
+          },
+          {
+            "reason": "y_inflam",
+            "text": {
+              "en": "Long morning stiffness or several swollen joints",
+              "hi": "सुबह की लंबी जकड़न या कई सूजे जोड़"
+            },
+            "when": {
+              "any": [
+                "ch_stiff_long",
+                "o_other_joints"
+              ]
+            }
+          },
+          {
+            "reason": "y_gout",
+            "text": {
+              "en": "Past gout attacks",
+              "hi": "पहले गाउट के दौरे"
+            },
+            "when": "o_gout"
+          },
+          {
+            "reason": "y_walk",
+            "text": {
+              "en": "Difficulty walking",
+              "hi": "चलने में दिक्कत"
+            },
+            "when": "kwalk_no"
+          }
+        ]
+      },
+      "redFlags": [
+        {
+          "id": "rf_hot",
+          "label": {
+            "en": "The knee became hot, red and swollen over hours or days (with or without fever)",
+            "hi": "घुटना कुछ घंटों या दिनों में गर्म, लाल और सूजा हो गया (बुखार के साथ या बिना)"
+          }
+        },
+        {
+          "id": "rf_fracture",
+          "label": {
+            "en": "After an injury: could not take 4 steps, cannot bend the knee to a right angle, or the kneecap or the bony point below the outer knee hurts to touch",
+            "hi": "चोट के बाद: 4 कदम नहीं चल पाए, घुटना समकोण तक नहीं मुड़ता, या घुटने की कटोरी या बाहर नीचे की हड्डी छूने पर दुखती है"
+          }
+        },
+        {
+          "id": "rf_dvt",
+          "label": {
+            "en": "The calf is swollen, warm and tender, especially after long travel, an operation, a plaster cast or bed rest",
+            "hi": "पिंडली सूजी, गर्म और दबाने पर दर्द वाली है, खासकर लंबी यात्रा, ऑपरेशन, प्लास्टर या बिस्तर पर आराम के बाद"
+          }
+        },
+        {
+          "id": "rf_locked",
+          "label": {
+            "en": "The knee is locked and will not straighten fully after an injury",
+            "hi": "चोट के बाद घुटना फंस गया है और पूरा सीधा नहीं होता"
+          }
+        },
+        {
+          "id": "rf_child_limp",
+          "label": {
+            "en": "A child or teenager is limping, with pain in the knee, thigh or hip",
+            "hi": "बच्चा या किशोर लंगड़ा रहा है, घुटने, जांघ या कूल्हे में दर्द के साथ"
+          }
+        },
+        {
+          "id": "rf_fever",
+          "label": {
+            "en": "Fever, night sweats or weight loss without trying",
+            "hi": "बुखार, रात को पसीना या बिना कोशिश वज़न घटना"
+          }
+        },
+        {
+          "id": "rf_night",
+          "label": {
+            "en": "Constant pain at night that no position eases",
+            "hi": "रात को लगातार दर्द जो किसी भी पोज़िशन में कम न हो"
+          }
+        }
+      ],
+      "areas": [
+        {
+          "id": "knee_front",
+          "name": {
+            "en": "Front of the knee, around or behind the kneecap",
+            "hi": "घुटने का अगला हिस्सा, कटोरी के आसपास या पीछे"
+          },
+          "paired": true,
+          "code": null,
+          "view": "knee_front"
+        },
+        {
+          "id": "knee_in",
+          "name": {
+            "en": "Inner side of the knee",
+            "hi": "घुटने का अंदरूनी हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "knee_in"
+        },
+        {
+          "id": "knee_out",
+          "name": {
+            "en": "Outer side of the knee",
+            "hi": "घुटने का बाहरी हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "knee_out"
+        },
+        {
+          "id": "knee_back",
+          "name": {
+            "en": "Back of the knee",
+            "hi": "घुटने का पिछला हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "knee_back"
+        },
+        {
+          "id": "tibial_tub",
+          "name": {
+            "en": "Bony bump just below the kneecap",
+            "hi": "कटोरी के ठीक नीचे की हड्डी का उभार"
+          },
+          "paired": true,
+          "code": null,
+          "view": "tibial_tub"
+        },
+        {
+          "id": "calf",
+          "name": {
+            "en": "Calf (back of the lower leg)",
+            "hi": "पिंडली (निचले पैर का पिछला हिस्सा)"
+          },
+          "paired": true,
+          "code": null,
+          "view": "calf"
+        },
+        {
+          "id": "hipthigh",
+          "name": {
+            "en": "Groin or front of the thigh",
+            "hi": "जांघ का जोड़ या जांघ का अगला हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "hipthigh"
+        }
+      ],
+      "derived": [
+        {
+          "id": "knee_any",
+          "when": {
+            "any": [
+              "knee_front",
+              "knee_in",
+              "knee_out",
+              "knee_back",
+              "tibial_tub"
+            ]
+          }
+        },
+        {
+          "id": "age50",
+          "when": {
+            "any": [
+              "a_50_59",
+              "a_60p"
+            ]
+          }
+        },
+        {
+          "id": "nowarm",
+          "when": {
+            "not": "rf_hot"
+          }
+        },
+        {
+          "id": "acr3",
+          "when": {
+            "all": [
+              "knee_any",
+              {
+                "atLeast": [
+                  3,
+                  [
+                    "age50",
+                    "ch_stiff_short",
+                    "ch_crepitus",
+                    "jlt_pos",
+                    "ch_bony",
+                    "nowarm"
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "acr4",
+          "when": {
+            "all": [
+              "knee_any",
+              {
+                "atLeast": [
+                  4,
+                  [
+                    "age50",
+                    "ch_stiff_short",
+                    "ch_crepitus",
+                    "jlt_pos",
+                    "ch_bony",
+                    "nowarm"
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "acr_lt3",
+          "when": {
+            "all": [
+              "knee_any",
+              {
+                "not": "acr3"
+              }
+            ]
+          }
+        },
+        {
+          "id": "nice_oa",
+          "when": {
+            "all": [
+              {
+                "any": [
+                  "a_40_49",
+                  "a_50_59",
+                  "a_60p"
+                ]
+              },
+              {
+                "any": [
+                  "w_stairs",
+                  "w_walk_long",
+                  "w_squat",
+                  "w_run"
+                ]
+              },
+              {
+                "not": "ch_stiff_long"
+              }
+            ]
+          }
+        },
+        {
+          "id": "acl2",
+          "when": {
+            "atLeast": [
+              2,
+              [
+                "ch_pop",
+                "ch_swell_fast",
+                "ch_giveway"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "walk_hard",
+          "when": {
+            "any": [
+              "kwalk_no",
+              "kwalk_diff"
+            ]
+          }
+        }
+      ],
+      "patterns": {
+        "character": [
+          {
+            "id": "ch_pop",
+            "label": {
+              "en": "Felt or heard a pop at the moment of injury",
+              "hi": "चोट के समय पॉप जैसी आवाज़ या एहसास"
+            }
+          },
+          {
+            "id": "ch_swell_fast",
+            "label": {
+              "en": "The knee swelled up quickly, within about 2 hours of an injury",
+              "hi": "चोट के लगभग 2 घंटे के अंदर घुटना तेज़ी से सूज गया"
+            }
+          },
+          {
+            "id": "ch_swell_slow",
+            "label": {
+              "en": "Swelling that came on slowly or the next day",
+              "hi": "धीरे-धीरे या अगले दिन आई सूजन"
+            }
+          },
+          {
+            "id": "ch_giveway",
+            "label": {
+              "en": "The knee gives way or buckles",
+              "hi": "घुटना जवाब दे देता है या मुड़ जाता है"
+            }
+          },
+          {
+            "id": "ch_lock",
+            "label": {
+              "en": "The knee catches, clicks painfully or gets stuck",
+              "hi": "घुटना अटकता है, दर्द के साथ क्लिक करता है या फंस जाता है"
+            }
+          },
+          {
+            "id": "ch_stiff_short",
+            "label": {
+              "en": "Stiff in the morning, easing within 30 minutes",
+              "hi": "सुबह जकड़न जो 30 मिनट के अंदर कम हो जाती है"
+            }
+          },
+          {
+            "id": "ch_stiff_long",
+            "label": {
+              "en": "Stiff in the morning for more than 30 minutes",
+              "hi": "सुबह 30 मिनट से ज़्यादा जकड़न"
+            }
+          },
+          {
+            "id": "ch_crepitus",
+            "label": {
+              "en": "Grinding or crackling when the knee bends",
+              "hi": "घुटना मोड़ने पर किरकिराहट या कड़कड़ाहट"
+            }
+          },
+          {
+            "id": "ch_bony",
+            "label": {
+              "en": "The knee looks knobbly or bigger than before (bony swelling)",
+              "hi": "घुटना पहले से गांठदार या बड़ा दिखता है (हड्डी की सूजन)"
+            }
+          },
+          {
+            "id": "ch_lump_back",
+            "label": {
+              "en": "A soft swelling behind the knee",
+              "hi": "घुटने के पीछे नरम सूजन"
+            }
+          },
+          {
+            "id": "ch_swell_front",
+            "label": {
+              "en": "A soft swelling on the front of the kneecap",
+              "hi": "घुटने की कटोरी के आगे नरम सूजन"
+            }
+          },
+          {
+            "id": "ch_bump_below",
+            "label": {
+              "en": "A painful bump just below the kneecap",
+              "hi": "घुटने की कटोरी के ठीक नीचे दर्द वाला उभार"
+            }
+          }
+        ],
+        "worse": [
+          {
+            "id": "w_stairs",
+            "label": {
+              "en": "Stairs, especially coming down",
+              "hi": "सीढ़ियाँ, खासकर उतरते समय"
+            }
+          },
+          {
+            "id": "w_squat",
+            "label": {
+              "en": "Squatting, kneeling or sitting cross-legged on the floor",
+              "hi": "उकड़ू बैठना, घुटनों के बल बैठना या ज़मीन पर पालथी मारकर बैठना"
+            }
+          },
+          {
+            "id": "w_sit_long",
+            "label": {
+              "en": "Sitting for long with the knee bent (cinema, travel)",
+              "hi": "घुटना मोड़कर देर तक बैठना (सिनेमा, यात्रा)"
+            }
+          },
+          {
+            "id": "w_run",
+            "label": {
+              "en": "Running or jumping",
+              "hi": "दौड़ना या कूदना"
+            }
+          },
+          {
+            "id": "w_walk_long",
+            "label": {
+              "en": "Walking or standing for long",
+              "hi": "देर तक चलना या खड़े रहना"
+            }
+          },
+          {
+            "id": "w_twist",
+            "label": {
+              "en": "Twisting or turning on the leg",
+              "hi": "पैर पर मुड़ना या घूमना"
+            }
+          }
+        ],
+        "better": [
+          {
+            "id": "b_rest",
+            "label": {
+              "en": "Rest",
+              "hi": "आराम"
+            }
+          }
+        ],
+        "other": [
+          {
+            "id": "o_overweight",
+            "label": {
+              "en": "Overweight, or gained weight recently",
+              "hi": "ज़्यादा वज़न, या हाल में वज़न बढ़ा"
+            }
+          },
+          {
+            "id": "o_hip_pain",
+            "label": {
+              "en": "Pain in the groin or hip as well",
+              "hi": "साथ में जांघ के जोड़ या कूल्हे में दर्द"
+            }
+          },
+          {
+            "id": "o_other_joints",
+            "label": {
+              "en": "Other joints also swollen or painful (hands, wrists, feet)",
+              "hi": "दूसरे जोड़ भी सूजे या दर्द वाले (हाथ, कलाई, पैर)"
+            }
+          },
+          {
+            "id": "o_gout",
+            "label": {
+              "en": "Past attacks of gout, or a red, swollen big toe before",
+              "hi": "पहले गाउट के दौरे, या पहले पैर का अंगूठा लाल और सूजा था"
+            }
+          }
+        ]
+      },
+      "mainComplaint": [],
+      "functionQuestions": [
+        {
+          "id": "kwalk",
+          "options": [
+            {
+              "id": "kwalk_ok",
+              "label": {
+                "en": "Normally",
+                "hi": "सामान्य"
+              }
+            },
+            {
+              "id": "kwalk_diff",
+              "label": {
+                "en": "With pain or a limp",
+                "hi": "दर्द या लंगड़ाहट के साथ"
+              }
+            },
+            {
+              "id": "kwalk_no",
+              "label": {
+                "en": "Can hardly walk",
+                "hi": "मुश्किल से चल पाते हैं"
+              }
+            }
+          ]
+        },
+        {
+          "id": "stairs",
+          "options": [
+            {
+              "id": "stairs_ok",
+              "label": {
+                "en": "Normally",
+                "hi": "सामान्य"
+              }
+            },
+            {
+              "id": "stairs_diff",
+              "label": {
+                "en": "With difficulty or support",
+                "hi": "मुश्किल से या सहारे से"
+              }
+            },
+            {
+              "id": "stairs_no",
+              "label": {
+                "en": "Cannot do it",
+                "hi": "नहीं कर पाते"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sleep",
+          "options": [
+            {
+              "id": "sleep_ok",
+              "label": {
+                "en": "Normal",
+                "hi": "सामान्य"
+              }
+            },
+            {
+              "id": "sleep_bad",
+              "label": {
+                "en": "Pain wakes me up",
+                "hi": "दर्द से नींद खुलती है"
+              }
+            }
+          ]
+        }
+      ],
+      "bedsideTests": [
+        {
+          "id": "ksquat",
+          "name": {
+            "en": "Squat test (hold on to something)",
+            "hi": "उकड़ू बैठने का टेस्ट (कुछ पकड़कर)"
+          },
+          "steps": [
+            {
+              "en": "Stand holding a table or door frame. Slowly bend both knees as if sitting down, as far as is comfortable.",
+              "hi": "मेज़ या दरवाज़े की चौखट पकड़कर खड़े हों। जैसे बैठ रहे हों, दोनों घुटने धीरे-धीरे जितना आराम से हो सके मोड़ें।"
+            },
+            {
+              "en": "Hold for a few seconds, then stand up slowly.",
+              "hi": "कुछ सेकंड रुकें, फिर धीरे से खड़े हों।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "It brings on your pain at the front of the knee, around or behind the kneecap.",
+            "hi": "घुटने के आगे, कटोरी के आसपास या पीछे आपका दर्द आ जाए।"
+          },
+          "accuracy": {
+            "en": "Pain on squatting is one of the more useful signs of patellofemoral pain, but many knee problems hurt on squatting, so it is read with where the pain is.",
+            "hi": "उकड़ू बैठने पर दर्द पटेलोफ़ेमोरल दर्द के ज़्यादा उपयोगी संकेतों में से है, पर कई घुटने की समस्याओं में उकड़ू बैठने पर दर्द होता है, इसलिए इसे दर्द की जगह के साथ देखा जाता है।"
+          },
+          "source": "nunes",
+          "answers": [
+            "squat_pos",
+            "squat_neg",
+            "squat_skip"
+          ]
+        },
+        {
+          "id": "kjlt",
+          "name": {
+            "en": "Press along the joint line",
+            "hi": "जोड़ की लाइन पर दबाना"
+          },
+          "steps": [
+            {
+              "en": "Sit with the knee bent to a right angle. Find the soft groove on each side of the knee, just beside the lower edge of the kneecap, where the thigh bone meets the shin bone.",
+              "hi": "घुटना समकोण पर मोड़कर बैठें। घुटने के दोनों तरफ़, कटोरी के निचले किनारे के बगल में, वह नरम खांचा ढूंढें जहाँ जांघ की हड्डी पिंडली की हड्डी से मिलती है।"
+            },
+            {
+              "en": "Press firmly with a thumb along the inner and then the outer groove.",
+              "hi": "अंगूठे से पहले अंदरूनी और फिर बाहरी खांचे पर ज़ोर से दबाएं।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "Sharp, pinpoint pain in the groove on one side that matches your pain.",
+            "hi": "एक तरफ़ के खांचे में तेज़, एक जगह का दर्द जो आपके दर्द से मेल खाए।"
+          },
+          "accuracy": {
+            "en": "Joint line tenderness: sensitivity 63%, specificity 77%; a tender joint line makes a meniscus tear about 2.7 times more likely, and it is also common with arthritis.",
+            "hi": "जोड़ की लाइन पर दर्द: संवेदनशीलता 63%, विशिष्टता 77%; इससे मेनिस्कस फटने की संभावना लगभग 2.7 गुना होती है, और यह गठिया में भी आम है।"
+          },
+          "source": "hegedus",
+          "answers": [
+            "jlt_pos",
+            "jlt_neg",
+            "jlt_skip"
+          ]
+        },
+        {
+          "id": "kext",
+          "name": {
+            "en": "Can the knee straighten fully?",
+            "hi": "क्या घुटना पूरा सीधा होता है?"
+          },
+          "steps": [
+            {
+              "en": "Sit or lie with both legs straight out in front of you.",
+              "hi": "दोनों पैर सामने सीधे करके बैठें या लेटें।"
+            },
+            {
+              "en": "Tighten the thigh muscles and push the back of each knee down towards the floor. Compare the two sides.",
+              "hi": "जांघ की मांसपेशियाँ कसें और हर घुटने का पिछला हिस्सा ज़मीन की तरफ़ दबाएं। दोनों तरफ़ की तुलना करें।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "The painful knee cannot go as straight or as flat as the other one.",
+            "hi": "दर्द वाला घुटना दूसरे जितना सीधा या सपाट नहीं होता।"
+          },
+          "accuracy": {
+            "en": "A knee that will not straighten fully points to swelling inside the joint, arthritis or a torn meniscus caught in the joint; a suddenly locked knee after an injury needs prompt review.",
+            "hi": "पूरा सीधा न होने वाला घुटना जोड़ के अंदर सूजन, गठिया या जोड़ में फंसे फटे मेनिस्कस की ओर इशारा करता है; चोट के बाद अचानक फंसा घुटना जल्दी दिखाना ज़रूरी है।"
+          },
+          "source": "wagmen",
+          "answers": [
+            "ext_lim",
+            "ext_ok",
+            "ext_skip"
+          ]
+        }
+      ],
+      "nerveRoots": {},
+      "rootRules": [],
+      "discOfRoot": {},
+      "departmentRules": [],
+      "extraDepartments": null,
+      "featureLabels": {
+        "a_u18": {
+          "en": "Under 18",
+          "hi": "18 से कम"
+        },
+        "a_18_29": {
+          "en": "18–29",
+          "hi": "18–29"
+        },
+        "a_30_39": {
+          "en": "30–39",
+          "hi": "30–39"
+        },
+        "a_40_49": {
+          "en": "40–49",
+          "hi": "40–49"
+        },
+        "a_50_59": {
+          "en": "50–59",
+          "hi": "50–59"
+        },
+        "a_60p": {
+          "en": "60 or over",
+          "hi": "60 या ज़्यादा"
+        },
+        "sex_m": {
+          "en": "Male",
+          "hi": "पुरुष"
+        },
+        "sex_f": {
+          "en": "Female",
+          "hi": "महिला"
+        },
+        "sex_x": {
+          "en": "Prefer not to say",
+          "hi": "नहीं बताना"
+        },
+        "ep_first": {
+          "en": "First episode",
+          "hi": "पहली बार"
+        },
+        "ep_recur": {
+          "en": "Has happened before",
+          "hi": "पहले भी हुआ है"
+        },
+        "r_cancer": {
+          "en": "Cancer, now or in the past",
+          "hi": "कैंसर, अभी या पहले"
+        },
+        "r_bones": {
+          "en": "Osteoporosis, or steroid tablets for 3+ months",
+          "hi": "ऑस्टियोपोरोसिस, या 3+ महीने स्टेरॉयड की गोलियां"
+        },
+        "r_immune": {
+          "en": "Diabetes, HIV or low immunity",
+          "hi": "डायबिटीज़, HIV या कम इम्युनिटी"
+        },
+        "r_tb": {
+          "en": "TB now or before, or a TB patient at home",
+          "hi": "अभी या पहले टीबी, या घर में टीबी मरीज़"
+        },
+        "r_spa": {
+          "en": "Psoriasis, inflammatory bowel disease or recurring red, painful eye",
+          "hi": "सोरायसिस, आंतों की सूजन (IBD) या बार-बार लाल, दर्द भरी आंख"
+        },
+        "r_desk": {
+          "en": "Desk job or long hours of sitting",
+          "hi": "डेस्क जॉब या लंबे समय बैठना"
+        },
+        "r_heavy": {
+          "en": "Heavy physical work",
+          "hi": "भारी शारीरिक काम"
+        },
+        "r_vasc": {
+          "en": "Smoking or tobacco, diabetes, high blood pressure or high cholesterol",
+          "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल"
+        },
+        "r_famspa": {
+          "en": "Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease",
+          "hi": "माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)"
+        },
+        "on_gradual": {
+          "en": "Slowly, with no clear reason",
+          "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+        },
+        "on_twist": {
+          "en": "Twisting or turning on a planted foot (sport, slipping)",
+          "hi": "ज़मीन पर टिके पैर पर मुड़ना या घूमना (खेल, फिसलना)"
+        },
+        "on_fall": {
+          "en": "A fall or a direct blow to the knee",
+          "hi": "गिरना या घुटने पर सीधी चोट"
+        },
+        "on_jump": {
+          "en": "More running, jumping, stairs or sport than usual",
+          "hi": "सामान्य से ज़्यादा दौड़ना, कूदना, सीढ़ियाँ या खेल"
+        },
+        "on_kneel": {
+          "en": "A lot of kneeling, squatting or floor work",
+          "hi": "बहुत ज़्यादा घुटनों के बल बैठना, उकड़ू बैठना या ज़मीन पर काम"
+        },
+        "on_woke": {
+          "en": "Woke up with it",
+          "hi": "सुबह उठे तो दर्द था"
+        },
+        "on_accident": {
+          "en": "Road accident",
+          "hi": "सड़क दुर्घटना"
+        },
+        "d_days": {
+          "en": "This bout started within the last week",
+          "hi": "इस बार का दर्द पिछले 1 हफ्ते के अंदर शुरू हुआ"
+        },
+        "d_weeks": {
+          "en": "This bout started 1 to 6 weeks ago",
+          "hi": "इस बार का दर्द 1 से 6 हफ्ते पहले शुरू हुआ"
+        },
+        "d_6_12": {
+          "en": "This bout started 6 weeks to 3 months ago",
+          "hi": "इस बार का दर्द 6 हफ्ते से 3 महीने पहले शुरू हुआ"
+        },
+        "d_3m": {
+          "en": "This bout has lasted more than 3 months without going away",
+          "hi": "इस बार का दर्द 3 महीने से ज़्यादा से है, गया नहीं"
+        },
+        "h_first": {
+          "en": "First time ever with this pain",
+          "hi": "ऐसा दर्द पहली बार हुआ है"
+        },
+        "h_lt1y": {
+          "en": "First had this pain within the last year",
+          "hi": "पहली बार यह दर्द पिछले 1 साल में हुआ"
+        },
+        "h_1_5y": {
+          "en": "First had this pain 1 to 5 years ago",
+          "hi": "पहली बार यह दर्द 1 से 5 साल पहले हुआ"
+        },
+        "h_5y": {
+          "en": "First had this pain more than 5 years ago",
+          "hi": "पहली बार यह दर्द 5 साल से भी पहले हुआ"
+        },
+        "btw_free": {
+          "en": "Completely fine between bouts",
+          "hi": "दौरों के बीच पूरी तरह ठीक"
+        },
+        "btw_some": {
+          "en": "Some pain always stays between bouts",
+          "hi": "दौरों के बीच भी थोड़ा दर्द रहता है"
+        },
+        "btw_often": {
+          "en": "Bouts coming more often or getting worse",
+          "hi": "दौरे जल्दी-जल्दी या ज़्यादा तेज़"
+        },
+        "t_better": {
+          "en": "Getting better",
+          "hi": "ठीक हो रहा है"
+        },
+        "t_same": {
+          "en": "About the same",
+          "hi": "लगभग वैसा ही"
+        },
+        "t_worse": {
+          "en": "Getting worse",
+          "hi": "बढ़ रहा है"
+        },
+        "ch_pop": {
+          "en": "Felt or heard a pop at the moment of injury",
+          "hi": "चोट के समय पॉप जैसी आवाज़ या एहसास"
+        },
+        "ch_swell_fast": {
+          "en": "The knee swelled up quickly, within about 2 hours of an injury",
+          "hi": "चोट के लगभग 2 घंटे के अंदर घुटना तेज़ी से सूज गया"
+        },
+        "ch_swell_slow": {
+          "en": "Swelling that came on slowly or the next day",
+          "hi": "धीरे-धीरे या अगले दिन आई सूजन"
+        },
+        "ch_giveway": {
+          "en": "The knee gives way or buckles",
+          "hi": "घुटना जवाब दे देता है या मुड़ जाता है"
+        },
+        "ch_lock": {
+          "en": "The knee catches, clicks painfully or gets stuck",
+          "hi": "घुटना अटकता है, दर्द के साथ क्लिक करता है या फंस जाता है"
+        },
+        "ch_stiff_short": {
+          "en": "Stiff in the morning, easing within 30 minutes",
+          "hi": "सुबह जकड़न जो 30 मिनट के अंदर कम हो जाती है"
+        },
+        "ch_stiff_long": {
+          "en": "Stiff in the morning for more than 30 minutes",
+          "hi": "सुबह 30 मिनट से ज़्यादा जकड़न"
+        },
+        "ch_crepitus": {
+          "en": "Grinding or crackling when the knee bends",
+          "hi": "घुटना मोड़ने पर किरकिराहट या कड़कड़ाहट"
+        },
+        "ch_bony": {
+          "en": "The knee looks knobbly or bigger than before (bony swelling)",
+          "hi": "घुटना पहले से गांठदार या बड़ा दिखता है (हड्डी की सूजन)"
+        },
+        "ch_lump_back": {
+          "en": "A soft swelling behind the knee",
+          "hi": "घुटने के पीछे नरम सूजन"
+        },
+        "ch_swell_front": {
+          "en": "A soft swelling on the front of the kneecap",
+          "hi": "घुटने की कटोरी के आगे नरम सूजन"
+        },
+        "ch_bump_below": {
+          "en": "A painful bump just below the kneecap",
+          "hi": "घुटने की कटोरी के ठीक नीचे दर्द वाला उभार"
+        },
+        "w_stairs": {
+          "en": "Stairs, especially coming down",
+          "hi": "सीढ़ियाँ, खासकर उतरते समय"
+        },
+        "w_squat": {
+          "en": "Squatting, kneeling or sitting cross-legged on the floor",
+          "hi": "उकड़ू बैठना, घुटनों के बल बैठना या ज़मीन पर पालथी मारकर बैठना"
+        },
+        "w_sit_long": {
+          "en": "Sitting for long with the knee bent (cinema, travel)",
+          "hi": "घुटना मोड़कर देर तक बैठना (सिनेमा, यात्रा)"
+        },
+        "w_run": {
+          "en": "Running or jumping",
+          "hi": "दौड़ना या कूदना"
+        },
+        "w_walk_long": {
+          "en": "Walking or standing for long",
+          "hi": "देर तक चलना या खड़े रहना"
+        },
+        "w_twist": {
+          "en": "Twisting or turning on the leg",
+          "hi": "पैर पर मुड़ना या घूमना"
+        },
+        "b_rest": {
+          "en": "Rest",
+          "hi": "आराम"
+        },
+        "o_overweight": {
+          "en": "Overweight, or gained weight recently",
+          "hi": "ज़्यादा वज़न, या हाल में वज़न बढ़ा"
+        },
+        "o_hip_pain": {
+          "en": "Pain in the groin or hip as well",
+          "hi": "साथ में जांघ के जोड़ या कूल्हे में दर्द"
+        },
+        "o_other_joints": {
+          "en": "Other joints also swollen or painful (hands, wrists, feet)",
+          "hi": "दूसरे जोड़ भी सूजे या दर्द वाले (हाथ, कलाई, पैर)"
+        },
+        "o_gout": {
+          "en": "Past attacks of gout, or a red, swollen big toe before",
+          "hi": "पहले गाउट के दौरे, या पहले पैर का अंगूठा लाल और सूजा था"
+        },
+        "rf_hot": {
+          "en": "The knee became hot, red and swollen over hours or days (with or without fever)",
+          "hi": "घुटना कुछ घंटों या दिनों में गर्म, लाल और सूजा हो गया (बुखार के साथ या बिना)"
+        },
+        "rf_fracture": {
+          "en": "After an injury: could not take 4 steps, cannot bend the knee to a right angle, or the kneecap or the bony point below the outer knee hurts to touch",
+          "hi": "चोट के बाद: 4 कदम नहीं चल पाए, घुटना समकोण तक नहीं मुड़ता, या घुटने की कटोरी या बाहर नीचे की हड्डी छूने पर दुखती है"
+        },
+        "rf_dvt": {
+          "en": "The calf is swollen, warm and tender, especially after long travel, an operation, a plaster cast or bed rest",
+          "hi": "पिंडली सूजी, गर्म और दबाने पर दर्द वाली है, खासकर लंबी यात्रा, ऑपरेशन, प्लास्टर या बिस्तर पर आराम के बाद"
+        },
+        "rf_locked": {
+          "en": "The knee is locked and will not straighten fully after an injury",
+          "hi": "चोट के बाद घुटना फंस गया है और पूरा सीधा नहीं होता"
+        },
+        "rf_child_limp": {
+          "en": "A child or teenager is limping, with pain in the knee, thigh or hip",
+          "hi": "बच्चा या किशोर लंगड़ा रहा है, घुटने, जांघ या कूल्हे में दर्द के साथ"
+        },
+        "rf_fever": {
+          "en": "Fever, night sweats or weight loss without trying",
+          "hi": "बुखार, रात को पसीना या बिना कोशिश वज़न घटना"
+        },
+        "rf_night": {
+          "en": "Constant pain at night that no position eases",
+          "hi": "रात को लगातार दर्द जो किसी भी पोज़िशन में कम न हो"
+        },
+        "kwalk_ok": {
+          "en": "Normally",
+          "hi": "सामान्य"
+        },
+        "kwalk_diff": {
+          "en": "With pain or a limp",
+          "hi": "दर्द या लंगड़ाहट के साथ"
+        },
+        "kwalk_no": {
+          "en": "Can hardly walk",
+          "hi": "मुश्किल से चल पाते हैं"
+        },
+        "stairs_ok": {
+          "en": "Normally",
+          "hi": "सामान्य"
+        },
+        "stairs_diff": {
+          "en": "With difficulty or support",
+          "hi": "मुश्किल से या सहारे से"
+        },
+        "stairs_no": {
+          "en": "Cannot do it",
+          "hi": "नहीं कर पाते"
+        },
+        "sleep_ok": {
+          "en": "Normal",
+          "hi": "सामान्य"
+        },
+        "sleep_bad": {
+          "en": "Pain wakes me up",
+          "hi": "दर्द से नींद खुलती है"
+        },
+        "knee_front": {
+          "en": "Front of the knee, around or behind the kneecap",
+          "hi": "घुटने का अगला हिस्सा, कटोरी के आसपास या पीछे"
+        },
+        "knee_front_l": {
+          "en": "Front of the knee, around or behind the kneecap (left)",
+          "hi": "घुटने का अगला हिस्सा, कटोरी के आसपास या पीछे (बायां)"
+        },
+        "knee_front_r": {
+          "en": "Front of the knee, around or behind the kneecap (right)",
+          "hi": "घुटने का अगला हिस्सा, कटोरी के आसपास या पीछे (दायां)"
+        },
+        "knee_in": {
+          "en": "Inner side of the knee",
+          "hi": "घुटने का अंदरूनी हिस्सा"
+        },
+        "knee_in_l": {
+          "en": "Inner side of the knee (left)",
+          "hi": "घुटने का अंदरूनी हिस्सा (बायां)"
+        },
+        "knee_in_r": {
+          "en": "Inner side of the knee (right)",
+          "hi": "घुटने का अंदरूनी हिस्सा (दायां)"
+        },
+        "knee_out": {
+          "en": "Outer side of the knee",
+          "hi": "घुटने का बाहरी हिस्सा"
+        },
+        "knee_out_l": {
+          "en": "Outer side of the knee (left)",
+          "hi": "घुटने का बाहरी हिस्सा (बायां)"
+        },
+        "knee_out_r": {
+          "en": "Outer side of the knee (right)",
+          "hi": "घुटने का बाहरी हिस्सा (दायां)"
+        },
+        "knee_back": {
+          "en": "Back of the knee",
+          "hi": "घुटने का पिछला हिस्सा"
+        },
+        "knee_back_l": {
+          "en": "Back of the knee (left)",
+          "hi": "घुटने का पिछला हिस्सा (बायां)"
+        },
+        "knee_back_r": {
+          "en": "Back of the knee (right)",
+          "hi": "घुटने का पिछला हिस्सा (दायां)"
+        },
+        "tibial_tub": {
+          "en": "Bony bump just below the kneecap",
+          "hi": "कटोरी के ठीक नीचे की हड्डी का उभार"
+        },
+        "tibial_tub_l": {
+          "en": "Bony bump just below the kneecap (left)",
+          "hi": "कटोरी के ठीक नीचे की हड्डी का उभार (बायां)"
+        },
+        "tibial_tub_r": {
+          "en": "Bony bump just below the kneecap (right)",
+          "hi": "कटोरी के ठीक नीचे की हड्डी का उभार (दायां)"
+        },
+        "calf": {
+          "en": "Calf (back of the lower leg)",
+          "hi": "पिंडली (निचले पैर का पिछला हिस्सा)"
+        },
+        "calf_l": {
+          "en": "Calf (back of the lower leg) (left)",
+          "hi": "पिंडली (निचले पैर का पिछला हिस्सा) (बायां)"
+        },
+        "calf_r": {
+          "en": "Calf (back of the lower leg) (right)",
+          "hi": "पिंडली (निचले पैर का पिछला हिस्सा) (दायां)"
+        },
+        "hipthigh": {
+          "en": "Groin or front of the thigh",
+          "hi": "जांघ का जोड़ या जांघ का अगला हिस्सा"
+        },
+        "hipthigh_l": {
+          "en": "Groin or front of the thigh (left)",
+          "hi": "जांघ का जोड़ या जांघ का अगला हिस्सा (बायां)"
+        },
+        "hipthigh_r": {
+          "en": "Groin or front of the thigh (right)",
+          "hi": "जांघ का जोड़ या जांघ का अगला हिस्सा (दायां)"
+        },
+        "squat_pos": {
+          "en": "Squat test (hold on to something): positive",
+          "hi": "उकड़ू बैठने का टेस्ट (कुछ पकड़कर): पॉज़िटिव"
+        },
+        "squat_neg": {
+          "en": "Squat test (hold on to something): negative",
+          "hi": "उकड़ू बैठने का टेस्ट (कुछ पकड़कर): नेगेटिव"
+        },
+        "squat_skip": {
+          "en": "Squat test (hold on to something): could not do / skip",
+          "hi": "उकड़ू बैठने का टेस्ट (कुछ पकड़कर): नहीं कर पाए / छोड़ें"
+        },
+        "jlt_pos": {
+          "en": "Press along the joint line: positive",
+          "hi": "जोड़ की लाइन पर दबाना: पॉज़िटिव"
+        },
+        "jlt_neg": {
+          "en": "Press along the joint line: negative",
+          "hi": "जोड़ की लाइन पर दबाना: नेगेटिव"
+        },
+        "jlt_skip": {
+          "en": "Press along the joint line: could not do / skip",
+          "hi": "जोड़ की लाइन पर दबाना: नहीं कर पाए / छोड़ें"
+        },
+        "ext_lim": {
+          "en": "Can the knee straighten fully?: positive",
+          "hi": "क्या घुटना पूरा सीधा होता है?: पॉज़िटिव"
+        },
+        "ext_ok": {
+          "en": "Can the knee straighten fully?: negative",
+          "hi": "क्या घुटना पूरा सीधा होता है?: नेगेटिव"
+        },
+        "ext_skip": {
+          "en": "Can the knee straighten fully?: could not do / skip",
+          "hi": "क्या घुटना पूरा सीधा होता है?: नहीं कर पाए / छोड़ें"
+        },
+        "age_lt40": {
+          "en": "Age under 40",
+          "hi": "40 से कम उम्र"
+        },
+        "age_ge50": {
+          "en": "Age 50 or over",
+          "hi": "50 या ज़्यादा उम्र"
+        },
+        "knee_one": {
+          "en": "One knee",
+          "hi": "एक घुटना"
+        },
+        "knee_both": {
+          "en": "Both knees",
+          "hi": "दोनों घुटने"
+        },
+        "knee_any": {
+          "en": "Knee pain",
+          "hi": "घुटने का दर्द"
+        },
+        "acr3": {
+          "en": "3 or more of the 6 osteoarthritis features",
+          "hi": "ऑस्टियोआर्थराइटिस के 6 में से 3 या ज़्यादा लक्षण"
+        },
+        "acr4": {
+          "en": "4 or more of the 6 osteoarthritis features",
+          "hi": "ऑस्टियोआर्थराइटिस के 6 में से 4 या ज़्यादा लक्षण"
+        },
+        "acr_lt3": {
+          "en": "Fewer than 3 of the 6 osteoarthritis features",
+          "hi": "ऑस्टियोआर्थराइटिस के 6 में से 3 से कम लक्षण"
+        },
+        "nice_oa": {
+          "en": "Age 40+, pain with activity, little morning stiffness",
+          "hi": "40+ उम्र, गतिविधि से दर्द, सुबह कम जकड़न"
+        },
+        "acl2": {
+          "en": "Two of: pop, quick swelling, giving way",
+          "hi": "इनमें से दो: पॉप, तेज़ सूजन, जवाब देना"
+        },
+        "age50": {
+          "en": "Age 50 or over",
+          "hi": "50 या ज़्यादा उम्र"
+        },
+        "nowarm": {
+          "en": "No warmth or redness",
+          "hi": "गर्मी या लाली नहीं"
+        },
+        "walk_hard": {
+          "en": "Difficulty walking",
+          "hi": "चलने में दिक्कत"
         }
       }
     }
