@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Spine Pain Guide – clinical knowledge base (all spine regions)",
-    "version": "v5.6",
+    "version": "v5.7",
     "exported": "2026-11-04",
     "languages": [
       "en",
@@ -269,9 +269,49 @@
         "url": "https://patient.info/health/Shingles.htm"
       },
       {
+        "key": "briggs09",
+        "title": "Briggs AM et al. Thoracic spine pain in the general population: prevalence, incidence and associated factors in children, adolescents and adults. A systematic review. BMC Musculoskelet Disord 2009;10:77 (1-year prevalence 3.5–34.8%; lifetime 15.6–19.5%)",
+        "url": "https://bmcmusculoskeletdisord.biomedcentral.com/track/pdf/10.1186/1471-2474-10-77"
+      },
+      {
+        "key": "swap05",
+        "title": "Swap CJ, Nagurney JT. Value and limitations of chest pain history in the evaluation of patients with suspected acute coronary syndromes. JAMA 2005;294:2623–9 (exertional LR 2.4; radiation to both arms 4.1; pleuritic 0.2; positional 0.3; sharp 0.3; reproducible by palpation 0.3)",
+        "url": "https://clinicalmonster.com/wp-content/uploads/sites/2/2016/06/Swap-ChestPainHx-JAMA-2005.pdf"
+      },
+      {
+        "key": "klompas02",
+        "title": "Klompas M. Does this patient have an acute thoracic aortic dissection? JAMA 2002;287:2262–72 (tearing or ripping pain LR+ 1.2–10.8; no sudden onset LR− 0.3; pulse deficit LR+ 5.7; focal neurological deficit LR+ 6.6–33)",
+        "url": "https://medicinespecifics.com/jama-aortic-dissection-likelihood-ratios"
+      },
+      {
+        "key": "cdczoster",
+        "title": "CDC (via Northwestern Medicine): about 1 in 3 people get shingles in their lifetime; antivirals work best within 72 hours",
+        "url": "https://nm.org/healthbeat/healthy-tips/I-Think-I-Have-Shingles-Now-What"
+      },
+      {
+        "key": "khadilkar15",
+        "title": "Khadilkar AV, Mandlik RM. Epidemiology and treatment of osteoporosis in women: an Indian perspective. Int J Womens Health 2015;7:841–50 (about 46 million Indian women with osteoporosis; Delhi study: vertebral fractures in 17.1% of women over 50)",
+        "url": "https://dovepress.com/epidemiology-and-treatment-of-osteoporosis-innbspwomen-an-indian-persp-peer-reviewed-article-IJWH"
+      },
+      {
+        "key": "tdiscpp",
+        "title": "Physiopedia – Thoracic disc syndrome (0.25–0.75% of symptomatic disc herniations; about three-quarters below T8, most at T11–T12; bladder or bowel problems in 15–20% of those with symptoms)",
+        "url": "https://physio-pedia.com/Thoracic_Disc_Syndrome"
+      },
+      {
         "key": "fm2016",
         "title": "Wolfe F et al. 2016 revisions to the fibromyalgia diagnostic criteria (criteria form)",
         "url": "https://lin-web.clarkson.edu/~lrussek/2016FMS.pdf"
+      },
+      {
+        "key": "pmr12",
+        "title": "Dasgupta B et al. 2012 provisional classification criteria for polymyalgia rheumatica (EULAR/ACR). Ann Rheum Dis 2012;71:484–92 (age 50+, both shoulders aching, raised ESR/CRP; score 4+ without ultrasound: sensitivity 68%, specificity 78%)",
+        "url": "https://ard.bmj.com/content/71/4/484"
+      },
+      {
+        "key": "scolio17",
+        "title": "Adolescent idiopathic scoliosis school screening with the Adams forward bend test and scoliometer. Malays Orthop J 2017;11(3) (prevalence 2.93% of 784 pupils; scoliometer 7°: sensitivity 78%, specificity 89%)",
+        "url": "https://www.morthoj.org/2017/v11n3/adolescent-idiopathic-scoliosis-abstract.php"
       },
       {
         "key": "besssap",
@@ -11908,7 +11948,13 @@
       "tag": null,
       "sourcesAddedByModule": [
         "thor",
-        "zoster"
+        "zoster",
+        "briggs09",
+        "swap05",
+        "klompas02",
+        "cdczoster",
+        "khadilkar15",
+        "tdiscpp"
       ],
       "conditions": [
         {
@@ -11923,8 +11969,8 @@
             "hi": "ऊपरी पीठ दर्द का सबसे आम कारण। पोस्चर, वज़न उठाने या तनाव से कंधे की हड्डियों के बीच और आसपास की मांसपेशियाँ जकड़ कर दुखती हैं।"
           },
           "causes": {
-            "en": "Hunching at a desk or phone, carrying bags on one shoulder, lifting, lack of exercise, stress and poor sleep.",
-            "hi": "डेस्क या फ़ोन पर झुकना, एक कंधे पर बैग, वज़न उठाना, व्यायाम की कमी, तनाव और खराब नींद।"
+            "en": "Hunching at a desk or phone, carrying bags on one shoulder, lifting, lack of exercise, stress and poor sleep. Up to about a third of adults have upper or mid back pain in a year.",
+            "hi": "डेस्क या फ़ोन पर झुकना, एक कंधे पर बैग, वज़न उठाना, व्यायाम की कमी, तनाव और खराब नींद। साल भर में लगभग एक-तिहाई तक वयस्कों को ऊपरी या बीच की पीठ में दर्द होता है।"
           },
           "confirm": {
             "en": "Clinical examination; scans are not needed without warning signs.",
@@ -12290,8 +12336,8 @@
             "hi": "गिरने के बाद, या हड्डियाँ कमज़ोर हों तो छोटा वज़न उठाने या खांसी से, थोरेसिक हड्डी दब जाती है। अचानक बीच में दर्द, खड़े होने पर ज़्यादा; कई फ्रैक्चर से पीठ गोल और कद कम होता है।"
           },
           "causes": {
-            "en": "Osteoporosis (age, menopause, steroid tablets, low vitamin D), trauma or, rarely, a tumour.",
-            "hi": "ऑस्टियोपोरोसिस (उम्र, मेनोपॉज़, स्टेरॉयड की गोलियाँ, कम विटामिन D), चोट या कभी-कभी गांठ।"
+            "en": "Osteoporosis (age, menopause, steroid tablets, low vitamin D), trauma or, rarely, a tumour. About 46 million Indian women have osteoporosis, and in a Delhi study 17.1% of women over 50 already had a vertebral fracture. Long steroid use and a major injury are the strongest clues.",
+            "hi": "ऑस्टियोपोरोसिस (उम्र, मेनोपॉज़, स्टेरॉयड की गोलियाँ, कम विटामिन D), चोट या कभी-कभी गांठ। लगभग 4.6 करोड़ भारतीय महिलाओं को ऑस्टियोपोरोसिस है, और दिल्ली के एक अध्ययन में 50 से ऊपर की 17.1% महिलाओं को पहले से रीढ़ का फ्रैक्चर था। लंबे समय तक स्टेरॉयड और बड़ी चोट सबसे मज़बूत संकेत हैं।"
           },
           "confirm": {
             "en": "X-ray, MRI to see if the fracture is new, and a DEXA bone density scan.",
@@ -12348,7 +12394,15 @@
                 "en": "Osteoporosis, or steroid tablets for 3+ months",
                 "hi": "ऑस्टियोपोरोसिस, या 3+ महीने स्टेरॉयड की गोलियां"
               },
-              "weight": 3
+              "weight": 4
+            },
+            {
+              "feature": "fx_combo",
+              "label": {
+                "en": "Three fracture risk factors together",
+                "hi": "फ्रैक्चर के तीन जोखिम एक साथ"
+              },
+              "weight": 4
             },
             {
               "feature": "a_60p",
@@ -12356,7 +12410,7 @@
                 "en": "60 or over",
                 "hi": "60 या ज़्यादा"
               },
-              "weight": 3
+              "weight": 2
             },
             {
               "feature": "a_50_59",
@@ -12460,8 +12514,8 @@
             "hi": "चिकनपॉक्स का वायरस एक नस में फिर सक्रिय होता है, जिससे पीठ और छाती के एक तरफ पट्टी में जलन वाला दर्द होता है। दाने आमतौर पर दर्द शुरू होने के 2–3 दिन बाद आते हैं।"
           },
           "causes": {
-            "en": "More common after 50 and with low immunity (diabetes, steroids, chemotherapy, HIV); about 1 in 4 people get it in their lifetime.",
-            "hi": "50 के बाद और कम इम्युनिटी (डायबिटीज़, स्टेरॉयड, कीमोथेरेपी, HIV) में ज़्यादा आम; लगभग 4 में से 1 व्यक्ति को जीवन में होता है।"
+            "en": "More common after 50 and with low immunity (diabetes, steroids, chemotherapy, HIV); about 1 in 3 people get it in their lifetime.",
+            "hi": "50 के बाद और कम इम्युनिटी (डायबिटीज़, स्टेरॉयड, कीमोथेरेपी, HIV) में ज़्यादा आम; लगभग 3 में से 1 व्यक्ति को जीवन में होता है।"
           },
           "confirm": {
             "en": "Usually diagnosed by a doctor from the rash pattern.",
@@ -12914,8 +12968,8 @@
             "hi": "सूजन पूरी रीढ़ और पसली के जोड़ों तक फैल सकती है, जिससे सुबह अकड़न, छाती का कम फैलना और सालों में झुका पोस्चर होता है।"
           },
           "causes": {
-            "en": "An immune condition linked to the HLA-B27 gene, usually starting before 40.",
-            "hi": "HLA-B27 जीन से जुड़ी इम्यून बीमारी, आमतौर पर 40 से पहले शुरू।"
+            "en": "An immune condition linked to the HLA-B27 gene, usually starting before 40. Two of the inflammatory pain features (long morning stiffness, better with exercise and worse with rest, waking in the second half of the night) make it about 3.7 times more likely, and three about 12 times.",
+            "hi": "HLA-B27 जीन से जुड़ी इम्यून बीमारी, आमतौर पर 40 से पहले शुरू। सूजन वाले दर्द के दो लक्षण (सुबह लंबी अकड़न, व्यायाम से बेहतर और आराम से बदतर, रात के दूसरे हिस्से में नींद खुलना) इसकी संभावना लगभग 3.7 गुना, और तीनों लगभग 12 गुना करते हैं।"
           },
           "confirm": {
             "en": "Blood tests (CRP, HLA-B27) and MRI of the sacroiliac joints and spine.",
@@ -12935,6 +12989,7 @@
             5
           ],
           "anchors": [
+            "ibp2",
             "ch_stiff_am",
             "b_exercise",
             "w_rest"
@@ -12980,28 +13035,44 @@
               "weight": -1
             },
             {
+              "feature": "ibp2",
+              "label": {
+                "en": "2 or more inflammatory back pain features",
+                "hi": "सूजन वाले पीठ दर्द के 2 या ज़्यादा लक्षण"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "ibp3",
+              "label": {
+                "en": "3 inflammatory back pain features",
+                "hi": "सूजन वाले पीठ दर्द के 3 लक्षण"
+              },
+              "weight": 2
+            },
+            {
               "feature": "ch_stiff_am",
               "label": {
                 "en": "Stiff for more than 30 minutes after waking",
                 "hi": "सुबह उठने पर 30 मिनट से ज़्यादा अकड़न"
               },
-              "weight": 3
+              "weight": 1
             },
             {
-              "feature": "b_exercise",
+              "feature": "ibp_ex",
               "label": {
-                "en": "Exercise",
-                "hi": "व्यायाम"
+                "en": "Better with exercise, worse with rest",
+                "hi": "व्यायाम से बेहतर, आराम से बदतर"
               },
-              "weight": 3
+              "weight": 1
             },
             {
-              "feature": "w_rest",
+              "feature": "ch_night_wake",
               "label": {
-                "en": "Resting (better once you move)",
-                "hi": "आराम करना (हिलने से बेहतर)"
+                "en": "Pain wakes you in the second half of the night and eases after getting up",
+                "hi": "रात के दूसरे हिस्से में दर्द से नींद खुलती है और उठने पर आराम मिलता है"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "r_spa",
@@ -13010,6 +13081,14 @@
                 "hi": "सोरायसिस, आंतों की सूजन (IBD) या बार-बार लाल, दर्द भरी आंख"
               },
               "weight": 3
+            },
+            {
+              "feature": "r_famspa",
+              "label": {
+                "en": "Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease",
+                "hi": "माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)"
+              },
+              "weight": 2
             },
             {
               "feature": "d_3m",
@@ -13089,8 +13168,8 @@
             "hi": "थोरेसिक डिस्क नस की जड़ को दबाकर छाती के चारों ओर पट्टी जैसा दर्द, या स्पाइनल कॉर्ड को दबाकर पैरों में कमज़ोरी, सुन्नपन और चलने में दिक्कत कर सकती है।"
           },
           "causes": {
-            "en": "Disc degeneration, sometimes with calcification; uncommon compared with neck and lower back.",
-            "hi": "डिस्क की घिसावट, कभी-कभी कैल्सिफिकेशन के साथ; गर्दन और कमर की तुलना में कम आम।"
+            "en": "Disc degeneration, sometimes with calcification. It is uncommon: only 0.25–0.75% of disc herniations that cause symptoms are in the thoracic spine, about three-quarters of them below T8.",
+            "hi": "डिस्क की घिसावट, कभी-कभी कैल्सिफिकेशन के साथ। यह कम आम है: लक्षण देने वाले डिस्क हर्निएशन में से सिर्फ़ 0.25–0.75% थोरेसिक रीढ़ में होते हैं, इनमें लगभग तीन-चौथाई T8 के नीचे।"
           },
           "confirm": {
             "en": "Neurological examination and MRI of the thoracic spine.",
@@ -13455,8 +13534,8 @@
           },
           "scientific": "Spondylodiscitis · Pott's disease",
           "what": {
-            "en": "The thoracic spine is the most common site of spinal TB, which causes constant pain, fever, night sweats and weight loss, and can lead to a hump.",
-            "hi": "थोरेसिक रीढ़ स्पाइनल टीबी की सबसे आम जगह है, जिससे लगातार दर्द, बुखार, रात को पसीना और वज़न घटता है, और कूबड़ बन सकता है।"
+            "en": "The thoracic spine is the most common site of spinal TB, which causes constant pain, fever, night sweats and weight loss, and can lead to a hump. India has about a quarter of the world’s TB cases.",
+            "hi": "थोरेसिक रीढ़ स्पाइनल टीबी की सबसे आम जगह है, जिससे लगातार दर्द, बुखार, रात को पसीना और वज़न घटता है, और कूबड़ बन सकता है। दुनिया के लगभग एक-चौथाई टीबी मामले भारत में हैं।"
           },
           "causes": {
             "en": "TB or bacteria reaching the spine through the blood; diabetes and low immunity raise the risk.",
@@ -13654,7 +13733,7 @@
                 "en": "Constant pain at night that no position eases",
                 "hi": "रात को लगातार दर्द जो किसी भी पोज़िशन में कम न हो"
               },
-              "weight": 3
+              "weight": 1
             },
             {
               "feature": "rf_fever",
@@ -13678,7 +13757,7 @@
                 "en": "60 or over",
                 "hi": "60 या ज़्यादा"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "d_3m",
@@ -13714,8 +13793,8 @@
             "hi": "दिल की धमनियों का संकरा होना।"
           },
           "confirm": {
-            "en": "ECG, blood tests and a stress test.",
-            "hi": "ECG, ब्लड टेस्ट और स्ट्रेस टेस्ट।"
+            "en": "ECG, blood tests and a stress test. In emergency studies, pain brought on by exertion made a heart cause about 2.4 times more likely and pain spreading to both arms about 4 times; pain that is sharp, changes with breathing or position, or is reproduced by pressing makes it less likely, but none of these rules it out.",
+            "hi": "ECG, ब्लड टेस्ट और स्ट्रेस टेस्ट। इमरजेंसी अध्ययनों में मेहनत से शुरू दर्द ने दिल की वजह की संभावना लगभग 2.4 गुना और दोनों बांहों में फैलते दर्द ने लगभग 4 गुना की; तेज़ चुभन वाला, सांस या पोज़िशन से बदलने वाला, या दबाने पर दोबारा आने वाला दर्द संभावना कम करता है, पर इनमें से कोई इसे खारिज नहीं करता।"
           },
           "treat": {
             "en": "Cardiology assessment.",
@@ -13756,6 +13835,14 @@
                 "hi": "मेहनत जैसे सीढ़ी चढ़ना या तेज़ चलना"
               },
               "weight": 6
+            },
+            {
+              "feature": "ch_arm_spread",
+              "label": {
+                "en": "The pain spreads into one or both arms",
+                "hi": "दर्द एक या दोनों बांहों में फैलता है"
+              },
+              "weight": 2
             },
             {
               "feature": "chest",
@@ -13804,6 +13891,38 @@
                 "hi": "डायबिटीज़, HIV या कम इम्युनिटी"
               },
               "weight": 1
+            },
+            {
+              "feature": "r_vasc",
+              "label": {
+                "en": "Smoking or tobacco, diabetes, high blood pressure or high cholesterol",
+                "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_sharp_breath",
+              "label": {
+                "en": "Sharp, catching pain on a deep breath",
+                "hi": "गहरी सांस लेने पर तेज़, अटकने वाला दर्द"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "press_pos",
+              "label": {
+                "en": "Press test: positive",
+                "hi": "दबाने का टेस्ट: पॉज़िटिव"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "twist_pos",
+              "label": {
+                "en": "Breath-and-twist test: positive",
+                "hi": "सांस-और-मोड़ टेस्ट: पॉज़िटिव"
+              },
+              "weight": -1
             }
           ]
         }
@@ -13817,8 +13936,8 @@
           },
           "scientific": "Acute coronary syndrome",
           "what": {
-            "en": "Chest pressure spreading to the arm, neck, jaw or back with sweating or breathlessness can be a heart attack. Call an ambulance now.",
-            "hi": "सीने का दबाव जो बांह, गर्दन, जबड़े या पीठ तक जाए, पसीने या सांस फूलने के साथ, दिल का दौरा हो सकता है। अभी एम्बुलेंस बुलाएं।"
+            "en": "Chest pressure spreading to the arm, neck, jaw or back with sweating or breathlessness can be a heart attack. Call 108 now.",
+            "hi": "सीने का दबाव जो बांह, गर्दन, जबड़े या पीठ तक जाए, पसीने या सांस फूलने के साथ, दिल का दौरा हो सकता है। अभी 108 बुलाएं।"
           },
           "when": "rf_cardiac"
         },
@@ -13830,8 +13949,8 @@
           },
           "scientific": "Acute aortic dissection",
           "what": {
-            "en": "Sudden, severe tearing pain between the shoulder blades is a classic warning sign of a tear in the main artery. Call an ambulance now.",
-            "hi": "कंधे की हड्डियों के बीच अचानक, बहुत तेज़ चीरने जैसा दर्द मुख्य धमनी फटने का खास संकेत है। अभी एम्बुलेंस बुलाएं।"
+            "en": "Sudden, severe tearing pain between the shoulder blades is a classic warning sign of a tear in the main artery. Most people with a dissection describe a sudden start; a tearing quality and a weak pulse or weakness in a limb make it much more likely. No single sign rules it in or out, so a CT scan is needed. Call 108 now.",
+            "hi": "कंधे की हड्डियों के बीच अचानक, बहुत तेज़ चीरने जैसा दर्द मुख्य धमनी फटने का खास संकेत है। डिसेक्शन वाले ज़्यादातर लोग अचानक शुरुआत बताते हैं; चीरने जैसा दर्द और कमज़ोर नब्ज़ या किसी अंग में कमज़ोरी इसकी संभावना बहुत बढ़ाते हैं। कोई एक संकेत इसे पक्का या खारिज नहीं करता, इसलिए CT स्कैन ज़रूरी है। अभी 108 बुलाएं।"
           },
           "when": "rf_tear"
         },
@@ -14045,17 +14164,7 @@
               "en": "Inflammatory pattern: long morning stiffness, better with exercise",
               "hi": "सूजन वाला पैटर्न: सुबह लंबी अकड़न, व्यायाम से आराम"
             },
-            "when": {
-              "all": [
-                "ch_stiff_am",
-                {
-                  "any": [
-                    "b_exercise",
-                    "w_rest"
-                  ]
-                }
-              ]
-            }
+            "when": "ibp2"
           },
           {
             "reason": "y_age",
@@ -14267,6 +14376,55 @@
         {
           "id": "radicular",
           "when": "ch_band"
+        },
+        {
+          "id": "ibp_ex",
+          "when": {
+            "any": [
+              "b_exercise",
+              "w_rest"
+            ]
+          }
+        },
+        {
+          "id": "ibp2",
+          "when": {
+            "atLeast": [
+              2,
+              [
+                "ch_stiff_am",
+                "ibp_ex",
+                "ch_night_wake"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "ibp3",
+          "when": {
+            "atLeast": [
+              3,
+              [
+                "ch_stiff_am",
+                "ibp_ex",
+                "ch_night_wake"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fx_combo",
+          "when": {
+            "atLeast": [
+              3,
+              [
+                "sex_f",
+                "a_60p",
+                "rf_trauma",
+                "r_bones"
+              ]
+            ]
+          }
         }
       ],
       "patterns": {
@@ -14325,6 +14483,20 @@
             "label": {
               "en": "Stiff for more than 30 minutes after waking",
               "hi": "सुबह उठने पर 30 मिनट से ज़्यादा अकड़न"
+            }
+          },
+          {
+            "id": "ch_night_wake",
+            "label": {
+              "en": "Pain wakes you in the second half of the night and eases after getting up",
+              "hi": "रात के दूसरे हिस्से में दर्द से नींद खुलती है और उठने पर आराम मिलता है"
+            }
+          },
+          {
+            "id": "ch_arm_spread",
+            "label": {
+              "en": "The pain spreads into one or both arms",
+              "hi": "दर्द एक या दोनों बांहों में फैलता है"
             }
           },
           {
@@ -14837,6 +15009,14 @@
           "en": "Stiff for more than 30 minutes after waking",
           "hi": "सुबह उठने पर 30 मिनट से ज़्यादा अकड़न"
         },
+        "ch_night_wake": {
+          "en": "Pain wakes you in the second half of the night and eases after getting up",
+          "hi": "रात के दूसरे हिस्से में दर्द से नींद खुलती है और उठने पर आराम मिलता है"
+        },
+        "ch_arm_spread": {
+          "en": "The pain spreads into one or both arms",
+          "hi": "दर्द एक या दोनों बांहों में फैलता है"
+        },
         "ch_leg_weak": {
           "en": "Weak, numb or stiff legs or difficulty walking",
           "hi": "पैरों में कमज़ोरी, सुन्नपन, अकड़न या चलने में दिक्कत"
@@ -15040,6 +15220,22 @@
         "age_ge50": {
           "en": "Age 50 or over",
           "hi": "50 या ज़्यादा उम्र"
+        },
+        "ibp_ex": {
+          "en": "Better with exercise, worse with rest",
+          "hi": "व्यायाम से बेहतर, आराम से बदतर"
+        },
+        "ibp2": {
+          "en": "2 or more inflammatory back pain features",
+          "hi": "सूजन वाले पीठ दर्द के 2 या ज़्यादा लक्षण"
+        },
+        "ibp3": {
+          "en": "3 inflammatory back pain features",
+          "hi": "सूजन वाले पीठ दर्द के 3 लक्षण"
+        },
+        "fx_combo": {
+          "en": "Three fracture risk factors together",
+          "hi": "फ्रैक्चर के तीन जोखिम एक साथ"
         }
       }
     },
@@ -15052,7 +15248,9 @@
       },
       "tag": null,
       "sourcesAddedByModule": [
-        "fm2016"
+        "fm2016",
+        "pmr12",
+        "scolio17"
       ],
       "conditions": [
         {
@@ -15233,8 +15431,8 @@
             "hi": "सूजन SI जोड़ों और कमर से शुरू होकर पूरी रीढ़ से गर्दन तक चढ़ सकती है, जिससे सुबह अकड़न होती है जो व्यायाम से कम होती है और सालों में झुका पोस्चर।"
           },
           "causes": {
-            "en": "An immune condition linked to HLA-B27, usually starting before 40; psoriasis, bowel inflammation and eye inflammation are related.",
-            "hi": "HLA-B27 से जुड़ी इम्यून बीमारी, आमतौर पर 40 से पहले; सोरायसिस, आंतों और आंख की सूजन इससे जुड़ी हैं।"
+            "en": "An immune condition linked to HLA-B27, usually starting before 40; psoriasis, bowel inflammation and eye inflammation are related. Two inflammatory back pain features make it about 3.7 times more likely, and three or more about 12 times.",
+            "hi": "HLA-B27 से जुड़ी इम्यून बीमारी, आमतौर पर 40 से पहले; सोरायसिस, आंतों और आंख की सूजन इससे जुड़ी हैं। सूजन वाले पीठ दर्द के दो लक्षण इसकी संभावना लगभग 3.7 गुना, और तीन या ज़्यादा लगभग 12 गुना करते हैं।"
           },
           "confirm": {
             "en": "Blood tests (CRP, ESR, HLA-B27) and MRI of the sacroiliac joints and spine.",
@@ -15254,6 +15452,7 @@
             5
           ],
           "anchors": [
+            "ibp2",
             "ch_stiff_am",
             "b_exercise",
             "w_rest",
@@ -15316,34 +15515,50 @@
               "weight": 1
             },
             {
+              "feature": "ibp2",
+              "label": {
+                "en": "2 or more inflammatory back pain features",
+                "hi": "सूजन वाले पीठ दर्द के 2 या ज़्यादा लक्षण"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "ibp3",
+              "label": {
+                "en": "3 inflammatory back pain features",
+                "hi": "सूजन वाले पीठ दर्द के 3 लक्षण"
+              },
+              "weight": 2
+            },
+            {
               "feature": "ch_stiff_am",
               "label": {
                 "en": "Stiff for more than 30 minutes after waking",
                 "hi": "सुबह उठने पर 30 मिनट से ज़्यादा अकड़न"
               },
-              "weight": 3
+              "weight": 1
             },
             {
-              "feature": "b_exercise",
+              "feature": "ibp_ex",
               "label": {
-                "en": "Exercise and movement",
-                "hi": "व्यायाम और हलचल"
+                "en": "Better with exercise, worse with rest",
+                "hi": "व्यायाम से बेहतर, आराम से बदतर"
               },
-              "weight": 3
-            },
-            {
-              "feature": "w_rest",
-              "label": {
-                "en": "Resting (better once you move)",
-                "hi": "आराम करना (हिलने से बेहतर)"
-              },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "ch_night_wake",
               "label": {
                 "en": "Wakes you late at night and eases after getting up",
                 "hi": "देर रात दर्द से नींद खुलती है, उठने पर आराम"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "r_famspa",
+              "label": {
+                "en": "Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease",
+                "hi": "माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)"
               },
               "weight": 2
             },
@@ -15498,6 +15713,14 @@
               "weight": 4
             },
             {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -3
+            },
+            {
               "feature": "a_30_39",
               "label": {
                 "en": "30–39",
@@ -15607,8 +15830,8 @@
             "hi": "विटामिन D की गंभीर कमी से हड्डियाँ नरम होती हैं, जिससे पीठ, पसलियों, कूल्हों और पैरों में फैला दर्द, हड्डियों में दुखन और जांघ की कमज़ोर मांसपेशियाँ होती हैं।"
           },
           "causes": {
-            "en": "Little sunlight exposure, covered skin, darker skin, diet low in vitamin D, obesity, kidney or liver disease and some medicines.",
-            "hi": "कम धूप, ढकी त्वचा, गहरी त्वचा, विटामिन D कम भोजन, मोटापा, गुर्दे या लिवर की बीमारी और कुछ दवाएं।"
+            "en": "Little sunlight exposure, covered skin, darker skin, diet low in vitamin D, obesity, kidney or liver disease and some medicines. About 67% of Indian adults have low vitamin D, though most do not have osteomalacia.",
+            "hi": "कम धूप, ढकी त्वचा, गहरी त्वचा, विटामिन D कम भोजन, मोटापा, गुर्दे या लिवर की बीमारी और कुछ दवाएं। लगभग 67% भारतीय वयस्कों में विटामिन D कम है, हालांकि ज़्यादातर को ऑस्टियोमलेशिया नहीं होता।"
           },
           "confirm": {
             "en": "Blood tests: vitamin D, calcium, phosphate and alkaline phosphatase.",
@@ -15734,8 +15957,8 @@
             "hi": "पतली हड्डियों से कई स्तरों पर हड्डियाँ दबती हैं, जिससे अलग-अलग जगह पीठ दर्द, गोल पीठ और कद कम होता है।"
           },
           "causes": {
-            "en": "Age, menopause, long-term steroid tablets, low vitamin D and calcium, smoking and low body weight.",
-            "hi": "उम्र, मेनोपॉज़, लंबे समय स्टेरॉयड की गोलियाँ, कम विटामिन D और कैल्शियम, धूम्रपान और कम वज़न।"
+            "en": "Age, menopause, long-term steroid tablets, low vitamin D and calcium, smoking and low body weight. About 46 million Indian women have osteoporosis; in a Delhi study 17.1% of women over 50 had a vertebral fracture.",
+            "hi": "उम्र, मेनोपॉज़, लंबे समय स्टेरॉयड की गोलियाँ, कम विटामिन D और कैल्शियम, धूम्रपान और कम वज़न। लगभग 4.6 करोड़ भारतीय महिलाओं को ऑस्टियोपोरोसिस है; दिल्ली के एक अध्ययन में 50 से ऊपर की 17.1% महिलाओं को रीढ़ का फ्रैक्चर था।"
           },
           "confirm": {
             "en": "Spine X-rays and a DEXA bone density scan.",
@@ -15776,12 +15999,20 @@
               "weight": 4
             },
             {
+              "feature": "fx_combo",
+              "label": {
+                "en": "Three fracture risk factors together",
+                "hi": "फ्रैक्चर के तीन जोखिम एक साथ"
+              },
+              "weight": 2
+            },
+            {
               "feature": "a_60p",
               "label": {
                 "en": "60 or over",
                 "hi": "60 या ज़्यादा"
               },
-              "weight": 3
+              "weight": 2
             },
             {
               "feature": "a_50_59",
@@ -15849,8 +16080,8 @@
             "hi": "अज्ञात इम्यून कारण; जायंट सेल आर्टराइटिस से जुड़ा (अचानक सिरदर्द या नज़र जाना इमरजेंसी है)।"
           },
           "confirm": {
-            "en": "Blood tests (ESR, CRP) and examination.",
-            "hi": "ब्लड टेस्ट (ESR, CRP) और जांच।"
+            "en": "Blood tests (ESR, CRP) and examination. Classification criteria need age 50 or over, aching in both shoulders and raised ESR or CRP, then add points for morning stiffness over 45 minutes, hip pain and normal rheumatoid tests (sensitivity 68%, specificity 78%).",
+            "hi": "ब्लड टेस्ट (ESR, CRP) और जांच। वर्गीकरण मापदंडों में 50 या ज़्यादा उम्र, दोनों कंधों में दर्द और बढ़ा ESR या CRP ज़रूरी है, फिर 45 मिनट से ज़्यादा सुबह की अकड़न, कूल्हे के दर्द और सामान्य रूमेटॉइड टेस्ट के अंक जुड़ते हैं (संवेदनशीलता 68%, विशिष्टता 78%)।"
           },
           "treat": {
             "en": "Steroid tablets under close medical supervision.",
@@ -16253,8 +16484,8 @@
             "hi": "किशोरावस्था की बढ़त, पोस्चर, बुज़ुर्गों में घिसावट या कभी-कभी नस और मांसपेशी की बीमारियाँ।"
           },
           "confirm": {
-            "en": "Standing whole-spine X-rays.",
-            "hi": "खड़े होकर पूरी रीढ़ का एक्स-रे।"
+            "en": "A doctor looks at the back while you bend forward (Adams test) and may measure the rib hump with a scoliometer (at 7° it finds 78% of curves, specificity 89%); standing whole-spine X-rays confirm it. About 3% of school children have a curve of 10° or more.",
+            "hi": "डॉक्टर आगे झुकते समय पीठ देखते हैं (एडम्स टेस्ट) और स्कोलियोमीटर से पसलियों का उभार माप सकते हैं (7° पर यह 78% मोड़ पकड़ता है, विशिष्टता 89%); खड़े होकर पूरी रीढ़ का एक्स-रे पक्का करता है। लगभग 3% स्कूली बच्चों में 10° या ज़्यादा का मोड़ होता है।"
           },
           "treat": {
             "en": "Exercise and physiotherapy; a brace in growing children; surgery for severe or progressive curves.",
@@ -16312,6 +16543,14 @@
                 "hi": "गोल पीठ, रीढ़ में मोड़ या कद कम होना"
               },
               "weight": 4
+            },
+            {
+              "feature": "ch_rib_hump",
+              "label": {
+                "en": "Someone has noticed one shoulder blade or one side of the ribs sticking out more, especially when bending forward",
+                "hi": "किसी ने देखा है कि एक कंधे की हड्डी या पसलियों का एक हिस्सा ज़्यादा उभरा है, खासकर आगे झुकने पर"
+              },
+              "weight": 3
             },
             {
               "feature": "wall_pos",
@@ -16438,7 +16677,7 @@
                 "en": "Constant pain at night that no position eases",
                 "hi": "रात को लगातार दर्द जो किसी भी पोज़िशन में कम न हो"
               },
-              "weight": 3
+              "weight": 1
             },
             {
               "feature": "a_60p",
@@ -16446,7 +16685,7 @@
                 "en": "60 or over",
                 "hi": "60 या ज़्यादा"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "a_50_59",
@@ -16645,18 +16884,7 @@
               "en": "Inflammatory pattern: long morning stiffness, better with exercise",
               "hi": "सूजन वाला पैटर्न: सुबह लंबी अकड़न, व्यायाम से आराम"
             },
-            "when": {
-              "all": [
-                "ch_stiff_am",
-                {
-                  "any": [
-                    "b_exercise",
-                    "w_rest",
-                    "ch_night_wake"
-                  ]
-                }
-              ]
-            }
+            "when": "ibp2"
           },
           {
             "reason": "y_bone",
@@ -16689,7 +16917,8 @@
             "when": {
               "any": [
                 "ch_posture",
-                "wall_pos"
+                "wall_pos",
+                "ch_rib_hump"
               ]
             }
           },
@@ -16980,6 +17209,55 @@
               ]
             ]
           }
+        },
+        {
+          "id": "ibp_ex",
+          "when": {
+            "any": [
+              "b_exercise",
+              "w_rest"
+            ]
+          }
+        },
+        {
+          "id": "ibp2",
+          "when": {
+            "atLeast": [
+              2,
+              [
+                "ch_stiff_am",
+                "ibp_ex",
+                "ch_night_wake"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "ibp3",
+          "when": {
+            "atLeast": [
+              3,
+              [
+                "ch_stiff_am",
+                "ibp_ex",
+                "ch_night_wake"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fx_combo",
+          "when": {
+            "atLeast": [
+              3,
+              [
+                "sex_f",
+                "a_60p",
+                "rf_trauma",
+                "r_bones"
+              ]
+            ]
+          }
         }
       ],
       "patterns": {
@@ -17052,6 +17330,13 @@
             "label": {
               "en": "Rounded back, a curve in the spine or loss of height",
               "hi": "गोल पीठ, रीढ़ में मोड़ या कद कम होना"
+            }
+          },
+          {
+            "id": "ch_rib_hump",
+            "label": {
+              "en": "Someone has noticed one shoulder blade or one side of the ribs sticking out more, especially when bending forward",
+              "hi": "किसी ने देखा है कि एक कंधे की हड्डी या पसलियों का एक हिस्सा ज़्यादा उभरा है, खासकर आगे झुकने पर"
             }
           },
           {
@@ -17483,6 +17768,10 @@
           "en": "Rounded back, a curve in the spine or loss of height",
           "hi": "गोल पीठ, रीढ़ में मोड़ या कद कम होना"
         },
+        "ch_rib_hump": {
+          "en": "Someone has noticed one shoulder blade or one side of the ribs sticking out more, especially when bending forward",
+          "hi": "किसी ने देखा है कि एक कंधे की हड्डी या पसलियों का एक हिस्सा ज़्यादा उभरा है, खासकर आगे झुकने पर"
+        },
         "ch_numb": {
           "en": "Numbness or tingling in arms or legs",
           "hi": "बांहों या पैरों में सुन्नपन या झुनझुनी"
@@ -17698,6 +17987,22 @@
         "wp_axial": {
           "en": "Spine or chest pain",
           "hi": "रीढ़ या छाती दर्द"
+        },
+        "ibp_ex": {
+          "en": "Better with exercise, worse with rest",
+          "hi": "व्यायाम से बेहतर, आराम से बदतर"
+        },
+        "ibp2": {
+          "en": "2 or more inflammatory back pain features",
+          "hi": "सूजन वाले पीठ दर्द के 2 या ज़्यादा लक्षण"
+        },
+        "ibp3": {
+          "en": "3 inflammatory back pain features",
+          "hi": "सूजन वाले पीठ दर्द के 3 लक्षण"
+        },
+        "fx_combo": {
+          "en": "Three fracture risk factors together",
+          "hi": "फ्रैक्चर के तीन जोखिम एक साथ"
         }
       }
     },

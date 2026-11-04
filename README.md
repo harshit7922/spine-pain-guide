@@ -100,7 +100,7 @@ Sample PDF reports (made from test answers, not real patients): [lower back](doc
 
 ## Evidence tables
 
-Each region has a plain-language evidence table listing every number the app shows, the likelihood ratios behind the scoring points and the sources: [lower back](research/lumbar-evidence.md) · [neck and arm](research/cervical-evidence.md) · [shoulder](research/shoulder-evidence.md) · [knee](research/knee-evidence.md) · [leg, ankle and foot](research/foot-evidence.md) · [hip and groin](research/hip-evidence.md) · [elbow, wrist and hand](research/hand-evidence.md). The order of work is in [research/ROADMAP.md](research/ROADMAP.md).
+Each region has a plain-language evidence table listing every number the app shows, the likelihood ratios behind the scoring points and the sources: [lower back](research/lumbar-evidence.md) · [neck and arm](research/cervical-evidence.md) · [shoulder](research/shoulder-evidence.md) · [knee](research/knee-evidence.md) · [leg, ankle and foot](research/foot-evidence.md) · [hip and groin](research/hip-evidence.md) · [elbow, wrist and hand](research/hand-evidence.md) · [upper/mid back and whole spine](research/thoracic-evidence.md). The order of work is in [research/ROADMAP.md](research/ROADMAP.md).
 
 ## Where the research lives (and how the calculation reads it)
 
@@ -119,7 +119,7 @@ How a result is calculated:
 ### To change or add research
 1. Edit the data file (for example change a weight in `data/cervical.js`). Keep English and Hindi together: `L('English', 'हिंदी')`.
 2. Reload `index.html` — the site uses the new numbers immediately.
-3. Run the checks: `node tests/run_scenarios.js` (135 clinical scenarios must still pass).
+3. Run the checks: `node tests/run_scenarios.js` (144 clinical scenarios must still pass).
 4. Refresh the readable copies: `node tools/export_kb.js` then `python3 tools/build_xlsx.py`.
 5. Rebuild the single-file version: `python3 tools/bundle.py` → `dist/spine-pain-guide.html`. This one file contains everything (use it for hosting or to send to someone); the hosted link is published from it.
 
@@ -141,7 +141,7 @@ js/app.js             engine, screens, 3D viewer, PDF report
 research/             spine-knowledge-base.json / .xlsx (all modules, EN + HI); personal case files stay out of git
 dist/                 spine-pain-guide.html — the whole site in one file; web/index.html — same file, ready to host (see HOSTING.md)
 tools/                export_kb.js, build_xlsx.py (rebuild the research copies), bundle.py (single-file version)
-tests/                run_scenarios.js + cases/ (135 scenarios: hand, hip, foot, knee, shoulder, lumbar, cervical, thoracic + whole, history, lumbar evidence)
+tests/                run_scenarios.js + cases/ (144 scenarios: hand, hip, foot, knee, shoulder, lumbar, cervical, thoracic + whole, history, lumbar evidence)
 3d-build/             Python scripts that generate the 3D bodies, bones and nerves (build.sh)
 ```
 

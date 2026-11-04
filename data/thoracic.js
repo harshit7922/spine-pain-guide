@@ -6,7 +6,13 @@ const L = (en, hi) => ({en, hi});
 const C = SPG.data.common;
 C.SRC.push(
   ['thor','Healthdirect (Australian Government) – Upper back (thoracic) pain','https://www.healthdirect.gov.au/upper-back-thoracic-pain'],
-  ['zoster','Patient.info – Shingles (herpes zoster)','https://patient.info/health/Shingles.htm']
+  ['zoster','Patient.info – Shingles (herpes zoster)','https://patient.info/health/Shingles.htm'],
+  ['briggs09','Briggs AM et al. Thoracic spine pain in the general population: prevalence, incidence and associated factors in children, adolescents and adults. A systematic review. BMC Musculoskelet Disord 2009;10:77 (1-year prevalence 3.5–34.8%; lifetime 15.6–19.5%)','https://bmcmusculoskeletdisord.biomedcentral.com/track/pdf/10.1186/1471-2474-10-77'],
+  ['swap05','Swap CJ, Nagurney JT. Value and limitations of chest pain history in the evaluation of patients with suspected acute coronary syndromes. JAMA 2005;294:2623–9 (exertional LR 2.4; radiation to both arms 4.1; pleuritic 0.2; positional 0.3; sharp 0.3; reproducible by palpation 0.3)','https://clinicalmonster.com/wp-content/uploads/sites/2/2016/06/Swap-ChestPainHx-JAMA-2005.pdf'],
+  ['klompas02','Klompas M. Does this patient have an acute thoracic aortic dissection? JAMA 2002;287:2262–72 (tearing or ripping pain LR+ 1.2–10.8; no sudden onset LR− 0.3; pulse deficit LR+ 5.7; focal neurological deficit LR+ 6.6–33)','https://medicinespecifics.com/jama-aortic-dissection-likelihood-ratios'],
+  ['cdczoster','CDC (via Northwestern Medicine): about 1 in 3 people get shingles in their lifetime; antivirals work best within 72 hours','https://nm.org/healthbeat/healthy-tips/I-Think-I-Have-Shingles-Now-What'],
+  ['khadilkar15','Khadilkar AV, Mandlik RM. Epidemiology and treatment of osteoporosis in women: an Indian perspective. Int J Womens Health 2015;7:841–50 (about 46 million Indian women with osteoporosis; Delhi study: vertebral fractures in 17.1% of women over 50)','https://dovepress.com/epidemiology-and-treatment-of-osteoporosis-innbspwomen-an-indian-persp-peer-reviewed-article-IJWH'],
+  ['tdiscpp','Physiopedia – Thoracic disc syndrome (0.25–0.75% of symptomatic disc herniations; about three-quarters below T8, most at T11–T12; bladder or bowel problems in 15–20% of those with symptoms)','https://physio-pedia.com/Thoracic_Disc_Syndrome']
 );
 const ONSETS = C.ONSETS.filter(o => !['on_preg'].includes(o[0])).concat([
   ['on_carry',L('Carrying a heavy bag or child on one side','एक तरफ भारी बैग या बच्चा उठाना')],
@@ -22,6 +28,8 @@ const PAT = {
     ['ch_spasm',L('Muscle spasm or a knot that grips','मांसपेशियों में ऐंठन या जकड़ती गांठ')],
     ['ch_posture',L('Rounded upper back or loss of height','गोल ऊपरी पीठ या कद कम होना')],
     ['ch_stiff_am',L('Stiff for more than 30 minutes after waking','सुबह उठने पर 30 मिनट से ज़्यादा अकड़न')],
+    ['ch_night_wake',L('Pain wakes you in the second half of the night and eases after getting up','रात के दूसरे हिस्से में दर्द से नींद खुलती है और उठने पर आराम मिलता है')],
+    ['ch_arm_spread',L('The pain spreads into one or both arms','दर्द एक या दोनों बांहों में फैलता है')],
     ['ch_leg_weak',L('Weak, numb or stiff legs or difficulty walking','पैरों में कमज़ोरी, सुन्नपन, अकड़न या चलने में दिक्कत')]
   ],
   worse:[
@@ -76,8 +84,8 @@ D.gastro = {n:L('Gastroenterology / General surgery','गैस्ट्रो�
 const CONDS = [
   {id:'tstrain',th:[9,6,3],anchor:['interscap','scap','midback_side'],depts:['physio','gp','ortho_spine'],
    name:L('Upper back muscle strain and postural pain','ऊपरी पीठ की मांसपेशियों में खिंचाव और पोस्चर का दर्द'),sci:'Non-specific thoracic back pain · myofascial pain',
-   what:L('The most common cause of upper back pain. Muscles between and around the shoulder blades become tight and sore from posture, lifting or stress.','ऊपरी पीठ दर्द का सबसे आम कारण। पोस्चर, वज़न उठाने या तनाव से कंधे की हड्डियों के बीच और आसपास की मांसपेशियाँ जकड़ कर दुखती हैं।'),cSrc:['thor'],
-   causes:L('Hunching at a desk or phone, carrying bags on one shoulder, lifting, lack of exercise, stress and poor sleep.','डेस्क या फ़ोन पर झुकना, एक कंधे पर बैग, वज़न उठाना, व्यायाम की कमी, तनाव और खराब नींद।'),
+   what:L('The most common cause of upper back pain. Muscles between and around the shoulder blades become tight and sore from posture, lifting or stress.','ऊपरी पीठ दर्द का सबसे आम कारण। पोस्चर, वज़न उठाने या तनाव से कंधे की हड्डियों के बीच और आसपास की मांसपेशियाँ जकड़ कर दुखती हैं।'),
+   causes:L('Hunching at a desk or phone, carrying bags on one shoulder, lifting, lack of exercise, stress and poor sleep. Up to about a third of adults have upper or mid back pain in a year.','डेस्क या फ़ोन पर झुकना, एक कंधे पर बैग, वज़न उठाना, व्यायाम की कमी, तनाव और खराब नींद। साल भर में लगभग एक-तिहाई तक वयस्कों को ऊपरी या बीच की पीठ में दर्द होता है।'),cSrc:['thor','briggs09'],
    confirm:L('Clinical examination; scans are not needed without warning signs.','क्लिनिकल जांच; खतरे के संकेत न हों तो स्कैन ज़रूरी नहीं।'),
    treat:L('Posture and workstation changes, movement breaks, heat and a physiotherapy programme for shoulder-blade and upper-back muscles.','पोस्चर और काम की जगह में बदलाव, हलचल ब्रेक, सिकाई और कंधे-ऊपरी पीठ की मांसपेशियों के लिए फिज़ियोथेरेपी।'),
    outlook:L('Usually improves within weeks.','आमतौर पर कुछ हफ्तों में सुधार।'),
@@ -93,15 +101,15 @@ const CONDS = [
   {id:'tfx',th:[9,6,4],anchor:['on_fall','on_accident','on_blow','r_bones','rf_trauma','ch_posture'],depts:['ortho_spine','endo'],
    name:L('Vertebral compression fracture','रीढ़ की हड्डी का दबकर टूटना (कम्प्रेशन फ्रैक्चर)'),sci:'Osteoporotic or traumatic thoracic compression fracture',
    what:L('A thoracic vertebra collapses after a fall or, when bones are weak, after a minor lift or cough. Sudden central pain, worse standing; several fractures cause a rounded back and height loss.','गिरने के बाद, या हड्डियाँ कमज़ोर हों तो छोटा वज़न उठाने या खांसी से, थोरेसिक हड्डी दब जाती है। अचानक बीच में दर्द, खड़े होने पर ज़्यादा; कई फ्रैक्चर से पीठ गोल और कद कम होता है।'),
-   causes:L('Osteoporosis (age, menopause, steroid tablets, low vitamin D), trauma or, rarely, a tumour.','ऑस्टियोपोरोसिस (उम्र, मेनोपॉज़, स्टेरॉयड की गोलियाँ, कम विटामिन D), चोट या कभी-कभी गांठ।'),cSrc:['fx'],
+   causes:L('Osteoporosis (age, menopause, steroid tablets, low vitamin D), trauma or, rarely, a tumour. About 46 million Indian women have osteoporosis, and in a Delhi study 17.1% of women over 50 already had a vertebral fracture. Long steroid use and a major injury are the strongest clues.','ऑस्टियोपोरोसिस (उम्र, मेनोपॉज़, स्टेरॉयड की गोलियाँ, कम विटामिन D), चोट या कभी-कभी गांठ। लगभग 4.6 करोड़ भारतीय महिलाओं को ऑस्टियोपोरोसिस है, और दिल्ली के एक अध्ययन में 50 से ऊपर की 17.1% महिलाओं को पहले से रीढ़ का फ्रैक्चर था। लंबे समय तक स्टेरॉयड और बड़ी चोट सबसे मज़बूत संकेत हैं।'),cSrc:['fx','khadilkar15','downie'],
    confirm:L('X-ray, MRI to see if the fracture is new, and a DEXA bone density scan.','एक्स-रे, फ्रैक्चर नया है या नहीं इसके लिए MRI, और DEXA हड्डी घनत्व स्कैन।'),
    treat:L('Pain control, sometimes a brace, bone-strengthening medicine, vitamin D and calcium; cement procedures for selected cases.','दर्द नियंत्रण, कभी-कभी ब्रेस, हड्डी मज़बूत करने की दवा, विटामिन D और कैल्शियम; चुने हुए मामलों में सीमेंट प्रोसीजर।'),
    outlook:L('Most stable fractures heal in 6–12 weeks; treating osteoporosis prevents the next one.','ज़्यादातर स्थिर फ्रैक्चर 6–12 हफ्तों में जुड़ते हैं; ऑस्टियोपोरोसिस का इलाज अगला फ्रैक्चर रोकता है।'),
-   w:{h_first:1,midback:2,r_bones:3,a_60p:3,a_50_59:1,sex_f:1,on_fall:3,on_lift:1,on_bend:1,on_cough_bout:1,rf_trauma:4,ch_posture:2,wall_pos:1,press_pos:2,d_days:1}},
+   w:{h_first:1,midback:2,r_bones:4,fx_combo:4,a_60p:2,a_50_59:1,sex_f:1,on_fall:3,on_lift:1,on_bend:1,on_cough_bout:1,rf_trauma:4,ch_posture:2,wall_pos:1,press_pos:2,d_days:1}},
   {id:'zoster',th:[8,6,4],anchor:['ch_band','ch_burn_skin','ch_rash'],depts:['derm','gp'],
    name:L('Shingles (herpes zoster)','शिंगल्स (हर्पीज़ ज़ोस्टर)'),sci:'Herpes zoster of a thoracic dermatome',
-   what:L('The chickenpox virus reawakens in one nerve, causing burning pain in a band on one side of the back and chest. The rash usually appears 2–3 days after the pain starts.','चिकनपॉक्स का वायरस एक नस में फिर सक्रिय होता है, जिससे पीठ और छाती के एक तरफ पट्टी में जलन वाला दर्द होता है। दाने आमतौर पर दर्द शुरू होने के 2–3 दिन बाद आते हैं।'),cSrc:['zoster'],
-   causes:L('More common after 50 and with low immunity (diabetes, steroids, chemotherapy, HIV); about 1 in 4 people get it in their lifetime.','50 के बाद और कम इम्युनिटी (डायबिटीज़, स्टेरॉयड, कीमोथेरेपी, HIV) में ज़्यादा आम; लगभग 4 में से 1 व्यक्ति को जीवन में होता है।'),
+   what:L('The chickenpox virus reawakens in one nerve, causing burning pain in a band on one side of the back and chest. The rash usually appears 2–3 days after the pain starts.','चिकनपॉक्स का वायरस एक नस में फिर सक्रिय होता है, जिससे पीठ और छाती के एक तरफ पट्टी में जलन वाला दर्द होता है। दाने आमतौर पर दर्द शुरू होने के 2–3 दिन बाद आते हैं।'),
+   causes:L('More common after 50 and with low immunity (diabetes, steroids, chemotherapy, HIV); about 1 in 3 people get it in their lifetime.','50 के बाद और कम इम्युनिटी (डायबिटीज़, स्टेरॉयड, कीमोथेरेपी, HIV) में ज़्यादा आम; लगभग 3 में से 1 व्यक्ति को जीवन में होता है।'),cSrc:['zoster','cdczoster'],
    confirm:L('Usually diagnosed by a doctor from the rash pattern.','आमतौर पर डॉक्टर दानों के पैटर्न से पहचानते हैं।'),
    treat:L('Antiviral tablets work best when started within 72 hours of the rash, plus pain relief. A vaccine prevents it in older adults.','एंटीवायरल गोलियाँ दाने के 72 घंटे के अंदर शुरू हों तो सबसे अच्छा असर, साथ में दर्द की दवा। बुज़ुर्गों में टीका इसे रोकता है।'),
    outlook:L('Rash heals in 2–4 weeks; some develop lasting nerve pain (post-herpetic neuralgia).','दाने 2–4 हफ्तों में ठीक; कुछ लोगों में लंबा नस दर्द (पोस्ट-हर्पेटिक न्यूरेल्जिया) रहता है।'),oSrc:['zoster'],
@@ -122,18 +130,18 @@ const CONDS = [
    treat:L('Exercise and physiotherapy; a brace while growing; surgery only for severe curves.','व्यायाम और फिज़ियोथेरेपी; बढ़ती उम्र में ब्रेस; गंभीर मोड़ में ही सर्जरी।'),
    outlook:L('Most do well with exercise.','ज़्यादातर व्यायाम से ठीक रहते हैं।'),
    w:{h_5y:2,h_1_5y:1,btw_some:1,ch_posture:4,wall_pos:3,a_u18:3,a_18_29:1,d_3m:2,midback:1,on_gradual:1}},
-  {id:'taxspa',th:[12,8,5],anchor:['ch_stiff_am','b_exercise','w_rest'],depts:['rheum','physio'],
+  {id:'taxspa',th:[12,8,5],anchor:['ibp2','ch_stiff_am','b_exercise','w_rest'],depts:['rheum','physio'],
    name:L('Inflammatory spine disease (ankylosing spondylitis)','सूजन वाली रीढ़ की बीमारी (एंकिलोज़िंग स्पॉन्डिलाइटिस)'),sci:'Axial spondyloarthritis',
-   what:L('Inflammation can spread up the whole spine and rib joints, causing morning stiffness, reduced chest expansion and a stooped posture over years.','सूजन पूरी रीढ़ और पसली के जोड़ों तक फैल सकती है, जिससे सुबह अकड़न, छाती का कम फैलना और सालों में झुका पोस्चर होता है।'),cSrc:['asas'],
-   causes:L('An immune condition linked to the HLA-B27 gene, usually starting before 40.','HLA-B27 जीन से जुड़ी इम्यून बीमारी, आमतौर पर 40 से पहले शुरू।'),
+   what:L('Inflammation can spread up the whole spine and rib joints, causing morning stiffness, reduced chest expansion and a stooped posture over years.','सूजन पूरी रीढ़ और पसली के जोड़ों तक फैल सकती है, जिससे सुबह अकड़न, छाती का कम फैलना और सालों में झुका पोस्चर होता है।'),
+   causes:L('An immune condition linked to the HLA-B27 gene, usually starting before 40. Two of the inflammatory pain features (long morning stiffness, better with exercise and worse with rest, waking in the second half of the night) make it about 3.7 times more likely, and three about 12 times.','HLA-B27 जीन से जुड़ी इम्यून बीमारी, आमतौर पर 40 से पहले शुरू। सूजन वाले दर्द के दो लक्षण (सुबह लंबी अकड़न, व्यायाम से बेहतर और आराम से बदतर, रात के दूसरे हिस्से में नींद खुलना) इसकी संभावना लगभग 3.7 गुना, और तीनों लगभग 12 गुना करते हैं।'),cSrc:['asas','rudw06'],
    confirm:L('Blood tests (CRP, HLA-B27) and MRI of the sacroiliac joints and spine.','ब्लड टेस्ट (CRP, HLA-B27) और SI जोड़ों व रीढ़ का MRI।'),
    treat:L('Daily exercise, anti-inflammatory medicines and biologics under a rheumatologist.','रोज़ व्यायाम, सूजन-रोधी दवाएं और रूमेटोलॉजिस्ट की देखरेख में बायोलॉजिक्स।'),
    outlook:L('Early treatment preserves movement and posture.','जल्दी इलाज से हलचल और पोस्चर बचता है।'),
-   w:{h_1_5y:2,h_5y:2,btw_some:1,h_first:-1,ch_stiff_am:3,b_exercise:3,w_rest:2,r_spa:3,d_3m:2,on_gradual:2,a_18_29:2,a_30_39:2,wall_pos:2,w_breath:1,interscap:1,midback:1}},
+   w:{h_1_5y:2,h_5y:2,btw_some:1,h_first:-1,ibp2:2,ibp3:2,ch_stiff_am:1,ibp_ex:1,ch_night_wake:1,r_spa:3,r_famspa:2,d_3m:2,on_gradual:2,a_18_29:2,a_30_39:2,wall_pos:2,w_breath:1,interscap:1,midback:1}},
   {id:'tdisc',th:[10,7,5],anchor:['ch_leg_weak','ch_band'],depts:['neurosurg','ortho_spine','neuro'],
    name:L('Thoracic disc herniation (uncommon)','थोरेसिक डिस्क हर्निएशन (कम आम)'),sci:'Thoracic disc herniation · thoracic radiculopathy or myelopathy',
    what:L('A thoracic disc can press a nerve root, causing a band of pain around the chest, or press the spinal cord, causing leg weakness, numbness and walking difficulty.','थोरेसिक डिस्क नस की जड़ को दबाकर छाती के चारों ओर पट्टी जैसा दर्द, या स्पाइनल कॉर्ड को दबाकर पैरों में कमज़ोरी, सुन्नपन और चलने में दिक्कत कर सकती है।'),
-   causes:L('Disc degeneration, sometimes with calcification; uncommon compared with neck and lower back.','डिस्क की घिसावट, कभी-कभी कैल्सिफिकेशन के साथ; गर्दन और कमर की तुलना में कम आम।'),
+   causes:L('Disc degeneration, sometimes with calcification. It is uncommon: only 0.25–0.75% of disc herniations that cause symptoms are in the thoracic spine, about three-quarters of them below T8.','डिस्क की घिसावट, कभी-कभी कैल्सिफिकेशन के साथ। यह कम आम है: लक्षण देने वाले डिस्क हर्निएशन में से सिर्फ़ 0.25–0.75% थोरेसिक रीढ़ में होते हैं, इनमें लगभग तीन-चौथाई T8 के नीचे।'),cSrc:['tdiscpp'],
    confirm:L('Neurological examination and MRI of the thoracic spine.','न्यूरोलॉजिकल जांच और थोरेसिक रीढ़ का MRI।'),
    treat:L('Physiotherapy and medicines for nerve pain; surgery if the cord is compressed.','नस दर्द के लिए फिज़ियोथेरेपी और दवाएं; कॉर्ड दबे तो सर्जरी।'),
    outlook:L('Root pain often settles; cord compression needs early surgical review.','जड़ का दर्द अक्सर ठीक होता है; कॉर्ड दबाव में जल्दी सर्जिकल जांच ज़रूरी।'),
@@ -156,7 +164,7 @@ const CONDS = [
    w:{h_first:2,h_5y:-2,o_cough:4,ch_sharp_breath:2,w_breath:2,rf_fever:2,on_cough_bout:1,twist_pos:-1,press_pos:-2}},
   {id:'tinfect',th:[9,6,4],anchor:['rf_fever'],depts:['ortho_spine','id_tb','gp'],
    name:L('Spinal infection, including spinal TB','रीढ़ का इन्फेक्शन, स्पाइनल टीबी सहित'),sci:"Spondylodiscitis · Pott's disease",
-   what:L('The thoracic spine is the most common site of spinal TB, which causes constant pain, fever, night sweats and weight loss, and can lead to a hump.','थोरेसिक रीढ़ स्पाइनल टीबी की सबसे आम जगह है, जिससे लगातार दर्द, बुखार, रात को पसीना और वज़न घटता है, और कूबड़ बन सकता है।'),cSrc:['pott'],
+   what:L('The thoracic spine is the most common site of spinal TB, which causes constant pain, fever, night sweats and weight loss, and can lead to a hump. India has about a quarter of the world’s TB cases.','थोरेसिक रीढ़ स्पाइनल टीबी की सबसे आम जगह है, जिससे लगातार दर्द, बुखार, रात को पसीना और वज़न घटता है, और कूबड़ बन सकता है। दुनिया के लगभग एक-चौथाई टीबी मामले भारत में हैं।'),cSrc:['pott','tbindia'],
    causes:L('TB or bacteria reaching the spine through the blood; diabetes and low immunity raise the risk.','खून के ज़रिए रीढ़ तक पहुंची टीबी या बैक्टीरिया; डायबिटीज़ और कम इम्युनिटी खतरा बढ़ाते हैं।'),
    confirm:L('Blood tests, MRI and biopsy.','ब्लड टेस्ट, MRI और बायोप्सी।'),
    treat:L('Months of anti-TB or antibiotic treatment; surgery if the cord is pressed or the spine is unstable.','महीनों तक टीबी या एंटीबायोटिक इलाज; कॉर्ड दबे या रीढ़ अस्थिर हो तो सर्जरी।'),
@@ -167,16 +175,16 @@ const CONDS = [
    what:L('Rare. The thoracic spine is the commonest site for cancer spread to the spine; checked when there is past cancer, weight loss or constant night pain.','दुर्लभ। रीढ़ में कैंसर फैलने की सबसे आम जगह थोरेसिक रीढ़ है; पहले कैंसर, वज़न घटने या रात के लगातार दर्द में जांच।'),
    causes:L('Spread from breast, lung, prostate, kidney or thyroid cancer, or myeloma.','स्तन, फेफड़े, प्रोस्टेट, गुर्दे या थायरॉइड कैंसर से फैलाव, या मायलोमा।'),
    confirm:L('MRI and blood tests.','MRI और ब्लड टेस्ट।'),treat:L('Depends on the cause.','कारण पर निर्भर।'),outlook:L('Early assessment matters.','जल्दी जांच ज़रूरी।'),
-   w:{h_first:2,btw_often:1,h_5y:-2,r_cancer:5,rf_night:3,rf_fever:1,a_50_59:1,a_60p:2,d_3m:1,t_worse:1}},
+   w:{h_first:2,btw_often:1,h_5y:-2,r_cancer:5,rf_night:1,rf_fever:1,a_50_59:1,a_60p:1,d_3m:1,t_worse:1},cSrc:['downie']},
   {id:'cardiacr',th:[8,6,5],rare:true,anchor:['w_exert'],depts:['cardio','gp'],
    name:L('Heart-related pain felt in the back','दिल से जुड़ा दर्द जो पीठ में महसूस हो'),sci:'Angina (rule out)',
    what:L('Pain between the shoulder blades or in the chest that comes on with exertion and eases with rest can be from the heart, especially with diabetes, smoking, high BP or age over 40.','मेहनत से शुरू और आराम से कम होने वाला कंधे की हड्डियों के बीच या सीने का दर्द दिल से हो सकता है, खासकर डायबिटीज़, धूम्रपान, हाई BP या 40 से ऊपर की उम्र में।'),
-   causes:L('Narrowed heart arteries.','दिल की धमनियों का संकरा होना।'),confirm:L('ECG, blood tests and a stress test.','ECG, ब्लड टेस्ट और स्ट्रेस टेस्ट।'),treat:L('Cardiology assessment.','कार्डियोलॉजी जांच।'),outlook:L('Needs prompt checking.','जल्दी जांच ज़रूरी।'),
-   w:{h_first:1,w_exert:6,chest:2,interscap:1,a_40_49:1,a_50_59:2,a_60p:2,r_immune:1}}
+   causes:L('Narrowed heart arteries.','दिल की धमनियों का संकरा होना।'),confirm:L('ECG, blood tests and a stress test. In emergency studies, pain brought on by exertion made a heart cause about 2.4 times more likely and pain spreading to both arms about 4 times; pain that is sharp, changes with breathing or position, or is reproduced by pressing makes it less likely, but none of these rules it out.','ECG, ब्लड टेस्ट और स्ट्रेस टेस्ट। इमरजेंसी अध्ययनों में मेहनत से शुरू दर्द ने दिल की वजह की संभावना लगभग 2.4 गुना और दोनों बांहों में फैलते दर्द ने लगभग 4 गुना की; तेज़ चुभन वाला, सांस या पोज़िशन से बदलने वाला, या दबाने पर दोबारा आने वाला दर्द संभावना कम करता है, पर इनमें से कोई इसे खारिज नहीं करता।'),cSrc:['swap05'],treat:L('Cardiology assessment.','कार्डियोलॉजी जांच।'),outlook:L('Needs prompt checking.','जल्दी जांच ज़रूरी।'),
+   w:{h_first:1,w_exert:6,ch_arm_spread:2,chest:2,interscap:1,a_40_49:1,a_50_59:2,a_60p:2,r_immune:1,r_vasc:1,ch_sharp_breath:-2,press_pos:-1,twist_pos:-1}}
 ];
 const EMERG = {
-  cardiac:{name:L('Possible heart attack','दिल के दौरे की आशंका'),sci:'Acute coronary syndrome',what:L('Chest pressure spreading to the arm, neck, jaw or back with sweating or breathlessness can be a heart attack. Call an ambulance now.','सीने का दबाव जो बांह, गर्दन, जबड़े या पीठ तक जाए, पसीने या सांस फूलने के साथ, दिल का दौरा हो सकता है। अभी एम्बुलेंस बुलाएं।'),src:['aha'],depts:['emergency','cardio']},
-  aorta:{name:L('Possible tear of the aorta (aortic dissection)','महाधमनी फटने की आशंका (एओर्टिक डिसेक्शन)'),sci:'Acute aortic dissection',what:L('Sudden, severe tearing pain between the shoulder blades is a classic warning sign of a tear in the main artery. Call an ambulance now.','कंधे की हड्डियों के बीच अचानक, बहुत तेज़ चीरने जैसा दर्द मुख्य धमनी फटने का खास संकेत है। अभी एम्बुलेंस बुलाएं।'),src:['wikem'],depts:['emergency','vascular']},
+  cardiac:{name:L('Possible heart attack','दिल के दौरे की आशंका'),sci:'Acute coronary syndrome',what:L('Chest pressure spreading to the arm, neck, jaw or back with sweating or breathlessness can be a heart attack. Call 108 now.','सीने का दबाव जो बांह, गर्दन, जबड़े या पीठ तक जाए, पसीने या सांस फूलने के साथ, दिल का दौरा हो सकता है। अभी 108 बुलाएं।'),src:['aha','swap05'],depts:['emergency','cardio']},
+  aorta:{name:L('Possible tear of the aorta (aortic dissection)','महाधमनी फटने की आशंका (एओर्टिक डिसेक्शन)'),sci:'Acute aortic dissection',what:L('Sudden, severe tearing pain between the shoulder blades is a classic warning sign of a tear in the main artery. Most people with a dissection describe a sudden start; a tearing quality and a weak pulse or weakness in a limb make it much more likely. No single sign rules it in or out, so a CT scan is needed. Call 108 now.','कंधे की हड्डियों के बीच अचानक, बहुत तेज़ चीरने जैसा दर्द मुख्य धमनी फटने का खास संकेत है। डिसेक्शन वाले ज़्यादातर लोग अचानक शुरुआत बताते हैं; चीरने जैसा दर्द और कमज़ोर नब्ज़ या किसी अंग में कमज़ोरी इसकी संभावना बहुत बढ़ाते हैं। कोई एक संकेत इसे पक्का या खारिज नहीं करता, इसलिए CT स्कैन ज़रूरी है। अभी 108 बुलाएं।'),src:['klompas02','wikem'],depts:['emergency','vascular']},
   lung:{name:L('Possible blood clot in the lung','फेफड़े में खून के थक्के की आशंका'),sci:'Pulmonary embolism',what:L('Sudden breathlessness or coughing blood with chest or back pain needs emergency care.','सीने या पीठ दर्द के साथ अचानक सांस फूलना या खांसी में खून के लिए तुरंत इमरजेंसी ज़रूरी।'),src:['wikem'],depts:['emergency','pulm']},
   trauma:{name:L('Possible spinal injury','रीढ़ की चोट की आशंका'),sci:'Major trauma',what:L('After a major injury, keep still and get emergency imaging of the spine.','बड़ी चोट के बाद स्थिर रहें और तुरंत रीढ़ की इमेजिंग कराएं।'),src:['wikem'],depts:['emergency','ortho_spine']},
   cord:{name:L('Spinal cord compression','स्पाइनल कॉर्ड पर दबाव'),sci:'Thoracic myelopathy',what:L('Leg weakness, numbness below the chest or bladder problems mean the spinal cord may be pressed; this needs emergency MRI.','पैरों में कमज़ोरी, छाती के नीचे सुन्नपन या पेशाब की दिक्कत का मतलब कॉर्ड दब सकती है; तुरंत MRI ज़रूरी।'),src:['wikem'],depts:['emergency','neurosurg']}
@@ -208,7 +216,7 @@ const URGENCY = {
     {r:'o_fx', when:{all:[{any:['r_bones','a_60p']},{any:['on_fall','on_lift','on_bend','on_blow','on_cough','on_cough_bout']}]}}, {r:'o_pain', when:{painGte:9}}
   ],
   yellow:[
-    {r:'y_chest', when:'chest'}, {r:'y_often', when:'btw_often'}, {r:'y_long', when:{any:['d_6_12','d_3m']}}, {r:'y_inflam', when:{all:['ch_stiff_am',{any:['b_exercise','w_rest']}]}},
+    {r:'y_chest', when:'chest'}, {r:'y_often', when:'btw_often'}, {r:'y_long', when:{any:['d_6_12','d_3m']}}, {r:'y_inflam', when:'ibp2'},
     {r:'y_age', when:{any:['a_u18','a_60p']}}, {r:'y_pain', when:{all:[{painGte:7},{not:{painGte:9}}]}}, {r:'y_injury', when:{any:['on_fall','on_accident','on_blow']}},
     {r:'y_meal', when:'w_meal'}, {r:'y_posture', when:{any:['ch_posture','wall_pos']}}, {r:'y_night', when:'rf_night'}, {r:'y_sleep', when:'sleep_bad'}, {r:'y_urine', when:'u_urine'}
   ]
@@ -236,15 +244,25 @@ const FX = {
   w_sit:L('Hunched sitting overloads upper back muscles and joints.','झुककर बैठना ऊपरी पीठ की मांसपेशियों और जोड़ों पर भार डालता है।'),
   on_carry:L('Carrying loads on one side strains the muscles around the shoulder blade.','एक तरफ भार ढोना कंधे की हड्डी के आसपास की मांसपेशियों पर खिंचाव डालता है।'),
   midback:L('Central mid-back pain can come from a vertebra, so bone causes are checked.','पीठ के बीच का दर्द हड्डी से हो सकता है, इसलिए हड्डी के कारण जांचे जाते हैं।'),
-  ribs:L('Pain along a rib follows the intercostal nerve or rib joint.','पसली के साथ दर्द इंटरकोस्टल नस या पसली के जोड़ के रास्ते पर होता है।')
+  ribs:L('Pain along a rib follows the intercostal nerve or rib joint.','पसली के साथ दर्द इंटरकोस्टल नस या पसली के जोड़ के रास्ते पर होता है।'),
+  ch_arm_spread:L('Pain spreading to both arms made a heart cause about 4 times more likely in emergency studies.','इमरजेंसी अध्ययनों में दोनों बांहों में फैलते दर्द ने दिल की वजह की संभावना लगभग 4 गुना की।'),
+  ch_night_wake:L('Waking in the second half of the night and easing on getting up is an inflammatory back pain feature.','रात के दूसरे हिस्से में नींद खुलना और उठने पर आराम सूजन वाले पीठ दर्द का लक्षण है।'),
+  r_bones:L('Long-term steroid use is one of the strongest clues to a spinal fracture.','लंबे समय तक स्टेरॉयड रीढ़ के फ्रैक्चर के सबसे मज़बूत संकेतों में से है।')
 };
 const STATS = [
-  {v:'Most',t:L('upper back pain has no serious cause and settles with movement and posture changes','ऊपरी पीठ दर्द का कोई गंभीर कारण नहीं होता और हलचल व पोस्चर बदलाव से ठीक होता है'),s:'thor'},
-  {v:'72 h',t:L('window in which shingles antivirals work best after the rash appears','दाने आने के बाद शिंगल्स की एंटीवायरल दवा का सबसे असरदार समय'),s:'zoster'},
-  {v:'1 in 4',t:L('people get shingles during their life, more often after 50','लोगों को जीवन में शिंगल्स होता है, 50 के बाद ज़्यादा'),s:'zoster'}
+  {v:'3.5–34.8%',t:L('of adults have upper or mid back pain in a year; most has no serious cause','वयस्कों को साल में ऊपरी या बीच की पीठ में दर्द होता है; ज़्यादातर का कोई गंभीर कारण नहीं'),s:'briggs09'},
+  {v:'1 in 3',t:L('people get shingles during their life; antivirals work best within 72 hours of the rash','लोगों को जीवन में शिंगल्स होता है; एंटीवायरल दवा दाने के 72 घंटे के अंदर सबसे असरदार'),s:'cdczoster'},
+  {v:'17.1%',t:L('of women over 50 in a Delhi study already had a vertebral fracture','दिल्ली के एक अध्ययन में 50 से ऊपर की महिलाओं को पहले से रीढ़ का फ्रैक्चर था'),s:'khadilkar15'},
+  {v:'2.4×',t:L('more likely a heart cause when chest or back pain comes on with exertion','ज़्यादा संभावना दिल की वजह की, जब सीने या पीठ का दर्द मेहनत से शुरू हो'),s:'swap05'},
+  {v:'25%',t:L('of the world’s TB cases are in India; the thoracic spine is the commonest site of spinal TB','दुनिया के टीबी मामले भारत में हैं; थोरेसिक रीढ़ स्पाइनल टीबी की सबसे आम जगह है'),s:'tbindia'}
 ];
 const UI = {
-  repT:L('Upper and mid back pain assessment','ऊपरी और बीच की पीठ दर्द जांच रिपोर्ट'), breathT:L('Taking a deep breath','गहरी सांस लेना'),
+  repT:L('Upper and mid back pain assessment','ऊपरी और बीच की पीठ दर्द जांच रिपोर्ट'),
+  must:[L('This assessment cannot test your reflexes, muscle strength or skin feeling, or listen to your heart and lungs, which a doctor does by examining you.','यह जांच आपके रिफ़्लेक्स, मांसपेशियों की ताकत या त्वचा की संवेदना नहीं परख सकती, या दिल और फेफड़ों की आवाज़ नहीं सुन सकती, जो डॉक्टर जांच से करते हैं।'),
+    L('Only a doctor can decide whether you need an ECG, X-ray, MRI or blood tests, and interpret them with the examination.','ECG, एक्स-रे, MRI या ब्लड टेस्ट की ज़रूरत है या नहीं, यह सिर्फ़ डॉक्टर तय कर सकते हैं और जांच के साथ उनका मतलब समझा सकते हैं।'),
+    L('Upper back pain can also come from the heart, the main artery, the lungs, the gallbladder or the stomach; a doctor rules these out first when the pattern fits.','ऊपरी पीठ का दर्द दिल, मुख्य धमनी, फेफड़ों, पित्ताशय या पेट से भी हो सकता है; पैटर्न मेल खाए तो डॉक्टर पहले इन्हें खारिज करते हैं।'),
+    L('Medicines, injections and exercise plans must be chosen for you personally.','दवाएं, इंजेक्शन और व्यायाम योजना आपके लिए व्यक्तिगत रूप से तय होनी चाहिए।')],
+  breathT:L('Taking a deep breath','गहरी सांस लेना'),
   gPost:L('Upper and mid spine from behind with the ribs, vertebrae numbered. Highlighted: the structures linked to your likely cause.','पसलियों के साथ ऊपरी और बीच की रीढ़ पीछे से, हड्डियों पर नंबर। चमकते हिस्से: आपके संभावित कारण से जुड़े ढांचे।'),
   gRef:L('Thoracic spine, ribs and nerves for reference.','संदर्भ के लिए थोरेसिक रीढ़, पसलियाँ और नसें।'),
   gX:L('Full skeleton and nerves; highlighted parts relate to your likely cause.','पूरा कंकाल और नसें; चमकते हिस्से आपके संभावित कारण से जुड़े हैं।')
@@ -256,6 +274,6 @@ const FUNCS = [
 const sideAreas = ['scap','midback_side','ribs'];
 SPG.data.modules.thoracic = {id:'thoracic', order:3, card:{reg:['interscap','scap_l','scap_r','midback'], view:{az:Math.PI, el:0.06, d:1.9, yk:'t6', dy:-0.04}, hint:L('Pain between the shoulder blades, rib or chest-wall pain','कंधे की हड्डियों के बीच दर्द, पसली या छाती की दीवार में दर्द')}, name:L('Upper or mid back pain (between or around the shoulder blades)','ऊपरी या बीच की पीठ का दर्द (कंधे की हड्डियों के बीच या आसपास)'), safetyView:'chest', startRegions:['interscap'], safetyRegions:['chest'],
   labelSet:['T1','T2','T3','T4','T5','T6','T7','T8','T9','T10','T11','T12'], GAL:{d:0.95, ref:'T7', refDy:0, pelvis:false, nerves:['ic','cord','T'], ribs:true, lscale:1.4}, defaultDept:'ortho_spine',
-  ONSETS, DOMS:null, PAT, RFS, VIEWS, AREAS, TESTS, CONDS, EMERG, ROOTS:{}, RS, DERIVED:[{id:'radicular', when:'ch_band'}], SIDES:{areas:sideAreas, one:'side_one', both:'side_both', sideAreas},
-  URGENCY, EMERG_WHEN, ROOT_RULES:[], DISC_OF:{}, EXIT_OF:{}, DEPT_RULES:[{when:'ch_leg_weak', add:['neurosurg'], why:'o_leg'}], FOCUS, RCA:null, LBLX:{}, UI, FUNCS, FX, STATS};
+  ONSETS, DOMS:null, PAT, RFS, VIEWS, AREAS, TESTS, CONDS, EMERG, ROOTS:{}, RS, DERIVED:[{id:'radicular', when:'ch_band'}, {id:'ibp_ex', when:{any:['b_exercise','w_rest']}}, {id:'ibp2', when:{atLeast:[2,['ch_stiff_am','ibp_ex','ch_night_wake']]}}, {id:'ibp3', when:{atLeast:[3,['ch_stiff_am','ibp_ex','ch_night_wake']]}}, {id:'fx_combo', when:{atLeast:[3,['sex_f','a_60p','rf_trauma','r_bones']]}}], SIDES:{areas:sideAreas, one:'side_one', both:'side_both', sideAreas},
+  URGENCY, EMERG_WHEN, ROOT_RULES:[], DISC_OF:{}, EXIT_OF:{}, DEPT_RULES:[{when:'ch_leg_weak', add:['neurosurg'], why:'o_leg'}], FOCUS, RCA:null, LBLX:{ibp_ex:L('Better with exercise, worse with rest','व्यायाम से बेहतर, आराम से बदतर'), ibp2:L('2 or more inflammatory back pain features','सूजन वाले पीठ दर्द के 2 या ज़्यादा लक्षण'), ibp3:L('3 inflammatory back pain features','सूजन वाले पीठ दर्द के 3 लक्षण'), fx_combo:L('Three fracture risk factors together','फ्रैक्चर के तीन जोखिम एक साथ')}, UI, FUNCS, FX, STATS};
 })();

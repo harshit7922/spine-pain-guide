@@ -1,0 +1,14 @@
+// Phase 9 evidence checks for the upper/mid back and whole-spine modules
+const T = (o) => Object.assign({pain:5, breathe:'br_ok', sit:'sit_ok', rf:{}}, o);
+const W = (o) => Object.assign({pain:5, walk:'walk_ok', sleep:'sleep_ok', rf:{}}, o);
+module.exports = [
+ ['Pleuritic pain with cough and fever is the lung, not the heart','thoracic',T({age:'a_40_49',sex:'sex_m',areas:{midback_side:'r',ribs:'r'},onset:'on_gradual',since:'d_days',hx:'h_first',pat:['ch_sharp_breath','w_breath','o_cough'],breathe:'br_pain',rf:{rf_fever:'yes'}}), "r=>r.top[0].startsWith('lung')&&!r.top.some(t=>t.startsWith('cardiacr'))&&r.level==='orange'"],
+ ['Exertional pain spreading to both arms','thoracic',T({age:'a_50_59',sex:'sex_m',risks:['r_vasc'],areas:{interscap:'yes',chest:'yes'},onset:'on_gradual',since:'d_weeks',hx:'h_first',pat:['w_exert','ch_arm_spread']}), "r=>r.level==='orange'&&r.top[0].startsWith('cardiacr')&&r.depts[0]==='cardio'"],
+ ['Exertional but sharp and tender: still sent for heart check','thoracic',T({age:'a_50_59',sex:'sex_m',areas:{interscap:'yes'},onset:'on_gradual',since:'d_weeks',hx:'h_first',pat:['w_exert','ch_sharp_breath'],press:'press_pos'}), "r=>r.level==='orange'"],
+ ['Inflammatory upper back pain (3 of 3 features)','thoracic',T({age:'a_18_29',sex:'sex_m',risks:['r_spa'],areas:{interscap:'yes',midback:'yes'},onset:'on_gradual',since:'d_3m',hx:'h_1_5y',btw:'btw_some',pat:['ch_stiff_am','b_exercise','ch_night_wake'],wall:'wall_pos'}), "r=>r.top[0].startsWith('taxspa:strong')&&r.depts[0]==='rheum'&&r.level==='yellow'"],
+ ['Fracture combination: older woman on steroids after a fall','thoracic',T({age:'a_60p',sex:'sex_f',risks:['r_bones'],areas:{midback:'yes'},onset:'on_fall',since:'d_days',hx:'h_first',pain:8,press:'press_pos'}), "r=>r.top[0].startsWith('tfx:strong')&&r.level==='orange'"],
+ ['Past cancer with new night pain is flagged','thoracic',T({age:'a_60p',sex:'sex_f',risks:['r_cancer'],areas:{midback:'yes'},onset:'on_gradual',since:'d_weeks',hx:'h_first'},{}), "r=>r.level==='orange'"],
+ ['Past cancer with night pain: tumour on the rule-out list','thoracic',Object.assign(T({age:'a_60p',sex:'sex_f',risks:['r_cancer'],areas:{midback:'yes'},onset:'on_gradual',since:'d_weeks',hx:'h_first'}),{rf:{rf_night:'yes'}}), "r=>r.level==='orange'&&r.top.some(t=>t.startsWith('ttumour:ruleout'))"],
+ ['Teenager with a rib hump','whole',W({age:'a_u18',sex:'sex_f',areas:{interscap:'yes',lowback:'yes'},onset:'on_gradual',since:'d_3m',hx:'h_1_5y',pat:['ch_rib_hump','ch_posture']}), "r=>r.top[0].startsWith('scolio')&&r.level==='yellow'"],
+ ['Older woman, steroids, rounded back: osteoporosis','whole',W({age:'a_60p',sex:'sex_f',risks:['r_bones'],areas:{midback:'yes',lowback:'yes'},onset:'on_gradual',since:'d_3m',hx:'h_1_5y',pat:['ch_posture'],wall:'wall_pos'}), "r=>r.top[0].startsWith('osteopor')"]
+];
