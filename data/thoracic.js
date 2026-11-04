@@ -254,7 +254,7 @@ const FUNCS = [
   {id:'sit', label:'sit', req:true, opts:C.SITS}, {id:'sleep', label:'sleep', opts:C.SLEEPS}
 ];
 const sideAreas = ['scap','midback_side','ribs'];
-SPG.data.modules.thoracic = {id:'thoracic', order:3, name:L('Upper or mid back pain (between or around the shoulder blades)','ऊपरी या बीच की पीठ का दर्द (कंधे की हड्डियों के बीच या आसपास)'), safetyView:'chest', startRegions:['interscap'], safetyRegions:['chest'],
+SPG.data.modules.thoracic = {id:'thoracic', order:3, card:{reg:['interscap','scap_l','scap_r','midback'], view:{az:Math.PI, el:0.06, d:1.9, yk:'t6', dy:-0.04}, hint:L('Pain between the shoulder blades, rib or chest-wall pain','कंधे की हड्डियों के बीच दर्द, पसली या छाती की दीवार में दर्द')}, name:L('Upper or mid back pain (between or around the shoulder blades)','ऊपरी या बीच की पीठ का दर्द (कंधे की हड्डियों के बीच या आसपास)'), safetyView:'chest', startRegions:['interscap'], safetyRegions:['chest'],
   labelSet:['T1','T2','T3','T4','T5','T6','T7','T8','T9','T10','T11','T12'], GAL:{d:0.95, ref:'T7', refDy:0, pelvis:false, nerves:['ic','cord','T'], ribs:true, lscale:1.4}, defaultDept:'ortho_spine',
   ONSETS, DOMS:null, PAT, RFS, VIEWS, AREAS, TESTS, CONDS, EMERG, ROOTS:{}, RS, DERIVED:[{id:'radicular', when:'ch_band'}], SIDES:{areas:sideAreas, one:'side_one', both:'side_both', sideAreas},
   URGENCY, EMERG_WHEN, ROOT_RULES:[], DISC_OF:{}, EXIT_OF:{}, DEPT_RULES:[{when:'ch_leg_weak', add:['neurosurg'], why:'o_leg'}], FOCUS, RCA:null, LBLX:{}, UI, FUNCS, FX, STATS};

@@ -133,7 +133,15 @@ const U = {
   sideL:L('left','बायां'), sideR:L('right','दायां'), sideB:L('both sides','दोनों तरफ'),
   repT:L('Lower back pain assessment','कमर दर्द जांच रिपोर्ट'), created:L('Created','बनाई गई'), page:L('Page','पेज'), notDx:L('Decision support, not a diagnosis','निर्णय में मदद, डायग्नोसिस नहीं'),
   ansT:L('Your answers','आपके जवाब'), marked:L('Areas marked','चुने गए हिस्से'), none:L('None','कोई नहीं'), notA:L('Not answered','जवाब नहीं'),
-  bodyMap:L('Body map','बॉडी मैप'), rfNone:L('No to all warning signs','सभी खतरे के लक्षणों में "नहीं"'), closeups:L('Marked areas','चुने गए हिस्से')
+  bodyMap:L('Body map','बॉडी मैप'), rfNone:L('No to all warning signs','सभी खतरे के लक्षणों में "नहीं"'), closeups:L('Marked areas','चुने गए हिस्से'),
+  /* user-friendly pack (v5.1) */
+  glT:L('Words explained','शब्दों का मतलब'), glK:L('What does this mean?','इसका मतलब क्या है?'), glClose:L('Close','बंद करें'), glTap:L('Tap a word with a dotted line to see a picture and a simple meaning.','बिंदु वाली लाइन वाले शब्द पर टैप करें — तस्वीर के साथ आसान मतलब दिखेगा।'),
+  say:L('Listen','सुनें'), sayStop:L('Stop','रोकें'), sayNoHi:L('This device has no Hindi voice, so the reading may sound wrong. You can add “Hindi” in the phone’s text-to-speech settings.','इस डिवाइस में हिंदी आवाज़ नहीं है, इसलिए पढ़ना सही नहीं लग सकता। फ़ोन की टेक्स्ट-टू-स्पीच सेटिंग में “हिंदी” जोड़ सकते हैं।'),
+  bigT:L('Larger text','बड़े अक्षर'),
+  sumT:L('In short','सार में'), sum1:L('Best match: {a} — {b}','सबसे ज़्यादा मेल: {a} — {b}'), sumE:L('Needs to be ruled out first: {a}','पहले इसकी जांच ज़रूरी: {a}'), sum2:L('How urgent: {a}','कितना ज़रूरी: {a}'), sum3:L('See first: {a}. Take the PDF report with you.','पहले दिखाएं: {a}। PDF रिपोर्ट साथ ले जाएं।'), sumNone:L('No clear pattern matched. A doctor should examine you.','कोई साफ़ पैटर्न नहीं मिला। डॉक्टर से जांच करवाएं।'),
+  pickT:L('Where does it hurt? Tap one to start','दर्द कहाँ है? शुरू करने के लिए एक चुनें'), cardGo:L('Start','शुरू करें'),
+  resT:L('Continue where you left off?','जहाँ छोड़ा था वहीं से जारी रखें?'), resStep:L('stopped at question {a}','सवाल {a} पर रुके थे'), resDone:L('result ready','नतीजा तैयार'), resGo:L('Continue','जारी रखें'), resSee:L('See the result again','नतीजा फिर देखें'), resNo:L('Start fresh','नए सिरे से शुरू करें'), resS:L('Your answers are kept only on this device, never sent anywhere.','आपके जवाब सिर्फ़ इसी डिवाइस में रहते हैं, कहीं भेजे नहीं जाते।'),
+  share:L('Share report','रिपोर्ट भेजें'), shareH:L('my self-assessment summary','मेरी खुद-जांच का सार'), shareCopied:L('Summary copied. Paste it in WhatsApp or a message, and attach the downloaded PDF.','सार कॉपी हो गया। WhatsApp या मैसेज में पेस्ट करें और डाउनलोड की गई PDF साथ भेजें।'), shareAgain:L('Report is ready. Tap “Share report” again.','रिपोर्ट तैयार है। “रिपोर्ट भेजें” फिर से दबाएं।'), shareNA:L('Sharing is not available here. Download the PDF and send it yourself.','यहाँ से भेजना संभव नहीं। PDF डाउनलोड करके खुद भेजें।'), shared:L('Shared.','भेज दिया।')
 };
 
 /* ================= options ================= */

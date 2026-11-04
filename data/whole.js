@@ -205,7 +205,7 @@ const FUNCS = [{id:'walk', label:'walk', req:true, opts:C.WALKS}, {id:'sleep', l
 const FOCUS = {fibro:{}, waxspa:{bones:['sacrum','pelvis'], vert:['L3','L4','L5','T10','T11','T12']}, multispond:{discs:['C5–C6','C6–C7','L4–L5','L5–S1'], label:['C5–C6','L4–L5']},
   osteomal:{bones:['pelvis','leg','ribs']}, osteopor:{vert:['T7','T8','T12','L1']}, pmr:{bones:['scap','pelvis']}, scolio:{vert:['T6','T7','T8','T9','T10']}, wpost:{}, wserious:{}};
 const sideAreas = ['trap','c5','c6','buttock','thigh_front','l4'];
-SPG.data.modules.whole = {id:'whole', order:4, name:L('Pain in more than one part of the back, or the whole spine','पीठ के एक से ज़्यादा हिस्से में या पूरी रीढ़ में दर्द'), safetyView:'back', startRegions:['neck','interscap','midback','lowback'], safetyRegions:[],
+SPG.data.modules.whole = {id:'whole', order:4, card:{reg:['neck','interscap','midback','lowback'], view:{az:Math.PI, el:0.05, d:3.5, yk:'mid', dy:-0.02}, hint:L('Pain in many places, morning stiffness, bent posture','कई जगह दर्द, सुबह की जकड़न, कमर का झुकना')}, name:L('Pain in more than one part of the back, or the whole spine','पीठ के एक से ज़्यादा हिस्से में या पूरी रीढ़ में दर्द'), safetyView:'back', startRegions:['neck','interscap','midback','lowback'], safetyRegions:[],
   labelSet:['C2','C5','C7','T4','T8','T12','L3','L5','S1'], GAL:{d:1.5, ref:'T10', refDy:0.02, pelvis:true, nerves:['cord'], lscale:2.2}, defaultDept:'medicine',
   DOMS:null, PAT, RFS, VIEWS, AREAS, TESTS, CONDS, EMERG, ROOTS:{}, RS, DERIVED, SIDES:{areas:sideAreas, sideAreas}, URGENCY,
   EMERG_WHEN:{cauda:'rf_bladder', cord:'rf_weak_prog', cardiac:'rf_cardiac', trauma:'rf_trauma'}, ROOT_RULES:[], DISC_OF:{}, EXIT_OF:{}, DEPT_RULES:[], FOCUS, RCA:null, LBLX:{

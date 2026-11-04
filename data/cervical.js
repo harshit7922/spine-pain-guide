@@ -311,7 +311,7 @@ const FUNCS = [
   {id:'work', label:'workT', req:true, opts:[['work_ok',L('More than 1 hour','1 घंटे से ज़्यादा')],['work_lim',L('Less than 1 hour','1 घंटे से कम')],['work_no',L('Cannot do it','नहीं कर पाते')]]},
   {id:'sleep', label:'sleep', opts:C.SLEEPS}
 ];
-SPG.data.modules.cervical = {id:'cervical', order:2, name:L('Neck pain, with or without arm pain','गर्दन दर्द, बांह के दर्द के साथ या बिना'), safetyView:'neck', startRegions:['neck'], safetyRegions:[],
+SPG.data.modules.cervical = {id:'cervical', order:2, card:{reg:['neck','trap_l','trap_r','c6_l','c7_l'], view:{az:Math.PI, el:0.08, d:2.1, yk:'sh', dy:-0.14}, hint:L('Stiff or painful neck, pain or tingling down the arm','गर्दन में दर्द या जकड़न, बांह में नीचे तक दर्द या झुनझुनी')}, name:L('Neck pain, with or without arm pain','गर्दन दर्द, बांह के दर्द के साथ या बिना'), safetyView:'neck', startRegions:['neck'], safetyRegions:[],
   labelSet:['C1','C2','C3','C4','C5','C6','C7','T1','T2'], GAL:{d:0.40, ld:0.36, td:0.17, ref:'C4', refDy:0, nerves:['C5_','C6_','C7_','C8_','T1_','median','ulnar','radial','cord']}, defaultDept:'ortho_spine',
   ONSETS, DOMS, PAT, RFS, VIEWS, AREAS, TESTS, CONDS, EMERG, ROOTS, RS, DERIVED, SIDES:{areas:armAreas, one:'arm_one', both:'both_arms', sideAreas:armAreas.concat(['trap','scap'])},
   URGENCY, EMERG_WHEN, ROOT_RULES, DISC_OF, EXIT_OF:{}, DEPT_RULES, FOCUS, RCA, LBLX, UI, FUNCS, FX, STATS, domWhen:{any:armAreas}};

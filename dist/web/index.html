@@ -286,6 +286,47 @@ details.srcs ol{margin-top:8px}
 .langpick h1{font-size:clamp(26px,3.2vw,36px)}
 .langbtns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:20px}
 .langbtns .btn{padding:16px;font-size:18px}
+
+/* v5.1 user-friendly pack */
+.term{border:0;background:none;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline dotted var(--accent);text-decoration-thickness:2px;text-underline-offset:3px;border-radius:2px}
+.term:hover{color:var(--accent)}
+.glstrip{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin-top:14px;font-size:13px;color:var(--muted)}
+.glstrip .term{border:1px dashed var(--accent);border-radius:999px;padding:3px 10px;text-decoration:none;color:var(--accent);font-size:13px;font-weight:600;background:var(--surface)}
+.glcard{max-width:480px;max-height:calc(100vh - 32px);overflow:auto}
+.glhead{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.glx{border:0;background:var(--surface-2);width:34px;height:34px;border-radius:50%;font-size:22px;line-height:1;cursor:pointer;color:var(--ink)}
+.glpic{margin:12px 0 10px;background:#eef2f5;border-radius:10px;overflow:hidden;display:grid;place-items:center;min-height:200px}
+.glpic img{display:block;width:100%;height:auto}
+.glpic svg{width:100%;height:auto;padding:8px}
+.glpic.loading::after{content:"";width:28px;height:28px;border:3px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.glcard p.glplain{font-size:16px;line-height:1.6}
+.glbtns{display:flex;gap:8px;justify-content:flex-end;margin-top:14px;flex-wrap:wrap}
+.saybtn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 12px;font-weight:600;font-size:13px;cursor:pointer;white-space:nowrap}
+.saybtn svg{width:16px;height:16px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.saybtn[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:var(--accent-ink)} .saybtn[aria-pressed="true"] svg{stroke:currentColor}
+.qhead{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.qhead .saybtn{margin-left:auto}
+.abtn{display:inline-flex;align-items:baseline;gap:1px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:4px 9px;font-weight:700;font-size:15px;cursor:pointer;line-height:1.2}
+.abtn span+span{font-size:12px}
+.abtn[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+html.big .panel, html.big footer.foot, html.big .ipcard{zoom:1.18}
+.sum3 ol{margin:10px 0 0;padding-left:22px;display:grid;gap:8px;font-size:17px;line-height:1.45}
+.sum3 li::marker{font-weight:700;color:var(--accent)}
+.mcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:8px}
+.mcard{display:flex;flex-direction:column;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:0;overflow:hidden;cursor:pointer;color:var(--ink)}
+.mcard:hover{border-color:var(--accent);box-shadow:0 2px 12px rgba(14,106,100,.15)}
+.mcard .mimg{display:block;background:#eef2f5;aspect-ratio:300/330}
+.mcard .mimg img{display:block;width:100%;height:100%;object-fit:cover}
+.mcard .mtx{display:grid;gap:4px;padding:10px 12px 12px}
+.mcard b{font-size:15px;line-height:1.3}
+.mcard small{font-size:12.5px;color:var(--muted);line-height:1.35}
+.mcard .go{font-size:13px;font-weight:700;color:var(--accent);margin-top:4px}
+.nogl-on .mcard .mimg{display:none}
+.resume{border-color:var(--accent);border-width:2px}
+.resume p{margin-top:6px}
+.btn .ico{display:inline-grid;place-items:center}
+.btn .ico svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 </style>
 </head>
 <body>
@@ -296,6 +337,7 @@ details.srcs ol{margin-top:8px}
       <span><b id="brandText">Spine Pain Guide</b><small id="tagText">Lower back assessment</small></span>
     </button>
     <div class="sos"><span id="sosText">Emergency</span><a href="tel:108">108</a><span aria-hidden="true">·</span><a href="tel:112">112</a></div>
+    <button class="abtn" id="bigBtn" data-act="big" aria-pressed="false"><span aria-hidden="true">A</span><span aria-hidden="true">+</span></button>
     <div class="seg-btns" role="group" aria-label="Language"><button data-act="lang" data-v="en" id="langEn">EN</button><button data-act="lang" data-v="hi" id="langHi">हिंदी</button></div>
     <button class="instbtn" id="installBtn" data-act="install" hidden><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="1.5" width="10" height="17" rx="2"/><path d="M10 6v7M7 10l3 3 3-3"/></svg><span id="installTxt">Install app</span></button>
   </header>
@@ -323,6 +365,7 @@ details.srcs ol{margin-top:8px}
     <div class="panel" id="panel"></div>
   </div>
   <footer class="foot" id="foot"></footer>
+  <div class="ipanel" id="glossPanel" hidden role="dialog" aria-modal="true" aria-labelledby="glT"><div class="ipcard glcard" id="glossCard"></div></div>
   <div class="ipanel" id="installPanel" hidden role="dialog" aria-modal="true" aria-labelledby="ipT"><div class="ipcard" id="installCard"></div></div>
 </div>
 <!-- Libraries (local copies, work offline) -->
@@ -873,7 +916,15 @@ const U = {
   sideL:L('left','बायां'), sideR:L('right','दायां'), sideB:L('both sides','दोनों तरफ'),
   repT:L('Lower back pain assessment','कमर दर्द जांच रिपोर्ट'), created:L('Created','बनाई गई'), page:L('Page','पेज'), notDx:L('Decision support, not a diagnosis','निर्णय में मदद, डायग्नोसिस नहीं'),
   ansT:L('Your answers','आपके जवाब'), marked:L('Areas marked','चुने गए हिस्से'), none:L('None','कोई नहीं'), notA:L('Not answered','जवाब नहीं'),
-  bodyMap:L('Body map','बॉडी मैप'), rfNone:L('No to all warning signs','सभी खतरे के लक्षणों में "नहीं"'), closeups:L('Marked areas','चुने गए हिस्से')
+  bodyMap:L('Body map','बॉडी मैप'), rfNone:L('No to all warning signs','सभी खतरे के लक्षणों में "नहीं"'), closeups:L('Marked areas','चुने गए हिस्से'),
+  /* user-friendly pack (v5.1) */
+  glT:L('Words explained','शब्दों का मतलब'), glK:L('What does this mean?','इसका मतलब क्या है?'), glClose:L('Close','बंद करें'), glTap:L('Tap a word with a dotted line to see a picture and a simple meaning.','बिंदु वाली लाइन वाले शब्द पर टैप करें — तस्वीर के साथ आसान मतलब दिखेगा।'),
+  say:L('Listen','सुनें'), sayStop:L('Stop','रोकें'), sayNoHi:L('This device has no Hindi voice, so the reading may sound wrong. You can add “Hindi” in the phone’s text-to-speech settings.','इस डिवाइस में हिंदी आवाज़ नहीं है, इसलिए पढ़ना सही नहीं लग सकता। फ़ोन की टेक्स्ट-टू-स्पीच सेटिंग में “हिंदी” जोड़ सकते हैं।'),
+  bigT:L('Larger text','बड़े अक्षर'),
+  sumT:L('In short','सार में'), sum1:L('Best match: {a} — {b}','सबसे ज़्यादा मेल: {a} — {b}'), sumE:L('Needs to be ruled out first: {a}','पहले इसकी जांच ज़रूरी: {a}'), sum2:L('How urgent: {a}','कितना ज़रूरी: {a}'), sum3:L('See first: {a}. Take the PDF report with you.','पहले दिखाएं: {a}। PDF रिपोर्ट साथ ले जाएं।'), sumNone:L('No clear pattern matched. A doctor should examine you.','कोई साफ़ पैटर्न नहीं मिला। डॉक्टर से जांच करवाएं।'),
+  pickT:L('Where does it hurt? Tap one to start','दर्द कहाँ है? शुरू करने के लिए एक चुनें'), cardGo:L('Start','शुरू करें'),
+  resT:L('Continue where you left off?','जहाँ छोड़ा था वहीं से जारी रखें?'), resStep:L('stopped at question {a}','सवाल {a} पर रुके थे'), resDone:L('result ready','नतीजा तैयार'), resGo:L('Continue','जारी रखें'), resSee:L('See the result again','नतीजा फिर देखें'), resNo:L('Start fresh','नए सिरे से शुरू करें'), resS:L('Your answers are kept only on this device, never sent anywhere.','आपके जवाब सिर्फ़ इसी डिवाइस में रहते हैं, कहीं भेजे नहीं जाते।'),
+  share:L('Share report','रिपोर्ट भेजें'), shareH:L('my self-assessment summary','मेरी खुद-जांच का सार'), shareCopied:L('Summary copied. Paste it in WhatsApp or a message, and attach the downloaded PDF.','सार कॉपी हो गया। WhatsApp या मैसेज में पेस्ट करें और डाउनलोड की गई PDF साथ भेजें।'), shareAgain:L('Report is ready. Tap “Share report” again.','रिपोर्ट तैयार है। “रिपोर्ट भेजें” फिर से दबाएं।'), shareNA:L('Sharing is not available here. Download the PDF and send it yourself.','यहाँ से भेजना संभव नहीं। PDF डाउनलोड करके खुद भेजें।'), shared:L('Shared.','भेज दिया।')
 };
 
 /* ================= options ================= */
@@ -1426,7 +1477,7 @@ const RS = {
   };
   const FUNCS = [{id:'walk', label:'walk', opts:WALKS, req:true}, {id:'sit', label:'sit', opts:SITS, req:true}, {id:'sleep', label:'sleep', opts:SLEEPS}];
 
-SPG.data.modules.lumbar = {id:'lumbar', order:1, startRegions:['lowback'], labelSet:['T11','T12','L1','L2','L3','L4','L5','S1','Coccyx'], GAL:{d:0.66, ld:0.62, td:0.27, ref:'L3', refDy:-0.02, nerves:['L1_','L2_','L3_','L4_','L5_','S1_','sciatic','tibial','peroneal','femoral','saphenous','cord']}, safetyRegions:['saddle'], name:L('Lower back pain, with or without leg pain','कमर दर्द, पैर के दर्द के साथ या बिना'), safetyView:'saddle', anatomy:'lumbar',
+SPG.data.modules.lumbar = {id:'lumbar', order:1, card:{reg:['lowback','buttock_l','buttock_r','thigh_back_l','l5_l','s1_l'], view:{az:Math.PI, el:0.05, d:3.5, yk:'mid', dy:-0.02}, hint:L('Back pain, sciatica, slipped disc, leg pain or numbness','कमर दर्द, साइटिका, स्लिप डिस्क, पैर में दर्द या सुन्नपन')}, startRegions:['lowback'], labelSet:['T11','T12','L1','L2','L3','L4','L5','S1','Coccyx'], GAL:{d:0.66, ld:0.62, td:0.27, ref:'L3', refDy:-0.02, nerves:['L1_','L2_','L3_','L4_','L5_','S1_','sciatic','tibial','peroneal','femoral','saphenous','cord']}, safetyRegions:['saddle'], name:L('Lower back pain, with or without leg pain','कमर दर्द, पैर के दर्द के साथ या बिना'), safetyView:'saddle', anatomy:'lumbar',
   DOMS, PAT, RFS, VIEWS, AREAS, TESTS, CONDS, EMERG, ROOTS, RS, DERIVED, SIDES, URGENCY, EMERG_WHEN, ROOT_RULES, DISC_OF, EXIT_OF, DEPT_RULES, FOCUS, RCA, LBLX, UI, FUNCS,
   domWhen:{any:limbAreas}};
 })();
@@ -1746,7 +1797,7 @@ const FUNCS = [
   {id:'work', label:'workT', req:true, opts:[['work_ok',L('More than 1 hour','1 घंटे से ज़्यादा')],['work_lim',L('Less than 1 hour','1 घंटे से कम')],['work_no',L('Cannot do it','नहीं कर पाते')]]},
   {id:'sleep', label:'sleep', opts:C.SLEEPS}
 ];
-SPG.data.modules.cervical = {id:'cervical', order:2, name:L('Neck pain, with or without arm pain','गर्दन दर्द, बांह के दर्द के साथ या बिना'), safetyView:'neck', startRegions:['neck'], safetyRegions:[],
+SPG.data.modules.cervical = {id:'cervical', order:2, card:{reg:['neck','trap_l','trap_r','c6_l','c7_l'], view:{az:Math.PI, el:0.08, d:2.1, yk:'sh', dy:-0.14}, hint:L('Stiff or painful neck, pain or tingling down the arm','गर्दन में दर्द या जकड़न, बांह में नीचे तक दर्द या झुनझुनी')}, name:L('Neck pain, with or without arm pain','गर्दन दर्द, बांह के दर्द के साथ या बिना'), safetyView:'neck', startRegions:['neck'], safetyRegions:[],
   labelSet:['C1','C2','C3','C4','C5','C6','C7','T1','T2'], GAL:{d:0.40, ld:0.36, td:0.17, ref:'C4', refDy:0, nerves:['C5_','C6_','C7_','C8_','T1_','median','ulnar','radial','cord']}, defaultDept:'ortho_spine',
   ONSETS, DOMS, PAT, RFS, VIEWS, AREAS, TESTS, CONDS, EMERG, ROOTS, RS, DERIVED, SIDES:{areas:armAreas, one:'arm_one', both:'both_arms', sideAreas:armAreas.concat(['trap','scap'])},
   URGENCY, EMERG_WHEN, ROOT_RULES, DISC_OF, EXIT_OF:{}, DEPT_RULES, FOCUS, RCA, LBLX, UI, FUNCS, FX, STATS, domWhen:{any:armAreas}};
@@ -2010,7 +2061,7 @@ const FUNCS = [
   {id:'sit', label:'sit', req:true, opts:C.SITS}, {id:'sleep', label:'sleep', opts:C.SLEEPS}
 ];
 const sideAreas = ['scap','midback_side','ribs'];
-SPG.data.modules.thoracic = {id:'thoracic', order:3, name:L('Upper or mid back pain (between or around the shoulder blades)','ऊपरी या बीच की पीठ का दर्द (कंधे की हड्डियों के बीच या आसपास)'), safetyView:'chest', startRegions:['interscap'], safetyRegions:['chest'],
+SPG.data.modules.thoracic = {id:'thoracic', order:3, card:{reg:['interscap','scap_l','scap_r','midback'], view:{az:Math.PI, el:0.06, d:1.9, yk:'t6', dy:-0.04}, hint:L('Pain between the shoulder blades, rib or chest-wall pain','कंधे की हड्डियों के बीच दर्द, पसली या छाती की दीवार में दर्द')}, name:L('Upper or mid back pain (between or around the shoulder blades)','ऊपरी या बीच की पीठ का दर्द (कंधे की हड्डियों के बीच या आसपास)'), safetyView:'chest', startRegions:['interscap'], safetyRegions:['chest'],
   labelSet:['T1','T2','T3','T4','T5','T6','T7','T8','T9','T10','T11','T12'], GAL:{d:0.95, ref:'T7', refDy:0, pelvis:false, nerves:['ic','cord','T'], ribs:true, lscale:1.4}, defaultDept:'ortho_spine',
   ONSETS, DOMS:null, PAT, RFS, VIEWS, AREAS, TESTS, CONDS, EMERG, ROOTS:{}, RS, DERIVED:[{id:'radicular', when:'ch_band'}], SIDES:{areas:sideAreas, one:'side_one', both:'side_both', sideAreas},
   URGENCY, EMERG_WHEN, ROOT_RULES:[], DISC_OF:{}, EXIT_OF:{}, DEPT_RULES:[{when:'ch_leg_weak', add:['neurosurg'], why:'o_leg'}], FOCUS, RCA:null, LBLX:{}, UI, FUNCS, FX, STATS};
@@ -2225,12 +2276,140 @@ const FUNCS = [{id:'walk', label:'walk', req:true, opts:C.WALKS}, {id:'sleep', l
 const FOCUS = {fibro:{}, waxspa:{bones:['sacrum','pelvis'], vert:['L3','L4','L5','T10','T11','T12']}, multispond:{discs:['C5–C6','C6–C7','L4–L5','L5–S1'], label:['C5–C6','L4–L5']},
   osteomal:{bones:['pelvis','leg','ribs']}, osteopor:{vert:['T7','T8','T12','L1']}, pmr:{bones:['scap','pelvis']}, scolio:{vert:['T6','T7','T8','T9','T10']}, wpost:{}, wserious:{}};
 const sideAreas = ['trap','c5','c6','buttock','thigh_front','l4'];
-SPG.data.modules.whole = {id:'whole', order:4, name:L('Pain in more than one part of the back, or the whole spine','पीठ के एक से ज़्यादा हिस्से में या पूरी रीढ़ में दर्द'), safetyView:'back', startRegions:['neck','interscap','midback','lowback'], safetyRegions:[],
+SPG.data.modules.whole = {id:'whole', order:4, card:{reg:['neck','interscap','midback','lowback'], view:{az:Math.PI, el:0.05, d:3.5, yk:'mid', dy:-0.02}, hint:L('Pain in many places, morning stiffness, bent posture','कई जगह दर्द, सुबह की जकड़न, कमर का झुकना')}, name:L('Pain in more than one part of the back, or the whole spine','पीठ के एक से ज़्यादा हिस्से में या पूरी रीढ़ में दर्द'), safetyView:'back', startRegions:['neck','interscap','midback','lowback'], safetyRegions:[],
   labelSet:['C2','C5','C7','T4','T8','T12','L3','L5','S1'], GAL:{d:1.5, ref:'T10', refDy:0.02, pelvis:true, nerves:['cord'], lscale:2.2}, defaultDept:'medicine',
   DOMS:null, PAT, RFS, VIEWS, AREAS, TESTS, CONDS, EMERG, ROOTS:{}, RS, DERIVED, SIDES:{areas:sideAreas, sideAreas}, URGENCY,
   EMERG_WHEN:{cauda:'rf_bladder', cord:'rf_weak_prog', cardiac:'rf_cardiac', trauma:'rf_trauma'}, ROOT_RULES:[], DISC_OF:{}, EXIT_OF:{}, DEPT_RULES:[], FOCUS, RCA:null, LBLX:{
     wp_general:L('Generalised pain (4 of 5 regions)','सामान्यीकृत दर्द (5 में से 4 हिस्से)'), spine_multi:L('Pain in more than one spinal region','रीढ़ के एक से ज़्यादा हिस्से में दर्द'), wp_axial:L('Spine or chest pain','रीढ़ या छाती दर्द')},
   UI, FUNCS, FX, STATS};
+})();
+
+</script>
+<script data-src="data/glossary.js">
+window.SPG = window.SPG || {data:{modules:{}}};
+/* Medical words explained with a picture. Any of the listed words in questions or results becomes tappable.
+   pic.k: 'skin' = body with the area coloured, 'bone' = see-through body with bones/nerves highlighted,
+   'svg' = drawing already in the app, 'pose' = posed 3D body from a bedside test. */
+(function(){
+const PI = Math.PI;
+const L = (en, hi) => ({en, hi});
+const LUMB = {az:PI - 0.55, el:0.16, d:0.7, yk:'L3', dy:0};
+const LUMB_SIDE = {az:PI / 2, el:0.04, d:0.62, yk:'disc', disc:'L4–L5', dy:0.035};
+const NECK_SIDE = {az:PI / 2 + 0.35, el:0.06, d:0.46, yk:'C4', dy:0};
+const THOR = {az:PI - 0.3, el:0.08, d:1.0, yk:'T7', dy:0};
+const BACK_FULL = {az:PI, el:0.04, d:3.4, yk:'mid', dy:-0.02};
+SPG.data.common.SRC.push(['statdh','StatPearls – Lumbar Disc Herniation (updated 2023): about 95% of lumbar disc herniations are at L4–L5 or L5–S1','https://www.statpearls.com/point-of-care/24453']);
+const NOLIMB = {noLegs:true, noUpper:true, noPelvis:true, nerveKeep:['L1_','L2_','L3_','L4_','L5_','S1_','sciatic','cord']};
+SPG.data.glossary = [
+  {id:'vertebra', src:['ortho'], terms:{en:['vertebrae','vertebra'], hi:['कशेरुका','मनका']},
+   title:L('Vertebra (back bone)','कशेरुका (रीढ़ का मनका)'),
+   plain:L('One of the 33 small bones stacked to make the spine: 7 in the neck (C1–C7), 12 in the chest (T1–T12), 5 in the lower back (L1–L5), then the sacrum and tailbone. The highlighted bone is L3.','रीढ़ बनाने वाली 33 छोटी हड्डियों में से एक: गर्दन में 7 (C1–C7), छाती के पीछे 12 (T1–T12), कमर में 5 (L1–L5), फिर सैक्रम और टेलबोन। चमकती हड्डी L3 है।'),
+   pic:Object.assign({}, NOLIMB, {k:'bone', focus:{vert:['L3']}, view:LUMB, labels:true})},
+  {id:'disc', src:['nomen'], terms:{en:['intervertebral disc','discs','disc'], hi:['डिस्क']},
+   title:L('Disc','डिस्क'),
+   plain:L('A soft, rubbery cushion between two vertebrae, with a tough outer ring and a jelly-like centre. It lets the spine bend and absorbs shocks. The highlighted disc is L4–L5, the one that most often causes trouble.','दो कशेरुकाओं के बीच एक नरम, रबर जैसी गद्दी, जिसकी बाहरी परत मज़बूत और बीच में जेली जैसा हिस्सा होता है। यह रीढ़ को मुड़ने देती है और झटके सहती है। चमकती डिस्क L4–L5 है, जिसमें सबसे ज़्यादा परेशानी होती है।'),
+   pic:Object.assign({}, NOLIMB, {k:'bone', focus:{discs:['L4–L5'], label:['L4–L5']}, view:LUMB_SIDE, labels:true})},
+  {id:'herniation', src:['nomen', 'nass', 'chiu'], terms:{en:['disc herniation','herniated disc','herniation','slipped disc','slip disc','protrusion','extrusion','bulge'], hi:['हर्निएशन','स्लिप डिस्क','उभार']},
+   title:L('Disc herniation (slipped disc)','डिस्क हर्निएशन (स्लिप डिस्क)'),
+   plain:L('The jelly centre of a disc pushes through a crack in its outer ring and bulges backwards, where it can press a nerve. The disc does not actually slip. A bulge is broad and mild; a protrusion and an extrusion stick out further. Most shrink on their own over weeks to months.','डिस्क का जेली वाला हिस्सा बाहरी परत की दरार से पीछे की ओर उभर आता है और नस को दबा सकता है। डिस्क असल में खिसकती नहीं। बल्ज चौड़ा और हल्का होता है; प्रोट्रूज़न और एक्सट्रूज़न ज़्यादा बाहर निकले होते हैं। ज़्यादातर हफ्तों से महीनों में अपने आप छोटे हो जाते हैं।'),
+   pic:{k:'svg', fn:'types'}},
+  {id:'root', src:['msd', 'physio'], terms:{en:['nerve roots','nerve root','radiculopathy','pinched nerve'], hi:['नस की जड़','रेडिकुलोपैथी','दबी नस']},
+   title:L('Nerve root (radiculopathy)','नस की जड़ (रेडिकुलोपैथी)'),
+   plain:L('Where a nerve leaves the spine through a small opening between two vertebrae. When a disc or bone spur presses it (radiculopathy), pain, tingling or weakness runs along that nerve into the leg or arm. Here the left L5 root is highlighted.','वह जगह जहां नस दो कशेरुकाओं के बीच के छोटे छेद से रीढ़ से बाहर निकलती है। डिस्क या हड्डी का उभार इसे दबाए (रेडिकुलोपैथी) तो उसी नस के रास्ते पैर या बांह में दर्द, झुनझुनी या कमज़ोरी जाती है। यहां बाईं L5 जड़ चमक रही है।'),
+   pic:Object.assign({}, NOLIMB, {k:'bone', focus:{discs:['L4–L5'], roots:['L5'], sides:['l'], side:'l', herniate:true, label:['L4–L5']}, view:{az:PI - 1.0, el:0.12, d:0.66, yk:'disc', disc:'L4–L5', dy:0.03}, labels:true})},
+  {id:'sciatica', src:['nice', 'msd'], terms:{en:['sciatic nerve','sciatica'], hi:['साइटिक नस','साइटिका']},
+   title:L('Sciatica','साइटिका'),
+   plain:L('Pain that runs from the lower back or buttock down the back or side of the leg, often below the knee, because a nerve root of the sciatic nerve is irritated. The sciatic nerve is the thickest nerve in the body.','कमर या नितंब से पैर के पीछे या बगल में, अक्सर घुटने के नीचे तक जाता दर्द, क्योंकि साइटिक नस की किसी जड़ में जलन होती है। साइटिक नस शरीर की सबसे मोटी नस है।'),
+   pic:{k:'skin', reg:['buttock_l','thigh_back_l','l5_l','s1_l'], view:BACK_FULL}},
+  {id:'cord', src:['myelo'], terms:{en:['spinal cord','myelopathy'], hi:['स्पाइनल कॉर्ड','मायलोपैथी','मेरुरज्जु']},
+   title:L('Spinal cord (myelopathy)','स्पाइनल कॉर्ड (मायलोपैथी)'),
+   plain:L('The main nerve cable from the brain, running inside the spine down to about L1. Pressure on it (myelopathy), usually in the neck, causes clumsy hands, unsteady walking or electric shocks, and needs a specialist soon.','दिमाग से निकलने वाली मुख्य नस की तार, जो रीढ़ के अंदर लगभग L1 तक जाती है। इस पर दबाव (मायलोपैथी), अक्सर गर्दन में, हाथों में अनाड़ीपन, लड़खड़ाती चाल या करंट जैसा झटका देता है और जल्दी विशेषज्ञ को दिखाना ज़रूरी है।'),
+   pic:{k:'bone', focus:{cord:true}, view:{az:2.07, el:0.1, d:0.58, yk:'C5', dy:0}, labels:true, lset:['C1','C2','C3','C4','C5','C6','C7','T1'], nerveKeep:['cord'], noUpper:true, noLegs:true, noSac:true}},
+  {id:'canal', src:['msdss', 'suri'], terms:{en:['spinal stenosis','stenosis','spinal canal','neurogenic claudication','claudication'], hi:['स्टेनोसिस','स्पाइनल कैनाल','क्लॉडिकेशन','नसों की नली']},
+   title:L('Spinal stenosis (narrow canal)','स्पाइनल स्टेनोसिस (संकरी नली)'),
+   plain:L('The tunnel inside the spine that carries the nerves becomes narrow with age, from thick ligaments, worn joints and bulging discs. Legs ache or feel heavy on walking or standing and ease on sitting or bending forward (neurogenic claudication).','रीढ़ के अंदर की नली, जिसमें नसें चलती हैं, उम्र के साथ मोटे लिगामेंट, घिसे जोड़ों और उभरी डिस्क से संकरी हो जाती है। चलने या खड़े रहने पर पैर दुखते या भारी लगते हैं और बैठने या आगे झुकने पर आराम मिलता है (न्यूरोजेनिक क्लॉडिकेशन)।'),
+   pic:Object.assign({}, NOLIMB, {k:'bone', focus:{discs:['L3–L4','L4–L5'], sac:true, label:['L4–L5']}, view:LUMB_SIDE, labels:true})},
+  {id:'cauda', src:['ces'], terms:{en:['cauda equina'], hi:['कॉडा इक्विना']},
+   title:L('Cauda equina','कॉडा इक्विना'),
+   plain:L('The bundle of nerve roots below the end of the spinal cord, looking like a horse’s tail. They control the bladder, bowel, sexual function and legs. Squeezing them is an emergency.','स्पाइनल कॉर्ड के खत्म होने के नीचे नसों की जड़ों का गुच्छा, जो घोड़े की पूंछ जैसा दिखता है। ये पेशाब, शौच, यौन क्रिया और पैरों को नियंत्रित करती हैं। इन पर दबाव इमरजेंसी है।'),
+   pic:Object.assign({}, NOLIMB, {k:'bone', focus:{sac:true, roots:['L2','L3','L4','L5','S1'], sides:['l','r']}, view:Object.assign({}, LUMB, {d:0.8, dy:-0.03}), labels:true, nerveKeep:['L1_','L2_','L3_','L4_','L5_','S1_']})},
+  {id:'saddle', src:['ces'], terms:{en:['saddle area','saddle'], hi:['सैडल एरिया','सैडल']},
+   title:L('Saddle area','सैडल एरिया'),
+   plain:L('The skin that would touch a saddle: between the legs, around the back passage and genitals. New numbness here, or new bladder or bowel trouble, needs the emergency department now.','वह त्वचा जो काठी पर बैठते समय छूती है: जांघों के बीच, मलद्वार और गुप्तांग के आसपास। यहां नया सुन्नपन, या पेशाब-शौच की नई परेशानी हो तो तुरंत इमरजेंसी जाएं।'),
+   pic:{k:'skin', reg:['saddle'], view:{az:0, el:-0.18, d:1.6, yk:'hj', dy:-0.06}}},
+  {id:'facet', src:['ortho'], terms:{en:['facet joints','facet joint','facet'], hi:['फैसेट']},
+   title:L('Facet joints','फैसेट जोड़'),
+   plain:L('Two small joints at the back of each vertebra that guide movement. Like other joints they can wear (spondylosis) and hurt, typically when bending backwards or standing long.','हर कशेरुका के पीछे दो छोटे जोड़ जो हिलने-डुलने की दिशा तय करते हैं। दूसरे जोड़ों की तरह ये घिस सकते हैं (स्पॉन्डिलोसिस) और दुख सकते हैं, खासकर पीछे झुकने या देर तक खड़े रहने पर।'),
+   pic:Object.assign({}, NOLIMB, {k:'bone', focus:{vert:['L4','L5']}, view:{az:PI - 0.75, el:0.22, d:0.6, yk:'L4', dy:0}, labels:true})},
+  {id:'si', src:['ortho'], terms:{en:['sacroiliac','SI joint','SI joints'], hi:['सैक्रोइलियक','SI जोड़']},
+   title:L('Sacroiliac (SI) joint','सैक्रोइलियक (SI) जोड़'),
+   plain:L('The joint on each side where the sacrum (the triangle bone at the base of the spine) meets the pelvis, under the two dimples of the lower back. Pain is felt in the buttock, often when getting up or climbing stairs.','दोनों तरफ़ का वह जोड़ जहां सैक्रम (रीढ़ के नीचे की तिकोनी हड्डी) कूल्हे की हड्डी से मिलता है, कमर के दो गड्ढों के नीचे। दर्द नितंब में होता है, अक्सर उठते या सीढ़ी चढ़ते समय।'),
+   pic:{k:'bone', focus:{bones:['sacrum']}, view:{az:PI, el:0.1, d:0.85, yk:'hj', dy:0.08}, noLegs:true, noUpper:true}},
+  {id:'coccyx', src:['coc'], terms:{en:['tailbone','coccyx','coccydynia'], hi:['टेलबोन','कॉक्सिक्स','कॉक्सीडाइनिया']},
+   title:L('Tailbone (coccyx)','टेलबोन (कॉक्सिक्स)'),
+   plain:L('The small tip at the very bottom of the spine, between the buttocks. Pain here (coccydynia) is worst when sitting, often after a fall or childbirth.','रीढ़ के बिल्कुल नीचे, नितंबों के बीच छोटा सिरा। यहां दर्द (कॉक्सीडाइनिया) बैठने पर सबसे ज़्यादा होता है, अक्सर गिरने या प्रसव के बाद।'),
+   pic:{k:'bone', focus:{vert:['Coccyx'], bones:['sacrum']}, view:{az:PI - 0.4, el:-0.05, d:0.7, yk:'hj', dy:0.02}, noLegs:true, noUpper:true, reg:['tailbone']}},
+  {id:'flank', src:['kid'], terms:{en:['flank'], hi:['फ्लैंक']},
+   title:L('Flank','फ्लैंक'),
+   plain:L('The side of the back just below the last rib and above the hip bone, over the kidney. Pain here with fever or urine problems points to the kidney rather than the spine.','पीठ की साइड, आखिरी पसली के ठीक नीचे और कूल्हे की हड्डी के ऊपर, गुर्दे के ऊपर। यहां दर्द के साथ बुखार या पेशाब की परेशानी हो तो कारण रीढ़ के बजाय गुर्दा हो सकता है।'),
+   pic:{k:'skin', reg:['flank_l','flank_r'], view:{az:PI - 0.55, el:0.1, d:1.8, yk:'hj', dy:0.22}}},
+  {id:'groin', terms:{en:['groin'], hi:['ग्रोइन','जांघ और धड़ के जोड़']},
+   title:L('Groin','ग्रोइन (जांघ का जोड़)'),
+   plain:L('The crease where the front of the thigh meets the trunk. Pain here, especially on walking, usually comes from the hip joint rather than the spine.','वह मोड़ जहां जांघ का आगे का हिस्सा धड़ से मिलता है। यहां दर्द, खासकर चलने पर, अक्सर रीढ़ के बजाय कूल्हे के जोड़ से आता है।'),
+   pic:{k:'skin', reg:['groin_l','groin_r'], view:{az:0, el:0.06, d:1.75, yk:'hj', dy:0}}},
+  {id:'dermatome', src:['msd'], terms:{en:['dermatome','skin strip'], hi:['डर्मेटोम']},
+   title:L('Dermatome (skin strip of one nerve)','डर्मेटोम (एक नस की त्वचा की पट्टी)'),
+   plain:L('Each nerve root supplies feeling to its own strip of skin. Where numbness or tingling sits tells the doctor which root is involved: here L5, the outer shin, top of the foot and big toe.','हर नस की जड़ त्वचा की अपनी पट्टी को महसूस कराती है। सुन्नपन या झुनझुनी कहां है, इससे डॉक्टर समझते हैं कौन सी जड़ प्रभावित है: यहां L5, यानी पिंडली का बाहरी हिस्सा, पंजे का ऊपरी हिस्सा और अंगूठा।'),
+   pic:{k:'skin', reg:['l5_l'], view:{az:0.4, el:0.28, d:1.9, yk:'ankle', dy:0.2}}},
+  {id:'scapula', terms:{en:['shoulder blades','shoulder blade','scapula'], hi:['स्कैपुला','कंधे की हड्डि','कंधे की हड्डी']},
+   title:L('Shoulder blade (scapula)','कंधे की हड्डी (स्कैपुला)'),
+   plain:L('The flat, triangle-shaped bone on each side of the upper back, behind the ribs. You can feel its edge by reaching over your shoulder.','ऊपरी पीठ में दोनों तरफ़ की चपटी, तिकोनी हड्डी, पसलियों के पीछे। कंधे के ऊपर से हाथ ले जाकर इसका किनारा छू सकते हैं।'),
+   pic:{k:'bone', focus:{bones:['scap']}, view:{az:PI - 0.25, el:0.1, d:1.3, yk:'t6', dy:0.02}, keepRibs:true, noLegs:true, nerveKeep:['cord']}},
+  {id:'trap', src:['gbdneck'], terms:{en:['trapezius'], hi:['ट्रेपेज़ियस']},
+   title:L('Trapezius muscle','ट्रेपेज़ियस मांसपेशी'),
+   plain:L('The large flat muscle from the base of the skull across the top of the shoulders, where a bag strap rests. It tightens with stress and long screen use.','खोपड़ी के निचले हिस्से से कंधों के ऊपर तक फैली बड़ी चपटी मांसपेशी, जहां बैग का पट्टा टिकता है। तनाव और लंबे स्क्रीन इस्तेमाल से यह जकड़ जाती है।'),
+   pic:{k:'skin', reg:['trap_l','trap_r','neck'], view:{az:PI - 0.35, el:0.3, d:1.3, yk:'sh', dy:0.04}}},
+  {id:'ribs', src:['thor'], terms:{en:['intercostal','ribs','rib'], hi:['पसली','पसलि','इंटरकोस्टल']},
+   title:L('Ribs and intercostal nerves','पसलियां और इंटरकोस्टल नसें'),
+   plain:L('Twelve pairs of ribs join the twelve chest vertebrae at the back. A nerve runs under each rib (intercostal nerve); irritation causes a band of pain that wraps around the chest.','बारह जोड़ी पसलियां पीछे छाती की बारह कशेरुकाओं से जुड़ती हैं। हर पसली के नीचे एक नस (इंटरकोस्टल नस) चलती है; इसमें जलन से छाती के चारों ओर पट्टी जैसा दर्द होता है।'),
+   pic:{k:'bone', focus:{bones:['ribs'], nerves:['ic5','ic6','ic7'], sides:['l','r']}, view:{az:PI - 0.8, el:0.12, d:1.2, yk:'t6', dy:-0.04}, keepRibs:true, nerveKeep:['ic','cord'], noLegs:true}},
+  {id:'sternum', src:['thor'], terms:{en:['breastbone','sternum'], hi:['स्टर्नम','छाती की हड्डी']},
+   title:L('Breastbone (sternum)','छाती की हड्डी (स्टर्नम)'),
+   plain:L('The flat bone in the middle of the chest where the ribs join at the front through cartilage. Pain at these joints is called costochondritis.','छाती के बीच की चपटी हड्डी जहां आगे पसलियां कार्टिलेज से जुड़ती हैं। इन जोड़ों के दर्द को कॉस्टोकॉन्ड्राइटिस कहते हैं।'),
+   pic:{k:'bone', focus:{bones:['sternum']}, view:{az:0.25, el:0.1, d:1.15, yk:'t6', dy:0}, keepRibs:true, noLegs:true, nerveKeep:['cord']}},
+  {id:'plexus', src:['wikemcr'], terms:{en:['brachial plexus'], hi:['ब्रेकियल प्लेक्सस']},
+   title:L('Brachial plexus','ब्रेकियल प्लेक्सस'),
+   plain:L('The network formed by the C5 to T1 nerve roots in the side of the neck and armpit; it becomes the nerves of the arm and hand.','गर्दन की साइड और बगल में C5 से T1 नसों की जड़ों से बना जाल; आगे चलकर यही बांह और हाथ की नसें बनता है।'),
+   pic:{k:'bone', focus:{roots:['C5','C6','C7','C8','T1'], sides:['r']}, view:{az:0.6, el:0.12, d:0.9, yk:'sh', dy:0.02, tx:-0.08}, nerveKeep:['C5_','C6_','C7_','C8_','T1_','median','ulnar','radial','cord'], noLegs:true}},
+  {id:'carpal', terms:{en:['carpal tunnel','median nerve'], hi:['कार्पल टनल','मीडियन नस']},
+   title:L('Carpal tunnel and median nerve','कार्पल टनल और मीडियन नस'),
+   plain:L('The median nerve passes through a tight tunnel at the front of the wrist to the thumb, index and middle fingers. Pressure here (carpal tunnel syndrome) causes night tingling that eases by shaking the hand.','मीडियन नस कलाई के आगे एक तंग सुरंग से होकर अंगूठे, तर्जनी और बीच की उंगली तक जाती है। यहां दबाव (कार्पल टनल सिंड्रोम) से रात में झुनझुनी होती है जो हाथ झटकने से कम होती है।'),
+   pic:{k:'bone', focus:{nerves:['median','medianF0','medianF1','medianF2'], sides:['l']}, view:{az:1.0, el:0.25, d:0.52, yk:'wrist', dy:-0.03, tx:0.27, tz:0.25}, body:true, nerveKeep:['median','ulnar'], noLegs:true, noPelvis:true}},
+  {id:'cervical', src:['wikemcr'], terms:{en:['cervical spine','cervical'], hi:['सर्वाइकल']},
+   title:L('Cervical spine (neck, C1–C7)','सर्वाइकल स्पाइन (गर्दन, C1–C7)'),
+   plain:L('The seven small vertebrae of the neck. Wear here (cervical spondylosis) is very common after 40 and can press nerve roots to the arm or, less often, the spinal cord.','गर्दन की सात छोटी कशेरुकाएं। यहां घिसावट (सर्वाइकल स्पॉन्डिलोसिस) 40 के बाद बहुत आम है और बांह की नसों की जड़ों या कभी-कभी स्पाइनल कॉर्ड को दबा सकती है।'),
+   pic:{k:'bone', focus:{vert:['C1','C2','C3','C4','C5','C6','C7']}, view:NECK_SIDE, labels:true, noLegs:true, noPelvis:true, noUpper:true, nerveKeep:['cord','C5_','C6_','C7_','C8_']}},
+  {id:'lumbar', src:['statdh'], terms:{en:['lumbar spine','lumbar'], hi:['लम्बर']},
+   title:L('Lumbar spine (lower back, L1–L5)','लम्बर स्पाइन (कमर, L1–L5)'),
+   plain:L('The five large vertebrae of the lower back that carry most of the body weight. 95% of disc herniations here are at L4–L5 or L5–S1.','कमर की पांच बड़ी कशेरुकाएं जो शरीर का ज़्यादातर वज़न उठाती हैं। यहां 95% डिस्क हर्निएशन L4–L5 या L5–S1 पर होते हैं।'),
+   pic:Object.assign({}, NOLIMB, {k:'bone', focus:{vert:['L1','L2','L3','L4','L5']}, view:LUMB, labels:true})},
+  {id:'thoracic', src:['thor'], terms:{en:['thoracic spine','thoracic'], hi:['थोरेसिक']},
+   title:L('Thoracic spine (upper and mid back, T1–T12)','थोरेसिक स्पाइन (ऊपरी और बीच की पीठ, T1–T12)'),
+   plain:L('The twelve vertebrae behind the chest, each joined to a pair of ribs. The rib cage makes this part stiff and strong, so disc problems here are uncommon.','छाती के पीछे की बारह कशेरुकाएं, हर एक पसलियों की एक जोड़ी से जुड़ी। पसलियों का पिंजरा इस हिस्से को सख्त और मज़बूत बनाता है, इसलिए यहां डिस्क की दिक्कत कम होती है।'),
+   pic:{k:'bone', focus:{vert:['T1','T2','T3','T4','T5','T6','T7','T8','T9','T10','T11','T12']}, view:THOR, labels:true, keepRibs:true, noLegs:true}},
+  {id:'spondylosis', src:['ajnr'], terms:{en:['spondylosis','degenerative','wear and tear'], hi:['स्पॉन्डिलोसिस','घिसावट','घिसाव']},
+   title:L('Spondylosis (wear of the spine)','स्पॉन्डिलोसिस (रीढ़ की घिसावट)'),
+   plain:L('Age-related wear of discs and joints: discs lose water and height, and small bone spurs form. It shows on most scans after 40 even in people without pain, so a scan finding alone does not prove it is the cause.','उम्र के साथ डिस्क और जोड़ों की घिसावट: डिस्क पानी और ऊंचाई खोती हैं और हड्डी के छोटे उभार बनते हैं। 40 के बाद ज़्यादातर स्कैन में यह बिना दर्द वाले लोगों में भी दिखती है, इसलिए सिर्फ़ स्कैन से यह साबित नहीं होता कि दर्द इसी से है।'),
+   pic:Object.assign({}, NOLIMB, {k:'bone', focus:{discs:['L3–L4','L4–L5','L5–S1'], vert:['L4','L5']}, view:LUMB_SIDE, labels:true})},
+  {id:'slr', src:['cochrane'], terms:{en:['straight leg raise','SLR'], hi:['स्ट्रेट लेग रेज़','SLR']},
+   title:L('Straight leg raise (SLR)','स्ट्रेट लेग रेज़ (SLR)'),
+   plain:L('Lying on your back, the straight leg is lifted slowly. Shooting pain below the knee between about 30° and 70° suggests a pressed L5 or S1 nerve root.','पीठ के बल लेटकर सीधी टांग धीरे-धीरे उठाई जाती है। लगभग 30° से 70° के बीच घुटने के नीचे तक करंट जैसा दर्द L5 या S1 नस की जड़ पर दबाव का संकेत है।'),
+   pic:{k:'pose', test:'slr'}},
+  {id:'spurling', src:['wainner', 'wikemcr'], terms:{en:['Spurling'], hi:['स्परलिंग']},
+   title:L('Spurling (neck tilt) test','स्परलिंग (गर्दन झुकाने का) टेस्ट'),
+   plain:L('Tilting the head towards the painful side and looking slightly up narrows the opening where the neck nerve root exits; pain running down the arm suggests that root is pinched.','सिर को दर्द वाली तरफ़ झुकाकर थोड़ा ऊपर देखने से गर्दन की नस की जड़ के निकलने का छेद संकरा होता है; बांह में नीचे तक दर्द जाए तो वह जड़ दबी हो सकती है।'),
+   pic:{k:'pose', test:'spur'}}
+];
 })();
 
 </script>
@@ -2658,7 +2837,7 @@ function resolveView(v){
   const lm = lmv(), S = window.SPG_SPINE[G.sex];
   const base = v.yk === 'mid' ? lm.H * 0.5 : v.yk === 'disc' ? (S.dc[v.disc] || S.dc['L4–L5'])[1] : S.lv[v.yk] ? S.lv[v.yk][1] : lm[v.yk];
   const ty = (isFinite(base) ? base : lm.H * 0.5) + (v.dy || 0) * lm.s;
-  return {az:v.az, el:v.el, d:v.d * lm.s, ty, tx:(v.tx || 0) * lm.s};
+  return {az:v.az, el:v.el, d:v.d * lm.s, ty, tx:(v.tx || 0) * lm.s, tz:(v.tz || 0) * lm.s};
 }
 function useSex(code){
   if (!G.ok) return; if (G.sex === code && G.body) return;
@@ -2729,7 +2908,7 @@ function spineView(){
   const GP = (M && M.GAL) || {}, sd = G.rca && G.rca.side === 'r';
   return Object.assign({}, V.spine, GP.ref ? {yk:GP.ref, d:(GP.d || 0.66) * 1.18, dy:GP.refDy || 0} : {}, {az: sd ? PI + 0.5 : PI - 0.5});
 }
-function place(cam, v){ const ce = Math.cos(v.el), tx0 = v.tx || 0; cam.position.set(tx0 + v.d*Math.sin(v.az)*ce, v.ty + v.d*Math.sin(v.el), v.d*Math.cos(v.az)*ce); cam.lookAt(tx0, v.ty, 0); }
+function place(cam, v){ const ce = Math.cos(v.el), tx0 = v.tx || 0, tz0 = v.tz || 0; cam.position.set(tx0 + v.d*Math.sin(v.az)*ce, v.ty + v.d*Math.sin(v.el), tz0 + v.d*Math.cos(v.az)*ce); cam.lookAt(tx0, v.ty, tz0); }
 function setAnat(on){
   if (!G.ok) return; G.anat = on; G.body.setXray(on); G.anatomy.group.visible = on; chrome();
 }
@@ -2814,15 +2993,20 @@ function vLang(){
     <p class="lede">The whole assessment, result and PDF report will be in the language you choose. You can switch at any time from the top bar.<br><span lang="hi">पूरी जांच, नतीजा और PDF रिपोर्ट आपकी चुनी हुई भाषा में होगी। ऊपर से कभी भी बदल सकते हैं।</span></p>
     <div class="langbtns"><button class="btn primary" data-act="pickLang" data-v="en">English</button><button class="btn primary" data-act="pickLang" data-v="hi" lang="hi">हिंदी</button></div></section>`;
 }
+function vResume(){
+  const s = loadSave(); if (!s) return '';
+  const m = SPG.data.modules[s.mod], when = (() => { try { return new Date(s.t).toLocaleString(lang === 'hi' ? 'hi-IN' : 'en-IN', {day:'numeric', month:'short', hour:'numeric', minute:'2-digit'}); } catch (e) { return ''; } })();
+  return `<section class="card resume"><h3>${tx(U.resT)}</h3><p><b>${esc(tx(m.name))}</b></p><p class="small muted">${s.view === 'result' ? tx(U.resDone) : fmt(U.resStep, s.idx + 1)}${when ? ' · ' + esc(when) : ''}</p>
+    <div class="dl"><button class="btn primary" data-act="resume">${tx(s.view === 'result' ? U.resSee : U.resGo)} →</button><button class="btn ghost" data-act="resNo">${tx(U.resNo)}</button></div><p class="small muted" style="margin-top:8px">${tx(U.resS)}</p></section>`;
+}
 function vStart(){
-  return `<section class="card">
+  return `${vResume()}<section class="card">
     <p class="kicker">${tx(U.kicker)}</p>
     <h1 style="margin-top:8px" id="qh" tabindex="-1">${tx(U.title)}</h1>
     <p class="lede">${tx(U.lede)}</p>
-    <label class="lbl" for="problem">${tx(U.problem)}</label>
-    <div class="selectwrap"><select id="problem">${MODS.map(m => `<option value="${m.id}" ${m === M ? 'selected' : ''}>${esc(tx(m.name))}</option>`).join('')}</select></div>
-    <button class="btn primary block" data-act="begin">${tx(U.begin)} →</button>
-    <ul class="meta"><li>${tx(U.meta1)}</li><li>${tx(U.meta2)}</li><li>${tx(U.meta3)}</li></ul>
+    <div class="qhead" style="margin-top:18px"><p class="lbl" style="margin:0">${tx(U.pickT)}</p>${sayBtn()}</div>
+    <div class="mcards${G.ok ? '' : ' nogl-on'}">${MODS.map(m => `<button type="button" class="mcard" data-act="pickMod" data-v="${m.id}"><span class="mimg">${G.ok ? `<img data-mod="${m.id}" alt="">` : ''}</span><span class="mtx"><b>${esc(tx(m.name))}</b>${m.card && m.card.hint ? `<small>${esc(tx(m.card.hint))}</small>` : ''}<span class="go">${tx(U.cardGo)} →</span></span></button>`).join('')}</div>
+    <ul class="meta"><li>${tx(U.meta1)}</li><li>${tx(U.meta2)}</li><li>${tx(U.meta3)}</li><li>${tx(U.glTap)}</li></ul>
   </section>
   <section class="card appcard" id="appCard" ${PWA.can() ? '' : 'hidden'}><img src="icons/icon-192.png" alt=""><div><h3>${tx(U.instT)}</h3><p class="small muted" style="margin-top:4px">${tx(U.instS)}</p><button class="btn primary" data-act="install">${tx(U.inst)}</button></div></section>
   <section class="card"><h3>${tx(U.numsT)}</h3><dl class="numgrid">${(M.STATS || []).concat(STATS).slice(0, 6).map(s => `<div><dt>${s.v}</dt><dd>${tx(s.t)}${cite(s.s)}</dd></div>`).join('')}</dl></section>
@@ -2846,12 +3030,12 @@ function timelineSVG(){
 }
 function vQ(){
   const stp = STEPS[S.idx], n = STEPS.filter((s, i) => valid(i)).length, pos = STEPS.slice(0, S.idx + 1).filter((s, i) => valid(i)).length;
-  const head = (extra) => `<div class="qhead"><span class="kicker">${tx(U.secs[stp.sec])} · ${fmt(U.stepOf, pos, n)}</span>${extra || ''}</div>`;
+  const head = (extra) => `<div class="qhead"><span class="kicker">${tx(U.secs[stp.sec])} · ${fmt(U.stepOf, pos, n)}</span>${extra || ''}${sayBtn()}</div>`;
   if (stp.k === 'profile') return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.profT)}</h2><p class="qdesc">${tx(U.profS)}</p>
     <fieldset class="grp"><legend>${tx(U.age)}</legend>${pills('age', AGES, A.age)}</fieldset>
     <fieldset class="grp"><legend>${tx(U.sex)}</legend>${pills('sex', SEXES, A.sex)}</fieldset>
     <fieldset class="grp"><legend>${tx(U.hist)}</legend>${chips('risk', RISKS, A.risks)}</fieldset>
-    ${nav(!!A.age)}${A.age ? '' : `<p class="note">${tx(U.needAge)}</p>`}</section>`;
+    <\!--glstrip-->${nav(!!A.age)}${A.age ? '' : `<p class="note">${tx(U.needAge)}</p>`}</section>`;
   if (stp.k === 'area') {
     const a = stp.a, v = A.areas[a.id], ai = AREAS.indexOf(a) + 1;
     const b = (val, l, cls) => `<button class="ans ${cls}" data-act="area" data-v="${val}" aria-pressed="${v === val}">${tx(l)}</button>`;
@@ -2860,16 +3044,16 @@ function vQ(){
       <h2 id="qh" tabindex="-1" style="margin-top:4px">${tx(a.name)}</h2><p class="qdesc">${tx(a.desc)}</p>
       ${refPics('area:' + a.id)}
       <p class="qtext">${tx(U.qArea)}</p>
-      ${a.pair ? `<div class="answers four">${b('l',U.left,'y')}${b('r',U.right,'y')}${b('both',U.both,'y')}${b('no',U.no,'n')}</div><p class="small muted" style="margin-top:8px">${tx(U.sideNote)}</p>` : `<div class="answers">${b('yes',U.yes,'y')}${b('no',U.no,'n')}</div>`}
+      <\!--glstrip-->${a.pair ? `<div class="answers four">${b('l',U.left,'y')}${b('r',U.right,'y')}${b('both',U.both,'y')}${b('no',U.no,'n')}</div><p class="small muted" style="margin-top:8px">${tx(U.sideNote)}</p>` : `<div class="answers">${b('yes',U.yes,'y')}${b('no',U.no,'n')}</div>`}
       <p class="note"><b>${tx(U.rel)}:</b> ${tx(a.rel)}</p>
       <div class="qnav"><button class="linkbtn" data-act="prev">← ${tx(U.back)}</button></div></section>`;
   }
   if (stp.k === 'dom') return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.domT)}</h2>
-    <div class="answers three" style="margin-top:16px">${DOMS.map(o => `<button class="ans" data-act="dom" data-v="${o[0]}" aria-pressed="${A.dom === o[0]}">${tx(o[1])}</button>`).join('')}</div>
+    <\!--glstrip--><div class="answers three" style="margin-top:16px">${DOMS.map(o => `<button class="ans" data-act="dom" data-v="${o[0]}" aria-pressed="${A.dom === o[0]}">${tx(o[1])}</button>`).join('')}</div>
     <p class="note"><b>${tx(U.rel)}:</b> ${tx(U.domWhy)}${cite('msd')}</p><div class="qnav"><button class="linkbtn" data-act="prev">← ${tx(U.back)}</button></div></section>`;
   if (stp.k === 'onset') { const ok = !!A.onset; return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.onT)}</h2><p class="qdesc">${tx(U.onS)}</p>
     <div style="margin-top:14px">${chips('onset', ONSETS, A.onset, true)}</div>
-    ${nav(ok)}${ok ? '' : `<p class="note">${tx(U.needOn)}</p>`}</section>`; }
+    <\!--glstrip-->${nav(ok)}${ok ? '' : `<p class="note">${tx(U.needOn)}</p>`}</section>`; }
   if (stp.k === 'time') { const ok = !!(A.since && A.hx); return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.timeT)}</h2><p class="qdesc">${tx(U.timeS)}</p>
     <fieldset class="grp"><legend class="qq">1 · ${tx(U.since)}</legend><p class="small muted" style="margin:-2px 0 8px">${tx(U.sinceH)}</p>${pills('since', SINCE, A.since)}</fieldset>
     <fieldset class="grp"><legend class="qq">2 · ${tx(U.hx)}</legend><p class="small muted" style="margin:-2px 0 8px">${tx(U.hxH)}</p>${pills('hx', HX, A.hx)}</fieldset>
@@ -2877,30 +3061,31 @@ function vQ(){
     <fieldset class="grp"><legend>${tx(U.trend)}</legend>${pills('trend', TRENDS, A.trend)}</fieldset>
     ${timelineSVG()}
     <p class="note"><b>${tx(U.rel)}:</b> ${tx(U.timeWhy)}${cite('who')}</p>
-    ${nav(ok)}${ok ? '' : `<p class="note">${tx(U.needTime)}</p>`}</section>`; }
+    <\!--glstrip-->${nav(ok)}${ok ? '' : `<p class="note">${tx(U.needTime)}</p>`}</section>`; }
   if (stp.k === 'pattern') return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.patT)}</h2><p class="qdesc">${tx(U.patS)}</p>
     <fieldset class="grp"><legend>${tx(U.gChar)}</legend>${chips('pat', PAT.char, A.pat)}</fieldset>
     <fieldset class="grp"><legend>${tx(U.gWorse)}</legend>${chips('pat', PAT.worse, A.pat)}</fieldset>
     <fieldset class="grp"><legend>${tx(U.gBetter)}</legend>${chips('pat', PAT.better, A.pat)}</fieldset>
-    <fieldset class="grp"><legend>${tx(U.gOther)}</legend>${chips('pat', PAT.other.filter(o => o[0] !== 'ch_period' || A.sex === 'sex_f'), A.pat)}</fieldset>${nav(true)}</section>`;
+    <fieldset class="grp"><legend>${tx(U.gOther)}</legend>${chips('pat', PAT.other.filter(o => o[0] !== 'ch_period' || A.sex === 'sex_f'), A.pat)}</fieldset><\!--glstrip-->${nav(true)}</section>`;
   if (stp.k === 'function') { const ok = M.FUNCS.every(f => !f.req || A[f.id]); return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.funT)}</h2>
     <fieldset class="grp"><legend>${tx(U.pain)}</legend><div class="painrow"><input type="range" id="pain" min="0" max="10" step="1" value="${A.pain}" aria-label="${esc(tx(U.pain))}"><output class="painval" id="painOut">${A.pain}</output></div><div class="scale"><span>0</span><span>5</span><span>10</span></div><p class="small muted" style="margin-top:4px">${tx(U.painS)}</p></fieldset>
     ${M.FUNCS.map(f => `<fieldset class="grp"><legend>${tx(U[f.label] || f.label)}</legend><div class="pills" role="radiogroup">${f.opts.map(o => `<button type="button" class="pill" role="radio" aria-checked="${A[f.id] === o[0]}" data-act="fn" data-k="${f.id}" data-v="${o[0]}">${esc(tx(o[1]))}</button>`).join('')}</div></fieldset>`).join('')}
-    ${nav(ok)}${ok ? '' : `<p class="note">${tx(U.needFun)}</p>`}</section>`; }
+    <\!--glstrip-->${nav(ok)}${ok ? '' : `<p class="note">${tx(U.needFun)}</p>`}</section>`; }
   if (stp.k === 'test') {
     const t = stp.t, ti = TESTS.indexOf(t) + 1, v = A[t.id];
+    GL.forEach(g => { if (g.pic && g.pic.test === t.id) GLU.add(g.id); });
     return `<section class="card">${head(`<span class="code">${fmt(U.testK, ti, TESTS.length)}</span>`)}<h2 id="qh" tabindex="-1">${tx(t.name)}</h2>
       ${G.ok && window.SPG_RIG && TPOSE[t.id] ? testFig(t) : testSVG(t.id, PAL_PAGE) ? `<div class="testfig">${testSVG(t.id, PAL_PAGE)}</div>` : ''}
       <h3>${tx(U.how)}</h3><ol class="steps">${t.steps.map(x => `<li>${tx(x)}</li>`).join('')}</ol>
       <p class="callout"><b>${tx(U.pos)}:</b> ${tx(t.pos)}</p>
       ${t.acc ? `<p class="note"><b>${tx(U.acc)}:</b> ${tx(t.acc)}${cite(t.src)}</p>` : ''}
       <p class="warn">${tx(U.safeT)}</p>
-      <div class="answers three" style="margin-top:14px">${t.ans.map(o => `<button class="ans ${o[2] === 'y' ? 'y' : 'n'}" data-act="test" data-v="${o[0]}" aria-pressed="${v === o[0]}">${tx(U[o[1]])}</button>`).join('')}</div>
+      <\!--glstrip--><div class="answers three" style="margin-top:14px">${t.ans.map(o => `<button class="ans ${o[2] === 'y' ? 'y' : 'n'}" data-act="test" data-v="${o[0]}" aria-pressed="${v === o[0]}">${tx(U[o[1]])}</button>`).join('')}</div>
       <div class="qnav"><button class="linkbtn" data-act="prev">← ${tx(U.back)}</button></div></section>`;
   }
   if (stp.k === 'safety') { const ok = RFS.every(r => A.rf[r[0]]); return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.safT)}</h2><p class="qdesc">${tx(U.safS)}${cite('ces','wikem','nice')}</p>${M.safetyRegions && U.safPic ? `<p class="small" style="margin-top:12px"><b>${tx(U.safPic)}</b></p>${refPics('safety')}` : ''}
     <div class="safety">${RFS.map(r => `<div class="srow"><p>${tx(r[1])}</p><div class="yn"><button class="y" data-act="rf" data-k="${r[0]}" data-v="yes" aria-pressed="${A.rf[r[0]] === 'yes'}">${tx(U.yes)}</button><button class="n" data-act="rf" data-k="${r[0]}" data-v="no" aria-pressed="${A.rf[r[0]] === 'no'}">${tx(U.no)}</button></div></div>`).join('')}</div>
-    ${nav(ok, true)}${ok ? '' : `<p class="note">${tx(U.needSaf)}</p>`}</section>`; }
+    <\!--glstrip-->${nav(ok, true)}${ok ? '' : `<p class="note">${tx(U.needSaf)}</p>`}</section>`; }
   return '';
 }
 function findings(R){
@@ -2919,6 +3104,7 @@ function vResult(){
   const meter = ['green','yellow','orange','red'].map(k => `<span class="m-${k}${k === R.level ? ' cur' : ''}">${tx(LEVELS[k].short)}</span>`).join('');
   const calls = R.level === 'red' ? `<div class="calls"><a class="call" href="tel:108"><b>108</b>${tx(U.call108)}</a><a class="call" href="tel:112"><b>112</b>${tx(U.call112)}</a></div><p class="small" style="margin-top:6px">${tx(U.callN)}</p>` : '';
   let html = `<section class="banner lv-${R.level}"><div class="meter" aria-hidden="true">${meter}</div><p class="kicker" style="margin:0">${tx(U.resK)}</p><h2 id="qh" tabindex="-1" style="margin-top:4px">${tx(Lv.title)}</h2><p>${tx(Lv.act)}</p>${calls}<ul class="reasons">${R.reasons.map(r => `<li>${esc(tx(r))}</li>`).join('')}</ul></section>`;
+  html += `<section class="card sum3"><div class="qhead"><h3>${tx(U.sumT)}</h3>${sayBtn()}</div><ol>${summaryLines(R).map(l => `<li>${esc(l)}</li>`).join('')}</ol></section>`;
   html += `<section class="card must"><h3>${tx(U.mustT)}</h3><ul class="tips">${U.must.map(m => `<li>${tx(m)}</li>`).join('')}</ul></section>`;
   html += `<section class="card"><h3>${tx(U.keyF)}</h3><div class="findings">${findings(R).map(f => `<span>${esc(f)}</span>`).join('')}</div></section>`;
   // impression
@@ -2963,7 +3149,7 @@ function vResult(){
   // departments
   html += `<section class="card"><h3>${tx(U.docs)}</h3><ol class="depts">${R.depts.map((d, i) => { const D = DEPTS[d.id]; return `<li class="dept${i === 0 ? ' first' : ''}"><span class="ix">${i + 1}</span><div style="min-width:0">${i === 0 ? `<span class="st">${tx(U.startHere)}</span>` : ''}<h4>${esc(tx(D.n))}</h4><p>${esc(tx(D.s))}</p>${d.why.length ? `<p class="for"><b>${tx(U.forL)}:</b> ${d.why.map(w => esc(tx(w))).join(' · ')}</p>` : ''}${d.id !== 'emergency' ? `<a href="https://www.google.com/maps/search/${encodeURIComponent(D.q + ' near me')}" target="_blank" rel="noopener">${tx(U.near)} ↗</a>` : ''}</div></li>`; }).join('')}</ol></section>`;
   if (R.level !== 'red') html += `<section class="card"><h3>${tx(U.until)}</h3><ul class="tips"><li>${tx(U.tip1)}${cite('nice','who')}</li><li>${tx(U.tip2)}</li><li>${tx(U.tip3)}</li></ul></section>`;
-  html += `<section class="card"><h3>${tx(U.rep)}</h3><p class="small muted" style="margin-top:6px">${tx(U.repS)}</p><div class="dl"><button class="btn primary" data-act="download" id="dlBtn">${tx(U.dl)}</button><span class="small muted" id="dlStatus" role="status"></span></div></section>`;
+  html += `<section class="card"><h3>${tx(U.rep)}</h3><p class="small muted" style="margin-top:6px">${tx(U.repS)}</p><div class="dl"><button class="btn primary" data-act="download" id="dlBtn">${tx(U.dl)}</button>${navigator.share || (navigator.clipboard && navigator.clipboard.writeText) ? `<button class="btn ghost" data-act="share" id="shBtn">${ICO.share}${tx(U.share)}</button>` : ''}<span class="small muted" id="dlStatus" role="status"></span></div></section>`;
   html += `<div class="actions"><button class="btn ghost" data-act="edit">${tx(U.edit)}</button><button class="btn ghost" data-act="home">${tx(U.restart)}</button></div>`;
   return html;
 }
@@ -2971,6 +3157,179 @@ function whyList(top){
   const items = top.pros.filter(p => FX[p[0]]).slice(0, 7);
   if (!items.length) return '';
   return `<h4 style="margin-top:16px;font-size:15px">${tx(U.whyT)}</h4><ul class="why">${items.map(p => `<li><b>${esc(lab(p[0]))}</b> — ${esc(tx(FX[p[0]]))}</li>`).join('')}</ul>`;
+}
+/* ================= glossary: medical words become tappable, each opens a picture and a plain meaning ================= */
+const GL = (SPG.data.glossary || []), GLI = {}; GL.forEach(g => GLI[g.id] = g);
+let GLU = new Set(); const GLRX = {};
+const SKIPT = new Set(['a','button','sup','svg','h3','th','figcaption','select','option','textarea','output','title']);
+function glRx(){
+  if (GLRX[lang]) return GLRX[lang];
+  const list = [], map = {};
+  GL.forEach(g => (g.terms[lang] || []).forEach(t => list.push([t, g.id])));
+  list.sort((a, b) => b[0].length - a[0].length); list.forEach(([t, id]) => map[t.toLowerCase()] = id);
+  const alt = list.map(x => x[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+  const rx = !alt ? null : lang === 'hi' ? new RegExp('(^|[^\\u0900-\\u097F])(' + alt + ')([\\u0900-\\u097F]*)', 'g') : new RegExp('(^|[^A-Za-z])(' + alt + ')()(?![A-Za-z])', 'gi');
+  return GLRX[lang] = {rx, map};
+}
+const glKey = (map, t) => map[t.toLowerCase()];
+function gl(html){
+  const {rx, map} = glRx(); if (!rx) return html.replace('<\!--glstrip-->', '');
+  const parts = html.split(/(<[^>]*>)/), seen = new Set(); let skip = 0;
+  for (let i = 0; i < parts.length; i++) {
+    const p = parts[i]; if (!p) continue;
+    if (p[0] === '<') { const m = /^<(\/?)([a-zA-Z0-9]+)/.exec(p); if (m && SKIPT.has(m[2].toLowerCase())) { if (m[1]) skip = Math.max(0, skip - 1); else if (!/\/>$/.test(p)) skip++; } continue; }
+    if (skip) { p.replace(rx, (a, pre, term) => { const id = glKey(map, term); if (id) seen.add(id); return a; }); continue; }
+    parts[i] = p.replace(rx, (a, pre, term, tail) => { const id = glKey(map, term); if (!id || GLU.has(id)) return a; GLU.add(id); return `${pre}<button type="button" class="term" data-act="term" data-v="${id}">${term}${tail || ''}</button>`; });
+  }
+  let out = parts.join('');
+  if (out.includes('<\!--glstrip-->')) {
+    const ids = [...seen].filter(id => !GLU.has(id)); ids.forEach(id => GLU.add(id));
+    out = out.replace('<\!--glstrip-->', ids.length ? `<div class="glstrip"><span>${tx(U.glT)}:</span>${ids.map(id => `<button type="button" class="term" data-act="term" data-v="${id}">${esc(tx(GLI[id].title))}</button>`).join('')}</div>` : '');
+  }
+  return out;
+}
+const GLPIC = {};
+function glLabels(p){
+  const v = p.view || {}, f = p.focus || {}, lat = Math.abs(Math.sin(v.az || 0)) > 0.85, yk = String(v.yk || '');
+  const set = p.lset || (/^(C\d|c4|sh|wrist)/.test(yk) ? ['C1','C2','C3','C4','C5','C6','C7','T1'] : /^(T\d|t6)/.test(yk) ? ['T1','T2','T3','T4','T5','T6','T7','T8','T9','T10','T11','T12'] : ['T12','L1','L2','L3','L4','L5','S1']);
+  G.anatomy.makeLabels(lat ? 'l' : (f.side || 'l'), f.label || [], lang === 'hi' ? 'डिस्क' : 'disc', lat ? 'lat' : null, set);
+}
+function glPic(g){
+  const p = g.pic || {}, key = [g.id, G.sex, lang].join('|'); if (GLPIC[key]) return GLPIC[key];
+  if (!G.ok || !G.anatomy) return null;
+  if (p.k === 'pose') { if (!window.SPG_RIG || !TPOSE[p.test]) return null; const u = testPic(p.test, 480, 560); return u ? (GLPIC[key] = u) : null; }
+  let c;
+  if (p.k === 'skin') c = snapshot(p.view, 480, 520, {cur:p.reg || [], hlA:0.42});
+  else {
+    G.anatomy.setFocus(p.focus || {}); if (p.labels) glLabels(p); else G.anatomy.makeLabels('l', [], '', null, []);
+    const noBody = p.body === undefined ? (p.view.d < 1.0) : !p.body;
+    c = snapshot(p.view, 480, 520, {anat:true, labels:!!p.labels, noBody, noLegs:p.noLegs, noUpper:p.noUpper, keepRibs:p.keepRibs, nerveKeep:p.nerveKeep, noPelvis:p.noPelvis, noSac:p.noSac, cur:p.reg || [], hlA:0.42, fov:30});
+    applyRCA();
+  }
+  if (!c) return null; return GLPIC[key] = c.toDataURL('image/jpeg', 0.88);
+}
+function openTerm(id){
+  const g = GLI[id]; if (!g) return; sayStop();
+  const p = g.pic || {}, svg = p.k === 'svg' ? (p.fn === 'types' ? typesSVG(PAL_PAGE) : '') : '';
+  $('#glossCard').innerHTML = `<div class="glhead"><p class="kicker">${tx(U.glK)}</p><button type="button" class="glx" data-act="glClose" aria-label="${esc(tx(U.glClose))}">×</button></div>
+    <h2 id="glT" style="margin-top:4px">${esc(tx(g.title))}</h2>
+    ${svg || G.ok ? `<figure class="glpic${svg ? '' : ' loading'}" id="glPic">${svg}</figure>` : ''}
+    <p class="glplain">${esc(tx(g.plain))}${g.src ? cite(...g.src) : ''}</p>
+    <div class="glbtns">${sayBtn('gloss')}<button type="button" class="btn primary" data-act="glClose">${tx(U.glClose)}</button></div>`;
+  const gp = $('#glossPanel'); gp.hidden = false; gp.dataset.id = id; const x = $('#glossCard .glx'); if (x) x.focus();
+  if (!svg && G.ok) setTimeout(() => requestAnimationFrame(() => {
+    if (gp.hidden || gp.dataset.id !== id) return; const u = glPic(g), box = $('#glPic'); if (!box) return;
+    box.classList.remove('loading'); if (u) box.innerHTML = `<img src="${u}" alt="${esc(tx(g.title))}">`; else box.remove();
+  }), 30);
+}
+function closeTerm(){ const gp = $('#glossPanel'); if (gp && !gp.hidden) { gp.hidden = true; sayStop(); const b = document.querySelector(`.term[data-v="${gp.dataset.id}"]`); if (b) b.focus({preventScroll:true}); } }
+
+/* ================= read aloud (the phone's own text-to-speech, nothing is sent anywhere) ================= */
+const SAY = {on:false, warned:false};
+const SPK = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 7.5h3l4-3.5v12l-4-3.5h-3z"/><path d="M13.5 7a4 4 0 0 1 0 6M15.8 4.8a7 7 0 0 1 0 10.4"/></svg>';
+const canSay = () => typeof window.speechSynthesis !== 'undefined' && typeof window.SpeechSynthesisUtterance !== 'undefined';
+const sayBtn = scope => canSay() ? `<button type="button" class="saybtn" data-act="say" data-v="${scope || 'panel'}" aria-pressed="${SAY.on && SAY.scope === (scope || 'panel')}">${SPK}<span>${tx(SAY.on && SAY.scope === (scope || 'panel') ? U.sayStop : U.say)}</span></button>` : '';
+function updSay(){ document.querySelectorAll('[data-act="say"]').forEach(b => { const on = SAY.on && SAY.scope === b.dataset.v; b.setAttribute('aria-pressed', on); const s = b.querySelector('span'); if (s) s.textContent = tx(on ? U.sayStop : U.say); }); }
+function sayStop(){ if (canSay() && SAY.on) { speechSynthesis.cancel(); SAY.on = false; updSay(); } }
+function sayVoice(){
+  const vs = speechSynthesis.getVoices() || [], n = s => (s || '').replace('_', '-').toLowerCase();
+  if (lang === 'hi') return vs.find(v => n(v.lang).startsWith('hi')) || null;
+  return vs.find(v => n(v.lang) === 'en-in') || vs.find(v => n(v.lang).startsWith('en')) || null;
+}
+function sayText(scope){
+  const clean = e => { const c = e.cloneNode(true); c.querySelectorAll('sup, .bx, svg, .saybtn').forEach(x => x.remove()); return c.textContent.replace(/\s+/g, ' ').trim(); };
+  let els;
+  if (scope === 'gloss') els = document.querySelectorAll('#glossCard h2, #glossCard .glplain');
+  else if (S.view === 'result') els = document.querySelectorAll('#panel .banner h2, #panel .banner > p:not(.kicker), #panel .sum3 li, #panel .must li');
+  else if (S.view === 'start') els = document.querySelectorAll('#panel h1, #panel .lede, #panel .lbl, #panel .mcard b, #panel .mcard small');
+  else els = document.querySelectorAll('#panel section.card h2, #panel .qdesc, #panel .qtext, #panel .grp legend, #panel .chip, #panel .pill, #panel .ans, #panel .srow p, #panel ol.steps li, #panel .callout');
+  const end = lang === 'hi' ? '।' : '.';
+  return [...els].map(clean).filter(Boolean).map(t => /[.?!।:]$/.test(t) ? t : t + end).join(' ');
+}
+function say(scope){
+  if (!canSay()) return; const ss = window.speechSynthesis;
+  if (SAY.on) { const same = SAY.scope === scope; ss.cancel(); SAY.on = false; updSay(); if (same) return; }
+  const text = sayText(scope); if (!text) return;
+  const chunks = []; text.replace(/([.?!।])\s+/g, '$1\n').split('\n').forEach(s => { s = s.trim(); if (!s) return; const last = chunks[chunks.length - 1]; if (last && last.length + s.length < 180) chunks[chunks.length - 1] = last + ' ' + s; else chunks.push(s); });
+  const v = sayVoice(); SAY.on = true; SAY.scope = scope; SAY.id = (SAY.id || 0) + 1; const my = SAY.id;
+  chunks.forEach((c, i) => { const u = new SpeechSynthesisUtterance(c); u.lang = lang === 'hi' ? 'hi-IN' : 'en-IN'; if (v) u.voice = v; u.rate = lang === 'hi' ? 0.92 : 0.96;
+    if (i === chunks.length - 1) u.onend = () => { if (SAY.id === my) { SAY.on = false; updSay(); } };
+    u.onerror = () => { if (SAY.id === my) { SAY.on = false; updSay(); } }; ss.speak(u); });
+  updSay();
+  if (lang === 'hi' && !v && !SAY.warned) { SAY.warned = true; const n = document.createElement('p'); n.className = 'note'; n.textContent = tx(U.sayNoHi); const host = scope === 'gloss' ? $('#glossCard') : document.querySelector('#panel section'); if (host) host.appendChild(n); }
+}
+if (canSay()) { try { speechSynthesis.getVoices(); speechSynthesis.addEventListener && speechSynthesis.addEventListener('voiceschanged', () => {}); } catch (e) {} }
+
+/* ================= larger text ================= */
+let big = false; try { big = localStorage.getItem('spg-big') === '1'; } catch (e) {}
+document.documentElement.classList.toggle('big', big);
+
+/* ================= save and resume (kept only in this browser) ================= */
+const SAVEK = 'spg-save';
+function saveState(){ if (S.view !== 'q' && S.view !== 'result') return; try { localStorage.setItem(SAVEK, JSON.stringify({v:1, mod:M.id, A, view:S.view, idx:S.idx, t:Date.now()})); } catch (e) {} }
+function loadSave(){
+  try { const s = JSON.parse(localStorage.getItem(SAVEK) || 'null');
+    if (!s || s.v !== 1 || !SPG.data.modules[s.mod] || !s.A || Date.now() - s.t > 30 * 864e5) return null;
+    if (s.view === 'result' || (s.view === 'q' && s.idx > 0)) return s; } catch (e) {}
+  return null;
+}
+function resume(){
+  const s = loadSave(); if (!s) return;
+  useModule(s.mod); A = Object.assign(fresh(), s.A); useSex(sexCode());
+  if (s.view === 'result') return showResult();
+  let i = Math.min(s.idx, STEPS.length - 1); while (i > 0 && !valid(i)) i--; goto(i);
+}
+
+/* ================= plain summary + share ================= */
+function summaryLines(R){
+  const out = [], top = R.ranked[0];
+  if (R.emerg.length) out.push(fmt(U.sumE, tx(EMERG[R.emerg[0]].name)));
+  else if (top) out.push(tx(U.sum1).replace('{a}', tx(top.c.name)).replace('{b}', tx(U[top.strength]).toLowerCase()));
+  else out.push(tx(U.sumNone));
+  out.push(fmt(U.sum2, tx(LEVELS[R.level].title)));
+  const d0 = R.depts[0]; if (d0 && DEPTS[d0.id]) out.push(fmt(U.sum3, tx(DEPTS[d0.id].n)));
+  return out;
+}
+const pdfKey = () => JSON.stringify([M.id, lang, A, G.sex]);
+async function getPDF(){ const k = pdfKey(); if (G.pdf && G.pdf.k === k) return G.pdf.blob; const blob = await buildPDF(); G.pdf = {k, blob}; return blob; }
+const pdfName = () => 'spine-assessment-' + new Date().toISOString().slice(0, 10) + '.pdf';
+function shareText(){
+  const R = analyze(A), lines = [tx(U.brand) + ' — ' + tx(U.shareH)];
+  summaryLines(R).forEach(l => lines.push('• ' + l)); lines.push(tx(U.notDx) + '.');
+  if (/^https?:$/.test(location.protocol) && !/claude|anthropic/.test(location.hostname)) lines.push(location.origin + location.pathname);
+  return lines.join('\n');
+}
+async function shareReport(){
+  const st = $('#dlStatus'), btn = $('#shBtn'), text = shareText(), cached = G.pdf && G.pdf.k === pdfKey();
+  const done = m => { if (st) st.textContent = m ? tx(m) : ''; if (btn) btn.disabled = false; };
+  if (btn) btn.disabled = true;
+  try {
+    if (navigator.share && navigator.canShare && typeof File === 'function') {
+      if (!cached && st) st.textContent = tx(U.prep);
+      const blob = await getPDF(), file = new File([blob], pdfName(), {type:'application/pdf'});
+      if (navigator.canShare({files:[file]})) {
+        try { await navigator.share({files:[file], title:tx(U.brand), text}); return done(U.shared); }
+        catch (e) { if (e && e.name === 'AbortError') return done(); if (!cached && e && e.name === 'NotAllowedError') return done(U.shareAgain); }
+      }
+    }
+    if (navigator.share) { try { await navigator.share({title:tx(U.brand), text}); return done(U.shared); } catch (e) { if (e && e.name === 'AbortError') return done(); } }
+    if (navigator.clipboard && navigator.clipboard.writeText) { await navigator.clipboard.writeText(text); return done(U.shareCopied); }
+  } catch (e) { console.warn('share', e); }
+  done(U.shareNA);
+}
+/* ================= start page cards: one per body part, each with a 3D picture ================= */
+const MODPIC = {};
+function fillModPics(){
+  if (!G.ok) return;
+  document.querySelectorAll('.mcard img[data-mod]').forEach((img, i) => {
+    const m = SPG.data.modules[img.dataset.mod], key = m.id + '|' + G.sex; if (!m) return;
+    if (MODPIC[key]) { img.src = MODPIC[key]; return; }
+    setTimeout(() => requestAnimationFrame(() => {
+      if (!document.body.contains(img)) return; const cd = m.card || {};
+      const c = snapshot(cd.view || V.back || V.full, 300, 330, {cur:cd.reg || m.startRegions || [], hlA:0.55}); if (!c) return;
+      MODPIC[key] = c.toDataURL('image/jpeg', 0.86); img.src = MODPIC[key];
+    }), 30 + i * 50);
+  });
 }
 function vFoot(){ return `<p>${tx(U.disc)}</p><details class="srcs" id="srcDetails" ${S.view === 'result' ? 'open' : ''}><summary>${tx(U.srcT)} (${SRC.length})</summary><ol>${SRC.map((s, i) => `<li id="src-${i + 1}"><a href="${s[2]}" target="_blank" rel="noopener">${esc(s[1])}</a></li>`).join('')}</ol></details>`; }
 
@@ -2985,9 +3344,13 @@ function render(focus){
   if (!G.ok) { const n = $('#nogl'); n.hidden = false; n.textContent = tx(U.noGL); $('#hint').hidden = true; }
   chrome();
   $('#stepper').innerHTML = stepper();
-  $('#panel').innerHTML = S.view === 'lang' ? vLang() : S.view === 'start' ? vStart() : S.view === 'q' ? vQ() : vResult();
+  const bb = $('#bigBtn'); if (bb) { bb.title = tx(U.bigT); bb.setAttribute('aria-label', tx(U.bigT)); bb.setAttribute('aria-pressed', big); }
+  const pageKey = [S.view, S.idx, M.id, lang].join('|'); if (pageKey !== G.pageKey) { G.pageKey = pageKey; sayStop(); }
+  GLU = new Set();
+  const html = S.view === 'lang' ? vLang() : S.view === 'start' ? vStart() : S.view === 'q' ? vQ() : vResult();
+  $('#panel').innerHTML = S.view === 'lang' ? html : gl(html);
   $('#foot').innerHTML = vFoot();
-  fillRefPics(); fillTestPic(); updInstall();
+  fillRefPics(); fillTestPic(); fillModPics(); updInstall(); saveState();
   document.body.classList.toggle('is-q', S.view === 'q');
   if (focus) { const h = $('#qh'); if (h) h.focus({preventScroll:true}); }
 }
@@ -3279,8 +3642,8 @@ async function buildPDF(){
 }
 async function download(){
   const btn = $('#dlBtn'), st = $('#dlStatus'); btn.disabled = true; st.textContent = tx(U.prep);
-  let blob; try { await new Promise(r => setTimeout(r, 30)); blob = await buildPDF(); } catch (e) { console.error("pdf", e && e.stack); st.textContent = tx(U.dlFail); btn.disabled = false; return; }
-  const name = 'spine-assessment-' + new Date().toISOString().slice(0, 10) + '.pdf';
+  let blob; try { await new Promise(r => setTimeout(r, 30)); blob = await getPDF(); } catch (e) { console.error("pdf", e && e.stack); st.textContent = tx(U.dlFail); btn.disabled = false; return; }
+  const name = pdfName();
   const dl = await dlReady;
   if (dl) { try { await dl.save({filename:name, data:blob}); st.textContent = tx(U.saved); } catch (err) { const c = err && err.code; st.textContent = c === 'declined' ? tx(U.declined) : c === 'rate_limited' ? tx(U.busy) : tx(U.dlNA); } }
   else if (dl === null) st.textContent = tx(U.dlNA);
@@ -3291,7 +3654,7 @@ async function download(){
 /* ================= events ================= */
 const toggle = (arr, v) => { const i = arr.indexOf(v); if (i >= 0) arr.splice(i, 1); else arr.push(v); };
 document.addEventListener('click', e => {
-  const cl = e.target.closest('a[href^="#src-"]'); if (cl) { const dd = $('#srcDetails'); if (dd) dd.open = true; return; }
+  const cl = e.target.closest('a[href^="#src-"]'); if (cl) { const dd = $('#srcDetails'); if (dd) dd.open = true; if (cl.closest('#glossPanel')) closeTerm(); return; }
   const t = e.target.closest('[data-act]'); if (!t || t.disabled) return;
   const act = t.dataset.act, v = t.dataset.v;
   const rerender = () => { const y0 = window.scrollY; render(false); window.scrollTo(0, y0); };
@@ -3299,6 +3662,14 @@ document.addEventListener('click', e => {
     case 'lang': lang = v; try { localStorage.setItem('spg-lang', v); } catch (err) {} rerender(); return;
     case 'home': A = fresh(); useSex('m'); S.view = 'start'; S.idx = 0; G.rca = null; applyRCA(); setAnat(false); aim(V.full); G.spin = true; render(true); window.scrollTo(0, 0); return;
     case 'begin': A = fresh(); goto(0); return;
+    case 'pickMod': useModule(v); A = fresh(); G.rca = null; if (G.ok) { applyRCA(); G.hlKey = ''; } goto(0); return;
+    case 'resume': resume(); return;
+    case 'resNo': try { localStorage.removeItem(SAVEK); } catch (err) {} rerender(); return;
+    case 'term': openTerm(v); return;
+    case 'glClose': closeTerm(); return;
+    case 'say': say(v); return;
+    case 'big': big = !big; document.documentElement.classList.toggle('big', big); try { localStorage.setItem('spg-big', big ? '1' : '0'); } catch (err) {} t.setAttribute('aria-pressed', big); return;
+    case 'share': shareReport(); return;
     case 'install': installApp(); return;
     case 'instClose': $('#installPanel').hidden = true; return;
     case 'zoom': zoomBtn(v); return;
@@ -3331,7 +3702,7 @@ document.addEventListener('click', e => {
 document.addEventListener('change', e => { if (e.target.id === 'problem') { useModule(e.target.value); A = fresh(); G.rca = null; if (G.ok) { applyRCA(); G.hlKey = ''; } render(false); } });
 document.addEventListener('input', e => { if (e.target.id === 'pain') { A.pain = +e.target.value; const o = $('#painOut'); if (o) o.textContent = A.pain; } });
 
-window.SPG_TEST = {tpic: (id, w, h) => { const k = Object.keys(TPIC); k.forEach(x => delete TPIC[x]); return testPic(id, w || 480, h || 560); }, tposes: () => Object.keys(TPOSE), cam: () => Object.assign({}, G.tgt), steps: () => STEPS.map(x => x.k + (x.a ? ':' + x.a.id : '')), set: o => { Object.assign(A, o); render(false); }, mod: id => useModule(id), step: (i, mod, sex) => { if (mod) useModule(mod); if (sex) { A.sex = sex; useSex(sexCode()); } goto(i); }, kb: () => JSON.parse(JSON.stringify({sources:SRC, areas:AREAS.map(a => ({id:a.id, paired:a.pair, dermatome:a.code || null, name:a.name, description:a.desc, relevance:a.rel})), ages:AGES, sexes:SEXES, episodes:EPIS, history:RISKS, onsets:ONSETS, duration:SINCE, trend:TRENDS, dominance:DOMS, pattern:PAT, walking:WALKS, sitting:SITS, sleep:SLEEPS, redFlags:RFS, bedsideTests:TESTS, conditions:CONDS, emergencies:EMERG, departments:DEPTS, nerveRoots:ROOTS, stats:STATS, urgencyLevels:LEVELS, urgencyReasons:RS, featureExplanations:FX, featureLabels:LBL})), load: (a, lg, mod) => { if (lg) lang = lg; if (mod) useModule(mod); A = Object.assign(fresh(), a); useSex(sexCode()); showResult(); }, gal: () => (G.imgs || []).length, analyze: (a, mod) => { if (mod && (!M || M.id !== mod)) useModule(mod); const r = analyze(Object.assign(fresh(), a)); return {level:r.level, top:r.ranked.slice(0, 3).map(x => x.c.id + ':' + x.strength + ':' + x.s), roots:r.roots, sides:[...r.sides], depts:r.depts.map(d => d.id), emerg:r.emerg}; }};
+window.SPG_TEST = {term: id => openTerm(id), glIds: () => GL.map(g => g.id), glPic: id => { Object.keys(GLPIC).forEach(k => delete GLPIC[k]); return glPic(GLI[id]); }, summary: () => shareText(), tpic: (id, w, h) => { const k = Object.keys(TPIC); k.forEach(x => delete TPIC[x]); return testPic(id, w || 480, h || 560); }, tposes: () => Object.keys(TPOSE), cam: () => Object.assign({}, G.tgt), steps: () => STEPS.map(x => x.k + (x.a ? ':' + x.a.id : '')), set: o => { Object.assign(A, o); render(false); }, mod: id => useModule(id), step: (i, mod, sex) => { if (mod) useModule(mod); if (sex) { A.sex = sex; useSex(sexCode()); } goto(i); }, kb: () => JSON.parse(JSON.stringify({sources:SRC, areas:AREAS.map(a => ({id:a.id, paired:a.pair, dermatome:a.code || null, name:a.name, description:a.desc, relevance:a.rel})), ages:AGES, sexes:SEXES, episodes:EPIS, history:RISKS, onsets:ONSETS, duration:SINCE, trend:TRENDS, dominance:DOMS, pattern:PAT, walking:WALKS, sitting:SITS, sleep:SLEEPS, redFlags:RFS, bedsideTests:TESTS, conditions:CONDS, emergencies:EMERG, departments:DEPTS, nerveRoots:ROOTS, stats:STATS, urgencyLevels:LEVELS, urgencyReasons:RS, featureExplanations:FX, featureLabels:LBL})), load: (a, lg, mod) => { if (lg) lang = lg; if (mod) useModule(mod); A = Object.assign(fresh(), a); useSex(sexCode()); showResult(); }, gal: () => (G.imgs || []).length, analyze: (a, mod) => { if (mod && (!M || M.id !== mod)) useModule(mod); const r = analyze(Object.assign(fresh(), a)); return {level:r.level, top:r.ranked.slice(0, 3).map(x => x.c.id + ':' + x.strength + ':' + x.s), roots:r.roots, sides:[...r.sides], depts:r.depts.map(d => d.id), emerg:r.emerg}; }};
 useModule(MODS[0].id);
 if (!langChosen) S.view = 'lang';
 /* ================= install as an app (web app manifest + offline worker) ================= */
@@ -3360,6 +3731,7 @@ function installApp(){
   $('#installCard').innerHTML = `<p class="kicker">${tx(U.brand)}</p><h2 id="ipT" style="margin-top:6px">${tx(U.instT)}</h2><p class="muted small" style="margin-top:6px">${tx(U.instS)}</p><ol>${steps.map(t => `<li>${fill(t)}</li>`).join('')}</ol><button class="btn primary block" data-act="instClose">${tx(U.instClose)}</button>`;
   $('#installPanel').hidden = false; const b = $('#installCard .btn'); if (b) b.focus();
 }
+{ const gp = $('#glossPanel'); if (gp) { gp.addEventListener('click', e => { if (e.target === gp) closeTerm(); }); document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTerm(); }); } }
 { const ip = $('#installPanel'); if (ip) { ip.addEventListener('click', e => { if (e.target === ip) ip.hidden = true; }); document.addEventListener('keydown', e => { if (e.key === 'Escape') ip.hidden = true; }); } }
 const has3D = () => !!(window.THREE && window.SPG_BODY && window.SPG_SPINE);
 const late3D = !has3D();

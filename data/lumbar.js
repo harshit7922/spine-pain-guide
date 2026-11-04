@@ -390,7 +390,7 @@ const RS = {
   };
   const FUNCS = [{id:'walk', label:'walk', opts:WALKS, req:true}, {id:'sit', label:'sit', opts:SITS, req:true}, {id:'sleep', label:'sleep', opts:SLEEPS}];
 
-SPG.data.modules.lumbar = {id:'lumbar', order:1, startRegions:['lowback'], labelSet:['T11','T12','L1','L2','L3','L4','L5','S1','Coccyx'], GAL:{d:0.66, ld:0.62, td:0.27, ref:'L3', refDy:-0.02, nerves:['L1_','L2_','L3_','L4_','L5_','S1_','sciatic','tibial','peroneal','femoral','saphenous','cord']}, safetyRegions:['saddle'], name:L('Lower back pain, with or without leg pain','कमर दर्द, पैर के दर्द के साथ या बिना'), safetyView:'saddle', anatomy:'lumbar',
+SPG.data.modules.lumbar = {id:'lumbar', order:1, card:{reg:['lowback','buttock_l','buttock_r','thigh_back_l','l5_l','s1_l'], view:{az:Math.PI, el:0.05, d:3.5, yk:'mid', dy:-0.02}, hint:L('Back pain, sciatica, slipped disc, leg pain or numbness','कमर दर्द, साइटिका, स्लिप डिस्क, पैर में दर्द या सुन्नपन')}, startRegions:['lowback'], labelSet:['T11','T12','L1','L2','L3','L4','L5','S1','Coccyx'], GAL:{d:0.66, ld:0.62, td:0.27, ref:'L3', refDy:-0.02, nerves:['L1_','L2_','L3_','L4_','L5_','S1_','sciatic','tibial','peroneal','femoral','saphenous','cord']}, safetyRegions:['saddle'], name:L('Lower back pain, with or without leg pain','कमर दर्द, पैर के दर्द के साथ या बिना'), safetyView:'saddle', anatomy:'lumbar',
   DOMS, PAT, RFS, VIEWS, AREAS, TESTS, CONDS, EMERG, ROOTS, RS, DERIVED, SIDES, URGENCY, EMERG_WHEN, ROOT_RULES, DISC_OF, EXIT_OF, DEPT_RULES, FOCUS, RCA, LBLX, UI, FUNCS,
   domWhen:{any:limbAreas}};
 })();

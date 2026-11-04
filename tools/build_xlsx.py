@@ -147,6 +147,10 @@ sheet('Departments', ['ID', 'Department (EN)', 'Department (HI)', 'When to go (E
 sheet('Statistics', ['Value', 'Statistic (EN)', 'Statistic (HI)', 'Source'],
       [(s['v'], en(s['t']), hi(s['t']), s.get('s', '')) for s in C['statistics']], [12, 70, 70, 12])
 
+# ---------- Glossary ----------
+sheet('Glossary', ['ID', 'Term (EN)', 'Term (HI)', 'Words that open it (EN)', 'Words that open it (HI)', 'Plain meaning (EN)', 'Plain meaning (HI)', 'Picture', 'Sources'],
+      [(g['id'], en(g['title']), hi(g['title']), ', '.join(g['terms'].get('en', [])), ', '.join(g['terms'].get('hi', [])), en(g['plain']), hi(g['plain']), g.get('picture') or '', ', '.join(g.get('sources') or [])) for g in C.get('glossary', [])], [12, 30, 30, 34, 34, 70, 70, 9, 16])
+
 # ---------- Sources ----------
 sheet('Sources', ['#', 'Key', 'Source', 'URL'], [(i + 1, s['key'], s['title'], s['url']) for i, s in enumerate(C['sources'])], [5, 12, 80, 70])
 

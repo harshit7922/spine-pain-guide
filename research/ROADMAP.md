@@ -14,8 +14,8 @@ Goal set by the owner: deep, authentic, proven research for every option; refere
 | # | Phase | Status |
 | --- | --- | --- |
 | 1 | Lower back: evidence table (prevalence, LRs, red flags, India data), refined weights, missing conditions, sharper questions | done 4 Nov (research/lumbar-evidence.md) |
-| 2 | User-friendly pack: tap-a-term glossary with pictures, read aloud (Hindi/English), larger text, plain 3-line summary, save and resume, share report, body-part cards on the start page | in progress |
-| 3 | Neck and arm deep research (cervical radiculopathy, myelopathy, thoracic outlet, etc.) | pending |
+| 2 | User-friendly pack: tap-a-term glossary with pictures, read aloud (Hindi/English), larger text, plain 3-line summary, save and resume, share report, body-part cards on the start page | done 4 Nov (data/glossary.js, 27 words) |
+| 3 | Neck and arm deep research (cervical radiculopathy, myelopathy, thoracic outlet, etc.) | in progress |
 | 4 | New: Shoulder (frozen shoulder, rotator cuff, impingement, calcific tendinitis, AC joint, instability, referred pain) | pending |
 | 5 | New: Knee (osteoarthritis, patellofemoral pain, meniscus, ligament injury, IT band, bursitis, Baker's cyst, gout, Osgood-Schlatter) | pending |
 | 6 | New: Leg, ankle and foot (plantar fasciitis, Achilles, ankle sprain, shin splints, calf strain, DVT and artery red flags, neuropathy, Morton's neuroma) | pending |

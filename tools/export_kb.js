@@ -33,7 +33,7 @@ function labelsFor(M) {
 const out = {
   meta: {
     title: 'Spine Pain Guide – clinical knowledge base (all spine regions)',
-    version: 'v4', exported: new Date().toISOString().slice(0, 10), languages: ['en', 'hi'],
+    version: 'v5.1', exported: new Date().toISOString().slice(0, 10), languages: ['en', 'hi'],
     disclaimer: 'Decision support for self-assessment, not a diagnosis. Every result recommends consultation with a doctor.',
     howScoringWorks: [
       'Each answer becomes a feature (for example "slr_pos" or "neck"). Some features are derived from others (DERIVED rules, e.g. "radicular").',
@@ -47,6 +47,7 @@ const out = {
   },
   common: {
     sources: C.SRC.map(s => ({ key: s[0], title: s[1], url: s[2] })),
+    glossary: (S.glossary || []).map(g => ({ id: g.id, terms: g.terms, title: g.title, plain: g.plain, sources: g.src || [], picture: g.pic ? g.pic.k : null })),
     levels: plain(C.LEVELS), urgencyReasons: plain(C.RS), departments: plain(C.DEPTS), statistics: plain(C.STATS),
     questions: { age: opts(C.AGES), sex: opts(C.SEXES), episode: opts(C.EPIS), history: opts(C.RISKS), onset: opts(C.ONSETS), thisBoutStarted: opts(C.SINCE), firstEverStarted: opts(C.HX), betweenBouts: opts(C.BTW), trend: opts(C.TRENDS) }
   },

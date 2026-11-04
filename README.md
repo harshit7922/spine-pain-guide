@@ -6,6 +6,15 @@ A self-assessment tool for spine pain in English and Hindi. It asks where it hur
 
 **It is decision support, not a diagnosis. Every result tells the person to see a doctor.**
 
+### Made to be easy for everyone
+- **Pick by picture:** the start page shows one card per body part, each with a 3D body and the area coloured.
+- **Tap a word to understand it:** 27 medical words (disc, nerve root, sciatica, cauda equina, saddle area, facet joint, scapula, brachial plexus and more) have a dotted underline. Tapping one opens a realistic 3D picture and a plain meaning in English or Hindi, with its source. The words live in `data/glossary.js`.
+- **Listen / सुनें:** reads the question, the answer choices or the result summary aloud using the phone's own voice (Hindi or English). Nothing is sent anywhere.
+- **A+ (larger text)** in the top bar, remembered on the device.
+- **"In short" box** at the top of every result: best match, how urgent, and which doctor to see first.
+- **Continue where you left off:** answers are kept only in the browser on that device, so a person can close the app and carry on later or reopen the last result.
+- **Share report:** on phones this opens the share sheet (WhatsApp, email) with the PDF attached; elsewhere it copies a short summary.
+
 ## Open it
 
 Online: the link above. As an app: tap **Install app** (Android/Chrome installs directly; on iPhone use Safari → Share → Add to Home Screen). Offline on a computer:
@@ -22,6 +31,14 @@ On first open it asks for the language (English / हिंदी). The choice i
 | Start (desktop) | Result (phone) | Spine view, zoomed (phone) |
 | --- | --- | --- |
 | <img src="docs/screenshots/desktop-start.png" width="360"> | <img src="docs/screenshots/phone-result.png" width="200"> | <img src="docs/screenshots/phone-spine-zoom.png" width="220"> |
+
+**Start page cards, the "In short" result box and a tapped word** (Hindi, phone):
+
+<img src="docs/screenshots/phone-start-cards-hindi.png" width="250"> <img src="docs/screenshots/phone-result-summary-hindi.png" width="250"> <img src="docs/screenshots/phone-word-picture-hindi.png" width="250">
+
+**All 27 word pictures** (tap a dotted word anywhere in the questions or results):
+
+<img src="docs/images/word-pictures.png" width="760">
 
 **Body-area questions with reference pictures** (Hindi, phone) and the **"when did it start" timeline**:
 
@@ -51,7 +68,7 @@ Sample PDF reports (made from test answers, not real patients): [lower back](doc
 
 | Choice on the start page | Data file | Conditions | Emergencies checked |
 |---|---|---|---|
-| Lower back, buttock or leg | `data/lumbar.js` | 19 | cauda equina, cord, trauma, aortic aneurysm |
+| Lower back, buttock or leg | `data/lumbar.js` | 21 | cauda equina, cord, trauma, aortic aneurysm |
 | Neck, shoulder blade or arm | `data/cervical.js` | 12 | cord compression, trauma, meningitis, stroke, heart attack |
 | Upper or mid back, ribs or chest wall | `data/thoracic.js` | 13 | heart attack, aortic dissection, lung clot, trauma, cord |
 | More than one part / whole spine | `data/whole.js` | 10 | cauda equina, cord, heart attack, trauma |
@@ -73,12 +90,15 @@ How a result is calculated:
 ### To change or add research
 1. Edit the data file (for example change a weight in `data/cervical.js`). Keep English and Hindi together: `L('English', 'हिंदी')`.
 2. Reload `index.html` — the site uses the new numbers immediately.
-3. Run the checks: `node tests/run_scenarios.js` (48 clinical scenarios must still pass).
+3. Run the checks: `node tests/run_scenarios.js` (54 clinical scenarios must still pass).
 4. Refresh the readable copies: `node tools/export_kb.js` then `python3 tools/build_xlsx.py`.
 5. Rebuild the single-file version: `python3 tools/bundle.py` → `dist/spine-pain-guide.html`. This one file contains everything (use it for hosting or to send to someone); the hosted link is published from it.
 
 ### To add a new region (module)
-Copy one module file, give it a new `id` and `order`, add it to `index.html` after the other data files, and add test cases in `tests/cases/`. It then appears in the start-page dropdown automatically.
+Copy one module file, give it a new `id` and `order`, give it a `card` (body areas to colour, camera view and a one-line hint), add it to `index.html` after the other data files, and add test cases in `tests/cases/`. It then appears as a card on the start page automatically.
+
+### To add a medical word
+Add an entry to `data/glossary.js`: the words that should become tappable (English and Hindi), a title, a plain explanation, source keys and a picture spec (`skin` = body with an area coloured, `bone` = see-through body with bones or nerves highlighted, `svg` = a drawing, `pose` = a posed 3D body from a bedside test).
 
 ## Folder map
 
@@ -87,12 +107,12 @@ Copy one module file, give it a new `id` and `order`, add it to `index.html` aft
 ```
 index.html            open this
 lib/                  three.js r128 (MIT), jsPDF 2.5.1 (MIT)
-data/                 research data (edit these) + generated 3D data (body3d.js, spine3d.js)
+data/                 research data (edit these), glossary.js (tap-a-word pictures) + generated 3D data (body3d.js, spine3d.js, rig3d.js)
 js/app.js             engine, screens, 3D viewer, PDF report
 research/             spine-knowledge-base.json / .xlsx (all modules, EN + HI); personal case files stay out of git
 dist/                 spine-pain-guide.html — the whole site in one file; web/index.html — same file, ready to host (see HOSTING.md)
 tools/                export_kb.js, build_xlsx.py (rebuild the research copies), bundle.py (single-file version)
-tests/                run_scenarios.js + cases/ (lumbar 17, cervical 11, thoracic + whole 14, history 6)
+tests/                run_scenarios.js + cases/ (54 scenarios: lumbar, cervical, thoracic + whole, history, lumbar evidence)
 3d-build/             Python scripts that generate the 3D bodies, bones and nerves (build.sh)
 ```
 
@@ -107,7 +127,8 @@ Male and female bodies come from the MakeHuman CC0 base mesh and targets. Verteb
 यह रीढ़ के दर्द की खुद-जांच का टूल है (अंग्रेज़ी और हिंदी)। यह डायग्नोसिस नहीं है — हर नतीजे में डॉक्टर को दिखाने की सलाह दी जाती है।
 
 - **खोलना:** `index.html` पर डबल-क्लिक करें। इंटरनेट की ज़रूरत नहीं। पूरी साइट एक ही फ़ाइल में चाहिए तो `dist/spine-pain-guide.html` खोलें।
-- **चार हिस्से:** कमर/पैर, गर्दन/बांह, ऊपरी-बीच की पीठ/पसलियां, और पूरी पीठ।
+- **चार हिस्से:** कमर/पैर, गर्दन/बांह, ऊपरी-बीच की पीठ/पसलियां, और पूरी पीठ — शुरू के पेज पर तस्वीर वाले कार्ड से चुनें।
+- **आसान बनाने के लिए:** बिंदु वाली लाइन वाले मेडिकल शब्द पर टैप करें तो 3D तस्वीर के साथ आसान मतलब दिखता है; "सुनें" बटन सवाल और नतीजा पढ़कर सुनाता है; A+ से बड़े अक्षर; नतीजे के ऊपर "सार में" तीन लाइनें; अधूरी जांच बाद में वहीं से जारी; "रिपोर्ट भेजें" से PDF सीधे WhatsApp पर।
 - **रिसर्च कहां है:** `data/` फ़ोल्डर की फ़ाइलों में — हर बीमारी, उसके लक्षणों के अंक (weights), खतरे के संकेत, टेस्ट और व्याख्या। ऐप इन्हीं फ़ाइलों से पढ़कर गणना करता है।
 - **बदलाव करना:** डेटा फ़ाइल बदलें → `index.html` रीलोड करें → `node tests/run_scenarios.js` चलाएं → `node tools/export_kb.js` और `python3 tools/build_xlsx.py` से Excel/JSON कॉपी अपडेट करें।
 - **पढ़ने लायक कॉपी:** `research/spine-knowledge-base.xlsx` में सभी बीमारियां, अंक, खतरे के नियम, नसें, टेस्ट और स्रोत हैं।

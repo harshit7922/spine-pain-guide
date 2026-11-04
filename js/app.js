@@ -407,7 +407,7 @@ function resolveView(v){
   const lm = lmv(), S = window.SPG_SPINE[G.sex];
   const base = v.yk === 'mid' ? lm.H * 0.5 : v.yk === 'disc' ? (S.dc[v.disc] || S.dc['L4–L5'])[1] : S.lv[v.yk] ? S.lv[v.yk][1] : lm[v.yk];
   const ty = (isFinite(base) ? base : lm.H * 0.5) + (v.dy || 0) * lm.s;
-  return {az:v.az, el:v.el, d:v.d * lm.s, ty, tx:(v.tx || 0) * lm.s};
+  return {az:v.az, el:v.el, d:v.d * lm.s, ty, tx:(v.tx || 0) * lm.s, tz:(v.tz || 0) * lm.s};
 }
 function useSex(code){
   if (!G.ok) return; if (G.sex === code && G.body) return;
@@ -478,7 +478,7 @@ function spineView(){
   const GP = (M && M.GAL) || {}, sd = G.rca && G.rca.side === 'r';
   return Object.assign({}, V.spine, GP.ref ? {yk:GP.ref, d:(GP.d || 0.66) * 1.18, dy:GP.refDy || 0} : {}, {az: sd ? PI + 0.5 : PI - 0.5});
 }
-function place(cam, v){ const ce = Math.cos(v.el), tx0 = v.tx || 0; cam.position.set(tx0 + v.d*Math.sin(v.az)*ce, v.ty + v.d*Math.sin(v.el), v.d*Math.cos(v.az)*ce); cam.lookAt(tx0, v.ty, 0); }
+function place(cam, v){ const ce = Math.cos(v.el), tx0 = v.tx || 0, tz0 = v.tz || 0; cam.position.set(tx0 + v.d*Math.sin(v.az)*ce, v.ty + v.d*Math.sin(v.el), tz0 + v.d*Math.cos(v.az)*ce); cam.lookAt(tx0, v.ty, tz0); }
 function setAnat(on){
   if (!G.ok) return; G.anat = on; G.body.setXray(on); G.anatomy.group.visible = on; chrome();
 }
@@ -563,15 +563,20 @@ function vLang(){
     <p class="lede">The whole assessment, result and PDF report will be in the language you choose. You can switch at any time from the top bar.<br><span lang="hi">पूरी जांच, नतीजा और PDF रिपोर्ट आपकी चुनी हुई भाषा में होगी। ऊपर से कभी भी बदल सकते हैं।</span></p>
     <div class="langbtns"><button class="btn primary" data-act="pickLang" data-v="en">English</button><button class="btn primary" data-act="pickLang" data-v="hi" lang="hi">हिंदी</button></div></section>`;
 }
+function vResume(){
+  const s = loadSave(); if (!s) return '';
+  const m = SPG.data.modules[s.mod], when = (() => { try { return new Date(s.t).toLocaleString(lang === 'hi' ? 'hi-IN' : 'en-IN', {day:'numeric', month:'short', hour:'numeric', minute:'2-digit'}); } catch (e) { return ''; } })();
+  return `<section class="card resume"><h3>${tx(U.resT)}</h3><p><b>${esc(tx(m.name))}</b></p><p class="small muted">${s.view === 'result' ? tx(U.resDone) : fmt(U.resStep, s.idx + 1)}${when ? ' · ' + esc(when) : ''}</p>
+    <div class="dl"><button class="btn primary" data-act="resume">${tx(s.view === 'result' ? U.resSee : U.resGo)} →</button><button class="btn ghost" data-act="resNo">${tx(U.resNo)}</button></div><p class="small muted" style="margin-top:8px">${tx(U.resS)}</p></section>`;
+}
 function vStart(){
-  return `<section class="card">
+  return `${vResume()}<section class="card">
     <p class="kicker">${tx(U.kicker)}</p>
     <h1 style="margin-top:8px" id="qh" tabindex="-1">${tx(U.title)}</h1>
     <p class="lede">${tx(U.lede)}</p>
-    <label class="lbl" for="problem">${tx(U.problem)}</label>
-    <div class="selectwrap"><select id="problem">${MODS.map(m => `<option value="${m.id}" ${m === M ? 'selected' : ''}>${esc(tx(m.name))}</option>`).join('')}</select></div>
-    <button class="btn primary block" data-act="begin">${tx(U.begin)} →</button>
-    <ul class="meta"><li>${tx(U.meta1)}</li><li>${tx(U.meta2)}</li><li>${tx(U.meta3)}</li></ul>
+    <div class="qhead" style="margin-top:18px"><p class="lbl" style="margin:0">${tx(U.pickT)}</p>${sayBtn()}</div>
+    <div class="mcards${G.ok ? '' : ' nogl-on'}">${MODS.map(m => `<button type="button" class="mcard" data-act="pickMod" data-v="${m.id}"><span class="mimg">${G.ok ? `<img data-mod="${m.id}" alt="">` : ''}</span><span class="mtx"><b>${esc(tx(m.name))}</b>${m.card && m.card.hint ? `<small>${esc(tx(m.card.hint))}</small>` : ''}<span class="go">${tx(U.cardGo)} →</span></span></button>`).join('')}</div>
+    <ul class="meta"><li>${tx(U.meta1)}</li><li>${tx(U.meta2)}</li><li>${tx(U.meta3)}</li><li>${tx(U.glTap)}</li></ul>
   </section>
   <section class="card appcard" id="appCard" ${PWA.can() ? '' : 'hidden'}><img src="icons/icon-192.png" alt=""><div><h3>${tx(U.instT)}</h3><p class="small muted" style="margin-top:4px">${tx(U.instS)}</p><button class="btn primary" data-act="install">${tx(U.inst)}</button></div></section>
   <section class="card"><h3>${tx(U.numsT)}</h3><dl class="numgrid">${(M.STATS || []).concat(STATS).slice(0, 6).map(s => `<div><dt>${s.v}</dt><dd>${tx(s.t)}${cite(s.s)}</dd></div>`).join('')}</dl></section>
@@ -595,12 +600,12 @@ function timelineSVG(){
 }
 function vQ(){
   const stp = STEPS[S.idx], n = STEPS.filter((s, i) => valid(i)).length, pos = STEPS.slice(0, S.idx + 1).filter((s, i) => valid(i)).length;
-  const head = (extra) => `<div class="qhead"><span class="kicker">${tx(U.secs[stp.sec])} · ${fmt(U.stepOf, pos, n)}</span>${extra || ''}</div>`;
+  const head = (extra) => `<div class="qhead"><span class="kicker">${tx(U.secs[stp.sec])} · ${fmt(U.stepOf, pos, n)}</span>${extra || ''}${sayBtn()}</div>`;
   if (stp.k === 'profile') return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.profT)}</h2><p class="qdesc">${tx(U.profS)}</p>
     <fieldset class="grp"><legend>${tx(U.age)}</legend>${pills('age', AGES, A.age)}</fieldset>
     <fieldset class="grp"><legend>${tx(U.sex)}</legend>${pills('sex', SEXES, A.sex)}</fieldset>
     <fieldset class="grp"><legend>${tx(U.hist)}</legend>${chips('risk', RISKS, A.risks)}</fieldset>
-    ${nav(!!A.age)}${A.age ? '' : `<p class="note">${tx(U.needAge)}</p>`}</section>`;
+    <!--glstrip-->${nav(!!A.age)}${A.age ? '' : `<p class="note">${tx(U.needAge)}</p>`}</section>`;
   if (stp.k === 'area') {
     const a = stp.a, v = A.areas[a.id], ai = AREAS.indexOf(a) + 1;
     const b = (val, l, cls) => `<button class="ans ${cls}" data-act="area" data-v="${val}" aria-pressed="${v === val}">${tx(l)}</button>`;
@@ -609,16 +614,16 @@ function vQ(){
       <h2 id="qh" tabindex="-1" style="margin-top:4px">${tx(a.name)}</h2><p class="qdesc">${tx(a.desc)}</p>
       ${refPics('area:' + a.id)}
       <p class="qtext">${tx(U.qArea)}</p>
-      ${a.pair ? `<div class="answers four">${b('l',U.left,'y')}${b('r',U.right,'y')}${b('both',U.both,'y')}${b('no',U.no,'n')}</div><p class="small muted" style="margin-top:8px">${tx(U.sideNote)}</p>` : `<div class="answers">${b('yes',U.yes,'y')}${b('no',U.no,'n')}</div>`}
+      <!--glstrip-->${a.pair ? `<div class="answers four">${b('l',U.left,'y')}${b('r',U.right,'y')}${b('both',U.both,'y')}${b('no',U.no,'n')}</div><p class="small muted" style="margin-top:8px">${tx(U.sideNote)}</p>` : `<div class="answers">${b('yes',U.yes,'y')}${b('no',U.no,'n')}</div>`}
       <p class="note"><b>${tx(U.rel)}:</b> ${tx(a.rel)}</p>
       <div class="qnav"><button class="linkbtn" data-act="prev">← ${tx(U.back)}</button></div></section>`;
   }
   if (stp.k === 'dom') return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.domT)}</h2>
-    <div class="answers three" style="margin-top:16px">${DOMS.map(o => `<button class="ans" data-act="dom" data-v="${o[0]}" aria-pressed="${A.dom === o[0]}">${tx(o[1])}</button>`).join('')}</div>
+    <!--glstrip--><div class="answers three" style="margin-top:16px">${DOMS.map(o => `<button class="ans" data-act="dom" data-v="${o[0]}" aria-pressed="${A.dom === o[0]}">${tx(o[1])}</button>`).join('')}</div>
     <p class="note"><b>${tx(U.rel)}:</b> ${tx(U.domWhy)}${cite('msd')}</p><div class="qnav"><button class="linkbtn" data-act="prev">← ${tx(U.back)}</button></div></section>`;
   if (stp.k === 'onset') { const ok = !!A.onset; return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.onT)}</h2><p class="qdesc">${tx(U.onS)}</p>
     <div style="margin-top:14px">${chips('onset', ONSETS, A.onset, true)}</div>
-    ${nav(ok)}${ok ? '' : `<p class="note">${tx(U.needOn)}</p>`}</section>`; }
+    <!--glstrip-->${nav(ok)}${ok ? '' : `<p class="note">${tx(U.needOn)}</p>`}</section>`; }
   if (stp.k === 'time') { const ok = !!(A.since && A.hx); return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.timeT)}</h2><p class="qdesc">${tx(U.timeS)}</p>
     <fieldset class="grp"><legend class="qq">1 · ${tx(U.since)}</legend><p class="small muted" style="margin:-2px 0 8px">${tx(U.sinceH)}</p>${pills('since', SINCE, A.since)}</fieldset>
     <fieldset class="grp"><legend class="qq">2 · ${tx(U.hx)}</legend><p class="small muted" style="margin:-2px 0 8px">${tx(U.hxH)}</p>${pills('hx', HX, A.hx)}</fieldset>
@@ -626,30 +631,31 @@ function vQ(){
     <fieldset class="grp"><legend>${tx(U.trend)}</legend>${pills('trend', TRENDS, A.trend)}</fieldset>
     ${timelineSVG()}
     <p class="note"><b>${tx(U.rel)}:</b> ${tx(U.timeWhy)}${cite('who')}</p>
-    ${nav(ok)}${ok ? '' : `<p class="note">${tx(U.needTime)}</p>`}</section>`; }
+    <!--glstrip-->${nav(ok)}${ok ? '' : `<p class="note">${tx(U.needTime)}</p>`}</section>`; }
   if (stp.k === 'pattern') return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.patT)}</h2><p class="qdesc">${tx(U.patS)}</p>
     <fieldset class="grp"><legend>${tx(U.gChar)}</legend>${chips('pat', PAT.char, A.pat)}</fieldset>
     <fieldset class="grp"><legend>${tx(U.gWorse)}</legend>${chips('pat', PAT.worse, A.pat)}</fieldset>
     <fieldset class="grp"><legend>${tx(U.gBetter)}</legend>${chips('pat', PAT.better, A.pat)}</fieldset>
-    <fieldset class="grp"><legend>${tx(U.gOther)}</legend>${chips('pat', PAT.other.filter(o => o[0] !== 'ch_period' || A.sex === 'sex_f'), A.pat)}</fieldset>${nav(true)}</section>`;
+    <fieldset class="grp"><legend>${tx(U.gOther)}</legend>${chips('pat', PAT.other.filter(o => o[0] !== 'ch_period' || A.sex === 'sex_f'), A.pat)}</fieldset><!--glstrip-->${nav(true)}</section>`;
   if (stp.k === 'function') { const ok = M.FUNCS.every(f => !f.req || A[f.id]); return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.funT)}</h2>
     <fieldset class="grp"><legend>${tx(U.pain)}</legend><div class="painrow"><input type="range" id="pain" min="0" max="10" step="1" value="${A.pain}" aria-label="${esc(tx(U.pain))}"><output class="painval" id="painOut">${A.pain}</output></div><div class="scale"><span>0</span><span>5</span><span>10</span></div><p class="small muted" style="margin-top:4px">${tx(U.painS)}</p></fieldset>
     ${M.FUNCS.map(f => `<fieldset class="grp"><legend>${tx(U[f.label] || f.label)}</legend><div class="pills" role="radiogroup">${f.opts.map(o => `<button type="button" class="pill" role="radio" aria-checked="${A[f.id] === o[0]}" data-act="fn" data-k="${f.id}" data-v="${o[0]}">${esc(tx(o[1]))}</button>`).join('')}</div></fieldset>`).join('')}
-    ${nav(ok)}${ok ? '' : `<p class="note">${tx(U.needFun)}</p>`}</section>`; }
+    <!--glstrip-->${nav(ok)}${ok ? '' : `<p class="note">${tx(U.needFun)}</p>`}</section>`; }
   if (stp.k === 'test') {
     const t = stp.t, ti = TESTS.indexOf(t) + 1, v = A[t.id];
+    GL.forEach(g => { if (g.pic && g.pic.test === t.id) GLU.add(g.id); });
     return `<section class="card">${head(`<span class="code">${fmt(U.testK, ti, TESTS.length)}</span>`)}<h2 id="qh" tabindex="-1">${tx(t.name)}</h2>
       ${G.ok && window.SPG_RIG && TPOSE[t.id] ? testFig(t) : testSVG(t.id, PAL_PAGE) ? `<div class="testfig">${testSVG(t.id, PAL_PAGE)}</div>` : ''}
       <h3>${tx(U.how)}</h3><ol class="steps">${t.steps.map(x => `<li>${tx(x)}</li>`).join('')}</ol>
       <p class="callout"><b>${tx(U.pos)}:</b> ${tx(t.pos)}</p>
       ${t.acc ? `<p class="note"><b>${tx(U.acc)}:</b> ${tx(t.acc)}${cite(t.src)}</p>` : ''}
       <p class="warn">${tx(U.safeT)}</p>
-      <div class="answers three" style="margin-top:14px">${t.ans.map(o => `<button class="ans ${o[2] === 'y' ? 'y' : 'n'}" data-act="test" data-v="${o[0]}" aria-pressed="${v === o[0]}">${tx(U[o[1]])}</button>`).join('')}</div>
+      <!--glstrip--><div class="answers three" style="margin-top:14px">${t.ans.map(o => `<button class="ans ${o[2] === 'y' ? 'y' : 'n'}" data-act="test" data-v="${o[0]}" aria-pressed="${v === o[0]}">${tx(U[o[1]])}</button>`).join('')}</div>
       <div class="qnav"><button class="linkbtn" data-act="prev">← ${tx(U.back)}</button></div></section>`;
   }
   if (stp.k === 'safety') { const ok = RFS.every(r => A.rf[r[0]]); return `<section class="card">${head()}<h2 id="qh" tabindex="-1">${tx(U.safT)}</h2><p class="qdesc">${tx(U.safS)}${cite('ces','wikem','nice')}</p>${M.safetyRegions && U.safPic ? `<p class="small" style="margin-top:12px"><b>${tx(U.safPic)}</b></p>${refPics('safety')}` : ''}
     <div class="safety">${RFS.map(r => `<div class="srow"><p>${tx(r[1])}</p><div class="yn"><button class="y" data-act="rf" data-k="${r[0]}" data-v="yes" aria-pressed="${A.rf[r[0]] === 'yes'}">${tx(U.yes)}</button><button class="n" data-act="rf" data-k="${r[0]}" data-v="no" aria-pressed="${A.rf[r[0]] === 'no'}">${tx(U.no)}</button></div></div>`).join('')}</div>
-    ${nav(ok, true)}${ok ? '' : `<p class="note">${tx(U.needSaf)}</p>`}</section>`; }
+    <!--glstrip-->${nav(ok, true)}${ok ? '' : `<p class="note">${tx(U.needSaf)}</p>`}</section>`; }
   return '';
 }
 function findings(R){
@@ -668,6 +674,7 @@ function vResult(){
   const meter = ['green','yellow','orange','red'].map(k => `<span class="m-${k}${k === R.level ? ' cur' : ''}">${tx(LEVELS[k].short)}</span>`).join('');
   const calls = R.level === 'red' ? `<div class="calls"><a class="call" href="tel:108"><b>108</b>${tx(U.call108)}</a><a class="call" href="tel:112"><b>112</b>${tx(U.call112)}</a></div><p class="small" style="margin-top:6px">${tx(U.callN)}</p>` : '';
   let html = `<section class="banner lv-${R.level}"><div class="meter" aria-hidden="true">${meter}</div><p class="kicker" style="margin:0">${tx(U.resK)}</p><h2 id="qh" tabindex="-1" style="margin-top:4px">${tx(Lv.title)}</h2><p>${tx(Lv.act)}</p>${calls}<ul class="reasons">${R.reasons.map(r => `<li>${esc(tx(r))}</li>`).join('')}</ul></section>`;
+  html += `<section class="card sum3"><div class="qhead"><h3>${tx(U.sumT)}</h3>${sayBtn()}</div><ol>${summaryLines(R).map(l => `<li>${esc(l)}</li>`).join('')}</ol></section>`;
   html += `<section class="card must"><h3>${tx(U.mustT)}</h3><ul class="tips">${U.must.map(m => `<li>${tx(m)}</li>`).join('')}</ul></section>`;
   html += `<section class="card"><h3>${tx(U.keyF)}</h3><div class="findings">${findings(R).map(f => `<span>${esc(f)}</span>`).join('')}</div></section>`;
   // impression
@@ -712,7 +719,7 @@ function vResult(){
   // departments
   html += `<section class="card"><h3>${tx(U.docs)}</h3><ol class="depts">${R.depts.map((d, i) => { const D = DEPTS[d.id]; return `<li class="dept${i === 0 ? ' first' : ''}"><span class="ix">${i + 1}</span><div style="min-width:0">${i === 0 ? `<span class="st">${tx(U.startHere)}</span>` : ''}<h4>${esc(tx(D.n))}</h4><p>${esc(tx(D.s))}</p>${d.why.length ? `<p class="for"><b>${tx(U.forL)}:</b> ${d.why.map(w => esc(tx(w))).join(' · ')}</p>` : ''}${d.id !== 'emergency' ? `<a href="https://www.google.com/maps/search/${encodeURIComponent(D.q + ' near me')}" target="_blank" rel="noopener">${tx(U.near)} ↗</a>` : ''}</div></li>`; }).join('')}</ol></section>`;
   if (R.level !== 'red') html += `<section class="card"><h3>${tx(U.until)}</h3><ul class="tips"><li>${tx(U.tip1)}${cite('nice','who')}</li><li>${tx(U.tip2)}</li><li>${tx(U.tip3)}</li></ul></section>`;
-  html += `<section class="card"><h3>${tx(U.rep)}</h3><p class="small muted" style="margin-top:6px">${tx(U.repS)}</p><div class="dl"><button class="btn primary" data-act="download" id="dlBtn">${tx(U.dl)}</button><span class="small muted" id="dlStatus" role="status"></span></div></section>`;
+  html += `<section class="card"><h3>${tx(U.rep)}</h3><p class="small muted" style="margin-top:6px">${tx(U.repS)}</p><div class="dl"><button class="btn primary" data-act="download" id="dlBtn">${tx(U.dl)}</button>${navigator.share || (navigator.clipboard && navigator.clipboard.writeText) ? `<button class="btn ghost" data-act="share" id="shBtn">${ICO.share}${tx(U.share)}</button>` : ''}<span class="small muted" id="dlStatus" role="status"></span></div></section>`;
   html += `<div class="actions"><button class="btn ghost" data-act="edit">${tx(U.edit)}</button><button class="btn ghost" data-act="home">${tx(U.restart)}</button></div>`;
   return html;
 }
@@ -720,6 +727,179 @@ function whyList(top){
   const items = top.pros.filter(p => FX[p[0]]).slice(0, 7);
   if (!items.length) return '';
   return `<h4 style="margin-top:16px;font-size:15px">${tx(U.whyT)}</h4><ul class="why">${items.map(p => `<li><b>${esc(lab(p[0]))}</b> — ${esc(tx(FX[p[0]]))}</li>`).join('')}</ul>`;
+}
+/* ================= glossary: medical words become tappable, each opens a picture and a plain meaning ================= */
+const GL = (SPG.data.glossary || []), GLI = {}; GL.forEach(g => GLI[g.id] = g);
+let GLU = new Set(); const GLRX = {};
+const SKIPT = new Set(['a','button','sup','svg','h3','th','figcaption','select','option','textarea','output','title']);
+function glRx(){
+  if (GLRX[lang]) return GLRX[lang];
+  const list = [], map = {};
+  GL.forEach(g => (g.terms[lang] || []).forEach(t => list.push([t, g.id])));
+  list.sort((a, b) => b[0].length - a[0].length); list.forEach(([t, id]) => map[t.toLowerCase()] = id);
+  const alt = list.map(x => x[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+  const rx = !alt ? null : lang === 'hi' ? new RegExp('(^|[^\\u0900-\\u097F])(' + alt + ')([\\u0900-\\u097F]*)', 'g') : new RegExp('(^|[^A-Za-z])(' + alt + ')()(?![A-Za-z])', 'gi');
+  return GLRX[lang] = {rx, map};
+}
+const glKey = (map, t) => map[t.toLowerCase()];
+function gl(html){
+  const {rx, map} = glRx(); if (!rx) return html.replace('<!--glstrip-->', '');
+  const parts = html.split(/(<[^>]*>)/), seen = new Set(); let skip = 0;
+  for (let i = 0; i < parts.length; i++) {
+    const p = parts[i]; if (!p) continue;
+    if (p[0] === '<') { const m = /^<(\/?)([a-zA-Z0-9]+)/.exec(p); if (m && SKIPT.has(m[2].toLowerCase())) { if (m[1]) skip = Math.max(0, skip - 1); else if (!/\/>$/.test(p)) skip++; } continue; }
+    if (skip) { p.replace(rx, (a, pre, term) => { const id = glKey(map, term); if (id) seen.add(id); return a; }); continue; }
+    parts[i] = p.replace(rx, (a, pre, term, tail) => { const id = glKey(map, term); if (!id || GLU.has(id)) return a; GLU.add(id); return `${pre}<button type="button" class="term" data-act="term" data-v="${id}">${term}${tail || ''}</button>`; });
+  }
+  let out = parts.join('');
+  if (out.includes('<!--glstrip-->')) {
+    const ids = [...seen].filter(id => !GLU.has(id)); ids.forEach(id => GLU.add(id));
+    out = out.replace('<!--glstrip-->', ids.length ? `<div class="glstrip"><span>${tx(U.glT)}:</span>${ids.map(id => `<button type="button" class="term" data-act="term" data-v="${id}">${esc(tx(GLI[id].title))}</button>`).join('')}</div>` : '');
+  }
+  return out;
+}
+const GLPIC = {};
+function glLabels(p){
+  const v = p.view || {}, f = p.focus || {}, lat = Math.abs(Math.sin(v.az || 0)) > 0.85, yk = String(v.yk || '');
+  const set = p.lset || (/^(C\d|c4|sh|wrist)/.test(yk) ? ['C1','C2','C3','C4','C5','C6','C7','T1'] : /^(T\d|t6)/.test(yk) ? ['T1','T2','T3','T4','T5','T6','T7','T8','T9','T10','T11','T12'] : ['T12','L1','L2','L3','L4','L5','S1']);
+  G.anatomy.makeLabels(lat ? 'l' : (f.side || 'l'), f.label || [], lang === 'hi' ? 'डिस्क' : 'disc', lat ? 'lat' : null, set);
+}
+function glPic(g){
+  const p = g.pic || {}, key = [g.id, G.sex, lang].join('|'); if (GLPIC[key]) return GLPIC[key];
+  if (!G.ok || !G.anatomy) return null;
+  if (p.k === 'pose') { if (!window.SPG_RIG || !TPOSE[p.test]) return null; const u = testPic(p.test, 480, 560); return u ? (GLPIC[key] = u) : null; }
+  let c;
+  if (p.k === 'skin') c = snapshot(p.view, 480, 520, {cur:p.reg || [], hlA:0.42});
+  else {
+    G.anatomy.setFocus(p.focus || {}); if (p.labels) glLabels(p); else G.anatomy.makeLabels('l', [], '', null, []);
+    const noBody = p.body === undefined ? (p.view.d < 1.0) : !p.body;
+    c = snapshot(p.view, 480, 520, {anat:true, labels:!!p.labels, noBody, noLegs:p.noLegs, noUpper:p.noUpper, keepRibs:p.keepRibs, nerveKeep:p.nerveKeep, noPelvis:p.noPelvis, noSac:p.noSac, cur:p.reg || [], hlA:0.42, fov:30});
+    applyRCA();
+  }
+  if (!c) return null; return GLPIC[key] = c.toDataURL('image/jpeg', 0.88);
+}
+function openTerm(id){
+  const g = GLI[id]; if (!g) return; sayStop();
+  const p = g.pic || {}, svg = p.k === 'svg' ? (p.fn === 'types' ? typesSVG(PAL_PAGE) : '') : '';
+  $('#glossCard').innerHTML = `<div class="glhead"><p class="kicker">${tx(U.glK)}</p><button type="button" class="glx" data-act="glClose" aria-label="${esc(tx(U.glClose))}">×</button></div>
+    <h2 id="glT" style="margin-top:4px">${esc(tx(g.title))}</h2>
+    ${svg || G.ok ? `<figure class="glpic${svg ? '' : ' loading'}" id="glPic">${svg}</figure>` : ''}
+    <p class="glplain">${esc(tx(g.plain))}${g.src ? cite(...g.src) : ''}</p>
+    <div class="glbtns">${sayBtn('gloss')}<button type="button" class="btn primary" data-act="glClose">${tx(U.glClose)}</button></div>`;
+  const gp = $('#glossPanel'); gp.hidden = false; gp.dataset.id = id; const x = $('#glossCard .glx'); if (x) x.focus();
+  if (!svg && G.ok) setTimeout(() => requestAnimationFrame(() => {
+    if (gp.hidden || gp.dataset.id !== id) return; const u = glPic(g), box = $('#glPic'); if (!box) return;
+    box.classList.remove('loading'); if (u) box.innerHTML = `<img src="${u}" alt="${esc(tx(g.title))}">`; else box.remove();
+  }), 30);
+}
+function closeTerm(){ const gp = $('#glossPanel'); if (gp && !gp.hidden) { gp.hidden = true; sayStop(); const b = document.querySelector(`.term[data-v="${gp.dataset.id}"]`); if (b) b.focus({preventScroll:true}); } }
+
+/* ================= read aloud (the phone's own text-to-speech, nothing is sent anywhere) ================= */
+const SAY = {on:false, warned:false};
+const SPK = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 7.5h3l4-3.5v12l-4-3.5h-3z"/><path d="M13.5 7a4 4 0 0 1 0 6M15.8 4.8a7 7 0 0 1 0 10.4"/></svg>';
+const canSay = () => typeof window.speechSynthesis !== 'undefined' && typeof window.SpeechSynthesisUtterance !== 'undefined';
+const sayBtn = scope => canSay() ? `<button type="button" class="saybtn" data-act="say" data-v="${scope || 'panel'}" aria-pressed="${SAY.on && SAY.scope === (scope || 'panel')}">${SPK}<span>${tx(SAY.on && SAY.scope === (scope || 'panel') ? U.sayStop : U.say)}</span></button>` : '';
+function updSay(){ document.querySelectorAll('[data-act="say"]').forEach(b => { const on = SAY.on && SAY.scope === b.dataset.v; b.setAttribute('aria-pressed', on); const s = b.querySelector('span'); if (s) s.textContent = tx(on ? U.sayStop : U.say); }); }
+function sayStop(){ if (canSay() && SAY.on) { speechSynthesis.cancel(); SAY.on = false; updSay(); } }
+function sayVoice(){
+  const vs = speechSynthesis.getVoices() || [], n = s => (s || '').replace('_', '-').toLowerCase();
+  if (lang === 'hi') return vs.find(v => n(v.lang).startsWith('hi')) || null;
+  return vs.find(v => n(v.lang) === 'en-in') || vs.find(v => n(v.lang).startsWith('en')) || null;
+}
+function sayText(scope){
+  const clean = e => { const c = e.cloneNode(true); c.querySelectorAll('sup, .bx, svg, .saybtn').forEach(x => x.remove()); return c.textContent.replace(/\s+/g, ' ').trim(); };
+  let els;
+  if (scope === 'gloss') els = document.querySelectorAll('#glossCard h2, #glossCard .glplain');
+  else if (S.view === 'result') els = document.querySelectorAll('#panel .banner h2, #panel .banner > p:not(.kicker), #panel .sum3 li, #panel .must li');
+  else if (S.view === 'start') els = document.querySelectorAll('#panel h1, #panel .lede, #panel .lbl, #panel .mcard b, #panel .mcard small');
+  else els = document.querySelectorAll('#panel section.card h2, #panel .qdesc, #panel .qtext, #panel .grp legend, #panel .chip, #panel .pill, #panel .ans, #panel .srow p, #panel ol.steps li, #panel .callout');
+  const end = lang === 'hi' ? '।' : '.';
+  return [...els].map(clean).filter(Boolean).map(t => /[.?!।:]$/.test(t) ? t : t + end).join(' ');
+}
+function say(scope){
+  if (!canSay()) return; const ss = window.speechSynthesis;
+  if (SAY.on) { const same = SAY.scope === scope; ss.cancel(); SAY.on = false; updSay(); if (same) return; }
+  const text = sayText(scope); if (!text) return;
+  const chunks = []; text.replace(/([.?!।])\s+/g, '$1\n').split('\n').forEach(s => { s = s.trim(); if (!s) return; const last = chunks[chunks.length - 1]; if (last && last.length + s.length < 180) chunks[chunks.length - 1] = last + ' ' + s; else chunks.push(s); });
+  const v = sayVoice(); SAY.on = true; SAY.scope = scope; SAY.id = (SAY.id || 0) + 1; const my = SAY.id;
+  chunks.forEach((c, i) => { const u = new SpeechSynthesisUtterance(c); u.lang = lang === 'hi' ? 'hi-IN' : 'en-IN'; if (v) u.voice = v; u.rate = lang === 'hi' ? 0.92 : 0.96;
+    if (i === chunks.length - 1) u.onend = () => { if (SAY.id === my) { SAY.on = false; updSay(); } };
+    u.onerror = () => { if (SAY.id === my) { SAY.on = false; updSay(); } }; ss.speak(u); });
+  updSay();
+  if (lang === 'hi' && !v && !SAY.warned) { SAY.warned = true; const n = document.createElement('p'); n.className = 'note'; n.textContent = tx(U.sayNoHi); const host = scope === 'gloss' ? $('#glossCard') : document.querySelector('#panel section'); if (host) host.appendChild(n); }
+}
+if (canSay()) { try { speechSynthesis.getVoices(); speechSynthesis.addEventListener && speechSynthesis.addEventListener('voiceschanged', () => {}); } catch (e) {} }
+
+/* ================= larger text ================= */
+let big = false; try { big = localStorage.getItem('spg-big') === '1'; } catch (e) {}
+document.documentElement.classList.toggle('big', big);
+
+/* ================= save and resume (kept only in this browser) ================= */
+const SAVEK = 'spg-save';
+function saveState(){ if (S.view !== 'q' && S.view !== 'result') return; try { localStorage.setItem(SAVEK, JSON.stringify({v:1, mod:M.id, A, view:S.view, idx:S.idx, t:Date.now()})); } catch (e) {} }
+function loadSave(){
+  try { const s = JSON.parse(localStorage.getItem(SAVEK) || 'null');
+    if (!s || s.v !== 1 || !SPG.data.modules[s.mod] || !s.A || Date.now() - s.t > 30 * 864e5) return null;
+    if (s.view === 'result' || (s.view === 'q' && s.idx > 0)) return s; } catch (e) {}
+  return null;
+}
+function resume(){
+  const s = loadSave(); if (!s) return;
+  useModule(s.mod); A = Object.assign(fresh(), s.A); useSex(sexCode());
+  if (s.view === 'result') return showResult();
+  let i = Math.min(s.idx, STEPS.length - 1); while (i > 0 && !valid(i)) i--; goto(i);
+}
+
+/* ================= plain summary + share ================= */
+function summaryLines(R){
+  const out = [], top = R.ranked[0];
+  if (R.emerg.length) out.push(fmt(U.sumE, tx(EMERG[R.emerg[0]].name)));
+  else if (top) out.push(tx(U.sum1).replace('{a}', tx(top.c.name)).replace('{b}', tx(U[top.strength]).toLowerCase()));
+  else out.push(tx(U.sumNone));
+  out.push(fmt(U.sum2, tx(LEVELS[R.level].title)));
+  const d0 = R.depts[0]; if (d0 && DEPTS[d0.id]) out.push(fmt(U.sum3, tx(DEPTS[d0.id].n)));
+  return out;
+}
+const pdfKey = () => JSON.stringify([M.id, lang, A, G.sex]);
+async function getPDF(){ const k = pdfKey(); if (G.pdf && G.pdf.k === k) return G.pdf.blob; const blob = await buildPDF(); G.pdf = {k, blob}; return blob; }
+const pdfName = () => 'spine-assessment-' + new Date().toISOString().slice(0, 10) + '.pdf';
+function shareText(){
+  const R = analyze(A), lines = [tx(U.brand) + ' — ' + tx(U.shareH)];
+  summaryLines(R).forEach(l => lines.push('• ' + l)); lines.push(tx(U.notDx) + '.');
+  if (/^https?:$/.test(location.protocol) && !/claude|anthropic/.test(location.hostname)) lines.push(location.origin + location.pathname);
+  return lines.join('\n');
+}
+async function shareReport(){
+  const st = $('#dlStatus'), btn = $('#shBtn'), text = shareText(), cached = G.pdf && G.pdf.k === pdfKey();
+  const done = m => { if (st) st.textContent = m ? tx(m) : ''; if (btn) btn.disabled = false; };
+  if (btn) btn.disabled = true;
+  try {
+    if (navigator.share && navigator.canShare && typeof File === 'function') {
+      if (!cached && st) st.textContent = tx(U.prep);
+      const blob = await getPDF(), file = new File([blob], pdfName(), {type:'application/pdf'});
+      if (navigator.canShare({files:[file]})) {
+        try { await navigator.share({files:[file], title:tx(U.brand), text}); return done(U.shared); }
+        catch (e) { if (e && e.name === 'AbortError') return done(); if (!cached && e && e.name === 'NotAllowedError') return done(U.shareAgain); }
+      }
+    }
+    if (navigator.share) { try { await navigator.share({title:tx(U.brand), text}); return done(U.shared); } catch (e) { if (e && e.name === 'AbortError') return done(); } }
+    if (navigator.clipboard && navigator.clipboard.writeText) { await navigator.clipboard.writeText(text); return done(U.shareCopied); }
+  } catch (e) { console.warn('share', e); }
+  done(U.shareNA);
+}
+/* ================= start page cards: one per body part, each with a 3D picture ================= */
+const MODPIC = {};
+function fillModPics(){
+  if (!G.ok) return;
+  document.querySelectorAll('.mcard img[data-mod]').forEach((img, i) => {
+    const m = SPG.data.modules[img.dataset.mod], key = m.id + '|' + G.sex; if (!m) return;
+    if (MODPIC[key]) { img.src = MODPIC[key]; return; }
+    setTimeout(() => requestAnimationFrame(() => {
+      if (!document.body.contains(img)) return; const cd = m.card || {};
+      const c = snapshot(cd.view || V.back || V.full, 300, 330, {cur:cd.reg || m.startRegions || [], hlA:0.55}); if (!c) return;
+      MODPIC[key] = c.toDataURL('image/jpeg', 0.86); img.src = MODPIC[key];
+    }), 30 + i * 50);
+  });
 }
 function vFoot(){ return `<p>${tx(U.disc)}</p><details class="srcs" id="srcDetails" ${S.view === 'result' ? 'open' : ''}><summary>${tx(U.srcT)} (${SRC.length})</summary><ol>${SRC.map((s, i) => `<li id="src-${i + 1}"><a href="${s[2]}" target="_blank" rel="noopener">${esc(s[1])}</a></li>`).join('')}</ol></details>`; }
 
@@ -734,9 +914,13 @@ function render(focus){
   if (!G.ok) { const n = $('#nogl'); n.hidden = false; n.textContent = tx(U.noGL); $('#hint').hidden = true; }
   chrome();
   $('#stepper').innerHTML = stepper();
-  $('#panel').innerHTML = S.view === 'lang' ? vLang() : S.view === 'start' ? vStart() : S.view === 'q' ? vQ() : vResult();
+  const bb = $('#bigBtn'); if (bb) { bb.title = tx(U.bigT); bb.setAttribute('aria-label', tx(U.bigT)); bb.setAttribute('aria-pressed', big); }
+  const pageKey = [S.view, S.idx, M.id, lang].join('|'); if (pageKey !== G.pageKey) { G.pageKey = pageKey; sayStop(); }
+  GLU = new Set();
+  const html = S.view === 'lang' ? vLang() : S.view === 'start' ? vStart() : S.view === 'q' ? vQ() : vResult();
+  $('#panel').innerHTML = S.view === 'lang' ? html : gl(html);
   $('#foot').innerHTML = vFoot();
-  fillRefPics(); fillTestPic(); updInstall();
+  fillRefPics(); fillTestPic(); fillModPics(); updInstall(); saveState();
   document.body.classList.toggle('is-q', S.view === 'q');
   if (focus) { const h = $('#qh'); if (h) h.focus({preventScroll:true}); }
 }
@@ -1028,8 +1212,8 @@ async function buildPDF(){
 }
 async function download(){
   const btn = $('#dlBtn'), st = $('#dlStatus'); btn.disabled = true; st.textContent = tx(U.prep);
-  let blob; try { await new Promise(r => setTimeout(r, 30)); blob = await buildPDF(); } catch (e) { console.error("pdf", e && e.stack); st.textContent = tx(U.dlFail); btn.disabled = false; return; }
-  const name = 'spine-assessment-' + new Date().toISOString().slice(0, 10) + '.pdf';
+  let blob; try { await new Promise(r => setTimeout(r, 30)); blob = await getPDF(); } catch (e) { console.error("pdf", e && e.stack); st.textContent = tx(U.dlFail); btn.disabled = false; return; }
+  const name = pdfName();
   const dl = await dlReady;
   if (dl) { try { await dl.save({filename:name, data:blob}); st.textContent = tx(U.saved); } catch (err) { const c = err && err.code; st.textContent = c === 'declined' ? tx(U.declined) : c === 'rate_limited' ? tx(U.busy) : tx(U.dlNA); } }
   else if (dl === null) st.textContent = tx(U.dlNA);
@@ -1040,7 +1224,7 @@ async function download(){
 /* ================= events ================= */
 const toggle = (arr, v) => { const i = arr.indexOf(v); if (i >= 0) arr.splice(i, 1); else arr.push(v); };
 document.addEventListener('click', e => {
-  const cl = e.target.closest('a[href^="#src-"]'); if (cl) { const dd = $('#srcDetails'); if (dd) dd.open = true; return; }
+  const cl = e.target.closest('a[href^="#src-"]'); if (cl) { const dd = $('#srcDetails'); if (dd) dd.open = true; if (cl.closest('#glossPanel')) closeTerm(); return; }
   const t = e.target.closest('[data-act]'); if (!t || t.disabled) return;
   const act = t.dataset.act, v = t.dataset.v;
   const rerender = () => { const y0 = window.scrollY; render(false); window.scrollTo(0, y0); };
@@ -1048,6 +1232,14 @@ document.addEventListener('click', e => {
     case 'lang': lang = v; try { localStorage.setItem('spg-lang', v); } catch (err) {} rerender(); return;
     case 'home': A = fresh(); useSex('m'); S.view = 'start'; S.idx = 0; G.rca = null; applyRCA(); setAnat(false); aim(V.full); G.spin = true; render(true); window.scrollTo(0, 0); return;
     case 'begin': A = fresh(); goto(0); return;
+    case 'pickMod': useModule(v); A = fresh(); G.rca = null; if (G.ok) { applyRCA(); G.hlKey = ''; } goto(0); return;
+    case 'resume': resume(); return;
+    case 'resNo': try { localStorage.removeItem(SAVEK); } catch (err) {} rerender(); return;
+    case 'term': openTerm(v); return;
+    case 'glClose': closeTerm(); return;
+    case 'say': say(v); return;
+    case 'big': big = !big; document.documentElement.classList.toggle('big', big); try { localStorage.setItem('spg-big', big ? '1' : '0'); } catch (err) {} t.setAttribute('aria-pressed', big); return;
+    case 'share': shareReport(); return;
     case 'install': installApp(); return;
     case 'instClose': $('#installPanel').hidden = true; return;
     case 'zoom': zoomBtn(v); return;
@@ -1080,7 +1272,7 @@ document.addEventListener('click', e => {
 document.addEventListener('change', e => { if (e.target.id === 'problem') { useModule(e.target.value); A = fresh(); G.rca = null; if (G.ok) { applyRCA(); G.hlKey = ''; } render(false); } });
 document.addEventListener('input', e => { if (e.target.id === 'pain') { A.pain = +e.target.value; const o = $('#painOut'); if (o) o.textContent = A.pain; } });
 
-window.SPG_TEST = {tpic: (id, w, h) => { const k = Object.keys(TPIC); k.forEach(x => delete TPIC[x]); return testPic(id, w || 480, h || 560); }, tposes: () => Object.keys(TPOSE), cam: () => Object.assign({}, G.tgt), steps: () => STEPS.map(x => x.k + (x.a ? ':' + x.a.id : '')), set: o => { Object.assign(A, o); render(false); }, mod: id => useModule(id), step: (i, mod, sex) => { if (mod) useModule(mod); if (sex) { A.sex = sex; useSex(sexCode()); } goto(i); }, kb: () => JSON.parse(JSON.stringify({sources:SRC, areas:AREAS.map(a => ({id:a.id, paired:a.pair, dermatome:a.code || null, name:a.name, description:a.desc, relevance:a.rel})), ages:AGES, sexes:SEXES, episodes:EPIS, history:RISKS, onsets:ONSETS, duration:SINCE, trend:TRENDS, dominance:DOMS, pattern:PAT, walking:WALKS, sitting:SITS, sleep:SLEEPS, redFlags:RFS, bedsideTests:TESTS, conditions:CONDS, emergencies:EMERG, departments:DEPTS, nerveRoots:ROOTS, stats:STATS, urgencyLevels:LEVELS, urgencyReasons:RS, featureExplanations:FX, featureLabels:LBL})), load: (a, lg, mod) => { if (lg) lang = lg; if (mod) useModule(mod); A = Object.assign(fresh(), a); useSex(sexCode()); showResult(); }, gal: () => (G.imgs || []).length, analyze: (a, mod) => { if (mod && (!M || M.id !== mod)) useModule(mod); const r = analyze(Object.assign(fresh(), a)); return {level:r.level, top:r.ranked.slice(0, 3).map(x => x.c.id + ':' + x.strength + ':' + x.s), roots:r.roots, sides:[...r.sides], depts:r.depts.map(d => d.id), emerg:r.emerg}; }};
+window.SPG_TEST = {term: id => openTerm(id), glIds: () => GL.map(g => g.id), glPic: id => { Object.keys(GLPIC).forEach(k => delete GLPIC[k]); return glPic(GLI[id]); }, summary: () => shareText(), tpic: (id, w, h) => { const k = Object.keys(TPIC); k.forEach(x => delete TPIC[x]); return testPic(id, w || 480, h || 560); }, tposes: () => Object.keys(TPOSE), cam: () => Object.assign({}, G.tgt), steps: () => STEPS.map(x => x.k + (x.a ? ':' + x.a.id : '')), set: o => { Object.assign(A, o); render(false); }, mod: id => useModule(id), step: (i, mod, sex) => { if (mod) useModule(mod); if (sex) { A.sex = sex; useSex(sexCode()); } goto(i); }, kb: () => JSON.parse(JSON.stringify({sources:SRC, areas:AREAS.map(a => ({id:a.id, paired:a.pair, dermatome:a.code || null, name:a.name, description:a.desc, relevance:a.rel})), ages:AGES, sexes:SEXES, episodes:EPIS, history:RISKS, onsets:ONSETS, duration:SINCE, trend:TRENDS, dominance:DOMS, pattern:PAT, walking:WALKS, sitting:SITS, sleep:SLEEPS, redFlags:RFS, bedsideTests:TESTS, conditions:CONDS, emergencies:EMERG, departments:DEPTS, nerveRoots:ROOTS, stats:STATS, urgencyLevels:LEVELS, urgencyReasons:RS, featureExplanations:FX, featureLabels:LBL})), load: (a, lg, mod) => { if (lg) lang = lg; if (mod) useModule(mod); A = Object.assign(fresh(), a); useSex(sexCode()); showResult(); }, gal: () => (G.imgs || []).length, analyze: (a, mod) => { if (mod && (!M || M.id !== mod)) useModule(mod); const r = analyze(Object.assign(fresh(), a)); return {level:r.level, top:r.ranked.slice(0, 3).map(x => x.c.id + ':' + x.strength + ':' + x.s), roots:r.roots, sides:[...r.sides], depts:r.depts.map(d => d.id), emerg:r.emerg}; }};
 useModule(MODS[0].id);
 if (!langChosen) S.view = 'lang';
 /* ================= install as an app (web app manifest + offline worker) ================= */
@@ -1109,6 +1301,7 @@ function installApp(){
   $('#installCard').innerHTML = `<p class="kicker">${tx(U.brand)}</p><h2 id="ipT" style="margin-top:6px">${tx(U.instT)}</h2><p class="muted small" style="margin-top:6px">${tx(U.instS)}</p><ol>${steps.map(t => `<li>${fill(t)}</li>`).join('')}</ol><button class="btn primary block" data-act="instClose">${tx(U.instClose)}</button>`;
   $('#installPanel').hidden = false; const b = $('#installCard .btn'); if (b) b.focus();
 }
+{ const gp = $('#glossPanel'); if (gp) { gp.addEventListener('click', e => { if (e.target === gp) closeTerm(); }); document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTerm(); }); } }
 { const ip = $('#installPanel'); if (ip) { ip.addEventListener('click', e => { if (e.target === ip) ip.hidden = true; }); document.addEventListener('keydown', e => { if (e.key === 'Escape') ip.hidden = true; }); } }
 const has3D = () => !!(window.THREE && window.SPG_BODY && window.SPG_SPINE);
 const late3D = !has3D();
