@@ -980,7 +980,8 @@ const TPOSE = {
   heel: () => ({pose:{thigh_l:[-22, 0, 0], shin_l:[12, 0, 0], foot_l:[-30, 0, 0], thigh_r:[12, 0, 0], shin_r:[18, 0, 0], foot_r:[-32, 0, 0], uarm_l:[-10, 0, 6], uarm_r:[14, 0, -6]}, ground:'heels', work:['l5_l', 'l5_r'], cam:{az:66, el:4, fit:1.0}, arc:{bone:'toes_l', off:[0, 0.02, 0.04], from:{foot_l:[0, 0, 0]}}, props:[]}),
   toe: s => ({pose:mirror({foot_l:[34, 0, 0], toes_l:[-30, 0, 0], thigh_r:[8, 0, 0], shin_r:[70, 0, 0], foot_r:[20, 0, 0], uarm_l:[-58, 0, 6], uarm_r:[-58, 0, -6], farm_l:[-10, 0, 0], farm_r:[-10, 0, 0]}, s), ground:'toes', work:['s1_' + s], cam:{az:s === 'l' ? 104 : -104, el:6, fit:1.0}, arc:{bone:'foot_' + s, off:[0, -0.05, -0.04], rel:'toes_' + s, from:{['foot_' + s]:[0, 0, 0], ['toes_' + s]:[0, 0, 0]}}, props:['wallFront']}),
   spur: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS, mirror({neck:[-10, 0, -14], head:[-10, 0, -16]}, s)), ground:'seat', pain:['neck', 'c6_' + s, 'c7_' + s, 'scap_' + s], cam:{az:s === 'l' ? 28 : -28, el:6, fit:1.0, dy:0.12, zoom:1.15}, arc:{bone:'head', off:[0, 0.2, 0.0], from:{neck:[0, 0, 0], head:[0, 0, 0]}}, props:['chair']}),
-  sabd: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS, mirror({clav_l:[0, 0, 12], uarm_l:[-8, 0, 100], farm_l:[18, 0, 138], hand_l:[0, 0, 30]}, s)), ground:'seat', work:['c5_' + s, 'c6_' + s, 't1_' + s], cam:{az:s === 'l' ? 22 : -22, el:6, fit:1.0, dy:0.12, zoom:1.15}, arc:{bone:'hand_' + s, off:[0, 0, 0]}, props:['chair']}),
+  sabd: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS, mirror({clav_l:[0, 0, 12], uarm_l:[-8, 0, 100], farm_l:[18, 0, 138], hand_l:[0, 0, 30]}, s)), ground:'seat', work:['c5_' + s, 'c6_' + s, 't1_' + s], relief:true, cam:{az:s === 'l' ? 22 : -22, el:6, fit:1.0, dy:0.12, zoom:1.15}, arc:{bone:'hand_' + s, off:[0, 0, 0]}, props:['chair']}),
+  dist: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS), ground:'seat', work:['neck', 'c6_' + s, 'c7_' + s], relief:true, cam:{az:s === 'l' ? 40 : -40, el:8, fit:1.0, dy:0.1, zoom:1.02}, lift:true, props:['chair']}),
   grip: () => ({pose:Object.assign({uarm_l:[-55, 0, -17], uarm_r:[-55, 0, 17], farm_l:[-12, 0, 0], farm_r:[-12, 0, 0]}, FIST('r')), ground:'feet', work:['c7_l', 'c7_r', 'c8_l', 'c8_r'], cam:{az:40, el:12, focus:'hands', d:1.35, dy:0.12}, props:[]}),
   tandem: () => ({pose:{thigh_l:[-13, 0, -7], shin_l:[6, 0, 0], thigh_r:[8, 0, 7], shin_r:[10, 0, 0], foot_r:[8, 0, 0], uarm_l:[0, 0, 34], uarm_r:[0, 0, -34]}, ground:'feet', cam:{az:38, el:16, fit:1.05}, props:['line']}),
   press: () => ({pose:{}, ground:'feet', pain:['interscap', 'midback'], cam:{az:180, el:6, fit:0.62, dy:0.2}, marks:true, props:[]}),
@@ -1050,6 +1051,10 @@ function testPic(id, w, h){
     arrow(pts, '#0E6A64');
   }
   if (sp.marks) { [0.32, 0.45, 0.58].forEach((f, i) => { const q = bonePt(T, sex, mats, i ? 'tspine' : 'chest'); q.y = bb.min.y + (bb.max.y - bb.min.y) * (0.5 + f * 0.36); q.z = bb.min.z - 0.01; const [x, y] = pr2(q); g.strokeStyle = '#0E6A64'; g.lineWidth = Math.max(3, w / 150); g.beginPath(); g.arc(x, y, w / 30, 0, 2 * PI); g.stroke(); g.beginPath(); g.arc(x, y, w / 90, 0, 2 * PI); g.fillStyle = '#0E6A64'; g.fill(); }); }
+  if (sp.lift) {
+    const hd = bonePt(T, sex, mats, 'head', [0, 0.145, 0]); hd.y += dy; const up = hd.clone(); up.y += 0.1; arrow([pr2(hd), pr2(up)], '#0E6A64');
+    [[0, -0.07, 0.075], [0, 0.0, -0.1]].forEach(o => { const q = bonePt(T, sex, mats, 'head', o); q.y += dy; const [x, y] = pr2(q); g.beginPath(); g.arc(x, y, w / 34, 0, 2 * PI); g.fillStyle = 'rgba(14,106,100,0.28)'; g.fill(); g.lineWidth = Math.max(2, w / 200); g.strokeStyle = '#0E6A64'; g.stroke(); });
+  }
   if (sp.gap) { const hd = bonePt(T, sex, mats, 'head', [0, 0.03, -0.1]); hd.y += dy; const wl = hd.clone(); wl.z = bb.min.z; const a = pr2(hd), b = pr2(wl); arrow([[(a[0] + b[0]) / 2, a[1]], b], '#C9461E'); arrow([[(a[0] + b[0]) / 2, a[1]], a], '#C9461E'); }
   // free GPU memory of the temporary scene
   scene.traverse(o => { if (o.geometry) o.geometry.dispose(); if (o.material && o !== human.mesh) (Array.isArray(o.material) ? o.material : [o.material]).forEach(m => m.dispose && m.dispose()); });
@@ -1058,7 +1063,7 @@ function testPic(id, w, h){
 
 function testFig(t){
   const sp = TPOSE[t.id](testSide()), dot = (c, l) => `<span class="tpk"><i style="background:${c}"></i>${tx(l)}</span>`;
-  return `<figure class="testpic"><img data-test="${t.id}" alt="${esc(tx(t.name))}"><figcaption>${sp.pain ? dot('var(--pain)', U.tpPain) : ''}${sp.work ? dot('var(--accent)', U.tpWork) : ''}${sp.arc || sp.gap ? dot('transparent', U.tpMove) : ''}</figcaption></figure>`;
+  return `<figure class="testpic"><img data-test="${t.id}" alt="${esc(tx(t.name))}"><figcaption>${sp.pain ? dot('var(--pain)', U.tpPain) : ''}${sp.work ? dot('var(--accent)', sp.relief ? U.tpRelief : U.tpWork) : ''}${sp.lift ? dot('rgba(14,106,100,0.28)', U.tpHands) : ''}${sp.arc || sp.gap || sp.lift ? dot('transparent', U.tpMove) : ''}</figcaption></figure>`;
 }
 function fillTestPic(){
   const img = document.querySelector('.testpic img'); if (!img) return;

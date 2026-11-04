@@ -195,8 +195,8 @@
       },
       {
         "key": "wainner",
-        "title": "Physiopedia – Clinical prediction rule for cervical radiculopathy (Wainner 2003)",
-        "url": "https://physio-pedia.com/CPR_for_Cervical_Radiculopathy"
+        "title": "Wainner RS et al. Reliability and diagnostic accuracy of the clinical examination for cervical radiculopathy. Spine 2003;28:52–62 (Spurling sens 50%/spec 86%; distraction 44%/90%; 3 of 4 tests LR+ 6.1)",
+        "url": "https://www.physiotutors.com/wiki/cluster-of-wainner/"
       },
       {
         "key": "myelo",
@@ -212,6 +212,46 @@
         "key": "aha",
         "title": "Heart attack warning signs (American Heart Association)",
         "url": "https://oaklawnhospital.org/services/cardiology/warning-signs-of-a-heart-attack-american-heart-association/"
+      },
+      {
+        "key": "rubin07",
+        "title": "Rubinstein SM et al. A systematic review of the diagnostic accuracy of provocative tests of the neck for diagnosing cervical radiculopathy. Eur Spine J 2007;16:307–19",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2200707"
+      },
+      {
+        "key": "cook10",
+        "title": "Cook C et al. Clustered clinical findings for diagnosis of cervical spine myelopathy. J Man Manip Ther 2010;18:175–80 (gait, Hoffmann, inverted supinator, Babinski, age over 45: 3 of 5 LR+ 30.9; LR− 0.18)",
+        "url": "https://www.physiotutors.com/wiki/cervical-myelopathy-cluster"
+      },
+      {
+        "key": "alentado",
+        "title": "Alentado VJ et al. Optimal duration of conservative management prior to surgery for cervical and lumbar radiculopathy. Global Spine J 2014 (88% improve within 4 weeks)",
+        "url": "https://www.epistemonikos.org/en/documents/a4d2c4f86f91b634127490c329039494144e6821"
+      },
+      {
+        "key": "wong14",
+        "title": "Wong JJ et al. The course and prognostic factors of symptomatic cervical disc herniation with radiculopathy: systematic review. Spine J 2014;14:1781–9",
+        "url": "https://chiropractic.ca/wp-content/uploads/2015/01/Wong-2014-Course-prognosis-factors-sympto-cer-disc-hern-radic.pdf"
+      },
+      {
+        "key": "nakash",
+        "title": "Nakashima H et al. Abnormal findings on MRI of the cervical spine in 1211 asymptomatic subjects. Spine 2015;40:392–8 (disc bulging 87.6%)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25584950/"
+      },
+      {
+        "key": "carroll08",
+        "title": "Carroll LJ et al. Course and prognostic factors for neck pain in the general population and in whiplash-associated disorders. Bone and Joint Decade 2000–2010 Task Force, Spine 2008;33(4S):S75–92",
+        "url": "https://chiro.org/Whiplash/Course_and_Prognostic_Factors_for_Neck_Pain.shtml"
+      },
+      {
+        "key": "darcy",
+        "title": "D’Arcy CA, McGee S. Does this patient have carpal tunnel syndrome? JAMA 2000;283:3110–7 (likelihood ratios summarised by TheNNT)",
+        "url": "https://thennt.com/lr/carpal-tunnel-syndrome/"
+      },
+      {
+        "key": "elbflex",
+        "title": "Physiotutors – Elbow flexion test for cubital tunnel syndrome (sensitivity 36–93%, specificity 40–99% across studies)",
+        "url": "https://www.physiotutors.com/wiki/elbow-flexion-test/"
       },
       {
         "key": "thor",
@@ -770,6 +810,31 @@
           "hi": "मीडियन नस कलाई के आगे एक तंग सुरंग से होकर अंगूठे, तर्जनी और बीच की उंगली तक जाती है। यहां दबाव (कार्पल टनल सिंड्रोम) से रात में झुनझुनी होती है जो हाथ झटकने से कम होती है।"
         },
         "sources": [],
+        "picture": "bone"
+      },
+      {
+        "id": "ulnar",
+        "terms": {
+          "en": [
+            "cubital tunnel",
+            "ulnar nerve"
+          ],
+          "hi": [
+            "क्यूबिटल टनल",
+            "अल्नर नस"
+          ]
+        },
+        "title": {
+          "en": "Ulnar nerve and cubital tunnel",
+          "hi": "अल्नर नस और क्यूबिटल टनल"
+        },
+        "plain": {
+          "en": "The ulnar nerve runs in a groove behind the bony bump on the inside of the elbow (the “funny bone”) and supplies the ring and little fingers. Keeping the elbow bent for long stretches and presses it (cubital tunnel syndrome).",
+          "hi": "अल्नर नस कोहनी के अंदर की उभरी हड्डी (जहाँ लगने पर झनझनाहट होती है) के पीछे एक खांचे से गुज़रती है और अनामिका व छोटी उंगली तक जाती है। कोहनी देर तक मोड़े रखने से यह खिंचती और दबती है (क्यूबिटल टनल सिंड्रोम)।"
+        },
+        "sources": [
+          "elbflex"
+        ],
         "picture": "bone"
       },
       {
@@ -6989,7 +7054,15 @@
         "wainner",
         "myelo",
         "mening",
-        "aha"
+        "aha",
+        "rubin07",
+        "cook10",
+        "alentado",
+        "wong14",
+        "nakash",
+        "carroll08",
+        "darcy",
+        "elbflex"
       ],
       "conditions": [
         {
@@ -7016,8 +7089,8 @@
             "hi": "गतिविधि में बदलाव, डॉक्टर द्वारा चुनी दवाएं, फिज़ियोथेरेपी (पोस्चर, नर्व ग्लाइडिंग, मज़बूती) और कभी-कभी थोड़े समय सॉफ्ट कॉलर। लगातार बांह दर्द में इमेज-गाइडेड इंजेक्शन; कमज़ोरी या न सुधरने वाले दर्द में सर्जरी (ACDF या डिस्क रिप्लेसमेंट)।"
           },
           "outlook": {
-            "en": "About 90% are symptom-free or only mildly affected at follow-up; about one in four needs surgery, and about one in three has another episode.",
-            "hi": "लगभग 90% लोग बाद में बिना लक्षण या हल्के लक्षणों वाले रहते हैं; लगभग चार में से एक को सर्जरी चाहिए, और तीन में से एक को दोबारा दर्द होता है।"
+            "en": "Most get better: in natural-history studies about 88% improve within 4 weeks and the biggest gains come in the first 4–6 months. About 90% are symptom-free or only mildly affected at follow-up; about one in four has surgery and about one in three has another episode.",
+            "hi": "ज़्यादातर ठीक होते हैं: प्राकृतिक क्रम के अध्ययनों में लगभग 88% में 4 हफ्ते में सुधार होता है और सबसे ज़्यादा सुधार पहले 4–6 महीनों में। लगभग 90% लोग बाद में बिना लक्षण या हल्के लक्षणों वाले रहते हैं; लगभग चार में से एक की सर्जरी होती है और तीन में से एक को दोबारा दर्द होता है।"
           },
           "thresholds": [
             14,
@@ -7046,6 +7119,8 @@
             }
           ],
           "outlookSource": [
+            "alentado",
+            "wong14",
             "radhak"
           ],
           "weights": [
@@ -7183,7 +7258,7 @@
                 "en": "Resting the hand on top of the head",
                 "hi": "हाथ को सिर के ऊपर रखना"
               },
-              "weight": 3
+              "weight": 2
             },
             {
               "feature": "spur_pos",
@@ -7191,13 +7266,21 @@
                 "en": "Neck tilt test (gentle Spurling): positive",
                 "hi": "गर्दन झुकाने का टेस्ट (हल्का स्परलिंग): पॉज़िटिव"
               },
-              "weight": 4
+              "weight": 2
             },
             {
               "feature": "sabd_pos",
               "label": {
                 "en": "Hand-on-head relief test: positive",
                 "hi": "सिर पर हाथ रखने का टेस्ट: पॉज़िटिव"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "dist_pos",
+              "label": {
+                "en": "Neck lift relief test (needs a helper): positive",
+                "hi": "गर्दन उठाने से आराम का टेस्ट (किसी की मदद से): पॉज़िटिव"
               },
               "weight": 3
             },
@@ -7287,7 +7370,15 @@
                 "en": "Neck tilt test (gentle Spurling): negative",
                 "hi": "गर्दन झुकाने का टेस्ट (हल्का स्परलिंग): नेगेटिव"
               },
-              "weight": -2
+              "weight": -1
+            },
+            {
+              "feature": "dist_neg",
+              "label": {
+                "en": "Neck lift relief test (needs a helper): negative",
+                "hi": "गर्दन उठाने से आराम का टेस्ट (किसी की मदद से): नेगेटिव"
+              },
+              "weight": -1
             },
             {
               "feature": "both_arms",
@@ -7320,6 +7411,14 @@
                 "hi": "रात को हाथ में झुनझुनी जो हाथ झटकने से कम हो"
               },
               "weight": -1
+            },
+            {
+              "feature": "ch_elbow_bend",
+              "label": {
+                "en": "Tingling in the ring and little fingers when the elbow stays bent (on the phone, sleeping with the arm bent)",
+                "hi": "कोहनी देर तक मुड़ी रहने पर (फ़ोन पर बात, मुड़ी बांह के साथ सोना) अनामिका और छोटी उंगली में झुनझुनी"
+              },
+              "weight": -1
             }
           ]
         },
@@ -7347,8 +7446,8 @@
             "hi": "काम पर असर हो तो आमतौर पर डीकंप्रेशन सर्जरी; हल्के मामलों में नियमित जांच के साथ करीबी निगरानी।"
           },
           "outlook": {
-            "en": "It tends to worsen slowly and step-wise and rarely improves without surgery; early treatment protects function.",
-            "hi": "यह धीरे-धीरे, सीढ़ी की तरह बढ़ता है और बिना सर्जरी कम ही सुधरता है; जल्दी इलाज से काम करने की क्षमता बचती है।"
+            "en": "It tends to worsen slowly and step-wise and rarely improves without surgery; early treatment protects function. Doctors combine five findings (walking problem, Hoffmann sign, inverted supinator sign, Babinski sign, age over 45): 3 of 5 make it about 30 times more likely.",
+            "hi": "यह धीरे-धीरे, सीढ़ी की तरह बढ़ता है और बिना सर्जरी कम ही सुधरता है; जल्दी इलाज से काम करने की क्षमता बचती है। डॉक्टर पांच संकेत जोड़ते हैं (चाल की गड़बड़ी, हॉफमैन साइन, इनवर्टेड सुपिनेटर साइन, बेबिन्स्की साइन, 45 से ज़्यादा उम्र): 5 में से 3 हों तो संभावना लगभग 30 गुना।"
           },
           "thresholds": [
             10,
@@ -7366,7 +7465,8 @@
             "neuro"
           ],
           "outlookSource": [
-            "myelo"
+            "myelo",
+            "cook10"
           ],
           "weights": [
             {
@@ -7446,6 +7546,14 @@
               "label": {
                 "en": "Pins and needles in the hand or fingers",
                 "hi": "हाथ या उंगलियों में झुनझुनी"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
               },
               "weight": 1
             },
@@ -7539,8 +7647,8 @@
             "hi": "पोस्चर और काम की जगह में बदलाव, नियमित ब्रेक, सिकाई, फिज़ियोथेरेपी व्यायाम; दवाएं सिर्फ डॉक्टर की सलाह से।"
           },
           "outlook": {
-            "en": "Most episodes settle within weeks; staying active helps.",
-            "hi": "ज़्यादातर दर्द कुछ हफ्तों में ठीक होता है; सक्रिय रहना मदद करता है।"
+            "en": "Most episodes settle within weeks and staying active helps, but neck pain often returns: 50–85% of people report it again 1–5 years later, so regular exercise and screen habits matter.",
+            "hi": "ज़्यादातर दर्द कुछ हफ्तों में ठीक होता है और सक्रिय रहना मदद करता है, पर गर्दन दर्द अक्सर लौटता है: 50–85% लोगों को 1–5 साल बाद फिर होता है, इसलिए नियमित व्यायाम और स्क्रीन की आदतें मायने रखती हैं।"
           },
           "thresholds": [
             9,
@@ -7558,7 +7666,9 @@
             "gp",
             "ortho_spine"
           ],
-          "outlookSource": null,
+          "outlookSource": [
+            "carroll08"
+          ],
           "weights": [
             {
               "feature": "h_first",
@@ -7738,8 +7848,8 @@
             "hi": "उम्र, पुरानी चोट, सालों का डेस्क वर्क और आनुवंशिकता। 50 से ऊपर ज़्यादातर लोगों के एक्स-रे में कुछ बदलाव दिखते हैं।"
           },
           "confirm": {
-            "en": "Examination; X-ray or MRI only if symptoms persist or nerves are involved.",
-            "hi": "जांच; लक्षण बने रहें या नसें शामिल हों तभी एक्स-रे या MRI।"
+            "en": "Examination; X-ray or MRI only if symptoms persist or nerves are involved. Scans show wear even without pain: 87.6% of adults with no neck symptoms have bulging discs on MRI (73–78% of people in their 20s), so a scan is read together with the examination.",
+            "hi": "जांच; लक्षण बने रहें या नसें शामिल हों तभी एक्स-रे या MRI। बिना दर्द के भी स्कैन में घिसावट दिखती है: बिना गर्दन के लक्षण वाले 87.6% वयस्कों के MRI में डिस्क उभरी दिखती है (20 की उम्र वालों में भी 73–78%), इसलिए स्कैन को जांच के साथ मिलाकर पढ़ा जाता है।"
           },
           "treat": {
             "en": "Exercise, posture, heat and pain relief; facet injections or radiofrequency treatment for persistent pain.",
@@ -8086,8 +8196,8 @@
             "hi": "सक्रिय रहना, दर्द की दवा और फिज़ियोथेरेपी; कॉलर लंबे समय तक आमतौर पर नहीं।"
           },
           "outlook": {
-            "en": "Most improve within weeks to a few months.",
-            "hi": "ज़्यादातर कुछ हफ्तों से कुछ महीनों में सुधरते हैं।"
+            "en": "Most improve over weeks to months, but about half still report some neck pain one year after the injury; staying active and early physiotherapy help.",
+            "hi": "ज़्यादातर कुछ हफ्तों से महीनों में सुधरते हैं, पर लगभग आधे लोगों को चोट के एक साल बाद भी कुछ गर्दन दर्द रहता है; सक्रिय रहना और जल्दी फिज़ियोथेरेपी मदद करती है।"
           },
           "thresholds": [
             8,
@@ -8104,7 +8214,9 @@
             "ortho_spine",
             "physio"
           ],
-          "outlookSource": null,
+          "outlookSource": [
+            "carroll08"
+          ],
           "weights": [
             {
               "feature": "h_first",
@@ -8423,8 +8535,8 @@
             "hi": "कलाई का बार-बार उपयोग, गर्भावस्था, डायबिटीज़, थायरॉइड और कलाई की चोट।"
           },
           "confirm": {
-            "en": "Examination and nerve conduction studies.",
-            "hi": "जांच और नर्व कंडक्शन स्टडी।"
+            "en": "Examination and nerve conduction studies. Of the bedside clues, waking at night and shaking the hand to relieve it (flick sign) was the strongest in one study; Phalen and Tinel tests add little.",
+            "hi": "जांच और नर्व कंडक्शन स्टडी। बेडसाइड संकेतों में रात को जागकर हाथ झटकने से आराम (फ्लिक साइन) एक अध्ययन में सबसे मज़बूत था; फेलेन और टिनेल टेस्ट कम मदद करते हैं।"
           },
           "treat": {
             "en": "Night wrist splint, activity changes, injection; release surgery if severe.",
@@ -8483,6 +8595,14 @@
               "weight": 1
             },
             {
+              "feature": "both_arms",
+              "label": {
+                "en": "Both arms",
+                "hi": "दोनों बांहें"
+              },
+              "weight": 1
+            },
+            {
               "feature": "r_immune",
               "label": {
                 "en": "Diabetes, HIV or low immunity",
@@ -8507,10 +8627,159 @@
               "weight": -2
             },
             {
+              "feature": "dist_pos",
+              "label": {
+                "en": "Neck lift relief test (needs a helper): positive",
+                "hi": "गर्दन उठाने से आराम का टेस्ट (किसी की मदद से): पॉज़िटिव"
+              },
+              "weight": -2
+            },
+            {
               "feature": "ch_shoot",
               "label": {
                 "en": "Sharp, electric pain shooting into the arm",
                 "hi": "बांह में करंट जैसा तेज़ दर्द"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_elbow_bend",
+              "label": {
+                "en": "Tingling in the ring and little fingers when the elbow stays bent (on the phone, sleeping with the arm bent)",
+                "hi": "कोहनी देर तक मुड़ी रहने पर (फ़ोन पर बात, मुड़ी बांह के साथ सोना) अनामिका और छोटी उंगली में झुनझुनी"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "cubital",
+          "name": {
+            "en": "Ulnar nerve pressed at the elbow (cubital tunnel syndrome)",
+            "hi": "कोहनी पर अल्नर नस दबना (क्यूबिटल टनल सिंड्रोम)"
+          },
+          "scientific": "Ulnar neuropathy at the elbow",
+          "what": {
+            "en": "The ulnar nerve (the “funny bone” nerve) is squeezed or stretched behind the inner elbow, causing tingling and numbness in the ring and little fingers, worse when the elbow stays bent. It can mimic a C8 root problem from the neck.",
+            "hi": "अल्नर नस (कोहनी की “झनझनाहट वाली” नस) कोहनी के अंदरूनी हिस्से के पीछे दबती या खिंचती है, जिससे अनामिका और छोटी उंगली में झुनझुनी और सुन्नपन होता है, खासकर कोहनी देर तक मुड़ी रहने पर। यह गर्दन की C8 जड़ की समस्या जैसी लग सकती है।"
+          },
+          "causes": {
+            "en": "Long periods with the elbow bent (phone calls, sleeping with the arm bent), leaning on the elbow, old elbow fractures and arthritis. It is the second most common nerve entrapment of the arm after carpal tunnel.",
+            "hi": "कोहनी देर तक मोड़े रखना (फ़ोन पर बात, मुड़ी बांह के साथ सोना), कोहनी टिकाकर बैठना, कोहनी का पुराना फ्रैक्चर और गठिया। कार्पल टनल के बाद यह बांह में नस दबने का दूसरा सबसे आम कारण है।"
+          },
+          "confirm": {
+            "en": "Examination (tapping the nerve, the elbow flexion test, strength of the small hand muscles) and nerve conduction studies to tell it apart from a C8 root problem.",
+            "hi": "जांच (नस पर थपकी, एल्बो फ्लेक्शन टेस्ट, हाथ की छोटी मांसपेशियों की ताकत) और C8 जड़ की समस्या से अलग पहचानने के लिए नर्व कंडक्शन स्टडी।"
+          },
+          "treat": {
+            "en": "Avoiding long elbow bending, a night elbow pad or splint that keeps the elbow fairly straight, nerve-gliding exercises; surgery if there is weakness or muscle wasting.",
+            "hi": "कोहनी देर तक मोड़ने से बचना, रात में कोहनी पैड या स्प्लिंट जो कोहनी को लगभग सीधा रखे, नर्व ग्लाइडिंग व्यायाम; कमज़ोरी या मांसपेशी घटे तो सर्जरी।"
+          },
+          "outlook": {
+            "en": "Mild cases often settle with these changes; weakness should be treated early.",
+            "hi": "हल्के मामले अक्सर इन बदलावों से ठीक हो जाते हैं; कमज़ोरी हो तो जल्दी इलाज ज़रूरी।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_elbow_bend"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "handsurg",
+            "neuro"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ch_elbow_bend",
+              "label": {
+                "en": "Tingling in the ring and little fingers when the elbow stays bent (on the phone, sleeping with the arm bent)",
+                "hi": "कोहनी देर तक मुड़ी रहने पर (फ़ोन पर बात, मुड़ी बांह के साथ सोना) अनामिका और छोटी उंगली में झुनझुनी"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "c8",
+              "label": {
+                "en": "Little-finger side of the forearm, ring and little fingers",
+                "hi": "अग्रबाहु का छोटी उंगली वाला हिस्सा, अनामिका और छोटी उंगली"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "ch_tingle",
+              "label": {
+                "en": "Pins and needles in the hand or fingers",
+                "hi": "हाथ या उंगलियों में झुनझुनी"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "ch_numb",
+              "label": {
+                "en": "A numb patch on the arm or fingers",
+                "hi": "बांह या उंगलियों पर सुन्न हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "both_arms",
+              "label": {
+                "en": "Both arms",
+                "hi": "दोनों बांहें"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "neck",
+              "label": {
+                "en": "Back and sides of the neck",
+                "hi": "गर्दन का पिछला और साइड वाला हिस्सा"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "w_lookup",
+              "label": {
+                "en": "Looking up or tilting the head back",
+                "hi": "ऊपर देखना या सिर पीछे झुकाना"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "spur_pos",
+              "label": {
+                "en": "Neck tilt test (gentle Spurling): positive",
+                "hi": "गर्दन झुकाने का टेस्ट (हल्का स्परलिंग): पॉज़िटिव"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "dist_pos",
+              "label": {
+                "en": "Neck lift relief test (needs a helper): positive",
+                "hi": "गर्दन उठाने से आराम का टेस्ट (किसी की मदद से): पॉज़िटिव"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_shoot",
+              "label": {
+                "en": "Sharp, electric pain shooting into the arm",
+                "hi": "बांह में करंट जैसा तेज़ दर्द"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_night_hand",
+              "label": {
+                "en": "Hand tingling at night that eases by shaking the hand",
+                "hi": "रात को हाथ में झुनझुनी जो हाथ झटकने से कम हो"
               },
               "weight": -1
             }
@@ -9203,10 +9472,15 @@
           {
             "reason": "y_hand",
             "text": {
-              "en": "Hand tingling at night",
-              "hi": "रात को हाथ में झुनझुनी"
+              "en": "Hand or finger tingling from a nerve at the wrist or elbow",
+              "hi": "कलाई या कोहनी पर नस से हाथ या उंगलियों में झुनझुनी"
             },
-            "when": "ch_night_hand"
+            "when": {
+              "any": [
+                "ch_night_hand",
+                "ch_elbow_bend"
+              ]
+            }
           }
         ]
       },
@@ -9393,7 +9667,8 @@
               "dom_arm",
               "ch_shoot",
               "spur_pos",
-              "sabd_pos"
+              "sabd_pos",
+              "dist_pos"
             ]
           }
         },
@@ -9487,6 +9762,13 @@
             "label": {
               "en": "Hand tingling at night that eases by shaking the hand",
               "hi": "रात को हाथ में झुनझुनी जो हाथ झटकने से कम हो"
+            }
+          },
+          {
+            "id": "ch_elbow_bend",
+            "label": {
+              "en": "Tingling in the ring and little fingers when the elbow stays bent (on the phone, sleeping with the arm bent)",
+              "hi": "कोहनी देर तक मुड़ी रहने पर (फ़ोन पर बात, मुड़ी बांह के साथ सोना) अनामिका और छोटी उंगली में झुनझुनी"
             }
           },
           {
@@ -9692,8 +9974,8 @@
             "hi": "बांह में नीचे तक दर्द, झुनझुनी या सुन्नपन आ जाए।"
           },
           "accuracy": {
-            "en": "Part of a validated set of four neck tests: when 3 of 4 are positive, specificity is 94%.",
-            "hi": "चार टेस्ट के प्रमाणित सेट का हिस्सा: 4 में से 3 पॉज़िटिव हों तो विशिष्टता 94%।"
+            "en": "Sensitivity 50%, specificity 86%: a positive result makes a pinched root about 3.6 times more likely, a negative one does not rule it out. Part of a four-test set (3 of 4 positive: likelihood ratio 6.1).",
+            "hi": "संवेदनशीलता 50%, विशिष्टता 86%: पॉज़िटिव नतीजा दबी जड़ की संभावना लगभग 3.6 गुना करता है; नेगेटिव नतीजा इसे खारिज नहीं करता। चार टेस्ट के सेट का हिस्सा (4 में से 3 पॉज़िटिव: लाइकलीहुड रेशियो 6.1)।"
           },
           "source": "wainner",
           "answers": [
@@ -9719,14 +10001,45 @@
             "hi": "हाथ सिर पर रखने से बांह का दर्द साफ़ कम हो जाए।"
           },
           "accuracy": {
-            "en": "Relief suggests a pinched nerve root in the neck rather than a shoulder problem.",
-            "hi": "आराम मिलना कंधे की समस्या के बजाय गर्दन में दबी नस की ओर इशारा करता है।"
+            "en": "Low to moderate sensitivity but moderate to high specificity: relief points to a pinched nerve root in the neck rather than a shoulder problem; no relief does not rule it out.",
+            "hi": "संवेदनशीलता कम से मध्यम पर विशिष्टता मध्यम से ज़्यादा: आराम मिलना कंधे के बजाय गर्दन में दबी नस की ओर इशारा करता है; आराम न मिलना इसे खारिज नहीं करता।"
           },
-          "source": "wainner",
+          "source": "rubin07",
           "answers": [
             "sabd_pos",
             "sabd_neg",
             "sabd_skip"
+          ]
+        },
+        {
+          "id": "dist",
+          "name": {
+            "en": "Neck lift relief test (needs a helper)",
+            "hi": "गर्दन उठाने से आराम का टेस्ट (किसी की मदद से)"
+          },
+          "steps": [
+            {
+              "en": "Sit upright and relax. A helper stands behind you and places one hand under your jaw and the other under the back of your head.",
+              "hi": "सीधे बैठें और ढीले रहें। मदद करने वाला पीछे खड़ा होकर एक हाथ आपकी ठुड्डी के नीचे और दूसरा सिर के पीछे नीचे की तरफ रखे।"
+            },
+            {
+              "en": "The helper gently lifts your head straight up by about a finger’s width and holds for 10 seconds. No jerks or twisting.",
+              "hi": "मदद करने वाला धीरे से सिर को लगभग एक उंगली जितना सीधा ऊपर उठाए और 10 सेकंड रोके। कोई झटका या मरोड़ नहीं।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "The arm pain or tingling clearly eases while the head is lifted.",
+            "hi": "सिर उठाए रखने पर बांह का दर्द या झुनझुनी साफ़ कम हो जाए।"
+          },
+          "accuracy": {
+            "en": "Sensitivity 44%, specificity 90%: relief makes a pinched neck nerve root about 4.4 times more likely. Skip it if you have no helper or after a neck injury.",
+            "hi": "संवेदनशीलता 44%, विशिष्टता 90%: आराम मिलने से दबी नस की जड़ की संभावना लगभग 4.4 गुना होती है। कोई मदद न हो या गर्दन में चोट लगी हो तो छोड़ दें।"
+          },
+          "source": "wainner",
+          "answers": [
+            "dist_pos",
+            "dist_neg",
+            "dist_skip"
           ]
         },
         {
@@ -9781,10 +10094,10 @@
             "hi": "संतुलन बिगड़े, दीवार पकड़नी पड़े या लाइन से हट जाएं।"
           },
           "accuracy": {
-            "en": "Unsteady walking is the most important clue to spinal cord compression in the neck.",
-            "hi": "लड़खड़ाती चाल गर्दन में स्पाइनल कॉर्ड पर दबाव का सबसे अहम संकेत है।"
+            "en": "A walking (gait) problem is one of five findings doctors combine for spinal cord compression; 3 of the 5 make it about 30 times more likely, while none of them makes it unlikely.",
+            "hi": "चाल की गड़बड़ी उन पांच संकेतों में से एक है जिन्हें डॉक्टर स्पाइनल कॉर्ड के दबाव के लिए जोड़ते हैं; 5 में से 3 हों तो संभावना लगभग 30 गुना, एक भी न हो तो संभावना कम।"
           },
-          "source": "myelo",
+          "source": "cook10",
           "answers": [
             "tandem_bad",
             "tandem_ok",
@@ -10207,6 +10520,10 @@
           "en": "Hand tingling at night that eases by shaking the hand",
           "hi": "रात को हाथ में झुनझुनी जो हाथ झटकने से कम हो"
         },
+        "ch_elbow_bend": {
+          "en": "Tingling in the ring and little fingers when the elbow stays bent (on the phone, sleeping with the arm bent)",
+          "hi": "कोहनी देर तक मुड़ी रहने पर (फ़ोन पर बात, मुड़ी बांह के साथ सोना) अनामिका और छोटी उंगली में झुनझुनी"
+        },
         "ch_stiff_am": {
           "en": "Stiff for more than 30 minutes after waking",
           "hi": "सुबह उठने पर 30 मिनट से ज़्यादा अकड़न"
@@ -10426,6 +10743,18 @@
         "sabd_skip": {
           "en": "Hand-on-head relief test: could not do / skip",
           "hi": "सिर पर हाथ रखने का टेस्ट: नहीं कर पाए / छोड़ें"
+        },
+        "dist_pos": {
+          "en": "Neck lift relief test (needs a helper): positive",
+          "hi": "गर्दन उठाने से आराम का टेस्ट (किसी की मदद से): पॉज़िटिव"
+        },
+        "dist_neg": {
+          "en": "Neck lift relief test (needs a helper): negative",
+          "hi": "गर्दन उठाने से आराम का टेस्ट (किसी की मदद से): नेगेटिव"
+        },
+        "dist_skip": {
+          "en": "Neck lift relief test (needs a helper): could not do / skip",
+          "hi": "गर्दन उठाने से आराम का टेस्ट (किसी की मदद से): नहीं कर पाए / छोड़ें"
         },
         "grip_slow": {
           "en": "Grip-and-release test (hand speed): weak or unable",

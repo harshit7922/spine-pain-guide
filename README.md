@@ -8,7 +8,7 @@ A self-assessment tool for spine pain in English and Hindi. It asks where it hur
 
 ### Made to be easy for everyone
 - **Pick by picture:** the start page shows one card per body part, each with a 3D body and the area coloured.
-- **Tap a word to understand it:** 27 medical words (disc, nerve root, sciatica, cauda equina, saddle area, facet joint, scapula, brachial plexus and more) have a dotted underline. Tapping one opens a realistic 3D picture and a plain meaning in English or Hindi, with its source. The words live in `data/glossary.js`.
+- **Tap a word to understand it:** 28 medical words (disc, nerve root, sciatica, cauda equina, saddle area, facet joint, scapula, brachial plexus and more) have a dotted underline. Tapping one opens a realistic 3D picture and a plain meaning in English or Hindi, with its source. The words live in `data/glossary.js`.
 - **Listen / सुनें:** reads the question, the answer choices or the result summary aloud using the phone's own voice (Hindi or English). Nothing is sent anywhere.
 - **A+ (larger text)** in the top bar, remembered on the device.
 - **"In short" box** at the top of every result: best match, how urgent, and which doctor to see first.
@@ -36,7 +36,7 @@ On first open it asks for the language (English / हिंदी). The choice i
 
 <img src="docs/screenshots/phone-start-cards-hindi.png" width="250"> <img src="docs/screenshots/phone-result-summary-hindi.png" width="250"> <img src="docs/screenshots/phone-word-picture-hindi.png" width="250">
 
-**All 27 word pictures** (tap a dotted word anywhere in the questions or results):
+**Word pictures** (tap a dotted word anywhere in the questions or results):
 
 <img src="docs/images/word-pictures.png" width="760">
 
@@ -60,7 +60,7 @@ On first open it asks for the language (English / हिंदी). The choice i
 | **Upper and mid back** | **Whole spine** |
 | <img src="docs/screenshots/gallery-upper-back.png" width="380"> | <img src="docs/screenshots/gallery-whole-spine.png" width="380"> |
 
-More: [language choice](docs/screenshots/desktop-language-choice.png), [desktop result](docs/screenshots/desktop-result.png), [SLR test in Hindi](docs/screenshots/phone-test-slr-hindi.png), [Spurling test in Hindi](docs/screenshots/phone-test-spurling-hindi.png), [install on iPhone](docs/screenshots/phone-install-iphone.png).
+More: [language choice](docs/screenshots/desktop-language-choice.png), [desktop result](docs/screenshots/desktop-result.png), [SLR test in Hindi](docs/screenshots/phone-test-slr-hindi.png), [Spurling test in Hindi](docs/screenshots/phone-test-spurling-hindi.png), [neck lift test in Hindi](docs/screenshots/phone-test-neck-lift-hindi.png), [install on iPhone](docs/screenshots/phone-install-iphone.png).
 
 Sample PDF reports (made from test answers, not real patients): [lower back](docs/sample-reports/report-lower-back.pdf) · [neck and arm](docs/sample-reports/report-neck-arm.pdf) · [upper back](docs/sample-reports/report-upper-back.pdf) · [whole spine](docs/sample-reports/report-whole-spine.pdf). Doctor review pack: [docs/clinical-review-pack.md](docs/clinical-review-pack.md).
 
@@ -69,9 +69,13 @@ Sample PDF reports (made from test answers, not real patients): [lower back](doc
 | Choice on the start page | Data file | Conditions | Emergencies checked |
 |---|---|---|---|
 | Lower back, buttock or leg | `data/lumbar.js` | 21 | cauda equina, cord, trauma, aortic aneurysm |
-| Neck, shoulder blade or arm | `data/cervical.js` | 12 | cord compression, trauma, meningitis, stroke, heart attack |
+| Neck, shoulder blade or arm | `data/cervical.js` | 13 | cord compression, trauma, meningitis, stroke, heart attack |
 | Upper or mid back, ribs or chest wall | `data/thoracic.js` | 13 | heart attack, aortic dissection, lung clot, trauma, cord |
 | More than one part / whole spine | `data/whole.js` | 10 | cauda equina, cord, heart attack, trauma |
+
+## Evidence tables
+
+Each region has a plain-language evidence table listing every number the app shows, the likelihood ratios behind the scoring points and the sources: [lower back](research/lumbar-evidence.md) · [neck and arm](research/cervical-evidence.md). The order of work is in [research/ROADMAP.md](research/ROADMAP.md).
 
 ## Where the research lives (and how the calculation reads it)
 
@@ -90,7 +94,7 @@ How a result is calculated:
 ### To change or add research
 1. Edit the data file (for example change a weight in `data/cervical.js`). Keep English and Hindi together: `L('English', 'हिंदी')`.
 2. Reload `index.html` — the site uses the new numbers immediately.
-3. Run the checks: `node tests/run_scenarios.js` (54 clinical scenarios must still pass).
+3. Run the checks: `node tests/run_scenarios.js` (57 clinical scenarios must still pass).
 4. Refresh the readable copies: `node tools/export_kb.js` then `python3 tools/build_xlsx.py`.
 5. Rebuild the single-file version: `python3 tools/bundle.py` → `dist/spine-pain-guide.html`. This one file contains everything (use it for hosting or to send to someone); the hosted link is published from it.
 
@@ -112,7 +116,7 @@ js/app.js             engine, screens, 3D viewer, PDF report
 research/             spine-knowledge-base.json / .xlsx (all modules, EN + HI); personal case files stay out of git
 dist/                 spine-pain-guide.html — the whole site in one file; web/index.html — same file, ready to host (see HOSTING.md)
 tools/                export_kb.js, build_xlsx.py (rebuild the research copies), bundle.py (single-file version)
-tests/                run_scenarios.js + cases/ (54 scenarios: lumbar, cervical, thoracic + whole, history, lumbar evidence)
+tests/                run_scenarios.js + cases/ (57 scenarios: lumbar, cervical, thoracic + whole, history, lumbar evidence)
 3d-build/             Python scripts that generate the 3D bodies, bones and nerves (build.sh)
 ```
 

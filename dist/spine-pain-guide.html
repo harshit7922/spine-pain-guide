@@ -862,7 +862,7 @@ const U = {
   instIos:[L('Open this page in Safari.','यह पेज Safari में खोलें।'), L('Tap the Share button {share} at the bottom (on iPad, at the top).','नीचे शेयर बटन {share} दबाएं (iPad पर ऊपर)।'), L('Scroll and tap “Add to Home Screen” {add}.','नीचे स्क्रॉल करके “Add to Home Screen” {add} दबाएं।'), L('Tap “Add”. The Spine Guide icon appears on your home screen.','“Add” दबाएं। होम स्क्रीन पर Spine Guide का आइकन आ जाएगा।')],
   instAnd:[L('Open the browser menu {menu} (top right in Chrome).','ब्राउज़र का मेन्यू {menu} खोलें (Chrome में ऊपर दाईं ओर)।'), L('Tap “Install app” or “Add to Home screen”.','“Install app” या “Add to Home screen” दबाएं।'), L('Confirm. The icon appears on your home screen.','पुष्टि करें। होम स्क्रीन पर आइकन आ जाएगा।')],
   instDesk:[L('In Chrome or Edge, click the install icon {add} at the right end of the address bar.','Chrome या Edge में एड्रेस बार के दाएं सिरे पर इंस्टॉल आइकन {add} दबाएं।'), L('Click “Install”. The app opens in its own window.','“Install” दबाएं। ऐप अपनी अलग विंडो में खुलेगा।')],
-  tpPain:L('Pain felt here if the test is positive','टेस्ट पॉज़िटिव हो तो यहाँ दर्द'), tpWork:L('Muscles being tested','जिन मांसपेशियों की जांच होती है'), tpMove:L('Arrow: the movement','तीर: हरकत की दिशा'), rpBone:L('Bones and nerves underneath','अंदर की हड्डियां और नसें'), tlNow:L('This bout','इस बार'), tlToday:L('Today','आज'), tlYrs:L('years','साल'), trend:L('Since it started, it is','शुरू होने के बाद से यह'),
+  tpPain:L('Pain felt here if the test is positive','टेस्ट पॉज़िटिव हो तो यहाँ दर्द'), tpWork:L('Muscles being tested','जिन मांसपेशियों की जांच होती है'), tpRelief:L('Symptoms here should ease if the test is positive','टेस्ट पॉज़िटिव हो तो यहाँ के लक्षण कम होते हैं'), tpHands:L('Helper’s hands','मदद करने वाले के हाथ'), tpMove:L('Arrow: the movement','तीर: हरकत की दिशा'), rpBone:L('Bones and nerves underneath','अंदर की हड्डियां और नसें'), tlNow:L('This bout','इस बार'), tlToday:L('Today','आज'), tlYrs:L('years','साल'), trend:L('Since it started, it is','शुरू होने के बाद से यह'),
   needOn:L('Choose how it started to continue.','आगे बढ़ने के लिए चुनें कि यह कैसे शुरू हुआ।'),
   // pattern
   patT:L('How does the pain behave?','दर्द कैसा व्यवहार करता है?'), patS:L('Select everything that applies. Leave out anything you are unsure about.','जो-जो लागू हो, सब चुनें। जिसका पक्का न हो, छोड़ दें।'),
@@ -1495,10 +1495,18 @@ C.SRC.push(
   ['gbdneck','GBD 2021 Neck Pain Collaborators. Global burden of neck pain 1990–2020 and projections to 2050. Lancet Rheumatol 2024;6:e142–55','https://research.uaeu.ac.ae/en/publications/global-regional-and-national-burden-of-neck-pain-19902020-and-pro/'],
   ['radhak','Radhakrishnan K et al. Epidemiology of cervical radiculopathy, Rochester 1976–1990. Brain 1994 (PubMed abstract)','https://pubmed.ncbi.nlm.nih.gov/8186959/'],
   ['wikemcr','WikEM – Cervical radiculopathy (exam by level)','https://wikem.org/wiki/Cervical_Radiculopathy'],
-  ['wainner','Physiopedia – Clinical prediction rule for cervical radiculopathy (Wainner 2003)','https://physio-pedia.com/CPR_for_Cervical_Radiculopathy'],
+  ['wainner','Wainner RS et al. Reliability and diagnostic accuracy of the clinical examination for cervical radiculopathy. Spine 2003;28:52–62 (Spurling sens 50%/spec 86%; distraction 44%/90%; 3 of 4 tests LR+ 6.1)','https://www.physiotutors.com/wiki/cluster-of-wainner/'],
   ['myelo','Orthobullets – Cervical myelopathy','https://www.orthobullets.com/spine/2031/cervical-myelopathy'],
   ['mening','UK Health Security Agency – Meningitis: don’t ignore the signs','https://gov.uk/government/publications/meningitis-signs-and-symptoms-poster/meningitis-dont-ignore-the-signs-and-symptoms'],
-  ['aha','Heart attack warning signs (American Heart Association)','https://oaklawnhospital.org/services/cardiology/warning-signs-of-a-heart-attack-american-heart-association/']
+  ['aha','Heart attack warning signs (American Heart Association)','https://oaklawnhospital.org/services/cardiology/warning-signs-of-a-heart-attack-american-heart-association/'],
+  ['rubin07','Rubinstein SM et al. A systematic review of the diagnostic accuracy of provocative tests of the neck for diagnosing cervical radiculopathy. Eur Spine J 2007;16:307–19','https://pmc.ncbi.nlm.nih.gov/articles/PMC2200707'],
+  ['cook10','Cook C et al. Clustered clinical findings for diagnosis of cervical spine myelopathy. J Man Manip Ther 2010;18:175–80 (gait, Hoffmann, inverted supinator, Babinski, age over 45: 3 of 5 LR+ 30.9; LR− 0.18)','https://www.physiotutors.com/wiki/cervical-myelopathy-cluster'],
+  ['alentado','Alentado VJ et al. Optimal duration of conservative management prior to surgery for cervical and lumbar radiculopathy. Global Spine J 2014 (88% improve within 4 weeks)','https://www.epistemonikos.org/en/documents/a4d2c4f86f91b634127490c329039494144e6821'],
+  ['wong14','Wong JJ et al. The course and prognostic factors of symptomatic cervical disc herniation with radiculopathy: systematic review. Spine J 2014;14:1781–9','https://chiropractic.ca/wp-content/uploads/2015/01/Wong-2014-Course-prognosis-factors-sympto-cer-disc-hern-radic.pdf'],
+  ['nakash','Nakashima H et al. Abnormal findings on MRI of the cervical spine in 1211 asymptomatic subjects. Spine 2015;40:392–8 (disc bulging 87.6%)','https://pubmed.ncbi.nlm.nih.gov/25584950/'],
+  ['carroll08','Carroll LJ et al. Course and prognostic factors for neck pain in the general population and in whiplash-associated disorders. Bone and Joint Decade 2000–2010 Task Force, Spine 2008;33(4S):S75–92','https://chiro.org/Whiplash/Course_and_Prognostic_Factors_for_Neck_Pain.shtml'],
+  ['darcy','D’Arcy CA, McGee S. Does this patient have carpal tunnel syndrome? JAMA 2000;283:3110–7 (likelihood ratios summarised by TheNNT)','https://thennt.com/lr/carpal-tunnel-syndrome/'],
+  ['elbflex','Physiotutors – Elbow flexion test for cubital tunnel syndrome (sensitivity 36–93%, specificity 40–99% across studies)','https://www.physiotutors.com/wiki/elbow-flexion-test/']
 );
 const ONSETS = C.ONSETS.filter(o => !['on_preg','on_house'].includes(o[0])).concat([
   ['on_whiplash',L('A jerk to the neck in a vehicle (sudden stop or rear impact)','गाड़ी में गर्दन को झटका (अचानक ब्रेक या पीछे से टक्कर)')],
@@ -1519,6 +1527,7 @@ const PAT = {
     ['ch_balance',L('Unsteady walking or poor balance','चलने में लड़खड़ाहट या संतुलन की कमी')],
     ['ch_lhermitte',L('Electric shock down the spine when bending the head forward','सिर आगे झुकाने पर रीढ़ में नीचे तक करंट')],
     ['ch_night_hand',L('Hand tingling at night that eases by shaking the hand','रात को हाथ में झुनझुनी जो हाथ झटकने से कम हो')],
+    ['ch_elbow_bend',L('Tingling in the ring and little fingers when the elbow stays bent (on the phone, sleeping with the arm bent)','कोहनी देर तक मुड़ी रहने पर (फ़ोन पर बात, मुड़ी बांह के साथ सोना) अनामिका और छोटी उंगली में झुनझुनी')],
     ['ch_stiff_am',L('Stiff for more than 30 minutes after waking','सुबह उठने पर 30 मिनट से ज़्यादा अकड़न')]
   ],
   worse:[
@@ -1558,11 +1567,15 @@ const TESTS = [
   {id:'spur',name:L('Neck tilt test (gentle Spurling)','गर्दन झुकाने का टेस्ट (हल्का स्परलिंग)'),
    steps:[L('Sit upright. Slowly tilt your head towards the painful side, then look slightly up.','सीधे बैठें। धीरे से सिर दर्द वाली तरफ झुकाएं, फिर थोड़ा ऊपर देखें।'),L('Hold for 5 seconds. Do not press on your head and stop at once if pain becomes sharp.','5 सेकंड रुकें। सिर पर दबाव न डालें और तेज़ दर्द होते ही रुक जाएं।')],
    pos:L('It brings on pain, tingling or numbness running down the arm.','बांह में नीचे तक दर्द, झुनझुनी या सुन्नपन आ जाए।'),
-   acc:L('Part of a validated set of four neck tests: when 3 of 4 are positive, specificity is 94%.','चार टेस्ट के प्रमाणित सेट का हिस्सा: 4 में से 3 पॉज़िटिव हों तो विशिष्टता 94%।'),src:'wainner',ans:[['spur_pos','tPos','y'],['spur_neg','tNeg','n'],['spur_skip','tSkip','s']]},
+   acc:L('Sensitivity 50%, specificity 86%: a positive result makes a pinched root about 3.6 times more likely, a negative one does not rule it out. Part of a four-test set (3 of 4 positive: likelihood ratio 6.1).','संवेदनशीलता 50%, विशिष्टता 86%: पॉज़िटिव नतीजा दबी जड़ की संभावना लगभग 3.6 गुना करता है; नेगेटिव नतीजा इसे खारिज नहीं करता। चार टेस्ट के सेट का हिस्सा (4 में से 3 पॉज़िटिव: लाइकलीहुड रेशियो 6.1)।'),src:'wainner',ans:[['spur_pos','tPos','y'],['spur_neg','tNeg','n'],['spur_skip','tSkip','s']]},
   {id:'sabd',name:L('Hand-on-head relief test','सिर पर हाथ रखने का टेस्ट'),
    steps:[L('Rest the palm of the painful arm on top of your head for one minute.','दर्द वाली बांह की हथेली एक मिनट सिर के ऊपर रखें।')],
    pos:L('The arm pain clearly eases while the hand is on the head.','हाथ सिर पर रखने से बांह का दर्द साफ़ कम हो जाए।'),
-   acc:L('Relief suggests a pinched nerve root in the neck rather than a shoulder problem.','आराम मिलना कंधे की समस्या के बजाय गर्दन में दबी नस की ओर इशारा करता है।'),src:'wainner',ans:[['sabd_pos','tPos','y'],['sabd_neg','tNeg','n'],['sabd_skip','tSkip','s']]},
+   acc:L('Low to moderate sensitivity but moderate to high specificity: relief points to a pinched nerve root in the neck rather than a shoulder problem; no relief does not rule it out.','संवेदनशीलता कम से मध्यम पर विशिष्टता मध्यम से ज़्यादा: आराम मिलना कंधे के बजाय गर्दन में दबी नस की ओर इशारा करता है; आराम न मिलना इसे खारिज नहीं करता।'),src:'rubin07',ans:[['sabd_pos','tPos','y'],['sabd_neg','tNeg','n'],['sabd_skip','tSkip','s']]},
+  {id:'dist',name:L('Neck lift relief test (needs a helper)','गर्दन उठाने से आराम का टेस्ट (किसी की मदद से)'),
+   steps:[L('Sit upright and relax. A helper stands behind you and places one hand under your jaw and the other under the back of your head.','सीधे बैठें और ढीले रहें। मदद करने वाला पीछे खड़ा होकर एक हाथ आपकी ठुड्डी के नीचे और दूसरा सिर के पीछे नीचे की तरफ रखे।'),L('The helper gently lifts your head straight up by about a finger’s width and holds for 10 seconds. No jerks or twisting.','मदद करने वाला धीरे से सिर को लगभग एक उंगली जितना सीधा ऊपर उठाए और 10 सेकंड रोके। कोई झटका या मरोड़ नहीं।')],
+   pos:L('The arm pain or tingling clearly eases while the head is lifted.','सिर उठाए रखने पर बांह का दर्द या झुनझुनी साफ़ कम हो जाए।'),
+   acc:L('Sensitivity 44%, specificity 90%: relief makes a pinched neck nerve root about 4.4 times more likely. Skip it if you have no helper or after a neck injury.','संवेदनशीलता 44%, विशिष्टता 90%: आराम मिलने से दबी नस की जड़ की संभावना लगभग 4.4 गुना होती है। कोई मदद न हो या गर्दन में चोट लगी हो तो छोड़ दें।'),src:'wainner',ans:[['dist_pos','tPos','y'],['dist_neg','tNeg','n'],['dist_skip','tSkip','s']]},
   {id:'grip',name:L('Grip-and-release test (hand speed)','मुट्ठी बंद-खोल टेस्ट (हाथ की गति)'),
    steps:[L('Hold both hands in front of you. Make a full fist and open the fingers completely, as fast as you can, for 10 seconds.','दोनों हाथ सामने रखें। 10 सेकंड तक जितनी तेज़ी से हो सके पूरी मुट्ठी बंद करें और उंगलियाँ पूरी खोलें।'),L('Count how many times you manage with each hand.','हर हाथ से कितनी बार कर पाए, गिनें।')],
    pos:L('Fewer than 20 full cycles in 10 seconds, or clearly slower on one side.','10 सेकंड में 20 से कम पूरे चक्र, या एक तरफ साफ़ धीमा।'),
@@ -1570,7 +1583,7 @@ const TESTS = [
   {id:'tandem',name:L('Heel-to-toe walk','एड़ी-पंजा चाल'),
    steps:[L('Stand next to a wall for safety.','सुरक्षा के लिए दीवार के पास खड़े हों।'),L('Walk 10 steps in a straight line, placing the heel of one foot directly in front of the toes of the other.','सीधी रेखा में 10 कदम चलें, एक पैर की एड़ी दूसरे पैर के पंजे के ठीक आगे रखते हुए।')],
    pos:L('You lose balance, need to grab the wall or step off the line.','संतुलन बिगड़े, दीवार पकड़नी पड़े या लाइन से हट जाएं।'),
-   acc:L('Unsteady walking is the most important clue to spinal cord compression in the neck.','लड़खड़ाती चाल गर्दन में स्पाइनल कॉर्ड पर दबाव का सबसे अहम संकेत है।'),src:'myelo',ans:[['tandem_bad','tPos','y'],['tandem_ok','tNeg','n'],['tandem_skip','tSkip','s']]}
+   acc:L('A walking (gait) problem is one of five findings doctors combine for spinal cord compression; 3 of the 5 make it about 30 times more likely, while none of them makes it unlikely.','चाल की गड़बड़ी उन पांच संकेतों में से एक है जिन्हें डॉक्टर स्पाइनल कॉर्ड के दबाव के लिए जोड़ते हैं; 5 में से 3 हों तो संभावना लगभग 30 गुना, एक भी न हो तो संभावना कम।'),src:'cook10',ans:[['tandem_bad','tPos','y'],['tandem_ok','tNeg','n'],['tandem_skip','tSkip','s']]}
 ];
 const D = C.DEPTS;
 D.cardio = D.cardio || {n:L('Cardiology','कार्डियोलॉजी'),s:L('Heart specialist; heart pain can be felt in the neck, jaw, arm or back.','दिल के विशेषज्ञ; दिल का दर्द गर्दन, जबड़े, बांह या पीठ में भी महसूस हो सकता है।'),q:'cardiologist'};
@@ -1582,30 +1595,30 @@ const CONDS = [
    causes:L('Age-related drying of the discs with bony spurs (spondylosis) causes about two-thirds of cases; a soft disc herniation causes about one in five. Long screen time, heavy overhead work and smoking add risk.','डिस्क का उम्र के साथ सूखना और हड्डी का उभार (स्पॉन्डिलोसिस) लगभग दो-तिहाई मामलों का कारण है; नरम डिस्क हर्निएशन लगभग पाँच में से एक का। लंबा स्क्रीन टाइम, ऊपर हाथ करके भारी काम और धूम्रपान खतरा बढ़ाते हैं।'),cSrc:['radhak'],
    confirm:L('Neurological examination of strength, reflexes and sensation in both arms; MRI of the neck if there is weakness or no improvement after 6 weeks; nerve conduction tests if the cause is unclear.','दोनों बांहों में ताकत, रिफ्लेक्स और संवेदना की जांच; कमज़ोरी हो या 6 हफ्ते में सुधार न हो तो गर्दन का MRI; कारण साफ़ न हो तो नर्व कंडक्शन टेस्ट।'),
    treat:L('Activity changes, medicines chosen by your doctor, physiotherapy (posture, nerve gliding, strengthening) and sometimes a short period in a soft collar. Image-guided injections for persistent arm pain; surgery (ACDF or disc replacement) for weakness or pain that does not settle.','गतिविधि में बदलाव, डॉक्टर द्वारा चुनी दवाएं, फिज़ियोथेरेपी (पोस्चर, नर्व ग्लाइडिंग, मज़बूती) और कभी-कभी थोड़े समय सॉफ्ट कॉलर। लगातार बांह दर्द में इमेज-गाइडेड इंजेक्शन; कमज़ोरी या न सुधरने वाले दर्द में सर्जरी (ACDF या डिस्क रिप्लेसमेंट)।'),
-   outlook:L('About 90% are symptom-free or only mildly affected at follow-up; about one in four needs surgery, and about one in three has another episode.','लगभग 90% लोग बाद में बिना लक्षण या हल्के लक्षणों वाले रहते हैं; लगभग चार में से एक को सर्जरी चाहिए, और तीन में से एक को दोबारा दर्द होता है।'),oSrc:['radhak'],
-   w:{h_lt1y:1,btw_free:1,c6:3,c7:3,c8:2,c5:2,t1:1,arm_any:2,below_elbow:3,dom_arm:3,ch_shoot:3,ch_tingle:2,ch_numb:2,w_lookup:3,w_turn:1,w_cough:2,b_hand_head:3,spur_pos:4,sabd_pos:3,arm_one:1,a_30_39:1,a_40_49:2,a_50_59:2,on_woke:1,on_overhead:1,on_lift:1,arm_weak:1,interscap:1,scap:1,
-      spur_neg:-2,both_arms:-1,rf_fever:-3,o_shoulder_move:-2,ch_night_hand:-1}},
+   outlook:L('Most get better: in natural-history studies about 88% improve within 4 weeks and the biggest gains come in the first 4–6 months. About 90% are symptom-free or only mildly affected at follow-up; about one in four has surgery and about one in three has another episode.','ज़्यादातर ठीक होते हैं: प्राकृतिक क्रम के अध्ययनों में लगभग 88% में 4 हफ्ते में सुधार होता है और सबसे ज़्यादा सुधार पहले 4–6 महीनों में। लगभग 90% लोग बाद में बिना लक्षण या हल्के लक्षणों वाले रहते हैं; लगभग चार में से एक की सर्जरी होती है और तीन में से एक को दोबारा दर्द होता है।'),oSrc:['alentado','wong14','radhak'],
+   w:{h_lt1y:1,btw_free:1,c6:3,c7:3,c8:2,c5:2,t1:1,arm_any:2,below_elbow:3,dom_arm:3,ch_shoot:3,ch_tingle:2,ch_numb:2,w_lookup:3,w_turn:1,w_cough:2,b_hand_head:2,spur_pos:2,sabd_pos:2,dist_pos:3,arm_one:1,a_30_39:1,a_40_49:2,a_50_59:2,on_woke:1,on_overhead:1,on_lift:1,arm_weak:1,interscap:1,scap:1,
+      spur_neg:-1,dist_neg:-1,both_arms:-1,rf_fever:-3,o_shoulder_move:-2,ch_night_hand:-1,ch_elbow_bend:-1}},
   {id:'myelo',th:[10,7,4],anchor:['myelo_any'],depts:['neurosurg','ortho_spine','neuro'],
    name:L('Spinal cord compression in the neck (cervical myelopathy)','गर्दन में स्पाइनल कॉर्ड पर दबाव (सर्वाइकल मायलोपैथी)'),sci:'Degenerative cervical myelopathy',
    what:L('Discs, bony spurs and thickened ligaments narrow the canal and press on the spinal cord itself. Typical signs are clumsy hands, numb hands in both arms, unsteady walking and electric shocks down the spine. Neck pain may be mild or absent.','डिस्क, हड्डी के उभार और मोटे लिगामेंट नली को संकरा कर स्पाइनल कॉर्ड पर ही दबाव डालते हैं। खास संकेत: हाथों में अनाड़ीपन, दोनों हाथों में सुन्नपन, लड़खड़ाती चाल और रीढ़ में करंट। गर्दन दर्द हल्का या न के बराबर हो सकता है।'),
    causes:L('Mostly age-related spondylosis after 50; also a congenitally narrow canal, ossified ligaments (OPLL) or a large disc.','ज़्यादातर 50 के बाद उम्र से जुड़ा स्पॉन्डिलोसिस; जन्म से संकरी नली, लिगामेंट का हड्डी बन जाना (OPLL) या बड़ी डिस्क भी।'),cSrc:['myelo'],
    confirm:L('Neurological examination (Hoffmann sign, reflexes, gait) and MRI of the neck.','न्यूरोलॉजिकल जांच (हॉफमैन साइन, रिफ्लेक्स, चाल) और गर्दन का MRI।'),
    treat:L('Usually decompression surgery when function is affected; mild cases are watched closely with regular examinations.','काम पर असर हो तो आमतौर पर डीकंप्रेशन सर्जरी; हल्के मामलों में नियमित जांच के साथ करीबी निगरानी।'),
-   outlook:L('It tends to worsen slowly and step-wise and rarely improves without surgery; early treatment protects function.','यह धीरे-धीरे, सीढ़ी की तरह बढ़ता है और बिना सर्जरी कम ही सुधरता है; जल्दी इलाज से काम करने की क्षमता बचती है।'),oSrc:['myelo'],
-   w:{btw_often:2,h_1_5y:1,ch_clumsy:4,ch_balance:4,ch_lhermitte:3,grip_slow:4,tandem_bad:4,both_arms:2,ch_numb:1,ch_tingle:1,a_50_59:2,a_60p:3,on_gradual:2,d_3m:1,d_6_12:1,t_worse:1,a_u18:-3,a_18_29:-2}},
+   outlook:L('It tends to worsen slowly and step-wise and rarely improves without surgery; early treatment protects function. Doctors combine five findings (walking problem, Hoffmann sign, inverted supinator sign, Babinski sign, age over 45): 3 of 5 make it about 30 times more likely.','यह धीरे-धीरे, सीढ़ी की तरह बढ़ता है और बिना सर्जरी कम ही सुधरता है; जल्दी इलाज से काम करने की क्षमता बचती है। डॉक्टर पांच संकेत जोड़ते हैं (चाल की गड़बड़ी, हॉफमैन साइन, इनवर्टेड सुपिनेटर साइन, बेबिन्स्की साइन, 45 से ज़्यादा उम्र): 5 में से 3 हों तो संभावना लगभग 30 गुना।'),oSrc:['myelo','cook10'],
+   w:{btw_often:2,h_1_5y:1,ch_clumsy:4,ch_balance:4,ch_lhermitte:3,grip_slow:4,tandem_bad:4,both_arms:2,ch_numb:1,ch_tingle:1,a_40_49:1,a_50_59:2,a_60p:3,on_gradual:2,d_3m:1,d_6_12:1,t_worse:1,a_u18:-3,a_18_29:-2}},
   {id:'neckstrain',th:[9,6,3],anchor:['neck','trap'],depts:['physio','gp','ortho_spine'],
    name:L('Neck muscle strain and postural neck pain','गर्दन की मांसपेशियों में खिंचाव और पोस्चर से गर्दन दर्द'),sci:'Non-specific mechanical neck pain',
    what:L('Overworked neck and shoulder muscles become tight and sore, often from holding the head forward over a screen. Pain stays in the neck and shoulders without nerve signs in the arm.','गर्दन और कंधे की ज़्यादा काम करती मांसपेशियाँ जकड़ कर दुखने लगती हैं, अक्सर स्क्रीन पर सिर आगे झुकाए रखने से। दर्द बांह में नस के लक्षणों के बिना गर्दन और कंधों में रहता है।'),
    causes:L('Forward-head posture, long laptop or phone use, a poor pillow, stress and weak shoulder-blade muscles.','सिर आगे निकाले रखना, लैपटॉप या फ़ोन का लंबा उपयोग, गलत तकिया, तनाव और कंधे की कमज़ोर मांसपेशियाँ।'),
    confirm:L('Clinical examination; scans are not needed without warning signs.','क्लिनिकल जांच; खतरे के संकेत न हों तो स्कैन ज़रूरी नहीं।'),
    treat:L('Posture and workstation changes, regular movement breaks, heat, physiotherapy exercises; medicines only as prescribed.','पोस्चर और काम की जगह में बदलाव, नियमित ब्रेक, सिकाई, फिज़ियोथेरेपी व्यायाम; दवाएं सिर्फ डॉक्टर की सलाह से।'),
-   outlook:L('Most episodes settle within weeks; staying active helps.','ज़्यादातर दर्द कुछ हफ्तों में ठीक होता है; सक्रिय रहना मदद करता है।'),
+   outlook:L('Most episodes settle within weeks and staying active helps, but neck pain often returns: 50–85% of people report it again 1–5 years later, so regular exercise and screen habits matter.','ज़्यादातर दर्द कुछ हफ्तों में ठीक होता है और सक्रिय रहना मदद करता है, पर गर्दन दर्द अक्सर लौटता है: 50–85% लोगों को 1–5 साल बाद फिर होता है, इसलिए नियमित व्यायाम और स्क्रीन की आदतें मायने रखती हैं।'),oSrc:['carroll08'],
    w:{h_first:2,btw_free:1,h_5y:-1,neck:2,trap:2,ch_ache:2,ch_stiff:2,w_screen:3,on_screen:2,r_desk:2,w_turn:1,d_days:1,d_weeks:1,b_rest:1,scap:1,below_elbow:-3,spur_pos:-3,ch_shoot:-2,dom_arm:-2,rf_fever:-3}},
   {id:'cspondy',th:[10,6,3],anchor:['neck'],depts:['ortho_spine','physio','pain'],
    name:L('Cervical spondylosis (neck arthritis)','सर्वाइकल स्पॉन्डिलोसिस (गर्दन की गठिया)'),sci:'Cervical spondylosis · facet arthropathy',
    what:L('Wear of the neck discs and small facet joints causes stiffness and aching, often with headaches from the back of the head and grinding on movement.','गर्दन की डिस्क और छोटे फ़ैसेट जोड़ों की घिसावट से जकड़न और दर्द होता है, अक्सर सिर के पीछे से सिरदर्द और हिलाने पर किरकिराहट के साथ।'),
    causes:L('Ageing, previous injury, long years of desk work and genetics. Most people over 50 show some changes on X-ray.','उम्र, पुरानी चोट, सालों का डेस्क वर्क और आनुवंशिकता। 50 से ऊपर ज़्यादातर लोगों के एक्स-रे में कुछ बदलाव दिखते हैं।'),
-   confirm:L('Examination; X-ray or MRI only if symptoms persist or nerves are involved.','जांच; लक्षण बने रहें या नसें शामिल हों तभी एक्स-रे या MRI।'),
+   confirm:L('Examination; X-ray or MRI only if symptoms persist or nerves are involved. Scans show wear even without pain: 87.6% of adults with no neck symptoms have bulging discs on MRI (73–78% of people in their 20s), so a scan is read together with the examination.','जांच; लक्षण बने रहें या नसें शामिल हों तभी एक्स-रे या MRI। बिना दर्द के भी स्कैन में घिसावट दिखती है: बिना गर्दन के लक्षण वाले 87.6% वयस्कों के MRI में डिस्क उभरी दिखती है (20 की उम्र वालों में भी 73–78%), इसलिए स्कैन को जांच के साथ मिलाकर पढ़ा जाता है।'),cSrc:['nakash'],
    treat:L('Exercise, posture, heat and pain relief; facet injections or radiofrequency treatment for persistent pain.','व्यायाम, पोस्चर, सिकाई और दर्द की दवा; लंबे दर्द में फ़ैसेट इंजेक्शन या रेडियोफ्रीक्वेंसी इलाज।'),
    outlook:L('Symptoms come and go; good posture and exercise keep most people active.','लक्षण आते-जाते रहते हैं; अच्छा पोस्चर और व्यायाम ज़्यादातर लोगों को सक्रिय रखते हैं।'),
    w:{h_1_5y:2,h_5y:3,btw_some:2,h_first:-2,neck:2,ch_stiff:2,ch_ache:2,w_turn:2,w_lookup:1,a_40_49:1,a_50_59:2,a_60p:2,d_3m:2,on_gradual:2,ch_headache:1,ep_recur:1,below_elbow:-2,dom_arm:-2}},
@@ -1623,7 +1636,7 @@ const CONDS = [
    causes:L('Rear-end collisions, sudden braking, falls and contact sports.','पीछे से टक्कर, अचानक ब्रेक, गिरना और संपर्क वाले खेल।'),
    confirm:L('Examination; doctors use the Canadian C-spine rule to decide on an X-ray or CT, for example at age 65 or over or with tingling in the limbs.','जांच; एक्स-रे या CT का फ़ैसला डॉक्टर कैनेडियन C-स्पाइन नियम से करते हैं, जैसे 65 या ज़्यादा उम्र में या हाथ-पैर में झुनझुनी हो तो।'),
    treat:L('Staying active, pain relief and physiotherapy; collars are generally not advised for long.','सक्रिय रहना, दर्द की दवा और फिज़ियोथेरेपी; कॉलर लंबे समय तक आमतौर पर नहीं।'),
-   outlook:L('Most improve within weeks to a few months.','ज़्यादातर कुछ हफ्तों से कुछ महीनों में सुधरते हैं।'),
+   outlook:L('Most improve over weeks to months, but about half still report some neck pain one year after the injury; staying active and early physiotherapy help.','ज़्यादातर कुछ हफ्तों से महीनों में सुधरते हैं, पर लगभग आधे लोगों को चोट के एक साल बाद भी कुछ गर्दन दर्द रहता है; सक्रिय रहना और जल्दी फिज़ियोथेरेपी मदद करती है।'),oSrc:['carroll08'],
    w:{h_first:2,on_whiplash:6,on_accident:3,neck:2,ch_stiff:1,ch_headache:1,trap:1}},
   {id:'cgh',th:[8,6,4],anchor:['ch_headache'],depts:['physio','neuro'],
    name:L('Headache coming from the neck (cervicogenic headache)','गर्दन से आने वाला सिरदर्द (सर्विकोजेनिक हेडेक)'),sci:'Cervicogenic headache',
@@ -1645,10 +1658,18 @@ const CONDS = [
    name:L('Carpal tunnel syndrome (nerve pressed at the wrist)','कार्पल टनल सिंड्रोम (कलाई पर नस दबना)'),sci:'Median nerve entrapment at the wrist',
    what:L('The median nerve is squeezed at the wrist, causing tingling in the thumb, index and middle fingers, typically at night. It can mimic a C6 or C7 root problem.','कलाई पर मीडियन नस दबती है, जिससे अंगूठे, तर्जनी और बीच की उंगली में झुनझुनी होती है, खासकर रात में। यह C6 या C7 जड़ की समस्या जैसी लग सकती है।'),
    causes:L('Repetitive wrist use, pregnancy, diabetes, thyroid problems and wrist injury.','कलाई का बार-बार उपयोग, गर्भावस्था, डायबिटीज़, थायरॉइड और कलाई की चोट।'),
-   confirm:L('Examination and nerve conduction studies.','जांच और नर्व कंडक्शन स्टडी।'),
+   confirm:L('Examination and nerve conduction studies. Of the bedside clues, waking at night and shaking the hand to relieve it (flick sign) was the strongest in one study; Phalen and Tinel tests add little.','जांच और नर्व कंडक्शन स्टडी। बेडसाइड संकेतों में रात को जागकर हाथ झटकने से आराम (फ्लिक साइन) एक अध्ययन में सबसे मज़बूत था; फेलेन और टिनेल टेस्ट कम मदद करते हैं।'),cSrc:['darcy'],
    treat:L('Night wrist splint, activity changes, injection; release surgery if severe.','रात में कलाई की स्प्लिंट, गतिविधि बदलाव, इंजेक्शन; गंभीर हो तो रिलीज़ सर्जरी।'),
    outlook:L('Very treatable; early treatment prevents muscle wasting.','अच्छा इलाज संभव; जल्दी इलाज मांसपेशी घटने से बचाता है।'),
-   w:{ch_night_hand:5,ch_tingle:2,c6:1,c7:1,r_immune:1,neck:-1,spur_pos:-2,ch_shoot:-1}},
+   w:{ch_night_hand:5,ch_tingle:2,c6:1,c7:1,both_arms:1,r_immune:1,neck:-1,spur_pos:-2,dist_pos:-2,ch_shoot:-1,ch_elbow_bend:-2}},
+  {id:'cubital',th:[8,6,4],anchor:['ch_elbow_bend'],depts:['handsurg','neuro'],
+   name:L('Ulnar nerve pressed at the elbow (cubital tunnel syndrome)','कोहनी पर अल्नर नस दबना (क्यूबिटल टनल सिंड्रोम)'),sci:'Ulnar neuropathy at the elbow',
+   what:L('The ulnar nerve (the “funny bone” nerve) is squeezed or stretched behind the inner elbow, causing tingling and numbness in the ring and little fingers, worse when the elbow stays bent. It can mimic a C8 root problem from the neck.','अल्नर नस (कोहनी की “झनझनाहट वाली” नस) कोहनी के अंदरूनी हिस्से के पीछे दबती या खिंचती है, जिससे अनामिका और छोटी उंगली में झुनझुनी और सुन्नपन होता है, खासकर कोहनी देर तक मुड़ी रहने पर। यह गर्दन की C8 जड़ की समस्या जैसी लग सकती है।'),
+   causes:L('Long periods with the elbow bent (phone calls, sleeping with the arm bent), leaning on the elbow, old elbow fractures and arthritis. It is the second most common nerve entrapment of the arm after carpal tunnel.','कोहनी देर तक मोड़े रखना (फ़ोन पर बात, मुड़ी बांह के साथ सोना), कोहनी टिकाकर बैठना, कोहनी का पुराना फ्रैक्चर और गठिया। कार्पल टनल के बाद यह बांह में नस दबने का दूसरा सबसे आम कारण है।'),cSrc:['elbflex'],
+   confirm:L('Examination (tapping the nerve, the elbow flexion test, strength of the small hand muscles) and nerve conduction studies to tell it apart from a C8 root problem.','जांच (नस पर थपकी, एल्बो फ्लेक्शन टेस्ट, हाथ की छोटी मांसपेशियों की ताकत) और C8 जड़ की समस्या से अलग पहचानने के लिए नर्व कंडक्शन स्टडी।'),
+   treat:L('Avoiding long elbow bending, a night elbow pad or splint that keeps the elbow fairly straight, nerve-gliding exercises; surgery if there is weakness or muscle wasting.','कोहनी देर तक मोड़ने से बचना, रात में कोहनी पैड या स्प्लिंट जो कोहनी को लगभग सीधा रखे, नर्व ग्लाइडिंग व्यायाम; कमज़ोरी या मांसपेशी घटे तो सर्जरी।'),
+   outlook:L('Mild cases often settle with these changes; weakness should be treated early.','हल्के मामले अक्सर इन बदलावों से ठीक हो जाते हैं; कमज़ोरी हो तो जल्दी इलाज ज़रूरी।'),
+   w:{ch_elbow_bend:5,c8:3,ch_tingle:2,ch_numb:1,both_arms:-1,neck:-1,w_lookup:-1,spur_pos:-2,dist_pos:-2,ch_shoot:-1,ch_night_hand:-1}},
   {id:'cinflam',th:[12,8,5],anchor:['ch_stiff_am','b_exercise','w_rest'],depts:['rheum','physio'],
    name:L('Inflammatory arthritis of the neck','गर्दन की सूजन वाली गठिया'),sci:'Axial spondyloarthritis · rheumatoid arthritis of the cervical spine',
    what:L('Immune conditions can inflame the neck joints, causing long morning stiffness that improves with movement.','इम्यून बीमारियाँ गर्दन के जोड़ों में सूजन ला सकती हैं, जिससे सुबह लंबी अकड़न होती है जो हलचल से सुधरती है।'),
@@ -1707,13 +1728,13 @@ const RS = {
   y_pain:L('Strong pain (7–8 out of 10)','तेज़ दर्द (10 में 7–8)'),
   y_injury:L('Started after a jerk, fall or accident','झटके, गिरने या दुर्घटना के बाद शुरू'),
   y_night:L('Pain at rest at night','रात को आराम में दर्द'), y_sleep:L('Pain disturbing sleep','दर्द से नींद खराब'),
-  y_headache:L('Headaches with the neck pain','गर्दन दर्द के साथ सिरदर्द'), y_hand:L('Hand tingling at night','रात को हाथ में झुनझुनी')
+  y_headache:L('Headaches with the neck pain','गर्दन दर्द के साथ सिरदर्द'), y_hand:L('Hand or finger tingling from a nerve at the wrist or elbow','कलाई या कोहनी पर नस से हाथ या उंगलियों में झुनझुनी')
 };
 const armAreas = ['c5','c6','c7','c8','t1'];
 const DERIVED = [
   {id:'arm_any', when:{any:armAreas}}, {id:'below_elbow', when:{any:['c6','c7','c8']}},
   {id:'arm_weak', when:{any:['arm_no','arm_diff']}},
-  {id:'radicular', when:{any:['below_elbow','dom_arm','ch_shoot','spur_pos','sabd_pos']}},
+  {id:'radicular', when:{any:['below_elbow','dom_arm','ch_shoot','spur_pos','sabd_pos','dist_pos']}},
   {id:'myelo_any', when:{any:['ch_clumsy','ch_balance','grip_slow','tandem_bad','ch_lhermitte']}}
 ];
 const URGENCY = {
@@ -1727,7 +1748,7 @@ const URGENCY = {
     {r:'y_radic', when:'radicular'}, {r:'y_often', when:'btw_often'}, {r:'y_long', when:{any:['d_6_12','d_3m']}},
     {r:'y_inflam', when:{all:['ch_stiff_am',{any:['b_exercise','w_rest']}]}}, {r:'y_age', when:{any:['a_u18','a_60p']}},
     {r:'y_pain', when:{all:[{painGte:7},{not:{painGte:9}}]}}, {r:'y_injury', when:{any:['on_whiplash','on_fall','on_accident','on_blow']}},
-    {r:'y_night', when:'rf_night'}, {r:'y_sleep', when:'sleep_bad'}, {r:'y_headache', when:'ch_headache'}, {r:'y_hand', when:'ch_night_hand'}
+    {r:'y_night', when:'rf_night'}, {r:'y_sleep', when:'sleep_bad'}, {r:'y_headache', when:'ch_headache'}, {r:'y_hand', when:{any:['ch_night_hand','ch_elbow_bend']}}
   ]
 };
 const EMERG_WHEN = {cord:'rf_myelo', trauma:'rf_trauma', mening:'rf_mening', stroke:'rf_stroke', cardiac:'rf_cardiac'};
@@ -1737,7 +1758,7 @@ const DEPT_RULES = [{when:{any:['arm_no','myelo_any']}, add:['neurosurg'], why:'
 const FOCUS = {
   cervrad:{lesion:true}, myelo:{discs:['C5–C6','C6–C7'], cord:true, herniate:true, side:'b', label:['C5–C6']},
   cspondy:{vert:['C5','C6'], discs:['C5–C6'], label:['C5–C6']}, wryneck:{vert:['C2','C3','C4']}, whiplash:{vert:['C4','C5','C6']},
-  cgh:{vert:['C1','C2','C3']}, shoulder:{bones:['scap','arm']}, cts:{nerves:['median','medianF0','medianF1','medianF2'], useSides:true},
+  cgh:{vert:['C1','C2','C3']}, shoulder:{bones:['scap','arm']}, cts:{nerves:['median','medianF0','medianF1','medianF2'], useSides:true}, cubital:{nerves:['ulnar','ulnarF0','ulnarF1'], useSides:true},
   cinflam:{vert:['C1','C2']}, cinfect:{discs:['C5–C6'], vert:['C5','C6'], label:['C5–C6']}
 };
 const RCA = {conds:['cervrad'], emerg:[], cerv:true, defaultRoots:['C6','C7'], defaultLevels:['C5–C6','C6–C7'], nerveTable:['C5','C6','C7','C8','T1'],
@@ -1774,15 +1795,20 @@ const FX = {
   on_woke:L('Waking with a locked neck is typical of a wry neck or a disc flare.','अकड़ी गर्दन के साथ जागना टॉर्टिकोलिस या डिस्क के उभार का खास लक्षण है।'),
   o_shoulder_move:L('Pain mainly on moving the shoulder points to the shoulder joint.','मुख्य रूप से कंधा हिलाने पर दर्द कंधे के जोड़ की ओर इशारा करता है।'),
   w_overhead:L('Pain lifting the arm overhead is typical of rotator cuff problems.','बांह ऊपर उठाने पर दर्द रोटेटर कफ की समस्या का खास लक्षण है।'),
-  ch_night_hand:L('Night tingling eased by shaking the hand is typical of carpal tunnel syndrome.','रात की झुनझुनी जो हाथ झटकने से कम हो, कार्पल टनल सिंड्रोम का खास लक्षण है।'),
+  ch_night_hand:L('Night tingling eased by shaking the hand (flick sign) is typical of carpal tunnel syndrome; in one study it made it about 20 times more likely.','रात की झुनझुनी जो हाथ झटकने से कम हो (फ्लिक साइन), कार्पल टनल सिंड्रोम का खास लक्षण है; एक अध्ययन में इससे संभावना लगभग 20 गुना हुई।'),
   neck:L('Pain in the neck itself usually comes from muscles, discs or facet joints.','गर्दन का दर्द आमतौर पर मांसपेशियों, डिस्क या फ़ैसेट जोड़ों से होता है।'),
   trap:L('Pain on top of the shoulder is common with posture strain.','कंधे के ऊपर दर्द पोस्चर के खिंचाव में आम है।'),
-  arm_no:L('Being unable to lift or grip shows significant nerve involvement.','उठा या पकड़ न पाना नस पर गंभीर असर दिखाता है।')
+  arm_no:L('Being unable to lift or grip shows significant nerve involvement.','उठा या पकड़ न पाना नस पर गंभीर असर दिखाता है।'),
+  dist_pos:L('Relief when the head is gently lifted opens the nerve openings; it makes a pinched root about 4.4 times more likely.','सिर धीरे से उठाने पर आराम नस के छेद खोलता है; इससे दबी जड़ की संभावना लगभग 4.4 गुना होती है।'),
+  ch_elbow_bend:L('Ring and little finger tingling with the elbow bent points to the ulnar nerve at the elbow rather than the neck.','कोहनी मुड़ी रहने पर अनामिका और छोटी उंगली में झुनझुनी गर्दन के बजाय कोहनी पर अल्नर नस की ओर इशारा करती है।')
 };
 const STATS = [
   {v:'203 M',t:L('people worldwide lived with neck pain in 2020; projected 269 M by 2050','लोग 2020 में दुनिया भर में गर्दन दर्द से पीड़ित; 2050 तक 269 M का अनुमान'),s:'gbdneck'},
   {v:'C7',t:L('is the nerve root most often pinched in the neck, followed by C6','गर्दन में सबसे ज़्यादा दबने वाली नस की जड़, फिर C6'),s:'radhak'},
-  {v:'~90%',t:L('of people with a pinched neck nerve are symptom-free or mildly affected at follow-up','दबी गर्दन नस वाले लोग बाद में बिना लक्षण या हल्के लक्षणों वाले'),s:'radhak'}
+  {v:'~90%',t:L('of people with a pinched neck nerve are symptom-free or mildly affected at follow-up','दबी गर्दन नस वाले लोग बाद में बिना लक्षण या हल्के लक्षणों वाले'),s:'radhak'},
+  {v:'88%',t:L('with a pinched neck nerve improve within 4 weeks','दबी गर्दन नस वाले लोगों में 4 हफ्ते में सुधार'),s:'alentado'},
+  {v:'87.6%',t:L('of adults with no neck pain still have bulging discs on MRI','बिना गर्दन दर्द वाले वयस्कों के MRI में भी डिस्क उभरी दिखती है'),s:'nakash'},
+  {v:'50–85%',t:L('of people with neck pain have it again 1–5 years later','गर्दन दर्द वाले लोगों को 1–5 साल बाद फिर होता है'),s:'carroll08'}
 ];
 const UI = {
   domT:L('Which troubles you more: neck pain or arm pain?','ज़्यादा तकलीफ़ किसमें है: गर्दन के दर्द में या बांह के दर्द में?'),
@@ -2385,6 +2411,10 @@ SPG.data.glossary = [
    title:L('Carpal tunnel and median nerve','कार्पल टनल और मीडियन नस'),
    plain:L('The median nerve passes through a tight tunnel at the front of the wrist to the thumb, index and middle fingers. Pressure here (carpal tunnel syndrome) causes night tingling that eases by shaking the hand.','मीडियन नस कलाई के आगे एक तंग सुरंग से होकर अंगूठे, तर्जनी और बीच की उंगली तक जाती है। यहां दबाव (कार्पल टनल सिंड्रोम) से रात में झुनझुनी होती है जो हाथ झटकने से कम होती है।'),
    pic:{k:'bone', focus:{nerves:['median','medianF0','medianF1','medianF2'], sides:['l']}, view:{az:1.0, el:0.25, d:0.52, yk:'wrist', dy:-0.03, tx:0.27, tz:0.25}, body:true, nerveKeep:['median','ulnar'], noLegs:true, noPelvis:true}},
+  {id:'ulnar', src:['elbflex'], terms:{en:['cubital tunnel','ulnar nerve'], hi:['क्यूबिटल टनल','अल्नर नस']},
+   title:L('Ulnar nerve and cubital tunnel','अल्नर नस और क्यूबिटल टनल'),
+   plain:L('The ulnar nerve runs in a groove behind the bony bump on the inside of the elbow (the “funny bone”) and supplies the ring and little fingers. Keeping the elbow bent for long stretches and presses it (cubital tunnel syndrome).','अल्नर नस कोहनी के अंदर की उभरी हड्डी (जहाँ लगने पर झनझनाहट होती है) के पीछे एक खांचे से गुज़रती है और अनामिका व छोटी उंगली तक जाती है। कोहनी देर तक मोड़े रखने से यह खिंचती और दबती है (क्यूबिटल टनल सिंड्रोम)।'),
+   pic:{k:'bone', focus:{nerves:['ulnar','ulnarF0','ulnarF1'], sides:['l']}, view:{az:1.7, el:0.2, d:0.6, yk:'elbow', dy:-0.05, tx:0.25, tz:0.08}, body:true, nerveKeep:['ulnar','median'], noLegs:true, noPelvis:true}},
   {id:'cervical', src:['wikemcr'], terms:{en:['cervical spine','cervical'], hi:['सर्वाइकल']},
    title:L('Cervical spine (neck, C1–C7)','सर्वाइकल स्पाइन (गर्दन, C1–C7)'),
    plain:L('The seven small vertebrae of the neck. Wear here (cervical spondylosis) is very common after 40 and can press nerve roots to the arm or, less often, the spinal cord.','गर्दन की सात छोटी कशेरुकाएं। यहां घिसावट (सर्वाइकल स्पॉन्डिलोसिस) 40 के बाद बहुत आम है और बांह की नसों की जड़ों या कभी-कभी स्पाइनल कॉर्ड को दबा सकती है।'),
@@ -3410,7 +3440,8 @@ const TPOSE = {
   heel: () => ({pose:{thigh_l:[-22, 0, 0], shin_l:[12, 0, 0], foot_l:[-30, 0, 0], thigh_r:[12, 0, 0], shin_r:[18, 0, 0], foot_r:[-32, 0, 0], uarm_l:[-10, 0, 6], uarm_r:[14, 0, -6]}, ground:'heels', work:['l5_l', 'l5_r'], cam:{az:66, el:4, fit:1.0}, arc:{bone:'toes_l', off:[0, 0.02, 0.04], from:{foot_l:[0, 0, 0]}}, props:[]}),
   toe: s => ({pose:mirror({foot_l:[34, 0, 0], toes_l:[-30, 0, 0], thigh_r:[8, 0, 0], shin_r:[70, 0, 0], foot_r:[20, 0, 0], uarm_l:[-58, 0, 6], uarm_r:[-58, 0, -6], farm_l:[-10, 0, 0], farm_r:[-10, 0, 0]}, s), ground:'toes', work:['s1_' + s], cam:{az:s === 'l' ? 104 : -104, el:6, fit:1.0}, arc:{bone:'foot_' + s, off:[0, -0.05, -0.04], rel:'toes_' + s, from:{['foot_' + s]:[0, 0, 0], ['toes_' + s]:[0, 0, 0]}}, props:['wallFront']}),
   spur: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS, mirror({neck:[-10, 0, -14], head:[-10, 0, -16]}, s)), ground:'seat', pain:['neck', 'c6_' + s, 'c7_' + s, 'scap_' + s], cam:{az:s === 'l' ? 28 : -28, el:6, fit:1.0, dy:0.12, zoom:1.15}, arc:{bone:'head', off:[0, 0.2, 0.0], from:{neck:[0, 0, 0], head:[0, 0, 0]}}, props:['chair']}),
-  sabd: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS, mirror({clav_l:[0, 0, 12], uarm_l:[-8, 0, 100], farm_l:[18, 0, 138], hand_l:[0, 0, 30]}, s)), ground:'seat', work:['c5_' + s, 'c6_' + s, 't1_' + s], cam:{az:s === 'l' ? 22 : -22, el:6, fit:1.0, dy:0.12, zoom:1.15}, arc:{bone:'hand_' + s, off:[0, 0, 0]}, props:['chair']}),
+  sabd: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS, mirror({clav_l:[0, 0, 12], uarm_l:[-8, 0, 100], farm_l:[18, 0, 138], hand_l:[0, 0, 30]}, s)), ground:'seat', work:['c5_' + s, 'c6_' + s, 't1_' + s], relief:true, cam:{az:s === 'l' ? 22 : -22, el:6, fit:1.0, dy:0.12, zoom:1.15}, arc:{bone:'hand_' + s, off:[0, 0, 0]}, props:['chair']}),
+  dist: s => ({pose:Object.assign({}, SEAT, HANDS_THIGHS), ground:'seat', work:['neck', 'c6_' + s, 'c7_' + s], relief:true, cam:{az:s === 'l' ? 40 : -40, el:8, fit:1.0, dy:0.1, zoom:1.02}, lift:true, props:['chair']}),
   grip: () => ({pose:Object.assign({uarm_l:[-55, 0, -17], uarm_r:[-55, 0, 17], farm_l:[-12, 0, 0], farm_r:[-12, 0, 0]}, FIST('r')), ground:'feet', work:['c7_l', 'c7_r', 'c8_l', 'c8_r'], cam:{az:40, el:12, focus:'hands', d:1.35, dy:0.12}, props:[]}),
   tandem: () => ({pose:{thigh_l:[-13, 0, -7], shin_l:[6, 0, 0], thigh_r:[8, 0, 7], shin_r:[10, 0, 0], foot_r:[8, 0, 0], uarm_l:[0, 0, 34], uarm_r:[0, 0, -34]}, ground:'feet', cam:{az:38, el:16, fit:1.05}, props:['line']}),
   press: () => ({pose:{}, ground:'feet', pain:['interscap', 'midback'], cam:{az:180, el:6, fit:0.62, dy:0.2}, marks:true, props:[]}),
@@ -3480,6 +3511,10 @@ function testPic(id, w, h){
     arrow(pts, '#0E6A64');
   }
   if (sp.marks) { [0.32, 0.45, 0.58].forEach((f, i) => { const q = bonePt(T, sex, mats, i ? 'tspine' : 'chest'); q.y = bb.min.y + (bb.max.y - bb.min.y) * (0.5 + f * 0.36); q.z = bb.min.z - 0.01; const [x, y] = pr2(q); g.strokeStyle = '#0E6A64'; g.lineWidth = Math.max(3, w / 150); g.beginPath(); g.arc(x, y, w / 30, 0, 2 * PI); g.stroke(); g.beginPath(); g.arc(x, y, w / 90, 0, 2 * PI); g.fillStyle = '#0E6A64'; g.fill(); }); }
+  if (sp.lift) {
+    const hd = bonePt(T, sex, mats, 'head', [0, 0.145, 0]); hd.y += dy; const up = hd.clone(); up.y += 0.1; arrow([pr2(hd), pr2(up)], '#0E6A64');
+    [[0, -0.07, 0.075], [0, 0.0, -0.1]].forEach(o => { const q = bonePt(T, sex, mats, 'head', o); q.y += dy; const [x, y] = pr2(q); g.beginPath(); g.arc(x, y, w / 34, 0, 2 * PI); g.fillStyle = 'rgba(14,106,100,0.28)'; g.fill(); g.lineWidth = Math.max(2, w / 200); g.strokeStyle = '#0E6A64'; g.stroke(); });
+  }
   if (sp.gap) { const hd = bonePt(T, sex, mats, 'head', [0, 0.03, -0.1]); hd.y += dy; const wl = hd.clone(); wl.z = bb.min.z; const a = pr2(hd), b = pr2(wl); arrow([[(a[0] + b[0]) / 2, a[1]], b], '#C9461E'); arrow([[(a[0] + b[0]) / 2, a[1]], a], '#C9461E'); }
   // free GPU memory of the temporary scene
   scene.traverse(o => { if (o.geometry) o.geometry.dispose(); if (o.material && o !== human.mesh) (Array.isArray(o.material) ? o.material : [o.material]).forEach(m => m.dispose && m.dispose()); });
@@ -3488,7 +3523,7 @@ function testPic(id, w, h){
 
 function testFig(t){
   const sp = TPOSE[t.id](testSide()), dot = (c, l) => `<span class="tpk"><i style="background:${c}"></i>${tx(l)}</span>`;
-  return `<figure class="testpic"><img data-test="${t.id}" alt="${esc(tx(t.name))}"><figcaption>${sp.pain ? dot('var(--pain)', U.tpPain) : ''}${sp.work ? dot('var(--accent)', U.tpWork) : ''}${sp.arc || sp.gap ? dot('transparent', U.tpMove) : ''}</figcaption></figure>`;
+  return `<figure class="testpic"><img data-test="${t.id}" alt="${esc(tx(t.name))}"><figcaption>${sp.pain ? dot('var(--pain)', U.tpPain) : ''}${sp.work ? dot('var(--accent)', sp.relief ? U.tpRelief : U.tpWork) : ''}${sp.lift ? dot('rgba(14,106,100,0.28)', U.tpHands) : ''}${sp.arc || sp.gap || sp.lift ? dot('transparent', U.tpMove) : ''}</figcaption></figure>`;
 }
 function fillTestPic(){
   const img = document.querySelector('.testpic img'); if (!img) return;
