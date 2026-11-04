@@ -13,10 +13,11 @@ The site is live on GitHub Pages: **https://harshit7922.github.io/spine-pain-gui
 
 ## Second free host with a short address
 
-The repository is ready for these with **no build step** (`vercel.json`, `netlify.toml` and `_headers` are included). Each one deploys again automatically on every push to `main`. Suggested project name: **reedhguide** (रीढ़ = spine); if it is taken, try `reedh-guide` or `spineguide-india`.
+The repository is ready for these with **no build step** (`render.yaml`, `vercel.json`, `netlify.toml` and `_headers` are included). Each one deploys again automatically on every push to `main`. Suggested project name: **reedhguide** (रीढ़ = spine); if it is taken, try `reedh-guide` or `spineguide-india`.
 
 | Host | Address you get | Steps (about 2 minutes, log in with GitHub) |
 | --- | --- | --- |
+| Render | `reedhguide.onrender.com` | dashboard.render.com → **New → Blueprint** → connect `harshit7922/spine-pain-guide` → **Apply** (uses `render.yaml`: free static site named `reedhguide`, no build). Or open https://render.com/deploy?repo=https://github.com/harshit7922/spine-pain-guide |
 | Vercel | `reedhguide.vercel.app` | vercel.com → **Add New → Project** → import `harshit7922/spine-pain-guide` → Project Name `reedhguide`, Framework **Other**, leave build settings empty → **Deploy** |
 | Cloudflare Pages | `reedhguide.pages.dev` | dash.cloudflare.com → **Workers & Pages → Create → Pages → Connect to Git** → pick the repo → project name `reedhguide`, build command empty, output directory `/` → **Save and Deploy** |
 | Netlify | `reedhguide.netlify.app` | app.netlify.com → **Add new site → Import an existing project → GitHub** → pick the repo → publish directory `.` → **Deploy**; then **Site configuration → Change site name** to `reedhguide` |
