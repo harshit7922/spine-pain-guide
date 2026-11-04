@@ -19,6 +19,6 @@ Goal set by the owner: deep, authentic, proven research for every option; refere
 | 4 | New: Shoulder (frozen shoulder, rotator cuff, impingement, calcific tendinitis, AC joint, instability, referred pain) | done 4 Nov (data/shoulder.js, research/shoulder-evidence.md); thoracic outlet left out (rare, poor bedside tests) |
 | 5 | New: Knee (osteoarthritis, patellofemoral pain, meniscus, ligament injury, IT band, bursitis, Baker's cyst, gout, Osgood-Schlatter) | done 4 Nov (data/knee.js, research/knee-evidence.md) |
 | 6 | New: Leg, ankle and foot (plantar fasciitis, Achilles, ankle sprain, shin splints, calf strain, DVT and artery red flags, neuropathy, Morton's neuroma) | done 4 Nov (data/foot.js, research/foot-evidence.md) |
-| 7 | New: Hip (hip OA, greater trochanteric pain, FAI/labral tear, avascular necrosis, stress fracture) | next |
-| 8 | New: Elbow, wrist and hand (tennis/golfer's elbow, de Quervain, carpal tunnel, trigger finger, cubital tunnel, hand OA) | pending |
+| 7 | New: Hip (hip OA, greater trochanteric pain, FAI/labral tear, avascular necrosis, stress fracture) | done 4 Nov (data/hip.js, research/hip-evidence.md); also groin strain, hernia, meralgia paresthetica and children's hip problems |
+| 8 | New: Elbow, wrist and hand (tennis/golfer's elbow, de Quervain, carpal tunnel, trigger finger, cubital tunnel, hand OA) | next |
 | 9 | Upper/mid back and whole spine deep research update | pending |
