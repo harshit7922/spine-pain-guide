@@ -152,6 +152,11 @@ sheet('Glossary', ['ID', 'Term (EN)', 'Term (HI)', 'Words that open it (EN)', 'W
       [(g['id'], en(g['title']), hi(g['title']), ', '.join(g['terms'].get('en', [])), ', '.join(g['terms'].get('hi', [])), en(g['plain']), hi(g['plain']), g.get('picture') or '', ', '.join(g.get('sources') or [])) for g in C.get('glossary', [])], [12, 30, 30, 34, 34, 70, 70, 9, 16])
 
 # ---------- Sources ----------
+X = C.get('exercises') or {'list': [], 'reasons': [], 'byCondition': []}
+EXN = {e['id']: e for e in X['list']}; RN = {r['id']: r for r in X['reasons']}
+sheet('Exercises', ['Condition ID', 'Exercise', 'Exercise (EN)', 'Exercise (HI)', 'Steps (EN)', 'Picture', 'Why (EN)', 'Sources'],
+      [(b['condition'], e, EXN[e]['name']['en'], EXN[e]['name']['hi'], ' | '.join(st['en'] for st in EXN[e]['steps']), EXN[e]['picture'] or 'text only', RN[b['reason']]['why']['en'], ', '.join(RN[b['reason']]['sources'])) for b in X['byCondition'] for e in b['exercises']],
+      [14, 12, 30, 30, 80, 10, 70, 24])
 sheet('Sources', ['#', 'Key', 'Source', 'URL'], [(i + 1, s['key'], s['title'], s['url']) for i, s in enumerate(C['sources'])], [5, 12, 80, 70])
 
 out = os.path.join(RES, 'spine-knowledge-base.xlsx'); wb.save(out); print('saved', out)

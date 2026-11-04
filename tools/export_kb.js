@@ -33,7 +33,7 @@ function labelsFor(M) {
 const out = {
   meta: {
     title: 'Spine Pain Guide – clinical knowledge base (all spine regions)',
-    version: 'v5.8', exported: new Date().toISOString().slice(0, 10), languages: ['en', 'hi'],
+    version: 'v5.9', exported: new Date().toISOString().slice(0, 10), languages: ['en', 'hi'],
     disclaimer: 'Decision support for self-assessment, not a diagnosis. Every result recommends consultation with a doctor.',
     howScoringWorks: [
       'Each answer becomes a feature (for example "slr_pos" or "neck"). Some features are derived from others (DERIVED rules, e.g. "radicular").',
@@ -48,6 +48,11 @@ const out = {
   common: {
     sources: C.SRC.map(s => ({ key: s[0], title: s[1], url: s[2] })),
     glossary: (S.glossary || []).map(g => ({ id: g.id, terms: g.terms, title: g.title, plain: g.plain, sources: g.src || [], picture: g.pic ? g.pic.k : null })),
+    exercises: (() => { const X = S.exercises || { EX: {}, R: {}, MAP: {} }; return {
+      note: 'First-step exercises: shown only for green or yellow results, for the condition at the top of the list, always with "show these to your doctor or physiotherapist first". No repetitions or times: the physiotherapist sets the dose.',
+      list: Object.entries(X.EX).map(([id, e]) => ({ id, picture: e.pose, name: e.name, steps: e.steps })),
+      reasons: Object.entries(X.R).map(([id, r]) => ({ id, why: r.why, sources: r.src })),
+      byCondition: Object.entries(X.MAP).map(([c, m]) => ({ condition: c, reason: m[0], exercises: m.slice(1) })) }; })(),
     levels: plain(C.LEVELS), urgencyReasons: plain(C.RS), departments: plain(C.DEPTS), statistics: plain(C.STATS),
     questions: { age: opts(C.AGES), sex: opts(C.SEXES), episode: opts(C.EPIS), history: opts(C.RISKS), onset: opts(C.ONSETS), thisBoutStarted: opts(C.SINCE), firstEverStarted: opts(C.HX), betweenBouts: opts(C.BTW), trend: opts(C.TRENDS) }
   },

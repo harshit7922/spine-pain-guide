@@ -14,6 +14,7 @@ A self-assessment tool for spine and joint pain (now including headache and jaw 
 - **"In short" box** at the top of every result: best match, how urgent, and which doctor to see first.
 - **Continue where you left off:** answers are kept only in the browser on that device, so a person can close the app and carry on later or reopen the last result.
 - **Share report:** on phones this opens the share sheet (WhatsApp, email) with the PDF attached; elsewhere it copies a short summary.
+- **First exercises to ask about:** for green and yellow results the result page shows the guideline-backed first exercises for the top condition (for example walking for back pain, sit-to-stand for knee osteoarthritis, calf stretch for plantar fasciitis), each on a posed 3D body, always with "show your doctor or physiotherapist first" and no made-up repetition numbers. Data: `data/exercises.js`; evidence: [research/exercises-evidence.md](research/exercises-evidence.md).
 
 ## Open it
 
@@ -64,6 +65,10 @@ On first open it asks for the language (English / हिंदी). The choice i
 
 <img src="docs/images/head-tests.png" width="440">
 
+**First exercises to ask your physiotherapist about** (shown for green and yellow results only):
+
+<img src="docs/images/exercise-pictures.png" width="760">
+
 **Body-area questions with reference pictures** (Hindi, phone) and the **"when did it start" timeline**:
 
 <img src="docs/images/question-pictures.png" width="760">
@@ -105,7 +110,7 @@ Sample PDF reports (made from test answers, not real patients): [lower back](doc
 
 ## Evidence tables
 
-Each region has a plain-language evidence table listing every number the app shows, the likelihood ratios behind the scoring points and the sources: [lower back](research/lumbar-evidence.md) · [neck and arm](research/cervical-evidence.md) · [shoulder](research/shoulder-evidence.md) · [knee](research/knee-evidence.md) · [leg, ankle and foot](research/foot-evidence.md) · [hip and groin](research/hip-evidence.md) · [elbow, wrist and hand](research/hand-evidence.md) · [upper/mid back and whole spine](research/thoracic-evidence.md) · [headache, face and jaw](research/head-evidence.md). The order of work is in [research/ROADMAP.md](research/ROADMAP.md).
+Each region has a plain-language evidence table listing every number the app shows, the likelihood ratios behind the scoring points and the sources: [lower back](research/lumbar-evidence.md) · [neck and arm](research/cervical-evidence.md) · [shoulder](research/shoulder-evidence.md) · [knee](research/knee-evidence.md) · [leg, ankle and foot](research/foot-evidence.md) · [hip and groin](research/hip-evidence.md) · [elbow, wrist and hand](research/hand-evidence.md) · [upper/mid back and whole spine](research/thoracic-evidence.md) · [headache, face and jaw](research/head-evidence.md) · [first-step exercises](research/exercises-evidence.md). The order of work is in [research/ROADMAP.md](research/ROADMAP.md).
 
 ## Where the research lives (and how the calculation reads it)
 
@@ -124,7 +129,7 @@ How a result is calculated:
 ### To change or add research
 1. Edit the data file (for example change a weight in `data/cervical.js`). Keep English and Hindi together: `L('English', 'हिंदी')`.
 2. Reload `index.html` — the site uses the new numbers immediately.
-3. Run the checks: `node tests/run_scenarios.js` (161 clinical scenarios must still pass).
+3. Run the checks: `node tests/run_scenarios.js` (182 clinical scenarios must still pass).
 4. Refresh the readable copies: `node tools/export_kb.js` then `python3 tools/build_xlsx.py`.
 5. Rebuild the single-file version: `python3 tools/bundle.py` → `dist/spine-pain-guide.html`. This one file contains everything (use it for hosting or to send to someone); the hosted link is published from it.
 
@@ -141,18 +146,18 @@ Add an entry to `data/glossary.js`: the words that should become tappable (Engli
 ```
 index.html            open this
 lib/                  three.js r128 (MIT), jsPDF 2.5.1 (MIT)
-data/                 research data (edit these), glossary.js (tap-a-word pictures) + generated 3D data (body3d.js, spine3d.js, rig3d.js)
+data/                 research data (edit these), glossary.js (tap-a-word pictures), exercises.js (first-step exercises) + generated 3D data (body3d.js, spine3d.js, rig3d.js)
 js/app.js             engine, screens, 3D viewer, PDF report
 research/             spine-knowledge-base.json / .xlsx (all modules, EN + HI); personal case files stay out of git
 dist/                 spine-pain-guide.html — the whole site in one file; web/index.html — same file, ready to host (see HOSTING.md)
 tools/                export_kb.js, build_xlsx.py (rebuild the research copies), bundle.py (single-file version)
-tests/                run_scenarios.js + cases/ (161 scenarios: head, hand, hip, foot, knee, shoulder, lumbar, cervical, thoracic + whole, history, lumbar evidence)
+tests/                run_scenarios.js + cases/ (182 scenarios: head, hand, hip, foot, knee, shoulder, lumbar, cervical, thoracic + whole, history, lumbar evidence, exercises)
 3d-build/             Python scripts that generate the 3D bodies, bones and nerves (build.sh)
 ```
 
 ## 3D models
 
-Male and female bodies come from the MakeHuman CC0 base mesh and targets. Vertebrae C1–coccyx, discs, ribs, pelvis, sternum, shoulder blades, arm and leg bones are modelled with signed-distance functions; the spinal cord, cauda equina, lumbar and cervical nerve roots, brachial plexus, arm nerves, sciatic/femoral nerves and intercostal nerves are tubes routed through the body. For the bedside-test pictures the same bodies are posed with a 52-bone skeleton (`data/rig3d.js`) — lying with a leg raised, seated with the head tilted, hand on head, walking on heels, rising on toes, against a wall, rising from a chair — with props, motion arrows and the area where symptoms appear coloured. `3d-build/build.sh` regenerates `data/body3d.js`, `data/spine3d.js` and `data/rig3d.js`; the poses themselves are listed in `TPOSE` in `js/app.js`.
+Male and female bodies come from the MakeHuman CC0 base mesh and targets. Vertebrae C1–coccyx, discs, ribs, pelvis, sternum, shoulder blades, arm and leg bones are modelled with signed-distance functions; the spinal cord, cauda equina, lumbar and cervical nerve roots, brachial plexus, arm nerves, sciatic/femoral nerves and intercostal nerves are tubes routed through the body. For the bedside-test pictures the same bodies are posed with a 52-bone skeleton (`data/rig3d.js`) — lying with a leg raised, seated with the head tilted, hand on head, walking on heels, rising on toes, against a wall, rising from a chair, and the first-step exercises — with props, motion arrows and the area where symptoms appear coloured. `3d-build/build.sh` regenerates `data/body3d.js`, `data/spine3d.js` and `data/rig3d.js`; the poses themselves are listed in `TPOSE` in `js/app.js`.
 
 ---
 
@@ -165,4 +170,5 @@ Male and female bodies come from the MakeHuman CC0 base mesh and targets. Verteb
 - **आसान बनाने के लिए:** बिंदु वाली लाइन वाले मेडिकल शब्द पर टैप करें तो 3D तस्वीर के साथ आसान मतलब दिखता है; "सुनें" बटन सवाल और नतीजा पढ़कर सुनाता है; A+ से बड़े अक्षर; नतीजे के ऊपर "सार में" तीन लाइनें; अधूरी जांच बाद में वहीं से जारी; "रिपोर्ट भेजें" से PDF सीधे WhatsApp पर।
 - **रिसर्च कहां है:** `data/` फ़ोल्डर की फ़ाइलों में — हर बीमारी, उसके लक्षणों के अंक (weights), खतरे के संकेत, टेस्ट और व्याख्या। ऐप इन्हीं फ़ाइलों से पढ़कर गणना करता है।
 - **बदलाव करना:** डेटा फ़ाइल बदलें → `index.html` रीलोड करें → `node tests/run_scenarios.js` चलाएं → `node tools/export_kb.js` और `python3 tools/build_xlsx.py` से Excel/JSON कॉपी अपडेट करें।
+- **शुरुआती व्यायाम:** हरे और पीले नतीजों में सबसे ऊपर वाली बीमारी के लिए गाइडलाइन पर आधारित शुरुआती व्यायाम 3D तस्वीर के साथ दिखते हैं (जैसे कमर दर्द में सैर, घुटने के ऑस्टियोआर्थराइटिस में कुर्सी से उठना-बैठना), हमेशा "पहले डॉक्टर या फिज़ियोथेरेपिस्ट को दिखाएँ" के साथ।
 - **पढ़ने लायक कॉपी:** `research/spine-knowledge-base.xlsx` में सभी बीमारियां, अंक, खतरे के नियम, नसें, टेस्ट और स्रोत हैं।

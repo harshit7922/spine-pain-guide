@@ -238,6 +238,17 @@ td.root{font:600 13px/1.3 var(--f-mono)}
 .testpic.loading img{animation:tpl 1.2s ease-in-out infinite alternate}
 @keyframes tpl{from{opacity:.55}to{opacity:1}}
 .testpic figcaption{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted);margin-top:6px}
+.exsafe{margin:12px 0 0;padding:10px 12px;border-left:4px solid var(--warn,#B7791F);background:var(--surface-2);border-radius:6px;font-size:14px}
+.exlist{display:grid;gap:12px;margin-top:14px}
+.exitem{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:14px;align-items:start;background:var(--surface-2);border-radius:10px;padding:10px}
+.exitem.nopic{grid-template-columns:minmax(0,1fr)}
+.exitem h4{margin:2px 0 6px;font-size:15px}
+.exsteps{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px}
+.expic{margin:0}
+.expic img{display:block;width:100%;aspect-ratio:480/560;border-radius:6px;background:#eef2f5;object-fit:cover}
+.expic.loading img{animation:tpl 1.2s ease-in-out infinite alternate}
+.expic figcaption{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:12px;color:var(--muted);margin-top:6px}
+@media (max-width:560px){.exitem{grid-template-columns:minmax(0,1fr)}.expic{max-width:320px}}
 .tpk i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
 .tpk:last-child i[style*="transparent"]{width:14px;height:0;border-top:3px solid var(--accent);border-radius:0;vertical-align:3px}
 .instbtn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);border-radius:6px;padding:5px 11px;font-weight:600;font-size:13px;cursor:pointer}
@@ -384,6 +395,7 @@ html.big .panel, html.big footer.foot, html.big .ipcard{zoom:1.18}
 <script src="data/hand.js"></script>
 <script src="data/head.js"></script>
 <script src="data/glossary.js"></script>
+<script src="data/exercises.js"></script>
 <!-- 3D models -->
 <script src="data/body3d.js"></script>
 <script src="data/spine3d.js"></script>

@@ -7,7 +7,7 @@ const L = (en, hi) => ({en, hi});
 const C = SPG.data.common;
 C.SRC.push(
   ['altman86','Altman R et al. Classification criteria for osteoarthritis of the knee (American College of Rheumatology). Arthritis Rheum 1986;29:1039–49: knee pain + 3 of 6 clinical items, sensitivity 95%, specificity 69%; 4 of 6: 84% / 89%','https://physiotutors.com/?p=11991'],
-  ['niceoa','NICE NG226 (2022) Osteoarthritis in over 16s: diagnose clinically at 45+ with activity-related joint pain and no or under 30 minutes of morning stiffness; exercise and weight loss first','https://bestpractice-bmj-com.bibliotheek.ehb.be/topics/en-gb/192/nice-summary'],
+  ['niceoa','NICE NG226 (2022) Osteoarthritis in over 16s: diagnose clinically at 45+ with activity-related joint pain and no or under 30 minutes of morning stiffness; exercise and weight loss first','https://www.nice.org.uk/guidance/ng226/chapter/Recommendations'],
   ['indiaoa','Ministry of Health and Family Welfare, India. Standard treatment guidelines: osteoarthritis knee (2017), citing Pal 2016: knee osteoarthritis in 28.7% of adults studied','https://qps.nhsrcindia.org/sites/default/files/2021-05/Osteoarthritis%20Knee.pdf'],
   ['ottawa','Ottawa knee rule; Bachmann LM et al. Ann Intern Med 2004;140:121–4 (sensitivity 98.5% for fracture)','https://wikem.org/wiki/Ottawa_knee_rules'],
   ['wagacl','Wagemakers HP et al. History taking and physical examination for ACL lesions in primary care. Arch Phys Med Rehabil 2010;91:1452–9 (popping LR+ 2.3; 2 of 3 of popping, swelling, giving way LR+ 2.5)','https://repub.eur.nl/pub/20762'],
