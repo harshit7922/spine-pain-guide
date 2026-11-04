@@ -1,6 +1,6 @@
 # Spine Pain Guide · रीढ़ दर्द गाइड
 
-**Live:** https://harshit7922.github.io/spine-pain-guide/ — open it on a phone and tap **Install app** to add it to the home screen (works offline).
+**Live:** https://reedhguide.onrender.com (Render) · https://harshit7922.github.io/spine-pain-guide/ (GitHub Pages) — open it on a phone and tap **Install app** to add it to the home screen (works offline).
 
 A self-assessment tool for spine pain in English and Hindi. It asks where it hurts, how it started and how it behaves, runs a few safe bedside tests, checks warning signs, then shows the likely causes, how urgent it is, which specialist to see, realistic 3D pictures of the spine and nerves involved, and a PDF report for the doctor.
 

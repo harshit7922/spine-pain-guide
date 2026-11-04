@@ -2,7 +2,7 @@
 
 ## Current setup (live)
 
-The site is live on GitHub Pages: **https://harshit7922.github.io/spine-pain-guide/**
+The site is live on **Render: https://reedhguide.onrender.com** (static site `reedhguide`, auto-deploys on every push to `main`) and on GitHub Pages: **https://harshit7922.github.io/spine-pain-guide/**
 
 - Pages serves the **`gh-pages`** branch (root folder). `main` holds the same code.
 - To publish a change: commit on `main`, then run `python3 tools/bundle.py` (refreshes the offline file list in `sw.js`), commit that too, and push both branches:
