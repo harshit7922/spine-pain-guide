@@ -764,7 +764,17 @@ const SRC = [
   ['pott',"Pott's disease (spinal tuberculosis)",'https://en.wikipedia.org/wiki/Pott%27s_disease'],
   ['kid','NHS 111 Wales – Kidney stones','https://111.wales.nhs.uk/kidneystones/'],
   ['coc','Texas Orthopedics – Coccydynia','https://www.txortho.com/patient-education-article/coccydynia-tailbone-pain-969'],
-  ['nums','Medical emergency numbers in India (108, 112)','https://zhl.org.in/blog/medical-emergency-numbers-india/']
+  ['nums','Medical emergency numbers in India (108, 112)','https://zhl.org.in/blog/medical-emergency-numbers-india/'],
+  ['suri','Suri P et al. Does this older adult with lower extremity pain have lumbar spinal stenosis? JAMA Rational Clinical Examination 2010 (likelihood ratios summarised by TheNNT)','https://thennt.com/lr/spinal-stenosis-in-the-elderly/'],
+  ['downie','Downie A et al. Red flags to screen for malignancy and fracture in patients with low back pain: systematic review. BMJ 2013;347:f7095','https://repub.eur.nl/pub/72777'],
+  ['nadeau','Nadeau M et al. The reliability of differentiating neurogenic claudication from vascular claudication based on symptomatic presentation. Can J Surg 2013;56(6):372-7','https://www.canjsurg.ca/content/cjs/56/6/372.full.pdf'],
+  ['rudw06','Rudwaleit M et al. Inflammatory back pain in ankylosing spondylitis: a reassessment of the clinical history for application as classification and diagnostic criteria. Arthritis Rheum 2006 (2 of 4 criteria LR 3.7; 3 of 4 LR 12.4)','https://mrcpfacts.blogspot.com/2008/10/recognition-of-inflammatory-back-pain.html'],
+  ['rudw04','Rudwaleit M et al. How to diagnose axial spondyloarthritis early. Ann Rheum Dis 2004;63:535-43','https://ard.bmj.com/content/63/5/535'],
+  ['costa','da C Menezes Costa L et al. The prognosis of acute and persistent low-back pain: a meta-analysis. CMAJ 2012;184:E613-24','https://pmc.ncbi.nlm.nih.gov/articles/PMC3414626/'],
+  ['whocplbp','WHO guideline for non-surgical management of chronic primary low back pain in adults (2023), summary brochure','https://cdn.who.int/media/docs/default-source/mca-documents/ageing/lbp/summary_who_guideline_lower-back-pain_brochure_v7.pdf'],
+  ['vitd','Siddiqee MH et al. High prevalence of vitamin D deficiency among South Asian adults: systematic review and meta-analysis. BMC Public Health 2021 (India: 67%)','https://pmc.ncbi.nlm.nih.gov/articles/PMC8501935'],
+  ['tbindia','WHO Global Tuberculosis Report 2025: India still about 25% of the global TB burden (news summary)','https://health.medicaldialogues.in/health-topics/respiratory-health/india-records-21-drop-in-tb-cases-still-accounts-for-25-of-global-burden-who-tb-report-158564'],
+  ['cesacc','Diagnostic accuracy of red flags for cauda equina syndrome: systematic review (World Physiotherapy congress abstract): sensitivity 19-43%, specificity 62-88%','https://world.physio/congress-proceeding/what-clinical-diagnostic-accuracy-red-flags-related-cauda-equina-syndrome-ces']
 ];
 const U = {
   brand:L('Spine Pain Guide','रीढ़ दर्द गाइड'), tag:L('Spine assessment','रीढ़ दर्द जांच'), sos:L('Emergency','इमरजेंसी'),
@@ -877,7 +887,9 @@ const RISKS = [
   ['r_tb',L('TB now or before, or a TB patient at home','अभी या पहले टीबी, या घर में टीबी मरीज़')],
   ['r_spa',L('Psoriasis, inflammatory bowel disease or recurring red, painful eye','सोरायसिस, आंतों की सूजन (IBD) या बार-बार लाल, दर्द भरी आंख')],
   ['r_desk',L('Desk job or long hours of sitting','डेस्क जॉब या लंबे समय बैठना')],
-  ['r_heavy',L('Heavy physical work','भारी शारीरिक काम')]
+  ['r_heavy',L('Heavy physical work','भारी शारीरिक काम')],
+  ['r_vasc',L('Smoking or tobacco, diabetes, high blood pressure or high cholesterol','धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल')],
+  ['r_famspa',L('Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease','माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)')]
 ];
 const ONSETS = [
   ['on_getup',L('Getting up quickly from bed or a chair','बिस्तर या कुर्सी से जल्दी उठते समय')],
@@ -934,8 +946,17 @@ const STATS = [
   {v:'30% → 84%',t:L('of people with no pain show a disc bulge on MRI, at age 20 and 80','बिना दर्द वाले लोगों के MRI में डिस्क बल्ज, 20 और 80 की उम्र में'),s:'ajnr'},
   {v:'92%',t:L('sensitivity of the straight leg raise test for disc herniation','डिस्क हर्निएशन के लिए SLR टेस्ट की संवेदनशीलता'),s:'cochrane'}
 ];
-DEPTS.vascular = {n:L('Vascular surgery','वैस्कुलर सर्जरी'),s:L('Blood vessel emergencies such as aneurysm.','खून की नसों की इमरजेंसी, जैसे एन्यूरिज़्म।'),q:'vascular surgeon'};
+DEPTS.vascular = {n:L('Vascular surgery','वैस्कुलर सर्जरी'),s:L('Blood vessel problems: aneurysm, or blocked leg arteries that cause calf pain on walking.','खून की नसों की इमरजेंसी, जैसे एन्यूरिज़्म।'),q:'vascular surgeon'};
 const FX = {
+  b_sit_nopain:L('No pain at all when sitting is one of the strongest clues to spinal stenosis (likelihood ratio 7.4).','बैठने पर बिल्कुल दर्द न होना स्पाइनल स्टेनोसिस का सबसे मज़बूत संकेतों में से एक है (likelihood ratio 7.4)।'),
+  w_walk_calf:L('Calf pain on walking that eases just by standing still points to narrowed leg arteries rather than the spine (likelihood ratio 7.8).','चलने पर पिंडली का दर्द जो सिर्फ़ खड़े रहने से ठीक हो, रीढ़ के बजाय पैर की धमनियों के संकरेपन की ओर इशारा करता है (likelihood ratio 7.8)।'),
+  ch_alt_buttock:L('Buttock pain that switches sides is one of the four classic inflammatory back pain features.','नितंब का दर्द जो तरफ़ बदलता है, सूजन वाले कमर दर्द के चार खास लक्षणों में से एक है।'),
+  ch_heel:L('Heel pain without an injury can be inflammation where tendons attach (enthesitis), seen in spondyloarthritis (likelihood ratio 3.4).','बिना चोट एड़ी का दर्द टेंडन जुड़ने की जगह की सूजन (एंथेसाइटिस) हो सकता है, जो स्पॉन्डिलोआर्थराइटिस में दिखता है (likelihood ratio 3.4)।'),
+  ibp2:L('Two or more inflammatory back pain features raise the chance of axial spondyloarthritis about 3.7 times.','सूजन वाले कमर दर्द के दो या ज़्यादा लक्षण एक्सियल स्पॉन्डिलोआर्थराइटिस की संभावना लगभग 3.7 गुना बढ़ाते हैं।'),
+  ibp3:L('Three or more inflammatory back pain features raise the chance about 12 times.','तीन या ज़्यादा लक्षण संभावना लगभग 12 गुना बढ़ाते हैं।'),
+  r_vasc:L('Smoking, diabetes, high blood pressure and high cholesterol narrow the leg arteries.','धूम्रपान, डायबिटीज़, हाई बीपी और हाई कोलेस्ट्रॉल पैर की धमनियों को संकरा करते हैं।'),
+  r_famspa:L('Spondyloarthritis runs in families.','स्पॉन्डिलोआर्थराइटिस परिवारों में चलता है।'),
+  fx_combo:L('Three of these together (female, over 60, major injury, weak bones or steroids) make a spinal fracture very likely.','इनमें से तीन एक साथ (महिला, 60 से ज़्यादा, बड़ी चोट, कमज़ोर हड्डियां या स्टेरॉयड) हों तो रीढ़ में फ्रैक्चर की बहुत संभावना होती है।'),
   below_knee:L('Symptoms below the knee point to a nerve root rather than a muscle, because muscle pain rarely travels that far.','घुटने के नीचे लक्षण मांसपेशी नहीं, नस की जड़ की ओर इशारा करते हैं, क्योंकि मांसपेशी का दर्द इतनी दूर कम जाता है।'),
   leg_any:L('Pain spreading from the back into the leg shows that a nerve or its root may be involved.','कमर से पैर में फैलता दर्द दिखाता है कि नस या उसकी जड़ शामिल हो सकती है।'),
   leg_one:L('Pain in one leg only fits a single pressed nerve root on that side.','सिर्फ एक पैर का दर्द उसी तरफ की एक दबी जड़ से मेल खाता है।'),
@@ -996,7 +1017,7 @@ const FX = {
 const LEVELS = {
   red:{short:L('Now','अभी'),title:L('Go to the emergency department now','अभी इमरजेंसी विभाग जाएं'),act:L('Call 108 for an ambulance or 112 for any emergency. Do not drive yourself.','एम्बुलेंस के लिए 108 या किसी भी इमरजेंसी के लिए 112 पर कॉल करें। खुद गाड़ी न चलाएं।')},
   orange:{short:L('24–48 h','24–48 घंटे'),title:L('See a doctor within 24–48 hours','24–48 घंटे में डॉक्टर को दिखाएं'),act:L('Do not wait for it to settle. Book the earliest appointment or attend a hospital OPD.','ठीक होने का इंतज़ार न करें। सबसे जल्दी अपॉइंटमेंट लें या अस्पताल की OPD जाएं।')},
-  yellow:{short:L('Within a week','1 हफ्ते में'),title:L('See a spine specialist within a week','1 हफ्ते के अंदर स्पाइन विशेषज्ञ को दिखाएं'),act:L('Not an emergency, but your symptoms need a proper examination. Go sooner if the pain worsens, numbness spreads or a leg feels weak.','इमरजेंसी नहीं, पर आपके लक्षणों की ठीक से जांच ज़रूरी है। दर्द बढ़े, सुन्नपन फैले या पैर कमज़ोर लगे तो पहले जाएं।')},
+  yellow:{short:L('Within a week','1 हफ्ते में'),title:L('See a specialist doctor within a week','1 हफ्ते के अंदर विशेषज्ञ डॉक्टर को दिखाएं'),act:L('Not an emergency, but your symptoms need a proper examination. Go sooner if the pain worsens, numbness spreads or a leg feels weak.','इमरजेंसी नहीं, पर आपके लक्षणों की ठीक से जांच ज़रूरी है। दर्द बढ़े, सुन्नपन फैले या पैर कमज़ोर लगे तो पहले जाएं।')},
   green:{short:L('Within 2 weeks','2 हफ्ते में'),title:L('Book a doctor visit within 2 weeks','2 हफ्ते के अंदर डॉक्टर को दिखाएं'),act:L('Your answers show no warning signs, but a doctor still needs to examine you to confirm the cause and rule out others. Until then, stay active and avoid heavy lifting.','आपके जवाबों में कोई खतरे का संकेत नहीं है, फिर भी कारण पक्का करने और दूसरे कारणों को खारिज करने के लिए डॉक्टर की जांच ज़रूरी है। तब तक सक्रिय रहें और भारी वज़न न उठाएं।')}
 };
 const RS = {
@@ -1031,15 +1052,18 @@ const PAT = {
     ['ch_heavy',L('Legs feel heavy or tired','पैर भारी या थके लगते हैं')],
     ['ch_colic',L('Pain at the side that comes in waves','साइड में लहरों की तरह आता दर्द')],
     ['ch_stiff_am',L('Stiff for more than 30 minutes after waking','सुबह उठने पर 30 मिनट से ज़्यादा अकड़न')],
-    ['ch_night_wake',L('Wakes you late at night and eases after getting up','देर रात दर्द से नींद खुलती है, उठने पर आराम')]
+    ['ch_night_wake',L('Wakes you late at night and eases after getting up','देर रात दर्द से नींद खुलती है, उठने पर आराम')],
+    ['ch_alt_buttock',L('Buttock pain that switches from one side to the other','नितंब का दर्द जो कभी एक तरफ़, कभी दूसरी तरफ़ होता है')],
+    ['ch_heel',L('Heel pain without any injury','बिना किसी चोट के एड़ी में दर्द')]
   ],
   worse:[
     ['w_sit',L('Sitting','बैठना')],['w_bend',L('Bending forward','आगे झुकना')],['w_cough',L('Coughing, sneezing or straining','खांसी, छींक या ज़ोर लगाना')],
     ['w_rise',L('Getting up from sitting','बैठे से उठना')],['w_extend',L('Bending backwards or arching','पीछे झुकना')],['w_stand',L('Standing for long','देर तक खड़े रहना')],
-    ['w_walk',L('Walking: legs ache or tingle and ease when you sit or bend forward','चलना: पैरों में दर्द या झुनझुनी जो बैठने या आगे झुकने पर कम हो')],
+    ['w_walk',L('Walking: legs ache, tingle or feel heavy, and ease only after sitting or bending forward','चलना: पैरों में दर्द, झुनझुनी या भारीपन जो बैठने या आगे झुकने पर ही कम हो')],
+    ['w_walk_calf',L('Walking: calf cramps or aches that ease within 1–2 minutes of just standing still','चलना: पिंडली में ऐंठन या दर्द जो सिर्फ़ 1–2 मिनट खड़े रहने से ठीक हो जाए')],
     ['w_rest',L('Resting (better once you get moving)','आराम करना (हिलने-डुलने से बेहतर)')]
   ],
-  better:[['b_lying',L('Lying down','लेटना')],['b_sitflex',L('Sitting or leaning forward','बैठना या आगे झुकना')],['b_walk',L('Walking and moving around','चलना-फिरना')],['b_exercise',L('Exercise','व्यायाम')]],
+  better:[['b_lying',L('Lying down','लेटना')],['b_sitflex',L('Sitting or leaning forward','बैठना या आगे झुकना')],['b_sit_nopain',L('No pain at all while sitting','बैठे रहने पर बिल्कुल दर्द नहीं')],['b_walk',L('Walking and moving around','चलना-फिरना')],['b_exercise',L('Exercise','व्यायाम')]],
   other:[['u_urine',L('Burning urine or blood in urine','पेशाब में जलन या खून')]]
 };
 const RFS = [
@@ -1099,13 +1123,13 @@ const CONDS = [
    what:L('A disc between two vertebrae bulges or herniates backwards and presses a nerve root. Pain runs into the buttock and leg along that root, often worse when sitting, bending or coughing.','दो हड्डियों के बीच की डिस्क पीछे की ओर उभरकर नस की जड़ को दबाती है। दर्द उस जड़ के रास्ते नितंब और पैर में जाता है, और अक्सर बैठने, झुकने या खांसने पर बढ़ता है।'),
    confirm:L('Neurological examination (straight leg raise, strength, reflexes, sensation). MRI of the lumbar spine if there is weakness, a red flag, or no improvement after about 6 weeks. Plain X-rays do not show discs.','न्यूरोलॉजिकल जांच (SLR, ताकत, रिफ्लेक्स, संवेदना)। कमज़ोरी, खतरे के लक्षण, या लगभग 6 हफ्तों में सुधार न हो तो कमर का MRI। सादा एक्स-रे डिस्क नहीं दिखाता।'),
    outlook:L('About 90% of people improve within 3 months without surgery. Larger herniations shrink on their own more often: extrusions in about 70% and sequestrations in about 96%. Surgery (microdiscectomy) is considered for weakness or severe pain that does not settle.','लगभग 90% लोग बिना सर्जरी 3 महीने में बेहतर हो जाते हैं। बड़े हर्निएशन ज़्यादा बार अपने आप सिकुड़ते हैं: एक्सट्रूज़न लगभग 70% और सीक्वेस्ट्रेशन लगभग 96% में। कमज़ोरी या न सुधरने वाले तेज़ दर्द में सर्जरी (माइक्रोडिसेक्टॉमी) सोची जाती है।'),oSrc:['ortho','chiu'],
-   w:{h_lt1y:1,btw_free:1,below_knee:4,leg_any:2,leg_one:1,dom_leg:3,ch_shoot:3,ch_numb:1,ch_tingle:1,w_sit:2,w_bend:2,w_cough:3,slr_pos:4,cslr_pos:4,heel_weak:2,toe_weak:2,on_getup:2,on_bend:2,on_lift:2,on_twist:1,on_cough:2,on_woke:1,a_18_29:1,a_30_39:1,a_40_49:1,b_lying:1,walk_no:1,sit_no:1,sit_30:1,r_desk:1,r_heavy:1,
+   w:{h_lt1y:1,btw_free:1,below_knee:4,leg_any:2,leg_one:1,dom_leg:3,ch_shoot:3,ch_numb:1,ch_tingle:1,w_sit:2,w_bend:2,w_cough:3,slr_pos:1,cslr_pos:2,heel_weak:2,toe_weak:2,on_getup:2,on_bend:2,on_lift:2,on_twist:1,on_cough:2,on_woke:1,a_18_29:1,a_30_39:1,a_40_49:1,b_lying:1,walk_no:1,sit_no:1,sit_30:1,r_desk:1,r_heavy:1,
       w_walk:-2,b_sitflex:-1,ch_stiff_am:-1,b_exercise:-2,rf_fever:-3,slr_neg:-2,groin:-1,flank:-2,ch_colic:-2}},
-  {id:'strain',th:[9,6,3],anchor:['lowback','lowback_side'],depts:['physio','gp','ortho_spine'],
+  {id:'strain',th:[9,6,3],anchor:['lowback','lowback_side'],oSrc:'costa',depts:['physio','gp','ortho_spine'],
    name:L('Muscle strain or ligament sprain','मांसपेशी में खिंचाव या लिगामेंट मोच'),sci:'Acute non-specific (mechanical) low back pain',
    what:L('Overloaded back muscles and ligaments go into protective spasm. The most common cause of sudden low back pain; it stays in the back without nerve signs.','ज़्यादा भार से पीठ की मांसपेशियाँ और लिगामेंट बचाव में जकड़ जाते हैं। अचानक कमर दर्द का सबसे आम कारण; दर्द नसों के लक्षणों के बिना कमर में रहता है।'),
    confirm:L('Clinical examination. Guidelines advise against routine imaging.','क्लिनिकल जांच। गाइडलाइंस नियमित इमेजिंग की सलाह नहीं देतीं।'),cSrc:['nice'],
-   outlook:L('Usually settles over days to a few weeks with staying active and exercise.','सक्रिय रहने और व्यायाम से आमतौर पर कुछ दिनों से कुछ हफ्तों में ठीक हो जाता है।'),
+   outlook:L('Usually settles with staying active and exercise. In a meta-analysis of new back pain, average pain fell from 52 to 23 (out of 100) within 6 weeks and to 6 at one year.','सक्रिय रहने और व्यायाम से आमतौर पर ठीक हो जाता है। नए कमर दर्द के एक मेटा-एनालिसिस में औसत दर्द 100 में से 52 से 6 हफ्तों में 23 और एक साल में 6 रह गया।'),
    w:{h_first:2,btw_free:1,h_5y:-1,btw_some:-1,lowback:1,lowback_side:2,ch_spasm:3,ch_ache:2,on_lift:2,on_twist:2,on_bend:1,on_getup:1,d_days:2,d_weeks:1,w_bend:1,w_rise:1,b_lying:1,r_heavy:1,
       below_knee:-4,ch_shoot:-2,slr_pos:-3,cslr_pos:-3,dom_leg:-3,leg_any:-1,d_3m:-2,rf_fever:-3}},
   {id:'facet',th:[10,6,3],anchor:['lowback','lowback_side'],depts:['ortho_spine','physio','pain'],
@@ -1127,24 +1151,24 @@ const CONDS = [
    confirm:L('Examination; MRI to exclude a spinal cause.','जांच; रीढ़ के कारण को खारिज करने के लिए MRI।'),
    outlook:L('Stretching and physiotherapy; injections occasionally.','स्ट्रेचिंग और फिज़ियोथेरेपी; कभी-कभी इंजेक्शन।'),
    w:{buttock:2,thigh_back:2,w_sit:2,on_sitting:2,ch_shoot:1,lowback:-2,w_cough:-2,lowback_side:-1}},
-  {id:'stenosis',th:[12,7,4],anchor:['w_walk','b_sitflex','ch_heavy'],depts:['ortho_spine','neurosurg','physio'],
+  {id:'stenosis',th:[11,7,4],anchor:['w_walk','b_sitflex','b_sit_nopain','ch_heavy'],oSrc:'suri',depts:['ortho_spine','neurosurg','physio'],
    name:L('Lumbar spinal stenosis','लम्बर स्पाइनल स्टेनोसिस'),sci:'Neurogenic claudication',
    what:L('The canal for the nerves narrows with age. Legs ache, tingle or feel heavy on standing or walking and ease on sitting or bending forward; pushing a trolley helps.','उम्र के साथ नसों की नली संकरी होती है। खड़े रहने या चलने पर पैरों में दर्द, झुनझुनी या भारीपन, और बैठने या आगे झुकने पर आराम; ट्रॉली पकड़कर चलना आसान लगता है।'),
    confirm:L('MRI of the lumbar spine. Doctors also check leg pulses, because blocked leg arteries cause calf pain that eases simply by standing still.','कमर का MRI। डॉक्टर पैरों की नब्ज़ भी देखते हैं, क्योंकि धमनियों में रुकावट से भी पिंडली में दर्द होता है जो बस रुकने से ठीक होता है।'),cSrc:['msdss'],
    outlook:L('Physiotherapy and activity changes first; decompression surgery if walking distance keeps shrinking.','पहले फिज़ियोथेरेपी और गतिविधि में बदलाव; चलने की दूरी घटती रहे तो डीकंप्रेशन सर्जरी।'),
-   w:{h_5y:2,h_1_5y:1,btw_some:1,h_first:-1,w_walk:4,b_sitflex:3,both_legs:2,a_60p:3,a_50_59:2,ch_numb:1,ch_heavy:2,d_3m:2,on_gradual:2,w_extend:1,w_stand:1,slr_pos:-1,a_u18:-3,a_18_29:-3,a_30_39:-2,w_sit:-2}},
+   w:{h_5y:2,h_1_5y:1,btw_some:1,h_first:-1,w_walk:2,b_sitflex:3,b_sit_nopain:3,both_legs:3,a_60p:2,a_50_59:1,ch_numb:1,ch_heavy:1,d_3m:1,on_gradual:1,w_extend:1,w_stand:1,w_walk_calf:-3,slr_pos:-1,a_u18:-3,a_18_29:-3,a_30_39:-2,w_sit:-2}},
   {id:'spondy',th:[8,5,3],anchor:['w_extend'],depts:['ortho_spine','physio'],
    name:L('Spondylolysis / spondylolisthesis','स्पॉन्डिलोलिसिस / स्पॉन्डिलोलिस्थेसिस'),sci:'Pars interarticularis defect or vertebral slip',
    what:L('A stress crack in the back of a lower vertebra, or one vertebra slipping forward. Common in teenage athletes; pain is worse on arching back.','निचली हड्डी के पिछले हिस्से में स्ट्रेस क्रैक, या एक हड्डी का आगे खिसकना। खेलने वाले किशोरों में आम; पीछे झुकने पर दर्द बढ़ता है।'),
    confirm:L('Standing X-rays including flexion and extension views; CT or MRI for a stress fracture.','खड़े होकर एक्स-रे, आगे-पीछे झुककर भी; स्ट्रेस फ्रैक्चर के लिए CT या MRI।'),
    outlook:L('Most improve with rest from sport and core strengthening; surgery for high-grade slips.','ज़्यादातर खेल से आराम और कोर मज़बूती से बेहतर; ज़्यादा खिसकाव में सर्जरी।'),
    w:{h_lt1y:1,w_extend:3,a_u18:3,a_18_29:1,on_twist:2,on_gradual:1,d_3m:1,lowback:1,thigh_back:1}},
-  {id:'axspa',th:[13,8,5],anchor:['ch_stiff_am','b_exercise','ch_night_wake','w_rest'],depts:['rheum','physio'],
+  {id:'axspa',th:[9,6,4],anchor:['ibp2','r_spa','r_famspa'],depts:['rheum','physio'],
    name:L('Inflammatory back pain (axial spondyloarthritis)','सूजन वाला कमर दर्द (एक्सियल स्पॉन्डिलोआर्थराइटिस)'),sci:'Axial spondyloarthritis · ankylosing spondylitis',
    what:L('An immune condition that inflames the spine and SI joints. Typical features (ASAS): onset before 40, gradual start, better with exercise, not better with rest, and night pain that eases on getting up.','एक इम्यून बीमारी जो रीढ़ और SI जोड़ों में सूजन करती है। खास लक्षण (ASAS): 40 से पहले शुरुआत, धीरे-धीरे शुरू, व्यायाम से बेहतर, आराम से नहीं, और रात का दर्द जो उठने पर कम हो।'),cSrc:['asas'],
    confirm:L('Blood tests (CRP, ESR, HLA-B27) and MRI of the sacroiliac joints.','ब्लड टेस्ट (CRP, ESR, HLA-B27) और SI जोड़ों का MRI।'),
    outlook:L('Very treatable with anti-inflammatory and biologic medicines plus daily exercise; early diagnosis prevents stiffening.','सूजन-रोधी और बायोलॉजिक दवाओं और रोज़ के व्यायाम से अच्छा इलाज; जल्दी पहचान से जकड़न रोकी जा सकती है।'),
-   w:{h_1_5y:2,h_5y:2,btw_some:2,h_first:-1,a_u18:2,a_18_29:2,a_30_39:2,on_gradual:2,b_exercise:3,w_rest:2,ch_night_wake:2,ch_stiff_am:3,d_3m:3,r_spa:3,buttock:1,on_lift:-1,on_getup:-1,on_bend:-1,d_days:-2,slr_pos:-1}},
+   w:{h_1_5y:1,h_5y:1,btw_some:1,h_first:-1,a_u18:1,a_18_29:1,a_30_39:1,on_gradual:1,ibp2:2,ibp3:2,ch_stiff_am:1,ibp_ex:1,d_3m:2,r_spa:3,r_famspa:2,ch_heel:2,buttock:1,ch_alt_buttock:1,on_lift:-1,on_getup:-1,on_bend:-1,d_days:-2,slr_pos:-1,a_60p:-2}},
   {id:'coccyx',th:[8,6,4],anchor:['tailbone'],depts:['ortho','pain','physio'],
    name:L('Coccydynia (tailbone pain)','कॉक्सीडाइनिया (टेलबोन दर्द)'),sci:'Coccydynia',
    what:L('Bruising or inflammation of the tailbone or its ligaments, often after a fall, childbirth or long sitting. Worst when sitting and leaning back.','टेलबोन या उसके लिगामेंट में चोट या सूजन, अक्सर गिरने, डिलीवरी या लंबे समय बैठने के बाद। बैठने और पीछे टिकने पर सबसे ज़्यादा।'),cSrc:['coc'],
@@ -1169,9 +1193,9 @@ const CONDS = [
    confirm:L('Urine test, blood tests and an ultrasound or CT (KUB).','पेशाब की जांच, ब्लड टेस्ट और अल्ट्रासाउंड या CT (KUB)।'),
    outlook:L('Most small stones pass with fluids and pain relief; infection needs prompt antibiotics.','ज़्यादातर छोटी पथरी पानी और दर्द की दवा से निकल जाती है; इन्फेक्शन में जल्दी एंटीबायोटिक ज़रूरी।'),
    w:{btw_free:1,flank:5,ch_colic:3,u_urine:4,rf_fever:2,groin:1,ch_spasm:-1,w_bend:-1,w_sit:-1}},
-  {id:'infection',th:[9,6,4],anchor:['rf_fever'],depts:['ortho_spine','id_tb','gp'],
+  {id:'infection',oSrc:'tbindia',th:[9,6,4],anchor:['rf_fever'],depts:['ortho_spine','id_tb','gp'],
    name:L('Spinal infection, including spinal TB','रीढ़ का इन्फेक्शन, स्पाइनल टीबी सहित'),sci:"Spondylodiscitis · Pott's disease",
-   what:L('Bacteria or TB infect a disc and the bones beside it. Clues are constant pain with fever, night sweats, poor appetite or weight loss. Spinal TB remains common in India and is curable when treated early.','बैक्टीरिया या टीबी डिस्क और पास की हड्डियों को संक्रमित करते हैं। संकेत: बुखार, रात को पसीना, भूख कम या वज़न घटने के साथ लगातार दर्द। स्पाइनल टीबी भारत में अब भी आम है और जल्दी इलाज से ठीक होती है।'),cSrc:['pott','wikem'],
+   what:L('Bacteria or TB infect a disc and the bones beside it. Clues are constant pain with fever, night sweats, poor appetite or weight loss. Spinal TB remains common in India, which has about a quarter of all TB cases worldwide, and is curable when treated early.','बैक्टीरिया या टीबी डिस्क और पास की हड्डियों को संक्रमित करते हैं। संकेत: बुखार, रात को पसीना, भूख कम या वज़न घटने के साथ लगातार दर्द। स्पाइनल टीबी भारत में अब भी आम है (दुनिया के लगभग एक-चौथाई टीबी मरीज़ भारत में हैं) और जल्दी इलाज से ठीक होती है।'),cSrc:['pott','wikem'],
    confirm:L('Blood count, ESR and CRP, MRI, and a biopsy to identify the germ.','ब्लड काउंट, ESR और CRP, MRI, और कीटाणु पहचानने के लिए बायोप्सी।'),
    outlook:L('Long antibiotic or anti-TB treatment; surgery if bones collapse or nerves are pressed.','लंबा एंटीबायोटिक या टीबी का इलाज; हड्डी दबे या नस पर दबाव हो तो सर्जरी।'),
    w:{h_first:2,btw_often:1,h_5y:-2,rf_fever:5,r_tb:3,r_immune:2,rf_night:2,d_3m:1,d_6_12:1,t_worse:1}},
@@ -1180,13 +1204,13 @@ const CONDS = [
    what:L('A vertebra can break after trauma, or after a minor fall, lift or even a cough when bones are weak. Pain is sudden, worse standing and better lying down.','चोट के बाद, या हड्डियाँ कमज़ोर हों तो छोटी गिरावट, वज़न उठाने या खांसी से भी रीढ़ की हड्डी टूट सकती है। दर्द अचानक, खड़े होने पर ज़्यादा और लेटने पर कम।'),cSrc:['fx','wikem'],
    confirm:L('X-ray or CT; MRI to show whether the fracture is new; a DEXA scan for bone density.','एक्स-रे या CT; फ्रैक्चर नया है या पुराना, इसके लिए MRI; हड्डियों के घनत्व के लिए DEXA स्कैन।'),
    outlook:L('Most stable fractures heal with pain control and time; treating weak bones prevents the next one.','ज़्यादातर स्थिर फ्रैक्चर दर्द नियंत्रण और समय से जुड़ जाते हैं; कमज़ोर हड्डियों का इलाज अगला फ्रैक्चर रोकता है।'),
-   w:{h_first:1,rf_trauma:4,on_fall:3,on_accident:3,on_blow:2,r_bones:3,a_60p:2,b_lying:1,w_stand:1}},
+   w:{h_first:1,rf_trauma:4,on_fall:3,on_accident:3,on_blow:2,r_bones:4,fx_combo:4,a_60p:2,b_lying:1,w_stand:1}},
   {id:'tumour',th:[10,8,7],rare:true,anchor:['r_cancer'],depts:['ortho_spine','onco'],
    name:L('Tumour involving the spine (rare)','रीढ़ से जुड़ी गांठ (दुर्लभ)'),sci:'Spinal metastasis or primary tumour',
    what:L('Rare. Doctors look for it when there is past cancer, weight loss, or constant pain at night, especially after 50. Most such pain turns out to have another cause.','दुर्लभ। पहले कैंसर, वज़न घटने, या रात के लगातार दर्द में, खासकर 50 के बाद, डॉक्टर इसकी जांच करते हैं। ज़्यादातर ऐसा दर्द किसी और कारण से निकलता है।'),cSrc:['wikem'],
    confirm:L('Blood tests and MRI of the spine.','ब्लड टेस्ट और रीढ़ का MRI।'),
    outlook:L('Depends on the cause; early assessment matters.','कारण पर निर्भर; जल्दी जांच ज़रूरी।'),
-   w:{h_first:2,btw_often:1,h_5y:-2,r_cancer:5,rf_night:3,rf_fever:1,a_50_59:1,a_60p:2,d_6_12:1,d_3m:1,t_worse:1}},
+   w:{h_first:2,btw_often:1,h_5y:-2,r_cancer:5,rf_night:1,rf_fever:1,a_60p:1,d_6_12:1,d_3m:1,t_worse:1}},
   {id:'pgp',th:[8,6,4],anchor:['on_preg'],depts:['gyn','physio'],
    name:L('Pregnancy-related pelvic girdle pain','गर्भावस्था से जुड़ा पेल्विक दर्द'),sci:'Pelvic girdle pain',
    what:L('Hormones loosen the pelvic joints during pregnancy and after delivery, causing pain over the buttocks, tailbone or pubic bone.','गर्भावस्था और डिलीवरी के बाद हार्मोन पेल्विस के जोड़ों को ढीला करते हैं, जिससे नितंब, टेलबोन या प्यूबिक हड्डी पर दर्द होता है।'),
@@ -1267,7 +1291,23 @@ CONDS.push(
    outlook:L('Treatable once the cause is found.','कारण पता चलने पर इलाज संभव।'),
    causes:L('Endometriosis, fibroids, ovarian cysts or pelvic inflammatory disease.','एंडोमेट्रियोसिस, फाइब्रॉइड, अंडाशय की सिस्ट या पेल्विक इन्फेक्शन।'),
    treat:L('Depends on the cause: medicines, hormonal treatment or procedures.','कारण पर निर्भर: दवाएं, हार्मोनल इलाज या प्रोसीजर।'),
-   w:{ch_period:6,sex_f:1,groin:1,lowback:1,on_gradual:1}}
+   w:{ch_period:6,sex_f:1,groin:1,lowback:1,on_gradual:1}},
+  {id:'pad',th:[9,6,4],anchor:['w_walk_calf'],depts:['vascular','medicine'],oSrc:'nadeau',
+   name:L('Narrowed leg arteries (peripheral artery disease)','पैर की धमनियों का संकरापन (पेरिफेरल आर्टरी डिज़ीज़)'),sci:'Peripheral artery disease · vascular (intermittent) claudication',
+   what:L('Fatty plaque narrows the arteries to the legs, so the calf muscles run short of blood when walking. It feels like the spine problem called stenosis, but the pain sits in the calf and eases within a minute or two of just standing still; there is no need to sit or bend forward.','चर्बी की परत पैरों की धमनियों को संकरा कर देती है, इसलिए चलते समय पिंडली की मांसपेशियों को खून कम मिलता है। यह रीढ़ के स्टेनोसिस जैसा लगता है, लेकिन दर्द पिंडली में होता है और सिर्फ़ एक-दो मिनट खड़े रहने से ठीक हो जाता है; बैठने या आगे झुकने की ज़रूरत नहीं पड़ती।'),
+   confirm:L('Feeling the foot pulses and the ankle-brachial index (blood pressure at the ankle compared with the arm); a Doppler ultrasound if it is low.','पैर की नब्ज़ देखना और एंकल-ब्रेकियल इंडेक्स (टखने और बांह का ब्लड प्रेशर मिलाना); कम हो तो डॉप्लर अल्ट्रासाउंड।'),
+   outlook:L('Stopping smoking, a supervised walking programme and medicines for cholesterol, blood pressure and blood thinning improve walking distance and protect the heart. In one study, pain eased by simply standing still had a likelihood ratio of 7.8 for this cause.','धूम्रपान छोड़ना, निगरानी में चलने का अभ्यास और कोलेस्ट्रॉल, बीपी और खून पतला करने की दवाएं चलने की दूरी बढ़ाती हैं और दिल को भी बचाती हैं। एक अध्ययन में सिर्फ़ खड़े रहने से दर्द ठीक होने का likelihood ratio 7.8 था।'),
+   causes:L('Smoking or tobacco, diabetes, high blood pressure, high cholesterol and age over 50.','धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी, हाई कोलेस्ट्रॉल और 50 से ज़्यादा उम्र।'),
+   treat:L('A vascular or general physician checks the arteries; most people improve with walking exercise and medicines, and a few need a stent or bypass. Pain at rest, a cold pale foot or a sore that will not heal needs urgent care.','वैस्कुलर या जनरल फ़िज़िशियन धमनियां जांचते हैं; ज़्यादातर लोग चलने के व्यायाम और दवाओं से बेहतर होते हैं, कुछ को स्टेंट या बाईपास चाहिए। आराम में दर्द, ठंडा-पीला पैर या न भरने वाला घाव हो तो तुरंत इलाज ज़रूरी।'),
+   w:{w_walk_calf:5,r_vasc:2,a_60p:2,a_50_59:1,sex_m:1,s1:1,b_sitflex:-2,b_sit_nopain:-1,w_walk:-1,lowback:-1,a_u18:-3,a_18_29:-3,a_30_39:-2}},
+  {id:'cplbp',th:[9,6,4],anchor:['d_3m'],depts:['physio','gp','pain'],oSrc:'whocplbp',
+   name:L('Chronic primary low back pain (long-lasting back pain without a specific disease)','क्रॉनिक प्राइमरी कमर दर्द (बिना किसी खास बीमारी के लंबा चलने वाला दर्द)'),sci:'Chronic primary low back pain (WHO 2023), previously chronic non-specific low back pain',
+   what:L('Back pain that has lasted more than 3 months and is not caused by a specific disease such as a fracture, infection, inflammatory disease or a trapped nerve. The WHO says this is the cause in more than 90% of long-lasting back pain seen in primary care. The pain is real: nerves and muscles become more sensitive over time, and sleep, stress and inactivity keep it going.','कमर दर्द जो 3 महीने से ज़्यादा चल रहा हो और किसी खास बीमारी (फ्रैक्चर, इंफेक्शन, सूजन वाली बीमारी या दबी नस) से न हो। WHO के अनुसार प्राइमरी केयर में लंबे कमर दर्द के 90% से ज़्यादा मामले यही होते हैं। दर्द असली है: समय के साथ नसें और मांसपेशियां ज़्यादा संवेदनशील हो जाती हैं, और नींद, तनाव और कम हिलना-डुलना इसे बनाए रखते हैं।'),
+   confirm:L('A doctor rules out specific causes by history and examination; routine scans are not needed unless a red flag or nerve signs appear.','डॉक्टर बातचीत और जांच से खास कारणों को खारिज करते हैं; खतरे के संकेत या नस के लक्षण न हों तो रूटीन स्कैन ज़रूरी नहीं।'),
+   outlook:L('In a large meta-analysis, people whose back pain had lasted more than 6 weeks still improved, but more slowly: average pain fell from about 51 to 33 (out of 100) by 6 weeks and to 23 at one year. Structured exercise and education help most.','एक बड़े मेटा-एनालिसिस में 6 हफ्ते से ज़्यादा पुराने दर्द वाले लोग भी बेहतर हुए, बस धीरे: औसत दर्द 100 में से 51 से 6 हफ्तों में 33 और एक साल में 23 हुआ। नियमित व्यायाम और सही जानकारी सबसे ज़्यादा मदद करते हैं।'),
+   causes:L('Usually a mix of factors: deconditioned back and hip muscles, long sitting, heavy or repetitive work, poor sleep, stress and fear of movement.','अक्सर कई कारण मिलकर: कमज़ोर कमर और कूल्हे की मांसपेशियां, लंबा बैठना, भारी या बार-बार का काम, कम नींद, तनाव और हिलने से डर।'),
+   treat:L('The WHO 2023 guideline lists structured exercise, education and advice, and psychological approaches such as cognitive behavioural therapy; medicines are chosen by a doctor case by case.','WHO 2023 गाइडलाइन में नियमित व्यायाम, सही जानकारी और सलाह, और कॉग्निटिव बिहेवियरल थेरेपी जैसे मनोवैज्ञानिक तरीके शामिल हैं; दवाएं डॉक्टर हर व्यक्ति के हिसाब से चुनते हैं।'),
+   w:{d_3m:4,btw_some:2,h_1_5y:1,h_5y:1,lowback:1,lowback_side:1,ch_ache:1,sleep_bad:1,r_desk:1,below_knee:-2,dom_leg:-2,slr_pos:-1,rf_fever:-3,r_cancer:-2,ibp2:-2,w_walk:-2,w_walk_calf:-2,flank:-2,groin:-1,tailbone:-1,ch_period:-2}}
 );
 CONDS.forEach(c => Object.assign(c, EXTRA[c.id] || {}));
 EMERG.aaa = {name:L('Possible abdominal aortic aneurysm','पेट की महाधमनी फूलने (एन्यूरिज़्म) की आशंका'),sci:'Abdominal aortic aneurysm (rule out)',
@@ -1288,6 +1328,7 @@ const RS = {
   y_radic:L('Leg pain with nerve-root features','नस की जड़ के लक्षणों वाला पैर का दर्द'),
   y_long:L('This bout has lasted more than 6 weeks','इस बार का दर्द 6 हफ्ते से ज़्यादा से है'),
   y_inflam:L('Inflammatory pattern: long morning stiffness, better with exercise','सूजन वाला पैटर्न: सुबह लंबी अकड़न, व्यायाम से आराम'),
+  y_vasc:L('Calf pain on walking that eases on standing: leg blood flow must be checked','चलने पर पिंडली का दर्द जो खड़े रहने से ठीक हो: पैरों का ब्लड फ़्लो जांचना ज़रूरी'),
   y_claud:L('Leg symptoms on walking that ease on sitting','चलने पर पैरों के लक्षण जो बैठने पर कम हों'),
   y_groin:L('Groin pain, which can come from the hip','ग्रोइन का दर्द, जो कूल्हे से हो सकता है'),
   y_tail:L('Tailbone pain for more than a week','एक हफ्ते से ज़्यादा टेलबोन दर्द'),
@@ -1302,6 +1343,10 @@ const RS = {
   /* ---- declarative rules (read by the engine) ---- */
   const limbAreas = ['thigh_back','thigh_front','l4','l5','s1'];
   const DERIVED = [
+    {id:'ibp_ex', when:{any:['b_exercise','w_rest']}},
+    {id:'ibp2', when:{atLeast:[2,['ch_stiff_am','ibp_ex','ch_night_wake','ch_alt_buttock']]}},
+    {id:'ibp3', when:{atLeast:[3,['ch_stiff_am','ibp_ex','ch_night_wake','ch_alt_buttock']]}},
+    {id:'fx_combo', when:{atLeast:[3,['sex_f','a_60p','rf_trauma','r_bones']]}},
     {id:'leg_any', when:{any:limbAreas}},
     {id:'below_knee', when:{any:['l4','l5','s1']}},
     {id:'radicular', when:{any:['below_knee','dom_leg','slr_pos','cslr_pos','ch_shoot']}}
@@ -1322,8 +1367,9 @@ const RS = {
     yellow:[
       {r:'y_radic', when:'radicular'},
       {r:'y_often', when:'btw_often'}, {r:'y_long', when:{any:['d_6_12','d_3m']}},
-      {r:'y_inflam', when:{all:['ch_stiff_am',{any:['b_exercise','w_rest','ch_night_wake']}]}},
+      {r:'y_inflam', when:'ibp2'},
       {r:'y_claud', when:'w_walk'},
+      {r:'y_vasc', when:'w_walk_calf'},
       {r:'y_groin', when:'groin'},
       {r:'y_flank', when:'flank'},
       {r:'y_tail', when:{all:['tailbone',{not:'d_days'}]}},
@@ -1368,6 +1414,7 @@ const RS = {
     unknown:{en:'95% of lumbar herniations are at L4–L5 or L5–S1.{cite:ortho} Marking the shin and foot areas and doing the heel and toe tests narrows the level; MRI gives the final answer.', hi:'95% लम्बर हर्निएशन L4–L5 या L5–S1 पर होते हैं।{cite:ortho} स्तर पक्का करने के लिए पिंडली और पंजे के हिस्से चिन्हित करें और एड़ी व पंजों वाले टेस्ट करें; अंतिम पुष्टि MRI से होती है।'}
   };
   const LBLX = {
+    ibp_ex:L('Better with exercise, worse with rest','व्यायाम से बेहतर, आराम से बदतर'), ibp2:L('2 or more inflammatory back pain features','सूजन वाले कमर दर्द के 2 या ज़्यादा लक्षण'), ibp3:L('3 or more inflammatory back pain features','सूजन वाले कमर दर्द के 3 या ज़्यादा लक्षण'), fx_combo:L('Three fracture risk factors together','फ्रैक्चर के तीन जोखिम एक साथ'),
     leg_any:L('Pain spreads into the leg','दर्द पैर में फैलता है'), below_knee:L('Symptoms below the knee','घुटने के नीचे लक्षण'), leg_one:L('One leg only','सिर्फ एक पैर'), both_legs:L('Both legs','दोनों पैर'), radicular:L('Nerve-root features','नस की जड़ के लक्षण'),
     slr_pos:L('Straight leg raise positive','SLR पॉज़िटिव'), slr_neg:L('Straight leg raise negative','SLR नेगेटिव'), cslr_pos:L('Crossed SLR positive','क्रॉस्ड SLR पॉज़िटिव'),
     heel_weak:L('Weak on heel walk','एड़ी पर चलने में कमज़ोरी'), toe_weak:L('Weak on heel raise','पंजों पर उठने में कमज़ोरी')

@@ -2,7 +2,7 @@
   "meta": {
     "title": "Spine Pain Guide – clinical knowledge base (all spine regions)",
     "version": "v4",
-    "exported": "2026-11-03",
+    "exported": "2026-11-04",
     "languages": [
       "en",
       "hi"
@@ -126,6 +126,56 @@
         "key": "nums",
         "title": "Medical emergency numbers in India (108, 112)",
         "url": "https://zhl.org.in/blog/medical-emergency-numbers-india/"
+      },
+      {
+        "key": "suri",
+        "title": "Suri P et al. Does this older adult with lower extremity pain have lumbar spinal stenosis? JAMA Rational Clinical Examination 2010 (likelihood ratios summarised by TheNNT)",
+        "url": "https://thennt.com/lr/spinal-stenosis-in-the-elderly/"
+      },
+      {
+        "key": "downie",
+        "title": "Downie A et al. Red flags to screen for malignancy and fracture in patients with low back pain: systematic review. BMJ 2013;347:f7095",
+        "url": "https://repub.eur.nl/pub/72777"
+      },
+      {
+        "key": "nadeau",
+        "title": "Nadeau M et al. The reliability of differentiating neurogenic claudication from vascular claudication based on symptomatic presentation. Can J Surg 2013;56(6):372-7",
+        "url": "https://www.canjsurg.ca/content/cjs/56/6/372.full.pdf"
+      },
+      {
+        "key": "rudw06",
+        "title": "Rudwaleit M et al. Inflammatory back pain in ankylosing spondylitis: a reassessment of the clinical history for application as classification and diagnostic criteria. Arthritis Rheum 2006 (2 of 4 criteria LR 3.7; 3 of 4 LR 12.4)",
+        "url": "https://mrcpfacts.blogspot.com/2008/10/recognition-of-inflammatory-back-pain.html"
+      },
+      {
+        "key": "rudw04",
+        "title": "Rudwaleit M et al. How to diagnose axial spondyloarthritis early. Ann Rheum Dis 2004;63:535-43",
+        "url": "https://ard.bmj.com/content/63/5/535"
+      },
+      {
+        "key": "costa",
+        "title": "da C Menezes Costa L et al. The prognosis of acute and persistent low-back pain: a meta-analysis. CMAJ 2012;184:E613-24",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3414626/"
+      },
+      {
+        "key": "whocplbp",
+        "title": "WHO guideline for non-surgical management of chronic primary low back pain in adults (2023), summary brochure",
+        "url": "https://cdn.who.int/media/docs/default-source/mca-documents/ageing/lbp/summary_who_guideline_lower-back-pain_brochure_v7.pdf"
+      },
+      {
+        "key": "vitd",
+        "title": "Siddiqee MH et al. High prevalence of vitamin D deficiency among South Asian adults: systematic review and meta-analysis. BMC Public Health 2021 (India: 67%)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8501935"
+      },
+      {
+        "key": "tbindia",
+        "title": "WHO Global Tuberculosis Report 2025: India still about 25% of the global TB burden (news summary)",
+        "url": "https://health.medicaldialogues.in/health-topics/respiratory-health/india-records-21-drop-in-tb-cases-still-accounts-for-25-of-global-burden-who-tb-report-158564"
+      },
+      {
+        "key": "cesacc",
+        "title": "Diagnostic accuracy of red flags for cauda equina syndrome: systematic review (World Physiotherapy congress abstract): sensitivity 19-43%, specificity 62-88%",
+        "url": "https://world.physio/congress-proceeding/what-clinical-diagnostic-accuracy-red-flags-related-cauda-equina-syndrome-ces"
       },
       {
         "key": "gbdneck",
@@ -407,7 +457,7 @@
           "hi": "वैस्कुलर सर्जरी"
         },
         "s": {
-          "en": "Blood vessel emergencies such as aneurysm.",
+          "en": "Blood vessel problems: aneurysm, or blocked leg arteries that cause calf pain on walking.",
           "hi": "खून की नसों की इमरजेंसी, जैसे एन्यूरिज़्म।"
         },
         "q": "vascular surgeon"
@@ -661,6 +711,20 @@
           "label": {
             "en": "Heavy physical work",
             "hi": "भारी शारीरिक काम"
+          }
+        },
+        {
+          "id": "r_vasc",
+          "label": {
+            "en": "Smoking or tobacco, diabetes, high blood pressure or high cholesterol",
+            "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल"
+          }
+        },
+        {
+          "id": "r_famspa",
+          "label": {
+            "en": "Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease",
+            "hi": "माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)"
           }
         }
       ],
@@ -1053,7 +1117,7 @@
                 "en": "Straight leg raise positive",
                 "hi": "SLR पॉज़िटिव"
               },
-              "weight": 4
+              "weight": 1
             },
             {
               "feature": "cslr_pos",
@@ -1061,7 +1125,7 @@
                 "en": "Crossed SLR positive",
                 "hi": "क्रॉस्ड SLR पॉज़िटिव"
               },
-              "weight": 4
+              "weight": 2
             },
             {
               "feature": "heel_weak",
@@ -1202,8 +1266,8 @@
             {
               "feature": "w_walk",
               "label": {
-                "en": "Walking: legs ache or tingle and ease when you sit or bend forward",
-                "hi": "चलना: पैरों में दर्द या झुनझुनी जो बैठने या आगे झुकने पर कम हो"
+                "en": "Walking: legs ache, tingle or feel heavy, and ease only after sitting or bending forward",
+                "hi": "चलना: पैरों में दर्द, झुनझुनी या भारीपन जो बैठने या आगे झुकने पर ही कम हो"
               },
               "weight": -2
             },
@@ -1329,8 +1393,8 @@
             "hi": "आराम से जितना हो सके चलते-फिरते रहें, सिकाई करें, डॉक्टर की दी दर्द की दवा लें और फिज़ियोथेरेपी करें। बिस्तर पर आराम से ठीक होने में देर होती है।"
           },
           "outlook": {
-            "en": "Usually settles over days to a few weeks with staying active and exercise.",
-            "hi": "सक्रिय रहने और व्यायाम से आमतौर पर कुछ दिनों से कुछ हफ्तों में ठीक हो जाता है।"
+            "en": "Usually settles with staying active and exercise. In a meta-analysis of new back pain, average pain fell from 52 to 23 (out of 100) within 6 weeks and to 6 at one year.",
+            "hi": "सक्रिय रहने और व्यायाम से आमतौर पर ठीक हो जाता है। नए कमर दर्द के एक मेटा-एनालिसिस में औसत दर्द 100 में से 52 से 6 हफ्तों में 23 और एक साल में 6 रह गया।"
           },
           "thresholds": [
             9,
@@ -1348,7 +1412,7 @@
             "gp",
             "ortho_spine"
           ],
-          "outlookSource": null,
+          "outlookSource": "costa",
           "weights": [
             {
               "feature": "h_first",
@@ -2085,13 +2149,14 @@
             "hi": "पहले फिज़ियोथेरेपी और गतिविधि में बदलाव; चलने की दूरी घटती रहे तो डीकंप्रेशन सर्जरी।"
           },
           "thresholds": [
-            12,
+            11,
             7,
             4
           ],
           "anchors": [
             "w_walk",
             "b_sitflex",
+            "b_sit_nopain",
             "ch_heavy"
           ],
           "rare": false,
@@ -2101,7 +2166,7 @@
             "neurosurg",
             "physio"
           ],
-          "outlookSource": null,
+          "outlookSource": "suri",
           "weights": [
             {
               "feature": "h_5y",
@@ -2138,10 +2203,10 @@
             {
               "feature": "w_walk",
               "label": {
-                "en": "Walking: legs ache or tingle and ease when you sit or bend forward",
-                "hi": "चलना: पैरों में दर्द या झुनझुनी जो बैठने या आगे झुकने पर कम हो"
+                "en": "Walking: legs ache, tingle or feel heavy, and ease only after sitting or bending forward",
+                "hi": "चलना: पैरों में दर्द, झुनझुनी या भारीपन जो बैठने या आगे झुकने पर ही कम हो"
               },
-              "weight": 4
+              "weight": 2
             },
             {
               "feature": "b_sitflex",
@@ -2152,12 +2217,20 @@
               "weight": 3
             },
             {
+              "feature": "b_sit_nopain",
+              "label": {
+                "en": "No pain at all while sitting",
+                "hi": "बैठे रहने पर बिल्कुल दर्द नहीं"
+              },
+              "weight": 3
+            },
+            {
               "feature": "both_legs",
               "label": {
                 "en": "Both legs",
                 "hi": "दोनों पैर"
               },
-              "weight": 2
+              "weight": 3
             },
             {
               "feature": "a_60p",
@@ -2165,7 +2238,7 @@
                 "en": "60 or over",
                 "hi": "60 या ज़्यादा"
               },
-              "weight": 3
+              "weight": 2
             },
             {
               "feature": "a_50_59",
@@ -2173,7 +2246,7 @@
                 "en": "50–59",
                 "hi": "50–59"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "ch_numb",
@@ -2189,7 +2262,7 @@
                 "en": "Legs feel heavy or tired",
                 "hi": "पैर भारी या थके लगते हैं"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "d_3m",
@@ -2197,7 +2270,7 @@
                 "en": "This bout has lasted more than 3 months without going away",
                 "hi": "इस बार का दर्द 3 महीने से ज़्यादा से है, गया नहीं"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "on_gradual",
@@ -2205,7 +2278,7 @@
                 "en": "Slowly, with no clear reason",
                 "hi": "धीरे-धीरे, बिना साफ़ वजह"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "w_extend",
@@ -2222,6 +2295,14 @@
                 "hi": "देर तक खड़े रहना"
               },
               "weight": 1
+            },
+            {
+              "feature": "w_walk_calf",
+              "label": {
+                "en": "Walking: calf cramps or aches that ease within 1–2 minutes of just standing still",
+                "hi": "चलना: पिंडली में ऐंठन या दर्द जो सिर्फ़ 1–2 मिनट खड़े रहने से ठीक हो जाए"
+              },
+              "weight": -3
             },
             {
               "feature": "slr_pos",
@@ -2410,15 +2491,14 @@
             "hi": "सूजन-रोधी और बायोलॉजिक दवाओं और रोज़ के व्यायाम से अच्छा इलाज; जल्दी पहचान से जकड़न रोकी जा सकती है।"
           },
           "thresholds": [
-            13,
-            8,
-            5
+            9,
+            6,
+            4
           ],
           "anchors": [
-            "ch_stiff_am",
-            "b_exercise",
-            "ch_night_wake",
-            "w_rest"
+            "ibp2",
+            "r_spa",
+            "r_famspa"
           ],
           "rare": false,
           "onlyIf": null,
@@ -2434,7 +2514,7 @@
                 "en": "First had this pain 1 to 5 years ago",
                 "hi": "पहली बार यह दर्द 1 से 5 साल पहले हुआ"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "h_5y",
@@ -2442,7 +2522,7 @@
                 "en": "First had this pain more than 5 years ago",
                 "hi": "पहली बार यह दर्द 5 साल से भी पहले हुआ"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "btw_some",
@@ -2450,7 +2530,7 @@
                 "en": "Some pain always stays between bouts",
                 "hi": "दौरों के बीच भी थोड़ा दर्द रहता है"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "h_first",
@@ -2466,7 +2546,7 @@
                 "en": "Under 18",
                 "hi": "18 से कम"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "a_18_29",
@@ -2474,7 +2554,7 @@
                 "en": "18–29",
                 "hi": "18–29"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "a_30_39",
@@ -2482,7 +2562,7 @@
                 "en": "30–39",
                 "hi": "30–39"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "on_gradual",
@@ -2490,29 +2570,21 @@
                 "en": "Slowly, with no clear reason",
                 "hi": "धीरे-धीरे, बिना साफ़ वजह"
               },
-              "weight": 2
+              "weight": 1
             },
             {
-              "feature": "b_exercise",
+              "feature": "ibp2",
               "label": {
-                "en": "Exercise",
-                "hi": "व्यायाम"
-              },
-              "weight": 3
-            },
-            {
-              "feature": "w_rest",
-              "label": {
-                "en": "Resting (better once you get moving)",
-                "hi": "आराम करना (हिलने-डुलने से बेहतर)"
+                "en": "2 or more inflammatory back pain features",
+                "hi": "सूजन वाले कमर दर्द के 2 या ज़्यादा लक्षण"
               },
               "weight": 2
             },
             {
-              "feature": "ch_night_wake",
+              "feature": "ibp3",
               "label": {
-                "en": "Wakes you late at night and eases after getting up",
-                "hi": "देर रात दर्द से नींद खुलती है, उठने पर आराम"
+                "en": "3 or more inflammatory back pain features",
+                "hi": "सूजन वाले कमर दर्द के 3 या ज़्यादा लक्षण"
               },
               "weight": 2
             },
@@ -2522,7 +2594,15 @@
                 "en": "Stiff for more than 30 minutes after waking",
                 "hi": "सुबह उठने पर 30 मिनट से ज़्यादा अकड़न"
               },
-              "weight": 3
+              "weight": 1
+            },
+            {
+              "feature": "ibp_ex",
+              "label": {
+                "en": "Better with exercise, worse with rest",
+                "hi": "व्यायाम से बेहतर, आराम से बदतर"
+              },
+              "weight": 1
             },
             {
               "feature": "d_3m",
@@ -2530,7 +2610,7 @@
                 "en": "This bout has lasted more than 3 months without going away",
                 "hi": "इस बार का दर्द 3 महीने से ज़्यादा से है, गया नहीं"
               },
-              "weight": 3
+              "weight": 2
             },
             {
               "feature": "r_spa",
@@ -2541,10 +2621,34 @@
               "weight": 3
             },
             {
+              "feature": "r_famspa",
+              "label": {
+                "en": "Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease",
+                "hi": "माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "ch_heel",
+              "label": {
+                "en": "Heel pain without any injury",
+                "hi": "बिना किसी चोट के एड़ी में दर्द"
+              },
+              "weight": 2
+            },
+            {
               "feature": "buttock",
               "label": {
                 "en": "Buttock",
                 "hi": "नितंब"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_alt_buttock",
+              "label": {
+                "en": "Buttock pain that switches from one side to the other",
+                "hi": "नितंब का दर्द जो कभी एक तरफ़, कभी दूसरी तरफ़ होता है"
               },
               "weight": 1
             },
@@ -2587,6 +2691,14 @@
                 "hi": "SLR पॉज़िटिव"
               },
               "weight": -1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": -2
             }
           ]
         },
@@ -3071,8 +3183,8 @@
           },
           "scientific": "Spondylodiscitis · Pott's disease",
           "what": {
-            "en": "Bacteria or TB infect a disc and the bones beside it. Clues are constant pain with fever, night sweats, poor appetite or weight loss. Spinal TB remains common in India and is curable when treated early.",
-            "hi": "बैक्टीरिया या टीबी डिस्क और पास की हड्डियों को संक्रमित करते हैं। संकेत: बुखार, रात को पसीना, भूख कम या वज़न घटने के साथ लगातार दर्द। स्पाइनल टीबी भारत में अब भी आम है और जल्दी इलाज से ठीक होती है।"
+            "en": "Bacteria or TB infect a disc and the bones beside it. Clues are constant pain with fever, night sweats, poor appetite or weight loss. Spinal TB remains common in India, which has about a quarter of all TB cases worldwide, and is curable when treated early.",
+            "hi": "बैक्टीरिया या टीबी डिस्क और पास की हड्डियों को संक्रमित करते हैं। संकेत: बुखार, रात को पसीना, भूख कम या वज़न घटने के साथ लगातार दर्द। स्पाइनल टीबी भारत में अब भी आम है (दुनिया के लगभग एक-चौथाई टीबी मरीज़ भारत में हैं) और जल्दी इलाज से ठीक होती है।"
           },
           "causes": {
             "en": "Bacteria or TB reach the spine through the blood, often from a lung, urine or skin infection. Diabetes and low immunity raise the risk.",
@@ -3105,7 +3217,7 @@
             "id_tb",
             "gp"
           ],
-          "outlookSource": null,
+          "outlookSource": "tbindia",
           "weights": [
             {
               "feature": "h_first",
@@ -3282,7 +3394,15 @@
                 "en": "Osteoporosis, or steroid tablets for 3+ months",
                 "hi": "ऑस्टियोपोरोसिस, या 3+ महीने स्टेरॉयड की गोलियां"
               },
-              "weight": 3
+              "weight": 4
+            },
+            {
+              "feature": "fx_combo",
+              "label": {
+                "en": "Three fracture risk factors together",
+                "hi": "फ्रैक्चर के तीन जोखिम एक साथ"
+              },
+              "weight": 4
             },
             {
               "feature": "a_60p",
@@ -3391,7 +3511,7 @@
                 "en": "Constant pain at night that no position eases",
                 "hi": "रात को लगातार दर्द जो किसी भी पोज़िशन में कम न हो"
               },
-              "weight": 3
+              "weight": 1
             },
             {
               "feature": "rf_fever",
@@ -3402,20 +3522,12 @@
               "weight": 1
             },
             {
-              "feature": "a_50_59",
-              "label": {
-                "en": "50–59",
-                "hi": "50–59"
-              },
-              "weight": 1
-            },
-            {
               "feature": "a_60p",
               "label": {
                 "en": "60 or over",
                 "hi": "60 या ज़्यादा"
               },
-              "weight": 2
+              "weight": 1
             },
             {
               "feature": "d_6_12",
@@ -4008,6 +4120,369 @@
               "weight": 1
             }
           ]
+        },
+        {
+          "id": "pad",
+          "name": {
+            "en": "Narrowed leg arteries (peripheral artery disease)",
+            "hi": "पैर की धमनियों का संकरापन (पेरिफेरल आर्टरी डिज़ीज़)"
+          },
+          "scientific": "Peripheral artery disease · vascular (intermittent) claudication",
+          "what": {
+            "en": "Fatty plaque narrows the arteries to the legs, so the calf muscles run short of blood when walking. It feels like the spine problem called stenosis, but the pain sits in the calf and eases within a minute or two of just standing still; there is no need to sit or bend forward.",
+            "hi": "चर्बी की परत पैरों की धमनियों को संकरा कर देती है, इसलिए चलते समय पिंडली की मांसपेशियों को खून कम मिलता है। यह रीढ़ के स्टेनोसिस जैसा लगता है, लेकिन दर्द पिंडली में होता है और सिर्फ़ एक-दो मिनट खड़े रहने से ठीक हो जाता है; बैठने या आगे झुकने की ज़रूरत नहीं पड़ती।"
+          },
+          "causes": {
+            "en": "Smoking or tobacco, diabetes, high blood pressure, high cholesterol and age over 50.",
+            "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी, हाई कोलेस्ट्रॉल और 50 से ज़्यादा उम्र।"
+          },
+          "confirm": {
+            "en": "Feeling the foot pulses and the ankle-brachial index (blood pressure at the ankle compared with the arm); a Doppler ultrasound if it is low.",
+            "hi": "पैर की नब्ज़ देखना और एंकल-ब्रेकियल इंडेक्स (टखने और बांह का ब्लड प्रेशर मिलाना); कम हो तो डॉप्लर अल्ट्रासाउंड।"
+          },
+          "treat": {
+            "en": "A vascular or general physician checks the arteries; most people improve with walking exercise and medicines, and a few need a stent or bypass. Pain at rest, a cold pale foot or a sore that will not heal needs urgent care.",
+            "hi": "वैस्कुलर या जनरल फ़िज़िशियन धमनियां जांचते हैं; ज़्यादातर लोग चलने के व्यायाम और दवाओं से बेहतर होते हैं, कुछ को स्टेंट या बाईपास चाहिए। आराम में दर्द, ठंडा-पीला पैर या न भरने वाला घाव हो तो तुरंत इलाज ज़रूरी।"
+          },
+          "outlook": {
+            "en": "Stopping smoking, a supervised walking programme and medicines for cholesterol, blood pressure and blood thinning improve walking distance and protect the heart. In one study, pain eased by simply standing still had a likelihood ratio of 7.8 for this cause.",
+            "hi": "धूम्रपान छोड़ना, निगरानी में चलने का अभ्यास और कोलेस्ट्रॉल, बीपी और खून पतला करने की दवाएं चलने की दूरी बढ़ाती हैं और दिल को भी बचाती हैं। एक अध्ययन में सिर्फ़ खड़े रहने से दर्द ठीक होने का likelihood ratio 7.8 था।"
+          },
+          "thresholds": [
+            9,
+            6,
+            4
+          ],
+          "anchors": [
+            "w_walk_calf"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "vascular",
+            "medicine"
+          ],
+          "outlookSource": "nadeau",
+          "weights": [
+            {
+              "feature": "w_walk_calf",
+              "label": {
+                "en": "Walking: calf cramps or aches that ease within 1–2 minutes of just standing still",
+                "hi": "चलना: पिंडली में ऐंठन या दर्द जो सिर्फ़ 1–2 मिनट खड़े रहने से ठीक हो जाए"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "r_vasc",
+              "label": {
+                "en": "Smoking or tobacco, diabetes, high blood pressure or high cholesterol",
+                "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sex_m",
+              "label": {
+                "en": "Male",
+                "hi": "पुरुष"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "s1",
+              "label": {
+                "en": "Back of the calf, heel, sole, little toe",
+                "hi": "पिंडली का पिछला हिस्सा, एड़ी, तलवा, छोटी उंगली"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "b_sitflex",
+              "label": {
+                "en": "Sitting or leaning forward",
+                "hi": "बैठना या आगे झुकना"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "b_sit_nopain",
+              "label": {
+                "en": "No pain at all while sitting",
+                "hi": "बैठे रहने पर बिल्कुल दर्द नहीं"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "w_walk",
+              "label": {
+                "en": "Walking: legs ache, tingle or feel heavy, and ease only after sitting or bending forward",
+                "hi": "चलना: पैरों में दर्द, झुनझुनी या भारीपन जो बैठने या आगे झुकने पर ही कम हो"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "lowback",
+              "label": {
+                "en": "Lower back, centre",
+                "hi": "कमर का बीच का हिस्सा"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "cplbp",
+          "name": {
+            "en": "Chronic primary low back pain (long-lasting back pain without a specific disease)",
+            "hi": "क्रॉनिक प्राइमरी कमर दर्द (बिना किसी खास बीमारी के लंबा चलने वाला दर्द)"
+          },
+          "scientific": "Chronic primary low back pain (WHO 2023), previously chronic non-specific low back pain",
+          "what": {
+            "en": "Back pain that has lasted more than 3 months and is not caused by a specific disease such as a fracture, infection, inflammatory disease or a trapped nerve. The WHO says this is the cause in more than 90% of long-lasting back pain seen in primary care. The pain is real: nerves and muscles become more sensitive over time, and sleep, stress and inactivity keep it going.",
+            "hi": "कमर दर्द जो 3 महीने से ज़्यादा चल रहा हो और किसी खास बीमारी (फ्रैक्चर, इंफेक्शन, सूजन वाली बीमारी या दबी नस) से न हो। WHO के अनुसार प्राइमरी केयर में लंबे कमर दर्द के 90% से ज़्यादा मामले यही होते हैं। दर्द असली है: समय के साथ नसें और मांसपेशियां ज़्यादा संवेदनशील हो जाती हैं, और नींद, तनाव और कम हिलना-डुलना इसे बनाए रखते हैं।"
+          },
+          "causes": {
+            "en": "Usually a mix of factors: deconditioned back and hip muscles, long sitting, heavy or repetitive work, poor sleep, stress and fear of movement.",
+            "hi": "अक्सर कई कारण मिलकर: कमज़ोर कमर और कूल्हे की मांसपेशियां, लंबा बैठना, भारी या बार-बार का काम, कम नींद, तनाव और हिलने से डर।"
+          },
+          "confirm": {
+            "en": "A doctor rules out specific causes by history and examination; routine scans are not needed unless a red flag or nerve signs appear.",
+            "hi": "डॉक्टर बातचीत और जांच से खास कारणों को खारिज करते हैं; खतरे के संकेत या नस के लक्षण न हों तो रूटीन स्कैन ज़रूरी नहीं।"
+          },
+          "treat": {
+            "en": "The WHO 2023 guideline lists structured exercise, education and advice, and psychological approaches such as cognitive behavioural therapy; medicines are chosen by a doctor case by case.",
+            "hi": "WHO 2023 गाइडलाइन में नियमित व्यायाम, सही जानकारी और सलाह, और कॉग्निटिव बिहेवियरल थेरेपी जैसे मनोवैज्ञानिक तरीके शामिल हैं; दवाएं डॉक्टर हर व्यक्ति के हिसाब से चुनते हैं।"
+          },
+          "outlook": {
+            "en": "In a large meta-analysis, people whose back pain had lasted more than 6 weeks still improved, but more slowly: average pain fell from about 51 to 33 (out of 100) by 6 weeks and to 23 at one year. Structured exercise and education help most.",
+            "hi": "एक बड़े मेटा-एनालिसिस में 6 हफ्ते से ज़्यादा पुराने दर्द वाले लोग भी बेहतर हुए, बस धीरे: औसत दर्द 100 में से 51 से 6 हफ्तों में 33 और एक साल में 23 हुआ। नियमित व्यायाम और सही जानकारी सबसे ज़्यादा मदद करते हैं।"
+          },
+          "thresholds": [
+            9,
+            6,
+            4
+          ],
+          "anchors": [
+            "d_3m"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "physio",
+            "gp",
+            "pain"
+          ],
+          "outlookSource": "whocplbp",
+          "weights": [
+            {
+              "feature": "d_3m",
+              "label": {
+                "en": "This bout has lasted more than 3 months without going away",
+                "hi": "इस बार का दर्द 3 महीने से ज़्यादा से है, गया नहीं"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "btw_some",
+              "label": {
+                "en": "Some pain always stays between bouts",
+                "hi": "दौरों के बीच भी थोड़ा दर्द रहता है"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "h_1_5y",
+              "label": {
+                "en": "First had this pain 1 to 5 years ago",
+                "hi": "पहली बार यह दर्द 1 से 5 साल पहले हुआ"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "h_5y",
+              "label": {
+                "en": "First had this pain more than 5 years ago",
+                "hi": "पहली बार यह दर्द 5 साल से भी पहले हुआ"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "lowback",
+              "label": {
+                "en": "Lower back, centre",
+                "hi": "कमर का बीच का हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "lowback_side",
+              "label": {
+                "en": "Lower back, beside the spine",
+                "hi": "कमर में, रीढ़ के बगल में"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_ache",
+              "label": {
+                "en": "Dull, deep ache in the back",
+                "hi": "कमर में भारी, गहरा दर्द"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sleep_bad",
+              "label": {
+                "en": "Pain wakes me up",
+                "hi": "दर्द से नींद खुलती है"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "r_desk",
+              "label": {
+                "en": "Desk job or long hours of sitting",
+                "hi": "डेस्क जॉब या लंबे समय बैठना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "below_knee",
+              "label": {
+                "en": "Symptoms below the knee",
+                "hi": "घुटने के नीचे लक्षण"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "dom_leg",
+              "label": {
+                "en": "Leg pain is worse",
+                "hi": "पैर का दर्द ज़्यादा"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "slr_pos",
+              "label": {
+                "en": "Straight leg raise positive",
+                "hi": "SLR पॉज़िटिव"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "rf_fever",
+              "label": {
+                "en": "Fever, night sweats or weight loss without trying",
+                "hi": "बुखार, रात को पसीना या बिना कोशिश वज़न घटना"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "r_cancer",
+              "label": {
+                "en": "Cancer, now or in the past",
+                "hi": "कैंसर, अभी या पहले"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ibp2",
+              "label": {
+                "en": "2 or more inflammatory back pain features",
+                "hi": "सूजन वाले कमर दर्द के 2 या ज़्यादा लक्षण"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "w_walk",
+              "label": {
+                "en": "Walking: legs ache, tingle or feel heavy, and ease only after sitting or bending forward",
+                "hi": "चलना: पैरों में दर्द, झुनझुनी या भारीपन जो बैठने या आगे झुकने पर ही कम हो"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "w_walk_calf",
+              "label": {
+                "en": "Walking: calf cramps or aches that ease within 1–2 minutes of just standing still",
+                "hi": "चलना: पिंडली में ऐंठन या दर्द जो सिर्फ़ 1–2 मिनट खड़े रहने से ठीक हो जाए"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "flank",
+              "label": {
+                "en": "Flank, below the ribs",
+                "hi": "फ्लैंक, पसलियों के नीचे"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "groin",
+              "label": {
+                "en": "Groin, front of the hip",
+                "hi": "ग्रोइन, कूल्हे का अगला हिस्सा"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "tailbone",
+              "label": {
+                "en": "Tailbone (coccyx)",
+                "hi": "टेलबोन (कॉक्सिक्स)"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_period",
+              "label": {
+                "en": "Pain that comes with periods",
+                "hi": "पीरियड्स के साथ आने वाला दर्द"
+              },
+              "weight": -2
+            }
+          ]
         }
       ],
       "emergencies": [
@@ -4237,18 +4712,7 @@
               "en": "Inflammatory pattern: long morning stiffness, better with exercise",
               "hi": "सूजन वाला पैटर्न: सुबह लंबी अकड़न, व्यायाम से आराम"
             },
-            "when": {
-              "all": [
-                "ch_stiff_am",
-                {
-                  "any": [
-                    "b_exercise",
-                    "w_rest",
-                    "ch_night_wake"
-                  ]
-                }
-              ]
-            }
+            "when": "ibp2"
           },
           {
             "reason": "y_claud",
@@ -4257,6 +4721,14 @@
               "hi": "चलने पर पैरों के लक्षण जो बैठने पर कम हों"
             },
             "when": "w_walk"
+          },
+          {
+            "reason": "y_vasc",
+            "text": {
+              "en": "Calf pain on walking that eases on standing: leg blood flow must be checked",
+              "hi": "चलने पर पिंडली का दर्द जो खड़े रहने से ठीक हो: पैरों का ब्लड फ़्लो जांचना ज़रूरी"
+            },
+            "when": "w_walk_calf"
           },
           {
             "reason": "y_groin",
@@ -4534,6 +5006,57 @@
       ],
       "derived": [
         {
+          "id": "ibp_ex",
+          "when": {
+            "any": [
+              "b_exercise",
+              "w_rest"
+            ]
+          }
+        },
+        {
+          "id": "ibp2",
+          "when": {
+            "atLeast": [
+              2,
+              [
+                "ch_stiff_am",
+                "ibp_ex",
+                "ch_night_wake",
+                "ch_alt_buttock"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "ibp3",
+          "when": {
+            "atLeast": [
+              3,
+              [
+                "ch_stiff_am",
+                "ibp_ex",
+                "ch_night_wake",
+                "ch_alt_buttock"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fx_combo",
+          "when": {
+            "atLeast": [
+              3,
+              [
+                "sex_f",
+                "a_60p",
+                "rf_trauma",
+                "r_bones"
+              ]
+            ]
+          }
+        },
+        {
           "id": "leg_any",
           "when": {
             "any": [
@@ -4632,6 +5155,20 @@
               "en": "Wakes you late at night and eases after getting up",
               "hi": "देर रात दर्द से नींद खुलती है, उठने पर आराम"
             }
+          },
+          {
+            "id": "ch_alt_buttock",
+            "label": {
+              "en": "Buttock pain that switches from one side to the other",
+              "hi": "नितंब का दर्द जो कभी एक तरफ़, कभी दूसरी तरफ़ होता है"
+            }
+          },
+          {
+            "id": "ch_heel",
+            "label": {
+              "en": "Heel pain without any injury",
+              "hi": "बिना किसी चोट के एड़ी में दर्द"
+            }
           }
         ],
         "worse": [
@@ -4680,8 +5217,15 @@
           {
             "id": "w_walk",
             "label": {
-              "en": "Walking: legs ache or tingle and ease when you sit or bend forward",
-              "hi": "चलना: पैरों में दर्द या झुनझुनी जो बैठने या आगे झुकने पर कम हो"
+              "en": "Walking: legs ache, tingle or feel heavy, and ease only after sitting or bending forward",
+              "hi": "चलना: पैरों में दर्द, झुनझुनी या भारीपन जो बैठने या आगे झुकने पर ही कम हो"
+            }
+          },
+          {
+            "id": "w_walk_calf",
+            "label": {
+              "en": "Walking: calf cramps or aches that ease within 1–2 minutes of just standing still",
+              "hi": "चलना: पिंडली में ऐंठन या दर्द जो सिर्फ़ 1–2 मिनट खड़े रहने से ठीक हो जाए"
             }
           },
           {
@@ -4705,6 +5249,13 @@
             "label": {
               "en": "Sitting or leaning forward",
               "hi": "बैठना या आगे झुकना"
+            }
+          },
+          {
+            "id": "b_sit_nopain",
+            "label": {
+              "en": "No pain at all while sitting",
+              "hi": "बैठे रहने पर बिल्कुल दर्द नहीं"
             }
           },
           {
@@ -5212,6 +5763,14 @@
           "en": "Heavy physical work",
           "hi": "भारी शारीरिक काम"
         },
+        "r_vasc": {
+          "en": "Smoking or tobacco, diabetes, high blood pressure or high cholesterol",
+          "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल"
+        },
+        "r_famspa": {
+          "en": "Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease",
+          "hi": "माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)"
+        },
         "on_getup": {
           "en": "Getting up quickly from bed or a chair",
           "hi": "बिस्तर या कुर्सी से जल्दी उठते समय"
@@ -5380,6 +5939,14 @@
           "en": "Wakes you late at night and eases after getting up",
           "hi": "देर रात दर्द से नींद खुलती है, उठने पर आराम"
         },
+        "ch_alt_buttock": {
+          "en": "Buttock pain that switches from one side to the other",
+          "hi": "नितंब का दर्द जो कभी एक तरफ़, कभी दूसरी तरफ़ होता है"
+        },
+        "ch_heel": {
+          "en": "Heel pain without any injury",
+          "hi": "बिना किसी चोट के एड़ी में दर्द"
+        },
         "w_sit": {
           "en": "Sitting",
           "hi": "बैठना"
@@ -5405,8 +5972,12 @@
           "hi": "देर तक खड़े रहना"
         },
         "w_walk": {
-          "en": "Walking: legs ache or tingle and ease when you sit or bend forward",
-          "hi": "चलना: पैरों में दर्द या झुनझुनी जो बैठने या आगे झुकने पर कम हो"
+          "en": "Walking: legs ache, tingle or feel heavy, and ease only after sitting or bending forward",
+          "hi": "चलना: पैरों में दर्द, झुनझुनी या भारीपन जो बैठने या आगे झुकने पर ही कम हो"
+        },
+        "w_walk_calf": {
+          "en": "Walking: calf cramps or aches that ease within 1–2 minutes of just standing still",
+          "hi": "चलना: पिंडली में ऐंठन या दर्द जो सिर्फ़ 1–2 मिनट खड़े रहने से ठीक हो जाए"
         },
         "w_rest": {
           "en": "Resting (better once you get moving)",
@@ -5419,6 +5990,10 @@
         "b_sitflex": {
           "en": "Sitting or leaning forward",
           "hi": "बैठना या आगे झुकना"
+        },
+        "b_sit_nopain": {
+          "en": "No pain at all while sitting",
+          "hi": "बैठे रहने पर बिल्कुल दर्द नहीं"
         },
         "b_walk": {
           "en": "Walking and moving around",
@@ -5667,6 +6242,22 @@
         "age_ge50": {
           "en": "Age 50 or over",
           "hi": "50 या ज़्यादा उम्र"
+        },
+        "ibp_ex": {
+          "en": "Better with exercise, worse with rest",
+          "hi": "व्यायाम से बेहतर, आराम से बदतर"
+        },
+        "ibp2": {
+          "en": "2 or more inflammatory back pain features",
+          "hi": "सूजन वाले कमर दर्द के 2 या ज़्यादा लक्षण"
+        },
+        "ibp3": {
+          "en": "3 or more inflammatory back pain features",
+          "hi": "सूजन वाले कमर दर्द के 3 या ज़्यादा लक्षण"
+        },
+        "fx_combo": {
+          "en": "Three fracture risk factors together",
+          "hi": "फ्रैक्चर के तीन जोखिम एक साथ"
         },
         "leg_any": {
           "en": "Pain spreads into the leg",
@@ -8734,6 +9325,14 @@
         "r_heavy": {
           "en": "Heavy physical work",
           "hi": "भारी शारीरिक काम"
+        },
+        "r_vasc": {
+          "en": "Smoking or tobacco, diabetes, high blood pressure or high cholesterol",
+          "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल"
+        },
+        "r_famspa": {
+          "en": "Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease",
+          "hi": "माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)"
         },
         "on_getup": {
           "en": "Getting up quickly from bed or a chair",
@@ -11972,6 +12571,14 @@
           "en": "Heavy physical work",
           "hi": "भारी शारीरिक काम"
         },
+        "r_vasc": {
+          "en": "Smoking or tobacco, diabetes, high blood pressure or high cholesterol",
+          "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल"
+        },
+        "r_famspa": {
+          "en": "Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease",
+          "hi": "माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)"
+        },
         "on_getup": {
           "en": "Getting up quickly from bed or a chair",
           "hi": "बिस्तर या कुर्सी से जल्दी उठते समय"
@@ -14605,6 +15212,14 @@
         "r_heavy": {
           "en": "Heavy physical work",
           "hi": "भारी शारीरिक काम"
+        },
+        "r_vasc": {
+          "en": "Smoking or tobacco, diabetes, high blood pressure or high cholesterol",
+          "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल"
+        },
+        "r_famspa": {
+          "en": "Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease",
+          "hi": "माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)"
         },
         "on_getup": {
           "en": "Getting up quickly from bed or a chair",

@@ -24,7 +24,17 @@ const SRC = [
   ['pott',"Pott's disease (spinal tuberculosis)",'https://en.wikipedia.org/wiki/Pott%27s_disease'],
   ['kid','NHS 111 Wales – Kidney stones','https://111.wales.nhs.uk/kidneystones/'],
   ['coc','Texas Orthopedics – Coccydynia','https://www.txortho.com/patient-education-article/coccydynia-tailbone-pain-969'],
-  ['nums','Medical emergency numbers in India (108, 112)','https://zhl.org.in/blog/medical-emergency-numbers-india/']
+  ['nums','Medical emergency numbers in India (108, 112)','https://zhl.org.in/blog/medical-emergency-numbers-india/'],
+  ['suri','Suri P et al. Does this older adult with lower extremity pain have lumbar spinal stenosis? JAMA Rational Clinical Examination 2010 (likelihood ratios summarised by TheNNT)','https://thennt.com/lr/spinal-stenosis-in-the-elderly/'],
+  ['downie','Downie A et al. Red flags to screen for malignancy and fracture in patients with low back pain: systematic review. BMJ 2013;347:f7095','https://repub.eur.nl/pub/72777'],
+  ['nadeau','Nadeau M et al. The reliability of differentiating neurogenic claudication from vascular claudication based on symptomatic presentation. Can J Surg 2013;56(6):372-7','https://www.canjsurg.ca/content/cjs/56/6/372.full.pdf'],
+  ['rudw06','Rudwaleit M et al. Inflammatory back pain in ankylosing spondylitis: a reassessment of the clinical history for application as classification and diagnostic criteria. Arthritis Rheum 2006 (2 of 4 criteria LR 3.7; 3 of 4 LR 12.4)','https://mrcpfacts.blogspot.com/2008/10/recognition-of-inflammatory-back-pain.html'],
+  ['rudw04','Rudwaleit M et al. How to diagnose axial spondyloarthritis early. Ann Rheum Dis 2004;63:535-43','https://ard.bmj.com/content/63/5/535'],
+  ['costa','da C Menezes Costa L et al. The prognosis of acute and persistent low-back pain: a meta-analysis. CMAJ 2012;184:E613-24','https://pmc.ncbi.nlm.nih.gov/articles/PMC3414626/'],
+  ['whocplbp','WHO guideline for non-surgical management of chronic primary low back pain in adults (2023), summary brochure','https://cdn.who.int/media/docs/default-source/mca-documents/ageing/lbp/summary_who_guideline_lower-back-pain_brochure_v7.pdf'],
+  ['vitd','Siddiqee MH et al. High prevalence of vitamin D deficiency among South Asian adults: systematic review and meta-analysis. BMC Public Health 2021 (India: 67%)','https://pmc.ncbi.nlm.nih.gov/articles/PMC8501935'],
+  ['tbindia','WHO Global Tuberculosis Report 2025: India still about 25% of the global TB burden (news summary)','https://health.medicaldialogues.in/health-topics/respiratory-health/india-records-21-drop-in-tb-cases-still-accounts-for-25-of-global-burden-who-tb-report-158564'],
+  ['cesacc','Diagnostic accuracy of red flags for cauda equina syndrome: systematic review (World Physiotherapy congress abstract): sensitivity 19-43%, specificity 62-88%','https://world.physio/congress-proceeding/what-clinical-diagnostic-accuracy-red-flags-related-cauda-equina-syndrome-ces']
 ];
 const U = {
   brand:L('Spine Pain Guide','रीढ़ दर्द गाइड'), tag:L('Spine assessment','रीढ़ दर्द जांच'), sos:L('Emergency','इमरजेंसी'),
@@ -137,7 +147,9 @@ const RISKS = [
   ['r_tb',L('TB now or before, or a TB patient at home','अभी या पहले टीबी, या घर में टीबी मरीज़')],
   ['r_spa',L('Psoriasis, inflammatory bowel disease or recurring red, painful eye','सोरायसिस, आंतों की सूजन (IBD) या बार-बार लाल, दर्द भरी आंख')],
   ['r_desk',L('Desk job or long hours of sitting','डेस्क जॉब या लंबे समय बैठना')],
-  ['r_heavy',L('Heavy physical work','भारी शारीरिक काम')]
+  ['r_heavy',L('Heavy physical work','भारी शारीरिक काम')],
+  ['r_vasc',L('Smoking or tobacco, diabetes, high blood pressure or high cholesterol','धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल')],
+  ['r_famspa',L('Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease','माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)')]
 ];
 const ONSETS = [
   ['on_getup',L('Getting up quickly from bed or a chair','बिस्तर या कुर्सी से जल्दी उठते समय')],
@@ -194,8 +206,17 @@ const STATS = [
   {v:'30% → 84%',t:L('of people with no pain show a disc bulge on MRI, at age 20 and 80','बिना दर्द वाले लोगों के MRI में डिस्क बल्ज, 20 और 80 की उम्र में'),s:'ajnr'},
   {v:'92%',t:L('sensitivity of the straight leg raise test for disc herniation','डिस्क हर्निएशन के लिए SLR टेस्ट की संवेदनशीलता'),s:'cochrane'}
 ];
-DEPTS.vascular = {n:L('Vascular surgery','वैस्कुलर सर्जरी'),s:L('Blood vessel emergencies such as aneurysm.','खून की नसों की इमरजेंसी, जैसे एन्यूरिज़्म।'),q:'vascular surgeon'};
+DEPTS.vascular = {n:L('Vascular surgery','वैस्कुलर सर्जरी'),s:L('Blood vessel problems: aneurysm, or blocked leg arteries that cause calf pain on walking.','खून की नसों की इमरजेंसी, जैसे एन्यूरिज़्म।'),q:'vascular surgeon'};
 const FX = {
+  b_sit_nopain:L('No pain at all when sitting is one of the strongest clues to spinal stenosis (likelihood ratio 7.4).','बैठने पर बिल्कुल दर्द न होना स्पाइनल स्टेनोसिस का सबसे मज़बूत संकेतों में से एक है (likelihood ratio 7.4)।'),
+  w_walk_calf:L('Calf pain on walking that eases just by standing still points to narrowed leg arteries rather than the spine (likelihood ratio 7.8).','चलने पर पिंडली का दर्द जो सिर्फ़ खड़े रहने से ठीक हो, रीढ़ के बजाय पैर की धमनियों के संकरेपन की ओर इशारा करता है (likelihood ratio 7.8)।'),
+  ch_alt_buttock:L('Buttock pain that switches sides is one of the four classic inflammatory back pain features.','नितंब का दर्द जो तरफ़ बदलता है, सूजन वाले कमर दर्द के चार खास लक्षणों में से एक है।'),
+  ch_heel:L('Heel pain without an injury can be inflammation where tendons attach (enthesitis), seen in spondyloarthritis (likelihood ratio 3.4).','बिना चोट एड़ी का दर्द टेंडन जुड़ने की जगह की सूजन (एंथेसाइटिस) हो सकता है, जो स्पॉन्डिलोआर्थराइटिस में दिखता है (likelihood ratio 3.4)।'),
+  ibp2:L('Two or more inflammatory back pain features raise the chance of axial spondyloarthritis about 3.7 times.','सूजन वाले कमर दर्द के दो या ज़्यादा लक्षण एक्सियल स्पॉन्डिलोआर्थराइटिस की संभावना लगभग 3.7 गुना बढ़ाते हैं।'),
+  ibp3:L('Three or more inflammatory back pain features raise the chance about 12 times.','तीन या ज़्यादा लक्षण संभावना लगभग 12 गुना बढ़ाते हैं।'),
+  r_vasc:L('Smoking, diabetes, high blood pressure and high cholesterol narrow the leg arteries.','धूम्रपान, डायबिटीज़, हाई बीपी और हाई कोलेस्ट्रॉल पैर की धमनियों को संकरा करते हैं।'),
+  r_famspa:L('Spondyloarthritis runs in families.','स्पॉन्डिलोआर्थराइटिस परिवारों में चलता है।'),
+  fx_combo:L('Three of these together (female, over 60, major injury, weak bones or steroids) make a spinal fracture very likely.','इनमें से तीन एक साथ (महिला, 60 से ज़्यादा, बड़ी चोट, कमज़ोर हड्डियां या स्टेरॉयड) हों तो रीढ़ में फ्रैक्चर की बहुत संभावना होती है।'),
   below_knee:L('Symptoms below the knee point to a nerve root rather than a muscle, because muscle pain rarely travels that far.','घुटने के नीचे लक्षण मांसपेशी नहीं, नस की जड़ की ओर इशारा करते हैं, क्योंकि मांसपेशी का दर्द इतनी दूर कम जाता है।'),
   leg_any:L('Pain spreading from the back into the leg shows that a nerve or its root may be involved.','कमर से पैर में फैलता दर्द दिखाता है कि नस या उसकी जड़ शामिल हो सकती है।'),
   leg_one:L('Pain in one leg only fits a single pressed nerve root on that side.','सिर्फ एक पैर का दर्द उसी तरफ की एक दबी जड़ से मेल खाता है।'),
@@ -256,7 +277,7 @@ const FX = {
 const LEVELS = {
   red:{short:L('Now','अभी'),title:L('Go to the emergency department now','अभी इमरजेंसी विभाग जाएं'),act:L('Call 108 for an ambulance or 112 for any emergency. Do not drive yourself.','एम्बुलेंस के लिए 108 या किसी भी इमरजेंसी के लिए 112 पर कॉल करें। खुद गाड़ी न चलाएं।')},
   orange:{short:L('24–48 h','24–48 घंटे'),title:L('See a doctor within 24–48 hours','24–48 घंटे में डॉक्टर को दिखाएं'),act:L('Do not wait for it to settle. Book the earliest appointment or attend a hospital OPD.','ठीक होने का इंतज़ार न करें। सबसे जल्दी अपॉइंटमेंट लें या अस्पताल की OPD जाएं।')},
-  yellow:{short:L('Within a week','1 हफ्ते में'),title:L('See a spine specialist within a week','1 हफ्ते के अंदर स्पाइन विशेषज्ञ को दिखाएं'),act:L('Not an emergency, but your symptoms need a proper examination. Go sooner if the pain worsens, numbness spreads or a leg feels weak.','इमरजेंसी नहीं, पर आपके लक्षणों की ठीक से जांच ज़रूरी है। दर्द बढ़े, सुन्नपन फैले या पैर कमज़ोर लगे तो पहले जाएं।')},
+  yellow:{short:L('Within a week','1 हफ्ते में'),title:L('See a specialist doctor within a week','1 हफ्ते के अंदर विशेषज्ञ डॉक्टर को दिखाएं'),act:L('Not an emergency, but your symptoms need a proper examination. Go sooner if the pain worsens, numbness spreads or a leg feels weak.','इमरजेंसी नहीं, पर आपके लक्षणों की ठीक से जांच ज़रूरी है। दर्द बढ़े, सुन्नपन फैले या पैर कमज़ोर लगे तो पहले जाएं।')},
   green:{short:L('Within 2 weeks','2 हफ्ते में'),title:L('Book a doctor visit within 2 weeks','2 हफ्ते के अंदर डॉक्टर को दिखाएं'),act:L('Your answers show no warning signs, but a doctor still needs to examine you to confirm the cause and rule out others. Until then, stay active and avoid heavy lifting.','आपके जवाबों में कोई खतरे का संकेत नहीं है, फिर भी कारण पक्का करने और दूसरे कारणों को खारिज करने के लिए डॉक्टर की जांच ज़रूरी है। तब तक सक्रिय रहें और भारी वज़न न उठाएं।')}
 };
 const RS = {
