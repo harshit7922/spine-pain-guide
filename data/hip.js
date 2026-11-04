@@ -22,7 +22,9 @@ C.SRC.push(
   ['perthes','FPnotebook – Legg-Calvé-Perthes disease (age 4–9, peak 5–7; boys 4–5 times more often; pain may be felt in the knee; orthopaedic review within 1 week)','https://fpnotebook.com/Ortho/Peds/LgClvPrths.htm'],
   ['meralgia','5-Minute Clinical Consult – Meralgia paresthetica (4.3 per 10,000 person-years; about 7 times more common with diabetes; tight clothing or belts, obesity, pregnancy)','https://im.unboundmedicine.com/medicine/pview/5-Minute-Clinical-Consult/1688833/all/Meralgia%20Paresthetica'],
   ['hernia','Fitzgibbons RJ, Forse RA. Groin hernias in adults. N Engl J Med 2015 (lifetime risk 27% in men, 3% in women), summarised on Wikipedia','https://en.wikipedia.org/wiki/Inguinal_hernia'],
-  ['doha','Weir A et al. Doha agreement meeting on terminology and definitions in groin pain in athletes. Br J Sports Med 2015;49:768–74','https://repub.eur.nl/pub/79674']
+  ['doha','Weir A et al. Doha agreement meeting on terminology and definitions in groin pain in athletes. Br J Sports Med 2015;49:768–74','https://repub.eur.nl/pub/79674'],
+  ['ekstrand22','Ekstrand J et al. Hamstring injury rates have increased during recent seasons in men’s professional football (UEFA study). Br J Sports Med 2022 (19% of 14,057 injuries; 18% recurrences; average lay-off 13 days), summarised by Physio Update','https://physioupdate.co.uk/?p=1496'],
+  ['askling13','Askling CM et al. Acute hamstring injuries in Swedish elite football: a prospective randomised controlled clinical trial comparing two rehabilitation protocols. Br J Sports Med 2013;47:953–9 (lengthening L-protocol 28 days vs conventional 51 days to return)','https://bjsm.bmj.com/content/47/15/953']
 );
 const ONSETS = [
   ['on_gradual',L('Slowly, with no clear reason','धीरे-धीरे, बिना किसी साफ़ वजह के')],
@@ -45,7 +47,8 @@ const PAT = {
     ['ch_lump_groin',L('A lump in the groin that gets bigger on coughing or standing and goes away on lying down','जांघ के जोड़ में गांठ जो खांसने या खड़े होने पर बड़ी हो और लेटने पर गायब हो जाए')],
     ['ch_burn_thigh',L('A burning, tingling or numb patch on the front and outer side of the thigh, with normal strength','जांघ के आगे और बाहरी हिस्से पर जलन, झनझनाहट या सुन्नपन का एक हिस्सा, ताकत सामान्य')],
     ['ch_shoot_leg',L('Shooting pain from the back or buttock down the leg below the knee','कमर या नितंब से घुटने के नीचे तक पैर में करंट जैसा दर्द')],
-    ['ch_pull_groin',L('Sudden pain on the inner groin during a kick, sprint or quick turn','किक, तेज़ दौड़ या तेज़ी से मुड़ते समय जांघ के अंदरूनी जोड़ में अचानक दर्द')]
+    ['ch_pull_groin',L('Sudden pain on the inner groin during a kick, sprint or quick turn','किक, तेज़ दौड़ या तेज़ी से मुड़ते समय जांघ के अंदरूनी जोड़ में अचानक दर्द')],
+    ['ch_pull_back_thigh',L('Sudden sharp pain at the back of the thigh while sprinting, kicking or stretching, sometimes with a pop or later bruising','तेज़ दौड़ने, किक करने या स्ट्रेच करते समय जांघ के पीछे अचानक तेज़ दर्द, कभी पॉप या बाद में नील के साथ')]
   ],
   worse:[
     ['w_walk_long',L('Walking or standing for long','देर तक चलना या खड़े रहना')],
@@ -78,13 +81,14 @@ const RFS = [
 const VIEWS = {
   groin:{az:0.35,el:0.08,d:1.05,yk:'hj',dy:-0.02,tx:0.07}, hip_side:{az:1.45,el:0.08,d:1.05,yk:'hj',dy:-0.02,tx:0.07},
   buttock:{az:PI-0.4,el:0.1,d:1.1,yk:'hj',dy:0.0,tx:0.07}, thigh_front:{az:0.6,el:0.05,d:1.5,yk:'hj',dy:-0.2,tx:0.08},
-  hknee:{az:0.3,el:0.1,d:1.05,yk:'knee',dy:0,tx:0.12}, lowback:{az:PI,el:0.1,d:2.0,yk:'hj',dy:0.18}
+  hknee:{az:0.3,el:0.1,d:1.05,yk:'knee',dy:0,tx:0.12}, lowback:{az:PI,el:0.1,d:2.0,yk:'hj',dy:0.18}, thigh_back:{az:PI-0.3,el:0.05,d:1.45,yk:'hj',dy:-0.2,tx:0.08}
 };
 const AREAS = [
   {id:'groin',pair:true,view:'groin',name:L('Groin (the crease at the top of the thigh)','जांघ का जोड़ (ग्रोइन, जांघ के ऊपर का मोड़)'),desc:L('The front crease where the thigh meets the lower belly.','आगे का वह मोड़ जहाँ जांघ पेट के निचले हिस्से से मिलती है।'),rel:L('Pain from inside the hip joint (wear, impingement, loss of blood supply) is felt mostly in the groin; a groin lump may be a hernia.','कूल्हे के जोड़ के अंदर का दर्द (घिसावट, इंपिंजमेंट, खून की सप्लाई रुकना) ज़्यादातर जांघ के जोड़ में महसूस होता है; यहाँ गांठ हर्निया हो सकती है।')},
   {id:'hip_side',pair:true,view:'hip_side',name:L('Outer side of the hip (the bony point)','कूल्हे का बाहरी हिस्सा (हड्डी का उभार)'),desc:L('The bony point on the outside of the hip that you lie on when lying on your side.','कूल्हे के बाहर की हड्डी का उभार, जिस पर करवट लेकर लेटते समय वज़न आता है।'),rel:L('Pain here, worse lying on that side, is usually from the buttock tendons (greater trochanteric pain), not the hip joint.','यहाँ दर्द, जो उस करवट लेटने पर बढ़े, आमतौर पर नितंब के टेंडन (ग्रेटर ट्रोकैन्टेरिक दर्द) से होता है, कूल्हे के जोड़ से नहीं।')},
   {id:'buttock',pair:true,view:'buttock',name:L('Buttock','नितंब (कूल्हे का पिछला हिस्सा)'),desc:L('The fleshy area at the back of the hip.','कूल्हे के पीछे का मांसल हिस्सा।'),rel:L('Buttock pain often comes from the lower back or the sacroiliac joint; the hip joint can also hurt here.','नितंब का दर्द अक्सर कमर या सैक्रोइलियक जोड़ से आता है; कूल्हे का जोड़ भी यहाँ दर्द दे सकता है।')},
   {id:'thigh_front',pair:true,view:'thigh_front',name:L('Front or outer side of the thigh','जांघ का अगला या बाहरी हिस्सा'),desc:L('The thigh between the groin and the knee.','जांघ के जोड़ और घुटने के बीच की जांघ।'),rel:L('Hip joint pain spreads down the front of the thigh; a burning numb patch on the outer thigh is a pinched skin nerve (meralgia).','कूल्हे के जोड़ का दर्द जांघ के आगे नीचे तक फैलता है; बाहरी जांघ पर जलन वाला सुन्न हिस्सा त्वचा की दबी नस (मेराल्जिया) है।')},
+  {id:'thigh_back',pair:true,view:'thigh_back',name:L('Back of the thigh (hamstring)','जांघ का पिछला हिस्सा (हैमस्ट्रिंग)'),desc:L('The back of the thigh between the buttock crease and the knee.','नितंब की सिलवट और घुटने के बीच जांघ का पिछला हिस्सा।'),rel:L('Sudden pain here while sprinting is a hamstring strain; burning pain running down from the back is sciatica.','तेज़ दौड़ते समय यहाँ अचानक दर्द हैमस्ट्रिंग खिंचाव है; कमर से नीचे जाता जलन वाला दर्द साइटिका है।')},
   {id:'hknee',pair:true,view:'hknee',regs:['knee_front'],name:L('Knee, as well as the hip','घुटना, कूल्हे के साथ'),desc:L('Pain felt in the knee together with hip or thigh pain.','कूल्हे या जांघ के दर्द के साथ घुटने में महसूस होने वाला दर्द।'),rel:L('Hip problems often send pain to the knee; in children this can hide a serious hip condition.','कूल्हे की समस्या अक्सर घुटने तक दर्द भेजती है; बच्चों में इसके पीछे कूल्हे की गंभीर बीमारी छिपी हो सकती है।')},
   {id:'lowback',pair:false,view:'lowback',name:L('Lower back','कमर'),desc:L('The lower back, between the bottom ribs and the buttocks.','कमर, नीचे की पसलियों और नितंबों के बीच।'),rel:L('Hip and buttock pain with back pain may come from the lower back or the sacroiliac joint.','कमर दर्द के साथ कूल्हे और नितंब का दर्द कमर या सैक्रोइलियक जोड़ से हो सकता है।')}
 ];
@@ -103,7 +107,7 @@ D.medicine = D.medicine || {n:L('General medicine / Internal medicine','जन�
 D.sports = D.sports || {n:L('Sports medicine / Arthroscopy','स्पोर्ट्स मेडिसिन / आर्थ्रोस्कोपी'),s:L('Ligament, cartilage and sports-related joint problems.','लिगामेंट, कार्टिलेज और खेल से जुड़ी जोड़ों की समस्याएं।'),q:'sports medicine arthroscopy surgeon'};
 D.paeds = D.paeds || {n:L('Paediatric orthopaedics','बाल हड्डी रोग (पीडियाट्रिक ऑर्थोपेडिक्स)'),s:L('Bone and joint problems in children and teenagers.','बच्चों और किशोरों में हड्डी और जोड़ों की समस्याएं।'),q:'pediatric orthopedic'};
 D.surgery = D.surgery || {n:L('General surgery','जनरल सर्जरी'),s:L('Hernias and other problems of the belly wall and abdomen.','हर्निया और पेट की दीवार व पेट की दूसरी समस्याएं।'),q:'general surgeon hernia'};
-const hipAreas = ['groin','hip_side','buttock','thigh_front'];
+const hipAreas = ['groin','hip_side','buttock','thigh_front','thigh_back'];
 const CONDS = [
   {id:'hipoa',th:[10,7,4],anchor:['groin','ch_socks','hipoa_cl'],depts:['ortho','physio'],
    name:L('Hip osteoarthritis (wear of the hip joint)','कूल्हे का ऑस्टियोआर्थराइटिस (कूल्हे के जोड़ की घिसावट)'),sci:'Hip osteoarthritis',
@@ -168,6 +172,15 @@ const CONDS = [
    outlook:L('Most acute strains settle within weeks; long-standing groin pain needs a structured programme.','ज़्यादातर नए खिंचाव कुछ हफ्तों में ठीक होते हैं; लंबे समय का ग्रोइन दर्द व्यवस्थित कार्यक्रम मांगता है।'),
    w:{ch_pull_groin:4,on_sport:3,w_pivot:1,w_run:1,groin:2,sex_m:1,a_18_29:2,a_30_39:1,a_u18:1,
       a_60p:-2,ch_socks:-1,ch_stiff_short:-1,on_gradual:-1,ch_lump_groin:-2,hip_side:-1,o_steroid:-1}},
+  {id:'hamstring',th:[9,6,4],anchor:['ch_pull_back_thigh','thigh_back'],depts:['sports','physio'],
+   name:L('Hamstring muscle strain','हैमस्ट्रिंग मांसपेशी का खिंचाव'),sci:'Acute hamstring strain injury',
+   what:L('The hamstring muscles at the back of the thigh tear partly during sprinting, kicking or an overstretch. There is sudden sharp pain, sometimes a pop and bruising a day or two later, and pain on stretching or bending the knee against resistance.','जांघ के पीछे की हैमस्ट्रिंग मांसपेशियाँ तेज़ दौड़, किक या ज़्यादा खिंचाव में आंशिक रूप से फट जाती हैं। अचानक तेज़ दर्द होता है, कभी पॉप और एक-दो दिन बाद नील, और स्ट्रेच करने या रुकावट के खिलाफ़ घुटना मोड़ने पर दर्द।'),
+   causes:L('Sprinting sports such as football, cricket and athletics; fatigue and a previous hamstring injury. In professional football they make up 19% of all injuries, and 18% are repeat injuries.','तेज़ दौड़ वाले खेल जैसे फुटबॉल, क्रिकेट और एथलेटिक्स; थकान और पहले की हैमस्ट्रिंग चोट। पेशेवर फुटबॉल में ये सभी चोटों का 19% हैं, और 18% दोबारा लगी चोटें होती हैं।'),cSrc:['ekstrand22'],
+   confirm:L('Examination by a doctor or physiotherapist; ultrasound or MRI for severe injuries or if a tendon may be torn off the bone.','डॉक्टर या फिज़ियोथेरेपिस्ट द्वारा जांच; गंभीर चोट या टेंडन के हड्डी से अलग होने की आशंका में अल्ट्रासाउंड या MRI।'),
+   treat:L('Relative rest, then a graded rehabilitation programme with lengthening exercises: in a trial of footballers this returned players in 28 days on average, compared with 51 days with conventional exercises. Return to sprinting only after strength and full stretch are back.','कुछ आराम, फिर लंबाई बढ़ाने वाले व्यायामों के साथ धीरे-धीरे बढ़ता पुनर्वास: फुटबॉल खिलाड़ियों के एक ट्रायल में इससे औसतन 28 दिन में वापसी हुई, सामान्य व्यायाम में 51 दिन। ताकत और पूरा खिंचाव लौटने के बाद ही तेज़ दौड़ में वापसी।'),
+   outlook:L('Most recover in weeks (average lay-off 13 days in professional football); finishing rehabilitation lowers the chance of it happening again.','ज़्यादातर कुछ हफ्तों में ठीक होते हैं (पेशेवर फुटबॉल में औसत 13 दिन की छुट्टी); पुनर्वास पूरा करने से दोबारा होने की संभावना कम होती है।'),oSrc:['askling13','ekstrand22'],
+   w:{ch_pull_back_thigh:5,thigh_back:3,on_sport:2,w_run:1,sex_m:1,a_18_29:1,a_30_39:1,
+      ch_shoot_leg:-2,lowback:-1,a_60p:-1,groin:-1,ch_socks:-1,ch_lump_groin:-2}},
   {id:'hernia',th:[8,6,4],anchor:['ch_lump_groin'],depts:['surgery'],
    name:L('Groin hernia (inguinal or femoral hernia)','जांघ के जोड़ का हर्निया (इंगुइनल या फ़ेमोरल हर्निया)'),sci:'Inguinal / femoral hernia',
    what:L('Part of the belly contents pushes through a weak spot in the belly wall at the groin, making a lump that bulges on coughing, straining or standing and goes back on lying down, with a dragging ache. If it becomes hard, very painful and will not go back, the bowel may be trapped — an emergency.','पेट के अंदर का कुछ हिस्सा जांघ के जोड़ पर पेट की दीवार की कमज़ोर जगह से बाहर निकलता है, जिससे खांसने, ज़ोर लगाने या खड़े होने पर उभरने वाली और लेटने पर वापस जाने वाली गांठ बनती है, खिंचाव वाले दर्द के साथ। अगर यह सख्त, बहुत दर्दनाक हो जाए और वापस न जाए तो आंत फंस सकती है — यह इमरजेंसी है।'),
@@ -193,7 +206,7 @@ const CONDS = [
    confirm:L('Examination of the back, hips and nerves; scans only if they will change treatment.','कमर, कूल्हों और नसों की जांच; स्कैन तभी जब इलाज बदले।'),
    treat:L('Staying active, physiotherapy and simple pain relief; see a doctor urgently for weakness or bladder or bowel changes.','सक्रिय रहना, फिज़ियोथेरेपी और साधारण दर्द की दवा; कमज़ोरी या पेशाब-शौच में बदलाव हो तो तुरंत डॉक्टर को दिखाएं।'),
    outlook:L('Most back-related leg and buttock pain improves within weeks to a few months.','कमर से जुड़ा ज़्यादातर पैर और नितंब का दर्द कुछ हफ्तों से कुछ महीनों में सुधरता है।'),
-   w:{lowback:3,buttock:2,ch_shoot_leg:4,faber_back:1,w_deepflex:0,
+   w:{lowback:3,buttock:2,ch_shoot_leg:4,thigh_back:1,faber_back:1,w_deepflex:0,
       groin:-1,ch_socks:-1,hip_side:-1,ch_lump_groin:-3,ch_pull_groin:-2,ch_click_hip:-1}},
   {id:'inflam',th:[8,6,4],anchor:['ch_stiff_long','o_other_joints'],depts:['rheum','medicine'],
    name:L('Inflammatory arthritis (for example ankylosing spondylitis)','सूजन वाली गठिया (जैसे एंकिलॉज़िंग स्पॉन्डिलाइटिस)'),sci:'Inflammatory arthritis / axial spondyloarthritis',
@@ -247,7 +260,7 @@ const URGENCY = {
 const EMERG_WHEN = {fracture:'rf_fall_hip', septic:{any:['rf_hot',{all:['rf_child_limp','rf_fever']}]}, hernia:'rf_hernia'};
 const FOCUS = {
   hipoa:{bones:['pelvis','leg']}, gtps:{bones:['pelvis','leg']}, fai:{bones:['pelvis','leg']}, avn:{bones:['pelvis','leg']}, stressfx:{bones:['pelvis','leg']},
-  hipchild:{bones:['pelvis','leg']}, adductor:{bones:['pelvis','leg']}, hernia:{bones:['pelvis']}, meralgia:{nerves:['femoral'], useSides:true}, inflam:{bones:['pelvis','sacrum']},
+  hipchild:{bones:['pelvis','leg']}, adductor:{bones:['pelvis','leg']}, hamstring:{bones:['pelvis','leg']}, hernia:{bones:['pelvis']}, meralgia:{nerves:['femoral'], useSides:true}, inflam:{bones:['pelvis','sacrum']},
   backref:{vert:['L4','L5','S1'], roots:['L5','S1'], useSides:true}
 };
 const LBLX = {hip_one:L('One hip','एक कूल्हा'), hip_both:L('Both hips','दोनों कूल्हे'), hip_any:L('Hip or groin pain','कूल्हे या जांघ के जोड़ का दर्द'),
@@ -281,6 +294,8 @@ const FX = {
   ch_lump_groin:L('A groin lump that bulges on coughing and goes back lying down is the classic sign of a hernia.','खांसने पर उभरने और लेटने पर वापस जाने वाली गांठ हर्निया का क्लासिक संकेत है।'),
   w_cough:L('Pain or a bulge on coughing and straining points to a hernia.','खांसने और ज़ोर लगाने पर दर्द या उभार हर्निया की ओर इशारा करता है।'),
   ch_pull_groin:L('Sudden inner groin pain on kicking or sprinting is typical of an adductor strain.','किक या तेज़ दौड़ते समय अचानक जांघ के अंदरूनी जोड़ में दर्द एडक्टर खिंचाव का खास लक्षण है।'),
+  ch_pull_back_thigh:L('Sudden pain at the back of the thigh while sprinting is the classic hamstring strain.','तेज़ दौड़ते समय जांघ के पीछे अचानक दर्द क्लासिक हैमस्ट्रिंग खिंचाव है।'),
+  thigh_back:L('Pain at the back of the thigh comes from the hamstrings or, if it shoots down from the back, a nerve root.','जांघ के पीछे दर्द हैमस्ट्रिंग से, या कमर से नीचे आता हो तो नस की जड़ से होता है।'),
   on_sport:L('Kicking, sprinting and twisting load the groin muscles and the hip joint rim.','किक, तेज़ दौड़ और मुड़ना जांघ के जोड़ की मांसपेशियों और कूल्हे की कटोरी के किनारे पर भार डालते हैं।'),
   ch_burn_thigh:L('A burning, numb patch on the outer thigh with normal strength is typical of meralgia paresthetica.','सामान्य ताकत के साथ बाहरी जांघ पर जलन वाला सुन्न हिस्सा मेराल्जिया पैरेस्थेटिका का खास लक्षण है।'),
   o_tight:L('Tight belts, pregnancy and weight change can squeeze the thigh skin nerve.','कसी बेल्ट, गर्भावस्था और वज़न में बदलाव जांघ की त्वचा की नस को दबा सकते हैं।'),
@@ -319,8 +334,8 @@ const FUNCS = [
   {id:'sleep', label:'sleep', opts:C.SLEEPS}
 ];
 SPG.data.modules.hip = {id:'hip', order:8,
-  card:{reg:['groin_l','hip_side_l','buttock_l','thigh_front_l'], view:{az:0.75, el:0.08, d:1.45, yk:'hj', dy:-0.08, tx:0.06}, hint:L('Hip arthritis, outer hip pain, groin pain, hip impingement, avascular necrosis, hernia','कूल्हे की गठिया, कूल्हे के बाहर दर्द, जांघ के जोड़ का दर्द, इंपिंजमेंट, एवैस्कुलर नेक्रोसिस, हर्निया')},
-  name:L('Hip or groin pain','कूल्हे या जांघ के जोड़ का दर्द'), safetyView:'groin', startRegions:['groin_l','hip_side_l'], safetyRegions:['groin_l','groin_r'],
+  card:{reg:['groin_l','hip_side_l','buttock_l','thigh_front_l'], view:{az:0.75, el:0.08, d:1.45, yk:'hj', dy:-0.08, tx:0.06}, hint:L('Hip arthritis, outer hip pain, groin pain, hamstring strain, avascular necrosis, hernia','कूल्हे की गठिया, कूल्हे के बाहर दर्द, जांघ के जोड़ का दर्द, हैमस्ट्रिंग खिंचाव, एवैस्कुलर नेक्रोसिस, हर्निया')},
+  name:L('Hip, groin or thigh pain','कूल्हे, जांघ के जोड़ या जांघ का दर्द'), safetyView:'groin', startRegions:['groin_l','hip_side_l'], safetyRegions:['groin_l','groin_r'],
   labelSet:[], GAL:{nerves:['sciatic','femoral'], joint:{view:{az:0.5, el:0.12, d:0.9, yk:'hj', dy:0.0, tx:0.07}, opts:{nerveKeep:['sciatic','femoral'], noUpper:true}}},
   resultView:{az:0.75, el:0.1, d:1.2, yk:'hj', dy:-0.05, tx:0.06}, defaultDept:'ortho',
   ONSETS, PAT, RFS, VIEWS, AREAS, TESTS, CONDS, EMERG, ROOTS:{}, RS, DERIVED, SIDES:{areas:hipAreas, one:'hip_one', both:'hip_both', sideAreas:hipAreas.concat(['hknee'])},

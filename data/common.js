@@ -86,7 +86,7 @@ const U = {
   gChar:L('What it feels like','कैसा महसूस होता है'), gWorse:L('Worse with','किससे बढ़ता है'), gBetter:L('Better with','किससे आराम मिलता है'), gOther:L('Other','अन्य'),
   // function
   funT:L('Impact on daily life','रोज़मर्रा पर असर'), pain:L('Pain right now','अभी दर्द'), painS:L('0 = no pain · 10 = worst imaginable','0 = कोई दर्द नहीं · 10 = सबसे ज़्यादा'),
-  walk:L('Walking','चलना'), sit:L('Sitting','बैठना'), sleep:L('Sleep','नींद'), needFun:L('Answer walking and sitting to continue.','आगे बढ़ने के लिए चलना और बैठना चुनें।'),
+  walk:L('Walking','चलना'), sit:L('Sitting','बैठना'), sleep:L('Sleep','नींद'), needFun:L('Answer each question above to continue.','आगे बढ़ने के लिए ऊपर के हर सवाल का जवाब दें।'),
   // tests
   testK:L('Bedside test {a} of {b}','टेस्ट {a} / {b}'), how:L('How to do it','कैसे करें'), pos:L('Counts as positive','कब पॉज़िटिव माना जाए'),
   safeT:L('Skip any test if pain is severe or you cannot stand safely. Stop at the first sharp pain.','दर्द बहुत ज़्यादा हो या सुरक्षित खड़े न हो पाएं तो टेस्ट छोड़ दें। पहला तेज़ दर्द होते ही रुक जाएं।'),

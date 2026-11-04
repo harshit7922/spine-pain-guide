@@ -33,7 +33,7 @@ function labelsFor(M) {
 const out = {
   meta: {
     title: 'Spine Pain Guide – clinical knowledge base (all spine regions)',
-    version: 'v5.7', exported: new Date().toISOString().slice(0, 10), languages: ['en', 'hi'],
+    version: 'v5.8', exported: new Date().toISOString().slice(0, 10), languages: ['en', 'hi'],
     disclaimer: 'Decision support for self-assessment, not a diagnosis. Every result recommends consultation with a doctor.',
     howScoringWorks: [
       'Each answer becomes a feature (for example "slr_pos" or "neck"). Some features are derived from others (DERIVED rules, e.g. "radicular").',

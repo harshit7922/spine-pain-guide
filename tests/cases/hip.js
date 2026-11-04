@@ -19,5 +19,7 @@ module.exports = [
  ['Meralgia (pregnant woman)','hip',H({age:'a_30_39',sex:'sex_f',areas:{thigh_front:'l'},onset:'on_gradual',since:'d_weeks',hx:'h_first',hwalk:'hwalk_ok',pat:['ch_burn_thigh','o_tight']}), "r=>r.top[0].startsWith('meralgia')&&r.depts[0]==='neuro'"],
  ['Buttock pain from the back','hip',H({age:'a_40_49',sex:'sex_m',areas:{buttock:'l',lowback:'yes'},onset:'on_lift',since:'d_weeks',hx:'h_lt1y',pat:['ch_shoot_leg','w_deepflex'],faber:'faber_back'}), "r=>r.top[0].startsWith('backref')&&r.depts[0]==='ortho_spine'"],
  ['Young adult with long morning stiffness','hip',H({age:'a_18_29',sex:'sex_m',areas:{buttock:'both',lowback:'yes'},onset:'on_gradual',since:'d_3m',hx:'h_lt1y',pat:['ch_stiff_long'],risks:['r_spa']}), "r=>r.top[0].startsWith('inflam')&&r.depts[0]==='rheum'"],
+ ['Hamstring strain (sprinter)','hip',H({age:'a_18_29',sex:'sex_m',areas:{thigh_back:'r'},onset:'on_sport',since:'d_days',hx:'h_first',pat:['ch_pull_back_thigh','w_run']}), "r=>r.top[0].startsWith('hamstring:strong')&&r.depts[0]==='sports'"],
+ ['Back-of-thigh pain shooting from the back is sciatica','hip',H({age:'a_40_49',sex:'sex_m',areas:{thigh_back:'l',lowback:'yes',buttock:'l'},onset:'on_lift',since:'d_weeks',hx:'h_first',pat:['ch_shoot_leg']}), "r=>r.top[0].startsWith('backref')"],
  ['Young person without OA features is not OA','hip',H({age:'a_18_29',sex:'sex_f',areas:{groin:'l'},onset:'on_gradual',since:'d_weeks',hx:'h_first',pat:['w_walk_long']}), "r=>!r.top.length||!r.top[0].startsWith('hipoa')"]
 ];

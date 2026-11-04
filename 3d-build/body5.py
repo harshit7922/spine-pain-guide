@@ -204,7 +204,17 @@ for sd in 'lr':
     raw2['arch_'+sd]=AND(ft,(-n[:,1]-0.4)*K,z-(An[2]+0.0*s),(T3j[2]-0.035*s)-z,sc)
     raw2['ball_'+sd]=AND(ft,(-n[:,1]-0.3)*K,0.028*s-np.abs(z-(T3j[2]-0.008*s)),sc)
     raw2['bigtoe_'+sd]=AND(OR(segc(gq('T1')),AND(ft,0.022*s-np.linalg.norm(B-T1j,axis=1))),sc)
-REG2=[k+'_'+sd for k in ['sh_top','sh_front','sh_side','sh_back','arm_front','elb_out','elb_in','elb_back','wrist_thumb','wrist_palm','finger_base','thumb_base','hip_side','knee_front','knee_in','knee_out','knee_back','tibial_tub','shin_in','calf','achilles','ankle_out','ankle_in','heel','arch','ball','bigtoe','wrist_back','fingers'] for sd in 'lr']
+# head and face (v5.8): jaw (TMJ and chewing muscle), temple, around the eye, forehead, back of the head
+HDF=fr[:,SEGS.index('head')]
+ey=eyeL[1]; ez=eyeL[2]; cz=ez-0.09*s; my=mouth[1]
+for sd in 'lr':
+    sg=1 if sd=='l' else -1; sc=sidec[sd]; latn=n[:,0]*sg
+    raw2['jaw_'+sd]=AND(segc(HDF),ax-0.042*s,0.08*s-ax,y-(my-0.03*s),(ey-0.012*s)-y,z-cz,(cz+0.065*s)-z,(latn-0.25)*K,sc)
+    raw2['temple_'+sd]=AND(segc(HDF),ax-0.045*s,y-ey,(ey+0.05*s)-y,z-(cz+0.005*s),(cz+0.085*s)-z,(latn-0.35)*K,sc)
+    raw2['eye_'+sd]=AND(segc(HDF),0.024*s-np.sqrt((ax-abs(eyeL[0]))**2+((y-ey)*1.2)**2),z-(ez-0.025*s),sc)
+raw2['forehead']=AND(segc(HDF),0.05*s-ax,y-(ey+0.018*s),(ey+0.075*s)-y,(n[:,2]-0.45)*K)
+raw2['occiput']=AND(segc(HDF+TF),0.055*s-ax,y-(ey-0.075*s),(ey-0.018*s)-y,(cz-0.03*s)-z,(-n[:,2]-0.3)*K)
+REG2=[k+'_'+sd for k in ['sh_top','sh_front','sh_side','sh_back','arm_front','elb_out','elb_in','elb_back','wrist_thumb','wrist_palm','finger_base','thumb_base','hip_side','knee_front','knee_in','knee_out','knee_back','tibial_tub','shin_in','calf','achilles','ankle_out','ankle_in','heel','arch','ball','bigtoe','wrist_back','fingers'] for sd in 'lr']+['jaw_l','jaw_r','temple_l','temple_r','eye_l','eye_r','forehead','occiput']
 REG=['lowback','lowback_side_l','lowback_side_r','flank_l','flank_r','tailbone','buttock_l','buttock_r','groin_l','groin_r','saddle','thigh_front_l','thigh_front_r','thigh_back_l','thigh_back_r','l4_l','l4_r','l5_l','l5_r','s1_l','s1_r','neck','interscap','midback','chest','trap_l','trap_r','scap_l','scap_r','midback_side_l','midback_side_r','ribs_l','ribs_r','c5_l','c5_r','t1_l','t1_r','c6_l','c6_r','c7_l','c7_r','c8_l','c8_r']
 fin={}; taken=np.full(NB,-1.0)
 for r_ in REG:
@@ -218,7 +228,7 @@ LIM=0.015
 LIMS={}
 sparse={}
 for r_ in REG+REG2:
-    lim=0.012 if r_[:2] in ('c5','c6','c7','c8','t1') or r_.startswith(('wrist','finger','thumb','elb','ankle','bigtoe','ball','heel','arch','achilles','tibial')) else 0.03
+    lim=0.012 if r_[:2] in ('c5','c6','c7','c8','t1') or r_.startswith(('wrist','finger','thumb','elb','ankle','bigtoe','ball','heel','arch','achilles','tibial','jaw','temple','eye','forehead','occiput')) else 0.03
     m=fin[r_]; vi=np.where(m>-lim)[0]
     sparse[r_]=(vi.astype(np.uint16),np.clip(np.round(m[vi]/lim*127),-127,127).astype(np.int8)); LIMS[r_]=lim
 print({r_:int((fin[r_]>0).sum()) for r_ in REG+REG2}, 'entries',sum(len(v[0]) for v in sparse.values()))
