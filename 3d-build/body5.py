@@ -139,7 +139,7 @@ for sd in 'lr':
     raw['c6_'+sd]=OR(AND(fa,(cth-c70)*0.04,sidec[sd]),AND(segc(gf('D1','D2')),sidec[sd]))
     raw['c8_'+sd]=OR(AND(fa,(c110-cth)*0.04,sidec[sd]),AND(segc(gf('D4','D5')),sidec[sd]))
     raw['c7_'+sd]=OR(AND(fa,(cth-c110)*0.04,(c70-cth)*0.04,sidec[sd]),AND(segc(gf('D3')),sidec[sd]))
-# ---------- joints of the limbs (v5.3): shoulder, elbow, wrist and hand, hip, knee, leg, ankle and foot ----------
+# ---------- joints of the limbs (v5.3; back of wrist and finger joints added v5.6): shoulder, elbow, wrist and hand, hip, knee, leg, ankle and foot ----------
 # Not exclusive with the spine regions above (they overlap, e.g. outer upper arm = c5 and side of the shoulder), exclusive among themselves.
 G3={'UA':G2['UA'],'FA':G2['FA'],'HAND':lambda b:b.startswith(('finger','metacarpal','wrist')),'T1':lambda b:b.startswith('toe1'),
     'FT':lambda b:b.startswith(('foot','toe')),'D1':G2['D1'],'DF':lambda b:b.startswith(('finger2','finger3','finger4','finger5','metacarpal2','metacarpal3','metacarpal4'))}
@@ -178,6 +178,8 @@ for sd in 'lr':
     raw2['wrist_palm_'+sd]=AND(hz,tw+0.03*s,0.045*s-tw,(n@pd-0.4)*K,sc)
     raw2['finger_base_'+sd]=AND(segc(gq('DF')),(n@pd-0.3)*K,tw-0.07*s,0.115*s-tw,sc)
     raw2['thumb_base_'+sd]=AND(segc(gq('D1')),0.07*s-tw,sc)
+    raw2['wrist_back_'+sd]=AND(hz,tw+0.03*s,0.045*s-tw,(-(n@pd)-0.4)*K,sc)
+    raw2['fingers_'+sd]=AND(segc(gq('DF')),tw-0.115*s,sc)
     # hip (outer side, over the greater trochanter)
     raw2['hip_side_'+sd]=AND(segc(TF+THF),0.075*s-np.abs(y-(Hp[1]-0.03*s)),(n[:,0]*sg-0.5)*K,sc)
     # knee
@@ -202,7 +204,7 @@ for sd in 'lr':
     raw2['arch_'+sd]=AND(ft,(-n[:,1]-0.4)*K,z-(An[2]+0.0*s),(T3j[2]-0.035*s)-z,sc)
     raw2['ball_'+sd]=AND(ft,(-n[:,1]-0.3)*K,0.028*s-np.abs(z-(T3j[2]-0.008*s)),sc)
     raw2['bigtoe_'+sd]=AND(OR(segc(gq('T1')),AND(ft,0.022*s-np.linalg.norm(B-T1j,axis=1))),sc)
-REG2=[k+'_'+sd for k in ['sh_top','sh_front','sh_side','sh_back','arm_front','elb_out','elb_in','elb_back','wrist_thumb','wrist_palm','finger_base','thumb_base','hip_side','knee_front','knee_in','knee_out','knee_back','tibial_tub','shin_in','calf','achilles','ankle_out','ankle_in','heel','arch','ball','bigtoe'] for sd in 'lr']
+REG2=[k+'_'+sd for k in ['sh_top','sh_front','sh_side','sh_back','arm_front','elb_out','elb_in','elb_back','wrist_thumb','wrist_palm','finger_base','thumb_base','hip_side','knee_front','knee_in','knee_out','knee_back','tibial_tub','shin_in','calf','achilles','ankle_out','ankle_in','heel','arch','ball','bigtoe','wrist_back','fingers'] for sd in 'lr']
 REG=['lowback','lowback_side_l','lowback_side_r','flank_l','flank_r','tailbone','buttock_l','buttock_r','groin_l','groin_r','saddle','thigh_front_l','thigh_front_r','thigh_back_l','thigh_back_r','l4_l','l4_r','l5_l','l5_r','s1_l','s1_r','neck','interscap','midback','chest','trap_l','trap_r','scap_l','scap_r','midback_side_l','midback_side_r','ribs_l','ribs_r','c5_l','c5_r','t1_l','t1_r','c6_l','c6_r','c7_l','c7_r','c8_l','c8_r']
 fin={}; taken=np.full(NB,-1.0)
 for r_ in REG:

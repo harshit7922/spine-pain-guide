@@ -1,7 +1,7 @@
 /* Offline support for the installed app: keeps a copy of every file so the app opens without internet.
    The CACHE name and FILES list are refreshed by tools/bundle.py whenever the site changes. */
-const CACHE = 'spg-01282c0ce5';
-const FILES = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png", "icons/favicon-32.png", "lib/three.min.js", "lib/jspdf.umd.min.js", "data/common.js", "data/lumbar.js", "data/cervical.js", "data/thoracic.js", "data/whole.js", "data/shoulder.js", "data/knee.js", "data/foot.js", "data/hip.js", "data/glossary.js", "data/body3d.js", "data/spine3d.js", "data/rig3d.js", "js/app.js"];
+const CACHE = 'spg-7f10eb0a56';
+const FILES = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png", "icons/favicon-32.png", "lib/three.min.js", "lib/jspdf.umd.min.js", "data/common.js", "data/lumbar.js", "data/cervical.js", "data/thoracic.js", "data/whole.js", "data/shoulder.js", "data/knee.js", "data/foot.js", "data/hip.js", "data/hand.js", "data/glossary.js", "data/body3d.js", "data/spine3d.js", "data/rig3d.js", "js/app.js"];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
 });

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Spine Pain Guide – clinical knowledge base (all spine regions)",
-    "version": "v5.5",
+    "version": "v5.6",
     "exported": "2026-11-04",
     "languages": [
       "en",
@@ -26,6 +26,7 @@
       "data/knee.js",
       "data/foot.js",
       "data/hip.js",
+      "data/hand.js",
       "data/glossary.js",
       "data/rig3d.js"
     ]
@@ -496,6 +497,91 @@
         "key": "doha",
         "title": "Weir A et al. Doha agreement meeting on terminology and definitions in groin pain in athletes. Br J Sports Med 2015;49:768–74",
         "url": "https://repub.eur.nl/pub/79674"
+      },
+      {
+        "key": "shiri06",
+        "title": "Shiri R et al. Prevalence and determinants of lateral and medial epicondylitis: a population study. Am J Epidemiol 2006 (4,783 people: lateral 1.3%, medial 0.4%, highest at 45–54; forceful plus repetitive work OR 5.6; current smoking OR 3.4)",
+        "url": "https://www.qxmd.com/r/16968862"
+      },
+      {
+        "key": "bisset",
+        "title": "Bisset L et al. BMJ 2006, wait-and-see arm (success 83% at 26 weeks, 90% at 52 weeks), summarised by Physio First",
+        "url": "https://physiofirst.org.uk/static/uploaded/a9315881-2a2d-4004-8b95c313f2d5a3d4.pdf"
+      },
+      {
+        "key": "coombes13",
+        "title": "Coombes BK et al. Effect of corticosteroid injection, physiotherapy, or both on lateral epicondylalgia. JAMA 2013 (165 people; recovered or much improved at 1 year 83% after steroid vs 96% after placebo injection; recurrence 54% vs 12%)",
+        "url": "https://www.sciencedaily.com/releases/2013/02/130205162119.htm"
+      },
+      {
+        "key": "letdx",
+        "title": "Diagnostic accuracy of examination tests for lateral elbow tendinopathy: systematic review. J Hand Ther 2021 (Cozen test sensitivity 91%; grip strength difference sensitivity 78–83%, specificity 80–90%)",
+        "url": "https://read.qxmd.com/read/33814224/diagnostic-accuracy-of-examination-tests-for-lateral-elbow-tendinopathy-let-a-systematic-review"
+      },
+      {
+        "key": "goubau",
+        "title": "Goubau JF et al. The wrist hyperflexion and abduction of the thumb (WHAT) test for de Quervain’s disease. J Hand Surg Eur 2014 (sensitivity 99%, specificity 29%)",
+        "url": "https://www.physiotutors.com/de/wiki/what-test/"
+      },
+      {
+        "key": "dqstat",
+        "title": "StatPearls – De Quervain tenosynovitis (women 1.3%, men 0.5%; new mothers; one or two injections give near-complete relief in 52–90%)",
+        "url": "https://www.statpearls.com/point-of-care/20270"
+      },
+      {
+        "key": "trigger",
+        "title": "Trigger finger review (2–3% of people, about 10% with diabetes; one steroid injection succeeds in 60–80% at a year)",
+        "url": "https://www.sportsmedreview.com/?p=5806"
+      },
+      {
+        "key": "acrhand",
+        "title": "Altman R et al. ACR criteria for the classification of osteoarthritis of the hand. Arthritis Rheum 1990;33:1601–10 (classification tree sensitivity 92%, specificity 98%)",
+        "url": "https://www.qxmd.com/r/2242058"
+      },
+      {
+        "key": "handoaprev",
+        "title": "Radiopaedia – Osteoarthritis of the hand (symptomatic in about 15%, range 6–26%; women over 50 most affected; thumb base involvement)",
+        "url": "https://radiopaedia.org/articles/osteoarthritis-of-the-hand"
+      },
+      {
+        "key": "malaviya",
+        "title": "Malaviya AN et al. Prevalence of rheumatoid arthritis in the adult Indian population. Rheumatol Int 1993;13:131–4 (0.75% of 44,551 adults near Delhi)",
+        "url": "https://link.springer.com/doi/10.1007/BF00301258"
+      },
+      {
+        "key": "niceraqs",
+        "title": "NICE QS33 Rheumatoid arthritis: refer suspected persistent synovitis of the small joints of the hands or feet, or of more than one joint, within 3 working days",
+        "url": "https://nice.org.uk/guidance/qs33/resources/rheumatoid-arthritis-in-over-16s-pdf-2098604563909"
+      },
+      {
+        "key": "ganglion",
+        "title": "Gude W, Morelli V. Ganglion cysts of the wrist. Curr Rev Musculoskelet Med 2008;1:205–11 (back of the wrist 60–70%; up to half go away; aspiration succeeds in 30–50%)",
+        "url": "https://link.springer.com/doi/10.1007/s12178-008-9033-4"
+      },
+      {
+        "key": "dupuytren",
+        "title": "Trojian TH, Chu SM. Dupuytren’s disease: diagnosis and treatment. Am Fam Physician 2007;76:86–9 (ring finger most often; table-top test; refer at 30° knuckle contracture or any middle-joint contracture)",
+        "url": "https://www.aafp.org/pubs/afp/issues/2007/0701/p86.html"
+      },
+      {
+        "key": "scaphoid",
+        "title": "StatPearls – Scaphoid fracture (60–70% of wrist-bone fractures; up to 25% not seen on the first X-ray; non-union almost 10 times more likely if diagnosis is delayed over 4 weeks)",
+        "url": "https://statpearls.com/point-of-care/31423"
+      },
+      {
+        "key": "elbext",
+        "title": "Appelboam A et al. Elbow extension test to rule out elbow fracture. BMJ 2008 (sensitivity 96.8%; adults who can fully straighten the elbow have a 1.6% fracture risk)",
+        "url": "https://www.aafp.org/afp/2009/1101/p997.html"
+      },
+      {
+        "key": "kanavel",
+        "title": "Chan E et al. Kanavel signs of flexor sheath infection: a cautionary tale. Br J Gen Pract 2019 (surgical emergency; all four signs sensitivity 91–97%; fever in only 17%)",
+        "url": "https://bjgp.org/content/bjgp/69/683/315.full.pdf"
+      },
+      {
+        "key": "olecranon",
+        "title": "StatPearls – Olecranon bursitis (about one third are infected; 65–85% of non-infected cases settle by 4 weeks)",
+        "url": "https://www.statpearls.com/point-of-care/26147"
       },
       {
         "key": "statdh",
@@ -1711,6 +1797,229 @@
           "faber"
         ],
         "picture": "pose"
+      },
+      {
+        "id": "tenniselbow",
+        "terms": {
+          "en": [
+            "tennis elbow",
+            "lateral epicondyle",
+            "lateral epicondylitis",
+            "lateral elbow tendinopathy"
+          ],
+          "hi": [
+            "टेनिस एल्बो"
+          ]
+        },
+        "title": {
+          "en": "Tennis elbow",
+          "hi": "टेनिस एल्बो"
+        },
+        "plain": {
+          "en": "Overload of the tendon that lifts the wrist, where it attaches to the bony bump on the outer elbow (highlighted). Gripping and lifting hurt. Most people with it do not play tennis, and about 90% are better within a year.",
+          "hi": "कलाई उठाने वाले टेंडन पर ज़्यादा भार, जहाँ वह कोहनी के बाहर की हड्डी के उभार (रंगीन) से जुड़ता है। पकड़ने और उठाने पर दर्द होता है। ज़्यादातर लोग टेनिस नहीं खेलते, और लगभग 90% एक साल में बेहतर हो जाते हैं।"
+        },
+        "sources": [
+          "shiri06",
+          "bisset"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "golferselbow",
+        "terms": {
+          "en": [
+            "golfer’s elbow",
+            "golfer's elbow",
+            "medial epicondyle",
+            "medial epicondylitis"
+          ],
+          "hi": [
+            "गोल्फ़र्स एल्बो"
+          ]
+        },
+        "title": {
+          "en": "Golfer’s elbow",
+          "hi": "गोल्फ़र्स एल्बो"
+        },
+        "plain": {
+          "en": "Overload of the tendon that bends the wrist, where it attaches to the bony bump on the inner elbow (highlighted). The ulnar nerve runs just behind this bump.",
+          "hi": "कलाई मोड़ने वाले टेंडन पर ज़्यादा भार, जहाँ वह कोहनी के अंदर की हड्डी के उभार (रंगीन) से जुड़ता है। अल्नर नस इस उभार के ठीक पीछे से गुज़रती है।"
+        },
+        "sources": [
+          "shiri06"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "olecranonw",
+        "terms": {
+          "en": [
+            "olecranon",
+            "elbow bursitis"
+          ],
+          "hi": [
+            "ओलेक्रेनन"
+          ]
+        },
+        "title": {
+          "en": "Olecranon (point of the elbow) bursitis",
+          "hi": "ओलेक्रेनन (कोहनी की नोक) बर्साइटिस"
+        },
+        "plain": {
+          "en": "A small fluid sac over the point of the elbow (highlighted) that can fill with fluid after leaning or a knock. About one in three is infected; a hot, red swelling needs a doctor the same day.",
+          "hi": "कोहनी की नोक (रंगीन) के ऊपर एक छोटी तरल थैली, जो टेक लगाने या चोट के बाद भर सकती है। लगभग तीन में से एक में इन्फेक्शन होता है; गर्म, लाल सूजन हो तो उसी दिन डॉक्टर को दिखाएं।"
+        },
+        "sources": [
+          "olecranon"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "dequervainw",
+        "terms": {
+          "en": [
+            "de Quervain",
+            "De Quervain"
+          ],
+          "hi": [
+            "डी क्वेरवेन"
+          ]
+        },
+        "title": {
+          "en": "De Quervain’s tenosynovitis",
+          "hi": "डी क्वेरवेन टेनोसाइनोवाइटिस"
+        },
+        "plain": {
+          "en": "The two tendons that move the thumb outwards rub in their tunnel on the thumb side of the wrist (highlighted). Lifting a baby, pouring and twisting hurt; it is common in new mothers.",
+          "hi": "अंगूठे को बाहर ले जाने वाले दो टेंडन कलाई के अंगूठे वाली तरफ़ (रंगीन) अपनी सुरंग में रगड़ खाते हैं। बच्चे को उठाना, उड़ेलना और मोड़ना दर्द देता है; नई माताओं में आम है।"
+        },
+        "sources": [
+          "dqstat",
+          "goubau"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "scaphoidw",
+        "terms": {
+          "en": [
+            "scaphoid",
+            "snuffbox"
+          ],
+          "hi": [
+            "स्कैफ़ॉइड"
+          ]
+        },
+        "title": {
+          "en": "Scaphoid bone and the “snuffbox”",
+          "hi": "स्कैफ़ॉइड हड्डी और “स्नफ़बॉक्स”"
+        },
+        "plain": {
+          "en": "A small wrist bone (highlighted) under the hollow at the base of the thumb. It breaks with a fall on an outstretched hand, often without deformity, and up to a quarter of breaks do not show on the first X-ray.",
+          "hi": "अंगूठे की जड़ के गड्ढे के नीचे कलाई की एक छोटी हड्डी (चमकती)। यह फैले हाथ के बल गिरने से टूटती है, अक्सर बिना टेढ़ेपन के, और एक-चौथाई तक फ्रैक्चर पहले एक्स-रे में नहीं दिखते।"
+        },
+        "sources": [
+          "scaphoid"
+        ],
+        "picture": "bone"
+      },
+      {
+        "id": "triggerw",
+        "terms": {
+          "en": [
+            "trigger finger",
+            "trigger thumb"
+          ],
+          "hi": [
+            "ट्रिगर फिंगर"
+          ]
+        },
+        "title": {
+          "en": "Trigger finger",
+          "hi": "ट्रिगर फिंगर"
+        },
+        "plain": {
+          "en": "The bending tendon catches on a tight band in the palm at the base of the finger (highlighted), so the finger clicks or sticks bent. It is about four times more common with diabetes.",
+          "hi": "मोड़ने वाला टेंडन उंगली की जड़ पर हथेली (रंगीन) में एक तंग पट्टी में अटकता है, जिससे उंगली क्लिक करती है या मुड़ी फंस जाती है। डायबिटीज़ में यह लगभग चार गुना ज़्यादा आम है।"
+        },
+        "sources": [
+          "trigger"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "dupuytrenw",
+        "terms": {
+          "en": [
+            "Dupuytren"
+          ],
+          "hi": [
+            "ड्यूपुइट्रेन"
+          ]
+        },
+        "title": {
+          "en": "Dupuytren’s contracture",
+          "hi": "ड्यूपुइट्रेन कॉन्ट्रैक्चर"
+        },
+        "plain": {
+          "en": "Thick cords form under the skin of the palm (highlighted) and slowly pull a finger, most often the ring finger, into a bent position. Not being able to lay the hand flat on a table is the time to see a hand surgeon.",
+          "hi": "हथेली (रंगीन) की त्वचा के नीचे मोटी डोरियाँ बनती हैं जो धीरे-धीरे एक उंगली को, ज़्यादातर अनामिका को, मोड़ देती हैं। हाथ मेज़ पर सपाट न रख पाना हैंड सर्जन को दिखाने का समय है।"
+        },
+        "sources": [
+          "dupuytren"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "ganglionw",
+        "terms": {
+          "en": [
+            "ganglion"
+          ],
+          "hi": [
+            "गैंग्लियन"
+          ]
+        },
+        "title": {
+          "en": "Ganglion cyst",
+          "hi": "गैंग्लियन सिस्ट"
+        },
+        "plain": {
+          "en": "A harmless, jelly-filled lump growing from a joint or tendon sheath, most often on the back of the wrist (highlighted). Up to half go away on their own.",
+          "hi": "जोड़ या टेंडन की झिल्ली से निकलने वाली हानिरहित, जेली से भरी गांठ, ज़्यादातर कलाई के पीछे (रंगीन)। लगभग आधी अपने आप चली जाती हैं।"
+        },
+        "sources": [
+          "ganglion"
+        ],
+        "picture": "skin"
+      },
+      {
+        "id": "heberden",
+        "terms": {
+          "en": [
+            "Heberden",
+            "Bouchard",
+            "hand osteoarthritis"
+          ],
+          "hi": [
+            "हेबर्डन",
+            "बूशार्ड"
+          ]
+        },
+        "title": {
+          "en": "Heberden’s and Bouchard’s nodes (hand osteoarthritis)",
+          "hi": "हेबर्डन और बूशार्ड नोड्स (हाथ का ऑस्टियोआर्थराइटिस)"
+        },
+        "plain": {
+          "en": "Hard, bony knobs on the end joints (Heberden’s) and middle joints (Bouchard’s) of the fingers (highlighted), from wear of the small joints. They are common in women over 50.",
+          "hi": "उंगलियों के आखिरी (हेबर्डन) और बीच के (बूशार्ड) जोड़ों (रंगीन) पर सख्त, हड्डी जैसी गांठें, छोटे जोड़ों की घिसावट से। 50 से ऊपर की महिलाओं में आम हैं।"
+        },
+        "sources": [
+          "acrhand",
+          "handoaprev"
+        ],
+        "picture": "skin"
       }
     ],
     "levels": {
@@ -29678,6 +29987,3289 @@
         "walk_hard": {
           "en": "Difficulty walking",
           "hi": "चलने में दिक्कत"
+        }
+      }
+    },
+    {
+      "id": "hand",
+      "order": 9,
+      "title": {
+        "en": "Elbow, wrist and hand pain assessment",
+        "hi": "कोहनी, कलाई और हाथ के दर्द की जांच रिपोर्ट"
+      },
+      "tag": null,
+      "sourcesAddedByModule": [
+        "shiri06",
+        "bisset",
+        "coombes13",
+        "letdx",
+        "goubau",
+        "dqstat",
+        "trigger",
+        "acrhand",
+        "handoaprev",
+        "malaviya",
+        "niceraqs",
+        "ganglion",
+        "dupuytren",
+        "scaphoid",
+        "elbext",
+        "kanavel",
+        "olecranon"
+      ],
+      "conditions": [
+        {
+          "id": "latepi",
+          "name": {
+            "en": "Tennis elbow (lateral elbow tendinopathy)",
+            "hi": "टेनिस एल्बो (कोहनी के बाहर का टेंडन दर्द)"
+          },
+          "scientific": "Lateral elbow tendinopathy (lateral epicondylalgia)",
+          "what": {
+            "en": "The tendon that lifts the wrist and fingers is overloaded where it attaches to the bony bump on the outer elbow. It hurts to grip, lift a cup or kettle, shake hands or turn a key, and the bump is tender. Despite the name, most people with it do not play tennis.",
+            "hi": "कलाई और उंगलियों को उठाने वाला टेंडन कोहनी के बाहर की हड्डी के उभार पर जहाँ जुड़ता है, वहाँ ज़्यादा भार से दुखने लगता है। पकड़ने, कप या केतली उठाने, हाथ मिलाने या चाबी घुमाने पर दर्द होता है, और उभार दबाने पर दुखता है। नाम के बावजूद, ज़्यादातर लोग टेनिस नहीं खेलते।"
+          },
+          "causes": {
+            "en": "About 1.3% of adults have it at any time, most often at 45–54; forceful, repeated work (tools, construction, cooking) and smoking raise the risk.",
+            "hi": "किसी भी समय लगभग 1.3% वयस्कों को होता है, ज़्यादातर 45–54 साल में; ज़ोर वाला, बार-बार का काम (औज़ार, निर्माण, खाना बनाना) और धूम्रपान खतरा बढ़ाते हैं।"
+          },
+          "confirm": {
+            "en": "Examination: tenderness on the outer bump and pain on lifting the wrist against resistance (Cozen test, picks up about 91%). Scans are not needed in a typical case.",
+            "hi": "जांच: बाहर के उभार पर दबाने से दर्द और रुकावट के खिलाफ़ कलाई उठाने पर दर्द (कोज़ेन टेस्ट, लगभग 91% पकड़ता है)। सामान्य मामले में स्कैन ज़रूरी नहीं।"
+          },
+          "treat": {
+            "en": "Reducing painful gripping, a forearm strap, and a graded strengthening programme with a physiotherapist. Steroid injections are best avoided: in a trial, fewer people had recovered at a year after a steroid injection (83%) than after a dummy injection (96%), and more relapsed (54% vs 12%).",
+            "hi": "दर्द वाली पकड़ कम करना, अग्रबाहु की पट्टी, और फिज़ियोथेरेपिस्ट के साथ धीरे-धीरे बढ़ता मज़बूती का कार्यक्रम। स्टेरॉयड इंजेक्शन से बचना बेहतर है: एक ट्रायल में स्टेरॉयड इंजेक्शन के बाद एक साल में कम लोग ठीक हुए (83%) बनाम नकली इंजेक्शन (96%), और ज़्यादा लोगों में दर्द लौटा (54% बनाम 12%)।"
+          },
+          "outlook": {
+            "en": "It usually settles on its own: about 83% are better by 6 months and 90% by a year.",
+            "hi": "आमतौर पर अपने आप ठीक होता है: लगभग 83% छह महीने में और 90% एक साल में बेहतर हो जाते हैं।"
+          },
+          "thresholds": [
+            10,
+            7,
+            4
+          ],
+          "anchors": [
+            "elb_out"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "physio",
+            "ortho"
+          ],
+          "outlookSource": [
+            "bisset",
+            "coombes13"
+          ],
+          "weights": [
+            {
+              "feature": "elb_out",
+              "label": {
+                "en": "Outer side of the elbow",
+                "hi": "कोहनी का बाहरी हिस्सा"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "ch_grip_pain",
+              "label": {
+                "en": "Pain on gripping, lifting a cup or kettle, or shaking hands",
+                "hi": "पकड़ने, कप या केतली उठाने, या हाथ मिलाने पर दर्द"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "cozen_pos",
+              "label": {
+                "en": "Lift the wrist against resistance (Cozen test): positive",
+                "hi": "रुकावट के खिलाफ़ कलाई उठाना (कोज़ेन टेस्ट): पॉज़िटिव"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "cozen_neg",
+              "label": {
+                "en": "Lift the wrist against resistance (Cozen test): negative",
+                "hi": "रुकावट के खिलाफ़ कलाई उठाना (कोज़ेन टेस्ट): नेगेटिव"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "on_overuse",
+              "label": {
+                "en": "After more gripping, lifting, typing, tools or sport than usual",
+                "hi": "सामान्य से ज़्यादा पकड़ने, उठाने, टाइपिंग, औज़ार या खेल के बाद"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "o_repetitive",
+              "label": {
+                "en": "Work with forceful, repeated hand or arm use (tools, construction, cooking, tailoring, plumbing)",
+                "hi": "ज़ोर से और बार-बार हाथ या बांह के इस्तेमाल वाला काम (औज़ार, निर्माण, खाना बनाना, सिलाई, प्लंबिंग)"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_wrist_use",
+              "label": {
+                "en": "Typing, using a mouse or phone, wringing clothes, using tools",
+                "hi": "टाइपिंग, माउस या फ़ोन चलाना, कपड़े निचोड़ना, औज़ार चलाना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "elb_in",
+              "label": {
+                "en": "Inner side of the elbow",
+                "hi": "कोहनी का अंदरूनी हिस्सा"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_numb_ulnar",
+              "label": {
+                "en": "Numbness or tingling in the ring and little fingers",
+                "hi": "अनामिका और छोटी उंगली में सुन्नपन या झुनझुनी"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_elbow_swell",
+              "label": {
+                "en": "A soft, egg-like swelling on the point of the elbow",
+                "hi": "कोहनी की नोक पर नरम, अंडे जैसी सूजन"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_neck_arm",
+              "label": {
+                "en": "Neck pain with pain shooting down the arm",
+                "hi": "गर्दन दर्द के साथ बांह में नीचे तक करंट जैसा दर्द"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall onto an outstretched hand",
+                "hi": "फैले हुए हाथ के बल गिरना"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "medepi",
+          "name": {
+            "en": "Golfer’s elbow (medial elbow tendinopathy)",
+            "hi": "गोल्फ़र्स एल्बो (कोहनी के अंदर का टेंडन दर्द)"
+          },
+          "scientific": "Medial elbow tendinopathy (medial epicondylalgia)",
+          "what": {
+            "en": "The tendon that bends the wrist and fingers is overloaded where it attaches to the bony bump on the inner elbow. It hurts to grip, carry and twist. The ulnar nerve runs just behind, so tingling in the little finger can come with it.",
+            "hi": "कलाई और उंगलियों को मोड़ने वाला टेंडन कोहनी के अंदर की हड्डी के उभार पर जहाँ जुड़ता है, वहाँ ज़्यादा भार से दुखने लगता है। पकड़ने, उठाकर ले जाने और मोड़ने पर दर्द होता है। अल्नर नस ठीक पीछे से गुज़रती है, इसलिए छोटी उंगली में झुनझुनी भी हो सकती है।"
+          },
+          "causes": {
+            "en": "Less common than tennis elbow (about 0.4% of adults); linked to forceful, repeated work and to being overweight.",
+            "hi": "टेनिस एल्बो से कम आम (लगभग 0.4% वयस्क); ज़ोर वाले, बार-बार के काम और ज़्यादा वज़न से जुड़ा।"
+          },
+          "confirm": {
+            "en": "Examination: tenderness on the inner bump and pain on bending the wrist against resistance; the ulnar nerve is checked too.",
+            "hi": "जांच: अंदर के उभार पर दबाने से दर्द और रुकावट के खिलाफ़ कलाई मोड़ने पर दर्द; अल्नर नस भी जांची जाती है।"
+          },
+          "treat": {
+            "en": "Load modification and a graded strengthening programme with a physiotherapist.",
+            "hi": "भार में बदलाव और फिज़ियोथेरेपिस्ट के साथ धीरे-धीरे बढ़ता मज़बूती का कार्यक्रम।"
+          },
+          "outlook": {
+            "en": "Usually settles over months with load management and exercise.",
+            "hi": "आमतौर पर भार संभालने और व्यायाम से कुछ महीनों में ठीक।"
+          },
+          "thresholds": [
+            10,
+            7,
+            4
+          ],
+          "anchors": [
+            "elb_in"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "physio",
+            "ortho"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "elb_in",
+              "label": {
+                "en": "Inner side of the elbow",
+                "hi": "कोहनी का अंदरूनी हिस्सा"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "ch_grip_pain",
+              "label": {
+                "en": "Pain on gripping, lifting a cup or kettle, or shaking hands",
+                "hi": "पकड़ने, कप या केतली उठाने, या हाथ मिलाने पर दर्द"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_overuse",
+              "label": {
+                "en": "After more gripping, lifting, typing, tools or sport than usual",
+                "hi": "सामान्य से ज़्यादा पकड़ने, उठाने, टाइपिंग, औज़ार या खेल के बाद"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "o_repetitive",
+              "label": {
+                "en": "Work with forceful, repeated hand or arm use (tools, construction, cooking, tailoring, plumbing)",
+                "hi": "ज़ोर से और बार-बार हाथ या बांह के इस्तेमाल वाला काम (औज़ार, निर्माण, खाना बनाना, सिलाई, प्लंबिंग)"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_wrist_use",
+              "label": {
+                "en": "Typing, using a mouse or phone, wringing clothes, using tools",
+                "hi": "टाइपिंग, माउस या फ़ोन चलाना, कपड़े निचोड़ना, औज़ार चलाना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "o_overweight",
+              "label": {
+                "en": "Overweight",
+                "hi": "ज़्यादा वज़न"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "elb_out",
+              "label": {
+                "en": "Outer side of the elbow",
+                "hi": "कोहनी का बाहरी हिस्सा"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_elbow_swell",
+              "label": {
+                "en": "A soft, egg-like swelling on the point of the elbow",
+                "hi": "कोहनी की नोक पर नरम, अंडे जैसी सूजन"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_neck_arm",
+              "label": {
+                "en": "Neck pain with pain shooting down the arm",
+                "hi": "गर्दन दर्द के साथ बांह में नीचे तक करंट जैसा दर्द"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall onto an outstretched hand",
+                "hi": "फैले हुए हाथ के बल गिरना"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "bursitis",
+          "name": {
+            "en": "Elbow bursitis (olecranon bursitis)",
+            "hi": "कोहनी की बर्साइटिस (ओलेक्रेनन बर्साइटिस)"
+          },
+          "scientific": "Olecranon bursitis",
+          "what": {
+            "en": "A small fluid sac over the point of the elbow fills with fluid after leaning on the elbow or a knock, making a soft, egg-like swelling. About one in three is infected, especially after a graze or cut, when it becomes hot, red and tender.",
+            "hi": "कोहनी की नोक के ऊपर की छोटी तरल थैली कोहनी पर टेक लगाने या चोट के बाद भर जाती है, जिससे नरम, अंडे जैसी सूजन बनती है। लगभग तीन में से एक में इन्फेक्शन होता है, खासकर खरोंच या कटने के बाद, तब यह गर्म, लाल और दर्दनाक हो जाती है।"
+          },
+          "causes": {
+            "en": "Leaning on the elbow (desk work, driving), a fall or knock, gout and rheumatoid arthritis.",
+            "hi": "कोहनी पर टेक लगाना (डेस्क का काम, गाड़ी चलाना), गिरना या चोट, गाउट और रूमेटॉइड आर्थराइटिस।"
+          },
+          "confirm": {
+            "en": "Examination; if infection is possible the fluid is drawn off and tested.",
+            "hi": "जांच; इन्फेक्शन की आशंका हो तो तरल निकालकर जांचा जाता है।"
+          },
+          "treat": {
+            "en": "Non-infected: rest, a pad, avoiding leaning on it; 65–85% settle within 4 weeks. Infected: antibiotics, sometimes surgery.",
+            "hi": "बिना इन्फेक्शन: आराम, पैड, टेक लगाने से बचना; 65–85% चार हफ्तों में ठीक। इन्फेक्शन: एंटीबायोटिक, कभी-कभी सर्जरी।"
+          },
+          "outlook": {
+            "en": "Usually settles; see a doctor the same day if it becomes hot, red or you feel unwell.",
+            "hi": "आमतौर पर ठीक हो जाता है; गर्म, लाल हो या तबियत खराब लगे तो उसी दिन डॉक्टर को दिखाएं।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_elbow_swell"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "gp"
+          ],
+          "outlookSource": [
+            "olecranon"
+          ],
+          "weights": [
+            {
+              "feature": "ch_elbow_swell",
+              "label": {
+                "en": "A soft, egg-like swelling on the point of the elbow",
+                "hi": "कोहनी की नोक पर नरम, अंडे जैसी सूजन"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "elb_back",
+              "label": {
+                "en": "Point of the elbow (back)",
+                "hi": "कोहनी की नोक (पीछे)"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "w_lean_elbow",
+              "label": {
+                "en": "Leaning on the elbow",
+                "hi": "कोहनी पर टेक लगाना"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "on_blow",
+              "label": {
+                "en": "A blow, twist or sports injury to the arm or hand",
+                "hi": "बांह या हाथ पर चोट, मुड़ना या खेल की चोट"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall onto an outstretched hand",
+                "hi": "फैले हुए हाथ के बल गिरना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_grip_pain",
+              "label": {
+                "en": "Pain on gripping, lifting a cup or kettle, or shaking hands",
+                "hi": "पकड़ने, कप या केतली उठाने, या हाथ मिलाने पर दर्द"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "elb_in",
+              "label": {
+                "en": "Inner side of the elbow",
+                "hi": "कोहनी का अंदरूनी हिस्सा"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_numb_ulnar",
+              "label": {
+                "en": "Numbness or tingling in the ring and little fingers",
+                "hi": "अनामिका और छोटी उंगली में सुन्नपन या झुनझुनी"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "cubital",
+          "name": {
+            "en": "Ulnar nerve pressed at the elbow (cubital tunnel syndrome)",
+            "hi": "कोहनी पर अल्नर नस दबना (क्यूबिटल टनल सिंड्रोम)"
+          },
+          "scientific": "Ulnar nerve entrapment at the elbow",
+          "what": {
+            "en": "The ulnar nerve (the “funny bone” nerve) is squeezed or stretched behind the inner elbow, causing tingling and numbness in the ring and little fingers, worse when the elbow stays bent. Later the hand can become weak and clumsy.",
+            "hi": "अल्नर नस (“फ़नी बोन” वाली नस) कोहनी के अंदर पीछे दबती या खिंचती है, जिससे अनामिका और छोटी उंगली में झुनझुनी और सुन्नपन होता है, कोहनी मुड़ी रहने पर ज़्यादा। बाद में हाथ कमज़ोर और अनाड़ी हो सकता है।"
+          },
+          "causes": {
+            "en": "Long periods with the elbow bent (phone calls, sleeping with the arm bent), leaning on the elbow, old elbow fractures and arthritis. It is the second most common nerve entrapment of the arm after carpal tunnel.",
+            "hi": "कोहनी देर तक मोड़े रखना (फ़ोन पर बात, मुड़ी बांह के साथ सोना), कोहनी पर टेक लगाना, कोहनी के पुराने फ्रैक्चर और गठिया। कार्पल टनल के बाद यह बांह में नस दबने का दूसरा सबसे आम कारण है।"
+          },
+          "confirm": {
+            "en": "Examination of feeling and the small hand muscles, and nerve conduction studies; the elbow flexion test varies widely in accuracy.",
+            "hi": "संवेदना और हाथ की छोटी मांसपेशियों की जांच, और नर्व कंडक्शन स्टडी; कोहनी मोड़ने वाले टेस्ट की सटीकता बहुत अलग-अलग है।"
+          },
+          "treat": {
+            "en": "Avoiding long elbow bending and leaning on the elbow, a night splint or towel wrapped around the elbow; surgery if weakness or wasting develops.",
+            "hi": "कोहनी देर तक मोड़ने और टेक लगाने से बचना, रात को स्प्लिंट या कोहनी पर लिपटा तौलिया; कमज़ोरी या मांसपेशी घटे तो सर्जरी।"
+          },
+          "outlook": {
+            "en": "Mild cases often improve with these changes; weakness needs prompt review.",
+            "hi": "हल्के मामले अक्सर इन बदलावों से सुधरते हैं; कमज़ोरी हो तो जल्दी दिखाएं।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_elbow_bend",
+            "ch_numb_ulnar"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "handsurg",
+            "neuro"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ch_elbow_bend",
+              "label": {
+                "en": "Ring and little finger tingling when the elbow stays bent (on the phone, sleeping with the arm bent)",
+                "hi": "कोहनी देर तक मुड़ी रहने पर (फ़ोन पर बात, मुड़ी बांह के साथ सोना) अनामिका और छोटी उंगली में झुनझुनी"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "ch_numb_ulnar",
+              "label": {
+                "en": "Numbness or tingling in the ring and little fingers",
+                "hi": "अनामिका और छोटी उंगली में सुन्नपन या झुनझुनी"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "elbflx_pos",
+              "label": {
+                "en": "Bend the elbow fully for one minute: positive",
+                "hi": "कोहनी एक मिनट पूरी मोड़कर रखना: पॉज़िटिव"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "elbflx_neg",
+              "label": {
+                "en": "Bend the elbow fully for one minute: negative",
+                "hi": "कोहनी एक मिनट पूरी मोड़कर रखना: नेगेटिव"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "elb_in",
+              "label": {
+                "en": "Inner side of the elbow",
+                "hi": "कोहनी का अंदरूनी हिस्सा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_lean_elbow",
+              "label": {
+                "en": "Leaning on the elbow",
+                "hi": "कोहनी पर टेक लगाना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_weak_grip",
+              "label": {
+                "en": "Dropping things, or a clumsy or weak hand",
+                "hi": "चीज़ें गिर जाना, या हाथ अनाड़ी या कमज़ोर लगना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_numb_median",
+              "label": {
+                "en": "Numbness or tingling in the thumb, index and middle fingers",
+                "hi": "अंगूठे, तर्जनी और बीच की उंगली में सुन्नपन या झुनझुनी"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_night_hand",
+              "label": {
+                "en": "Hand tingling that wakes you at night and eases by shaking the hand",
+                "hi": "हाथ की झुनझुनी जो रात को जगा दे और हाथ झटकने से कम हो"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_neck_arm",
+              "label": {
+                "en": "Neck pain with pain shooting down the arm",
+                "hi": "गर्दन दर्द के साथ बांह में नीचे तक करंट जैसा दर्द"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "elb_out",
+              "label": {
+                "en": "Outer side of the elbow",
+                "hi": "कोहनी का बाहरी हिस्सा"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "cts",
+          "name": {
+            "en": "Carpal tunnel syndrome (nerve pressed at the wrist)",
+            "hi": "कार्पल टनल सिंड्रोम (कलाई पर नस दबना)"
+          },
+          "scientific": "Median nerve entrapment at the wrist",
+          "what": {
+            "en": "The median nerve is squeezed in a tight tunnel at the front of the wrist, causing tingling and numbness in the thumb, index and middle fingers, typically waking you at night and eased by shaking the hand. Later the hand may feel clumsy and the thumb muscles can waste.",
+            "hi": "मीडियन नस कलाई के आगे एक तंग सुरंग में दबती है, जिससे अंगूठे, तर्जनी और बीच की उंगली में झुनझुनी और सुन्नपन होता है, खासकर रात को नींद से जगाता है और हाथ झटकने से कम होता है। बाद में हाथ अनाड़ी लग सकता है और अंगूठे की मांसपेशियाँ घट सकती हैं।"
+          },
+          "causes": {
+            "en": "Pregnancy, diabetes, an underactive thyroid, rheumatoid arthritis, wrist fractures and repeated wrist use.",
+            "hi": "गर्भावस्था, डायबिटीज़, कम थायरॉइड, रूमेटॉइड आर्थराइटिस, कलाई के फ्रैक्चर और कलाई का बार-बार उपयोग।"
+          },
+          "confirm": {
+            "en": "Examination and nerve conduction studies. Of the bedside clues, waking at night and shaking the hand to relieve it (flick sign) was the strongest in one study (about 21 times more likely); Phalen and Tinel tests add little.",
+            "hi": "जांच और नर्व कंडक्शन स्टडी। बेडसाइड संकेतों में रात को जागकर हाथ झटकने से आराम (फ्लिक साइन) एक अध्ययन में सबसे मज़बूत था (लगभग 21 गुना ज़्यादा संभावना); फ़ेलन और टिनेल टेस्ट थोड़ा ही जोड़ते हैं।"
+          },
+          "treat": {
+            "en": "A night wrist splint, activity changes, a steroid injection; release surgery if severe or if the muscles are wasting.",
+            "hi": "रात में कलाई की स्प्लिंट, गतिविधि बदलाव, स्टेरॉयड इंजेक्शन; गंभीर हो या मांसपेशियाँ घट रही हों तो रिलीज़ सर्जरी।"
+          },
+          "outlook": {
+            "en": "Very treatable; in pregnancy it often settles after delivery; early treatment prevents muscle wasting.",
+            "hi": "अच्छा इलाज संभव; गर्भावस्था में अक्सर डिलीवरी के बाद ठीक हो जाता है; जल्दी इलाज मांसपेशी घटने से बचाता है।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_night_hand",
+            "ch_numb_median"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "handsurg",
+            "neuro"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ch_night_hand",
+              "label": {
+                "en": "Hand tingling that wakes you at night and eases by shaking the hand",
+                "hi": "हाथ की झुनझुनी जो रात को जगा दे और हाथ झटकने से कम हो"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "ch_numb_median",
+              "label": {
+                "en": "Numbness or tingling in the thumb, index and middle fingers",
+                "hi": "अंगूठे, तर्जनी और बीच की उंगली में सुन्नपन या झुनझुनी"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "wrist_palm",
+              "label": {
+                "en": "Palm side of the wrist",
+                "hi": "कलाई का हथेली वाला हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "o_new_mother",
+              "label": {
+                "en": "Pregnant, or caring for a baby under a year old",
+                "hi": "गर्भवती, या एक साल से छोटे बच्चे की देखभाल"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "r_immune",
+              "label": {
+                "en": "Diabetes, HIV or low immunity",
+                "hi": "डायबिटीज़, HIV या कम इम्युनिटी"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "o_thyroid",
+              "label": {
+                "en": "Underactive thyroid",
+                "hi": "थायरॉइड कम (हाइपोथायरॉइडिज़्म)"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_weak_grip",
+              "label": {
+                "en": "Dropping things, or a clumsy or weak hand",
+                "hi": "चीज़ें गिर जाना, या हाथ अनाड़ी या कमज़ोर लगना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "w_wrist_use",
+              "label": {
+                "en": "Typing, using a mouse or phone, wringing clothes, using tools",
+                "hi": "टाइपिंग, माउस या फ़ोन चलाना, कपड़े निचोड़ना, औज़ार चलाना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "hand_both",
+              "label": {
+                "en": "Both arms or hands",
+                "hi": "दोनों बांह या हाथ"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_numb_ulnar",
+              "label": {
+                "en": "Numbness or tingling in the ring and little fingers",
+                "hi": "अनामिका और छोटी उंगली में सुन्नपन या झुनझुनी"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_elbow_bend",
+              "label": {
+                "en": "Ring and little finger tingling when the elbow stays bent (on the phone, sleeping with the arm bent)",
+                "hi": "कोहनी देर तक मुड़ी रहने पर (फ़ोन पर बात, मुड़ी बांह के साथ सोना) अनामिका और छोटी उंगली में झुनझुनी"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_neck_arm",
+              "label": {
+                "en": "Neck pain with pain shooting down the arm",
+                "hi": "गर्दन दर्द के साथ बांह में नीचे तक करंट जैसा दर्द"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "neck",
+              "label": {
+                "en": "Neck",
+                "hi": "गर्दन"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "dequervain",
+          "name": {
+            "en": "De Quervain’s tenosynovitis (thumb-side wrist tendon pain)",
+            "hi": "डी क्वेरवेन टेनोसाइनोवाइटिस (कलाई के अंगूठे वाली तरफ़ टेंडन का दर्द)"
+          },
+          "scientific": "De Quervain tenosynovitis",
+          "what": {
+            "en": "The two tendons that move the thumb outwards rub in their tight tunnel on the thumb side of the wrist. Gripping, lifting a baby, pouring and twisting hurt there, sometimes with swelling.",
+            "hi": "अंगूठे को बाहर ले जाने वाले दो टेंडन कलाई के अंगूठे वाली तरफ़ अपनी तंग सुरंग में रगड़ खाते हैं। पकड़ने, बच्चे को उठाने, उड़ेलने और मोड़ने पर वहाँ दर्द होता है, कभी सूजन के साथ।"
+          },
+          "causes": {
+            "en": "More common in women (1.3% vs 0.5% of men), at 40–60, in late pregnancy and in new mothers lifting a baby (“mummy’s wrist”), and with repeated thumb use.",
+            "hi": "महिलाओं में ज़्यादा (1.3% बनाम पुरुषों में 0.5%), 40–60 साल में, गर्भावस्था के आखिरी महीनों में और बच्चे को उठाने वाली नई माताओं में (“मम्मी रिस्ट”), और अंगूठे के बार-बार इस्तेमाल से।"
+          },
+          "confirm": {
+            "en": "Examination: pain on the thumb-side wrist tendons with the WHAT or Finkelstein test. A pain-free WHAT test makes it very unlikely (it was painful in 99% of people with it).",
+            "hi": "जांच: WHAT या फ़िंकलस्टीन टेस्ट में कलाई के अंगूठे वाले टेंडन पर दर्द। बिना दर्द का WHAT टेस्ट इसकी संभावना बहुत कम करता है (इस बीमारी वाले 99% लोगों में दर्दनाक था)।"
+          },
+          "treat": {
+            "en": "A thumb splint, changing how you lift (scoop the baby with both palms), and a steroid injection, which gives near-complete relief in 52–90% after one or two injections; surgery if it persists.",
+            "hi": "अंगूठे की स्प्लिंट, उठाने का तरीका बदलना (बच्चे को दोनों हथेलियों से उठाना), और स्टेरॉयड इंजेक्शन, जिससे एक या दो इंजेक्शन के बाद 52–90% को लगभग पूरी राहत मिलती है; बना रहे तो सर्जरी।"
+          },
+          "outlook": {
+            "en": "Most improve without surgery; in new mothers it often settles as the baby grows.",
+            "hi": "ज़्यादातर बिना सर्जरी सुधरते हैं; नई माताओं में बच्चा बड़ा होने के साथ अक्सर ठीक हो जाता है।"
+          },
+          "thresholds": [
+            9,
+            6,
+            4
+          ],
+          "anchors": [
+            "wrist_thumb",
+            "what_pos"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "handsurg",
+            "physio"
+          ],
+          "outlookSource": [
+            "dqstat"
+          ],
+          "weights": [
+            {
+              "feature": "wrist_thumb",
+              "label": {
+                "en": "Thumb side of the wrist",
+                "hi": "कलाई का अंगूठे वाला हिस्सा"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "w_lift_baby",
+              "label": {
+                "en": "Lifting a baby, pouring, or twisting the thumb and wrist",
+                "hi": "बच्चे को उठाना, उड़ेलना, या अंगूठा और कलाई मोड़ना"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "o_new_mother",
+              "label": {
+                "en": "Pregnant, or caring for a baby under a year old",
+                "hi": "गर्भवती, या एक साल से छोटे बच्चे की देखभाल"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "what_pos",
+              "label": {
+                "en": "Bend the wrist and push the thumb out (WHAT test): positive",
+                "hi": "कलाई मोड़कर अंगूठा बाहर धकेलना (WHAT टेस्ट): पॉज़िटिव"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "what_neg",
+              "label": {
+                "en": "Bend the wrist and push the thumb out (WHAT test): negative",
+                "hi": "कलाई मोड़कर अंगूठा बाहर धकेलना (WHAT टेस्ट): नेगेटिव"
+              },
+              "weight": -5
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "thumb_base",
+              "label": {
+                "en": "Base of the thumb",
+                "hi": "अंगूठे की जड़"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_overuse",
+              "label": {
+                "en": "After more gripping, lifting, typing, tools or sport than usual",
+                "hi": "सामान्य से ज़्यादा पकड़ने, उठाने, टाइपिंग, औज़ार या खेल के बाद"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_bony_fingers",
+              "label": {
+                "en": "Hard, bony knobs on the end or middle finger joints",
+                "hi": "उंगलियों के आखिरी या बीच के जोड़ों पर सख्त, हड्डी जैसी गांठें"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "fingers",
+              "label": {
+                "en": "Finger joints",
+                "hi": "उंगलियों के जोड़"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_night_hand",
+              "label": {
+                "en": "Hand tingling that wakes you at night and eases by shaking the hand",
+                "hi": "हाथ की झुनझुनी जो रात को जगा दे और हाथ झटकने से कम हो"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall onto an outstretched hand",
+                "hi": "फैले हुए हाथ के बल गिरना"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "rf_snuffbox",
+              "label": {
+                "en": "After a fall on the hand: pain when pressing the hollow at the base of the thumb",
+                "hi": "हाथ के बल गिरने के बाद: अंगूठे की जड़ के गड्ढे को दबाने पर दर्द"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "trigger",
+          "name": {
+            "en": "Trigger finger",
+            "hi": "ट्रिगर फिंगर"
+          },
+          "scientific": "Stenosing tenosynovitis of the flexor tendon",
+          "what": {
+            "en": "A thickened bend in the tendon catches on a tight band at the base of the finger, so the finger clicks, sticks bent and then snaps straight, often worse in the morning, with a tender lump in the palm.",
+            "hi": "टेंडन का मोटा हिस्सा उंगली की जड़ पर एक तंग पट्टी में अटकता है, जिससे उंगली क्लिक करती है, मुड़ी फंस जाती है और फिर झटके से सीधी होती है, अक्सर सुबह ज़्यादा, हथेली में दर्द वाली गांठ के साथ।"
+          },
+          "causes": {
+            "en": "Affects 2–3% of people and about 10% of people with diabetes; more common in women and after 50.",
+            "hi": "2–3% लोगों को और डायबिटीज़ वाले लगभग 10% लोगों को होता है; महिलाओं में और 50 के बाद ज़्यादा।"
+          },
+          "confirm": {
+            "en": "Examination; no scans needed.",
+            "hi": "जांच; स्कैन की ज़रूरत नहीं।"
+          },
+          "treat": {
+            "en": "A night splint keeping the knuckle straight; a steroid injection works for 60–80% at a year; a small operation to release the band if it keeps returning.",
+            "hi": "नकल सीधा रखने वाली रात की स्प्लिंट; स्टेरॉयड इंजेक्शन से एक साल में 60–80% को फ़ायदा; बार-बार लौटे तो पट्टी खोलने का छोटा ऑपरेशन।"
+          },
+          "outlook": {
+            "en": "Very treatable; results of the operation are very good.",
+            "hi": "अच्छा इलाज संभव; ऑपरेशन के नतीजे बहुत अच्छे हैं।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_click_finger"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "handsurg",
+            "ortho"
+          ],
+          "outlookSource": [
+            "trigger"
+          ],
+          "weights": [
+            {
+              "feature": "ch_click_finger",
+              "label": {
+                "en": "A finger or thumb clicks, catches or gets stuck bent and has to be straightened",
+                "hi": "उंगली या अंगूठा क्लिक करता है, अटकता है या मुड़ा फंस जाता है और सीधा करना पड़ता है"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "finger_base",
+              "label": {
+                "en": "Palm, at the base of the fingers",
+                "hi": "हथेली, उंगलियों की जड़ पर"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "r_immune",
+              "label": {
+                "en": "Diabetes, HIV or low immunity",
+                "hi": "डायबिटीज़, HIV या कम इम्युनिटी"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_stiff_short",
+              "label": {
+                "en": "Stiff in the morning, easing within 30 minutes",
+                "hi": "सुबह जकड़न जो 30 मिनट के अंदर कम हो जाती है"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_numb_median",
+              "label": {
+                "en": "Numbness or tingling in the thumb, index and middle fingers",
+                "hi": "अंगूठे, तर्जनी और बीच की उंगली में सुन्नपन या झुनझुनी"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_swell_knuckles",
+              "label": {
+                "en": "Soft, puffy swelling of the knuckles or middle finger joints",
+                "hi": "उंगलियों की जड़ के जोड़ों (नकल्स) या बीच के जोड़ों में नरम, फूली सूजन"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "handoa",
+          "name": {
+            "en": "Hand and thumb-base osteoarthritis",
+            "hi": "हाथ और अंगूठे की जड़ का ऑस्टियोआर्थराइटिस"
+          },
+          "scientific": "Hand osteoarthritis (nodal interphalangeal and thumb carpometacarpal)",
+          "what": {
+            "en": "Wear of the small finger joints causes hard, bony knobs on the end joints (Heberden’s nodes) and middle joints (Bouchard’s nodes), aching and brief stiffness; at the base of the thumb it makes pinching, opening jars and turning keys painful.",
+            "hi": "उंगलियों के छोटे जोड़ों की घिसावट से आखिरी जोड़ों (हेबर्डन नोड्स) और बीच के जोड़ों (बूशार्ड नोड्स) पर सख्त, हड्डी जैसी गांठें, दर्द और थोड़ी देर की जकड़न होती है; अंगूठे की जड़ में यह चुटकी से पकड़ना, जार खोलना और चाबी घुमाना दर्दनाक बनाता है।"
+          },
+          "causes": {
+            "en": "Age over 40, female sex and family history; symptomatic hand osteoarthritis affects about 15% of adults, most often women over 50.",
+            "hi": "40 से ज़्यादा उम्र, महिला होना और पारिवारिक इतिहास; दर्द वाला हाथ का ऑस्टियोआर्थराइटिस लगभग 15% वयस्कों को होता है, ज़्यादातर 50 से ऊपर की महिलाओं को।"
+          },
+          "confirm": {
+            "en": "Examination of the hand joints (classification criteria based on bony enlargement of typical joints are 92% sensitive and 98% specific); an X-ray if the picture is unusual.",
+            "hi": "हाथ के जोड़ों की जांच (खास जोड़ों के हड्डी जैसे बढ़ने पर आधारित मापदंड 92% संवेदनशील और 98% विशिष्ट हैं); तस्वीर असामान्य हो तो एक्स-रे।"
+          },
+          "treat": {
+            "en": "Hand exercises, a thumb splint for thumb-base pain, joint-protection tips and aids (jar openers, thicker pens), topical anti-inflammatory gel; surgery for a badly affected thumb base.",
+            "hi": "हाथ के व्यायाम, अंगूठे की जड़ के दर्द के लिए अंगूठे की स्प्लिंट, जोड़ बचाने के तरीके और साधन (जार खोलने वाला, मोटा पेन), लगाने वाला सूजन-रोधी जेल; अंगूठे की जड़ बहुत खराब हो तो सर्जरी।"
+          },
+          "outlook": {
+            "en": "Flares come and go; pain often settles over years as the nodes form.",
+            "hi": "दर्द के दौर आते-जाते हैं; गांठें बनने के साथ सालों में दर्द अक्सर कम हो जाता है।"
+          },
+          "thresholds": [
+            10,
+            7,
+            4
+          ],
+          "anchors": [
+            "ch_bony_fingers",
+            "thumb_base",
+            "w_pinch"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "rheum",
+            "physio"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "ch_bony_fingers",
+              "label": {
+                "en": "Hard, bony knobs on the end or middle finger joints",
+                "hi": "उंगलियों के आखिरी या बीच के जोड़ों पर सख्त, हड्डी जैसी गांठें"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "fingers",
+              "label": {
+                "en": "Finger joints",
+                "hi": "उंगलियों के जोड़"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "thumb_base",
+              "label": {
+                "en": "Base of the thumb",
+                "hi": "अंगूठे की जड़"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "w_pinch",
+              "label": {
+                "en": "Pinching, opening jars, turning keys or writing",
+                "hi": "चुटकी से पकड़ना, जार खोलना, चाबी घुमाना या लिखना"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "ch_stiff_short",
+              "label": {
+                "en": "Stiff in the morning, easing within 30 minutes",
+                "hi": "सुबह जकड़न जो 30 मिनट के अंदर कम हो जाती है"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "hand_both",
+              "label": {
+                "en": "Both arms or hands",
+                "hi": "दोनों बांह या हाथ"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "h_1_5y",
+              "label": {
+                "en": "First had this pain 1 to 5 years ago",
+                "hi": "पहली बार यह दर्द 1 से 5 साल पहले हुआ"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "h_5y",
+              "label": {
+                "en": "First had this pain more than 5 years ago",
+                "hi": "पहली बार यह दर्द 5 साल से भी पहले हुआ"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -4
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_stiff_long",
+              "label": {
+                "en": "Stiff in the morning for more than 30 minutes",
+                "hi": "सुबह 30 मिनट से ज़्यादा जकड़न"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_swell_knuckles",
+              "label": {
+                "en": "Soft, puffy swelling of the knuckles or middle finger joints",
+                "hi": "उंगलियों की जड़ के जोड़ों (नकल्स) या बीच के जोड़ों में नरम, फूली सूजन"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall onto an outstretched hand",
+                "hi": "फैले हुए हाथ के बल गिरना"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "name": {
+            "en": "Rheumatoid or other inflammatory arthritis",
+            "hi": "रूमेटॉइड या दूसरी सूजन वाली गठिया"
+          },
+          "scientific": "Rheumatoid arthritis / inflammatory polyarthritis",
+          "what": {
+            "en": "The immune system inflames the joint linings, typically the knuckles and middle finger joints and the wrists of both hands, with soft, warm swelling and morning stiffness lasting more than 30 minutes, sometimes with tiredness.",
+            "hi": "इम्यून सिस्टम जोड़ों की झिल्लियों में सूजन लाता है, आमतौर पर दोनों हाथों के नकल्स, उंगलियों के बीच के जोड़ और कलाई में, नरम, गर्म सूजन और 30 मिनट से ज़्यादा सुबह की जकड़न के साथ, कभी थकान के साथ।"
+          },
+          "causes": {
+            "en": "Rheumatoid arthritis affects about 0.75% of Indian adults (around 7 million people), women more than men; psoriasis can cause a similar arthritis.",
+            "hi": "रूमेटॉइड आर्थराइटिस लगभग 0.75% भारतीय वयस्कों (करीब 70 लाख लोगों) को होता है, पुरुषों से ज़्यादा महिलाओं को; सोरायसिस से भी ऐसी गठिया हो सकती है।"
+          },
+          "confirm": {
+            "en": "Examination of the joints and blood tests (rheumatoid factor, anti-CCP, ESR/CRP) by a rheumatologist. NICE advises referral within 3 working days for persistent swelling of the small joints of the hands or feet.",
+            "hi": "रूमेटोलॉजिस्ट द्वारा जोड़ों की जांच और ब्लड टेस्ट (रूमेटॉइड फ़ैक्टर, एंटी-CCP, ESR/CRP)। NICE हाथों या पैरों के छोटे जोड़ों की बनी रहने वाली सूजन में 3 कामकाजी दिनों के अंदर रेफ़रल की सलाह देता है।"
+          },
+          "treat": {
+            "en": "Early disease-modifying medicines (such as methotrexate) protect the joints; exercise and hand therapy help.",
+            "hi": "जल्दी शुरू की गई बीमारी नियंत्रित करने वाली दवाएं (जैसे मेथोट्रेक्सेट) जोड़ों को बचाती हैं; व्यायाम और हैंड थेरेपी मदद करते हैं।"
+          },
+          "outlook": {
+            "en": "Treated early, most people keep good hand function; delay can lead to permanent joint damage.",
+            "hi": "जल्दी इलाज से ज़्यादातर लोगों के हाथ अच्छा काम करते रहते हैं; देरी से जोड़ों को स्थायी नुकसान हो सकता है।"
+          },
+          "thresholds": [
+            9,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_swell_knuckles",
+            "ch_stiff_long"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "rheum",
+            "medicine"
+          ],
+          "outlookSource": [
+            "niceraqs"
+          ],
+          "weights": [
+            {
+              "feature": "ch_swell_knuckles",
+              "label": {
+                "en": "Soft, puffy swelling of the knuckles or middle finger joints",
+                "hi": "उंगलियों की जड़ के जोड़ों (नकल्स) या बीच के जोड़ों में नरम, फूली सूजन"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "ch_stiff_long",
+              "label": {
+                "en": "Stiff in the morning for more than 30 minutes",
+                "hi": "सुबह 30 मिनट से ज़्यादा जकड़न"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "hand_both",
+              "label": {
+                "en": "Both arms or hands",
+                "hi": "दोनों बांह या हाथ"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "o_other_joints",
+              "label": {
+                "en": "Other joints also swollen or painful (feet, knees, wrists)",
+                "hi": "दूसरे जोड़ भी सूजे या दर्द वाले (पैर, घुटने, कलाई)"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "r_spa",
+              "label": {
+                "en": "Psoriasis, inflammatory bowel disease or recurring red, painful eye",
+                "hi": "सोरायसिस, आंतों की सूजन (IBD) या बार-बार लाल, दर्द भरी आंख"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_40_49",
+              "label": {
+                "en": "40–49",
+                "hi": "40–49"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "fingers",
+              "label": {
+                "en": "Finger joints",
+                "hi": "उंगलियों के जोड़"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "wrist_back",
+              "label": {
+                "en": "Back of the wrist",
+                "hi": "कलाई का पिछला हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_bony_fingers",
+              "label": {
+                "en": "Hard, bony knobs on the end or middle finger joints",
+                "hi": "उंगलियों के आखिरी या बीच के जोड़ों पर सख्त, हड्डी जैसी गांठें"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_stiff_short",
+              "label": {
+                "en": "Stiff in the morning, easing within 30 minutes",
+                "hi": "सुबह जकड़न जो 30 मिनट के अंदर कम हो जाती है"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "on_overuse",
+              "label": {
+                "en": "After more gripping, lifting, typing, tools or sport than usual",
+                "hi": "सामान्य से ज़्यादा पकड़ने, उठाने, टाइपिंग, औज़ार या खेल के बाद"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall onto an outstretched hand",
+                "hi": "फैले हुए हाथ के बल गिरना"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_click_finger",
+              "label": {
+                "en": "A finger or thumb clicks, catches or gets stuck bent and has to be straightened",
+                "hi": "उंगली या अंगूठा क्लिक करता है, अटकता है या मुड़ा फंस जाता है और सीधा करना पड़ता है"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "ganglion",
+          "name": {
+            "en": "Ganglion cyst",
+            "hi": "गैंग्लियन सिस्ट"
+          },
+          "scientific": "Ganglion cyst",
+          "what": {
+            "en": "A smooth, jelly-filled lump that grows from a joint or tendon sheath, most often on the back of the wrist (60–70%), also on the palm side of the wrist or at the base of a finger. It may change size and can ache with wrist use.",
+            "hi": "जेली से भरी चिकनी गांठ जो किसी जोड़ या टेंडन की झिल्ली से निकलती है, ज़्यादातर कलाई के पीछे (60–70%), कलाई के हथेली वाले हिस्से या उंगली की जड़ पर भी। इसका आकार बदल सकता है और कलाई के इस्तेमाल पर दर्द हो सकता है।"
+          },
+          "causes": {
+            "en": "Usually no clear cause; common in young and middle-aged adults.",
+            "hi": "आमतौर पर कोई साफ़ वजह नहीं; युवा और अधेड़ वयस्कों में आम।"
+          },
+          "confirm": {
+            "en": "Examination (it is smooth and lets light through); ultrasound if unclear.",
+            "hi": "जांच (यह चिकनी होती है और रोशनी आर-पार जाने देती है); साफ़ न हो तो अल्ट्रासाउंड।"
+          },
+          "treat": {
+            "en": "Often just watching: up to half go away on their own. Draining with a needle works in 30–50%; surgery if it is painful or keeps coming back. Do not hit it with a book (“Bible cyst”).",
+            "hi": "अक्सर बस नज़र रखना: लगभग आधी अपने आप चली जाती हैं। सुई से निकालना 30–50% में काम करता है; दर्द हो या बार-बार लौटे तो सर्जरी। इसे किताब से न मारें।"
+          },
+          "outlook": {
+            "en": "Harmless; many disappear within a couple of years.",
+            "hi": "हानिरहित; कई कुछ सालों में गायब हो जाती हैं।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_lump_wrist"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "handsurg",
+            "ortho"
+          ],
+          "outlookSource": [
+            "ganglion"
+          ],
+          "weights": [
+            {
+              "feature": "ch_lump_wrist",
+              "label": {
+                "en": "A smooth, rubbery lump on the wrist or at the base of a finger that may change size",
+                "hi": "कलाई पर या उंगली की जड़ में चिकनी, रबर जैसी गांठ जिसका आकार बदल सकता है"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "wrist_back",
+              "label": {
+                "en": "Back of the wrist",
+                "hi": "कलाई का पिछला हिस्सा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "wrist_palm",
+              "label": {
+                "en": "Palm side of the wrist",
+                "hi": "कलाई का हथेली वाला हिस्सा"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "finger_base",
+              "label": {
+                "en": "Palm, at the base of the fingers",
+                "hi": "हथेली, उंगलियों की जड़ पर"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sex_f",
+              "label": {
+                "en": "Female",
+                "hi": "महिला"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_bony_fingers",
+              "label": {
+                "en": "Hard, bony knobs on the end or middle finger joints",
+                "hi": "उंगलियों के आखिरी या बीच के जोड़ों पर सख्त, हड्डी जैसी गांठें"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_swell_knuckles",
+              "label": {
+                "en": "Soft, puffy swelling of the knuckles or middle finger joints",
+                "hi": "उंगलियों की जड़ के जोड़ों (नकल्स) या बीच के जोड़ों में नरम, फूली सूजन"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_palm_cord",
+              "label": {
+                "en": "A firm lump or cord in the palm, with a finger slowly bending down",
+                "hi": "हथेली में सख्त गांठ या डोरी, और एक उंगली धीरे-धीरे नीचे मुड़ती जा रही है"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "dupuytren",
+          "name": {
+            "en": "Dupuytren’s contracture",
+            "hi": "ड्यूपुइट्रेन कॉन्ट्रैक्चर"
+          },
+          "scientific": "Dupuytren disease",
+          "what": {
+            "en": "The tissue under the skin of the palm thickens into lumps and cords that slowly pull one or more fingers, most often the ring finger, into a bent position. It is usually painless.",
+            "hi": "हथेली की त्वचा के नीचे का ऊतक मोटा होकर गांठ और डोरी बन जाता है, जो धीरे-धीरे एक या ज़्यादा उंगलियों को, ज़्यादातर अनामिका को, मोड़ देती है। आमतौर पर बिना दर्द।"
+          },
+          "causes": {
+            "en": "Men over 40–50, family history, diabetes, alcohol and smoking.",
+            "hi": "40–50 से ऊपर के पुरुष, पारिवारिक इतिहास, डायबिटीज़, शराब और धूम्रपान।"
+          },
+          "confirm": {
+            "en": "Examination. Being unable to lay the palm flat on a table (table-top test) is a reason to see a hand surgeon.",
+            "hi": "जांच। हथेली मेज़ पर सपाट न रख पाना (टेबल-टॉप टेस्ट) हैंड सर्जन को दिखाने की वजह है।"
+          },
+          "treat": {
+            "en": "Watching while the hand works well; a hand surgeon considers needle release or surgery once the knuckle bends about 30° or a middle finger joint bends at all.",
+            "hi": "हाथ ठीक काम करे तब तक नज़र रखना; नकल लगभग 30° मुड़ जाए या उंगली का बीच का जोड़ ज़रा भी मुड़े, तो हैंड सर्जन सुई से रिलीज़ या सर्जरी पर विचार करते हैं।"
+          },
+          "outlook": {
+            "en": "It progresses slowly; treatment straightens the finger but it can come back.",
+            "hi": "धीरे-धीरे बढ़ता है; इलाज से उंगली सीधी होती है पर यह लौट सकता है।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "ch_palm_cord",
+            "ch_tabletop"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "handsurg"
+          ],
+          "outlookSource": [
+            "dupuytren"
+          ],
+          "weights": [
+            {
+              "feature": "ch_palm_cord",
+              "label": {
+                "en": "A firm lump or cord in the palm, with a finger slowly bending down",
+                "hi": "हथेली में सख्त गांठ या डोरी, और एक उंगली धीरे-धीरे नीचे मुड़ती जा रही है"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "ch_tabletop",
+              "label": {
+                "en": "Cannot lay the palm and fingers flat on a table",
+                "hi": "हथेली और उंगलियाँ मेज़ पर सपाट नहीं रख पाते"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "finger_base",
+              "label": {
+                "en": "Palm, at the base of the fingers",
+                "hi": "हथेली, उंगलियों की जड़ पर"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "sex_m",
+              "label": {
+                "en": "Male",
+                "hi": "पुरुष"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_50_59",
+              "label": {
+                "en": "50–59",
+                "hi": "50–59"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "r_immune",
+              "label": {
+                "en": "Diabetes, HIV or low immunity",
+                "hi": "डायबिटीज़, HIV या कम इम्युनिटी"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "hand_both",
+              "label": {
+                "en": "Both arms or hands",
+                "hi": "दोनों बांह या हाथ"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "ch_numb_median",
+              "label": {
+                "en": "Numbness or tingling in the thumb, index and middle fingers",
+                "hi": "अंगूठे, तर्जनी और बीच की उंगली में सुन्नपन या झुनझुनी"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_swell_knuckles",
+              "label": {
+                "en": "Soft, puffy swelling of the knuckles or middle finger joints",
+                "hi": "उंगलियों की जड़ के जोड़ों (नकल्स) या बीच के जोड़ों में नरम, फूली सूजन"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_lump_wrist",
+              "label": {
+                "en": "A smooth, rubbery lump on the wrist or at the base of a finger that may change size",
+                "hi": "कलाई पर या उंगली की जड़ में चिकनी, रबर जैसी गांठ जिसका आकार बदल सकता है"
+              },
+              "weight": -1
+            }
+          ]
+        },
+        {
+          "id": "scaphoid",
+          "name": {
+            "en": "Possible scaphoid (wrist bone) fracture",
+            "hi": "स्कैफ़ॉइड (कलाई की हड्डी) फ्रैक्चर की आशंका"
+          },
+          "scientific": "Scaphoid fracture",
+          "what": {
+            "en": "The scaphoid is a small wrist bone at the base of the thumb that breaks with a fall on an outstretched hand. The wrist may look normal, with pain in the hollow at the base of the thumb. Up to 25% do not show on the first X-ray, and a missed fracture can fail to heal.",
+            "hi": "स्कैफ़ॉइड अंगूठे की जड़ पर कलाई की एक छोटी हड्डी है जो फैले हुए हाथ के बल गिरने से टूटती है। कलाई सामान्य दिख सकती है, अंगूठे की जड़ के गड्ढे में दर्द के साथ। 25% तक पहले एक्स-रे में नहीं दिखते, और छूटा फ्रैक्चर भर न पाए ऐसा हो सकता है।"
+          },
+          "causes": {
+            "en": "Falls, sport and road accidents in young adults (average age 29); 60–70% of wrist-bone fractures are scaphoid fractures.",
+            "hi": "युवाओं (औसत उम्र 29) में गिरना, खेल और सड़क दुर्घटनाएं; कलाई की हड्डियों के 60–70% फ्रैक्चर स्कैफ़ॉइड के होते हैं।"
+          },
+          "confirm": {
+            "en": "X-rays with special scaphoid views; if they are normal but it still hurts, a splint and a repeat X-ray or an MRI.",
+            "hi": "स्कैफ़ॉइड के खास व्यू वाले एक्स-रे; सामान्य हों पर दर्द बना रहे तो स्प्लिंट और दोबारा एक्स-रे या MRI।"
+          },
+          "treat": {
+            "en": "A splint or cast; surgery for displaced fractures. A diagnosis delayed beyond 4 weeks makes non-union almost 10 times more likely.",
+            "hi": "स्प्लिंट या प्लास्टर; खिसके फ्रैक्चर में सर्जरी। 4 हफ्ते से ज़्यादा देर से पहचान होने पर हड्डी न जुड़ने की संभावना लगभग 10 गुना हो जाती है।"
+          },
+          "outlook": {
+            "en": "Most heal well when found and protected early.",
+            "hi": "जल्दी पकड़कर सुरक्षित रखने पर ज़्यादातर अच्छी तरह भर जाते हैं।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "rf_snuffbox"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho",
+            "emergency"
+          ],
+          "outlookSource": [
+            "scaphoid"
+          ],
+          "weights": [
+            {
+              "feature": "rf_snuffbox",
+              "label": {
+                "en": "After a fall on the hand: pain when pressing the hollow at the base of the thumb",
+                "hi": "हाथ के बल गिरने के बाद: अंगूठे की जड़ के गड्ढे को दबाने पर दर्द"
+              },
+              "weight": 5
+            },
+            {
+              "feature": "on_fall",
+              "label": {
+                "en": "A fall onto an outstretched hand",
+                "hi": "फैले हुए हाथ के बल गिरना"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "wrist_thumb",
+              "label": {
+                "en": "Thumb side of the wrist",
+                "hi": "कलाई का अंगूठे वाला हिस्सा"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_18_29",
+              "label": {
+                "en": "18–29",
+                "hi": "18–29"
+              },
+              "weight": 2
+            },
+            {
+              "feature": "a_30_39",
+              "label": {
+                "en": "30–39",
+                "hi": "30–39"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "a_u18",
+              "label": {
+                "en": "Under 18",
+                "hi": "18 से कम"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "sex_m",
+              "label": {
+                "en": "Male",
+                "hi": "पुरुष"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_accident",
+              "label": {
+                "en": "Road accident",
+                "hi": "सड़क दुर्घटना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "on_gradual",
+              "label": {
+                "en": "Slowly, with no clear reason",
+                "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+              },
+              "weight": -3
+            },
+            {
+              "feature": "a_60p",
+              "label": {
+                "en": "60 or over",
+                "hi": "60 या ज़्यादा"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_bony_fingers",
+              "label": {
+                "en": "Hard, bony knobs on the end or middle finger joints",
+                "hi": "उंगलियों के आखिरी या बीच के जोड़ों पर सख्त, हड्डी जैसी गांठें"
+              },
+              "weight": -2
+            }
+          ]
+        },
+        {
+          "id": "neckref",
+          "name": {
+            "en": "Pain or tingling coming from the neck",
+            "hi": "गर्दन से आने वाला दर्द या झुनझुनी"
+          },
+          "scientific": "Cervical radiculopathy (referred arm symptoms)",
+          "what": {
+            "en": "A pinched nerve root in the neck can cause pain, tingling or weakness in the arm and hand that mimics elbow or wrist problems. The neck section of this guide checks this in detail.",
+            "hi": "गर्दन में दबी नस की जड़ बांह और हाथ में दर्द, झुनझुनी या कमज़ोरी पैदा कर सकती है, जो कोहनी या कलाई की समस्या जैसी लगती है। इस गाइड का गर्दन वाला भाग इसे विस्तार से जांचता है।"
+          },
+          "causes": {
+            "en": "Disc bulges and wear in the neck (cervical spondylosis).",
+            "hi": "गर्दन में डिस्क का उभार और घिसावट (सर्वाइकल स्पॉन्डिलोसिस)।"
+          },
+          "confirm": {
+            "en": "Examination of the neck, nerves and reflexes; an MRI if there is weakness or it does not settle.",
+            "hi": "गर्दन, नसों और रिफ़्लेक्स की जांच; कमज़ोरी हो या ठीक न हो तो MRI।"
+          },
+          "treat": {
+            "en": "Staying active, physiotherapy and pain relief; urgent review for worsening weakness.",
+            "hi": "सक्रिय रहना, फिज़ियोथेरेपी और दर्द की दवा; कमज़ोरी बढ़े तो तुरंत दिखाएं।"
+          },
+          "outlook": {
+            "en": "Most improve within weeks to a few months.",
+            "hi": "ज़्यादातर कुछ हफ्तों से कुछ महीनों में सुधरते हैं।"
+          },
+          "thresholds": [
+            8,
+            6,
+            4
+          ],
+          "anchors": [
+            "neck",
+            "ch_neck_arm"
+          ],
+          "rare": false,
+          "onlyIf": null,
+          "departments": [
+            "ortho_spine",
+            "physio"
+          ],
+          "outlookSource": null,
+          "weights": [
+            {
+              "feature": "neck",
+              "label": {
+                "en": "Neck",
+                "hi": "गर्दन"
+              },
+              "weight": 3
+            },
+            {
+              "feature": "ch_neck_arm",
+              "label": {
+                "en": "Neck pain with pain shooting down the arm",
+                "hi": "गर्दन दर्द के साथ बांह में नीचे तक करंट जैसा दर्द"
+              },
+              "weight": 4
+            },
+            {
+              "feature": "ch_weak_grip",
+              "label": {
+                "en": "Dropping things, or a clumsy or weak hand",
+                "hi": "चीज़ें गिर जाना, या हाथ अनाड़ी या कमज़ोर लगना"
+              },
+              "weight": 1
+            },
+            {
+              "feature": "ch_numb_median",
+              "label": {
+                "en": "Numbness or tingling in the thumb, index and middle fingers",
+                "hi": "अंगूठे, तर्जनी और बीच की उंगली में सुन्नपन या झुनझुनी"
+              },
+              "weight": 0
+            },
+            {
+              "feature": "elb_out",
+              "label": {
+                "en": "Outer side of the elbow",
+                "hi": "कोहनी का बाहरी हिस्सा"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_night_hand",
+              "label": {
+                "en": "Hand tingling that wakes you at night and eases by shaking the hand",
+                "hi": "हाथ की झुनझुनी जो रात को जगा दे और हाथ झटकने से कम हो"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_elbow_bend",
+              "label": {
+                "en": "Ring and little finger tingling when the elbow stays bent (on the phone, sleeping with the arm bent)",
+                "hi": "कोहनी देर तक मुड़ी रहने पर (फ़ोन पर बात, मुड़ी बांह के साथ सोना) अनामिका और छोटी उंगली में झुनझुनी"
+              },
+              "weight": -1
+            },
+            {
+              "feature": "ch_click_finger",
+              "label": {
+                "en": "A finger or thumb clicks, catches or gets stuck bent and has to be straightened",
+                "hi": "उंगली या अंगूठा क्लिक करता है, अटकता है या मुड़ा फंस जाता है और सीधा करना पड़ता है"
+              },
+              "weight": -2
+            },
+            {
+              "feature": "ch_lump_wrist",
+              "label": {
+                "en": "A smooth, rubbery lump on the wrist or at the base of a finger that may change size",
+                "hi": "कलाई पर या उंगली की जड़ में चिकनी, रबर जैसी गांठ जिसका आकार बदल सकता है"
+              },
+              "weight": -2
+            }
+          ]
+        }
+      ],
+      "emergencies": [
+        {
+          "id": "fracture",
+          "name": {
+            "en": "Possible broken bone or dislocation",
+            "hi": "हड्डी टूटने या जोड़ उतरने की आशंका"
+          },
+          "scientific": "Elbow or wrist fracture / dislocation",
+          "what": {
+            "en": "A deformed or quickly swollen elbow or wrist after a fall or injury, or an elbow that cannot be straightened fully, needs an X-ray today. Adults who can fully straighten the elbow have only a 1.6% chance of a fracture (the test misses 3%); in children it is less reliable. Support the arm and go to the emergency department.",
+            "hi": "गिरने या चोट के बाद टेढ़ी या तेज़ी से सूजी कोहनी या कलाई, या कोहनी जो पूरी सीधी न हो, उसका आज ही एक्स-रे ज़रूरी है। जो वयस्क कोहनी पूरी सीधी कर पाते हैं उनमें फ्रैक्चर की संभावना सिर्फ़ 1.6% है (टेस्ट 3% छोड़ता है); बच्चों में यह कम भरोसेमंद है। बांह को सहारा दें और इमरजेंसी जाएं।"
+          },
+          "when": "rf_deform"
+        },
+        {
+          "id": "handinf",
+          "name": {
+            "en": "Possible serious hand infection",
+            "hi": "हाथ के गंभीर इन्फेक्शन की आशंका"
+          },
+          "scientific": "Flexor sheath infection / deep hand infection",
+          "what": {
+            "en": "A swollen finger held bent, very painful to straighten and tender along its length, especially after a cut or bite, can be an infection of the tendon sheath, a surgical emergency that can destroy the finger. Fever is often absent (17%). Go to the emergency department today and keep the hand raised.",
+            "hi": "सूजी उंगली जो मुड़ी रहती है, सीधा करने पर बहुत दर्द करती है और पूरी लंबाई में दबाने पर दुखती है, खासकर कटने या काटने के बाद, टेंडन की झिल्ली का इन्फेक्शन हो सकती है — सर्जरी वाली इमरजेंसी जो उंगली खराब कर सकती है। बुखार अक्सर नहीं होता (17%)। आज ही इमरजेंसी जाएं और हाथ ऊपर रखें।"
+          },
+          "when": "rf_infect"
+        },
+        {
+          "id": "septic",
+          "name": {
+            "en": "Possible infected joint or bursa",
+            "hi": "जोड़ या बर्सा में इन्फेक्शन की आशंका"
+          },
+          "scientific": "Septic arthritis / septic bursitis",
+          "what": {
+            "en": "A hot, red, swollen elbow or wrist, or a hot swelling on the point of the elbow, with fever, may be infected and needs treatment today; fluid is drawn off before antibiotics where possible.",
+            "hi": "बुखार के साथ गर्म, लाल, सूजी कोहनी या कलाई, या कोहनी की नोक पर गर्म सूजन में इन्फेक्शन हो सकता है और आज ही इलाज चाहिए; जहाँ संभव हो, एंटीबायोटिक से पहले तरल निकाला जाता है।"
+          },
+          "when": "rf_hot"
+        },
+        {
+          "id": "cardiac",
+          "name": {
+            "en": "Possible heart attack",
+            "hi": "दिल के दौरे की आशंका"
+          },
+          "scientific": "Acute coronary syndrome",
+          "what": {
+            "en": "Heart pain can be felt in the arm, elbow or wrist, with chest pressure, sweating or breathlessness. Call 108 now; do not wait.",
+            "hi": "दिल का दर्द बांह, कोहनी या कलाई में भी महसूस हो सकता है, साथ में सीने में दबाव, पसीना या सांस फूलना। अभी 108 बुलाएं; इंतज़ार न करें।"
+          },
+          "when": "rf_chest"
+        }
+      ],
+      "urgency": {
+        "orange": [
+          {
+            "reason": "o_snuffbox",
+            "text": {
+              "en": "Pain at the base of the thumb after a fall: X-ray and splint within a day",
+              "hi": "गिरने के बाद अंगूठे की जड़ में दर्द: एक दिन के अंदर एक्स-रे और स्प्लिंट"
+            },
+            "when": "rf_snuffbox"
+          },
+          {
+            "reason": "o_weak",
+            "text": {
+              "en": "Worsening weakness or wasting of the hand muscles",
+              "hi": "हाथ की मांसपेशियों में बढ़ती कमज़ोरी या घटना"
+            },
+            "when": "rf_weak"
+          },
+          {
+            "reason": "o_fever",
+            "text": {
+              "en": "Fever, night sweats or weight loss with arm or hand pain",
+              "hi": "बांह या हाथ के दर्द के साथ बुखार, रात को पसीना या वज़न घटना"
+            },
+            "when": "rf_fever"
+          },
+          {
+            "reason": "o_night",
+            "text": {
+              "en": "Constant night pain at age 50 or over, or with past cancer",
+              "hi": "50 या ज़्यादा उम्र में, या पहले कैंसर के साथ रात का लगातार दर्द"
+            },
+            "when": {
+              "all": [
+                "rf_night",
+                {
+                  "any": [
+                    "age_ge50",
+                    "r_cancer"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "reason": "o_pain",
+            "text": {
+              "en": "Very severe pain (9–10 out of 10)",
+              "hi": "बहुत तेज़ दर्द (10 में 9–10)"
+            },
+            "when": {
+              "painGte": 9
+            }
+          }
+        ],
+        "yellow": [
+          {
+            "reason": "y_injury",
+            "text": {
+              "en": "Started with a fall, injury or accident",
+              "hi": "गिरने, चोट या दुर्घटना से शुरू"
+            },
+            "when": {
+              "any": [
+                "on_fall",
+                "on_blow",
+                "on_accident"
+              ]
+            }
+          },
+          {
+            "reason": "y_ra",
+            "text": {
+              "en": "Soft swelling of small hand joints with long morning stiffness: NICE advises a rheumatology referral within 3 working days",
+              "hi": "हाथ के छोटे जोड़ों की नरम सूजन और सुबह की लंबी जकड़न: NICE 3 कामकाजी दिनों में रूमेटोलॉजी रेफ़रल की सलाह देता है"
+            },
+            "when": {
+              "all": [
+                "ch_swell_knuckles",
+                {
+                  "any": [
+                    "ch_stiff_long",
+                    "hand_both",
+                    "o_other_joints"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "reason": "y_nerve",
+            "text": {
+              "en": "Weak or clumsy hand: a pressed nerve should be checked",
+              "hi": "कमज़ोर या अनाड़ी हाथ: दबी नस की जांच ज़रूरी"
+            },
+            "when": "ch_weak_grip"
+          },
+          {
+            "reason": "y_bursa",
+            "text": {
+              "en": "A swelling on the point of the elbow: about one in three is infected, so have it checked",
+              "hi": "कोहनी की नोक पर सूजन: लगभग तीन में से एक में इन्फेक्शन होता है, इसलिए जांच करवाएं"
+            },
+            "when": "ch_elbow_swell"
+          },
+          {
+            "reason": "y_often",
+            "text": {
+              "en": "Bouts are coming more often or getting worse",
+              "hi": "दौरे जल्दी-जल्दी आ रहे हैं या बढ़ रहे हैं"
+            },
+            "when": "btw_often"
+          },
+          {
+            "reason": "y_long",
+            "text": {
+              "en": "This bout has lasted more than 6 weeks",
+              "hi": "इस बार का दर्द 6 हफ्ते से ज़्यादा से है"
+            },
+            "when": {
+              "any": [
+                "d_6_12",
+                "d_3m"
+              ]
+            }
+          },
+          {
+            "reason": "y_pain",
+            "text": {
+              "en": "Strong pain (7–8 out of 10)",
+              "hi": "तेज़ दर्द (10 में 7–8)"
+            },
+            "when": {
+              "all": [
+                {
+                  "painGte": 7
+                },
+                {
+                  "not": {
+                    "painGte": 9
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "reason": "y_sleep",
+            "text": {
+              "en": "Pain or tingling disturbing sleep",
+              "hi": "दर्द या झुनझुनी से नींद खराब"
+            },
+            "when": "sleep_bad"
+          },
+          {
+            "reason": "y_func",
+            "text": {
+              "en": "Cannot grip or lift",
+              "hi": "पकड़ या उठा नहीं पाते"
+            },
+            "when": "hgrip_no"
+          },
+          {
+            "reason": "y_neck",
+            "text": {
+              "en": "Neck pain with pain down the arm",
+              "hi": "गर्दन दर्द के साथ बांह में नीचे तक दर्द"
+            },
+            "when": "ch_neck_arm"
+          }
+        ]
+      },
+      "redFlags": [
+        {
+          "id": "rf_deform",
+          "label": {
+            "en": "After a fall or injury: the elbow or wrist looks deformed, swelled up quickly, or the elbow cannot be straightened fully",
+            "hi": "गिरने या चोट के बाद: कोहनी या कलाई टेढ़ी दिखती है, तेज़ी से सूज गई, या कोहनी पूरी सीधी नहीं होती"
+          }
+        },
+        {
+          "id": "rf_snuffbox",
+          "label": {
+            "en": "After a fall on the hand: pain when pressing the hollow at the base of the thumb",
+            "hi": "हाथ के बल गिरने के बाद: अंगूठे की जड़ के गड्ढे को दबाने पर दर्द"
+          }
+        },
+        {
+          "id": "rf_infect",
+          "label": {
+            "en": "A red, hot, swollen finger or hand, held bent and very painful to straighten, or after a cut or a human or animal bite",
+            "hi": "लाल, गर्म, सूजी उंगली या हाथ जो मुड़ा रहता है और सीधा करने पर बहुत दर्द हो, या कटने या इंसान या जानवर के काटने के बाद"
+          }
+        },
+        {
+          "id": "rf_hot",
+          "label": {
+            "en": "A hot, red, swollen elbow or wrist, or a hot elbow-point swelling, with fever",
+            "hi": "बुखार के साथ गर्म, लाल, सूजी कोहनी या कलाई, या कोहनी की नोक पर गर्म सूजन"
+          }
+        },
+        {
+          "id": "rf_chest",
+          "label": {
+            "en": "Arm pain with chest pain or pressure, breathlessness or sweating",
+            "hi": "बांह के दर्द के साथ सीने में दर्द या दबाव, सांस फूलना या पसीना"
+          }
+        },
+        {
+          "id": "rf_weak",
+          "label": {
+            "en": "Hand or arm weakness that is getting worse, or the muscles of the hand are wasting",
+            "hi": "हाथ या बांह की कमज़ोरी जो बढ़ रही है, या हाथ की मांसपेशियाँ घट रही हैं"
+          }
+        },
+        {
+          "id": "rf_fever",
+          "label": {
+            "en": "Fever, night sweats or weight loss without trying",
+            "hi": "बुखार, रात को पसीना या बिना कोशिश वज़न घटना"
+          }
+        },
+        {
+          "id": "rf_night",
+          "label": {
+            "en": "Constant pain at night that no position eases",
+            "hi": "रात को लगातार दर्द जो किसी भी पोज़िशन में कम न हो"
+          }
+        }
+      ],
+      "areas": [
+        {
+          "id": "elb_out",
+          "name": {
+            "en": "Outer side of the elbow",
+            "hi": "कोहनी का बाहरी हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "elb_out"
+        },
+        {
+          "id": "elb_in",
+          "name": {
+            "en": "Inner side of the elbow",
+            "hi": "कोहनी का अंदरूनी हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "elb_in"
+        },
+        {
+          "id": "elb_back",
+          "name": {
+            "en": "Point of the elbow (back)",
+            "hi": "कोहनी की नोक (पीछे)"
+          },
+          "paired": true,
+          "code": null,
+          "view": "elb_back"
+        },
+        {
+          "id": "wrist_thumb",
+          "name": {
+            "en": "Thumb side of the wrist",
+            "hi": "कलाई का अंगूठे वाला हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "wrist_thumb"
+        },
+        {
+          "id": "thumb_base",
+          "name": {
+            "en": "Base of the thumb",
+            "hi": "अंगूठे की जड़"
+          },
+          "paired": true,
+          "code": null,
+          "view": "thumb_base"
+        },
+        {
+          "id": "wrist_palm",
+          "name": {
+            "en": "Palm side of the wrist",
+            "hi": "कलाई का हथेली वाला हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "wrist_palm"
+        },
+        {
+          "id": "wrist_back",
+          "name": {
+            "en": "Back of the wrist",
+            "hi": "कलाई का पिछला हिस्सा"
+          },
+          "paired": true,
+          "code": null,
+          "view": "wrist_back"
+        },
+        {
+          "id": "finger_base",
+          "name": {
+            "en": "Palm, at the base of the fingers",
+            "hi": "हथेली, उंगलियों की जड़ पर"
+          },
+          "paired": true,
+          "code": null,
+          "view": "finger_base"
+        },
+        {
+          "id": "fingers",
+          "name": {
+            "en": "Finger joints",
+            "hi": "उंगलियों के जोड़"
+          },
+          "paired": true,
+          "code": null,
+          "view": "fingers"
+        },
+        {
+          "id": "neck",
+          "name": {
+            "en": "Neck",
+            "hi": "गर्दन"
+          },
+          "paired": false,
+          "code": null,
+          "view": "neck"
+        }
+      ],
+      "derived": [
+        {
+          "id": "hand_any",
+          "when": {
+            "any": [
+              "elb_out",
+              "elb_in",
+              "elb_back",
+              "wrist_thumb",
+              "thumb_base",
+              "wrist_palm",
+              "wrist_back",
+              "finger_base",
+              "fingers"
+            ]
+          }
+        }
+      ],
+      "patterns": {
+        "character": [
+          {
+            "id": "ch_grip_pain",
+            "label": {
+              "en": "Pain on gripping, lifting a cup or kettle, or shaking hands",
+              "hi": "पकड़ने, कप या केतली उठाने, या हाथ मिलाने पर दर्द"
+            }
+          },
+          {
+            "id": "ch_night_hand",
+            "label": {
+              "en": "Hand tingling that wakes you at night and eases by shaking the hand",
+              "hi": "हाथ की झुनझुनी जो रात को जगा दे और हाथ झटकने से कम हो"
+            }
+          },
+          {
+            "id": "ch_numb_median",
+            "label": {
+              "en": "Numbness or tingling in the thumb, index and middle fingers",
+              "hi": "अंगूठे, तर्जनी और बीच की उंगली में सुन्नपन या झुनझुनी"
+            }
+          },
+          {
+            "id": "ch_numb_ulnar",
+            "label": {
+              "en": "Numbness or tingling in the ring and little fingers",
+              "hi": "अनामिका और छोटी उंगली में सुन्नपन या झुनझुनी"
+            }
+          },
+          {
+            "id": "ch_elbow_bend",
+            "label": {
+              "en": "Ring and little finger tingling when the elbow stays bent (on the phone, sleeping with the arm bent)",
+              "hi": "कोहनी देर तक मुड़ी रहने पर (फ़ोन पर बात, मुड़ी बांह के साथ सोना) अनामिका और छोटी उंगली में झुनझुनी"
+            }
+          },
+          {
+            "id": "ch_weak_grip",
+            "label": {
+              "en": "Dropping things, or a clumsy or weak hand",
+              "hi": "चीज़ें गिर जाना, या हाथ अनाड़ी या कमज़ोर लगना"
+            }
+          },
+          {
+            "id": "ch_click_finger",
+            "label": {
+              "en": "A finger or thumb clicks, catches or gets stuck bent and has to be straightened",
+              "hi": "उंगली या अंगूठा क्लिक करता है, अटकता है या मुड़ा फंस जाता है और सीधा करना पड़ता है"
+            }
+          },
+          {
+            "id": "ch_lump_wrist",
+            "label": {
+              "en": "A smooth, rubbery lump on the wrist or at the base of a finger that may change size",
+              "hi": "कलाई पर या उंगली की जड़ में चिकनी, रबर जैसी गांठ जिसका आकार बदल सकता है"
+            }
+          },
+          {
+            "id": "ch_palm_cord",
+            "label": {
+              "en": "A firm lump or cord in the palm, with a finger slowly bending down",
+              "hi": "हथेली में सख्त गांठ या डोरी, और एक उंगली धीरे-धीरे नीचे मुड़ती जा रही है"
+            }
+          },
+          {
+            "id": "ch_tabletop",
+            "label": {
+              "en": "Cannot lay the palm and fingers flat on a table",
+              "hi": "हथेली और उंगलियाँ मेज़ पर सपाट नहीं रख पाते"
+            }
+          },
+          {
+            "id": "ch_bony_fingers",
+            "label": {
+              "en": "Hard, bony knobs on the end or middle finger joints",
+              "hi": "उंगलियों के आखिरी या बीच के जोड़ों पर सख्त, हड्डी जैसी गांठें"
+            }
+          },
+          {
+            "id": "ch_swell_knuckles",
+            "label": {
+              "en": "Soft, puffy swelling of the knuckles or middle finger joints",
+              "hi": "उंगलियों की जड़ के जोड़ों (नकल्स) या बीच के जोड़ों में नरम, फूली सूजन"
+            }
+          },
+          {
+            "id": "ch_stiff_short",
+            "label": {
+              "en": "Stiff in the morning, easing within 30 minutes",
+              "hi": "सुबह जकड़न जो 30 मिनट के अंदर कम हो जाती है"
+            }
+          },
+          {
+            "id": "ch_stiff_long",
+            "label": {
+              "en": "Stiff in the morning for more than 30 minutes",
+              "hi": "सुबह 30 मिनट से ज़्यादा जकड़न"
+            }
+          },
+          {
+            "id": "ch_elbow_swell",
+            "label": {
+              "en": "A soft, egg-like swelling on the point of the elbow",
+              "hi": "कोहनी की नोक पर नरम, अंडे जैसी सूजन"
+            }
+          },
+          {
+            "id": "ch_neck_arm",
+            "label": {
+              "en": "Neck pain with pain shooting down the arm",
+              "hi": "गर्दन दर्द के साथ बांह में नीचे तक करंट जैसा दर्द"
+            }
+          }
+        ],
+        "worse": [
+          {
+            "id": "w_lift_baby",
+            "label": {
+              "en": "Lifting a baby, pouring, or twisting the thumb and wrist",
+              "hi": "बच्चे को उठाना, उड़ेलना, या अंगूठा और कलाई मोड़ना"
+            }
+          },
+          {
+            "id": "w_pinch",
+            "label": {
+              "en": "Pinching, opening jars, turning keys or writing",
+              "hi": "चुटकी से पकड़ना, जार खोलना, चाबी घुमाना या लिखना"
+            }
+          },
+          {
+            "id": "w_wrist_use",
+            "label": {
+              "en": "Typing, using a mouse or phone, wringing clothes, using tools",
+              "hi": "टाइपिंग, माउस या फ़ोन चलाना, कपड़े निचोड़ना, औज़ार चलाना"
+            }
+          },
+          {
+            "id": "w_lean_elbow",
+            "label": {
+              "en": "Leaning on the elbow",
+              "hi": "कोहनी पर टेक लगाना"
+            }
+          }
+        ],
+        "better": [
+          {
+            "id": "b_rest",
+            "label": {
+              "en": "Rest",
+              "hi": "आराम"
+            }
+          }
+        ],
+        "other": [
+          {
+            "id": "o_new_mother",
+            "label": {
+              "en": "Pregnant, or caring for a baby under a year old",
+              "hi": "गर्भवती, या एक साल से छोटे बच्चे की देखभाल"
+            }
+          },
+          {
+            "id": "o_repetitive",
+            "label": {
+              "en": "Work with forceful, repeated hand or arm use (tools, construction, cooking, tailoring, plumbing)",
+              "hi": "ज़ोर से और बार-बार हाथ या बांह के इस्तेमाल वाला काम (औज़ार, निर्माण, खाना बनाना, सिलाई, प्लंबिंग)"
+            }
+          },
+          {
+            "id": "o_thyroid",
+            "label": {
+              "en": "Underactive thyroid",
+              "hi": "थायरॉइड कम (हाइपोथायरॉइडिज़्म)"
+            }
+          },
+          {
+            "id": "o_overweight",
+            "label": {
+              "en": "Overweight",
+              "hi": "ज़्यादा वज़न"
+            }
+          },
+          {
+            "id": "o_other_joints",
+            "label": {
+              "en": "Other joints also swollen or painful (feet, knees, wrists)",
+              "hi": "दूसरे जोड़ भी सूजे या दर्द वाले (पैर, घुटने, कलाई)"
+            }
+          }
+        ]
+      },
+      "mainComplaint": [],
+      "functionQuestions": [
+        {
+          "id": "hgrip",
+          "options": [
+            {
+              "id": "hgrip_ok",
+              "label": {
+                "en": "Normally",
+                "hi": "सामान्य"
+              }
+            },
+            {
+              "id": "hgrip_diff",
+              "label": {
+                "en": "With pain",
+                "hi": "दर्द के साथ"
+              }
+            },
+            {
+              "id": "hgrip_no",
+              "label": {
+                "en": "Cannot do it",
+                "hi": "नहीं कर पाते"
+              }
+            }
+          ]
+        },
+        {
+          "id": "hfine",
+          "options": [
+            {
+              "id": "hfine_ok",
+              "label": {
+                "en": "Normally",
+                "hi": "सामान्य"
+              }
+            },
+            {
+              "id": "hfine_diff",
+              "label": {
+                "en": "Clumsy or painful",
+                "hi": "अनाड़ी या दर्द के साथ"
+              }
+            },
+            {
+              "id": "hfine_no",
+              "label": {
+                "en": "Cannot do them",
+                "hi": "नहीं कर पाते"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sleep",
+          "options": [
+            {
+              "id": "sleep_ok",
+              "label": {
+                "en": "Normal",
+                "hi": "सामान्य"
+              }
+            },
+            {
+              "id": "sleep_bad",
+              "label": {
+                "en": "Pain wakes me up",
+                "hi": "दर्द से नींद खुलती है"
+              }
+            }
+          ]
+        }
+      ],
+      "bedsideTests": [
+        {
+          "id": "cozen",
+          "name": {
+            "en": "Lift the wrist against resistance (Cozen test)",
+            "hi": "रुकावट के खिलाफ़ कलाई उठाना (कोज़ेन टेस्ट)"
+          },
+          "steps": [
+            {
+              "en": "Hold the painful arm out in front with the elbow straight and the palm facing down. Make a fist.",
+              "hi": "दर्द वाली बांह को कोहनी सीधी रखकर सामने करें, हथेली नीचे। मुट्ठी बनाएं।"
+            },
+            {
+              "en": "Bend the wrist up while your other hand presses down on the back of the fist to stop it moving.",
+              "hi": "कलाई ऊपर मोड़ें, जबकि दूसरा हाथ मुट्ठी के पीछे नीचे की ओर दबाकर उसे हिलने न दे।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "It brings on your pain on the outer side of the elbow.",
+            "hi": "कोहनी के बाहरी हिस्से में आपका दर्द आ जाए।"
+          },
+          "accuracy": {
+            "en": "This test picks up about 91% of tennis elbow, so a pain-free test makes it less likely; how often it is positive without tennis elbow has not been measured well.",
+            "hi": "यह टेस्ट लगभग 91% टेनिस एल्बो पकड़ता है, इसलिए बिना दर्द का टेस्ट इसकी संभावना कम करता है; टेनिस एल्बो के बिना यह कितनी बार पॉज़िटिव आता है, यह ठीक से मापा नहीं गया।"
+          },
+          "source": "letdx",
+          "answers": [
+            "cozen_pos",
+            "cozen_neg",
+            "cozen_skip"
+          ]
+        },
+        {
+          "id": "what",
+          "name": {
+            "en": "Bend the wrist and push the thumb out (WHAT test)",
+            "hi": "कलाई मोड़कर अंगूठा बाहर धकेलना (WHAT टेस्ट)"
+          },
+          "steps": [
+            {
+              "en": "Hold the painful arm out in front, palm facing down. Bend the wrist down as far as is comfortable, keeping the thumb straight and lifted away from the hand.",
+              "hi": "दर्द वाली बांह सामने करें, हथेली नीचे। कलाई जितना आराम से हो नीचे मोड़ें, अंगूठा सीधा और हाथ से दूर उठा रखें।"
+            },
+            {
+              "en": "Push the thumb further away from the hand while a finger of your other hand holds it back (the ring in the picture), for a few seconds.",
+              "hi": "कुछ सेकंड अंगूठे को हाथ से और दूर धकेलें, जबकि दूसरे हाथ की उंगली उसे रोके (तस्वीर में गोला)।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "Pain on the thumb side of the wrist.",
+            "hi": "कलाई के अंगूठे वाले हिस्से में दर्द।"
+          },
+          "accuracy": {
+            "en": "In one study this test was painful in 99% of people with de Quervain’s, so a pain-free test makes it very unlikely; it was also painful in many without it (specificity 29%).",
+            "hi": "एक अध्ययन में यह टेस्ट डी क्वेरवेन वाले 99% लोगों में दर्दनाक था, इसलिए बिना दर्द का टेस्ट इसकी संभावना बहुत कम करता है; यह बिना इस बीमारी वाले कई लोगों में भी दर्दनाक था (विशिष्टता 29%)।"
+          },
+          "source": "goubau",
+          "answers": [
+            "what_pos",
+            "what_neg",
+            "what_skip"
+          ]
+        },
+        {
+          "id": "elbflx",
+          "name": {
+            "en": "Bend the elbow fully for one minute",
+            "hi": "कोहनी एक मिनट पूरी मोड़कर रखना"
+          },
+          "steps": [
+            {
+              "en": "Sit or stand. Bend the painful elbow fully, bringing the hand towards the shoulder, with the wrist bent back.",
+              "hi": "बैठें या खड़े हों। दर्द वाली कोहनी पूरी मोड़ें, हाथ कंधे की ओर लाएं, कलाई पीछे मुड़ी रहे।"
+            },
+            {
+              "en": "Hold for up to 60 seconds and notice any tingling.",
+              "hi": "60 सेकंड तक रोकें और देखें कि झुनझुनी होती है या नहीं।"
+            }
+          ],
+          "positiveMeans": {
+            "en": "Tingling or numbness in the ring and little fingers.",
+            "hi": "अनामिका और छोटी उंगली में झुनझुनी या सुन्नपन।"
+          },
+          "accuracy": {
+            "en": "Studies of this test vary widely (sensitivity 36–93%, specificity 40–99%), so it only adds a little to the other clues.",
+            "hi": "इस टेस्ट के अध्ययन बहुत अलग-अलग हैं (संवेदनशीलता 36–93%, विशिष्टता 40–99%), इसलिए यह बाकी संकेतों में थोड़ा ही जोड़ता है।"
+          },
+          "source": "elbflex",
+          "answers": [
+            "elbflx_pos",
+            "elbflx_neg",
+            "elbflx_skip"
+          ]
+        }
+      ],
+      "nerveRoots": {},
+      "rootRules": [],
+      "discOfRoot": {},
+      "departmentRules": [],
+      "extraDepartments": null,
+      "featureLabels": {
+        "a_u18": {
+          "en": "Under 18",
+          "hi": "18 से कम"
+        },
+        "a_18_29": {
+          "en": "18–29",
+          "hi": "18–29"
+        },
+        "a_30_39": {
+          "en": "30–39",
+          "hi": "30–39"
+        },
+        "a_40_49": {
+          "en": "40–49",
+          "hi": "40–49"
+        },
+        "a_50_59": {
+          "en": "50–59",
+          "hi": "50–59"
+        },
+        "a_60p": {
+          "en": "60 or over",
+          "hi": "60 या ज़्यादा"
+        },
+        "sex_m": {
+          "en": "Male",
+          "hi": "पुरुष"
+        },
+        "sex_f": {
+          "en": "Female",
+          "hi": "महिला"
+        },
+        "sex_x": {
+          "en": "Prefer not to say",
+          "hi": "नहीं बताना"
+        },
+        "ep_first": {
+          "en": "First episode",
+          "hi": "पहली बार"
+        },
+        "ep_recur": {
+          "en": "Has happened before",
+          "hi": "पहले भी हुआ है"
+        },
+        "r_cancer": {
+          "en": "Cancer, now or in the past",
+          "hi": "कैंसर, अभी या पहले"
+        },
+        "r_bones": {
+          "en": "Osteoporosis, or steroid tablets for 3+ months",
+          "hi": "ऑस्टियोपोरोसिस, या 3+ महीने स्टेरॉयड की गोलियां"
+        },
+        "r_immune": {
+          "en": "Diabetes, HIV or low immunity",
+          "hi": "डायबिटीज़, HIV या कम इम्युनिटी"
+        },
+        "r_tb": {
+          "en": "TB now or before, or a TB patient at home",
+          "hi": "अभी या पहले टीबी, या घर में टीबी मरीज़"
+        },
+        "r_spa": {
+          "en": "Psoriasis, inflammatory bowel disease or recurring red, painful eye",
+          "hi": "सोरायसिस, आंतों की सूजन (IBD) या बार-बार लाल, दर्द भरी आंख"
+        },
+        "r_desk": {
+          "en": "Desk job or long hours of sitting",
+          "hi": "डेस्क जॉब या लंबे समय बैठना"
+        },
+        "r_heavy": {
+          "en": "Heavy physical work",
+          "hi": "भारी शारीरिक काम"
+        },
+        "r_vasc": {
+          "en": "Smoking or tobacco, diabetes, high blood pressure or high cholesterol",
+          "hi": "धूम्रपान या तंबाकू, डायबिटीज़, हाई बीपी या हाई कोलेस्ट्रॉल"
+        },
+        "r_famspa": {
+          "en": "Parent, brother or sister with ankylosing spondylitis, psoriasis or inflammatory bowel disease",
+          "hi": "माता-पिता या भाई-बहन को एंकिलॉज़िंग स्पॉन्डिलाइटिस, सोरायसिस या आंतों की सूजन (IBD)"
+        },
+        "on_gradual": {
+          "en": "Slowly, with no clear reason",
+          "hi": "धीरे-धीरे, बिना किसी साफ़ वजह के"
+        },
+        "on_overuse": {
+          "en": "After more gripping, lifting, typing, tools or sport than usual",
+          "hi": "सामान्य से ज़्यादा पकड़ने, उठाने, टाइपिंग, औज़ार या खेल के बाद"
+        },
+        "on_fall": {
+          "en": "A fall onto an outstretched hand",
+          "hi": "फैले हुए हाथ के बल गिरना"
+        },
+        "on_blow": {
+          "en": "A blow, twist or sports injury to the arm or hand",
+          "hi": "बांह या हाथ पर चोट, मुड़ना या खेल की चोट"
+        },
+        "on_woke": {
+          "en": "Woke up with it",
+          "hi": "सुबह उठे तो दर्द था"
+        },
+        "on_accident": {
+          "en": "Road accident",
+          "hi": "सड़क दुर्घटना"
+        },
+        "d_days": {
+          "en": "This bout started within the last week",
+          "hi": "इस बार का दर्द पिछले 1 हफ्ते के अंदर शुरू हुआ"
+        },
+        "d_weeks": {
+          "en": "This bout started 1 to 6 weeks ago",
+          "hi": "इस बार का दर्द 1 से 6 हफ्ते पहले शुरू हुआ"
+        },
+        "d_6_12": {
+          "en": "This bout started 6 weeks to 3 months ago",
+          "hi": "इस बार का दर्द 6 हफ्ते से 3 महीने पहले शुरू हुआ"
+        },
+        "d_3m": {
+          "en": "This bout has lasted more than 3 months without going away",
+          "hi": "इस बार का दर्द 3 महीने से ज़्यादा से है, गया नहीं"
+        },
+        "h_first": {
+          "en": "First time ever with this pain",
+          "hi": "ऐसा दर्द पहली बार हुआ है"
+        },
+        "h_lt1y": {
+          "en": "First had this pain within the last year",
+          "hi": "पहली बार यह दर्द पिछले 1 साल में हुआ"
+        },
+        "h_1_5y": {
+          "en": "First had this pain 1 to 5 years ago",
+          "hi": "पहली बार यह दर्द 1 से 5 साल पहले हुआ"
+        },
+        "h_5y": {
+          "en": "First had this pain more than 5 years ago",
+          "hi": "पहली बार यह दर्द 5 साल से भी पहले हुआ"
+        },
+        "btw_free": {
+          "en": "Completely fine between bouts",
+          "hi": "दौरों के बीच पूरी तरह ठीक"
+        },
+        "btw_some": {
+          "en": "Some pain always stays between bouts",
+          "hi": "दौरों के बीच भी थोड़ा दर्द रहता है"
+        },
+        "btw_often": {
+          "en": "Bouts coming more often or getting worse",
+          "hi": "दौरे जल्दी-जल्दी या ज़्यादा तेज़"
+        },
+        "t_better": {
+          "en": "Getting better",
+          "hi": "ठीक हो रहा है"
+        },
+        "t_same": {
+          "en": "About the same",
+          "hi": "लगभग वैसा ही"
+        },
+        "t_worse": {
+          "en": "Getting worse",
+          "hi": "बढ़ रहा है"
+        },
+        "ch_grip_pain": {
+          "en": "Pain on gripping, lifting a cup or kettle, or shaking hands",
+          "hi": "पकड़ने, कप या केतली उठाने, या हाथ मिलाने पर दर्द"
+        },
+        "ch_night_hand": {
+          "en": "Hand tingling that wakes you at night and eases by shaking the hand",
+          "hi": "हाथ की झुनझुनी जो रात को जगा दे और हाथ झटकने से कम हो"
+        },
+        "ch_numb_median": {
+          "en": "Numbness or tingling in the thumb, index and middle fingers",
+          "hi": "अंगूठे, तर्जनी और बीच की उंगली में सुन्नपन या झुनझुनी"
+        },
+        "ch_numb_ulnar": {
+          "en": "Numbness or tingling in the ring and little fingers",
+          "hi": "अनामिका और छोटी उंगली में सुन्नपन या झुनझुनी"
+        },
+        "ch_elbow_bend": {
+          "en": "Ring and little finger tingling when the elbow stays bent (on the phone, sleeping with the arm bent)",
+          "hi": "कोहनी देर तक मुड़ी रहने पर (फ़ोन पर बात, मुड़ी बांह के साथ सोना) अनामिका और छोटी उंगली में झुनझुनी"
+        },
+        "ch_weak_grip": {
+          "en": "Dropping things, or a clumsy or weak hand",
+          "hi": "चीज़ें गिर जाना, या हाथ अनाड़ी या कमज़ोर लगना"
+        },
+        "ch_click_finger": {
+          "en": "A finger or thumb clicks, catches or gets stuck bent and has to be straightened",
+          "hi": "उंगली या अंगूठा क्लिक करता है, अटकता है या मुड़ा फंस जाता है और सीधा करना पड़ता है"
+        },
+        "ch_lump_wrist": {
+          "en": "A smooth, rubbery lump on the wrist or at the base of a finger that may change size",
+          "hi": "कलाई पर या उंगली की जड़ में चिकनी, रबर जैसी गांठ जिसका आकार बदल सकता है"
+        },
+        "ch_palm_cord": {
+          "en": "A firm lump or cord in the palm, with a finger slowly bending down",
+          "hi": "हथेली में सख्त गांठ या डोरी, और एक उंगली धीरे-धीरे नीचे मुड़ती जा रही है"
+        },
+        "ch_tabletop": {
+          "en": "Cannot lay the palm and fingers flat on a table",
+          "hi": "हथेली और उंगलियाँ मेज़ पर सपाट नहीं रख पाते"
+        },
+        "ch_bony_fingers": {
+          "en": "Hard, bony knobs on the end or middle finger joints",
+          "hi": "उंगलियों के आखिरी या बीच के जोड़ों पर सख्त, हड्डी जैसी गांठें"
+        },
+        "ch_swell_knuckles": {
+          "en": "Soft, puffy swelling of the knuckles or middle finger joints",
+          "hi": "उंगलियों की जड़ के जोड़ों (नकल्स) या बीच के जोड़ों में नरम, फूली सूजन"
+        },
+        "ch_stiff_short": {
+          "en": "Stiff in the morning, easing within 30 minutes",
+          "hi": "सुबह जकड़न जो 30 मिनट के अंदर कम हो जाती है"
+        },
+        "ch_stiff_long": {
+          "en": "Stiff in the morning for more than 30 minutes",
+          "hi": "सुबह 30 मिनट से ज़्यादा जकड़न"
+        },
+        "ch_elbow_swell": {
+          "en": "A soft, egg-like swelling on the point of the elbow",
+          "hi": "कोहनी की नोक पर नरम, अंडे जैसी सूजन"
+        },
+        "ch_neck_arm": {
+          "en": "Neck pain with pain shooting down the arm",
+          "hi": "गर्दन दर्द के साथ बांह में नीचे तक करंट जैसा दर्द"
+        },
+        "w_lift_baby": {
+          "en": "Lifting a baby, pouring, or twisting the thumb and wrist",
+          "hi": "बच्चे को उठाना, उड़ेलना, या अंगूठा और कलाई मोड़ना"
+        },
+        "w_pinch": {
+          "en": "Pinching, opening jars, turning keys or writing",
+          "hi": "चुटकी से पकड़ना, जार खोलना, चाबी घुमाना या लिखना"
+        },
+        "w_wrist_use": {
+          "en": "Typing, using a mouse or phone, wringing clothes, using tools",
+          "hi": "टाइपिंग, माउस या फ़ोन चलाना, कपड़े निचोड़ना, औज़ार चलाना"
+        },
+        "w_lean_elbow": {
+          "en": "Leaning on the elbow",
+          "hi": "कोहनी पर टेक लगाना"
+        },
+        "b_rest": {
+          "en": "Rest",
+          "hi": "आराम"
+        },
+        "o_new_mother": {
+          "en": "Pregnant, or caring for a baby under a year old",
+          "hi": "गर्भवती, या एक साल से छोटे बच्चे की देखभाल"
+        },
+        "o_repetitive": {
+          "en": "Work with forceful, repeated hand or arm use (tools, construction, cooking, tailoring, plumbing)",
+          "hi": "ज़ोर से और बार-बार हाथ या बांह के इस्तेमाल वाला काम (औज़ार, निर्माण, खाना बनाना, सिलाई, प्लंबिंग)"
+        },
+        "o_thyroid": {
+          "en": "Underactive thyroid",
+          "hi": "थायरॉइड कम (हाइपोथायरॉइडिज़्म)"
+        },
+        "o_overweight": {
+          "en": "Overweight",
+          "hi": "ज़्यादा वज़न"
+        },
+        "o_other_joints": {
+          "en": "Other joints also swollen or painful (feet, knees, wrists)",
+          "hi": "दूसरे जोड़ भी सूजे या दर्द वाले (पैर, घुटने, कलाई)"
+        },
+        "rf_deform": {
+          "en": "After a fall or injury: the elbow or wrist looks deformed, swelled up quickly, or the elbow cannot be straightened fully",
+          "hi": "गिरने या चोट के बाद: कोहनी या कलाई टेढ़ी दिखती है, तेज़ी से सूज गई, या कोहनी पूरी सीधी नहीं होती"
+        },
+        "rf_snuffbox": {
+          "en": "After a fall on the hand: pain when pressing the hollow at the base of the thumb",
+          "hi": "हाथ के बल गिरने के बाद: अंगूठे की जड़ के गड्ढे को दबाने पर दर्द"
+        },
+        "rf_infect": {
+          "en": "A red, hot, swollen finger or hand, held bent and very painful to straighten, or after a cut or a human or animal bite",
+          "hi": "लाल, गर्म, सूजी उंगली या हाथ जो मुड़ा रहता है और सीधा करने पर बहुत दर्द हो, या कटने या इंसान या जानवर के काटने के बाद"
+        },
+        "rf_hot": {
+          "en": "A hot, red, swollen elbow or wrist, or a hot elbow-point swelling, with fever",
+          "hi": "बुखार के साथ गर्म, लाल, सूजी कोहनी या कलाई, या कोहनी की नोक पर गर्म सूजन"
+        },
+        "rf_chest": {
+          "en": "Arm pain with chest pain or pressure, breathlessness or sweating",
+          "hi": "बांह के दर्द के साथ सीने में दर्द या दबाव, सांस फूलना या पसीना"
+        },
+        "rf_weak": {
+          "en": "Hand or arm weakness that is getting worse, or the muscles of the hand are wasting",
+          "hi": "हाथ या बांह की कमज़ोरी जो बढ़ रही है, या हाथ की मांसपेशियाँ घट रही हैं"
+        },
+        "rf_fever": {
+          "en": "Fever, night sweats or weight loss without trying",
+          "hi": "बुखार, रात को पसीना या बिना कोशिश वज़न घटना"
+        },
+        "rf_night": {
+          "en": "Constant pain at night that no position eases",
+          "hi": "रात को लगातार दर्द जो किसी भी पोज़िशन में कम न हो"
+        },
+        "hgrip_ok": {
+          "en": "Normally",
+          "hi": "सामान्य"
+        },
+        "hgrip_diff": {
+          "en": "With pain",
+          "hi": "दर्द के साथ"
+        },
+        "hgrip_no": {
+          "en": "Cannot do it",
+          "hi": "नहीं कर पाते"
+        },
+        "hfine_ok": {
+          "en": "Normally",
+          "hi": "सामान्य"
+        },
+        "hfine_diff": {
+          "en": "Clumsy or painful",
+          "hi": "अनाड़ी या दर्द के साथ"
+        },
+        "hfine_no": {
+          "en": "Cannot do them",
+          "hi": "नहीं कर पाते"
+        },
+        "sleep_ok": {
+          "en": "Normal",
+          "hi": "सामान्य"
+        },
+        "sleep_bad": {
+          "en": "Pain wakes me up",
+          "hi": "दर्द से नींद खुलती है"
+        },
+        "elb_out": {
+          "en": "Outer side of the elbow",
+          "hi": "कोहनी का बाहरी हिस्सा"
+        },
+        "elb_out_l": {
+          "en": "Outer side of the elbow (left)",
+          "hi": "कोहनी का बाहरी हिस्सा (बायां)"
+        },
+        "elb_out_r": {
+          "en": "Outer side of the elbow (right)",
+          "hi": "कोहनी का बाहरी हिस्सा (दायां)"
+        },
+        "elb_in": {
+          "en": "Inner side of the elbow",
+          "hi": "कोहनी का अंदरूनी हिस्सा"
+        },
+        "elb_in_l": {
+          "en": "Inner side of the elbow (left)",
+          "hi": "कोहनी का अंदरूनी हिस्सा (बायां)"
+        },
+        "elb_in_r": {
+          "en": "Inner side of the elbow (right)",
+          "hi": "कोहनी का अंदरूनी हिस्सा (दायां)"
+        },
+        "elb_back": {
+          "en": "Point of the elbow (back)",
+          "hi": "कोहनी की नोक (पीछे)"
+        },
+        "elb_back_l": {
+          "en": "Point of the elbow (back) (left)",
+          "hi": "कोहनी की नोक (पीछे) (बायां)"
+        },
+        "elb_back_r": {
+          "en": "Point of the elbow (back) (right)",
+          "hi": "कोहनी की नोक (पीछे) (दायां)"
+        },
+        "wrist_thumb": {
+          "en": "Thumb side of the wrist",
+          "hi": "कलाई का अंगूठे वाला हिस्सा"
+        },
+        "wrist_thumb_l": {
+          "en": "Thumb side of the wrist (left)",
+          "hi": "कलाई का अंगूठे वाला हिस्सा (बायां)"
+        },
+        "wrist_thumb_r": {
+          "en": "Thumb side of the wrist (right)",
+          "hi": "कलाई का अंगूठे वाला हिस्सा (दायां)"
+        },
+        "thumb_base": {
+          "en": "Base of the thumb",
+          "hi": "अंगूठे की जड़"
+        },
+        "thumb_base_l": {
+          "en": "Base of the thumb (left)",
+          "hi": "अंगूठे की जड़ (बायां)"
+        },
+        "thumb_base_r": {
+          "en": "Base of the thumb (right)",
+          "hi": "अंगूठे की जड़ (दायां)"
+        },
+        "wrist_palm": {
+          "en": "Palm side of the wrist",
+          "hi": "कलाई का हथेली वाला हिस्सा"
+        },
+        "wrist_palm_l": {
+          "en": "Palm side of the wrist (left)",
+          "hi": "कलाई का हथेली वाला हिस्सा (बायां)"
+        },
+        "wrist_palm_r": {
+          "en": "Palm side of the wrist (right)",
+          "hi": "कलाई का हथेली वाला हिस्सा (दायां)"
+        },
+        "wrist_back": {
+          "en": "Back of the wrist",
+          "hi": "कलाई का पिछला हिस्सा"
+        },
+        "wrist_back_l": {
+          "en": "Back of the wrist (left)",
+          "hi": "कलाई का पिछला हिस्सा (बायां)"
+        },
+        "wrist_back_r": {
+          "en": "Back of the wrist (right)",
+          "hi": "कलाई का पिछला हिस्सा (दायां)"
+        },
+        "finger_base": {
+          "en": "Palm, at the base of the fingers",
+          "hi": "हथेली, उंगलियों की जड़ पर"
+        },
+        "finger_base_l": {
+          "en": "Palm, at the base of the fingers (left)",
+          "hi": "हथेली, उंगलियों की जड़ पर (बायां)"
+        },
+        "finger_base_r": {
+          "en": "Palm, at the base of the fingers (right)",
+          "hi": "हथेली, उंगलियों की जड़ पर (दायां)"
+        },
+        "fingers": {
+          "en": "Finger joints",
+          "hi": "उंगलियों के जोड़"
+        },
+        "fingers_l": {
+          "en": "Finger joints (left)",
+          "hi": "उंगलियों के जोड़ (बायां)"
+        },
+        "fingers_r": {
+          "en": "Finger joints (right)",
+          "hi": "उंगलियों के जोड़ (दायां)"
+        },
+        "neck": {
+          "en": "Neck",
+          "hi": "गर्दन"
+        },
+        "cozen_pos": {
+          "en": "Lift the wrist against resistance (Cozen test): positive",
+          "hi": "रुकावट के खिलाफ़ कलाई उठाना (कोज़ेन टेस्ट): पॉज़िटिव"
+        },
+        "cozen_neg": {
+          "en": "Lift the wrist against resistance (Cozen test): negative",
+          "hi": "रुकावट के खिलाफ़ कलाई उठाना (कोज़ेन टेस्ट): नेगेटिव"
+        },
+        "cozen_skip": {
+          "en": "Lift the wrist against resistance (Cozen test): could not do / skip",
+          "hi": "रुकावट के खिलाफ़ कलाई उठाना (कोज़ेन टेस्ट): नहीं कर पाए / छोड़ें"
+        },
+        "what_pos": {
+          "en": "Bend the wrist and push the thumb out (WHAT test): positive",
+          "hi": "कलाई मोड़कर अंगूठा बाहर धकेलना (WHAT टेस्ट): पॉज़िटिव"
+        },
+        "what_neg": {
+          "en": "Bend the wrist and push the thumb out (WHAT test): negative",
+          "hi": "कलाई मोड़कर अंगूठा बाहर धकेलना (WHAT टेस्ट): नेगेटिव"
+        },
+        "what_skip": {
+          "en": "Bend the wrist and push the thumb out (WHAT test): could not do / skip",
+          "hi": "कलाई मोड़कर अंगूठा बाहर धकेलना (WHAT टेस्ट): नहीं कर पाए / छोड़ें"
+        },
+        "elbflx_pos": {
+          "en": "Bend the elbow fully for one minute: positive",
+          "hi": "कोहनी एक मिनट पूरी मोड़कर रखना: पॉज़िटिव"
+        },
+        "elbflx_neg": {
+          "en": "Bend the elbow fully for one minute: negative",
+          "hi": "कोहनी एक मिनट पूरी मोड़कर रखना: नेगेटिव"
+        },
+        "elbflx_skip": {
+          "en": "Bend the elbow fully for one minute: could not do / skip",
+          "hi": "कोहनी एक मिनट पूरी मोड़कर रखना: नहीं कर पाए / छोड़ें"
+        },
+        "age_lt40": {
+          "en": "Age under 40",
+          "hi": "40 से कम उम्र"
+        },
+        "age_ge50": {
+          "en": "Age 50 or over",
+          "hi": "50 या ज़्यादा उम्र"
+        },
+        "hand_one": {
+          "en": "One arm or hand",
+          "hi": "एक बांह या हाथ"
+        },
+        "hand_both": {
+          "en": "Both arms or hands",
+          "hi": "दोनों बांह या हाथ"
+        },
+        "hand_any": {
+          "en": "Elbow, wrist or hand pain",
+          "hi": "कोहनी, कलाई या हाथ का दर्द"
         }
       }
     }
